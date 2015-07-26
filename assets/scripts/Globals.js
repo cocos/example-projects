@@ -27,3 +27,8 @@ getSheep = function() {
 getStar = function() {
     return cc.director.getRunningScene().getChildByName('star');
 };
+
+convertColor = function(f) {
+    if (f > 1 || f <0 ) Fire.error("invalid color value input.");
+    return Math.floor(f == 1.0 ? 255 : f * 256.0);
+};
