@@ -18,6 +18,7 @@ var SpriteAnimation = Fire.Class({
             cc.spriteFrameCache.addSpriteFrames(this._runnerAsset);
         }
         this.registerAnimations();
+        this.playJumping();
     },
     registerInputEvent: function() {
         var self = this;
@@ -39,7 +40,12 @@ var SpriteAnimation = Fire.Class({
         this.runningAction = new cc.RepeatForever(new cc.Animate(this.runAnim));
         // init jump animation
         this.jumpAnim = createAnimation("sheep_jump_", 5, 0.1);
-        this.jumpingAction = new cc.Animate(this.jumpAnim);
+        this.downAnim = createAnimation("sheep_down_", 3, 0.1);
+        var moveUp = new cc.MoveBy(0.4, Fire.v2(0, 100));
+        var moveDown = new cc.MoveBy(0.4, Fire.v2(0, -100));
+        var playDown = new cc.Animate(this.downAnim);
+        var seq = new cc.Sequence(moveUp, moveDown, playDown);
+        this.jumpingAction = new cc.Spawn(new cc.Animate(this.jumpAnim), seq);
     },
     playRunning: function () {
         if (this.getNumberOfRunningActions() > 0) {
