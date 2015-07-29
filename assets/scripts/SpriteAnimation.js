@@ -12,23 +12,20 @@ var SpriteAnimation = Fire.Class({
         this.downAnim = null;
         this.runningAction = null;
         this.jumpingAction = null;
-        this.registerInputEvent();
         setResolution();
+        this.registerInputEvent();
         if (this._runnerAsset) {
             cc.spriteFrameCache.addSpriteFrames(this._runnerAsset);
         }
         this.registerAnimations();
-        this.playJumping();
+        this.playRunning();
     },
     registerInputEvent: function() {
         var self = this;
         cc.eventManager.addListener({
             event: cc.EventListener.KEYBOARD,
             onKeyPressed:  function(keyCode, event){
-                if (Editor.KeyCode(keyCode) === 'a') {
-                    self.playRunning();
-                }
-                if (Editor.KeyCode(keyCode) === 'b') {
+                if (keyCode === cc.KEY.space) {
                     self.playJumping();
                 }
             }
@@ -36,22 +33,27 @@ var SpriteAnimation = Fire.Class({
     },
     registerAnimations: function() {
         // init run animation
-        this.runAnim = createAnimation("sheep_run_", 4, 0.1);
-        this.runningAction = new cc.RepeatForever(new cc.Animate(this.runAnim));
+        var animationRun = createAnimation("sheep_run_", 4, 0.1);
+        this.runAnim = new cc.RepeatForever(new cc.Animate(animationRun));
+        // move action with run
+        this.moveAction = cc.moveBy(4, Fire.v2(-700, 0));
         // init jump animation
         this.jumpAnim = createAnimation("sheep_jump_", 5, 0.1);
         this.downAnim = createAnimation("sheep_down_", 3, 0.1);
-        var moveUp = new cc.MoveBy(0.4, Fire.v2(0, 100));
-        var moveDown = new cc.MoveBy(0.4, Fire.v2(0, -100));
+        // move action with jump
+        var moveUp = new cc.MoveBy(0.5, Fire.v2(0, 120));
+        var moveDown = new cc.MoveBy(0.5, Fire.v2(0, -120));
         var playDown = new cc.Animate(this.downAnim);
-        var seq = new cc.Sequence(moveUp, moveDown, playDown);
+        // create a sequence with callback to run again
+        var seq = new cc.Sequence(moveUp, moveDown, playDown, cc.callFunc(this.playRunning, this));
         this.jumpingAction = new cc.Spawn(new cc.Animate(this.jumpAnim), seq);
     },
     playRunning: function () {
         if (this.getNumberOfRunningActions() > 0) {
             this.stopAllActions();
         }
-        this.runAction(this.runningAction);
+        this.runAction(this.runAnim);
+        this.runAction(this.moveAction);
     },
     playJumping: function() {
         this.stopAllActions();

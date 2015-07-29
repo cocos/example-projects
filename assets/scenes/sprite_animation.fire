@@ -27,23 +27,7 @@
           {
             "w": {
               "__id__": 2
-            },
-            "t": {
-              "scaleBy": 2,
-              "moveBy": {
-                "__type__": "Fire.Vec2",
-                "x": -200,
-                "y": 0
-              },
-              "colorTo": {
-                "__type__": "Fire.Color",
-                "r": 0.050980392156862744,
-                "g": 0.8509803921568627,
-                "b": 0.9607843137254902,
-                "a": 1
-              }
-            },
-            "m": "f2af2t/gFdGmoBGcFwcNoSC"
+            }
           }
         ],
         "uuid": "2ed9fc87-aa35-4e67-bd1d-4da84b6c747b"
@@ -54,8 +38,8 @@
         "_objFlags": 0,
         "_id": "7d62bhZ2ulAHLjBj76ikk0D",
         "_position": [
-          231.79487179487177,
-          239.9999999999999
+          762.080586080586,
+          240
         ],
         "_scale": [
           1,
@@ -81,22 +65,22 @@
         }
       },
       {
-        "__type__": "Runtime.SpriteWrapper",
-        "_name": "star",
+        "__type__": "Runtime.BitmapFontWrapper",
+        "_name": "New LabelBMFont",
         "_objFlags": 0,
-        "_id": "56c4dhONjpEJKeuSUWVzW7F",
+        "_id": "b2842Uu57VMFZnWWvtde4ei",
         "_position": [
-          500,
-          239.99999999999983
+          320.00000000000017,
+          418.28571428571433
         ],
         "_scale": [
-          0.5,
-          0.5
+          1,
+          1
         ],
         "_rotation": 0,
         "_size": [
-          169,
-          201
+          355,
+          49
         ],
         "_color": [
           1,
@@ -108,9 +92,12 @@
           0.5,
           0.5
         ],
-        "_texture": {
-          "__uuid__": "b11c4d7c-b15b-4eb6-883b-1697c1388e21"
-        }
+        "_bitmapFont": {
+          "__uuid__": "e90dd7c6-cd18-4c7a-ae83-dcef9b0a1b5a"
+        },
+        "_text": "Press 'Space' to jump.",
+        "_anchor": 4,
+        "_align": 0
       }
     ]
   }

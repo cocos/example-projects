@@ -6,30 +6,19 @@ var SpriteAction = Fire.Class({
         colorTo: Fire.Color.white
     },
     onLoad: function() {
+        setResolution();
         this.actionScale = cc.scaleBy(0.5, this.scaleBy);
         this.actionMove = cc.moveBy(0.5, this.moveBy);
         this.actionTint = cc.tintTo(0.5, convertColor(this.colorTo.r),
             convertColor(this.colorTo.g), convertColor(this.colorTo.b));
         this.actionTintBack = cc.tintTo(0.5, 255, 255, 255);
         this.isTinted = false;
-        this.registerInputEvent();
-    },
-    registerInputEvent: function() {
-        var self = this;
-        cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD,
-            onKeyPressed:  function(keyCode, event){
-                if (Editor.KeyCode(keyCode) === 'a') {
-                    self.toggleScale();
-                }
-                if (Editor.KeyCode(keyCode) === 'b') {
-                    self.moveAround();
-                }
-                if (Editor.KeyCode(keyCode) === 'c') {
-                    self.tintColor();
-                }
-            }
-        }, self);
+        var seqScale = cc.sequence(this.actionScale, this.actionScale.reverse());
+        this.runAction(cc.repeatForever(seqScale));
+        var seqMove = cc.sequence(this.actionMove, this.actionMove.reverse());
+        this.runAction(cc.repeatForever(seqMove));
+        var seqTint = cc.sequence(this.actionTint, this.actionTintBack);
+        this.runAction(cc.repeatForever(seqTint));
     },
     toggleScale: function() {
         if (this.scaleX >= 1) {
