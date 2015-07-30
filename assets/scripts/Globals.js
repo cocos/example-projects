@@ -20,6 +20,10 @@ setResolution = function() {
     cc.view.resizeWithBrowserSize(true);
 };
 
+getNodeByName = function(name) {
+    return cc.director.getRunningScene().getChildByName(name);
+};
+
 getSheep = function() {
     return cc.director.getRunningScene().getChildByName('sheep');
 };
