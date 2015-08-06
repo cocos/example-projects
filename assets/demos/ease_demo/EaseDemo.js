@@ -1,4 +1,4 @@
-var EaseMovement = Fire.Class({
+var EaseDemo = Fire.Class({
     extends: Fire.Behavior,
     properties: {
         _runnerAsset: {
@@ -34,8 +34,8 @@ var EaseMovement = Fire.Class({
         var moveDownEase = cc.moveBy(0.6, Fire.v2(0, -150)).easing(cc.easeCubicActionIn());
         var playDown = cc.animate(downAnim);
         // create a sequence with callback to run again
-        var seq = new cc.Sequence(moveUp, moveDown, playDown);
-        var seqEase = new cc.Sequence(moveUpEase, moveDownEase, playDown);
+        var seq = cc.sequence(moveUp, moveDown, playDown);
+        var seqEase = cc.sequence(moveUpEase, moveDownEase, playDown);
         this.jumpWithoutEase = cc.spawn(cc.animate(jumpAnim), seq);
         this.jumpWithEase = cc.spawn(cc.animate(jumpAnim), seqEase);
     }

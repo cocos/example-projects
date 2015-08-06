@@ -1,4 +1,4 @@
-var SpriteAction = Fire.Class({
+var SimpleActionDemo = Fire.Class({
     extends: Fire.Behavior,
     properties: {
         scaleBy: 1,

@@ -1,7 +1,7 @@
-var SpriteAnimation = Fire.Class({
+var JumpDemo = Fire.Class({
     extends: Fire.Behavior,
     properties: {
-        _runnerAsset: {
+        sheepAtlasAsset: {
             default: "",
             url: Runtime.SpriteAtlas
         }
@@ -14,8 +14,8 @@ var SpriteAnimation = Fire.Class({
         this.jumpingAction = null;
         setResolution();
         this.registerInputEvent();
-        if (this._runnerAsset) {
-            cc.spriteFrameCache.addSpriteFrames(this._runnerAsset);
+        if (this.sheepAtlasAsset) {
+            cc.spriteFrameCache.addSpriteFrames(this.sheepAtlasAsset);
         }
         this.registerAnimations();
         this.playRunning();
@@ -41,12 +41,12 @@ var SpriteAnimation = Fire.Class({
         this.jumpAnim = createAnimation("sheep_jump_", 5, 0.1);
         this.downAnim = createAnimation("sheep_down_", 3, 0.1);
         // move action with jump
-        var moveUp = new cc.MoveBy(0.5, Fire.v2(0, 120));
-        var moveDown = new cc.MoveBy(0.5, Fire.v2(0, -120));
-        var playDown = new cc.Animate(this.downAnim);
+        var moveUp = cc.moveBy(0.5, Fire.v2(0, 120));
+        var moveDown = cc.moveBy(0.5, Fire.v2(0, -120));
+        var playDown = cc.animate(this.downAnim);
         // create a sequence with callback to run again
-        var seq = new cc.Sequence(moveUp, moveDown, playDown, cc.callFunc(this.playRunning, this));
-        this.jumpingAction = new cc.Spawn(new cc.Animate(this.jumpAnim), seq);
+        var seq = cc.sequence(moveUp, moveDown, playDown, cc.callFunc(this.playRunning, this));
+        this.jumpingAction = cc.spawn(cc.animate(this.jumpAnim), seq);
     },
     playRunning: function () {
         if (this.getNumberOfRunningActions() > 0) {
