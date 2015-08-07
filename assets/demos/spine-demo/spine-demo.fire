@@ -1,0 +1,117 @@
+[
+  {
+    "__type__": "Fire.Scene",
+    "_name": "",
+    "_objFlags": 0,
+    "_rawFiles": null,
+    "scene": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "Runtime.SceneWrapper",
+    "content": [
+      {
+        "c": [
+          {
+            "w": {
+              "__id__": 1
+            },
+            "t": {
+              "moveAccel": 50,
+              "brake": 0.3,
+              "runSpeed": 220,
+              "maxRunSpeed": 300,
+              "walkPositionY": 0,
+              "spineSkeletonAsset": {
+                "__uuid__": "71d9825b-ce43-4bdf-a72a-86263f60fe6e"
+              },
+              "spineAtlasAsset": {
+                "__uuid__": "d27865a7-1f14-4ab5-9ff4-f91fd0eafd04"
+              },
+              "spineAtlasTexture": {
+                "__uuid__": "9e01bd2f-19c0-4f4f-aadb-348b96f0481e"
+              }
+            },
+            "m": "363dexJj8pJS66nNP8h5B/1"
+          },
+          {
+            "w": {
+              "__id__": 2
+            }
+          }
+        ],
+        "uuid": "dda1458d-f027-45ad-bfbc-a348def0d4f7"
+      },
+      {
+        "__type__": "Runtime.NodeWrapper",
+        "_name": "spine-control",
+        "_objFlags": 0,
+        "_id": "4ee30Rk5ktDHY8B7mt4PoF8",
+        "_position": [
+          320,
+          97.66561514195587
+        ],
+        "_scale": [
+          0.3,
+          0.3
+        ],
+        "_rotation": 0,
+        "_size": [
+          0,
+          0
+        ],
+        "_color": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "_anchorPoint": [
+          0,
+          0
+        ]
+      },
+      {
+        "__type__": "Runtime.LabelTTFWrapper",
+        "_name": "inputDisplay",
+        "_objFlags": 0,
+        "_id": "fde33/olxxOOYsqqWUks1n0",
+        "_position": [
+          29.274447949526632,
+          455.01577287066254
+        ],
+        "_scale": [
+          1,
+          1
+        ],
+        "_rotation": 0,
+        "_size": [
+          87,
+          72
+        ],
+        "_color": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "_anchorPoint": [
+          0,
+          1
+        ],
+        "_text": "Input State: \nLeft: false\nRight: false\nJump: false",
+        "_fontSize": 16,
+        "_fontFamily": "Arial",
+        "_align": 0,
+        "_verticalAlign": 0,
+        "_boundingBox": [
+          0,
+          0
+        ],
+        "_lineHeight": 18,
+        "_valOf$font": null
+      }
+    ]
+  }
+]
