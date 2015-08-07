@@ -1,18 +1,12 @@
 var TileMapDemo = Fire.Class({
     extends: Fire.Behavior,
     properties: {
-        tilemapAsset: {
-            default: "",
-            url: Fire.RawAsset
-        },
-        tilemapImage: {
+        tilemapImage: { // current work around for preload tilemap texture
             default: "",
             url: Fire.Texture
         }
     },
     onLoad: function() {
         setResolution();
-        this.tilemap = new cc.TMXTiledMap(this.tilemapAsset);
-        this.addChild(this.tilemap);
-    }
+    },
 });
