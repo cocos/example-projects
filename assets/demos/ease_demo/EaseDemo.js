@@ -1,7 +1,7 @@
 var EaseDemo = Fire.Class({
     extends: Fire.Behavior,
     properties: {
-        _runnerAsset: {
+        runnerAsset: {
             default: "",
             url: Runtime.SpriteAtlas
         },
@@ -11,8 +11,8 @@ var EaseDemo = Fire.Class({
         this.jumpWithoutEase = null;
         this.jumpWithEase = null;
         setResolution();
-        if (this._runnerAsset) {
-            cc.spriteFrameCache.addSpriteFrames(this._runnerAsset);
+        if (this.runnerAsset) {
+            cc.spriteFrameCache.addSpriteFrames(this.runnerAsset);
         }
         this.registerActions();
         if (this.useEase) {
