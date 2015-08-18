@@ -70,6 +70,11 @@
                 ]
               }
             ]
+          },
+          {
+            "w": {
+              "__id__": 11
+            }
           }
         ],
         "uuid": "d4d7154b-2428-4e36-8430-8c89c93c0b71"
@@ -104,7 +109,8 @@
         ],
         "_enabled": true,
         "_touchEnabled": true,
-        "_layoutType": 0
+        "_layoutType": 0,
+        "_clippingEnabled": true
       },
       {
         "__type__": "Runtime.LayoutWrapper",
@@ -136,7 +142,8 @@
         ],
         "_enabled": true,
         "_touchEnabled": false,
-        "_layoutType": 0
+        "_layoutType": 0,
+        "_clippingEnabled": false
       },
       {
         "__type__": "Runtime.Scale9SpriteWrapper",
@@ -249,7 +256,8 @@
         ],
         "_enabled": true,
         "_touchEnabled": false,
-        "_layoutType": 0
+        "_layoutType": 0,
+        "_clippingEnabled": false
       },
       {
         "__type__": "Runtime.Scale9SpriteWrapper",
@@ -362,7 +370,8 @@
         ],
         "_enabled": true,
         "_touchEnabled": false,
-        "_layoutType": 0
+        "_layoutType": 0,
+        "_clippingEnabled": false
       },
       {
         "__type__": "Runtime.Scale9SpriteWrapper",
@@ -443,6 +452,46 @@
           150,
           40
         ],
+        "_valOf$font": null
+      },
+      {
+        "__type__": "Runtime.LabelTTFWrapper",
+        "_name": "instruction",
+        "_objFlags": 0,
+        "_id": "a34d849zhdBZIrPPbbHsr0X",
+        "_position": [
+          320,
+          402.018927444795
+        ],
+        "_scale": [
+          1,
+          1
+        ],
+        "_rotation": 0,
+        "_size": [
+          219,
+          18
+        ],
+        "_color": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "_anchorPoint": [
+          0.5,
+          0.5
+        ],
+        "_text": "drag left or right to switch page",
+        "_fontSize": 16,
+        "_fontFamily": "Arial",
+        "_align": 0,
+        "_verticalAlign": 0,
+        "_boundingBox": [
+          0,
+          0
+        ],
+        "_lineHeight": 18,
         "_valOf$font": null
       }
     ]
