@@ -30,15 +30,15 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 100
+      "width": 0,
+      "height": 0
     },
     "_children": [
       {
         "__id__": 2
       },
       {
-        "__id__": 10
+        "__id__": 8
       }
     ],
     "_localZOrder": 0,
@@ -46,7 +46,7 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "47064841-7cf7-4fe6-a645-c7087162e36e"
+    "_id": "46545bc2-4e0f-46a2-8856-cc7c6a066794"
   },
   {
     "__type__": "cc.Node",
@@ -80,7 +80,7 @@
         "__id__": 3
       },
       {
-        "__id__": 6
+        "__id__": 5
       }
     ],
     "_rotationX": 0,
@@ -99,262 +99,152 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "0b951/6WMhCD6sAzEqnsgvw",
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 9
-      }
-    ],
-    "_prefab": null
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Button_Switch_Sprite",
-    "_objFlags": 0,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
-    "_parent": {
-      "__id__": 2
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 94,
-      "height": 94
-    },
-    "_children": [],
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 174.41441441441424,
-      "y": 240
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
-    "_tag": -1,
-    "_opacityModifyRGB": false,
-    "_id": "9b93co63e1OqKgy8OdW52R3",
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 4
-      },
-      {
-        "__id__": 5
-      }
-    ],
-    "_prefab": null
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 3
-    },
-    "_enabled": true,
-    "_sprite": {
-      "__uuid__": "ab53cc17-5b11-4346-867d-d624c0e55a6b"
-    },
-    "_type": 0,
-    "_isFlippedX": false,
-    "_isFlippedY": false,
-    "_useOriginalSize": true
-  },
-  {
-    "__type__": "cc.Button",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 3
-    },
-    "_enabled": true,
-    "transition": 2,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "hoverColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "duration": 0.1,
-    "pressedSprite": {
-      "__uuid__": "e612e1d7-9279-4656-8b07-f80c978c5e7a"
-    },
-    "hoverSprite": {
-      "__uuid__": "025224c7-e24b-47ae-b56d-0b514b14b504"
-    },
-    "clickEvents": [],
-    "_N$interactable": true,
-    "_N$normalColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$disabledColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$normalSprite": {
-      "__uuid__": "ab53cc17-5b11-4346-867d-d624c0e55a6b"
-    },
-    "_N$disabledSprite": {
-      "__uuid__": "d55da879-01d3-4c68-9750-c0eeb65a3e33"
-    },
-    "_N$target": {
-      "__id__": 3
-    }
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Button_Switch_Color",
-    "_objFlags": 0,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
-    "_parent": {
-      "__id__": 2
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 195,
-      "height": 57
-    },
-    "_children": [],
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 491.53153153153136,
-      "y": 240
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
-    "_tag": -1,
-    "_opacityModifyRGB": false,
-    "_id": "645fdOqq4dKQLIKS6bK6fsH",
+    "_id": "060c94HlGZOjrxZfOK5rXJg",
     "_active": true,
     "_components": [
       {
         "__id__": 7
-      },
-      {
-        "__id__": 8
       }
     ],
     "_prefab": null
   },
   {
-    "__type__": "cc.Button",
-    "_name": "",
+    "__type__": "cc.Node",
+    "_name": "PurpleMonster",
     "_objFlags": 0,
-    "node": {
-      "__id__": 6
-    },
-    "_enabled": true,
-    "transition": 1,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 109,
-      "g": 105,
-      "b": 105,
-      "a": 255
-    },
-    "hoverColor": {
-      "__type__": "cc.Color",
-      "r": 213,
-      "g": 213,
-      "b": 213,
-      "a": 255
-    },
-    "duration": 0.1,
-    "pressedSprite": null,
-    "hoverSprite": null,
-    "clickEvents": [],
-    "_N$interactable": true,
-    "_N$normalColor": {
+    "_opacity": 255,
+    "_color": {
       "__type__": "cc.Color",
       "r": 255,
       "g": 255,
       "b": 255,
       "a": 255
     },
-    "_N$disabledColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
+    "_cascadeOpacityEnabled": true,
+    "_cascadeColorEnabled": false,
+    "_parent": {
+      "__id__": 2
     },
-    "_N$normalSprite": null,
-    "_N$disabledSprite": null,
-    "_N$target": {
-      "__id__": 6
-    }
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 78,
+      "height": 67
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 319.9999999999998,
+      "y": 100
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "89e145Djb9ARo5g5CjMsVD9",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 4
+      }
+    ],
+    "_prefab": null
   },
   {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 3
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "d167a975-8455-49e7-b48d-5cac118f3677"
+      "__uuid__": "0439d97a-4924-4764-9b12-aea48bb17072"
     },
     "_type": 0,
     "_isFlippedX": false,
     "_isFlippedY": false,
     "_useOriginalSize": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "panelBG",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_cascadeColorEnabled": false,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 27,
+      "height": 30
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 322.8828828828823,
+      "y": 50
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "125ed4XHRBKMrYgPXz97TMe",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 6
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 5
+    },
+    "_enabled": true,
+    "_sprite": {
+      "__uuid__": "9320f0a4-5719-47a8-8f67-624a72c356f0"
+    },
+    "_type": 1,
+    "_isFlippedX": false,
+    "_isFlippedY": false,
+    "_useOriginalSize": false
   },
   {
     "__type__": "cc.Canvas",
@@ -369,7 +259,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ButtonControl",
+    "_name": "JumpAction",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -391,8 +281,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 100
+      "width": 0,
+      "height": 0
     },
     "_children": [],
     "_rotationX": 0,
@@ -401,7 +291,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 319.99999999999994,
+      "x": 319.9999999999999,
       "y": 240
     },
     "_skewX": 0,
@@ -411,28 +301,22 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "0bcf39nDoBF0onarYht+jxC",
+    "_id": "4c38ei8NuRFsKcZvmh7EB4m",
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 9
       }
     ],
     "_prefab": null
   },
   {
-    "__type__": "e6dc7dWcxxJuofXB7ergGnC",
+    "__type__": "b6067a1+J5FW4G30nmVLU/d",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 10
+      "__id__": 8
     },
-    "_enabled": true,
-    "buttonLeft": {
-      "__id__": 3
-    },
-    "buttonRight": {
-      "__id__": 6
-    }
+    "_enabled": true
   }
 ]

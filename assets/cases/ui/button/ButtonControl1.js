@@ -9,6 +9,10 @@ cc.Class({
         buttonRight: {
             default: null,
             type: cc.ENode
+        },
+        reporter: {
+            default: null,
+            type: cc.ENode
         }
         // foo: {
         //    default: null,
@@ -23,16 +27,18 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.buttonLeft.getComponent(cc.EButton).on(cc.EButton.EVENT_TOUCH_UP, this.onBtnLeftClicked);
-        this.buttonRight.getComponent(cc.EButton).on(cc.EButton.EVENT_TOUCH_UP, this.onBtnRightClicked);
+        this.buttonLeft.getComponent(cc.EButton).on(cc.EButton.EVENT_TOUCH_UP, this.onBtnLeftClicked, this);
+        this.buttonRight.getComponent(cc.EButton).on(cc.EButton.EVENT_TOUCH_UP, this.onBtnRightClicked, this);
     },
 
     onBtnLeftClicked: function() {
         console.log('Left button clicked!');
+        this.reporter.getComponent(cc.ELabel).string = 'Left button clicked!';
     },
 
     onBtnRightClicked: function() {
         console.log('Right button clicked!');
+        this.reporter.getComponent(cc.ELabel).string = 'Right button clicked!';
     },
 
     // called every frame
