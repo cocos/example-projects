@@ -25,8 +25,8 @@
     "_parent": null,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 0.5,
+      "y": 0.5
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -38,7 +38,7 @@
         "__id__": 2
       },
       {
-        "__id__": 4
+        "__id__": 8
       }
     ],
     "_localZOrder": 0,
@@ -46,11 +46,11 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "dad767d0-e554-42e2-b01b-d116148b0932"
+    "_id": "e67141c2-0d65-415e-9502-7f141e187ca2"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Simple_Sprite",
+    "_name": "Canvas",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -67,23 +67,27 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 169,
-      "height": 201
+      "width": 640,
+      "height": 480
     },
-    "_children": [],
+    "_children": [
+      {
+        "__id__": 3
+      }
+    ],
     "_rotationX": 0,
     "_rotationY": 0,
     "_scaleX": 1,
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 320.00000000000017,
-      "y": 240.00000000000003
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -92,11 +96,70 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "29544C7v7ZLNZCT3jRmBwl6",
+    "_id": "14c4azE7yxPz6NM7YE0OAbb",
     "_active": true,
     "_components": [
       {
-        "__id__": 3
+        "__id__": 7
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "sheep",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_cascadeColorEnabled": false,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 178,
+      "height": 113
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 320,
+      "y": 239.99999999999997
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "e73a1WDwi9NVIzXBgmcXe2b",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 6
       }
     ],
     "_prefab": null
@@ -106,16 +169,57 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 2
+      "__id__": 3
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "28275995-c6bb-4db7-8c7a-8cfc1853abfe"
+      "__uuid__": "1d0db5b6-122b-4920-88d1-620c53a32a27"
     },
     "_type": 0,
     "_isFlippedX": false,
     "_isFlippedY": false,
-    "_useOriginalSize": false
+    "_useOriginalSize": true
+  },
+  {
+    "__type__": "cc.AnimationComponent",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "defaultClip": {
+      "__uuid__": "dce845ca-66a7-44dd-b18c-bd49876e1a9a"
+    },
+    "_clips": [
+      {
+        "__uuid__": "dce845ca-66a7-44dd-b18c-bd49876e1a9a"
+      },
+      {
+        "__uuid__": "16bb2ab3-4126-4d8f-b2aa-80a216048bfa"
+      }
+    ],
+    "playAutomatically": true
+  },
+  {
+    "__type__": "ae6fcR8cuFGRYHW525VJD/k",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true
+  },
+  {
+    "__type__": "cc.Canvas",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_fitWidth": false,
+    "_fitHeight": false
   },
   {
     "__type__": "cc.Node",
@@ -151,8 +255,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 320.00000000000017,
-      "y": 240.00000000000003
+      "x": 319.99999999999994,
+      "y": 239.99999999999994
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -161,23 +265,9 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "ac1f1NxGRRO7p9g/6MN6BRz",
+    "_id": "a8ba7qJtIFJhp/csDPhAYB6",
     "_active": true,
-    "_components": [
-      {
-        "__id__": 5
-      }
-    ],
+    "_components": [],
     "_prefab": null
-  },
-  {
-    "__type__": "6a871gy73FDLap3Eje/2h6i",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 4
-    },
-    "_enabled": true,
-    "text": "1. 场景中间显示一个 Sprite 图像 \n2. Sprite 周围有蓝色的 bounding box 紧贴图像 3. 修改 scale 属性时，Sprite 大小变化 \n4. 修改 anchor 位置时，Sprite 显示的位置变化 5. 点击 Sprite 资源，会高亮 Assets 面板里的贴图资源 \n6. 修改 size 时，Sprite 大小变化，而且 use original size 选项自动取消 \n7. 再次勾选 use original size 时，size 恢复到贴图尺寸"
   }
 ]
