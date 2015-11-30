@@ -39,6 +39,9 @@
       },
       {
         "__id__": 4
+      },
+      {
+        "__id__": 6
       }
     ],
     "_localZOrder": 0,
@@ -72,8 +75,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 168,
-      "height": 113
+      "width": 228,
+      "height": 159
     },
     "_children": [],
     "_rotationX": 0,
@@ -82,8 +85,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 320,
-      "y": 239.99999999999997
+      "x": 319.99999999999994,
+      "y": 121.12852664576798
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -182,5 +185,77 @@
     },
     "_enabled": true,
     "text": ""
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Sprite_Single",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_cascadeColorEnabled": false,
+    "_parent": {
+      "__id__": 1
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 167,
+      "height": 112
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 319.99999999999994,
+      "y": 361.8808777429467
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "ac849JS/7dKmK4yYynp9nQE",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 7
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 6
+    },
+    "_enabled": true,
+    "_atlas": {
+      "__uuid__": "efc1bbab-8753-4506-859f-0558eb86db31"
+    },
+    "_sprite": {
+      "__uuid__": "23eb8387-ca49-4121-be68-56054ee539d8"
+    },
+    "_type": 0,
+    "_isFlippedX": false,
+    "_isFlippedY": false,
+    "_useOriginalSize": true
   }
 ]

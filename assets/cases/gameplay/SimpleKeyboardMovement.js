@@ -2,10 +2,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        sheepNode: {
-            default: null,
-            type: cc.ENode
-        }
         // foo: {
         //    default: null,
         //    url: cc.Texture2D,  // optional, default is typeof default
@@ -19,10 +15,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        var anim = this.sheepNode.getComponent(cc.AnimationComponent);
-        setTimeout(function() {
-            anim.play('sheep_jump');
-        }, 2000);
+
     },
 
     // called every frame
