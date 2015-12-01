@@ -22,3 +22,11 @@
 2. Transition 属性里选择 COLOR，就是状态改变时过渡 Sprite 颜色显示的模式
 3. Normal/Pressed/Hover/Disabled 属性分别指定在相应状态下 Sprite 的颜色
 4. Duration 属性指定颜色过渡的时长
+
+### 添加点击事件处理
+
+1. 选中 Button_Switch_Sprite，关注 Button 组件
+2. 在 Click Events 列表里，添加一个新的点击事件
+3. 将事件监听脚本所在节点拖拽到该事件的 Target 属性上
+4. 在 Component 属性列表中选择事件监听脚本所属的组件
+5. 在 Handler 属性列表中选择事件发生时调用的方法
