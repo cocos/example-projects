@@ -37,15 +37,17 @@ cc.Class({
                 switch(keyCode) {
                     case cc.KEY.a:
                     case cc.KEY.left:
+                        console.log('turn left');
                         self.turnLeft();
                         break;
                     case cc.KEY.d:
                     case cc.KEY.right:
+                        console.log('turn right');
                         self.turnRight();
                         break;
                 }
             }
-        }, self.node._sgNode);
+        }, self);
     },
 
     // called every frame
