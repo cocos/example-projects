@@ -33,6 +33,8 @@ assets
 
 ## 范例说明索引
 
+每篇说明文档都和范例场景同名，并且放在同一个目录下。
+
 ### 图像相关 Graphics
 
 - [01_sprite](assets/cases/01_graphics/01_sprite)
