@@ -21,7 +21,6 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": null,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -61,7 +60,6 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": {
       "__id__": 1
     },
@@ -130,19 +128,18 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": {
       "__id__": 2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 1
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 256.2882882882883,
-      "height": 71.78378378378378
+      "width": 338,
+      "height": 80
     },
     "_children": [],
     "_rotationX": 0,
@@ -151,8 +148,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 154.95495495495385,
-      "y": 420.90090090090064
+      "x": 35,
+      "y": 450
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -178,12 +175,15 @@
       "__id__": 3
     },
     "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 35,
+    "_lineHeight": 35,
+    "_enableWrapText": false,
+    "_isSystemFontUsed": true,
     "_N$string": "Clamped text no wrap",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
-    "_N$fontSize": 30,
-    "_N$overflow": 0,
-    "_N$enableWrapText": false
+    "_N$overflow": 0
   },
   {
     "__type__": "cc.Node",
@@ -198,19 +198,18 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": {
       "__id__": 2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 1
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 257.72972972972974,
-      "height": 55.927927927927925
+      "width": 300,
+      "height": 89
     },
     "_children": [],
     "_rotationX": 0,
@@ -219,8 +218,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 155.6756756756746,
-      "y": 351.71171171171136
+      "x": 35.00000000000023,
+      "y": 370.33898305084756
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -246,12 +245,15 @@
       "__id__": 5
     },
     "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 35,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_isSystemFontUsed": true,
     "_N$string": "Clamped text with wrap ",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
-    "_N$fontSize": 30,
-    "_N$overflow": 0,
-    "_N$enableWrapText": true
+    "_N$overflow": 0
   },
   {
     "__type__": "cc.Node",
@@ -266,19 +268,18 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": {
       "__id__": 2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 1
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 266.3783783783784,
-      "height": 58.81081081081081
+      "width": 334,
+      "height": 53
     },
     "_children": [],
     "_rotationX": 0,
@@ -287,7 +288,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 162.16216216216134,
+      "x": 35,
       "y": 254.41441441441407
     },
     "_skewX": 0,
@@ -314,12 +315,15 @@
       "__id__": 7
     },
     "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": false,
+    "_isSystemFontUsed": true,
     "_N$string": "Shrinked single line text",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
-    "_N$fontSize": 30,
-    "_N$overflow": 1,
-    "_N$enableWrapText": false
+    "_N$overflow": 1
   },
   {
     "__type__": "cc.Node",
@@ -334,19 +338,18 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": {
       "__id__": 2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 1
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 266.3783783783784,
-      "height": 86.1981981981982
+      "width": 238,
+      "height": 128
     },
     "_children": [],
     "_rotationX": 0,
@@ -355,8 +358,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 164.26636127506958,
-      "y": 138.03014121208267
+      "x": 35.00000000000023,
+      "y": 186.84370053411664
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -382,12 +385,15 @@
       "__id__": 9
     },
     "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_isSystemFontUsed": true,
     "_N$string": "This text will wrap first, then shrink if still not enough space",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
-    "_N$fontSize": 30,
-    "_N$overflow": 1,
-    "_N$enableWrapText": true
+    "_N$overflow": 1
   },
   {
     "__type__": "cc.Node",
@@ -402,19 +408,18 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": {
       "__id__": 2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 0,
       "y": 1
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 253.69472182596292,
-      "height": 150
+      "width": 223,
+      "height": 240
     },
     "_children": [],
     "_rotationX": 0,
@@ -423,8 +428,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 471.23443934049,
-      "y": 445.29825550808323
+      "x": 400.0479986625241,
+      "y": 445.29825550808334
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -450,12 +455,15 @@
       "__id__": 11
     },
     "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 30,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_isSystemFontUsed": true,
     "_N$string": "The box height of this text field will increase when you type more into this... please try",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
-    "_N$fontSize": 30,
-    "_N$overflow": 2,
-    "_N$enableWrapText": true
+    "_N$overflow": 2
   },
   {
     "__type__": "cc.Canvas",
@@ -481,7 +489,6 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_cascadeColorEnabled": false,
     "_parent": {
       "__id__": 1
     },
