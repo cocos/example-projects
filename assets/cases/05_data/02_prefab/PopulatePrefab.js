@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         prefab: {
             default: null,
-            type: cc.Node
+            type: cc.Prefab
         },
         numberToSpawn: 0
     },
