@@ -2,9 +2,17 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        reporter: {
+        buttonLeft: {
             default: null,
-            type: cc.ENode
+            type: cc.EButton
+        },
+        buttonRight: {
+            default: null,
+            type: cc.EButton
+        },
+        display: {
+            default: null,
+            type: cc.ELabel
         }
     },
 
@@ -17,11 +25,11 @@ cc.Class({
 
     onBtnLeftClicked: function() {
         console.log('Left button clicked!');
-        this.reporter.getComponent(cc.ELabel).string = 'Left button clicked!';
+        this.display.string = 'Left button clicked!';
     },
 
     onBtnRightClicked: function() {
         console.log('Right button clicked!');
-        this.reporter.getComponent(cc.ELabel).string = 'Right button clicked!';
+        this.display.string = 'Right button clicked!';
     }
 });

@@ -2,9 +2,9 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        sheepNode: {
+        sheepAnim: {
             default: null,
-            type: cc.ENode
+            type: cc.AnimationComponent
         }
         // foo: {
         //    default: null,
@@ -19,7 +19,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        var anim = this.sheepNode.getComponent(cc.AnimationComponent);
+        var anim = this.sheepAnim;
         setTimeout(function() {
             anim.play('sheep_jump');
         }, 2000);

@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         musicPlayer: {
             default: null,
-            type: cc.ENode
+            type: cc.AudioSource
         },
         dingClip: {
             default: null,
@@ -20,7 +20,7 @@ cc.Class({
     onLoad: function () {
         var self = this;
         // play audioSource
-        self.musicPlayer.getComponent(cc.AudioSource).play();
+        self.musicPlayer.play();
 
         // play ding in 1 sec, play cheering in 2 sec
         setTimeout(function() {

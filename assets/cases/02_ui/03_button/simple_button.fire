@@ -84,7 +84,7 @@
         "__id__": 5
       },
       {
-        "__id__": 11
+        "__id__": 12
       }
     ],
     "_rotationX": 0,
@@ -381,8 +381,66 @@
       "__id__": 9
     },
     "_enabled": true,
-    "reporter": {
-      "__id__": 3
+    "buttonLeft": {
+      "__id__": 7
+    },
+    "buttonRight": {
+      "__id__": 11
+    },
+    "display": {
+      "__id__": 4
+    }
+  },
+  {
+    "__type__": "cc.Button",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 12
+    },
+    "_enabled": true,
+    "transition": 1,
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 109,
+      "g": 105,
+      "b": 105,
+      "a": 255
+    },
+    "hoverColor": {
+      "__type__": "cc.Color",
+      "r": 213,
+      "g": 213,
+      "b": 213,
+      "a": 255
+    },
+    "duration": 0.1,
+    "pressedSprite": null,
+    "hoverSprite": null,
+    "clickEvents": [
+      {
+        "__id__": 14
+      }
+    ],
+    "_N$interactable": true,
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$normalSprite": null,
+    "_N$disabledSprite": null,
+    "_N$target": {
+      "__id__": 12
     }
   },
   {
@@ -432,80 +490,20 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 12
+        "__id__": 11
       },
-      {
-        "__id__": 14
-      }
-    ],
-    "_prefab": null
-  },
-  {
-    "__type__": "cc.Button",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 11
-    },
-    "_enabled": true,
-    "transition": 1,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 109,
-      "g": 105,
-      "b": 105,
-      "a": 255
-    },
-    "hoverColor": {
-      "__type__": "cc.Color",
-      "r": 213,
-      "g": 213,
-      "b": 213,
-      "a": 255
-    },
-    "duration": 0.1,
-    "pressedSprite": null,
-    "hoverSprite": null,
-    "clickEvents": [
       {
         "__id__": 13
       }
     ],
-    "_N$interactable": true,
-    "_N$normalColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$disabledColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$normalSprite": null,
-    "_N$disabledSprite": null,
-    "_N$target": {
-      "__id__": 11
-    }
-  },
-  {
-    "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 9
-    },
-    "component": "ButtonControl1",
-    "handler": "onBtnRightClicked"
+    "_prefab": null
   },
   {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 11
+      "__id__": 12
     },
     "_enabled": true,
     "_sprite": {
@@ -517,6 +515,14 @@
     "_useOriginalSize": true
   },
   {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 9
+    },
+    "component": "ButtonControl1",
+    "handler": "onBtnRightClicked"
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -524,8 +530,8 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_fitWidth": false,
-    "_fitHeight": false
+    "_fitWidth": true,
+    "_fitHeight": true
   },
   {
     "__type__": "cc.Node",
