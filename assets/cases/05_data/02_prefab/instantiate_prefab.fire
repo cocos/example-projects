@@ -38,9 +38,6 @@
       },
       {
         "__id__": 4
-      },
-      {
-        "__id__": 7
       }
     ],
     "_localZOrder": 0,
@@ -110,82 +107,8 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_fitWidth": false,
+    "_fitWidth": true,
     "_fitHeight": true
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "MonsterPrefab",
-    "_objFlags": 0,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_parent": {
-      "__id__": 1
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
-    },
-    "_children": [],
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 319.9999999999999,
-      "y": 240.34236804564904
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
-    "_tag": -1,
-    "_opacityModifyRGB": false,
-    "_id": "b614ddv31xH2KaTBkX57h2I",
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 5
-      }
-    ],
-    "_prefab": {
-      "__id__": 6
-    }
-  },
-  {
-    "__type__": "8cb4dm2QEpJ7pnaS/cjrvgF",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 4
-    },
-    "_enabled": true,
-    "spriteList": []
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 4
-    },
-    "asset": {
-      "__uuid__": "421a1a75-016f-4896-b926-e767fffbc6f8"
-    },
-    "fileId": "b614ddv31xH2KaTBkX57h2I"
   },
   {
     "__type__": "cc.Node",
@@ -234,7 +157,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 8
+        "__id__": 5
       }
     ],
     "_prefab": null
@@ -244,10 +167,16 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 7
+      "__id__": 4
     },
     "_enabled": true,
-    "prefab": null,
-    "numberToSpawn": 0
+    "prefab": {
+      "__uuid__": "421a1a75-016f-4896-b926-e767fffbc6f8"
+    },
+    "canvas": {
+      "__id__": 3
+    },
+    "numberToSpawn": 20,
+    "spawnInterval": 100
   }
 ]
