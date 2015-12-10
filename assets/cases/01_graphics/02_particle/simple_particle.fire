@@ -37,10 +37,10 @@
         "__id__": 2
       },
       {
-        "__id__": 4
+        "__id__": 6
       },
       {
-        "__id__": 7
+        "__id__": 9
       }
     ],
     "_localZOrder": 0,
@@ -52,7 +52,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "particle",
+    "_name": "Canvas",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -73,6 +73,62 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_children": [
+      {
+        "__id__": 3
+      }
+    ],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 480,
+      "y": 320
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "be7e8bbFF9ELrOGnbUNJTAE",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 5
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "particle",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
       "width": 0,
       "height": 0
     },
@@ -83,8 +139,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 319.9999999999999,
-      "y": 240
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -97,7 +153,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 3
+        "__id__": 4
       }
     ],
     "_prefab": null
@@ -107,7 +163,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 2
+      "__id__": 3
     },
     "_enabled": true,
     "_custom": false,
@@ -192,6 +248,22 @@
     "_N$preview": true
   },
   {
+    "__type__": "cc.Canvas",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_designResolution": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_fitWidth": false,
+    "_fitHeight": true
+  },
+  {
     "__type__": "cc.Node",
     "_name": "Instruction",
     "_objFlags": 0,
@@ -224,8 +296,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 319.9999999999998,
-      "y": 408.44507845934345
+      "x": 479.9999999999999,
+      "y": 480
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -238,10 +310,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 5
+        "__id__": 7
       },
       {
-        "__id__": 6
+        "__id__": 8
       }
     ],
     "_prefab": null
@@ -251,7 +323,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 4
+      "__id__": 6
     },
     "_enabled": true,
     "text": "## Particle 粒子系统使用说明\n\n点击 play 按钮预览游戏，按下 Space 键切换粒子系统的停止和重新播放。\n\n1. 点击选中 particle 节点，关注 ParticleSystem 组件\n2. 点击切换 preview 属性，可以切换该粒子在场景中的显隐（不会影响运行时的显示）\n3. PlayOnLoad 属性决定是否在游戏运行时自动播放该粒子\n4. AutoRemoveOnFinish 属性决定该粒子是否播放完就会自动销毁\n5. 点击 File 属性里引用的资源，可以看到在 Assets 面板里高亮了外部工具制作好并导入的粒子资源\n6. 可以拖拽另一个粒子资源到 File 属性，预览另外粒子的效果\n\n### 使用 Inspector 自制粒子\n\n除了使用外部工具制作 plist 格式的粒子资源，用户还可以使用 Inspector 自己制作粒子。由于目前缺少编辑器，这种做法不推荐用户采用。\n\n1. 点击开启 Custom 属性，可以看到下面的粒子参数都被激活并可以修改了\n2. 根据用户需要调整每一个参数，直到达成希望的效果"
@@ -261,7 +333,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 4
+      "__id__": 6
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -307,8 +379,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 320,
-      "y": 240
+      "x": 480,
+      "y": 320
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -321,7 +393,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 8
+        "__id__": 10
       }
     ],
     "_prefab": null
@@ -331,11 +403,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 7
+      "__id__": 9
     },
     "_enabled": true,
     "particle": {
-      "__id__": 2
+      "__id__": 3
     }
   }
 ]

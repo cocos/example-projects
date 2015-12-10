@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         sheep: {
             default: null,
-            type: cc.ENode
+            type: cc.Node
         }
     },
 
