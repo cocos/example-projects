@@ -29,8 +29,8 @@ cc.Class({
             },
             onTouchMoved: function(touch, event) {
                 var touchLoc = touch.getLocation();
-                self.touchLocationDisplay.string = 'touch (' + touchLoc.x + ', ' + touchLoc.y + ')';
-                self.moveToPos = self.follower._sgNode.convertToNodeSpace(touchLoc);
+                self.touchLocationDisplay.string = 'touch (' + Math.floor(touchLoc.x) + ', ' + Math.floor(touchLoc.y) + ')';
+                self.moveToPos = self.follower.parent.convertToNodeSpace(touchLoc);
             },
             onTouchEnded: function(touch, event) {
                 self.isMoving = false; // when touch ended, stop moving
