@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         nodeList: {
             default: [],
-            type: [cc.ENode]
+            type: [cc.Node]
         }
     },
 

@@ -17,7 +17,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         var self = this;
-        self.randomRange = cc.p(400, 300);
+        self.randomRange = cc.p(300, 200);
         self.spawnCount = 0;
         self.repeater = setInterval(function() {
             if (self.spawnCount >= self.numberToSpawn) {
@@ -32,7 +32,7 @@ cc.Class({
     },
 
     getRandomPosition: function() {
-        return cc.p(cc.random0To1() * this.randomRange.x, cc.random0To1() * this.randomRange.y);
+        return cc.p(cc.randomMinus1To1() * this.randomRange.x, cc.randomMinus1To1() * this.randomRange.y);
     },
 
     clearRepeater: function() {

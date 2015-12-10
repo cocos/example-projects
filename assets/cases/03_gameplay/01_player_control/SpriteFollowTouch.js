@@ -4,11 +4,11 @@ cc.Class({
     properties: {
         touchLocationDisplay: {
             default: null,
-            type: cc.ENode
+            type: cc.ELabel
         },
         follower: {
             default: null,
-            type: cc.ENode
+            type: cc.Node
         },
         followSpeed: 0
     },
@@ -29,8 +29,8 @@ cc.Class({
             },
             onTouchMoved: function(touch, event) {
                 var touchLoc = touch.getLocation();
-                self.touchLocationDisplay.getComponent(cc.ELabel).string = 'touch (' + touchLoc.x + ', ' + touchLoc.y + ')';
-                self.moveToPos = touchLoc;
+                self.touchLocationDisplay.string = 'touch (' + touchLoc.x + ', ' + touchLoc.y + ')';
+                self.moveToPos = self.follower._sgNode.convertToNodeSpace(touchLoc);
             },
             onTouchEnded: function(touch, event) {
                 self.isMoving = false; // when touch ended, stop moving
