@@ -42,7 +42,7 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "322e3a22-314b-4ccd-a881-32d8d2a315ca"
+    "_id": "720d7e0c-47db-4dff-b4e7-c5f685c4d92c"
   },
   {
     "__type__": "cc.Node",
@@ -87,7 +87,10 @@
         "__id__": 13
       },
       {
-        "__id__": 5
+        "__id__": 6
+      },
+      {
+        "__id__": 16
       }
     ],
     "_rotationX": 0,
@@ -110,7 +113,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 16
+        "__id__": 20
       }
     ],
     "_prefab": null
@@ -184,6 +187,22 @@
     "_N$reverse": false
   },
   {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 6
+    },
+    "_enabled": true,
+    "_sprite": {
+      "__uuid__": "82e3f167-25b5-4790-839c-1a85ea47dd74"
+    },
+    "_type": 0,
+    "_isFlippedX": false,
+    "_isFlippedY": false,
+    "_useOriginalSize": false
+  },
+  {
     "__type__": "cc.Node",
     "_name": "barSprite",
     "_objFlags": 0,
@@ -201,8 +220,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0.5
+      "x": 0.5,
+      "y": 1
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -216,8 +235,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 281.17785538659655,
-      "y": 184.93899152016775
+      "x": 391.17785538659655,
+      "y": 189.43899152016775
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -230,26 +249,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 6
+        "__id__": 5
       }
     ],
     "_prefab": null
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 5
-    },
-    "_enabled": true,
-    "_sprite": {
-      "__uuid__": "82e3f167-25b5-4790-839c-1a85ea47dd74"
-    },
-    "_type": 0,
-    "_isFlippedX": false,
-    "_isFlippedY": false,
-    "_useOriginalSize": false
   },
   {
     "__type__": "cc.Node",
@@ -315,7 +318,7 @@
       "__id__": 5
     },
     "_N$mode": 0,
-    "_N$totalLength": 248,
+    "_N$totalLength": 220,
     "_N$progress": 1,
     "_N$reverse": true
   },
@@ -451,7 +454,7 @@
       "__id__": 5
     },
     "_N$mode": 1,
-    "_N$totalLength": 50,
+    "_N$totalLength": 9,
     "_N$progress": 1,
     "_N$reverse": true
   },
@@ -473,7 +476,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 1,
+      "x": 0,
       "y": 0.5
     },
     "_contentSize": {
@@ -488,7 +491,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 376.1212121212121,
+      "x": 128.12121212121212,
       "y": 388.5918003565063
     },
     "_skewX": 0,
@@ -511,22 +514,6 @@
     "_prefab": null
   },
   {
-    "__type__": "cc.ProgressBar",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 13
-    },
-    "_enabled": true,
-    "_N$barSprite": {
-      "__id__": 13
-    },
-    "_N$mode": 0,
-    "_N$totalLength": 248,
-    "_N$progress": 1,
-    "_N$reverse": true
-  },
-  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -541,6 +528,162 @@
     "_isFlippedX": false,
     "_isFlippedY": false,
     "_useOriginalSize": false
+  },
+  {
+    "__type__": "cc.ProgressBar",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 13
+    },
+    "_enabled": true,
+    "_N$barSprite": {
+      "__id__": 14
+    },
+    "_N$mode": 0,
+    "_N$totalLength": 248,
+    "_N$progress": 1,
+    "_N$reverse": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "06_barSprite-as-child",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 220,
+      "height": 9
+    },
+    "_children": [
+      {
+        "__id__": 17
+      }
+    ],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 86.12850252218422,
+      "y": 287.1094188255223
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "1f492wuFJ9LDLOoznTnIA2I",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 19
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "barSprite",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 16
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 220,
+      "height": 9
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "be7d1nUbPdLK7qClI1claRZ",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 18
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 17
+    },
+    "_enabled": true,
+    "_sprite": {
+      "__uuid__": "82e3f167-25b5-4790-839c-1a85ea47dd74"
+    },
+    "_type": 0,
+    "_isFlippedX": false,
+    "_isFlippedY": false,
+    "_useOriginalSize": false
+  },
+  {
+    "__type__": "cc.ProgressBar",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 16
+    },
+    "_enabled": true,
+    "_N$barSprite": {
+      "__id__": 18
+    },
+    "_N$mode": 0,
+    "_N$totalLength": 220,
+    "_N$progress": 1,
+    "_N$reverse": false
   },
   {
     "__type__": "cc.Canvas",
