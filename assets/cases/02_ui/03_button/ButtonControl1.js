@@ -4,15 +4,15 @@ cc.Class({
     properties: {
         buttonLeft: {
             default: null,
-            type: cc.EButton
+            type: cc.Button
         },
         buttonRight: {
             default: null,
-            type: cc.EButton
+            type: cc.Button
         },
         display: {
             default: null,
-            type: cc.ELabel
+            type: cc.Label
         }
     },
 
