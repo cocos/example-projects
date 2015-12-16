@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         touchLocationDisplay: {
             default: null,
-            type: cc.ELabel
+            type: cc.Label
         },
         follower: {
             default: null,

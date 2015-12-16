@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         sheepAnim: {
             default: null,
-            type: cc.AnimationComponent
+            type: cc.Animation
         }
         // foo: {
         //    default: null,
