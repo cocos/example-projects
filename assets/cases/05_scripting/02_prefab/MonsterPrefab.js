@@ -13,8 +13,8 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         var randomIdx = Helpers.getRandomInt(0, this.spriteList.length);
-        var sprite = this.getComponent(cc.SpriteRenderer);
-        sprite.sprite = this.spriteList[randomIdx];
+        var sprite = this.getComponent(cc.Sprite);
+        sprite.spriteFrame = this.spriteList[randomIdx];
     }
 
 });

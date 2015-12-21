@@ -10,7 +10,7 @@ cc.Class({
         },
         mySprite: {
             default: null,
-            type: cc.SpriteRenderer
+            type: cc.Sprite
         },
         myLabel: {
             default: null,
