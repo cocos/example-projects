@@ -294,8 +294,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0.2,
+      "y": 0.4
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -313,8 +313,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": -58.99017787781606,
+      "y": -17.758825169810564
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -353,8 +353,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 0.5,
+      "y": 0.3
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -368,8 +368,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -171.39239168724157,
-      "y": -157.99335586824736
+      "x": 237.26646140433763,
+      "y": -166.97171494741002
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -528,7 +528,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 21.427858333532996,
+      "x": 48.09979390290868,
       "y": 0
     },
     "_skewX": 0,
@@ -599,9 +599,9 @@
     "horizontal": true,
     "vertical": true,
     "inertia": true,
-    "decelerationRate": 0.5,
-    "spring": true,
-    "elastic": 1,
+    "brake": 0.58,
+    "elastic": true,
+    "bounceDuration": 1.18,
     "_N$horizontalScrollBar": {
       "__id__": 15
     },
@@ -725,8 +725,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -18.000000000000057,
-      "y": -68.25439748303796
+      "x": -18,
+      "y": 9.69599793094747
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -854,7 +854,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "02_scrollView_No_momentum",
+    "_name": "02_scrollView_No_inertia",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -988,7 +988,7 @@
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_isSystemFontUsed": true,
-    "_N$string": "Scrollview without momentum",
+    "_N$string": "Scrollview without inertia",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
@@ -1265,8 +1265,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 21.427858333532853,
-      "y": 5.684341886080802e-14
+      "x": 21.427858333532832,
+      "y": -5.684341886080802e-14
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1335,10 +1335,10 @@
     },
     "horizontal": true,
     "vertical": true,
-    "inertia": false,
-    "decelerationRate": 0.5,
-    "spring": true,
-    "elastic": 1,
+    "inertia": true,
+    "brake": 1,
+    "elastic": true,
+    "bounceDuration": 1.04,
     "_N$horizontalScrollBar": {
       "__id__": 38
     },
@@ -1462,8 +1462,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -18.000000000000114,
-      "y": -68.25439748303789
+      "x": -18,
+      "y": -68.25439748303793
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1591,7 +1591,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "03_scrollView_No_spring",
+    "_name": "03_scrollView_No_elastic",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -1725,7 +1725,7 @@
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_isSystemFontUsed": true,
-    "_N$string": "Scrollview without spring",
+    "_N$string": "Scrollview without elastic",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
@@ -1827,7 +1827,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": 0.4,
       "y": 0
     },
     "_contentSize": {
@@ -2002,8 +2002,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 21.427858333532953,
-      "y": 5.684341886080802e-14
+      "x": 124.79189349247144,
+      "y": -5.684341886080802e-14
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2073,9 +2073,9 @@
     "horizontal": true,
     "vertical": true,
     "inertia": true,
-    "decelerationRate": 0.5,
-    "spring": false,
-    "elastic": 1,
+    "brake": 0.5,
+    "elastic": false,
+    "bounceDuration": 0.1,
     "_N$horizontalScrollBar": {
       "__id__": 61
     },
@@ -2199,8 +2199,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -18,
-      "y": -68.25439748303789
+      "x": -17.999999999999886,
+      "y": -68.25439748303793
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2562,7 +2562,7 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": 1
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -2576,8 +2576,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -171.39239168724146,
-      "y": -157.99335586824722
+      "x": -180.42191204786252,
+      "y": 291.2252820726441
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2736,7 +2736,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 21.42785833353297,
+      "x": 24.075578462259564,
       "y": 0
     },
     "_skewX": 0,
@@ -2807,9 +2807,9 @@
     "horizontal": true,
     "vertical": false,
     "inertia": true,
-    "decelerationRate": 0.5,
-    "spring": true,
-    "elastic": 1,
+    "brake": 0.5,
+    "elastic": true,
+    "bounceDuration": 1,
     "_N$horizontalScrollBar": {
       "__id__": 84
     },
@@ -3104,7 +3104,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": 0.3,
       "y": 0
     },
     "_contentSize": {
@@ -3350,9 +3350,9 @@
     "horizontal": false,
     "vertical": true,
     "inertia": true,
-    "decelerationRate": 0.5,
-    "spring": true,
-    "elastic": 1,
+    "brake": 0.9,
+    "elastic": true,
+    "bounceDuration": 1,
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": {
       "__id__": 101
@@ -3645,12 +3645,12 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": 0.7
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 670.5807088462693,
-      "height": 598.3024730890397
+      "width": 110.51334702258731,
+      "height": 244.55852156057495
     },
     "_children": [],
     "_rotationX": 0,
@@ -3659,8 +3659,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -171.39239168724157,
-      "y": -157.99335586824725
+      "x": -46.14379903132016,
+      "y": 56.098253829122626
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3738,9 +3738,9 @@
     "horizontal": true,
     "vertical": true,
     "inertia": true,
-    "decelerationRate": 0.5,
-    "spring": true,
-    "elastic": 1,
+    "brake": 0.94,
+    "elastic": true,
+    "bounceDuration": 1.32,
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": null
   },
