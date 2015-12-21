@@ -43,8 +43,7 @@ assets
   - [Sliced Sprite](assets/cases/01_graphics/01_sprite/sliced_sprite.md)
 - [02_particle](assets/cases/01_graphics/02_particle)
   - [Simple Particle](assets/cases/01_graphics/02_particle/simple_particle.md)
-- [03_animation](assets/cases/01_graphics/03_animation)
-  - [Sprite Animation](assets/cases/01_graphics/03_animation/sprite_animation.md)
+
 
 ### 界面相关 UI
 
@@ -63,6 +62,8 @@ assets
   - [Touch Input](assets/cases/03_gameplay/01_player_control/touch_input.md)
 - [02_actions](assets/cases/03_gameplay/02_actions)
   - [Simple Action](assets/cases/03_gameplay/02_actions/simple_action.md)
+- [03_animation](assets/cases/03_gameplay/03_animation)
+  - [Sprite Animation](assets/cases/03_gameplay/03_animation/sprite_animation.md)
 
 ### 音效相关 Audio
 
