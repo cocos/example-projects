@@ -19,7 +19,7 @@ cc.Class({
         self.moveToPos = cc.p(0, 0);
         self.isMoving = false;
         cc.eventManager.addListener({
-            event: cc.EventListener.TOUCH_ONE_BY_ONE, 
+            event: cc.EventListener.TOUCH_ONE_BY_ONE,
             onTouchBegan: function(touch, event) {
                 var touchLoc = touch.getLocation();
                 console.log(touchLoc);
@@ -30,12 +30,12 @@ cc.Class({
             onTouchMoved: function(touch, event) {
                 var touchLoc = touch.getLocation();
                 self.touchLocationDisplay.string = 'touch (' + Math.floor(touchLoc.x) + ', ' + Math.floor(touchLoc.y) + ')';
-                self.moveToPos = self.follower.parent.convertToNodeSpace(touchLoc);
+                self.moveToPos = self.follower.parent.convertToNodeSpaceAR(touchLoc);
             },
             onTouchEnded: function(touch, event) {
                 self.isMoving = false; // when touch ended, stop moving
             }
-        }, self);
+        }, self.node);
     },
 
     // called every frame

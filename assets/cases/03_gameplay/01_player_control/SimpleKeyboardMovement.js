@@ -32,7 +32,7 @@ cc.Class({
                         break;
                 }
             }
-        }, self);
+        }, self.node);
     },
 
     // called every frame
