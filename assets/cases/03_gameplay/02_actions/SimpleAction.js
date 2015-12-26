@@ -18,7 +18,7 @@ cc.Class({
         var seq = cc.sequence(this.squashAction, this.stretchAction, 
             this.moveUpAction, this.scaleBackAction, this.moveDownAction, this.squashAction, this.scaleBackAction);
         // this is a temp api which will be combined to cc.Node
-        this.jumper._sgNode.runAction(seq);
+        this.jumper.runAction(seq);
     },
 
     // called every frame
