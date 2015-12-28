@@ -27,5 +27,8 @@ cc.Class({
                 this._callback();
             }
         }, this);
+        this.node.on(cc.Node.EventType.TOUCH_CANCEL, function () {
+            this.node.opacity = 100;
+        }, this);
     },
 });
