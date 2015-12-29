@@ -11,14 +11,13 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         var self = this;
-        setInterval(function () {
+        this.inervalId = setInterval(function () {
             self.toggleNodesVisibility();
         }, 1000);
     },
 
-    // called every frame
-    update: function (dt) {
-
+    onDestroy: function () {
+        clearInterval(this.inervalId);
     },
 
     toggleNodesVisibility: function() {
