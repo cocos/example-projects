@@ -2,14 +2,14 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        buttonLeft: {
-            default: null,
-            type: cc.Button
-        },
-        buttonRight: {
-            default: null,
-            type: cc.Button
-        },
+        // buttonLeft: {
+        //     default: null,
+        //     type: cc.Button
+        // },
+        // buttonRight: {
+        //     default: null,
+        //     type: cc.Button
+        // },
         display: {
             default: null,
             type: cc.Label
