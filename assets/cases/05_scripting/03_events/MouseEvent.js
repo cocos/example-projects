@@ -15,6 +15,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.scroll = 0;
         this.node.opacity = 50;
         this.node.on(cc.Node.EventType.MOUSE_DOWN, function () {
             this.node.opacity = 255;
@@ -30,6 +31,12 @@ cc.Class({
             if (this._callback) {
                 this._callback();
             }
+        }, this);
+        this.node.on(cc.Node.EventType.MOUSE_WHEEL, function (event) {
+            this.scroll += event.getScrollY();
+            var h = this.node.height;
+            this.scroll = cc.clampf(this.scroll, -2 * h, 0.7 * h);
+            this.node.scale = 1 - this.scroll/h;
         }, this);
     },
 });
