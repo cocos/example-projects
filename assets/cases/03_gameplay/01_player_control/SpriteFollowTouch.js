@@ -22,7 +22,6 @@ cc.Class({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             onTouchBegan: function(touch, event) {
                 var touchLoc = touch.getLocation();
-                console.log(touchLoc);
                 self.isMoving = true;
                 self.moveToPos = touchLoc;
                 return true; // don't capture event
