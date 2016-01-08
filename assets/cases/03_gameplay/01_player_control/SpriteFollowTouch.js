@@ -23,7 +23,7 @@ cc.Class({
             onTouchBegan: function(touch, event) {
                 var touchLoc = touch.getLocation();
                 self.isMoving = true;
-                self.moveToPos = touchLoc;
+                self.moveToPos = self.follower.parent.convertToNodeSpaceAR(touchLoc);
                 return true; // don't capture event
             },
             onTouchMoved: function(touch, event) {
