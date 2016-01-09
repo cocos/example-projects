@@ -42,7 +42,7 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "966f5PEs2lPQZ1JVeLFopOQ"
+    "_id": "7e34388e-9acd-4193-8611-eed0311eee02"
   },
   {
     "__type__": "cc.Node",
@@ -98,7 +98,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 25
+        "__id__": 26
       }
     ],
     "_prefab": null
@@ -331,7 +331,7 @@
     "horizontal": false,
     "vertical": true,
     "inertia": true,
-    "brake": 0.75,
+    "brake": 0.9,
     "elastic": true,
     "bounceDuration": 0.23,
     "_N$horizontalScrollBar": null,
@@ -457,7 +457,7 @@
     "node": {
       "__id__": 10
     },
-    "_enabled": false
+    "_enabled": true
   },
   {
     "__type__": "cc.Widget",
@@ -560,10 +560,13 @@
     "itemTemplate": {
       "__id__": 18
     },
-    "scrollView": null,
-    "spawnCount": 0,
-    "totalCount": 0,
-    "spacing": 0
+    "scrollView": {
+      "__id__": 8
+    },
+    "spawnCount": 20,
+    "totalCount": 100,
+    "spacing": 10,
+    "bufferZone": 600
   },
   {
     "__type__": "cc.Node",
@@ -620,6 +623,9 @@
       },
       {
         "__id__": 24
+      },
+      {
+        "__id__": 25
       }
     ],
     "_prefab": null
@@ -806,6 +812,19 @@
     "_type": 1,
     "_useOriginalSize": false,
     "_atlas": null
+  },
+  {
+    "__type__": "920c8a5MahAhbCTSvmQvaB+",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 18
+    },
+    "_enabled": true,
+    "label": {
+      "__id__": 21
+    },
+    "itemID": 0
   },
   {
     "__type__": "cc.Canvas",
