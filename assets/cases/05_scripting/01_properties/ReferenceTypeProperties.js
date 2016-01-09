@@ -19,6 +19,22 @@ cc.Class({
         myComponent: {
             default: null,
             type: MyCustomComponent
+        },
+        mySpriteFrame: {
+            default: null,
+            type: cc.SpriteFrame
+        },
+        myAtlas: {
+            default: null,
+            type: cc.SpriteAtlas
+        },
+        myPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+        myAudioClip: {
+            default: null,
+            url: cc.AudioClip
         }
     },
 

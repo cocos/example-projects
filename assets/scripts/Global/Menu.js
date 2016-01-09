@@ -10,6 +10,10 @@ cc.Class({
             default: null,
             type: cc.Node
         },
+        mask: {
+            default: null,
+            type: cc.Node
+        },
         btnInfo: {
             default: null,
             type: cc.Button
@@ -22,31 +26,48 @@ cc.Class({
 
     onLoad: function () {
         cc.game.addPersistRootNode(this.node);
-        this.currentSceneUrl = '';
+        this.currentSceneUrl = 'TestList.fire';
+        this.loadInstruction(this.currentSceneUrl);
     },
 
     backToList: function () {
-        cc.director.loadScene('TestList');
+        this.currentSceneUrl = 'TestList.fire';
+        cc.director.loadScene('TestList', this.onLoadSceneFinish.bind(this));
     },
 
     loadScene: function (url) {
-        console.log('url: ' + url);
         this.currentSceneUrl = url;
-        cc.director.loadScene(url);
+        cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
     },
 
     onLoadSceneFinish: function () {
-        console.log('scene url: ' + this.currentSceneUrl);
-        this.sceneList = cc.find('Canvas/testList/viewport/list');
+        let url = this.currentSceneUrl;
+        this.loadInstruction(url);
+    },
+
+    loadInstruction: function (url) {
+        let self = this;
+        let mdUrl = url.replace(/\.fire$/, '.md').replace('db://assets/', '');
+        cc.loader.loadTxt(cc.url.raw(mdUrl), function(err, txt) {
+            if (err) {
+                self.text.string = '说明暂缺';
+                return;
+            }
+            self.text.string = txt;
+        } );
     },
 
     showReadme: function () {
-
+        this.readme.active = !this.readme.active;
+        var emptyFunc = function (event) {
+            event.stopPropagation();
+        };
+        if (this.readme.active) {
+            this.mask.on('touchstart', emptyFunc, this);
+        } else {
+            this.mask.off('touchstart', emptyFunc, this);
+        }
+        let labelTxt = this.readme.active ? '关闭说明' : '查看说明';
+        cc.find('label', this.btnInfo.node).getComponent(cc.Label).string = labelTxt;
     },
-
-
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
 });
