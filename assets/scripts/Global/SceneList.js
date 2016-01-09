@@ -10,11 +10,14 @@ cc.Class({
 
     createItem: function (x, y, name, url) {
         var item = cc.instantiate(this.itemPrefab);
-        var label = item.getComponent('ListItem').label;
+        var itemComp = item.getComponent('ListItem');
+        var label = itemComp.label;
         label.string = name;
+
         if (url) {
-            item.getComponent('ListItem').url = url;
+            itemComp.url = url;
         }
+
         // item.width = w;
         item.x = x;
         item.y = y;
