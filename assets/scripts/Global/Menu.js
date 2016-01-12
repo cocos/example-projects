@@ -1,3 +1,8 @@
+
+var emptyFunc = function (event) {
+    event.stopPropagation();
+};
+        
 cc.Class({
     extends: cc.Component,
 
@@ -31,6 +36,7 @@ cc.Class({
     },
 
     backToList: function () {
+        this.showReadme(false);
         this.currentSceneUrl = 'TestList.fire';
         cc.director.loadScene('TestList', this.onLoadSceneFinish.bind(this));
     },
@@ -57,11 +63,13 @@ cc.Class({
         } );
     },
 
-    showReadme: function () {
-        this.readme.active = !this.readme.active;
-        var emptyFunc = function (event) {
-            event.stopPropagation();
-        };
+    showReadme: function (active) {
+        if (active === undefined) {
+            this.readme.active = !this.readme.active;
+        }
+        else {
+            this.readme.active = active;
+        }
         if (this.readme.active) {
             this.mask.on('touchstart', emptyFunc, this);
         } else {
