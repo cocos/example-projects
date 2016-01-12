@@ -33,16 +33,11 @@ cc.Class({
                                moveDownAction,
                                squashAction,
                                scaleBackAction);
-        this.seq.retain();
                                
         this.counter = cc.find('Canvas/count_label').getComponent(cc.Label);
         this.counter.string = this.time.toFixed(2) + ' s';
         this.counting = false;
         this.repeat = false;
-    },
-    
-    destroy: function () {
-        this.seq.release();
     },
 
     // called every frame
