@@ -26,7 +26,6 @@ cc.Class({
     onBtnLeftClicked: function() {
         console.log('Left button clicked!');
         this.display.string = 'Left button clicked!';
-        this.display.string = 'hehe';
     },
 
     onBtnRightClicked: function() {
