@@ -11,10 +11,22 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        editbox: {
+        singleLineText: {
             default: null,
             type: cc.EditBox,
+        },
+        
+        singleLinePassword: {
+            default: null,
+            type: cc.EditBox,
+        },
+        
+        multiLineText: {
+            default: null,
+            type: cc.EditBox
         }
+        
+        
     },
 
     // use this for initialization
@@ -22,16 +34,40 @@ cc.Class({
 
     },
     
-    editBoxDidBeginEditing: function() {
-        cc.log("editBoxDidBeginEditing");
+    singleLineEditBoxDidBeginEditing: function() {
+        cc.log("single line editBoxDidBeginEditing");
     },
     
-     editBoxDidChanged: function(text) {
-        cc.log("editBoxDidChanged: " + text);
+    singleLineEditBoxDidChanged: function(text) {
+        cc.log("single line editBoxDidChanged: " + text);
     },
     
-     editBoxDidEndEditing: function() {
-        cc.log("editBoxDidEndEditing: " + this.editbox.string);
+    singleLineEditBoxDidEndEditing: function() {
+        cc.log("single line editBoxDidEndEditing: " + this.singleLineText.string);
+    },
+    
+    singleLinePasswordEditBoxDidBeginEditing: function() {
+        cc.log("single line password editBoxDidBeginEditing");
+    },
+    
+    singleLinePasswordEditBoxDidChanged: function(text) {
+        cc.log("single line password editBoxDidChanged: " + text);
+    },
+    
+    singleLinePasswordEditBoxDidEndEditing: function() {
+        cc.log("single line password editBoxDidEndEditing: " + this.singleLinePassword.string);
+    },
+    
+    multiLinePasswordEditBoxDidBeginEditing: function() {
+        cc.log("multi line editBoxDidBeginEditing");
+    },
+    
+    multiLinePasswordEditBoxDidChanged: function(text) {
+        cc.log("multi line editBoxDidChanged: " + text);
+    },
+    
+    multiLinePasswordEditBoxDidEndEditing: function() {
+        cc.log("multi line editBoxDidEndEditing: " + this.multiLineText.string);
     },
     
 

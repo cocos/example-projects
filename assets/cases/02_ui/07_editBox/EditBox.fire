@@ -78,22 +78,16 @@
         "__id__": 5
       },
       {
-        "__id__": 12
+        "__id__": 22
       },
       {
-        "__id__": 14
+        "__id__": 11
       },
       {
-        "__id__": 19
+        "__id__": 24
       },
       {
-        "__id__": 21
-      },
-      {
-        "__id__": 23
-      },
-      {
-        "__id__": 25
+        "__id__": 16
       },
       {
         "__id__": 8
@@ -119,7 +113,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 27
+        "__id__": 26
       }
     ],
     "_prefab": null
@@ -267,12 +261,12 @@
     ],
     "textChanged": [
       {
-        "__id__": 10
+        "__id__": 20
       }
     ],
     "editingDidEnd": [
       {
-        "__id__": 11
+        "__id__": 21
       }
     ],
     "_N$backgroundImage": {
@@ -306,7 +300,7 @@
       "__id__": 8
     },
     "component": "editbox",
-    "handler": "editBoxDidBeginEditing"
+    "handler": "singleLineEditBoxDidBeginEditing"
   },
   {
     "__type__": "cc.Node",
@@ -368,99 +362,73 @@
       "__id__": 8
     },
     "_enabled": true,
-    "editbox": {
+    "singleLineText": {
       "__id__": 6
+    },
+    "singleLinePassword": {
+      "__id__": 10
+    },
+    "multiLineText": {
+      "__id__": 15
     }
   },
   {
-    "__type__": "cc.CompEventHandler",
-    "target": {
-      "__id__": 8
-    },
-    "component": "editbox",
-    "handler": "editBoxDidChanged"
-  },
-  {
-    "__type__": "cc.CompEventHandler",
-    "target": {
-      "__id__": 8
-    },
-    "component": "editbox",
-    "handler": "editBoxDidEndEditing"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "02_singleLIneText",
+    "__type__": "cc.EditBox",
+    "_name": "",
     "_objFlags": 0,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
+    "node": {
+      "__id__": 11
     },
-    "_cascadeOpacityEnabled": true,
-    "_parent": {
-      "__id__": 2
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.461,
-      "y": 0.6
-    },
-    "_contentSize": {
+    "_enabled": true,
+    "_editboxSize": {
       "__type__": "cc.Size",
-      "width": 395.78125,
-      "height": 40
+      "width": 300,
+      "height": 52
     },
-    "_children": [],
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": -204,
-      "y": 133
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
-    "_tag": -1,
-    "_opacityModifyRGB": false,
-    "_id": "490402osfVB54NYabvTU9d8",
-    "_active": true,
-    "_components": [
+    "_string": "",
+    "editingDidBegin": [
+      {
+        "__id__": 12
+      }
+    ],
+    "textChanged": [
       {
         "__id__": 13
       }
     ],
-    "_prefab": null
-  },
-  {
-    "__type__": "cc.Label",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 12
+    "editingDidEnd": [
+      {
+        "__id__": 14
+      }
+    ],
+    "_N$backgroundImage": {
+      "__uuid__": "5f1c3f47-0c2a-4ade-ad0e-453aed86d224"
     },
-    "_enabled": true,
-    "_useOriginalSize": false,
-    "_fontSize": 40,
-    "_lineHeight": 40,
-    "_enableWrapText": false,
-    "_isSystemFontUsed": true,
-    "_N$string": "Single Line Password:",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$overflow": 0
+    "_N$returnType": 0,
+    "_N$inputFlag": 0,
+    "_N$inputMode": 6,
+    "_N$fontSize": 44,
+    "_N$fontColor": {
+      "__type__": "cc.Color",
+      "r": 252,
+      "g": 241,
+      "b": 241,
+      "a": 255
+    },
+    "_N$placeHolder": "Enter text...",
+    "_N$placeHolderFontSize": 18,
+    "_N$placeHolderFontColor": {
+      "__type__": "cc.Color",
+      "r": 134,
+      "g": 150,
+      "b": 180,
+      "a": 255
+    },
+    "_N$maxLength": 11
   },
   {
     "__type__": "cc.Node",
-    "_name": "02_SingleLineEditBox",
+    "_name": "02_SingleLineEditBoxPassword",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -491,8 +459,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 193,
-      "y": 135
+      "x": 190,
+      "y": 65
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -505,158 +473,88 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 15
+        "__id__": 10
       }
     ],
     "_prefab": null
+  },
+  {
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
+    },
+    "component": "editbox",
+    "handler": "singleLinePasswordEditBoxDidBeginEditing"
+  },
+  {
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
+    },
+    "component": "editbox",
+    "handler": "singleLinePasswordEditBoxDidChanged"
+  },
+  {
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
+    },
+    "component": "editbox",
+    "handler": "singleLinePasswordEditBoxDidEndEditing"
   },
   {
     "__type__": "cc.EditBox",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 14
+      "__id__": 16
     },
     "_enabled": true,
     "_editboxSize": {
       "__type__": "cc.Size",
-      "width": 300,
-      "height": 52
+      "width": 292,
+      "height": 111
     },
     "_string": "",
     "editingDidBegin": [
       {
-        "__id__": 16
+        "__id__": 17
       }
     ],
     "textChanged": [
       {
-        "__id__": 17
+        "__id__": 18
       }
     ],
     "editingDidEnd": [
       {
-        "__id__": 18
+        "__id__": 19
       }
     ],
     "_N$backgroundImage": {
       "__uuid__": "5f1c3f47-0c2a-4ade-ad0e-453aed86d224"
     },
     "_N$returnType": 0,
-    "_N$inputFlag": 0,
-    "_N$inputMode": 6,
-    "_N$fontSize": 44,
+    "_N$inputFlag": 4,
+    "_N$inputMode": 0,
+    "_N$fontSize": 20,
     "_N$fontColor": {
-      "__type__": "cc.Color",
-      "r": 252,
-      "g": 241,
-      "b": 241,
-      "a": 255
-    },
-    "_N$placeHolder": "Enter text...",
-    "_N$placeHolderFontSize": 18,
-    "_N$placeHolderFontColor": {
-      "__type__": "cc.Color",
-      "r": 134,
-      "g": 150,
-      "b": 180,
-      "a": 255
-    },
-    "_N$maxLength": 11
-  },
-  {
-    "__type__": "cc.CompEventHandler",
-    "target": {
-      "__id__": 8
-    },
-    "component": "editbox",
-    "handler": "editBoxDidBeginEditing"
-  },
-  {
-    "__type__": "cc.CompEventHandler",
-    "target": {
-      "__id__": 8
-    },
-    "component": "editbox",
-    "handler": "editBoxDidChanged"
-  },
-  {
-    "__type__": "cc.CompEventHandler",
-    "target": {
-      "__id__": 8
-    },
-    "component": "editbox",
-    "handler": "editBoxDidEndEditing"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "03_multiLIneText",
-    "_objFlags": 0,
-    "_opacity": 255,
-    "_color": {
       "__type__": "cc.Color",
       "r": 255,
       "g": 255,
       "b": 255,
       "a": 255
     },
-    "_cascadeOpacityEnabled": true,
-    "_parent": {
-      "__id__": 2
+    "_N$placeHolder": "Enter text...",
+    "_N$placeHolderFontSize": 20,
+    "_N$placeHolderFontColor": {
+      "__type__": "cc.Color",
+      "r": 82,
+      "g": 114,
+      "b": 143,
+      "a": 255
     },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.461,
-      "y": 0.6
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 315.703125,
-      "height": 40
-    },
-    "_children": [],
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": -164,
-      "y": 6
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
-    "_tag": -1,
-    "_opacityModifyRGB": false,
-    "_id": "60ee5Ra/PlJ+5POl9OPEfZ5",
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 20
-      }
-    ],
-    "_prefab": null
-  },
-  {
-    "__type__": "cc.Label",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 19
-    },
-    "_enabled": true,
-    "_useOriginalSize": false,
-    "_fontSize": 40,
-    "_lineHeight": 40,
-    "_enableWrapText": false,
-    "_isSystemFontUsed": true,
-    "_N$string": "Mutiple Line Text:",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$overflow": 0
+    "_N$maxLength": 20
   },
   {
     "__type__": "cc.Node",
@@ -691,8 +589,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 191,
-      "y": -3
+      "x": 189,
+      "y": -107
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -705,56 +603,54 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 22
+        "__id__": 15
       }
     ],
     "_prefab": null
   },
   {
-    "__type__": "cc.EditBox",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 21
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
     },
-    "_enabled": true,
-    "_editboxSize": {
-      "__type__": "cc.Size",
-      "width": 292,
-      "height": 111
+    "component": "editbox",
+    "handler": "multiLinePasswordEditBoxDidBeginEditing"
+  },
+  {
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
     },
-    "_string": "",
-    "editingDidBegin": [],
-    "textChanged": [],
-    "editingDidEnd": [],
-    "_N$backgroundImage": {
-      "__uuid__": "5f1c3f47-0c2a-4ade-ad0e-453aed86d224"
+    "component": "editbox",
+    "handler": "multiLinePasswordEditBoxDidChanged"
+  },
+  {
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
     },
-    "_N$returnType": 0,
-    "_N$inputFlag": 4,
-    "_N$inputMode": 0,
-    "_N$fontSize": 20,
-    "_N$fontColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
+    "component": "editbox",
+    "handler": "multiLinePasswordEditBoxDidEndEditing"
+  },
+  {
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
     },
-    "_N$placeHolder": "Enter text...",
-    "_N$placeHolderFontSize": 20,
-    "_N$placeHolderFontColor": {
-      "__type__": "cc.Color",
-      "r": 82,
-      "g": 114,
-      "b": 143,
-      "a": 255
+    "component": "editbox",
+    "handler": "singleLineEditBoxDidChanged"
+  },
+  {
+    "__type__": "cc.CompEventHandler",
+    "target": {
+      "__id__": 8
     },
-    "_N$maxLength": 20
+    "component": "editbox",
+    "handler": "singleLineEditBoxDidEndEditing"
   },
   {
     "__type__": "cc.Node",
-    "_name": "04_multiLInePassword",
+    "_name": "02_singleLIneText",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -775,7 +671,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 413.53515625,
+      "width": 395.78125,
       "height": 40
     },
     "_children": [],
@@ -785,8 +681,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -218,
-      "y": -154
+      "x": -207,
+      "y": 63
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -795,11 +691,11 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "349f8GeLbJFioO+4af9HcXO",
+    "_id": "490402osfVB54NYabvTU9d8",
     "_active": true,
     "_components": [
       {
-        "__id__": 24
+        "__id__": 23
       }
     ],
     "_prefab": null
@@ -809,7 +705,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 23
+      "__id__": 22
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -817,14 +713,14 @@
     "_lineHeight": 40,
     "_enableWrapText": false,
     "_isSystemFontUsed": true,
-    "_N$string": "Mutiple Line Password:",
+    "_N$string": "Single Line Password:",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
   },
   {
     "__type__": "cc.Node",
-    "_name": "04_multilinePasswrod",
+    "_name": "03_multiLIneText",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -840,13 +736,13 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0.461,
+      "y": 0.6
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 292,
-      "height": 111
+      "width": 315.703125,
+      "height": 40
     },
     "_children": [],
     "_rotationX": 0,
@@ -855,8 +751,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 192,
-      "y": -169
+      "x": -166,
+      "y": -98
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -865,56 +761,32 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "e6d83hYnatFS78tCx4mlI7/",
+    "_id": "60ee5Ra/PlJ+5POl9OPEfZ5",
     "_active": true,
     "_components": [
       {
-        "__id__": 26
+        "__id__": 25
       }
     ],
     "_prefab": null
   },
   {
-    "__type__": "cc.EditBox",
+    "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 25
+      "__id__": 24
     },
     "_enabled": true,
-    "_editboxSize": {
-      "__type__": "cc.Size",
-      "width": 292,
-      "height": 111
-    },
-    "_string": "",
-    "editingDidBegin": [],
-    "textChanged": [],
-    "editingDidEnd": [],
-    "_N$backgroundImage": {
-      "__uuid__": "5f1c3f47-0c2a-4ade-ad0e-453aed86d224"
-    },
-    "_N$returnType": 0,
-    "_N$inputFlag": 0,
-    "_N$inputMode": 0,
-    "_N$fontSize": 20,
-    "_N$fontColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$placeHolder": "Enter text...",
-    "_N$placeHolderFontSize": 20,
-    "_N$placeHolderFontColor": {
-      "__type__": "cc.Color",
-      "r": 82,
-      "g": 114,
-      "b": 143,
-      "a": 255
-    },
-    "_N$maxLength": 20
+    "_useOriginalSize": false,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": false,
+    "_isSystemFontUsed": true,
+    "_N$string": "Mutiple Line Text:",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$overflow": 0
   },
   {
     "__type__": "cc.Canvas",
