@@ -69,7 +69,9 @@ cc.Class({
     multiLinePasswordEditBoxDidEndEditing: function() {
         cc.log("multi line editBoxDidEndEditing: " + this.multiLineText.string);
     },
-    
+    buttonClicked: function() {
+        cc.log("button Clicked!");
+    }
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
