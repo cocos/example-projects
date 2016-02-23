@@ -24,20 +24,20 @@
     "_parent": null,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 100
+      "width": 0,
+      "height": 0
     },
     "_children": [
       {
         "__id__": 2
       },
       {
-        "__id__": 6
+        "__id__": 9
       }
     ],
     "_localZOrder": 0,
@@ -45,7 +45,7 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "bec343a8-179d-4db5-9acc-008f07fe11a4"
+    "_id": "303a6deb-0905-47ac-a797-4e41d36a1ad9"
   },
   {
     "__type__": "cc.Node",
@@ -54,9 +54,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 57,
+      "g": 61,
+      "b": 64,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -94,18 +94,18 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "24f94PURq9MjIDQbRYfzWKX",
+    "_id": "e1059/MAapCk43+afwX4/z/",
     "_active": true,
     "_components": [
       {
-        "__id__": 5
+        "__id__": 8
       }
     ],
     "_prefab": null
   },
   {
     "__type__": "cc.Node",
-    "_name": "Sliced_Sprite",
+    "_name": "Tiled Sprite",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -126,8 +126,63 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 400,
-      "height": 240
+      "width": 0,
+      "height": 0
+    },
+    "_children": [
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 6
+      }
+    ],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -137,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "ed098qgrwxDD7TRYxgmu1or",
+    "_active": true,
+    "_components": [],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "barBg",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 3
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 300,
+      "height": 31
     },
     "_children": [],
     "_rotationX": 0,
@@ -146,11 +201,11 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "20df6GBBctNTKqSrjGAVOUB",
+    "_id": "630e2W3SJpIPbI3CY+44EJG",
     "_active": true,
     "_components": [
       {
-        "__id__": 4
+        "__id__": 5
       }
     ],
     "_prefab": null
@@ -160,23 +215,100 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 3
+      "__id__": 4
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "c7e3ed03-c568-4a97-8a49-a00c74ea6856"
+      "__uuid__": "ce3733eb-cd7d-4a80-b69d-913cb16d3dee"
     },
-    "_type": 1,
-    "_useOriginalSize": false,
+    "_type": 2,
+    "_useOriginalSize": true,
     "_sizeMode": 0,
-    "_fillType": 2,
+    "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
-      "x": 0.3,
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_atlas": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "barFg",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 3
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
       "y": 0.5
     },
-    "_fillStart": 0.2,
-    "_fillRange": 0.5,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 200,
+      "height": 31
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": -2.8
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "6f8e1KwkP9CpZ73TgrKW4KE",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 7
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 6
+    },
+    "_enabled": true,
+    "_spriteFrame": {
+      "__uuid__": "a711f9d8-7304-4890-8c14-e25a23a44a1a"
+    },
+    "_type": 2,
+    "_useOriginalSize": true,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null
   },
@@ -229,8 +361,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 480,
-      "y": 320
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -239,11 +371,11 @@
     "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "d05a5k9q05E7J2nGGWFIXNB",
+    "_id": "bfd14rypCpOoZ6buHfoEB5f",
     "_active": true,
     "_components": [
       {
-        "__id__": 7
+        "__id__": 10
       }
     ],
     "_prefab": null
@@ -253,9 +385,9 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 9
     },
     "_enabled": true,
-    "text": "## Sliced Sprite 使用说明\n\n1. 场景正中应该显示一个 UI 面板图像\n2. Sprite 组件里的 Type 属性应设为 Sliced，这时 use original size 是取消勾选状态\n3. 选中 use original size, 图像尺寸会恢复到贴图原始尺寸\n4. 再次修改 size 属性，可以看到图像无损拉伸\n5. 可以选中 Scene 面板左上角第四个操作选项，激活 Rect Gizmo，然后拖拽四个顶点，或四条边来修改图像的尺寸和位置\n6. 点击 Sprite 属性最右边的 Editor 按钮，可以打开 Sprite Editor 编辑 Sprite 的切分方式"
+    "text": "## Tiled Sprite 使用说明\n\n1. 场景正中显示是由tiled Sprite 类型的sprite 组合而成的 进度条.\n2. Sprite 组件里的 Type 属性应设为 Tiled. \n3. 设置Anchor 可以控制进度条的朝向.\n4. 设置Size的width 控制进度条的进度."
   }
 ]
