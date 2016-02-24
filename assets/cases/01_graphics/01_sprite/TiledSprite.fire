@@ -37,7 +37,7 @@
         "__id__": 2
       },
       {
-        "__id__": 9
+        "__id__": 13
       }
     ],
     "_localZOrder": 0,
@@ -76,6 +76,9 @@
     "_children": [
       {
         "__id__": 3
+      },
+      {
+        "__id__": 8
       }
     ],
     "_rotationX": 0,
@@ -98,14 +101,17 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 8
+        "__id__": 11
+      },
+      {
+        "__id__": 12
       }
     ],
     "_prefab": null
   },
   {
     "__type__": "cc.Node",
-    "_name": "Tiled Sprite",
+    "_name": "Tiled Sprite 1",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -143,8 +149,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -137,
-      "y": 0
+      "x": -252,
+      "y": 200
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -181,7 +187,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 300,
+      "width": 500,
       "height": 31
     },
     "_children": [],
@@ -237,7 +243,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "barFg",
+    "_name": "progressBar",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -258,7 +264,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
+      "width": 0,
       "height": 31
     },
     "_children": [],
@@ -313,6 +319,135 @@
     "_atlas": null
   },
   {
+    "__type__": "cc.Node",
+    "_name": "Tiled Sprite 2",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_children": [
+      {
+        "__id__": 9
+      }
+    ],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -500,
+      "y": -193
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "c738cCw/HVFUb4/SU+Bdp0A",
+    "_active": true,
+    "_components": [],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ground",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 8
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 100,
+      "height": 256
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": -83
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_ignoreAnchorPointForPosition": false,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "26fedEPyjdPxbeudmIby0SO",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 10
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 9
+    },
+    "_enabled": true,
+    "_spriteFrame": {
+      "__uuid__": "4e04607f-1e4b-4513-8e9b-d9793044a8b3"
+    },
+    "_type": 2,
+    "_useOriginalSize": true,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_atlas": null
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 1835008,
@@ -327,6 +462,22 @@
     },
     "_fitWidth": false,
     "_fitHeight": true
+  },
+  {
+    "__type__": "e6941HLrIVFLokuMTS8HSUo",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "speed": 100,
+    "progressBar": {
+      "__id__": 6
+    },
+    "ground": {
+      "__id__": 9
+    }
   },
   {
     "__type__": "cc.Node",
@@ -375,7 +526,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 14
       }
     ],
     "_prefab": null
@@ -385,7 +536,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 13
     },
     "_enabled": true,
     "text": "## Tiled Sprite 使用说明\n\n1. 场景正中显示是由tiled Sprite 类型的sprite 组合而成的 进度条.\n2. Sprite 组件里的 Type 属性应设为 Tiled. \n3. 设置Anchor 可以控制进度条的朝向.\n4. 设置Size的width 控制进度条的进度."
