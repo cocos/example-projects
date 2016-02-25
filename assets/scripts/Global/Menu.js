@@ -54,7 +54,7 @@ cc.Class({
     loadInstruction: function (url) {
         let self = this;
         let mdUrl = url.replace(/\.fire$/, '.md').replace('db://assets/', '');
-        cc.loader.loadTxt(cc.url.raw(mdUrl), function(err, txt) {
+        cc.loader.load(cc.url.raw(mdUrl), function(err, txt) {
             if (err) {
                 self.text.string = '说明暂缺';
                 return;
