@@ -2,7 +2,7 @@
 var emptyFunc = function (event) {
     event.stopPropagation();
 };
-        
+
 cc.Class({
     extends: cc.Component,
 
@@ -32,23 +32,31 @@ cc.Class({
     onLoad: function () {
         cc.game.addPersistRootNode(this.node);
         this.currentSceneUrl = 'TestList.fire';
+        this.contentPos = null;
+        this.isMenu = true;
         this.loadInstruction(this.currentSceneUrl);
     },
 
     backToList: function () {
         this.showReadme(false);
         this.currentSceneUrl = 'TestList.fire';
+        this.isMenu = true;
         cc.director.loadScene('TestList', this.onLoadSceneFinish.bind(this));
     },
 
     loadScene: function (url) {
+        this.contentPos = cc.find('Canvas/testList').getComponent(cc.ScrollView).getContentPosition();
         this.currentSceneUrl = url;
+        this.isMenu = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
     },
 
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
+        if (this.isMenu) {
+            cc.find('Canvas/testList').getComponent(cc.ScrollView).setContentPosition(this.contentPos);
+        }
     },
 
     loadInstruction: function (url) {
