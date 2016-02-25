@@ -43,34 +43,11 @@ cc.Class({
         }
     },
 
-    _setPlayerVisible: function(value) {
-        if (this._player) {
-            var sp = this._player.getComponent('cc.Sprite');
-            sp & sp.setVisible(value);
-        }
-    },
-
-    _isSucceedLayerVisible: function() {
-        if (this._succeedLayer) {
-            var sp = this._succeedLayer.getComponent('cc.Sprite');
-            return sp.isVisible();
-        }
-
-        return false;
-    },
-
-    _setSucceedLayerVisible: function(value) {
-        if (this._succeedLayer) {
-            var sp = this._succeedLayer.getComponent('cc.Sprite');
-            sp & sp.setVisible(value);
-        }
-    },
-
     // use this for initialization
     onLoad: function () {
         this._player = this.node.getChildByName('player');
         if (! this._isMapLoaded) {
-            this._setPlayerVisible(false);
+            this._player.active = false;
         }
 
         var self = this;
@@ -83,7 +60,7 @@ cc.Class({
     },
 
     restartGame: function() {
-        this._setSucceedLayerVisible(false);
+        this._succeedLayer.active = false;
         this.node.setPosition(cc.p(0, 0));
         this._curTile = this._startTile;
         this._updatePlayerPos();
@@ -94,7 +71,7 @@ cc.Class({
 
         // init the succeed layer
         this._succeedLayer = this.node.getParent().getChildByName('succeedLayer');
-        this._setSucceedLayerVisible(false);
+        this._succeedLayer.active = false;
 
         // init the player position
         this._tiledMap = this.node.getComponent('cc.TiledMap');
@@ -117,7 +94,7 @@ cc.Class({
 
         if (this._player) {
             this._updatePlayerPos();
-            this._setPlayerVisible(true);
+            this._player.active = true;
         }
 
         this._isMapLoaded = true;
@@ -138,7 +115,7 @@ cc.Class({
     },
 
     _onKeyPressed: function(keyCode, event) {
-        if (!this._isMapLoaded || this._isSucceedLayerVisible()) return;
+        if (!this._isMapLoaded || this._succeedLayer.active) return;
 
         var newTile = cc.p(this._curTile.x, this._curTile.y);
         var mapMoveDir = MoveDirection.NONE;
@@ -171,7 +148,7 @@ cc.Class({
             // check the player is success or not
             if (cc.pointEqualToPoint(this._curTile, this._endTile)) {
                 cc.log('succeed');
-                this._setSucceedLayerVisible(true);
+                this._succeedLayer.active = true;
             }
         }
     },
