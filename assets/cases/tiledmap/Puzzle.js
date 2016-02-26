@@ -9,6 +9,7 @@ var MoveDirection = cc.Enum({
 
 var minTilesCount = 2;
 var mapMoveStep = 1;
+var minMoveValue = 50;
 
 cc.Class({
     extends: cc.Component,
@@ -17,6 +18,15 @@ cc.Class({
     },
 
     properties: {
+        _touchStartPos: {
+            default: null,
+            serializable: false,
+        },
+        _touching: {
+            default: false,
+            serializable: false,
+        },
+
         _isMapLoaded : {
             default: false,
             serializable: false,
@@ -56,6 +66,48 @@ cc.Class({
             onKeyPressed: function(keyCode, event) {
                 self._onKeyPressed(keyCode, event);
             }
+        }, self);
+
+        this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+            self._touching = true;
+            self._touchStartPos = event.touch.getLocation();
+        }, self);
+        this.node.on(cc.Node.EventType.TOUCH_END, function (event) {
+            if (!self._touching) return;
+
+            self._touching = false;
+            var touchPos = event.touch.getLocation();
+            var movedX = touchPos.x - self._touchStartPos.x;
+            var movedY = touchPos.y - self._touchStartPos.y;
+            var movedXValue = Math.abs(movedX);
+            var movedYValue = Math.abs(movedY);
+            if (movedXValue < minMoveValue && movedYValue < minMoveValue) {
+                // touch moved not enough
+                return;
+            }
+
+            var newTile = cc.p(this._curTile.x, this._curTile.y);
+            var mapMoveDir = MoveDirection.NONE;
+            if (movedXValue >= movedYValue) {
+                // move to right or left
+                if (movedX > 0) {
+                    newTile.x += 1;
+                    mapMoveDir = MoveDirection.LEFT;
+                } else {
+                    newTile.x -= 1;
+                    mapMoveDir = MoveDirection.RIGHT;
+                }
+            } else {
+                // move to up or down
+                if (movedY > 0) {
+                    newTile.y -= 1;
+                    mapMoveDir = MoveDirection.UP;
+                } else {
+                    newTile.y += 1;
+                    mapMoveDir = MoveDirection.DOWN;
+                }
+            }
+            this._tryMoveToNewTile(newTile, mapMoveDir);
         }, self);
     },
 
@@ -140,23 +192,13 @@ cc.Class({
                 return;
         }
 
-        var ret = this._tryMoveToNewTile(newTile);
-        if (ret) {
-            // move the map if necessary
-            this._tryMoveMap(mapMoveDir);
-
-            // check the player is success or not
-            if (cc.pointEqualToPoint(this._curTile, this._endTile)) {
-                cc.log('succeed');
-                this._succeedLayer.active = true;
-            }
-        }
+        this._tryMoveToNewTile(newTile, mapMoveDir);
     },
 
-    _tryMoveToNewTile: function(newTile) {
+    _tryMoveToNewTile: function(newTile, mapMoveDir) {
         var mapSize = this._tiledMap.getMapSize();
-        if (newTile.x < 0 || newTile.x >= mapSize.width) return false;
-        if (newTile.y < 0 || newTile.y >= mapSize.height) return false;
+        if (newTile.x < 0 || newTile.x >= mapSize.width) return;
+        if (newTile.y < 0 || newTile.y >= mapSize.height) return;
 
         if (this._layerBarrier.getTileGIDAt(newTile)) {
             cc.log('This way is blocked!');
@@ -167,7 +209,14 @@ cc.Class({
         this._curTile = newTile;
         this._updatePlayerPos();
 
-        return true;
+        // move the map if necessary
+        this._tryMoveMap(mapMoveDir);
+
+        // check the player is success or not
+        if (cc.pointEqualToPoint(this._curTile, this._endTile)) {
+            cc.log('succeed');
+            this._succeedLayer.active = true;
+        }
     },
 
     _tryMoveMap: function(moveDir) {
