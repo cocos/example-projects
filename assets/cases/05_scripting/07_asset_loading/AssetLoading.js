@@ -17,6 +17,11 @@ cc.Class({
             type: cc.Label
         },
 
+        loadAnimTestPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+
         loadTips: {
             default: null,
             type: cc.Label
@@ -47,6 +52,10 @@ cc.Class({
             },
             Scene: {
                 src: "00e919ea-2eda-473f-92ac-0abdcd582a6e",
+                type: "uuid"
+            },
+            Animation: {
+                src: "295cf1dc-f3ba-4d4e-b6e2-d4be6ee535aa",
                 type: "uuid"
             }
         };
@@ -141,6 +150,14 @@ cc.Class({
                 var prefab = cc.instantiate(res);
                 prefab.parent = node;
                 prefab.setPosition(0, 0);
+                break;
+            case "Animation":
+                var loadAnim = cc.instantiate(this.loadAnimTestPrefab);
+                loadAnim.parent = node;
+                loadAnim.setPosition(0, 0);
+                var AanimCtrl = loadAnim.getComponent(cc.Animation);
+                AanimCtrl.addClip(res);
+                AanimCtrl.play(res.name);
                 break;
 
         }
