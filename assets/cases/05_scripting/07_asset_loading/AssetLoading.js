@@ -7,16 +7,6 @@ cc.Class({
             type: cc.Node
         },
 
-        showResource: {
-            default: null,
-            type: cc.Node
-        },
-
-        showResourceLabel: {
-            default: null,
-            type: cc.Label
-        },
-
         loadAnimTestPrefab: {
             default: null,
             type: cc.Prefab
@@ -37,8 +27,10 @@ cc.Class({
     onLoad: function () {
         // cur load Target
         this._curType = "";
+        this._lastType = "";
         this._curRes = null;
         this._curNode = null;
+        this._curLabel = null;
         // add load res url
         this._urls = {
             Image: cc.url.raw("loadRes/image.png"),
@@ -69,22 +61,20 @@ cc.Class({
         this._curRes = res;
 
         if (this._curType === "Audio") {
-            this.showResourceLabel.string = "Play ";
+            this._curLabel.string = "Play ";
         }
         else {
-            this.showResourceLabel.string = "Create ";
+            this._curLabel.string = "Create ";
         }
-        this.showResourceLabel.string += this._curType;
+        this._curLabel.string += this._curType;
+
         this.loadTips.string = this._curType + " Loaded Successfully !";
-        this.showResource.active = true;
     },
 
     onRegisteredEvent: function () {
         for (var i = 0; i < this.loadList.length; ++i) {
             this.loadList[i].on(cc.Node.EventType.MOUSE_DOWN, this.onLoadResClick.bind(this));
         }
-        this.showResource.on(cc.Node.EventType.MOUSE_DOWN, this.onShowResClick.bind(this));
-        this.showResource.active = false;
     },
 
     onClear: function () {
@@ -99,14 +89,26 @@ cc.Class({
 
     onLoadResClick: function (event) {
         this.onClear();
-        this.showResource.active = false;
+
+        this._lastType = this._curType;
         this._curType = event.target.name.split('_')[1];
+
+        if (this._lastType !== "" && this._curType === this._lastType) {
+            this.onShowResClick(event);
+            return;
+        }
+
+        if (this._curLabel) {
+            this._curLabel.string = "Loaded " + this._curType;
+        }
+
+        this._curLabel = event.target.getChildByName("Label").getComponent("cc.Label");
+
         this.loadTips.string = this._curType + " Loading....";
         cc.loader.load(this._urls[this._curType], this.loadCallBack.bind(this));
     },
 
     onShowResClick: function (event) {
-        this.onClear();
         if (this._curType === "Scene") {
             cc.loader.release(this._urls.Scene.src);
             cc.director.runScene(this._curRes.scene);
