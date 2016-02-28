@@ -5,6 +5,10 @@ cc.Class({
         jumper: {
             default: null,
             type: cc.Node
+        },
+        colorNode: {
+            default: null,
+            type: cc.Node
         }
     },
 
@@ -19,10 +23,15 @@ cc.Class({
             this.moveUpAction, this.scaleBackAction, this.moveDownAction, this.squashAction, this.scaleBackAction);
         // this is a temp api which will be combined to cc.Node
         this.jumper.runAction(seq);
-    },
-
-    // called every frame
-    update: function (dt) {
-
+        
+        this.colorNode.runAction(cc.sequence(
+            cc.tintTo(2, 255, 0, 0),
+            cc.delayTime(0.5),
+            cc.fadeOut(1),
+            cc.delayTime(0.5),
+            cc.fadeIn(1),
+            cc.delayTime(0.5),
+            cc.tintTo(2, 255, 255, 255)
+        ).repeat(2));
     },
 });
