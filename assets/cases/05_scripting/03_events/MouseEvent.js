@@ -12,6 +12,11 @@ cc.Class({
         // },
         // ...
     },
+    
+    move: function (event) {
+        this.node.x += event.getDeltaX();
+        this.node.y += event.getDeltaY();
+    },
 
     // use this for initialization
     onLoad: function () {
@@ -19,6 +24,7 @@ cc.Class({
         this.node.opacity = 50;
         this.node.on(cc.Node.EventType.MOUSE_DOWN, function () {
             this.node.opacity = 255;
+            this.node.on(cc.Node.EventType.MOUSE_MOVE, this.move, this);
         }, this);
         this.node.on(cc.Node.EventType.MOUSE_ENTER, function () {
             this.node.opacity = 160;
@@ -28,6 +34,7 @@ cc.Class({
         }, this);
         this.node.on(cc.Node.EventType.MOUSE_UP, function () {
             this.node.opacity = 50;
+            this.node.off(cc.Node.EventType.MOUSE_MOVE, this.move, this);
             if (this._callback) {
                 this._callback();
             }
