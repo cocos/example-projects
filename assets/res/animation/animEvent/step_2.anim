@@ -1,0 +1,40 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "step_2",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            386,
+            254
+          ],
+          "curve": "quartOut"
+        },
+        {
+          "frame": 1,
+          "value": [
+            386,
+            -236
+          ]
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "frame": 1,
+      "func": "onNextAnimation",
+      "params": [
+        3
+      ]
+    }
+  ]
+}
