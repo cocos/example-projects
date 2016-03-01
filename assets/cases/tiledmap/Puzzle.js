@@ -113,13 +113,16 @@ cc.Class({
 
     restartGame: function() {
         this._succeedLayer.active = false;
-        this.node.setPosition(cc.p(0, 0));
+        this._initMapPos();
         this._curTile = this._startTile;
         this._updatePlayerPos();
     },
 
     theMapLoaded: function(err) {
         if (CC_EDITOR || err) return;
+
+        // init the map position
+        this._initMapPos();
 
         // init the succeed layer
         this._succeedLayer = this.node.getParent().getChildByName('succeedLayer');
@@ -150,6 +153,10 @@ cc.Class({
         }
 
         this._isMapLoaded = true;
+    },
+
+    _initMapPos: function() {
+        this.node.setPosition(cc.visibleRect.bottomLeft);
     },
 
     _updatePlayerPos: function() {
@@ -259,10 +266,10 @@ cc.Class({
 
         if (newPos) {
             // calculate the position range of map
-            var minX = viewSize.width - mapContentSize.width;
-            var maxX = 0;
-            var minY = viewSize.height - mapContentSize.height;
-            var maxY = 0;
+            var minX = viewSize.width - mapContentSize.width - cc.visibleRect.left;
+            var maxX = cc.visibleRect.left.x;
+            var minY = viewSize.height - mapContentSize.height - cc.visibleRect.bottom;
+            var maxY = cc.visibleRect.bottom.y;
 
             if (newPos.x < minX) newPos.x = minX;
             if (newPos.x > maxX) newPos.x = maxX;
