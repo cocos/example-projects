@@ -34,6 +34,9 @@ cc.Class({
             for (i = 0; i < scenes.length; ++i) {
                 let url = scenes[i].url;
                 let dirname = cc.path.dirname(url).replace('db://assets/cases/', '');
+                if (dirname === 'db://assets/loadRes') {
+                    continue;
+                }
                 let scenename = cc.path.basename(url, '.fire');
                 if (scenename === 'TestList') continue;
 
