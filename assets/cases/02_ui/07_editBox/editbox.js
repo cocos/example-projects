@@ -24,9 +24,13 @@ cc.Class({
         multiLineText: {
             default: null,
             type: cc.EditBox
+        },
+
+        showEditorBoxLabel: {
+            default: null,
+            type: cc.Label
         }
-        
-        
+
     },
 
     // use this for initialization
@@ -71,6 +75,12 @@ cc.Class({
     },
     buttonClicked: function() {
         cc.log("button Clicked!");
+        if (this.singleLineText.string !== "") {
+            this.showEditorBoxLabel.string = "Enter Text: " + this.singleLineText.string;
+        }
+        else {
+            this.showEditorBoxLabel.string = "";
+        }
     }
 
     // called every frame, uncomment this function to activate update callback
