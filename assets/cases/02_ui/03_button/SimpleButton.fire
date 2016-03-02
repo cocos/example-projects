@@ -37,15 +37,14 @@
         "__id__": 2
       },
       {
-        "__id__": 9
+        "__id__": 12
       },
       {
-        "__id__": 16
+        "__id__": 19
       }
     ],
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "47064841-7cf7-4fe6-a645-c7087162e36e"
@@ -81,10 +80,13 @@
         "__id__": 3
       },
       {
-        "__id__": 5
+        "__id__": 6
       },
       {
-        "__id__": 12
+        "__id__": 8
+      },
+      {
+        "__id__": 15
       }
     ],
     "_rotationX": 0,
@@ -100,17 +102,106 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "0b951/6WMhCD6sAzEqnsgvw",
     "_active": true,
     "_components": [
       {
-        "__id__": 15
+        "__id__": 18
       }
     ],
     "_prefab": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Background",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 57,
+      "g": 61,
+      "b": 64,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 1500,
+      "height": 640
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "e02633eCWVO37awr03JDiOQ",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 4
+      }
+    ],
+    "_prefab": {
+      "__id__": 5
+    }
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "_spriteFrame": {
+      "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
+    },
+    "_type": 0,
+    "_useOriginalSize": true,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 3
+    },
+    "asset": {
+      "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
+    },
+    "fileId": "78fd70+ls5GgJcFkzvLSRk8"
   },
   {
     "__type__": "cc.Node",
@@ -152,14 +243,13 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "f45dfH3KOVJgqeytAWDnU/P",
     "_active": true,
     "_components": [
       {
-        "__id__": 4
+        "__id__": 7
       }
     ],
     "_prefab": null
@@ -169,7 +259,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 3
+      "__id__": 6
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -222,17 +312,16 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "9b93co63e1OqKgy8OdW52R3",
     "_active": true,
     "_components": [
       {
-        "__id__": 6
+        "__id__": 9
       },
       {
-        "__id__": 7
+        "__id__": 10
       }
     ],
     "_prefab": null
@@ -242,7 +331,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 5
+      "__id__": 8
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -260,6 +349,8 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_atlas": null
   },
   {
@@ -267,7 +358,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 5
+      "__id__": 8
     },
     "_enabled": true,
     "transition": 2,
@@ -294,7 +385,7 @@
     },
     "clickEvents": [
       {
-        "__id__": 8
+        "__id__": 11
       }
     ],
     "_N$interactable": true,
@@ -319,13 +410,13 @@
       "__uuid__": "d55da879-01d3-4c68-9750-c0eeb65a3e33"
     },
     "_N$target": {
-      "__id__": 5
+      "__id__": 8
     }
   },
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 9
+      "__id__": 12
     },
     "component": "ButtonControl1",
     "handler": "onBtnLeftClicked"
@@ -370,14 +461,13 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "0bcf39nDoBF0onarYht+jxC",
     "_active": true,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 13
       }
     ],
     "_prefab": null
@@ -387,17 +477,17 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 12
     },
     "_enabled": true,
     "buttonLeft": {
-      "__id__": 7
+      "__id__": 10
     },
     "buttonRight": {
-      "__id__": 11
+      "__id__": 14
     },
     "display": {
-      "__id__": 4
+      "__id__": 7
     }
   },
   {
@@ -405,7 +495,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 15
     },
     "_enabled": true,
     "transition": 1,
@@ -428,7 +518,7 @@
     "hoverSprite": null,
     "clickEvents": [
       {
-        "__id__": 14
+        "__id__": 17
       }
     ],
     "_N$interactable": true,
@@ -449,7 +539,7 @@
     "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
-      "__id__": 12
+      "__id__": 15
     }
   },
   {
@@ -492,17 +582,16 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "645fdOqq4dKQLIKS6bK6fsH",
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 14
       },
       {
-        "__id__": 13
+        "__id__": 16
       }
     ],
     "_prefab": null
@@ -512,7 +601,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 15
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -530,12 +619,14 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_atlas": null
   },
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 9
+      "__id__": 12
     },
     "component": "ButtonControl1",
     "handler": "onBtnRightClicked"
@@ -596,14 +687,13 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_ignoreAnchorPointForPosition": false,
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "be079lHuo1DrqjFPBTa4cJJ",
     "_active": true,
     "_components": [
       {
-        "__id__": 17
+        "__id__": 20
       }
     ],
     "_prefab": null
@@ -613,7 +703,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 16
+      "__id__": 19
     },
     "_enabled": true,
     "text": "## Button 使用说明\n\n场景中应该显示一左一右两个按钮。点击 play 按钮预览游戏，按钮会有如下行为：\n\n- 移动鼠标到左边按钮上时，按钮图案变成问号\n- 按下左边按钮时，按钮图案变成惊叹号，同时上方有文字显示\"Left Button Clicked\"\n- 移动鼠标到右边按钮上时，按钮颜色加深\n- 按下右边按钮时，按钮颜色变得更深，同时上方文字显示\"Right Button Clicked\"\n\n### 贴图切换\n\n1. 选中 Button_Switch_Sprite 节点，关注 Button 组件\n2. Target 属性规定了 Button 状态变化时，应该更新哪个对象的图像\n3. Interactable 规定了 Button 是否可以交互\n4. Transition 属性里选择 SPRITE，就是状态改变时切换 Sprite 图像显示的模式\n5. Normal/Pressed/Hover/Disabled 属性分别指定在相应状态下显示的 Sprite 图像资源\n6. Click Events 里可以指定按钮按下后的事件处理方法\n\n### 颜色变化\n\n1. 选中 Button_Switch_Color 节点，关注 Button 组件\n2. Transition 属性里选择 COLOR，就是状态改变时过渡 Sprite 颜色显示的模式\n3. Normal/Pressed/Hover/Disabled 属性分别指定在相应状态下 Sprite 的颜色\n4. Duration 属性指定颜色过渡的时长\n\n### 添加点击事件处理\n\n1. 选中 Button_Switch_Sprite，关注 Button 组件\n2. 在 Click Events 列表里，添加一个新的点击事件\n3. 将事件监听脚本所在节点拖拽到该事件的 Target 属性上\n4. 在 Component 属性列表中选择事件监听脚本所属的组件\n5. 在 Handler 属性列表中选择事件发生时调用的方法"
