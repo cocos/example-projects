@@ -73,7 +73,7 @@ cc.Class({
 
     onRegisteredEvent: function () {
         for (var i = 0; i < this.loadList.length; ++i) {
-            this.loadList[i].on(cc.Node.EventType.MOUSE_DOWN, this.onLoadResClick.bind(this));
+            this.loadList[i].on(cc.Node.EventType.TOUCH_END, this.onLoadResClick.bind(this));
         }
     },
 
