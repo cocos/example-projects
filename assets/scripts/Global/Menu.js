@@ -54,7 +54,7 @@ cc.Class({
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
-        if (this.isMenu) {
+        if (this.isMenu && this.contentPos) {
             cc.find('Canvas/testList').getComponent(cc.ScrollView).setContentPosition(this.contentPos);
         }
     },
