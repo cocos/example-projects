@@ -33,7 +33,8 @@ cc.Class({
         this._curLabel = null;
         // add load res url
         this._urls = {
-            Image: cc.url.raw("resources://test assets/image.png"),
+            Texture: cc.url.raw("resources://test assets/image.png"),
+            SpriteFrame: "resources://test assets/image.png/image",
             Audio: cc.url.raw("resources://test assets/audio.mp3"),
             Txt: cc.url.raw("resources://test assets/text.txt"),
             Font: cc.url.raw("resources://test assets/font.fnt"),
@@ -124,9 +125,13 @@ cc.Class({
         node.parent = this.showWindow;
         var component = null;
         switch (this._curType) {
-            case "Image":
+            case "Texture":
                 component = node.addComponent(cc.Sprite);
                 component.spriteFrame = new cc.SpriteFrame(res);
+                break;
+            case "SpriteFrame":
+                component = node.addComponent(cc.Sprite);
+                component.spriteFrame = res;
                 break;
             case "Txt":
                 component = node.addComponent(cc.Label);
