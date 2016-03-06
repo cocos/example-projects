@@ -33,23 +33,14 @@ cc.Class({
         this._curLabel = null;
         // add load res url
         this._urls = {
-            Image: cc.url.raw("loadRes/image.png"),
-            Audio: cc.url.raw("loadRes/audio.mp3"),
-            Txt: cc.url.raw("loadRes/text.txt"),
-            Font: cc.url.raw("loadRes/font.fnt"),
-            Plist: cc.url.raw("loadRes/atom.plist"),
-            Prefab: {
-                src: "4f64edb9-7bc7-430f-a229-97ace8f02a04",
-                type: "uuid"
-            },
-            Scene: {
-                src: "00e919ea-2eda-473f-92ac-0abdcd582a6e",
-                type: "uuid"
-            },
-            Animation: {
-                src: "295cf1dc-f3ba-4d4e-b6e2-d4be6ee535aa",
-                type: "uuid"
-            }
+            Image: cc.url.raw("resources://test assets/image.png"),
+            Audio: cc.url.raw("resources://test assets/audio.mp3"),
+            Txt: cc.url.raw("resources://test assets/text.txt"),
+            Font: cc.url.raw("resources://test assets/font.fnt"),
+            Plist: cc.url.raw("resources://test assets/atom.plist"),
+            Prefab: "resources://test assets/prefab",
+            Scene: "resources://test assets/scene",
+            Animation: "resources://test assets/anim"
         };
         // registered event
         this.onRegisteredEvent();
@@ -82,7 +73,7 @@ cc.Class({
             this._curNode.destroy();
         }
 
-        if (this._curRes instanceof cc.Audio) {
+        if (cc.Audio && this._curRes instanceof cc.Audio) {
             this._curRes.stop();
         }
     },
@@ -114,8 +105,13 @@ cc.Class({
             cc.director.runScene(this._curRes.scene);
         }
         else if (this._curType === "Audio") {
-            this._curRes.play();
-            this.loadTips.string = "Open sound music!!";
+            if (this._curRes) {
+                this._curRes.play();
+                this.loadTips.string = "Open sound music!!";
+            }
+            else {
+                this.loadTips.string = "Failed to open audio!";
+            }
         }
         else {
             this._createNode(this._curType, this._curRes);
