@@ -33,12 +33,12 @@ cc.Class({
         this._curLabel = null;
         // add load res url
         this._urls = {
-            Texture: cc.url.raw("resources://test assets/image.png"),
+            Audio: cc.url.raw("resources/test assets/audio.mp3"),
+            Txt: cc.url.raw("resources/test assets/text.txt"),
+            Font: cc.url.raw("resources/test assets/font.fnt"),
+            Plist: cc.url.raw("resources/test assets/atom.plist"),
+            Texture: cc.url.raw("resources/test assets/image.png"),
             SpriteFrame: "resources://test assets/image.png/image",
-            Audio: cc.url.raw("resources://test assets/audio.mp3"),
-            Txt: cc.url.raw("resources://test assets/text.txt"),
-            Font: cc.url.raw("resources://test assets/font.fnt"),
-            Plist: cc.url.raw("resources://test assets/atom.plist"),
             Prefab: "resources://test assets/prefab",
             Scene: "resources://test assets/scene",
             Animation: "resources://test assets/anim"
