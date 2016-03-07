@@ -119,7 +119,7 @@ cc.Class({
     },
 
     theMapLoaded: function(err) {
-        if (CC_EDITOR || err) return;
+        if (err) return;
 
         // init the map position
         this._initMapPos();

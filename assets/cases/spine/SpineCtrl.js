@@ -15,7 +15,7 @@ cc.Class({
         this._setMix('walk', 'jump');
         
         spine.setStartListener(track => {
-            var entry = spine.getCurrent(track);
+            var entry = spine.getState().getCurrent(track);
             if (entry) {
                 var animationName = entry.animation ? entry.animation.name : "";
                 cc.log("[track %s] start: %s", track, animationName);

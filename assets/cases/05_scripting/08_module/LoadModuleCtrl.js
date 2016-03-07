@@ -14,7 +14,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.btn_createMonster.on(cc.Node.EventType.MOUSE_DOWN, this.createMoster.bind(this));
+        this.btn_createMonster.on(cc.Node.EventType.TOUCH_END, this.createMoster.bind(this));
     },
 
     createMoster: function () {
