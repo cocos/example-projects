@@ -91,7 +91,7 @@ cc.Class({
         }
 
         if (this._curLabel) {
-            this._curLabel.string = "Loaded " + this._curType;
+            this._curLabel.string = "Loaded " + this._lastType;
         }
 
         this._curLabel = event.target.getChildByName("Label").getComponent("cc.Label");
