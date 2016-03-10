@@ -35,7 +35,12 @@ cc.Class({
         this.atk.string = info.atk;
         this.defense.string = info.defense;
 
-        this.image.spriteFrame = new cc.SpriteFrame(cc.url.raw(info.imageUrl));
+        var image = this.image;
+        cc.loader.load(info.imageUrl, function (error, spriteFrame) {
+            if (!error) {
+                image.spriteFrame = spriteFrame;
+            }
+        });
 
         //cc.loader.load(, function (error, res) {
         //    console.log(res);
