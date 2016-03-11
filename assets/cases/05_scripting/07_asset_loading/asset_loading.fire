@@ -80,10 +80,10 @@
         "__id__": 7
       },
       {
-        "__id__": 63
+        "__id__": 64
       },
       {
-        "__id__": 65
+        "__id__": 66
       }
     ],
     "_rotationX": 0,
@@ -105,10 +105,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 67
+        "__id__": 68
       },
       {
-        "__id__": 68
+        "__id__": 69
       }
     ],
     "_prefab": null
@@ -337,7 +337,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 62
+        "__id__": 63
       }
     ],
     "_prefab": null
@@ -2440,7 +2440,11 @@
     "hoverSprite": {
       "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
     },
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 62
+      }
+    ],
     "_N$interactable": true,
     "_N$normalColor": {
       "__type__": "cc.Color",
@@ -2465,6 +2469,14 @@
     "_N$target": {
       "__id__": 56
     }
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 2
+    },
+    "component": "AssetLoading",
+    "handler": "loadSpriteAnimation"
   },
   {
     "__type__": "cc.Layout",
@@ -2539,7 +2551,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 64
+        "__id__": 65
       }
     ],
     "_prefab": null
@@ -2549,7 +2561,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 63
+      "__id__": 64
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2617,7 +2629,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 66
+        "__id__": 67
       }
     ],
     "_prefab": null
@@ -2627,7 +2639,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 65
+      "__id__": 66
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -2668,13 +2680,13 @@
     },
     "_enabled": true,
     "showWindow": {
-      "__id__": 63
+      "__id__": 64
     },
     "loadAnimTestPrefab": {
       "__uuid__": "f6b3551c-1db7-4f25-80a9-dffee8002b39"
     },
     "loadTips": {
-      "__id__": 66
+      "__id__": 67
     },
     "loadList": [
       {
@@ -2700,9 +2712,6 @@
       },
       {
         "__id__": 50
-      },
-      {
-        "__id__": 56
       }
     ]
   }
