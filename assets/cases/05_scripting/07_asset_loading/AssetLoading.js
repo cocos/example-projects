@@ -168,6 +168,25 @@ cc.Class({
         }
         node.setPosition(0, 0);
         this._curNode = node;
-    }
+    },
 
+    loadSpriteAnimation () {
+        let plistUrl = 'resources://test assets/atlas.png';
+        let pngUrl = 'resources://test assets/atlas.plist';
+        let animUrl = 'resources://test assets/sprite-anim';
+        cc.loader.load([plistUrl, pngUrl], function(errs, results) {
+            cc.loader.load(animUrl, function(err, res) {
+                if (err) {
+                    cc.log('Error url [' + err + ']');
+                }
+                this.loadTips.string = "";
+                var loadAnim = cc.instantiate(this.loadAnimTestPrefab);
+                this.showWindow.addChild(loadAnim);
+                loadAnim.setPosition(0, 0);
+                var AanimCtrl = loadAnim.getComponent(cc.Animation);
+                AanimCtrl.addClip(res);
+                AanimCtrl.play(res.name);
+            }.bind(this));
+        }.bind(this));
+    }
 });
