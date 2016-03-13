@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        monsterTemp:{
+        monsterTemp: {
             default: null,
             type: cc.Prefab
         },
@@ -25,6 +25,7 @@ cc.Class({
         monsterComp.initInfo(InitData.monsterInfo);
         monster.parent = this.node;
         monster.setPosition(cc.p(0, 0));
+        this.btn_createMonster.active = false;
     }
 
     // called every frame, uncomment this function to activate update callback
