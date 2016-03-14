@@ -231,7 +231,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 160
+      "y": -110
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -273,15 +273,18 @@
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_isSystemFontUsed": true,
+    "_isSystemFontUsed": false,
     "_N$string": "Press \"Space\" to toggle particle play",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 0,
-    "_N$overflow": 2
+    "_N$overflow": 2,
+    "_N$file": {
+      "__uuid__": "e90dd7c6-cd18-4c7a-ae83-dcef9b0a1b5a"
+    }
   },
   {
     "__type__": "cc.Node",
-    "_name": "particle",
+    "_name": "Particle",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
