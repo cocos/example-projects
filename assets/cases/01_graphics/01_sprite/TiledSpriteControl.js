@@ -17,12 +17,14 @@ cc.Class({
     },
 
     update: function (dt) {
-        if (this.progressBar.width < 500 ) {
-            this.progressBar.width += dt * this.speed;
-        }
-        if (this.ground.width < 1000 ) {
-            this.ground.width += dt * this.speed;
-        }
+        this._updateWdith(this.progressBar, 500, dt);
+        this._updateWdith(this.ground, 1000, dt);
+    },
+
+    _updateWdith: function (node, range, dt) {
+        var width = node.width;
+        width = width < range ? width += dt * this.speed : 0;
+        node.width = width;
     }
 
 });

@@ -6,7 +6,7 @@ cc.Class({
     },
 
     onLoad: function () {
-        var node = cc.find('Canvas/New Label');
+        var node = cc.find('Canvas/Label');
         this._label = node.getComponent(cc.Label);
         this._animCtrl = this.node.getComponent(cc.Animation);
     },

@@ -260,7 +260,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "particle 2",
+    "_name": "Normal_Patical",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -295,7 +295,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 208,
+      "x": -191,
       "y": -86
     },
     "_skewX": 0,
@@ -304,7 +304,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "502f21vIG5IS5BFJpNv4Dqz",
+    "_id": "d78afpFyelLmYJB2nVznO5p",
     "_active": true,
     "_components": [
       {
@@ -315,7 +315,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "Tips",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -336,8 +336,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 310.5,
-      "height": 48
+      "width": 390.2777777777777,
+      "height": 55.55555555555556
     },
     "_children": [],
     "_rotationX": 0,
@@ -347,7 +347,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -45
+      "y": -60
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -355,7 +355,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "9b1a0iIhihLyrgNZmGUUYT1",
+    "_id": "4300bC4vCNEmIJoB2869wnJ",
     "_active": true,
     "_components": [
       {
@@ -373,14 +373,17 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_fontSize": 20,
-    "_lineHeight": 24,
-    "_enableWrapText": true,
-    "_isSystemFontUsed": true,
-    "_N$string": "Particle 2\n\"Auto Remove On Finish\" enabled",
+    "_fontSize": 25,
+    "_lineHeight": 40,
+    "_enableWrapText": false,
+    "_isSystemFontUsed": false,
+    "_N$string": "Particle 1\n\"Auto Remove On Finish\" disabled",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
-    "_N$overflow": 2
+    "_N$overflow": 0,
+    "_N$file": {
+      "__uuid__": "e90dd7c6-cd18-4c7a-ae83-dcef9b0a1b5a"
+    }
   },
   {
     "__type__": "cc.ParticleSystem",
@@ -397,7 +400,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "playOnLoad": true,
-    "_autoRemoveOnFinish": true,
+    "_autoRemoveOnFinish": false,
     "_totalParticles": 150,
     "_duration": 3,
     "_emissionRate": 18,
@@ -475,7 +478,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "particle 1",
+    "_name": "Auto_Remove_OnFinish_Patical",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -510,7 +513,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -191,
+      "x": 208,
       "y": -86
     },
     "_skewX": 0,
@@ -519,7 +522,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "d78afpFyelLmYJB2nVznO5p",
+    "_id": "502f21vIG5IS5BFJpNv4Dqz",
     "_active": true,
     "_components": [
       {
@@ -530,7 +533,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "Tips",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -551,8 +554,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 310.5,
-      "height": 48
+      "width": 384.0277777777777,
+      "height": 55.55555555555556
     },
     "_children": [],
     "_rotationX": 0,
@@ -562,7 +565,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -45
+      "y": -60
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -570,7 +573,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "4300bC4vCNEmIJoB2869wnJ",
+    "_id": "9b1a0iIhihLyrgNZmGUUYT1",
     "_active": true,
     "_components": [
       {
@@ -588,14 +591,17 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_fontSize": 20,
-    "_lineHeight": 24,
-    "_enableWrapText": true,
-    "_isSystemFontUsed": true,
-    "_N$string": "Particle 1\n\"Auto Remove On Finish\" disabled",
+    "_fontSize": 25,
+    "_lineHeight": 40,
+    "_enableWrapText": false,
+    "_isSystemFontUsed": false,
+    "_N$string": "Particle 2\n\"Auto Remove On Finish\" enabled",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
-    "_N$overflow": 2
+    "_N$overflow": 0,
+    "_N$file": {
+      "__uuid__": "e90dd7c6-cd18-4c7a-ae83-dcef9b0a1b5a"
+    }
   },
   {
     "__type__": "cc.ParticleSystem",
@@ -612,7 +618,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "playOnLoad": true,
-    "_autoRemoveOnFinish": false,
+    "_autoRemoveOnFinish": true,
     "_totalParticles": 150,
     "_duration": 3,
     "_emissionRate": 18,
