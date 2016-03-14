@@ -10,6 +10,11 @@ cc.Class({
             type: cc.Sprite
         },
 
+        vertical: {
+            default: null,
+            type: cc.Sprite
+        },
+
         radial_round: {
             default: null,
             type: cc.Sprite
@@ -21,28 +26,24 @@ cc.Class({
         }
     },
 
-    onLoad: function () {
-        this.init_horizontal_Range = this.horizontal.fillRange * -1;
-        this.init_round_range = this.radial_round.fillRange;
-        this.init_semicircle_range = this.radial_semicircle.fillRange;
-    },
-
     update: function (dt) {
-        // 因为默认是从左往右的，为了从有到左所有这里 * -1
-        this._updataFillStart(this.horizontal, this.init_horizontal_Range, this.speed, dt);
-        this._updateFillRange(this.radial_round, this.init_round_range, this.speed, dt);
-        this._updateFillRange(this.radial_semicircle, this.init_semicircle_range, this.speed, dt);
+        // update fill start
+        this._updataFillStart(this.horizontal, dt);
+        this._updataFillStart(this.vertical, dt);
+        // update fill range
+        this._updateFillRange(this.radial_round, 1, dt);
+        this._updateFillRange(this.radial_semicircle, 0.5, dt);
     },
 
-    _updataFillStart: function (sprite, range, speed, dt) {
+    _updataFillStart: function (sprite, dt) {
         var fillStart = sprite.fillStart;
-        fillStart = fillStart > range ? fillStart -= (dt * speed) : 0;
+        fillStart = fillStart > 0 ? fillStart -= (dt * this.speed) : 1;
         sprite.fillStart = fillStart;
     },
-    
-    _updateFillRange: function (sprite, range, speed, dt) {
+
+    _updateFillRange: function (sprite, range, dt) {
         var fillRange = sprite.fillRange;
-        fillRange = fillRange < range ? fillRange += (dt * speed) : 0;
+        fillRange = fillRange < range ? fillRange += (dt * this.speed) : 0;
         sprite.fillRange = fillRange;
     }
 
