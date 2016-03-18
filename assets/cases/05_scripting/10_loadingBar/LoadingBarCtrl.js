@@ -60,6 +60,7 @@ cc.Class({
         ];
 
         this.progressBar.progress = 0;
+        cc.loader.releaseAll();
         cc.loader.load(this._urls, this._progressCallback.bind(this), this._completeCallback.bind(this));
     },
 
