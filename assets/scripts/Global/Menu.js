@@ -61,8 +61,9 @@ cc.Class({
 
     loadInstruction: function (url) {
         let self = this;
-        let mdUrl = url.replace(/\.fire$/, '.md').replace('db://assets/', '');
-        cc.loader.load(cc.url.raw(mdUrl), function(err, txt) {
+        let urlArr = url.split('/');
+        let fileName = urlArr[urlArr.length - 1].replace('.fire', '.md');
+        cc.loader.load(cc.url.raw("resources://readme/" + fileName), function(err, txt) {
             if (err) {
                 self.text.string = '说明暂缺';
                 return;
