@@ -31,6 +31,7 @@ cc.Class({
         this._curRes = null;
         this._curNode = null;
         this._curLabel = null;
+        this._audioSource = null;
         // add load res url
         this._urls = {
             // Raw Asset, need extension
@@ -60,6 +61,7 @@ cc.Class({
         else {
             this._curLabel.string = "Create ";
         }
+
         this._curLabel.string += this._curType;
 
         this.loadTips.string = this._curType + " Loaded Successfully !";
@@ -75,9 +77,8 @@ cc.Class({
         if (this._curNode) {
             this._curNode.destroy();
         }
-
-        if (cc.Audio && this._curRes instanceof cc.Audio) {
-            this._curRes.stop();
+        if (this._audioSource && this._audioSource instanceof cc.AudioSource) {
+            this._audioSource.stop();
         }
     },
 
@@ -107,15 +108,6 @@ cc.Class({
             cc.loader.release(this._urls.Scene.src);
             cc.director.runScene(this._curRes.scene);
         }
-        else if (this._curType === "Audio") {
-            if (this._curRes) {
-                this._curRes.play();
-                this.loadTips.string = "Open sound music!!";
-            }
-            else {
-                this.loadTips.string = "Failed to open audio!";
-            }
-        }
         else {
             this._createNode(this._curType, this._curRes);
         }
@@ -127,13 +119,19 @@ cc.Class({
         node.parent = this.showWindow;
         var component = null;
         switch (this._curType) {
+            case "SpriteFrame":
+                component = node.addComponent(cc.Sprite);
+                component.spriteFrame = res;
+                break;
             case "Texture":
                 component = node.addComponent(cc.Sprite);
                 component.spriteFrame = new cc.SpriteFrame(res);
                 break;
-            case "SpriteFrame":
-                component = node.addComponent(cc.Sprite);
-                component.spriteFrame = res;
+            case "Audio":
+                component = node.addComponent(cc.AudioSource);
+                component.clip = res.src;
+                component.play();
+                this._audioSource = component;
                 break;
             case "Txt":
                 component = node.addComponent(cc.Label);
