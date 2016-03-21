@@ -129,7 +129,7 @@ cc.Class({
                 break;
             case "Audio":
                 component = node.addComponent(cc.AudioSource);
-                component.clip = res.src;
+                component.clip = res;
                 component.play();
                 this._audioSource = component;
                 break;
