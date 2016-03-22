@@ -41,10 +41,10 @@ cc.Class({
             Plist: cc.url.raw("resources/test assets/atom.plist"),
             Texture: cc.url.raw("resources/test assets/image.png"),
             // Asset, no extension
-            SpriteFrame: "resources://test assets/image.png/image",
-            Prefab: "resources://test assets/prefab",
-            Animation: "resources://test assets/anim",
-            Scene: "resources://test assets/scene",
+            SpriteFrame: "test assets/image.png/image",
+            Prefab: "test assets/prefab",
+            Animation: "test assets/anim",
+            Scene: "test assets/scene",
         };
         // registered event
         this.onRegisteredEvent();
@@ -76,6 +76,7 @@ cc.Class({
     onClear: function () {
         if (this._curNode) {
             this._curNode.destroy();
+            this._curNode = null;
         }
         if (this._audioSource && this._audioSource instanceof cc.AudioSource) {
             this._audioSource.stop();
@@ -100,13 +101,21 @@ cc.Class({
         this._curLabel = event.target.getChildByName("Label").getComponent("cc.Label");
 
         this.loadTips.string = this._curType + " Loading....";
-        cc.loader.load(this._urls[this._curType], this.loadCallBack.bind(this));
+        
+        var url = this._urls[this._curType];
+        if (url.startsWith('test assets/')) {
+            cc.loader.loadRes(url, this.loadCallBack.bind(this));
+        }
+        else {
+            cc.loader.load(url, this.loadCallBack.bind(this));
+        }
     },
 
     onShowResClick: function (event) {
-        if (this._curType === "Scene") {
-            cc.loader.release(this._urls.Scene.src);
+        if (this._curType === "Scene" && this._curRes) {
             cc.director.runScene(this._curRes.scene);
+            cc.loader.releaseAsset(this._curRes);
+            this._curRes = null;
         }
         else {
             this._createNode(this._curType, this._curRes);
