@@ -29,8 +29,9 @@ cc.Class({
         this._curType = "";
         this._lastType = "";
         this._curRes = null;
-        this._curLabel = null;
+        this._btnLabel = null;
         this._audioSource = null;
+        this._isLoading = false;
         // add load res url
         this._urls = {
             // Raw Asset, need extension
@@ -38,12 +39,12 @@ cc.Class({
             Txt: cc.url.raw("resources/test assets/text.txt"),
             Font: cc.url.raw("resources/test assets/font.fnt"),
             Plist: cc.url.raw("resources/test assets/atom.plist"),
-            Texture: cc.url.raw("resources/test assets/image.png"),
+            Texture: cc.url.raw("resources/test assets/PurpleMonster.png"),
             // Asset, no extension
-            SpriteFrame: "resources://test assets/image.png/image",
-            Prefab: "resources://test assets/prefab",
-            Animation: "resources://test assets/anim",
-            Scene: "resources://test assets/scene"
+            SpriteFrame: "test assets/image.png/image",
+            Prefab: "test assets/prefab",
+            Animation: "test assets/anim",
+            Scene: "test assets/scene",
         };
         // registered event
         this._onRegisteredEvent();
@@ -56,18 +57,26 @@ cc.Class({
     },
 
     _onClick (event) {
+        if (this._isLoading) { return; }
+
         this._onClear();
-        this._lastType = this._curType;
+
         this._curType = event.target.name.split('_')[1];
         if (this._lastType !== "" && this._curType === this._lastType) {
             this._onShowResClick(event);
             return;
         }
-        if (this._curLabel) {
-            this._curLabel.string = "Loaded " + this._curType;
+
+        if (this._btnLabel) {
+            this._btnLabel.string = "Loaded " + this._lastType;
         }
-        this._curLabel = event.target.getChildByName("Label").getComponent("cc.Label");
+
+        this._lastType = this._curType;
+
+        this._btnLabel = event.target.getChildByName("Label").getComponent("cc.Label");
+
         this.loadTips.string = this._curType + " Loading....";
+        this._isLoading = true;
         if (this._curType == "Animation") {
             this._loadSpriteAnimation();
         }
@@ -81,19 +90,20 @@ cc.Class({
     },
 
     _loadCallBack: function (err, res) {
+        this._isLoading = false;
         if (err) {
             cc.log('Error url [' + err + ']');
             return;
         }
         this._curRes = res;
         if (this._curType === "Audio") {
-            this._curLabel.string = "Play ";
+            this._btnLabel.string = "Play ";
         }
         else {
-            this._curLabel.string = "Create ";
+            this._btnLabel.string = "Create ";
         }
-        this._curLabel.string += this._curType;
-        this.loadTips.string = this._curType + " Loaded Successfully !";
+        this._btnLabel.string += this._curType;
+        this.loadTips.string = this._curType + " Loaded Successfully!";
     },
 
     _onClear () {
@@ -126,9 +136,10 @@ cc.Class({
                 break;
             case "Audio":
                 component = node.addComponent(cc.AudioSource);
-                component.clip = res.src;
+                component.clip = res;
                 component.play();
                 this._audioSource = component;
+                this.loadTips.string = "Playing Music.";
                 break;
             case "Txt":
                 component = node.addComponent(cc.Label);
@@ -159,17 +170,16 @@ cc.Class({
                 AanimCtrl.addClip(res);
                 AanimCtrl.play(res.name);
                 break;
-
         }
         this.showWindow.addChild(node);
         node.setPosition(0, 0);
     },
 
     _loadSpriteAnimation () {
-        let plistUrl = 'resources://test assets/atlas.png';
-        let pngUrl = 'resources://test assets/atlas.plist';
-        let animUrl = 'resources://test assets/sprite-anim';
-        cc.loader.loadRes([plistUrl, pngUrl], function(errs, results) {
+        let plistUrl = 'test assets/atlas.png';
+        let pngUrl = 'test assets/atlas.plist';
+        let animUrl = 'test assets/sprite-anim';
+        cc.loader.load([plistUrl, pngUrl], function(errs, results) {
             cc.loader.loadRes(animUrl, function(err, res) {
                 this._loadCallBack(err, res)
             }.bind(this));

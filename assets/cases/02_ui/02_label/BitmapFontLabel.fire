@@ -3,7 +3,6 @@
     "__type__": "cc.SceneAsset",
     "_name": "",
     "_objFlags": 0,
-    "_rawFiles": null,
     "scene": {
       "__id__": 1
     }
@@ -277,7 +276,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Warp",
+    "_name": "Wrap",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -334,7 +333,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Warp_Title",
+    "_name": "Wrap_Title",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -355,8 +354,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 61.85302734375,
-      "height": 40
+      "width": 67.36,
+      "height": 27.78
     },
     "_children": [],
     "_rotationX": 0,
@@ -396,12 +395,12 @@
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_isSystemFontUsed": false,
-    "_N$string": "Warp",
+    "_N$string": "Wrap",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0,
     "_N$file": {
-      "__uuid__": "5b9cbc23-76b3-41ff-9953-4219fdbea72c"
+      "__uuid__": "e90dd7c6-cd18-4c7a-ae83-dcef9b0a1b5a"
     }
   },
   {
@@ -964,7 +963,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "No_Warp",
+    "_name": "No_Wrap",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -1021,7 +1020,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "No_Warp_Title",
+    "_name": "No_Wrap_Title",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -1042,8 +1041,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 103.11279296875,
-      "height": 40
+      "width": 104.86,
+      "height": 27.78
     },
     "_children": [],
     "_rotationX": 0,
@@ -1083,12 +1082,12 @@
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_isSystemFontUsed": false,
-    "_N$string": "No Warp",
+    "_N$string": "No Wrap",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0,
     "_N$file": {
-      "__uuid__": "5b9cbc23-76b3-41ff-9953-4219fdbea72c"
+      "__uuid__": "e90dd7c6-cd18-4c7a-ae83-dcef9b0a1b5a"
     }
   },
   {
@@ -2150,6 +2149,7 @@
       "__id__": 52
     },
     "_enabled": true,
+    "isAlignOnce": false,
     "_alignFlags": 8,
     "_left": -92.33333333333333,
     "_right": 0,
