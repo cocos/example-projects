@@ -29,9 +29,9 @@ cc.Class({
         this._curType = "";
         this._lastType = "";
         this._curRes = null;
-        this._curNode = null;
-        this._curLabel = null;
+        this._btnLabel = null;
         this._audioSource = null;
+        this._isLoading = false;
         // add load res url
         this._urls = {
             // Raw Asset, need extension
@@ -39,7 +39,7 @@ cc.Class({
             Txt: cc.url.raw("resources/test assets/text.txt"),
             Font: cc.url.raw("resources/test assets/font.fnt"),
             Plist: cc.url.raw("resources/test assets/atom.plist"),
-            Texture: cc.url.raw("resources/test assets/image.png"),
+            Texture: cc.url.raw("resources/test assets/PurpleMonster.png"),
             // Asset, no extension
             SpriteFrame: "test assets/image.png/image",
             Prefab: "test assets/prefab",
@@ -47,85 +47,83 @@ cc.Class({
             Scene: "test assets/scene",
         };
         // registered event
-        this.onRegisteredEvent();
+        this._onRegisteredEvent();
     },
 
-    loadCallBack: function (err, res) {
-        if (err) { return; }
+    _onRegisteredEvent () {
+        for (var i = 0; i < this.loadList.length; ++i) {
+            this.loadList[i].on(cc.Node.EventType.TOUCH_END, this._onClick.bind(this));
+        }
+    },
 
-        this._curRes = res;
+    _onClick (event) {
+        if (this._isLoading) { return; }
 
-        if (this._curType === "Audio") {
-            this._curLabel.string = "Play ";
+        this._onClear();
+
+        this._curType = event.target.name.split('_')[1];
+        if (this._lastType !== "" && this._curType === this._lastType) {
+            this._onShowResClick(event);
+            return;
+        }
+
+        if (this._btnLabel) {
+            this._btnLabel.string = "Loaded " + this._lastType;
+        }
+
+        this._lastType = this._curType;
+
+        this._btnLabel = event.target.getChildByName("Label").getComponent("cc.Label");
+
+        this.loadTips.string = this._curType + " Loading....";
+        this._isLoading = true;
+        if (this._curType == "Animation") {
+            this._loadSpriteAnimation();
+        }
+        else if (this._curType == "SpriteFrame" || this._curType == "Prefab" ||
+                 this._curType == "Scene" ) {
+            cc.loader.loadRes(this._urls[this._curType], this._loadCallBack.bind(this));
         }
         else {
-            this._curLabel.string = "Create ";
-        }
-
-        this._curLabel.string += this._curType;
-
-        this.loadTips.string = this._curType + " Loaded Successfully !";
-    },
-
-    onRegisteredEvent: function () {
-        for (var i = 0; i < this.loadList.length; ++i) {
-            this.loadList[i].on(cc.Node.EventType.TOUCH_END, this.onLoadResClick.bind(this));
+            cc.loader.load(this._urls[this._curType], this._loadCallBack.bind(this));
         }
     },
 
-    onClear: function () {
-        if (this._curNode) {
-            this._curNode.destroy();
-            this._curNode = null;
+    _loadCallBack: function (err, res) {
+        this._isLoading = false;
+        if (err) {
+            cc.log('Error url [' + err + ']');
+            return;
         }
+        this._curRes = res;
+        if (this._curType === "Audio") {
+            this._btnLabel.string = "Play ";
+        }
+        else {
+            this._btnLabel.string = "Create ";
+        }
+        this._btnLabel.string += this._curType;
+        this.loadTips.string = this._curType + " Loaded Successfully!";
+    },
+
+    _onClear () {
+        this.showWindow.removeAllChildren(true);
         if (this._audioSource && this._audioSource instanceof cc.AudioSource) {
             this._audioSource.stop();
         }
     },
 
-    onLoadResClick: function (event) {
-        this.onClear();
-
-        this._lastType = this._curType;
-        this._curType = event.target.name.split('_')[1];
-
-        if (this._lastType !== "" && this._curType === this._lastType) {
-            this.onShowResClick(event);
+    _onShowResClick (event) {
+        if (this._curType === "Scene") {
+            cc.director.runScene(this._curRes.scene);
             return;
         }
-
-        if (this._curLabel) {
-            this._curLabel.string = "Loaded " + this._curType;
-        }
-
-        this._curLabel = event.target.getChildByName("Label").getComponent("cc.Label");
-
-        this.loadTips.string = this._curType + " Loading....";
-        
-        var url = this._urls[this._curType];
-        if (url.startsWith('test assets/')) {
-            cc.loader.loadRes(url, this.loadCallBack.bind(this));
-        }
-        else {
-            cc.loader.load(url, this.loadCallBack.bind(this));
-        }
+        this._createNode(this._curType, this._curRes);
     },
 
-    onShowResClick: function (event) {
-        if (this._curType === "Scene" && this._curRes) {
-            cc.director.runScene(this._curRes.scene);
-            cc.loader.releaseAsset(this._curRes);
-            this._curRes = null;
-        }
-        else {
-            this._createNode(this._curType, this._curRes);
-        }
-    },
-
-    _createNode: function (type, res) {
+    _createNode (type, res) {
         this.loadTips.string = "";
         var node = new cc.Node("New " + type);
-        node.parent = this.showWindow;
         var component = null;
         switch (this._curType) {
             case "SpriteFrame":
@@ -141,6 +139,7 @@ cc.Class({
                 component.clip = res;
                 component.play();
                 this._audioSource = component;
+                this.loadTips.string = "Playing Music.";
                 break;
             case "Txt":
                 component = node.addComponent(cc.Label);
@@ -171,28 +170,18 @@ cc.Class({
                 AanimCtrl.addClip(res);
                 AanimCtrl.play(res.name);
                 break;
-
         }
+        this.showWindow.addChild(node);
         node.setPosition(0, 0);
-        this._curNode = node;
     },
 
-    loadSpriteAnimation () {
-        let plistUrl = 'resources://test assets/atlas.png';
-        let pngUrl = 'resources://test assets/atlas.plist';
-        let animUrl = 'resources://test assets/sprite-anim';
+    _loadSpriteAnimation () {
+        let plistUrl = 'test assets/atlas.png';
+        let pngUrl = 'test assets/atlas.plist';
+        let animUrl = 'test assets/sprite-anim';
         cc.loader.load([plistUrl, pngUrl], function(errs, results) {
-            cc.loader.load(animUrl, function(err, res) {
-                if (err) {
-                    cc.log('Error url [' + err + ']');
-                }
-                this.loadTips.string = "";
-                var loadAnim = cc.instantiate(this.loadAnimTestPrefab);
-                this.showWindow.addChild(loadAnim);
-                loadAnim.setPosition(0, 0);
-                var AanimCtrl = loadAnim.getComponent(cc.Animation);
-                AanimCtrl.addClip(res);
-                AanimCtrl.play(res.name);
+            cc.loader.loadRes(animUrl, function(err, res) {
+                this._loadCallBack(err, res)
             }.bind(this));
         }.bind(this));
     }
