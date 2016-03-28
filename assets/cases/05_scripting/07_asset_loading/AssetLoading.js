@@ -115,6 +115,7 @@ cc.Class({
 
     _onShowResClick (event) {
         if (this._curType === "Scene") {
+            cc.loader.releaseRes(this._urls.Scene);
             cc.director.runScene(this._curRes.scene);
             return;
         }
