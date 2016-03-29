@@ -115,8 +115,10 @@ cc.Class({
 
     _onShowResClick (event) {
         if (this._curType === "Scene") {
-            cc.loader.releaseRes(this._urls.Scene);
             cc.director.runScene(this._curRes.scene);
+            cc.loader.releaseAsset(this._curRes);
+            this._curRes = null;
+
             return;
         }
         this._createNode(this._curType, this._curRes);
