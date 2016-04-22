@@ -33,8 +33,9 @@ cc.Class({
         this.display.string = 'Right button clicked!';
     },
 
-    onBtnInScrollClicked: function(){
-        console.log('Button in Scrollview clicked!');
-        this.display.string = 'Button in ScrollView clicked!';
+    onBtnInScrollClicked: function(sender, event){
+        var msg = sender.node.name + ' clicked!';
+        console.log(msg);
+        this.display.string = msg;
     }
 });
