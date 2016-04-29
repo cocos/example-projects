@@ -15,9 +15,9 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        cc.director.getColliderManager().enabled = true;
-        cc.director.getColliderManager().enabledDebugDraw = true;
-        // cc.director.getColliderManager().enabledDrawBoundingBox = true;
+        cc.director.getCollisionManager().enabled = true;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
+        // cc.director.getCollisionManager().enabledDrawBoundingBox = true;
         
         cc.director.setDisplayStats(true);
         this.touchingNumber = 0;

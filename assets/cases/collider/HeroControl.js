@@ -13,8 +13,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        cc.director.getColliderManager().enabled = true;
-        cc.director.getColliderManager().enabledDebugDraw = true;
+        cc.director.getCollisionManager().enabled = true;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
         
         //add keyboard input listener to call turnLeft and turnRight
         cc.eventManager.addListener({
@@ -33,7 +33,7 @@ cc.Class({
     },
     
     onDisabled: function () {
-        cc.director.getColliderManager().enabledDebugDraw = false;
+        cc.director.getCollisionManager().enabledDebugDraw = false;
     },
     
     onKeyPressed: function (keyCode, event) {
