@@ -1,0 +1,174 @@
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        speed: cc.v2(0, 0),
+        maxSpeed: cc.v2(2000, 2000),
+        gravity: -1000,
+        drag: 1000,
+        direction: 0,
+        jumpSpeed: 300
+    },
+
+    // use this for initialization
+    onLoad: function () {
+        cc.director.getCollisionManager().enabled = true;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
+        
+        //add keyboard input listener to call turnLeft and turnRight
+        cc.eventManager.addListener({
+            event: cc.EventListener.KEYBOARD, 
+            onKeyPressed: this.onKeyPressed.bind(this),
+            onKeyReleased: this.onKeyReleased.bind(this),
+        }, this.node);
+        
+        this.collisionX = 0;
+        this.collisionY = 0;
+
+        this.prePosition = cc.v2();
+        this.preStep = cc.v2();
+
+        this.touchingNumber = 0;
+    },
+    
+    onDisabled: function () {
+        cc.director.getCollisionManager().enabledDebugDraw = false;
+    },
+    
+    onKeyPressed: function (keyCode, event) {
+        switch(keyCode) {
+            case cc.KEY.a:
+            case cc.KEY.left:
+                this.direction = -1;
+                break;
+            case cc.KEY.d:
+            case cc.KEY.right:
+                this.direction = 1;
+                break;
+            case cc.KEY.w:
+            case cc.KEY.up:
+                if (!this.jumping) {
+                    this.jumping = true;
+                    this.speed.y = this.jumpSpeed;    
+                }
+                break;
+        }
+    },
+    
+    onKeyReleased: function (keyCode, event) {
+        switch(keyCode) {
+            case cc.KEY.a:
+            case cc.KEY.left:
+            case cc.KEY.d:
+            case cc.KEY.right:
+                this.direction = 0;
+                break;
+        }
+    },
+    
+    onCollisionEnter: function (other, self) {
+        this.node.color = cc.Color.RED;
+
+        this.touchingNumber ++;
+        
+        var otherAabb = other.world.aabb;
+        var selfAabb = self.world.aabb.clone();
+        var preAabb = self.world.preAabb;
+        
+        selfAabb.x = preAabb.x;
+        selfAabb.y = preAabb.y;
+
+        selfAabb.x = self.world.aabb.x;
+        if (cc.Intersection.rectRect(selfAabb, otherAabb)) {
+            if (this.speed.x < 0 && (selfAabb.xMax > otherAabb.xMax)) {
+                this.node.x = otherAabb.xMax;
+                this.collisionX = -1;
+            }
+            else if (this.speed.x > 0 && (selfAabb.xMin < otherAabb.xMin)) {
+                this.node.x = otherAabb.xMin - selfAabb.width;
+                this.collisionX = 1;
+            }
+
+            this.speed.x = 0;
+            other.touchingX = true;
+            return;
+        }
+
+        selfAabb.y = self.world.aabb.y;
+        if (cc.Intersection.rectRect(selfAabb, otherAabb)) {
+            if (this.speed.y < 0 && (selfAabb.yMax > otherAabb.yMax)) {
+                this.node.y = otherAabb.yMax;
+                this.jumping = false;
+                this.collisionY = -1;
+            }
+            else if (this.speed.y > 0 && (selfAabb.yMin < otherAabb.yMin)) {
+                this.node.y = otherAabb.yMin - selfAabb.height;
+                this.collisionY = 1;
+            }
+            
+            this.speed.y = 0;
+            other.touchingY = true;
+        }    
+    },
+    
+    onCollisionStay: function (other) {
+        this.collision = true;  
+    },
+    
+    onCollisionExit: function (other) {
+        this.touchingNumber --;
+        if (this.touchingNumber === 0) {
+            this.node.color = cc.Color.WHITE;
+        }
+
+        if (other.touchingX) {
+            this.collisionX = 0;
+            other.touchingX = false;
+        }
+        else if (other.touchingY) {
+            other.touchingY = false;
+            this.collisionY = 0;
+            this.jumping = true;
+        }
+    },
+    
+    update: function (dt) {
+        if (this.collisionY === 0) {
+            this.speed.y += this.gravity * dt;
+            if (Math.abs(this.speed.y) > this.maxSpeed.y) {
+                this.speed.y = this.speed.y > 0 ? this.maxSpeed.y : -this.maxSpeed.y;
+            }
+        }
+
+        if (this.direction === 0) {
+            if (this.speed.x > 0) {
+                this.speed.x -= this.drag * dt;
+                if (this.speed.x <= 0) this.speed.x = 0;
+            }
+            else if (this.speed.x < 0) {
+                this.speed.x += this.drag * dt;
+                if (this.speed.x >= 0) this.speed.x = 0;
+            }
+        }
+        else {
+            this.speed.x += (this.direction > 0 ? 1 : -1) * this.drag * dt;
+            if (Math.abs(this.speed.x) > this.maxSpeed.x) {
+                this.speed.x = this.speed.x > 0 ? this.maxSpeed.x : -this.maxSpeed.x;
+            }
+        }
+
+        if (this.speed.x * this.collisionX > 0) {
+            this.speed.x = 0;
+        }
+        
+        this.prePosition.x = this.node.x;
+        this.prePosition.y = this.node.y;
+
+        this.preStep.x = this.speed.x * dt;
+        this.preStep.y = this.speed.y * dt;
+        
+        this.node.x += this.speed.x * dt;
+        this.node.y += this.speed.y * dt;
+    },
+});
