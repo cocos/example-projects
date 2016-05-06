@@ -118,7 +118,7 @@ cc.Class({
         this._updatePlayerPos();
     },
 
-    theMapLoaded: function(err) {
+    start: function(err) {
         if (err) return;
 
         // init the map position
