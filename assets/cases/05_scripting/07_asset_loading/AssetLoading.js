@@ -34,14 +34,15 @@ cc.Class({
         this._isLoading = false;
         // add load res url
         this._urls = {
-            // Raw Asset, need extension
-            Audio: cc.url.raw("resources/test assets/audio.mp3"),
-            Txt: cc.url.raw("resources/test assets/text.txt"),
+            // Raw Asset
+            Audio: "test assets/audio",
+            Txt: "test assets/text",
+            Texture: "test assets/PurpleMonster",
+            // Raw Asset, use raw url
             Font: cc.url.raw("resources/test assets/font.fnt"),
             Plist: cc.url.raw("resources/test assets/atom.plist"),
-            Texture: cc.url.raw("resources/test assets/PurpleMonster.png"),
-            // Asset, no extension
-            SpriteFrame: "test assets/image.png/image",
+            // Asset
+            SpriteFrame: "test assets/image",
             Prefab: "test assets/prefab",
             Animation: "test assets/anim",
             Scene: "test assets/scene",
@@ -77,15 +78,31 @@ cc.Class({
 
         this.loadTips.string = this._curType + " Loading....";
         this._isLoading = true;
-        if (this._curType == "Animation") {
-            this._loadSpriteAnimation();
-        }
-        else if (this._curType == "SpriteFrame" || this._curType == "Prefab" ||
-                 this._curType == "Scene" ) {
-            cc.loader.loadRes(this._urls[this._curType], this._loadCallBack.bind(this));
-        }
-        else {
-            cc.loader.load(this._urls[this._curType], this._loadCallBack.bind(this));
+        
+        this._load();
+    },
+    
+    _load: function () {
+        var url = this._urls[this._curType];
+        var loadCallBack = this._loadCallBack.bind(this);
+        switch (this._curType) {
+            case 'SpriteFrame':
+                // specify the type to load sub asset from texture's url
+                cc.loader.loadRes(url, cc.SpriteFrame, loadCallBack);
+                break;
+            case 'Animation':
+                this._loadSpriteAnimation();
+                break;
+            case 'Prefab':
+            case 'Scene':
+            case 'Texture':
+            case 'Txt':
+            case 'Audio':
+                cc.loader.loadRes(url, loadCallBack);
+                break;
+            default:
+                cc.loader.load(url, loadCallBack);
+                break;
         }
     },
 
