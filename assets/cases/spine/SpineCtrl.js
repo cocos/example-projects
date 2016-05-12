@@ -66,18 +66,18 @@ cc.Class({
     },
 
     walk () {
-        this.spine.addAnimation(0, 'walk', true, 0);
+        this.spine.setAnimation(0, 'walk', true);
     },
     
     run () {
-        this.spine.addAnimation(0, 'run', true, 0);
+        this.spine.setAnimation(0, 'run', true);
     },
     
     jump () {
         var oldAnim = this.spine.animation;
         this.spine.setAnimation(0, 'jump', false);
         if (oldAnim) {
-            this.spine.addAnimation(0, oldAnim === 'run' ? 'run' : 'walk', true, 0);
+            this.spine.setAnimation(0, oldAnim === 'run' ? 'run' : 'walk', true);
         }
     },
     
