@@ -29,111 +29,137 @@ cc.Class({
         this._curType = "";
         this._lastType = "";
         this._curRes = null;
-        this._curNode = null;
-        this._curLabel = null;
+        this._btnLabel = null;
+        this._audioSource = null;
+        this._isLoading = false;
         // add load res url
         this._urls = {
-            // Raw Asset, need extension
-            Audio: cc.url.raw("resources/test assets/audio.mp3"),
-            Txt: cc.url.raw("resources/test assets/text.txt"),
+            // Raw Asset
+            Audio: "test assets/audio",
+            Txt: "test assets/text",
+            Texture: "test assets/PurpleMonster",
+            // Raw Asset, use raw url
             Font: cc.url.raw("resources/test assets/font.fnt"),
             Plist: cc.url.raw("resources/test assets/atom.plist"),
-            Texture: cc.url.raw("resources/test assets/image.png"),
-            // Asset, no extension
-            SpriteFrame: "resources://test assets/image.png/image",
-            Prefab: "resources://test assets/prefab",
-            Animation: "resources://test assets/anim",
-            Scene: "resources://test assets/scene",
+            // Asset
+            SpriteFrame: "test assets/image",
+            Prefab: "test assets/prefab",
+            Animation: "test assets/anim",
+            Scene: "test assets/scene",
         };
         // registered event
-        this.onRegisteredEvent();
+        this._onRegisteredEvent();
     },
 
-    loadCallBack: function (err, res) {
-        if (err) { return; }
-
-        this._curRes = res;
-
-        if (this._curType === "Audio") {
-            this._curLabel.string = "Play ";
-        }
-        else {
-            this._curLabel.string = "Create ";
-        }
-        this._curLabel.string += this._curType;
-
-        this.loadTips.string = this._curType + " Loaded Successfully !";
-    },
-
-    onRegisteredEvent: function () {
+    _onRegisteredEvent () {
         for (var i = 0; i < this.loadList.length; ++i) {
-            this.loadList[i].on(cc.Node.EventType.TOUCH_END, this.onLoadResClick.bind(this));
+            this.loadList[i].on(cc.Node.EventType.TOUCH_END, this._onClick.bind(this));
         }
     },
 
-    onClear: function () {
-        if (this._curNode) {
-            this._curNode.destroy();
-        }
+    _onClick (event) {
+        if (this._isLoading) { return; }
 
-        if (cc.Audio && this._curRes instanceof cc.Audio) {
-            this._curRes.stop();
-        }
-    },
+        this._onClear();
 
-    onLoadResClick: function (event) {
-        this.onClear();
-
-        this._lastType = this._curType;
         this._curType = event.target.name.split('_')[1];
-
         if (this._lastType !== "" && this._curType === this._lastType) {
-            this.onShowResClick(event);
+            this._onShowResClick(event);
             return;
         }
 
-        if (this._curLabel) {
-            this._curLabel.string = "Loaded " + this._lastType;
+        if (this._btnLabel) {
+            this._btnLabel.string = "Loaded " + this._lastType;
         }
 
-        this._curLabel = event.target.getChildByName("Label").getComponent("cc.Label");
+        this._lastType = this._curType;
+
+        this._btnLabel = event.target.getChildByName("Label").getComponent("cc.Label");
 
         this.loadTips.string = this._curType + " Loading....";
-        cc.loader.load(this._urls[this._curType], this.loadCallBack.bind(this));
+        this._isLoading = true;
+        
+        this._load();
+    },
+    
+    _load: function () {
+        var url = this._urls[this._curType];
+        var loadCallBack = this._loadCallBack.bind(this);
+        switch (this._curType) {
+            case 'SpriteFrame':
+                // specify the type to load sub asset from texture's url
+                cc.loader.loadRes(url, cc.SpriteFrame, loadCallBack);
+                break;
+            case 'Animation':
+                this._loadSpriteAnimation();
+                break;
+            case 'Prefab':
+            case 'Scene':
+            case 'Texture':
+            case 'Txt':
+            case 'Audio':
+                cc.loader.loadRes(url, loadCallBack);
+                break;
+            default:
+                cc.loader.load(url, loadCallBack);
+                break;
+        }
     },
 
-    onShowResClick: function (event) {
-        if (this._curType === "Scene") {
-            cc.loader.release(this._urls.Scene.src);
-            cc.director.runScene(this._curRes.scene);
+    _loadCallBack: function (err, res) {
+        this._isLoading = false;
+        if (err) {
+            cc.log('Error url [' + err + ']');
+            return;
         }
-        else if (this._curType === "Audio") {
-            if (this._curRes) {
-                this._curRes.play();
-                this.loadTips.string = "Open sound music!!";
-            }
-            else {
-                this.loadTips.string = "Failed to open audio!";
-            }
+        this._curRes = res;
+        if (this._curType === "Audio") {
+            this._btnLabel.string = "Play ";
         }
         else {
-            this._createNode(this._curType, this._curRes);
+            this._btnLabel.string = "Create ";
+        }
+        this._btnLabel.string += this._curType;
+        this.loadTips.string = this._curType + " Loaded Successfully!";
+    },
+
+    _onClear () {
+        this.showWindow.removeAllChildren(true);
+        if (this._audioSource && this._audioSource instanceof cc.AudioSource) {
+            this._audioSource.stop();
         }
     },
 
-    _createNode: function (type, res) {
+    _onShowResClick (event) {
+        if (this._curType === "Scene") {
+            cc.director.runScene(this._curRes.scene);
+            cc.loader.releaseAsset(this._curRes);
+            this._curRes = null;
+
+            return;
+        }
+        this._createNode(this._curType, this._curRes);
+    },
+
+    _createNode (type, res) {
         this.loadTips.string = "";
         var node = new cc.Node("New " + type);
-        node.parent = this.showWindow;
         var component = null;
         switch (this._curType) {
+            case "SpriteFrame":
+                component = node.addComponent(cc.Sprite);
+                component.spriteFrame = res;
+                break;
             case "Texture":
                 component = node.addComponent(cc.Sprite);
                 component.spriteFrame = new cc.SpriteFrame(res);
                 break;
-            case "SpriteFrame":
-                component = node.addComponent(cc.Sprite);
-                component.spriteFrame = res;
+            case "Audio":
+                component = node.addComponent(cc.AudioSource);
+                component.clip = res;
+                component.play();
+                this._audioSource = component;
+                this.loadTips.string = "Playing Music.";
                 break;
             case "Txt":
                 component = node.addComponent(cc.Label);
@@ -164,28 +190,18 @@ cc.Class({
                 AanimCtrl.addClip(res);
                 AanimCtrl.play(res.name);
                 break;
-
         }
+        this.showWindow.addChild(node);
         node.setPosition(0, 0);
-        this._curNode = node;
     },
 
-    loadSpriteAnimation () {
-        let plistUrl = 'resources://test assets/atlas.png';
-        let pngUrl = 'resources://test assets/atlas.plist';
-        let animUrl = 'resources://test assets/sprite-anim';
+    _loadSpriteAnimation () {
+        let plistUrl = 'test assets/atlas.png';
+        let pngUrl = 'test assets/atlas.plist';
+        let animUrl = 'test assets/sprite-anim';
         cc.loader.load([plistUrl, pngUrl], function(errs, results) {
-            cc.loader.load(animUrl, function(err, res) {
-                if (err) {
-                    cc.log('Error url [' + err + ']');
-                }
-                this.loadTips.string = "";
-                var loadAnim = cc.instantiate(this.loadAnimTestPrefab);
-                this.showWindow.addChild(loadAnim);
-                loadAnim.setPosition(0, 0);
-                var AanimCtrl = loadAnim.getComponent(cc.Animation);
-                AanimCtrl.addClip(res);
-                AanimCtrl.play(res.name);
+            cc.loader.loadRes(animUrl, function(err, res) {
+                this._loadCallBack(err, res)
             }.bind(this));
         }.bind(this));
     }

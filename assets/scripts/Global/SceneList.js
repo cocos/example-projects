@@ -34,7 +34,6 @@ cc.Class({
             for (i = 0; i < scenes.length; ++i) {
                 let url = scenes[i].url;
                 let dirname = cc.path.dirname(url).replace('db://assets/cases/', '');
-                console.log(dirname);
                 if (dirname === 'db://assets/resources/test assets') {
                     continue;
                 }

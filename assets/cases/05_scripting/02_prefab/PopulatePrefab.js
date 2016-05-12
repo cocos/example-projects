@@ -2,6 +2,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        root: {
+            default: null,
+            type: cc.Node
+        },
         prefab: {
             default: null,
             type: cc.Prefab
@@ -20,7 +24,8 @@ cc.Class({
             return;
         }
         var monster = cc.instantiate(this.prefab);
-        this.canvas.node.addChild(monster);
+        monster.parent = this.root;
+        //this.canvas.node.addChild(monster);
         monster.position = this.getRandomPosition();
         this.spawnCount++;
     },

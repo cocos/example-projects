@@ -3,7 +3,6 @@
     "__type__": "cc.SceneAsset",
     "_name": "",
     "_objFlags": 0,
-    "_rawFiles": null,
     "scene": {
       "__id__": 1
     }
@@ -78,6 +77,9 @@
       },
       {
         "__id__": 9
+      },
+      {
+        "__id__": 41
       }
     ],
     "_rotationX": 0,
@@ -99,10 +101,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 41
+        "__id__": 43
       },
       {
-        "__id__": 42
+        "__id__": 44
       }
     ],
     "_prefab": null
@@ -130,7 +132,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
+      "width": 1500,
       "height": 640
     },
     "_children": [],
@@ -516,6 +518,7 @@
       "__id__": 10
     },
     "_enabled": true,
+    "isAlignOnce": false,
     "_alignFlags": 0,
     "_left": 0,
     "_right": 0,
@@ -752,6 +755,7 @@
       "__id__": 16
     },
     "_enabled": true,
+    "isAlignOnce": false,
     "_alignFlags": 0,
     "_left": 0,
     "_right": 0,
@@ -988,6 +992,7 @@
       "__id__": 22
     },
     "_enabled": true,
+    "isAlignOnce": false,
     "_alignFlags": 0,
     "_left": 0,
     "_right": 0,
@@ -1224,6 +1229,7 @@
       "__id__": 28
     },
     "_enabled": true,
+    "isAlignOnce": false,
     "_alignFlags": 0,
     "_left": 0,
     "_right": 0,
@@ -1460,6 +1466,7 @@
       "__id__": 34
     },
     "_enabled": true,
+    "isAlignOnce": false,
     "_alignFlags": 0,
     "_left": 0,
     "_right": 0,
@@ -1563,6 +1570,7 @@
       "__id__": 9
     },
     "_enabled": true,
+    "isAlignOnce": false,
     "_alignFlags": 33,
     "_left": 0,
     "_right": 137,
@@ -1574,6 +1582,78 @@
     "_isAbsBottom": true,
     "_originalWidth": 0,
     "_originalHeight": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "New Label",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 438.88888888888886,
+      "height": 44.44444444444444
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 196,
+      "y": -244
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "d62c9QVxENKOrMOH438tIFH",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 42
+      }
+    ],
+    "_prefab": null
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 41
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_isSystemFontUsed": false,
+    "_N$string": "This is Move Animation.",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$overflow": 0,
+    "_N$file": {
+      "__uuid__": "e90dd7c6-cd18-4c7a-ae83-dcef9b0a1b5a"
+    }
   },
   {
     "__type__": "cc.Canvas",
