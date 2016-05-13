@@ -80,7 +80,7 @@ cc.Class({
                     text = assets[i]
                 }
                 else {
-                    text = assets[i].url || assets[i].name;
+                    text = assets[i].url || assets[i]._name;
                 }
                 self._createLabel("sprite frame: " + text);
             }
