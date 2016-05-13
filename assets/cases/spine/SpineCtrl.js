@@ -77,7 +77,7 @@ cc.Class({
         var oldAnim = this.spine.animation;
         this.spine.setAnimation(0, 'jump', false);
         if (oldAnim) {
-            this.spine.setAnimation(0, oldAnim === 'run' ? 'run' : 'walk', true);
+            this.spine.addAnimation(0, oldAnim === 'run' ? 'run' : 'walk', true, 0);
         }
     },
     
