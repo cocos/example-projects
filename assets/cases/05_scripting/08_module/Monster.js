@@ -36,7 +36,7 @@ cc.Class({
         this.defense.string = info.defense;
 
         var image = this.image;
-        cc.loader.load(info.imageUrl, function (error, spriteFrame) {
+        cc.loader.loadRes(info.imageUrl, cc.SpriteFrame, function (error, spriteFrame) {
             if (!error) {
                 image.spriteFrame = spriteFrame;
             }
