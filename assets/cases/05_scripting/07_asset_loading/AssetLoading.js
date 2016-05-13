@@ -44,21 +44,23 @@ cc.Class({
             // Asset
             SpriteFrame: "test assets/image",
             Prefab: "test assets/prefab",
-            Animation: "test assets/anim",
+            Animation: "test assets/sprite-anim",
             Scene: "test assets/scene",
         };
         // registered event
         this._onRegisteredEvent();
     },
 
-    _onRegisteredEvent () {
+    _onRegisteredEvent: function () {
         for (var i = 0; i < this.loadList.length; ++i) {
             this.loadList[i].on(cc.Node.EventType.TOUCH_END, this._onClick.bind(this));
         }
     },
 
-    _onClick (event) {
-        if (this._isLoading) { return; }
+    _onClick: function (event) {
+        if (this._isLoading) {
+            return;
+        }
 
         this._onClear();
 
@@ -78,10 +80,10 @@ cc.Class({
 
         this.loadTips.string = this._curType + " Loading....";
         this._isLoading = true;
-        
+
         this._load();
     },
-    
+
     _load: function () {
         var url = this._urls[this._curType];
         var loadCallBack = this._loadCallBack.bind(this);
@@ -91,8 +93,6 @@ cc.Class({
                 cc.loader.loadRes(url, cc.SpriteFrame, loadCallBack);
                 break;
             case 'Animation':
-                this._loadSpriteAnimation();
-                break;
             case 'Prefab':
             case 'Scene':
             case 'Texture':
@@ -123,14 +123,14 @@ cc.Class({
         this.loadTips.string = this._curType + " Loaded Successfully!";
     },
 
-    _onClear () {
+    _onClear: function () {
         this.showWindow.removeAllChildren(true);
         if (this._audioSource && this._audioSource instanceof cc.AudioSource) {
             this._audioSource.stop();
         }
     },
 
-    _onShowResClick (event) {
+    _onShowResClick: function (event) {
         if (this._curType === "Scene") {
             cc.director.runScene(this._curRes.scene);
             cc.loader.releaseAsset(this._curRes);
@@ -141,7 +141,7 @@ cc.Class({
         this._createNode(this._curType, this._curRes);
     },
 
-    _createNode (type, res) {
+    _createNode: function (type, res) {
         this.loadTips.string = "";
         var node = new cc.Node("New " + type);
         var component = null;
@@ -174,7 +174,7 @@ cc.Class({
                 break;
             case "Plist":
                 component = node.addComponent(cc.ParticleSystem);
-                component.file =  this._urls.Plist;
+                component.file = this._urls.Plist;
                 component.resetSystem();
                 break;
             case "Prefab":
@@ -193,16 +193,5 @@ cc.Class({
         }
         this.showWindow.addChild(node);
         node.setPosition(0, 0);
-    },
-
-    _loadSpriteAnimation () {
-        let plistUrl = 'test assets/atlas.png';
-        let pngUrl = 'test assets/atlas.plist';
-        let animUrl = 'test assets/sprite-anim';
-        cc.loader.load([plistUrl, pngUrl], function(errs, results) {
-            cc.loader.loadRes(animUrl, function(err, res) {
-                this._loadCallBack(err, res)
-            }.bind(this));
-        }.bind(this));
     }
 });

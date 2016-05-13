@@ -19,7 +19,7 @@ cc.Class({
     },
 
     onComeBlack: function () {
-        cc.director.loadScene("asset_loading.fire");
+        cc.director.loadScene("AssetLoading.fire");
     }
 
     // called every frame, uncomment this function to activate update callback
