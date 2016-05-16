@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
@@ -37,7 +39,7 @@ cc.Class({
     },
     
     updateInfo: function () {
-        this.labelLeft.string = 'interactable: ' + this.buttonLeft.interactable;
-        this.labelRight.string = 'interactable: ' + this.buttonRight.interactable;
+        this.labelLeft.string = i18n.t("cases/02_ui/03_button/ButtonInteractable.js.1") + this.buttonLeft.interactable;
+        this.labelRight.string = i18n.t("cases/02_ui/03_button/ButtonInteractable.js.2") + this.buttonRight.interactable;
     }
 });

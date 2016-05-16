@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
@@ -25,12 +27,12 @@ cc.Class({
 
     onBtnLeftClicked: function() {
         console.log('Left button clicked!');
-        this.display.string = 'Left button clicked!';
+        this.display.string = i18n.t("cases/02_ui/03_button/ButtonControl1.js.1");
     },
 
     onBtnRightClicked: function() {
         console.log('Right button clicked!');
-        this.display.string = 'Right button clicked!';
+        this.display.string = i18n.t("cases/02_ui/03_button/ButtonControl1.js.2");
     },
 
     onBtnInScrollClicked: function(sender, event){

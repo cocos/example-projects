@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 
 //
 // Tips：
@@ -82,7 +84,7 @@ cc.Class({
         }
         var progress = this.progressBar.progress;
         if (progress >= 1) {
-            this.progressTips.string = "download complete!!";
+            this.progressTips.string = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.1");
             this.laodBg.active = false;
             this.progressBar.node.active = false;
             this.enabled = false;
@@ -92,6 +94,6 @@ cc.Class({
             progress += dt;
         }
         this.progressBar.progress = progress;
-        this.progressTips.string = "dowloading: "+ this.resource.id + " (" + this.completedCount + "/" + this.totalCount + ")";
+        this.progressTips.string = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.2")+ this.resource.id + " (" + this.completedCount + "/" + this.totalCount + ")";
     }
 });

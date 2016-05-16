@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
@@ -28,7 +30,7 @@ cc.Class({
             },
             onTouchMoved: function(touch, event) {
                 var touchLoc = touch.getLocation();
-                self.touchLocationDisplay.string = 'touch (' + Math.floor(touchLoc.x) + ', ' + Math.floor(touchLoc.y) + ')';
+                self.touchLocationDisplay.string = i18n.t("cases/03_gameplay/01_player_control/SpriteFollowTouch.js.1") + Math.floor(touchLoc.x) + ', ' + Math.floor(touchLoc.y) + ')';
                 self.moveToPos = self.follower.parent.convertToNodeSpaceAR(touchLoc);
             },
             onTouchEnded: function(touch, event) {
