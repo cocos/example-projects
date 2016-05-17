@@ -33,6 +33,7 @@ cc.Class({
     },
     
     onDisabled: function () {
+        cc.director.getCollisionManager().enabled = false;
         cc.director.getCollisionManager().enabledDebugDraw = false;
     },
     
@@ -69,6 +70,7 @@ cc.Class({
     
     onCollisionEnter: function (other, self) {
         this.node.color = cc.Color.RED;
+        this.collisionX = this.collisionY = 0;
 
         this.touchingNumber ++;
         
@@ -110,10 +112,19 @@ cc.Class({
             this.speed.y = 0;
             other.touchingY = true;
         }    
+        
     },
     
-    onCollisionStay: function (other) {
-        this.collision = true;  
+    onCollisionStay: function (other, self) {
+        if (this.collisionY === -1) {
+            var offset = cc.v2(other.world.aabb.x - other.world.preAabb.x, 0);
+            
+            var temp = cc.affineTransformClone(self.world.transform);
+            temp.tx = temp.ty = 0;
+            
+            offset = cc.pointApplyAffineTransform(offset, temp);
+            this.node.x += offset.x;
+        }
     },
     
     onCollisionExit: function (other) {
