@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
@@ -76,7 +78,7 @@ cc.Class({
     buttonClicked: function() {
         cc.log("button Clicked!");
         if (this.singleLineText.string !== "") {
-            this.showEditorBoxLabel.string = "Enter Text: " + this.singleLineText.string;
+            this.showEditorBoxLabel.string = i18n.t("cases/02_ui/07_editBox/editbox.js.1") + this.singleLineText.string;
         }
         else {
             this.showEditorBoxLabel.string = "";

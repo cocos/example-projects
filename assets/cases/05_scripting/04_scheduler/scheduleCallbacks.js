@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
     
@@ -51,7 +53,7 @@ cc.Class({
     stopCounting: function () {
         this.unschedule(this._callback);
         this.counting = false;
-        this.counter.string = '5.00 s';
+        this.counter.string = i18n.t("cases/05_scripting/04_scheduler/scheduleCallbacks.js.1");
         this.time = 5;
     },
     

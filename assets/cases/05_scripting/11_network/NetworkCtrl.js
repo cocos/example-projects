@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
@@ -17,10 +19,10 @@ cc.Class({
     onLoad: function () {
         this._wsiSendBinary = null;
         
-        this.xhrResp.string = 'waiting...';
-        this.xhrABResp.string = 'waiting...';
-        this.websocketResp.string = 'waiting...';
-        this.socketIOResp.string = 'waiting...';
+        this.xhrResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.1");
+        this.xhrABResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.2");
+        this.websocketResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.3");
+        this.socketIOResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.4");
         
         this.sendXHR();
         this.sendXHRAB();
@@ -59,7 +61,7 @@ cc.Class({
         this._wsiSendBinary = new WebSocket("ws://echo.websocket.org");
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
-            websocketLabel.string = 'WebSocket\nSend Binary WS was opened.';
+            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
         };
 
         this._wsiSendBinary.onmessage = function(evt) {
@@ -81,15 +83,15 @@ cc.Class({
 
             binaryStr += str;
             respLabel.string = binaryStr;
-            websocketLabel.string = 'WebSocket\nResponse get.';
+            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.6");
         };
 
         this._wsiSendBinary.onerror = function(evt) {
-            websocketLabel.string = 'WebSocket\nsendBinary Error was fired.';
+            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.7");
         };
 
         this._wsiSendBinary.onclose = function(evt) {
-            websocketLabel.string = 'WebSocket\nwebsocket instance closed.';
+            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.8");
             // After close, it's no longer possible to use it again, 
             // if you want to send another request, you need to create a new websocket instance
             self._wsiSendBinary = null;
@@ -102,7 +104,7 @@ cc.Class({
     {
         if (this._wsiSendBinary.readyState === WebSocket.OPEN)
         {
-            this.websocket.string = 'WebSocket\nSend Binary WS is waiting...';
+            this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.9");
             var buf = "Hello WebSocket中文,\0 I'm\0 a\0 binary\0 message\0.";
             
             var arrData = new Uint16Array(buf.length);
@@ -115,7 +117,7 @@ cc.Class({
         else
         {
             var warningStr = "send binary websocket instance wasn't ready...";
-            this.websocket.string = 'WebSocket\n' + warningStr;
+            this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.10") + warningStr;
             this.scheduleOnce(function () {
                 this.sendWebSocketBinary();
             }, 1);
@@ -125,7 +127,7 @@ cc.Class({
 // Socket IO callbacks for testing
     testevent: function(data) {
         var msg = this.tag + " says 'testevent' with data: " + data;
-        this.socketIO.string = 'SocketIO\n' + msg;
+        this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.11") + msg;
     },
 
     message: function(data) {
@@ -135,7 +137,7 @@ cc.Class({
 
     disconnection: function() {
         var msg = this.tag + " disconnected!";
-        this.socketIO.string = 'SocketIO\n' + msg;
+        this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
     },
     
     sendSocketIO: function () {
@@ -151,7 +153,7 @@ cc.Class({
         //this is an example of a handler declared inline
         sioclient.on("connect", function() {
             var msg = sioclient.tag + " Connected!";
-            self.socketIO.string = 'SocketIO\n' + msg;
+            self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.13") + msg;
 
             // Send message after connection
             self._sioClient.send("Hello Socket.IO!");
@@ -163,7 +165,7 @@ cc.Class({
         sioclient.on("echotest", function(data) {
             cc.log("echotest 'on' callback fired!");
             var msg = this.tag + " says 'echotest' with data: " + data;
-            self.socketIO.string = 'SocketIO\n' + msg;
+            self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.14") + msg;
         });
 
         sioclient.on("testevent", this.testevent.bind(this));

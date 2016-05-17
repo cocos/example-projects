@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
@@ -71,7 +73,7 @@ cc.Class({
         }
 
         if (this._btnLabel) {
-            this._btnLabel.string = "Loaded " + this._lastType;
+            this._btnLabel.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.1") + this._lastType;
         }
 
         this._lastType = this._curType;
@@ -114,10 +116,10 @@ cc.Class({
         }
         this._curRes = res;
         if (this._curType === "Audio") {
-            this._btnLabel.string = "Play ";
+            this._btnLabel.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.2");
         }
         else {
-            this._btnLabel.string = "Create ";
+            this._btnLabel.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.3");
         }
         this._btnLabel.string += this._curType;
         this.loadTips.string = this._curType + " Loaded Successfully!";
@@ -159,7 +161,7 @@ cc.Class({
                 component.clip = res;
                 component.play();
                 this._audioSource = component;
-                this.loadTips.string = "Playing Music.";
+                this.loadTips.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.4");
                 break;
             case "Txt":
                 component = node.addComponent(cc.Label);
@@ -170,7 +172,7 @@ cc.Class({
                 component = node.addComponent(cc.Label);
                 component.file = this._urls.Font;
                 component.lineHeight = 40;
-                component.string = "This is Font!";
+                component.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.5");
                 break;
             case "Plist":
                 component = node.addComponent(cc.ParticleSystem);

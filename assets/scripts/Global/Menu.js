@@ -1,3 +1,5 @@
+const i18n = require('i18n');
+
 
 var emptyFunc = function (event) {
     event.stopPropagation();
@@ -65,7 +67,7 @@ cc.Class({
         let fileName = urlArr[urlArr.length - 1].replace('.fire', '.md');
         cc.loader.loadRes('readme/' + fileName, function(err, txt) {
             if (err) {
-                self.text.string = '说明暂缺';
+                self.text.string = i18n.t("scripts/Global/Menu.js.1");
                 return;
             }
             self.text.string = txt;
