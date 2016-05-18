@@ -35,8 +35,8 @@ cc.Class({
         this.display.string = i18n.t("cases/02_ui/03_button/ButtonControl1.js.2");
     },
 
-    onBtnInScrollClicked: function(sender, event){
-        var msg = sender.node.name + ' clicked!';
+    onBtnInScrollClicked: function(event){
+        var msg = event.target.name + ' clicked!';
         console.log(msg);
         this.display.string = msg;
     }
