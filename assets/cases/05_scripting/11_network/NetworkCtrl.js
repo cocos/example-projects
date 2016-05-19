@@ -1,5 +1,9 @@
 const i18n = require('i18n');
 
+if (!window.io) {
+    window.io = require('socket-io');
+}
+
 cc.Class({
     extends: cc.Component,
 
