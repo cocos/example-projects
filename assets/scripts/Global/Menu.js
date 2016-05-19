@@ -40,7 +40,7 @@ cc.Class({
     },
 
     backToList: function () {
-        this.showReadme(false);
+        this.showReadme(null, false);
         this.currentSceneUrl = 'TestList.fire';
         this.isMenu = true;
         cc.director.loadScene('TestList', this.onLoadSceneFinish.bind(this));
@@ -74,7 +74,7 @@ cc.Class({
         });
     },
 
-    showReadme: function (active) {
+    showReadme: function (event, active) {
         if (active === undefined) {
             this.readme.active = !this.readme.active;
         }
