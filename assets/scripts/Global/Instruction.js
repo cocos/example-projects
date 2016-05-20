@@ -4,7 +4,6 @@ cc.Class({
     properties: {
         text: {
             default: '',
-            type: String,
             multiline: true
         }
         // foo: {

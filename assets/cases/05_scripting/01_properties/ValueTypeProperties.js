@@ -5,20 +5,17 @@ cc.Class({
         // number
         myNumber: {
             default: 0,
-            type: Number
+            type: cc.Integer
         },
         // string
         myString: {
             default: 'default text',
-            type: String
         },
         myVec2: {
             default: cc.Vec2.ZERO,
-            type: cc.Vec2
         },
         myColor: {
             default: cc.Color.WHITE,
-            type: cc.Color
         },
         myOtherNumber: 0,
         myOtherString: 'no type definition',
