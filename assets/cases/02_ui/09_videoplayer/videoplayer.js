@@ -26,7 +26,7 @@ cc.Class({
     },
 
     toggleFullscreen: function() {
-        this.videoPlayer.enableFullscreen = true;
+        this.videoPlayer.isFullscreen = true;
     },
 
     stop: function() {
