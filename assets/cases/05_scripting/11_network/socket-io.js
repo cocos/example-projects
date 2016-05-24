@@ -4,7 +4,7 @@
 
 },{"./lib/":2}],2:[function(_dereq_,module,exports){
 
-  if (CC_JSB) {
+  if (CC_JSB && cc.sys.isNative) {
     return;
   }
 
