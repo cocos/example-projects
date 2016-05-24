@@ -169,6 +169,7 @@ module.exports = {
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.45": "Load Prefab",
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.51": "Load Scene",
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.57": "Load Animation",
+  "cases/05_scripting/07_asset_loading/AssetLoading.fire.59": "Load Spine",
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.65": "Not currently loaded Entity.",
   "cases/05_scripting/07_asset_loading/AssetLoading.js.1": "Loaded ",
   "cases/05_scripting/07_asset_loading/AssetLoading.js.2": "Play ",

@@ -169,6 +169,7 @@ module.exports = {
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.45": "加载 Prefab",
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.51": "加载 Scene",
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.57": "加载 Animation",
+  "cases/05_scripting/07_asset_loading/AssetLoading.fire.59": "加载 Spine",
   "cases/05_scripting/07_asset_loading/AssetLoading.fire.65": "当前尚无加载。",
   "cases/05_scripting/07_asset_loading/AssetLoading.js.1": "已加载 ",
   "cases/05_scripting/07_asset_loading/AssetLoading.js.2": "播放 ",
