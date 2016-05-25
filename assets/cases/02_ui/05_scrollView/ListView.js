@@ -14,6 +14,7 @@ cc.Class({
         totalCount: 0, // how many items we need for the whole list
         spacing: 0, // space between each item
         bufferZone: 0, // when item is away from bufferZone, we relocate it
+        label: cc.Label,
     },
 
     // use this for initialization
@@ -74,5 +75,40 @@ cc.Class({
         }
         // update lastContentPosY
         this.lastContentPosY = this.scrollView.content.y;
+    },
+
+    scrollEvent: function(sender, event) {
+        switch(event) {
+            case 0: 
+               this.label.string = "Scroll to Top"; 
+               break;
+            case 1: 
+               this.label.string = "Scroll to Bottom"; 
+               break;
+            case 2: 
+               this.label.string = "Scroll to Left"; 
+               break;
+            case 3: 
+               this.label.string = "Scroll to Right"; 
+               break;
+            case 4: 
+               this.label.string = "Scrolling"; 
+               break;
+            case 5: 
+               this.label.string = "Bounce Top"; 
+               break;
+            case 6: 
+               this.label.string = "Bounce bottom"; 
+               break;
+            case 7: 
+               this.label.string = "Bounce left"; 
+               break;
+            case 8: 
+               this.label.string = "Bounce right"; 
+               break;
+            case 9: 
+               this.label.string = "Auto scroll ended"; 
+               break;
+        }
     }
 });
