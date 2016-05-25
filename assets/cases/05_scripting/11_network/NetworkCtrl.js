@@ -37,13 +37,16 @@ cc.Class({
     sendXHR: function () {
         var xhr = cc.loader.getXMLHttpRequest();
         this.streamXHREventsToLabel(xhr, this.xhr, this.xhrResp, 'GET');
-        // 5 seconds for timeout
-        xhr.timeout = 5000;
 
         xhr.open("GET", "https://httpbin.org/get?show_env=1", true);
         if (cc.sys.isNative) {
             xhr.setRequestHeader("Accept-Encoding","gzip,deflate");
         }
+
+        // note: In Internet Explorer, the timeout property may be set only after calling the open()
+        // method and before calling the send() method.
+        xhr.timeout = 5000;// 5 seconds for timeout
+
         xhr.send();
     },
     
