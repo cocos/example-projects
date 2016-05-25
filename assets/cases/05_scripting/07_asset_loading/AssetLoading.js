@@ -48,6 +48,7 @@ cc.Class({
             Prefab: "test assets/prefab",
             Animation: "test assets/sprite-anim",
             Scene: "test assets/scene",
+            Spine: "spineboy/spineboy",
         };
         // registered event
         this._onRegisteredEvent();
@@ -93,6 +94,10 @@ cc.Class({
             case 'SpriteFrame':
                 // specify the type to load sub asset from texture's url
                 cc.loader.loadRes(url, cc.SpriteFrame, loadCallBack);
+                break;
+            case 'Spine':
+                // specify the type to avoid the duplicated name from spine atlas
+                cc.loader.loadRes(url, sp.SkeletonData, loadCallBack);
                 break;
             case 'Animation':
             case 'Prefab':
@@ -146,6 +151,7 @@ cc.Class({
     _createNode: function (type, res) {
         this.loadTips.string = "";
         var node = new cc.Node("New " + type);
+        node.setPosition(0, 0);
         var component = null;
         switch (this._curType) {
             case "SpriteFrame":
@@ -192,8 +198,13 @@ cc.Class({
                 AanimCtrl.addClip(res);
                 AanimCtrl.play(res.name);
                 break;
+            case "Spine":
+                component = node.addComponent(sp.Skeleton);
+                component.skeletonData = res;
+                component.animation = "walk";
+                node.y = -248;
+                break;
         }
         this.showWindow.addChild(node);
-        node.setPosition(0, 0);
     }
 });
