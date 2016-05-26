@@ -16,7 +16,7 @@ cc.Class({
             self.content.addChild(node);
             node.position = cc.v2(0, 0);
             var sprite = node.addComponent(cc.Sprite);
-            sprite.spriteFrame = atlas.getSpriteFrame('sheep_run_0.png');
+            sprite.spriteFrame = atlas.getSpriteFrame('sheep_run_0');
         });
     },
 
