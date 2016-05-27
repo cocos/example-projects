@@ -70,7 +70,6 @@ cc.Class({
     
     onCollisionEnter: function (other, self) {
         this.node.color = cc.Color.RED;
-        this.collisionX = this.collisionY = 0;
 
         this.touchingNumber ++;
         
