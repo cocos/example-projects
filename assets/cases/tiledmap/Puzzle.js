@@ -66,7 +66,7 @@ cc.Class({
             onKeyPressed: function(keyCode, event) {
                 self._onKeyPressed(keyCode, event);
             }
-        }, self);
+        }, self.node);
 
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
             self._touching = true;
