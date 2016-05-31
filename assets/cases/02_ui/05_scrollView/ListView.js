@@ -14,7 +14,12 @@ cc.Class({
         totalCount: 0, // how many items we need for the whole list
         spacing: 0, // space between each item
         bufferZone: 0, // when item is away from bufferZone, we relocate it
-        label: cc.Label,
+        lblScrollEvent: cc.Label,
+        btnAddItem: cc.Button,
+        btnRemoveItem: cc.Button,
+        btnJumpToPosition: cc.Button,
+        lblJumpPosition: cc.Label,
+        lblTotalItems: cc.Label,
     },
 
     // use this for initialization
@@ -75,40 +80,60 @@ cc.Class({
         }
         // update lastContentPosY
         this.lastContentPosY = this.scrollView.content.y;
+        this.lblTotalItems.string = "Total Items: " + this.totalCount;
     },
 
     scrollEvent: function(sender, event) {
         switch(event) {
             case 0: 
-               this.label.string = "Scroll to Top"; 
+               this.lblScrollEvent.string = "Scroll to Top"; 
                break;
             case 1: 
-               this.label.string = "Scroll to Bottom"; 
+               this.lblScrollEvent.string = "Scroll to Bottom"; 
                break;
             case 2: 
-               this.label.string = "Scroll to Left"; 
+               this.lblScrollEvent.string = "Scroll to Left"; 
                break;
             case 3: 
-               this.label.string = "Scroll to Right"; 
+               this.lblScrollEvent.string = "Scroll to Right"; 
                break;
             case 4: 
-               this.label.string = "Scrolling"; 
+               this.lblScrollEvent.string = "Scrolling"; 
                break;
             case 5: 
-               this.label.string = "Bounce Top"; 
+               this.lblScrollEvent.string = "Bounce Top"; 
                break;
             case 6: 
-               this.label.string = "Bounce bottom"; 
+               this.lblScrollEvent.string = "Bounce bottom"; 
                break;
             case 7: 
-               this.label.string = "Bounce left"; 
+               this.lblScrollEvent.string = "Bounce left"; 
                break;
             case 8: 
-               this.label.string = "Bounce right"; 
+               this.lblScrollEvent.string = "Bounce right"; 
                break;
             case 9: 
-               this.label.string = "Auto scroll ended"; 
+               this.lblScrollEvent.string = "Auto scroll ended"; 
                break;
         }
+    },
+
+    addItem: function() {
+        this.content.height = (this.totalCount + 1) * (this.itemTemplate.height + this.spacing) + this.spacing; // get total content height
+        this.totalCount = this.totalCount + 1;
+    },
+
+    removeItem: function() {
+        if (this.totalCount - 1 < 30) {
+            cc.error("can't remove item less than 30!");
+            return;
+        }
+
+        this.content.height = (this.totalCount - 1) * (this.itemTemplate.height + this.spacing) + this.spacing; // get total content height
+        this.totalCount = this.totalCount - 1;
+    },
+
+    scrollToFixedPosition: function () {
+        this.scrollView.scrollToOffset(cc.p(0, 500), 2);
     }
 });
