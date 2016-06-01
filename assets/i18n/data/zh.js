@@ -120,6 +120,8 @@ module.exports = {
   "cases/03_gameplay/01_player_control/KeyboardInput.fire.6": "按 'A' 或 'D' 键控制小绵羊",
   "cases/03_gameplay/01_player_control/SpriteFollowTouch.js.1": "touch (",
   "cases/03_gameplay/01_player_control/TouchInput.fire.10": "请触摸任意位置试试",
+  "cases/03_gameplay/01_player_control/MultiTouchInput.fire.20": "该效果只能在移动平台上有效！",
+  "cases/03_gameplay/01_player_control/MultiTouchInput.fire.21": "用你的手指放缩图片！",
   "cases/03_gameplay/02_actions/SimpleAction.fire.13": "简单的动作",
   "cases/03_gameplay/03_animation/AnimateCustomProperty.fire.14": "Label",
   "cases/03_gameplay/03_animation/AnimateCustomProperty.fire.18": "自定义动画属性",
