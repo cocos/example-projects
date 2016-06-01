@@ -80,7 +80,7 @@ cc.Class({
         }
         // update lastContentPosY
         this.lastContentPosY = this.scrollView.content.y;
-        this.lblTotalItems.string = "Total Items: " + this.totalCount;
+        this.lblTotalItems.textKey = "Total Items: " + this.totalCount;
     },
 
     scrollEvent: function(sender, event) {
