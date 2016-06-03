@@ -37,13 +37,17 @@
         "__id__": 2
       },
       {
-        "__id__": 12
+        "__id__": 11
+      },
+      {
+        "__id__": 13
       }
     ],
     "_localZOrder": 0,
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "7635674b-bf5e-43a4-bf6a-88fb8953a071"
   },
   {
@@ -78,9 +82,6 @@
       },
       {
         "__id__": 6
-      },
-      {
-        "__id__": 9
       }
     ],
     "_rotationX": 0,
@@ -98,14 +99,16 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "be7e8bbFF9ELrOGnbUNJTAE",
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 10
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Node",
@@ -130,14 +133,14 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1500,
+      "width": 960,
       "height": 640
     },
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 2,
+    "_scaleY": 2,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -149,6 +152,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "374d0NKFo1HvI9UWi1Dfsmp",
     "_active": true,
     "_components": [
@@ -158,7 +162,8 @@
     ],
     "_prefab": {
       "__id__": 5
-    }
+    },
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Sprite",
@@ -172,7 +177,6 @@
       "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
     },
     "_type": 0,
-    "_useOriginalSize": true,
     "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
@@ -196,89 +200,6 @@
       "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
     },
     "fileId": "78fd70+ls5GgJcFkzvLSRk8"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Instruction",
-    "_objFlags": 0,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_parent": {
-      "__id__": 2
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 355,
-      "height": 92
-    },
-    "_children": [],
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": -110
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_tag": -1,
-    "_opacityModifyRGB": false,
-    "_id": "718cckOgS5NlKLyR2Qtikqp",
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 7
-      },
-      {
-        "__id__": 8
-      }
-    ],
-    "_prefab": null
-  },
-  {
-    "__type__": "6a871gy73FDLap3Eje/2h6i",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 6
-    },
-    "_enabled": true,
-    "text": "## Particle 粒子系统使用说明\n\n点击 play 按钮预览游戏，按下 Space 键切换粒子系统的停止和重新播放。\n\n1. 点击选中 particle 节点，关注 ParticleSystem 组件\n2. 点击切换 preview 属性，可以切换该粒子在场景中的显隐（不会影响运行时的显示）\n3. PlayOnLoad 属性决定是否在游戏运行时自动播放该粒子\n4. AutoRemoveOnFinish 属性决定该粒子是否播放完就会自动销毁\n5. 点击 File 属性里引用的资源，可以看到在 Assets 面板里高亮了外部工具制作好并导入的粒子资源\n6. 可以拖拽另一个粒子资源到 File 属性，预览另外粒子的效果\n\n### 使用 Inspector 自制粒子\n\n除了使用外部工具制作 plist 格式的粒子资源，用户还可以使用 Inspector 自己制作粒子。由于目前缺少编辑器，这种做法不推荐用户采用。\n\n1. 点击开启 Custom 属性，可以看到下面的粒子参数都被激活并可以修改了\n2. 根据用户需要调整每一个参数，直到达成希望的效果"
-  },
-  {
-    "__type__": "e4f88adp3hERoJ48DZ2PSAl",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 6
-    },
-    "_enabled": true,
-    "_useOriginalSize": false,
-    "_fontSize": 30,
-    "_lineHeight": 40,
-    "_enableWrapText": true,
-    "_isSystemFontUsed": true,
-    "_N$string": "Press \"Space\" to toggle particle play",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 0,
-    "_N$overflow": 2,
-    "_N$textKey": "cases/01_graphics/02_particle/ToggleParticle.fire.6"
   },
   {
     "__type__": "cc.Node",
@@ -306,7 +227,11 @@
       "width": 0,
       "height": 0
     },
-    "_children": [],
+    "_children": [
+      {
+        "__id__": 7
+      }
+    ],
     "_rotationX": 0,
     "_rotationY": 0,
     "_scaleX": 1,
@@ -322,21 +247,96 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "5c15deqL9xHOpPLgqM/keTd",
     "_active": true,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 9
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Tips",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 6
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 355,
+      "height": 92
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": -110
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
+    "_id": "114b2lQCzxAC7TT80EOQQs/",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 8
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 7
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 30,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_N$string": "Press \"Space\" to toggle particle play",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 0,
+    "_N$overflow": 2,
+    "_N$textKey": "cases/01_graphics/02_particle/ToggleParticle.fire.6"
   },
   {
     "__type__": "cc.ParticleSystem",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 6
     },
     "_enabled": true,
     "_custom": false,
@@ -425,7 +425,7 @@
   {
     "__type__": "cc.Canvas",
     "_name": "",
-    "_objFlags": 1835008,
+    "_objFlags": 3932160,
     "node": {
       "__id__": 2
     },
@@ -437,6 +437,69 @@
     },
     "_fitWidth": false,
     "_fitHeight": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Instruction",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 1
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
+    "_id": "718cckOgS5NlKLyR2Qtikqp",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 12
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "6a871gy73FDLap3Eje/2h6i",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 11
+    },
+    "_enabled": true,
+    "text": "## Particle 粒子系统使用说明\n\n点击 play 按钮预览游戏，按下 Space 键切换粒子系统的停止和重新播放。\n\n1. 点击选中 particle 节点，关注 ParticleSystem 组件\n2. 点击切换 preview 属性，可以切换该粒子在场景中的显隐（不会影响运行时的显示）\n3. PlayOnLoad 属性决定是否在游戏运行时自动播放该粒子\n4. AutoRemoveOnFinish 属性决定该粒子是否播放完就会自动销毁\n5. 点击 File 属性里引用的资源，可以看到在 Assets 面板里高亮了外部工具制作好并导入的粒子资源\n6. 可以拖拽另一个粒子资源到 File 属性，预览另外粒子的效果\n\n### 使用 Inspector 自制粒子\n\n除了使用外部工具制作 plist 格式的粒子资源，用户还可以使用 Inspector 自己制作粒子。由于目前缺少编辑器，这种做法不推荐用户采用。\n\n1. 点击开启 Custom 属性，可以看到下面的粒子参数都被激活并可以修改了\n2. 根据用户需要调整每一个参数，直到达成希望的效果"
   },
   {
     "__type__": "cc.Node",
@@ -480,25 +543,27 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "f014c19SB1AJpiOnK2c8p9L",
     "_active": true,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 14
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "79ae3hiP+JAhIKehaWyiKuh",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 13
     },
     "_enabled": true,
     "particle": {
-      "__id__": 9
+      "__id__": 6
     }
   }
 ]

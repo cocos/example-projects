@@ -13,6 +13,6 @@ cc.Class({
 
     updateItem: function(tmplId, itemId) {
         this.itemID = itemId;
-        this.label.string = i18n.t("cases/02_ui/05_scrollView/Item.js.1") + tmplId + ' Item#' + this.itemID;
+        this.label.textKey = i18n.t("cases/02_ui/05_scrollView/Item.js.1") + tmplId + ' Item#' + this.itemID;
     },
 });

@@ -87,6 +87,6 @@ cc.Class({
             this.mask.off('touchstart', emptyFunc, this);
         }
         let labelTxt = this.readme.active ? '关闭说明' : '查看说明';
-        cc.find('label', this.btnInfo.node).getComponent(cc.Label).string = labelTxt;
+        cc.find('label', this.btnInfo.node).getComponent(cc.Label).textKey = labelTxt;
     }
 });

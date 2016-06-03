@@ -17,6 +17,9 @@ cc.Class({
         var monster = this._pool.get();
         if (!monster) {
             monster = cc.instantiate(this.prefab);
+        
+            // Add pool handler component which will control the touch event
+            monster.addComponent('PoolHandler');
         }
         monster.x = this.regionOrigin.x + Math.floor(Math.random() * this.regionSize.width);
         monster.y = this.regionOrigin.y + Math.floor(Math.random() * this.regionSize.height);
@@ -24,9 +27,6 @@ cc.Class({
         var angle = Math.random() * Math.PI * 2;
         var dx = 500 * Math.cos(angle);
         var dy = 500 * Math.sin(angle);
-        
-        // Add pool handler component which will control the touch event
-        monster.addComponent('PoolHandler');
         
         monster.runAction(cc.sequence(
             cc.moveBy(5, dx, dy),

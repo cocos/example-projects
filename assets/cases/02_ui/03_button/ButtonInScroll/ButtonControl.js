@@ -27,17 +27,17 @@ cc.Class({
 
     onBtnLeftClicked: function() {
         console.log('Left button clicked!');
-        this.display.string = i18n.t("cases/02_ui/03_button/ButtonControl1.js.1");
+        this.display.textKey = i18n.t("cases/02_ui/03_button/ButtonControl1.js.1");
     },
 
     onBtnRightClicked: function() {
         console.log('Right button clicked!');
-        this.display.string = i18n.t("cases/02_ui/03_button/ButtonControl1.js.2");
+        this.display.textKey = i18n.t("cases/02_ui/03_button/ButtonControl1.js.2");
     },
 
     onBtnInScrollClicked: function(event){
         var msg = event.target.name + ' clicked!';
         console.log(msg);
-        this.display.string = msg;
+        this.display.textKey = msg;
     }
 });
