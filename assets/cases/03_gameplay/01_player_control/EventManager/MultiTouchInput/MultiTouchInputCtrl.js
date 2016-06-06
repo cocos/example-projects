@@ -14,7 +14,7 @@ cc.Class({
         if (!cc.sys.isMobile) {
             return;
         }
-        this.tips.textKey = i18n.t("cases/03_gameplay/01_player_control/MultiTouchInput.fire.21");
+        this.tips.textKey = i18n.t("cases/03_gameplay/01_player_control/EventManager/MultiTouchInput.fire.21");
 
         var self = this, parent = this.node.parent;
         cc.eventManager.addListener({

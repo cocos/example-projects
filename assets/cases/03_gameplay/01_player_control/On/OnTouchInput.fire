@@ -37,17 +37,18 @@
         "__id__": 2
       },
       {
-        "__id__": 12
+        "__id__": 13
       },
       {
-        "__id__": 14
+        "__id__": 15
       }
     ],
     "_localZOrder": 0,
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "a97d213b-56e7-4991-a889-a273e7439423"
+    "_reorderChildDirty": false,
+    "_id": "f240c3ea-bd01-41df-b249-695075e4a4af"
   },
   {
     "__type__": "cc.Node",
@@ -84,6 +85,9 @@
       },
       {
         "__id__": 8
+      },
+      {
+        "__id__": 10
       }
     ],
     "_rotationX": 0,
@@ -101,14 +105,16 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "403d4qSkFBJMJ0tva3XMp1i",
+    "_reorderChildDirty": false,
+    "_id": "c8725B+SrxDPJkbCr54l850",
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 12
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Node",
@@ -152,7 +158,8 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "8913fCVy/FBS5ytpr9e1PkY",
+    "_reorderChildDirty": false,
+    "_id": "77014/5MhNKNrCBsKnb/grH",
     "_active": true,
     "_components": [
       {
@@ -161,7 +168,8 @@
     ],
     "_prefab": {
       "__id__": 5
-    }
+    },
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Sprite",
@@ -175,7 +183,6 @@
       "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
     },
     "_type": 0,
-    "_useOriginalSize": true,
     "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
@@ -202,7 +209,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "instruction",
+    "_name": "touchLocationDisplay",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -223,8 +230,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 552.2222222222222,
-      "height": 44.44444444444444
+      "width": 204.51,
+      "height": 40
     },
     "_children": [],
     "_rotationX": 0,
@@ -234,7 +241,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -174
+      "y": 200
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -242,14 +249,16 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "73225abYxRAaYog3E+az62V",
+    "_reorderChildDirty": false,
+    "_id": "89145lT8rNBX5f5HDSwzlcm",
     "_active": true,
     "_components": [
       {
         "__id__": 7
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "e4f88adp3hERoJ48DZ2PSAl",
@@ -262,17 +271,18 @@
     "_useOriginalSize": false,
     "_fontSize": 40,
     "_lineHeight": 40,
-    "_enableWrapText": false,
+    "_enableWrapText": true,
+    "_N$file": null,
     "_isSystemFontUsed": true,
-    "_N$string": "Press 'A' or 'D' to control sheep",
-    "_N$horizontalAlign": 1,
+    "_N$string": "Label",
+    "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
     "_N$overflow": 0,
-    "_N$textKey": "cases/03_gameplay/01_player_control/KeyboardInput.fire.6"
+    "_N$textKey": "TEXT_KEY"
   },
   {
     "__type__": "cc.Node",
-    "_name": "sheep",
+    "_name": "sprite",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -293,8 +303,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 168,
-      "height": 113
+      "width": 68,
+      "height": 71
     },
     "_children": [],
     "_rotationX": 0,
@@ -312,17 +322,16 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "c4398gCUXxLaY+tLCoHAPpD",
+    "_reorderChildDirty": false,
+    "_id": "ce3d0QmAD1MsJ0nPWMOzNWC",
     "_active": true,
     "_components": [
       {
         "__id__": 9
-      },
-      {
-        "__id__": 10
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Sprite",
@@ -333,10 +342,9 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "7ccb784f-7c51-4a0b-a59e-e95da40f3013"
+      "__uuid__": "0467443e-6fb8-4d7b-a34f-57b3e5c149fb"
     },
     "_type": 0,
-    "_useOriginalSize": true,
     "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
@@ -349,32 +357,85 @@
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_atlas": {
-      "__uuid__": "efc1bbab-8753-4506-859f-0558eb86db31"
-    }
+    "_atlas": null
   },
   {
-    "__type__": "cc.Animation",
+    "__type__": "cc.Node",
+    "_name": "Tips",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 360,
+      "height": 40
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": -150
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
+    "_id": "0b837S79PFJ4psOjGduCvpO",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 11
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "e4f88adp3hERoJ48DZ2PSAl",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 10
     },
     "_enabled": true,
-    "_defaultClip": {
-      "__uuid__": "dce845ca-66a7-44dd-b18c-bd49876e1a9a"
-    },
-    "_clips": [
-      {
-        "__uuid__": "dce845ca-66a7-44dd-b18c-bd49876e1a9a"
-      }
-    ],
-    "playOnLoad": true
+    "_useOriginalSize": false,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_N$string": "Try touching anywhere.",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$overflow": 0,
+    "_N$textKey": "cases/03_gameplay/01_player_control/On/OnTouchInput.fire.10"
   },
   {
     "__type__": "cc.Canvas",
     "_name": "",
-    "_objFlags": 1835008,
+    "_objFlags": 3932160,
     "node": {
       "__id__": 2
     },
@@ -389,7 +450,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "SheepControl",
+    "_name": "OnTouchCtrl",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -429,26 +490,35 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "e83080k57tCdJUdSqjcQe+r",
+    "_reorderChildDirty": false,
+    "_id": "308a8YCeAdNlYErRJ0j2puy",
     "_active": true,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 14
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
-    "__type__": "c3f971iyCdIh6xdaO49XP0F",
+    "__type__": "f9b352jbGtMIqjEuud60Wpx",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 13
     },
     "_enabled": true,
-    "sheep": {
+    "canvas": {
+      "__id__": 2
+    },
+    "touchLocationDisplay": {
+      "__id__": 7
+    },
+    "follower": {
       "__id__": 8
-    }
+    },
+    "followSpeed": 200
   },
   {
     "__type__": "cc.Node",
@@ -492,23 +562,25 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "9e7c8kSCGhAeZRxGQNjEAhM",
+    "_reorderChildDirty": false,
+    "_id": "dfe5646WrlMa5Un+1usdHlF",
     "_active": true,
     "_components": [
       {
-        "__id__": 15
+        "__id__": 16
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "6a871gy73FDLap3Eje/2h6i",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 14
+      "__id__": 15
     },
     "_enabled": true,
-    "text": "## 键盘输入使用说明\n\n点击 play 按钮预览游戏，控制脚本监听键盘\"A\"和\"D\"按键输入，分别控制绵羊向左或向右转向。\n\n在浏览器预览时，请确认游戏视窗处于激活状态（点击游戏视窗区域），才能正确获取输入事件。\n\n查看 SimpleKeyboardMovement.js 脚本，了解监听键盘输入事件的脚本书写方法。"
+    "text": "## 点击/触摸输入使用说明\n\n点击 play 按钮预览游戏，使用鼠标或触屏点击并拖拽到游戏视窗内的任意位置，绿色角色会向点击或触摸位置移动。\n\n同时屏幕上方还会显示用户最后一次点击或拖拽所在的屏幕坐标位置。\n\n在浏览器预览时，请确认游戏视窗处于激活状态（点击游戏视窗区域），才能正确获取输入事件。\n\n查看 OnTouchCtrl.js 脚本，了解监听鼠标或触屏输入事件的脚本书写方法。"
   }
 ]

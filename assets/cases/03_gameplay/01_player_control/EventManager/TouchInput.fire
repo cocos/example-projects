@@ -24,20 +24,23 @@
     "_parent": null,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 0.5,
+      "y": 0.5
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
+      "width": 100,
+      "height": 100
     },
     "_children": [
       {
         "__id__": 2
       },
       {
-        "__id__": 12
+        "__id__": 13
+      },
+      {
+        "__id__": 15
       }
     ],
     "_localZOrder": 0,
@@ -45,7 +48,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_reorderChildDirty": false,
-    "_id": "4244c310-390d-46da-9d70-742ea071ad89"
+    "_id": "591a9523-00e1-4b08-9c57-24b52848bbaf"
   },
   {
     "__type__": "cc.Node",
@@ -82,6 +85,9 @@
       },
       {
         "__id__": 8
+      },
+      {
+        "__id__": 10
       }
     ],
     "_rotationX": 0,
@@ -100,11 +106,11 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_reorderChildDirty": false,
-    "_id": "3c386T8CKBKvI+DRmgdhulg",
+    "_id": "c8725B+SrxDPJkbCr54l850",
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 12
       }
     ],
     "_prefab": null,
@@ -133,14 +139,14 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
+      "width": 1500,
       "height": 640
     },
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 2,
-    "_scaleY": 2,
+    "_scaleX": 1,
+    "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -153,7 +159,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_reorderChildDirty": false,
-    "_id": "f3c6c6z4ApETpbzbSZwkU9e",
+    "_id": "77014/5MhNKNrCBsKnb/grH",
     "_active": true,
     "_components": [
       {
@@ -203,7 +209,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Target",
+    "_name": "touchLocationDisplay",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -224,14 +230,87 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 512,
-      "height": 512
+      "width": 204.51,
+      "height": 40
     },
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 0.5,
-    "_scaleY": 0.5,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 200
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
+    "_id": "89145lT8rNBX5f5HDSwzlcm",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 7
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 6
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_N$string": "Label",
+    "_N$horizontalAlign": 0,
+    "_N$verticalAlign": 0,
+    "_N$overflow": 0,
+    "_N$textKey": "TEXT_KEY"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "sprite",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 68,
+      "height": 71
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -244,11 +323,11 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_reorderChildDirty": false,
-    "_id": "f1e53dOpjhMcbCh0JZx9KfL",
+    "_id": "ce3d0QmAD1MsJ0nPWMOzNWC",
     "_active": true,
     "_components": [
       {
-        "__id__": 7
+        "__id__": 9
       }
     ],
     "_prefab": null,
@@ -259,11 +338,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 8
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "bf867cae-8a21-4fff-9dad-d21b5098a1a6"
+      "__uuid__": "0467443e-6fb8-4d7b-a34f-57b3e5c149fb"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -303,7 +382,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 420,
+      "width": 360,
       "height": 40
     },
     "_children": [],
@@ -314,7 +393,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -226
+      "y": -150
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -323,14 +402,11 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_reorderChildDirty": false,
-    "_id": "0be38YzJnVN+4f9ER4Wt85X",
+    "_id": "0b837S79PFJ4psOjGduCvpO",
     "_active": true,
     "_components": [
       {
-        "__id__": 9
-      },
-      {
-        "__id__": 10
+        "__id__": 11
       }
     ],
     "_prefab": null,
@@ -341,46 +417,25 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 10
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_fontSize": 30,
+    "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
-    "_N$string": "Label",
-    "_N$horizontalAlign": 0,
-    "_N$verticalAlign": 0,
+    "_N$string": "Try touching anywhere.",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
     "_N$overflow": 0,
-    "_N$textKey": "cases/03_gameplay/01_player_control/MultiTouchInput.fire.20"
-  },
-  {
-    "__type__": "cc.Widget",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 8
-    },
-    "_enabled": true,
-    "isAlignOnce": true,
-    "_alignFlags": 4,
-    "_left": 0,
-    "_right": 0,
-    "_top": 0,
-    "_bottom": 74,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_originalWidth": 0,
-    "_originalHeight": 0
+    "_N$textKey": "cases/03_gameplay/01_player_control/EventManager/TouchInput.fire.10"
   },
   {
     "__type__": "cc.Canvas",
     "_name": "",
-    "_objFlags": 3670016,
+    "_objFlags": 3932160,
     "node": {
       "__id__": 2
     },
@@ -395,7 +450,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "MultiTouchInputCtrl",
+    "_name": "SpriteFollowTouch",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -436,29 +491,93 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_reorderChildDirty": false,
-    "_id": "41b81SMDx1HGKGvZ1vNlYMM",
+    "_id": "76528hFx3BOPKNgJbX5XWsE",
     "_active": true,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 14
       }
     ],
     "_prefab": null,
     "groupIndex": 0
   },
   {
-    "__type__": "5c9f5jILh1IMIL5n4VMqdK6",
+    "__type__": "90aed86Xu1DZoaevFdcthY3",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 13
     },
     "_enabled": true,
-    "target": {
-      "__id__": 6
+    "touchLocationDisplay": {
+      "__id__": 7
     },
-    "tips": {
-      "__id__": 9
-    }
+    "follower": {
+      "__id__": 8
+    },
+    "followSpeed": 200
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Instruction",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 1
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
+    "_id": "dfe5646WrlMa5Un+1usdHlF",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 16
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "6a871gy73FDLap3Eje/2h6i",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 15
+    },
+    "_enabled": true,
+    "text": "## 点击/触摸输入使用说明\n\n点击 play 按钮预览游戏，使用鼠标或触屏点击并拖拽到游戏视窗内的任意位置，绿色角色会向点击或触摸位置移动。\n\n同时屏幕上方还会显示用户最后一次点击或拖拽所在的屏幕坐标位置。\n\n在浏览器预览时，请确认游戏视窗处于激活状态（点击游戏视窗区域），才能正确获取输入事件。\n\n查看 SpriteFollowTouch.js 脚本，了解监听鼠标或触屏输入事件的脚本书写方法。"
   }
 ]
