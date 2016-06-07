@@ -9,12 +9,12 @@ cc.Class({
     },
 
     onLoad: function () {
-        // zh:该效果只能在移动平台上有效！
+        // zh:璇ユ晥鏋滃彧鑳藉湪绉诲姩骞冲彴涓婃湁鏁堬紒
         // en:The sample can only be effective on mobile platforms!
         if (!cc.sys.isMobile) {
             return;
         }
-        this.tips.textKey = i18n.t("cases/03_gameplay/01_player_control/MultiTouchInput.fire.21");
+        this.tips.textKey = i18n.t("cases/03_gameplay/01_player_control/EventManager/MultiTouchInput.fire.21");
 
         var self = this, parent = this.node.parent;
         cc.eventManager.addListener({
@@ -28,9 +28,9 @@ cc.Class({
                     var delta1 = touch1.getDelta(), delta2 = touch2.getDelta();
                     var touchPoint1 = parent.convertToNodeSpaceAR(touch1.getLocation());
                     var touchPoint2 = parent.convertToNodeSpaceAR(touch2.getLocation());
-                    //缩放
-                    var distance = touchPoint1.sub(touchPoint2);
-                    var delta = delta1.sub(delta2);
+                    //缂╂斁
+                    var distance = cc.pSub(touchPoint1, touchPoint2);
+                    var delta = cc.pSub(delta1, delta2);
                     var scale = 1;
                     if (Math.abs(distance.x) > Math.abs(distance.y)) {
                         scale = (distance.x + delta.x) / distance.x * self.target.scale;
