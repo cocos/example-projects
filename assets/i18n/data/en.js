@@ -219,7 +219,7 @@ module.exports = {
   "cases/05_scripting/11_network/network.fire.14": "WebSocket",
   "cases/05_scripting/11_network/network.fire.19": "Label",
   "cases/05_scripting/11_network/network.fire.18": "SocketIO",
-  "cases/native_call/native_call.fire.1": "Currently only in the Android mobile platform works!",
+  "cases/native_call/native_call.fire.1": "JS to JAVA reflection only works Android mobile platform!",
   "cases/native_call/native_call.fire.2": "Click on the button calls the static method!",
   "cases/native_call/native_call.fire.3": "Click",
   "cases/collider/Category.fire.3": "Group: Collider",
