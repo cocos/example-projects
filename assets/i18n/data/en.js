@@ -139,6 +139,7 @@ module.exports = {
   "cases/03_gameplay/03_animation/MoveAnimation.fire.35": "Back Forward",
   "cases/03_gameplay/03_animation/MoveAnimation.fire.41": "This is Move Animation.",
   "cases/03_gameplay/03_animation/SpriteAnimation.fire.9": "This is SprieFrame Animation.",
+  "cases/03_gameplay/03_animation/CreateClip.fire.1": "Dynamic Creating AnimationClip",
   "cases/04_audio/SimpleAudio.fire.6": "Enjoy the music!",
   "cases/05_scripting/01_properties/NodeArray.fire.14": "This is Node Array.",
   "cases/05_scripting/01_properties/NonSerialized.fire.6": "Label",
