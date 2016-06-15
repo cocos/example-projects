@@ -2,18 +2,18 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        motionStreak: {
-            default: null,
-            type: cc.MotionStreak
-        },
-
-        newTexture: {
-            default: null,
-            url: cc.Texture2D
-        }
+        motionStreak: cc.MotionStreak,
+        newTexture: cc.Texture2D,
+        content: cc.Node,
+        tips: cc.Node
     },
 
     onLoad: function () {
+        if (cc._renderType !== cc.game.RENDER_TYPE_WEBGL) {
+            this.tips.active = true;
+            this.content.active = false;
+            return;
+        }
         this._changed = true;
         this.oldTexture = this.motionStreak.texture;
     },
