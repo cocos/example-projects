@@ -4,21 +4,9 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        showWindow: {
-            default: null,
-            type: cc.Node
-        },
-
-        loadAnimTestPrefab: {
-            default: null,
-            type: cc.Prefab
-        },
-
-        loadTips: {
-            default: null,
-            type: cc.Label
-        },
-
+        showWindow: cc.Node,
+        loadAnimTestPrefab: cc.Prefab,
+        loadTips: cc.Label,
         loadList: {
             default: [],
             type: cc.Node
@@ -40,8 +28,8 @@ cc.Class({
             Audio: "test assets/audio",
             Txt: "test assets/text",
             Texture: "test assets/PurpleMonster",
+            Font: "test assets/font",
             // Raw Asset, use raw url
-            Font: cc.url.raw("resources/test assets/font.fnt"),
             Plist: cc.url.raw("resources/test assets/atom.plist"),
             // Asset
             SpriteFrame: "test assets/image",
@@ -74,14 +62,14 @@ cc.Class({
         }
 
         if (this._btnLabel) {
-            this._btnLabel.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.1") + this._lastType;
+            this._btnLabel.textKey = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.1") + this._lastType;
         }
 
         this._lastType = this._curType;
 
         this._btnLabel = event.target.getChildByName("Label").getComponent("cc.Label");
 
-        this.loadTips.string = this._curType + " Loading....";
+        this.loadTips.textKey = this._curType + " Loading....";
         this._isLoading = true;
 
         this._load();
@@ -98,6 +86,9 @@ cc.Class({
             case 'Spine':
                 // specify the type to avoid the duplicated name from spine atlas
                 cc.loader.loadRes(url, sp.SkeletonData, loadCallBack);
+                break;
+            case 'Font':
+                cc.loader.loadRes(url, cc.Font, loadCallBack);
                 break;
             case 'Animation':
             case 'Prefab':
@@ -121,13 +112,13 @@ cc.Class({
         }
         this._curRes = res;
         if (this._curType === "Audio") {
-            this._btnLabel.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.2");
+            this._btnLabel.textKey = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.2");
         }
         else {
-            this._btnLabel.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.3");
+            this._btnLabel.textKey = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.3");
         }
-        this._btnLabel.string += this._curType;
-        this.loadTips.string = this._curType + " Loaded Successfully!";
+        this._btnLabel.textKey += this._curType;
+        this.loadTips.textKey = this._curType + " Loaded Successfully!";
     },
 
     _onClear: function () {
@@ -149,7 +140,7 @@ cc.Class({
     },
 
     _createNode: function (type, res) {
-        this.loadTips.string = "";
+        this.loadTips.textKey = "";
         var node = new cc.Node("New " + type);
         node.setPosition(0, 0);
         var component = null;
@@ -167,7 +158,7 @@ cc.Class({
                 component.clip = res;
                 component.play();
                 this._audioSource = component;
-                this.loadTips.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.4");
+                this.loadTips.textKey = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.4");
                 break;
             case "Txt":
                 component = node.addComponent(cc.Label);
@@ -176,9 +167,9 @@ cc.Class({
                 break;
             case "Font":
                 component = node.addComponent(cc.Label);
-                component.file = this._urls.Font;
+                component.font = res;
                 component.lineHeight = 40;
-                component.string = i18n.t("cases/05_scripting/07_asset_loading/AssetLoading.js.5");
+                component.string = "This is BitmapFont!";
                 break;
             case "Plist":
                 component = node.addComponent(cc.ParticleSystem);

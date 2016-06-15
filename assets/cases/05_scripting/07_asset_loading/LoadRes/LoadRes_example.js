@@ -2,10 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        content: {
-            default: null,
-            type: cc.Node
-        }
+        content: cc.Node
     },
 
     loadSpriteFrame: function () {
