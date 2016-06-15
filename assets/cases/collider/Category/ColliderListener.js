@@ -19,7 +19,6 @@ cc.Class({
         cc.director.getCollisionManager().enabledDebugDraw = true;
         // cc.director.getCollisionManager().enabledDrawBoundingBox = true;
         
-        cc.director.setDisplayStats(true);
         this.touchingNumber = 0;
     },
     
