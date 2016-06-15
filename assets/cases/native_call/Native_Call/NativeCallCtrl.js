@@ -19,7 +19,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if (!cc.sys.isMobile || cc.sys.os !== cc.sys.OS_ANDROID) { return; }
+        if (!cc.sys.isMobile && cc.sys.platform == cc.sys.ANDROID) { return; }
         this.tips.textKey = i18n.t("cases/native_call/native_call.fire.2");
         this.button.active = true;
     },
