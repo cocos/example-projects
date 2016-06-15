@@ -2,22 +2,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        btnClearAll: {
-            default: null,
-            type: cc.Node
-        },
-        label: {
-            default: null,
-            type: cc.Prefab
-        },
-        content: {
-            default: null,
-            type: cc.Node
-        },
-        scrollView: {
-            default: null,
-            type: cc.ScrollView
-        }
+        btnClearAll: cc.Node,
+        label: cc.Prefab,
+        content: cc.Node,
+        scrollView: cc.ScrollView
     },
 
     onLoad: function () {
@@ -29,7 +17,7 @@ cc.Class({
     _createLabel: function (text) {
         var node = cc.instantiate(this.label);
         var label = node.getComponent(cc.Label);
-        label.string = text;
+        label.textKey = text;
         this.content.addChild(node);
     },
 
