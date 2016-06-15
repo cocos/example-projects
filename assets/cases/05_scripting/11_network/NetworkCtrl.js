@@ -1,7 +1,7 @@
 const i18n = require('i18n');
 
 if (!window.io) {
-    window.io = require('socket-io');
+    cc.error('You should import the socket.io.js as a plugin!');
 }
 
 cc.Class({
