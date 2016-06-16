@@ -2,10 +2,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        particle: {
-            default: null,
-            type: cc.Node
-        }
+        canvas: cc.Node,
+        particle: cc.Node
     },
 
     // use this for initialization
@@ -19,7 +17,7 @@ cc.Class({
                     self.toggleParticlePlay();
                 }
             }
-        }, self); 
+        }, self.node);
     },
 
     toggleParticlePlay: function() {
