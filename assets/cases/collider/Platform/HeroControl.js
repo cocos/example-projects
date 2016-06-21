@@ -73,21 +73,26 @@ cc.Class({
 
         this.touchingNumber ++;
         
+        // 1st step 
+        // get pre aabb, go back before collision
         var otherAabb = other.world.aabb;
-        var selfAabb = self.world.aabb.clone();
-        var preAabb = self.world.preAabb;
-        
-        selfAabb.x = preAabb.x;
-        selfAabb.y = preAabb.y;
+        var otherPreAabb = other.world.preAabb.clone();
 
-        selfAabb.x = self.world.aabb.x;
-        if (cc.Intersection.rectRect(selfAabb, otherAabb)) {
-            if (this.speed.x < 0 && (selfAabb.xMax > otherAabb.xMax)) {
-                this.node.x = otherAabb.xMax;
+        var selfAabb = self.world.aabb;
+        var selfPreAabb = self.world.preAabb.clone();
+
+        // 2nd step
+        // forward x-axis, check whether collision on x-axis
+        selfPreAabb.x = selfAabb.x;
+        otherPreAabb.x = otherAabb.x;
+
+        if (cc.Intersection.rectRect(selfPreAabb, otherPreAabb)) {
+            if (this.speed.x < 0 && (selfPreAabb.xMax > otherPreAabb.xMax)) {
+                this.node.x = otherPreAabb.xMax - this.node.parent.x;
                 this.collisionX = -1;
             }
-            else if (this.speed.x > 0 && (selfAabb.xMin < otherAabb.xMin)) {
-                this.node.x = otherAabb.xMin - selfAabb.width;
+            else if (this.speed.x > 0 && (selfPreAabb.xMin < otherPreAabb.xMin)) {
+                this.node.x = otherPreAabb.xMin - selfPreAabb.width - this.node.parent.x;
                 this.collisionX = 1;
             }
 
@@ -96,15 +101,19 @@ cc.Class({
             return;
         }
 
-        selfAabb.y = self.world.aabb.y;
-        if (cc.Intersection.rectRect(selfAabb, otherAabb)) {
-            if (this.speed.y < 0 && (selfAabb.yMax > otherAabb.yMax)) {
-                this.node.y = otherAabb.yMax;
+        // 3rd step
+        // forward y-axis, check whether collision on y-axis
+        selfPreAabb.y = selfAabb.y;
+        otherPreAabb.y = otherAabb.y;
+
+        if (cc.Intersection.rectRect(selfPreAabb, otherPreAabb)) {
+            if (this.speed.y < 0 && (selfPreAabb.yMax > otherPreAabb.yMax)) {
+                this.node.y = otherPreAabb.yMax - this.node.parent.y;
                 this.jumping = false;
                 this.collisionY = -1;
             }
-            else if (this.speed.y > 0 && (selfAabb.yMin < otherAabb.yMin)) {
-                this.node.y = otherAabb.yMin - selfAabb.height;
+            else if (this.speed.y > 0 && (selfPreAabb.yMin < otherPreAabb.yMin)) {
+                this.node.y = otherPreAabb.yMin - selfPreAabb.height - this.node.parent.y;
                 this.collisionY = 1;
             }
             
@@ -116,13 +125,22 @@ cc.Class({
     
     onCollisionStay: function (other, self) {
         if (this.collisionY === -1) {
-            var offset = cc.v2(other.world.aabb.x - other.world.preAabb.x, 0);
+            if (other.node.group === 'Platform') {
+                var motion = other.node.getComponent('PlatformMotion');
+                if (motion) {
+                    this.node.x += motion._movedDiff;
+                }
+            }
+
+            // this.node.y = other.world.aabb.yMax;
+
+            // var offset = cc.v2(other.world.aabb.x - other.world.preAabb.x, 0);
             
-            var temp = cc.affineTransformClone(self.world.transform);
-            temp.tx = temp.ty = 0;
+            // var temp = cc.affineTransformClone(self.world.transform);
+            // temp.tx = temp.ty = 0;
             
-            offset = cc.pointApplyAffineTransform(offset, temp);
-            this.node.x += offset.x;
+            // offset = cc.pointApplyAffineTransform(offset, temp);
+            // this.node.x += offset.x;
         }
     },
     
