@@ -10,6 +10,7 @@ cc.Class({
     onLoad: function () {
         this._movedDistance = this.distance / 2;
         this._direction = 1;
+        this._movedDiff = 0;
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -29,5 +30,6 @@ cc.Class({
         }
         
         this.node.x += d;
+        this._movedDiff = d;
     },
 });
