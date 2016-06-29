@@ -88,5 +88,14 @@ cc.Class({
         }
         let labelTxt = this.readme.active ? '关闭说明' : '查看说明';
         cc.find('label', this.btnInfo.node).getComponent(cc.Label).textKey = labelTxt;
+        // en: fix Collider DebugDraw always displayed on top of the problem.
+        // zh：解决 Collider DebugDraw 一直显示在最上层的问题。
+        cc.director.getCollisionManager().enabledDebugDraw = !this.readme.active;
+        // en: fix Video Player always displayed on top of the problem.
+        // zh：修复 Video Player 一直显示在最上层的问题。
+        var videoPlayer = cc.find('Canvas/VideoPlayer');
+        if (videoPlayer) {
+            videoPlayer.active = !this.readme.active;
+        }
     }
 });

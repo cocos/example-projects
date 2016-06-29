@@ -37,16 +37,17 @@
         "__id__": 2
       },
       {
-        "__id__": 12
+        "__id__": 13
       },
       {
-        "__id__": 14
+        "__id__": 15
       }
     ],
     "_localZOrder": 0,
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "e67141c2-0d65-415e-9502-7f141e187ca2"
   },
   {
@@ -80,10 +81,10 @@
         "__id__": 3
       },
       {
-        "__id__": 6
+        "__id__": 7
       },
       {
-        "__id__": 9
+        "__id__": 10
       }
     ],
     "_rotationX": 0,
@@ -101,14 +102,16 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "14c4azE7yxPz6NM7YE0OAbb",
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 12
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Node",
@@ -133,7 +136,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1500,
+      "width": 960,
       "height": 640
     },
     "_children": [],
@@ -152,16 +155,21 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "94c8bz47YhMxrNnwiF2tay9",
+    "_reorderChildDirty": false,
+    "_id": "ab4048MhXJIibqfJMK0oJKp",
     "_active": true,
     "_components": [
       {
         "__id__": 4
+      },
+      {
+        "__id__": 5
       }
     ],
     "_prefab": {
-      "__id__": 5
-    }
+      "__id__": 6
+    },
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Sprite",
@@ -175,7 +183,6 @@
       "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
     },
     "_type": 0,
-    "_useOriginalSize": true,
     "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
@@ -191,6 +198,27 @@
     "_atlas": null
   },
   {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "isAlignOnce": false,
+    "_alignFlags": 45,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_originalWidth": 960,
+    "_originalHeight": 640
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 3
@@ -202,7 +230,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "sheep",
+    "_name": "Sheep",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -242,31 +270,32 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "e73a1WDwi9NVIzXBgmcXe2b",
     "_active": true,
     "_components": [
       {
-        "__id__": 7
+        "__id__": 8
       },
       {
-        "__id__": 8
+        "__id__": 9
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 7
     },
     "_enabled": true,
     "_spriteFrame": {
       "__uuid__": "7ccb784f-7c51-4a0b-a59e-e95da40f3013"
     },
     "_type": 0,
-    "_useOriginalSize": true,
     "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
@@ -288,7 +317,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 7
     },
     "_enabled": true,
     "_defaultClip": {
@@ -306,7 +335,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "Tips",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -327,8 +356,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 546.6666666666667,
-      "height": 44.44444444444444
+      "width": 280,
+      "height": 40
     },
     "_children": [],
     "_rotationX": 0,
@@ -346,27 +375,30 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "b48edCLAQJBe5VDPfVI/mYv",
     "_active": true,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 11
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "e4f88adp3hERoJ48DZ2PSAl",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 10
     },
     "_enabled": true,
     "_useOriginalSize": false,
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
+    "_N$file": null,
     "_isSystemFontUsed": true,
     "_N$string": "This is SprieFrame Animation.",
     "_N$horizontalAlign": 1,
@@ -377,7 +409,7 @@
   {
     "__type__": "cc.Canvas",
     "_name": "",
-    "_objFlags": 1835008,
+    "_objFlags": 0,
     "node": {
       "__id__": 2
     },
@@ -392,7 +424,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "AnimationControl",
+    "_name": "SheepAnimationCtrl",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -432,25 +464,27 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "e7287lZKuBCyoyoWdifRdWD",
     "_active": true,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 14
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "ae6fcR8cuFGRYHW525VJD/k",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 13
     },
     "_enabled": true,
     "sheepAnim": {
-      "__id__": 8
+      "__id__": 9
     }
   },
   {
@@ -495,21 +529,23 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
+    "_reorderChildDirty": false,
     "_id": "a8ba7qJtIFJhp/csDPhAYB6",
     "_active": true,
     "_components": [
       {
-        "__id__": 15
+        "__id__": 16
       }
     ],
-    "_prefab": null
+    "_prefab": null,
+    "groupIndex": 0
   },
   {
     "__type__": "6a871gy73FDLap3Eje/2h6i",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 14
+      "__id__": 15
     },
     "_enabled": true,
     "text": "## Sprite Animation 基本用法\n\n1. 打开 Timeline 面板（Main-Menu/Panel/Timeline）\n2. 选中 sheep 节点，应该可以看到 Timeline 中显示了 cc.Sprite.sprite 轨道和动画帧\n3. [Timeline面板]点击播放按钮，可以预览动画播放；在刻度区域点击鼠标，可以操作动画指针显示指定关键帧位置的图像\n4. [Timeline面板]点击 clip 下拉菜单，可以从 sheep_run 和 sheep_jump 中选择，并可以用上述方法预览\n5. 点击编辑器的预览按钮，在浏览器中打开场景，游戏启动后会先循环播放 sheep_run，2秒钟后播放 sheep_jump\n6. 查看 Sheep_Animation_1.js 文件，了解 cc.AnimationComponent.play() 接口的用法。\n\n\n## Sprite Animation 创建工作流程（后续会大幅简化）\n\n1. 新建一个节点，为其添加 Sprite 和 AnimationComponent 组件\n2. 在 Asset 面板新建一个 AnimationClip，并妥善命名\n3. 选中刚才的节点，在 AnimationComponent 组件里把 Animations 列表的容量设为 1 或更多\n4. 将刚才新建的 AnimationClip 拖入 AnimationComponent.Animations 列表中\n5. 打开 Timeline 面板，在选中刚才新建节点的情况下，确认 clip 下拉菜单里已经选中刚创建的 AnimationClip\n6. [Timeline] 在 property 列表中点击 Add Property 按钮，选择添加 cc.Sprite.sprite 属性轨道\n7. 从 Asset 面板中拖拽你希望在动画中显示的 Sprite 资源到 cc.Sprite.sprite 轨道，拖拽时可以指定添加该关键帧的时间轴位置。\n8. [Timeline] 点击播放按钮预览帧动画"
