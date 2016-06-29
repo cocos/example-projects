@@ -38,9 +38,6 @@
       },
       {
         "__id__": 4
-      },
-      {
-        "__id__": 33
       }
     ],
     "_localZOrder": 0,
@@ -151,6 +148,9 @@
       },
       {
         "__id__": 15
+      },
+      {
+        "__id__": 32
       }
     ],
     "_rotationX": 0,
@@ -173,7 +173,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 32
+        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1089,18 +1089,6 @@
     "distance": 200
   },
   {
-    "__type__": "d96400vNFFPIpzg48kPuXVc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 4
-    },
-    "_enabled": true,
-    "target": {
-      "__id__": 33
-    }
-  },
-  {
     "__type__": "cc.Node",
     "_name": "star",
     "_objFlags": 0,
@@ -1114,7 +1102,7 @@
     },
     "_cascadeOpacityEnabled": true,
     "_parent": {
-      "__id__": 1
+      "__id__": 4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1133,8 +1121,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 344,
-      "y": 311
+      "x": 480,
+      "y": 320
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1147,13 +1135,13 @@
     "_active": true,
     "_components": [
       {
+        "__id__": 33
+      },
+      {
         "__id__": 34
       },
       {
         "__id__": 35
-      },
-      {
-        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1164,7 +1152,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 32
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -1190,7 +1178,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 32
     },
     "_enabled": true,
     "speed": {
@@ -1213,7 +1201,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 32
     },
     "_enabled": true,
     "tag": 0,
@@ -1226,6 +1214,18 @@
       "__type__": "cc.Size",
       "width": 40.5,
       "height": 40.5
+    }
+  },
+  {
+    "__type__": "d96400vNFFPIpzg48kPuXVc",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 4
+    },
+    "_enabled": true,
+    "target": {
+      "__id__": 32
     }
   }
 ]
