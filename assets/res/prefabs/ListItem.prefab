@@ -29,7 +29,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 520,
+      "width": 400,
       "height": 40
     },
     "_children": [
@@ -43,8 +43,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 30,
-      "y": -164
+      "x": 50,
+      "y": -50
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -64,13 +64,10 @@
       },
       {
         "__id__": 8
-      },
-      {
-        "__id__": 9
       }
     ],
     "_prefab": {
-      "__id__": 11
+      "__id__": 10
     },
     "groupIndex": 0
   },
@@ -143,7 +140,7 @@
     "isAlignOnce": true,
     "_alignFlags": 45,
     "_left": 30,
-    "_right": 405.51,
+    "_right": 285.51,
     "_top": 5,
     "_bottom": 10,
     "_isAbsLeft": true,
@@ -193,28 +190,14 @@
     "label": {
       "__id__": 4
     },
-    "url": ""
-  },
-  {
-    "__type__": "cc.Widget",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
+    "url": "",
+    "bg": {
+      "__id__": 7
     },
-    "_enabled": true,
-    "isAlignOnce": true,
-    "_alignFlags": 40,
-    "_left": 30,
-    "_right": 50,
-    "_top": 0,
-    "_bottom": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_originalWidth": 230,
-    "_originalHeight": 0
+    "btn": {
+      "__id__": 8
+    },
+    "widget": null
   },
   {
     "__type__": "cc.Sprite",
@@ -270,7 +253,7 @@
     "hoverSprite": null,
     "clickEvents": [
       {
-        "__id__": 10
+        "__id__": 9
       }
     ],
     "_N$interactable": true,
