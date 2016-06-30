@@ -6,6 +6,9 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
+        initItemCount: 0,
+        scrollView: cc.ScrollView,
+        bufferZone: 0, // when item is away from bufferZone, we relocate it
     },
 
     createItem: function (x, y, name, url) {
@@ -25,10 +28,21 @@ cc.Class({
         return item;
     },
 
+    init (menu) {
+        this.menu = menu;
+        this.sceneList = [];
+        this.itemList = [];
+        this.updateTimer = 0;
+        this.updateInterval = 0.2;
+        this.lastContentPosY = 0; // use this variable to detect if we are scrolling up or down
+        this.initList();
+    },
+
     // use this for initialization
-    onLoad: function () {
+    initList () {
         var scenes = cc.game._sceneInfos;
-        var list = {};
+        var dict = {};
+
         if (scenes) {
             var i, j;
             for (i = 0; i < scenes.length; ++i) {
@@ -41,34 +55,83 @@ cc.Class({
                 if (scenename === 'TestList') continue;
 
                 if (!dirname) dirname = '_root';
-                if (!list[dirname]) {
-                    list[dirname] = {};
+                if (!dict[dirname]) {
+                    dict[dirname] = {};
                 }
-                list[dirname][scenename] = url;
+                dict[dirname][scenename] = url;
             }
 
-            var dirs = Object.keys(list);
-            dirs.sort();
-            var y = -50;
-
-            for (i = 0; i < dirs.length; ++i) {
-                let dirname = dirs[i];
-                let item = this.createItem(100, y, dirname);
-                item.getComponent(cc.Widget).left = 60;
-                item.getComponent(cc.Sprite).enabled = false;
-                y -= 50;
-                let scenenames = Object.keys(list[dirname]);
-                scenenames.sort();
-                for (j = 0; j < scenenames.length; ++j) {
-                    let name = scenenames[j];
-                    let url = list[dirname][name];
-                    let item = this.createItem(200, y, name, url);
-                    item.getComponent(cc.Widget).left = 120;
-                    item.color = cc.Color.WHITE;
-                    y -= 50;
-                }
-            }
-            this.node.height = Math.abs(y) + 30;
+        } else {
+            cc.log('failed to get scene list!');
         }
+        // compile scene dict to an array
+        let dirs = Object.keys(dict);
+        dirs.sort();
+        for (let i = 0; i < dirs.length; ++i) {
+            this.sceneList.push({
+                name: dirs[i],
+                url: null
+            });
+            let scenenames = Object.keys(dict[dirs[i]]);
+            scenenames.sort();
+            for (let j = 0; j < scenenames.length; ++j) {
+                let name = scenenames[j];
+                this.sceneList.push({
+                    name: name,
+                    url: dict[dirs[i]][name]
+                });
+            }
+        }
+        let y = 0;
+        this.node.height = (this.sceneList.length + 1) * 50;
+        for (let i = 0; i < this.initItemCount; ++i) {
+            let item = cc.instantiate(this.itemPrefab).getComponent('ListItem');
+            let itemInfo = this.sceneList[i];
+            item.init(this.menu);
+            this.node.addChild(item.node);
+            y -= 50;
+            item.updateItem (i, y, itemInfo.name, itemInfo.url);
+            this.itemList.push(item);
+        }
+    },
+
+    getPositionInView: function (item) { // get item position in scrollview's node space
+        let worldPos = item.parent.convertToWorldSpaceAR(item.position);
+        let viewPos = this.scrollView.node.convertToNodeSpaceAR(worldPos);
+        return viewPos;
+    },
+
+    update (dt) {
+        this.updateTimer += dt;
+        if (this.updateTimer < this.updateInterval) {
+            return; // we don't need to do the math every frame
+        }
+        this.updateTimer = 0;
+        let items = this.itemList;
+        let buffer = this.bufferZone;
+        let isDown = this.node.y < this.lastContentPosY; // scrolling direction
+        let offset = 50 * (this.initItemCount - 1);
+        for (let i = 0; i < this.initItemCount; ++i) {
+            let item = items[i];
+            let itemNode = item.node;
+            let viewPos = this.getPositionInView(itemNode);
+            if (isDown) {
+                // if away from buffer zone and not reaching top of content
+                if (viewPos.y < -buffer && itemNode.y + offset < 0) {
+                    let newIdx = item.index - (this.initItemCount - 1);
+                    let newInfo = this.sceneList[newIdx];
+                    item.updateItem(newIdx, itemNode.y + offset, newInfo.name, newInfo.url );
+                }
+            } else {
+                // if away from buffer zone and not reaching bottom of content
+                if (viewPos.y > buffer && itemNode.y - offset > -this.node.height) {
+                    let newIdx = item.index + (this.initItemCount - 1);
+                    let newInfo = this.sceneList[newIdx];
+                    item.updateItem(newIdx, itemNode.y - offset, newInfo.name, newInfo.url);
+                }
+            }
+        }
+        // update lastContentPosY
+        this.lastContentPosY = this.node.y;
     },
 });

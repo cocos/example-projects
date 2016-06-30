@@ -1,5 +1,5 @@
 const i18n = require('i18n');
-
+const SceneList = require('SceneList');
 
 var emptyFunc = function (event) {
     event.stopPropagation();
@@ -28,7 +28,8 @@ cc.Class({
         btnBack: {
             default: null,
             type: cc.Button
-        }
+        },
+        sceneList: SceneList
     },
 
     onLoad: function () {
@@ -38,6 +39,7 @@ cc.Class({
         this.contentPos = null;
         this.isMenu = true;
         this.loadInstruction(this.currentSceneUrl);
+        this.sceneList.init(this);
     },
 
     backToList: function () {
