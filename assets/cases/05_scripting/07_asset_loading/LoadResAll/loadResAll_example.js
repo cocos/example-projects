@@ -60,6 +60,7 @@ cc.Class({
         var self = this;
         this._clear();
         self._createLabel("Load All Sprite Frame");
+        self.scrollView.scrollToTop();
         cc.loader.loadResAll("test assets", cc.SpriteFrame, function (err, assets) {
             self.count = assets.length;
             var text = "";
