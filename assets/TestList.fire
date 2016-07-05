@@ -199,7 +199,7 @@
       "__id__": 3
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -273,10 +273,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 12
+        "__id__": 13
       },
       {
-        "__id__": 13
+        "__id__": 11
       }
     ],
     "_prefab": null,
@@ -333,7 +333,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 12
       }
     ],
     "_prefab": null,
@@ -402,7 +402,33 @@
     "_enabled": true,
     "itemPrefab": {
       "__uuid__": "1ea21a34-ca68-4880-8df6-05abb19079fd"
-    }
+    },
+    "initItemCount": 18,
+    "scrollView": {
+      "__id__": 11
+    },
+    "bufferZone": 300
+  },
+  {
+    "__type__": "cc.ScrollView",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 7
+    },
+    "_enabled": true,
+    "content": {
+      "__id__": 9
+    },
+    "horizontal": false,
+    "vertical": true,
+    "inertia": true,
+    "brake": 0.9,
+    "elastic": true,
+    "bounceDuration": 0.23,
+    "scrollEvents": [],
+    "_N$horizontalScrollBar": null,
+    "_N$verticalScrollBar": null
   },
   {
     "__type__": "cc.Mask",
@@ -440,27 +466,6 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
-  },
-  {
-    "__type__": "cc.ScrollView",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 7
-    },
-    "_enabled": true,
-    "content": {
-      "__id__": 9
-    },
-    "horizontal": false,
-    "vertical": true,
-    "inertia": true,
-    "brake": 0.9,
-    "elastic": true,
-    "bounceDuration": 0.23,
-    "scrollEvents": [],
-    "_N$horizontalScrollBar": null,
-    "_N$verticalScrollBar": null
   },
   {
     "__type__": "cc.Canvas",
@@ -779,7 +784,7 @@
       "__id__": 19
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -967,7 +972,7 @@
       "__id__": 22
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -1009,7 +1014,7 @@
       "__id__": 16
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_alignFlags": 45,
     "_left": 0.25,
     "_right": 0.25,
@@ -1192,7 +1197,7 @@
       "__id__": 30
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_alignFlags": 33,
     "_left": 0,
     "_right": 10,
@@ -1435,7 +1440,7 @@
       "__id__": 37
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_alignFlags": 9,
     "_left": 10,
     "_right": 10.000000000000018,
@@ -1516,7 +1521,7 @@
       "__id__": 15
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -1551,6 +1556,9 @@
     },
     "btnBack": {
       "__id__": 35
+    },
+    "sceneList": {
+      "__id__": 10
     }
   }
 ]

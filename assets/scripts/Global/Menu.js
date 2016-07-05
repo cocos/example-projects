@@ -1,5 +1,5 @@
 const i18n = require('i18n');
-
+const SceneList = require('SceneList');
 
 var emptyFunc = function (event) {
     event.stopPropagation();
@@ -28,15 +28,18 @@ cc.Class({
         btnBack: {
             default: null,
             type: cc.Button
-        }
+        },
+        sceneList: SceneList
     },
 
     onLoad: function () {
+        this.showDebugDraw = false;
         cc.game.addPersistRootNode(this.node);
         this.currentSceneUrl = 'TestList.fire';
         this.contentPos = null;
         this.isMenu = true;
         this.loadInstruction(this.currentSceneUrl);
+        this.sceneList.init(this);
     },
 
     backToList: function () {
@@ -88,9 +91,17 @@ cc.Class({
         }
         let labelTxt = this.readme.active ? '关闭说明' : '查看说明';
         cc.find('label', this.btnInfo.node).getComponent(cc.Label).textKey = labelTxt;
+
         // en: fix Collider DebugDraw always displayed on top of the problem.
         // zh：解决 Collider DebugDraw 一直显示在最上层的问题。
-        cc.director.getCollisionManager().enabledDebugDraw = !this.readme.active;
+        var enabledDebugDraw = cc.director.getCollisionManager().enabledDebugDraw;
+        if (this.readme.active) {
+            this.showDebugDraw = enabledDebugDraw;
+            cc.director.getCollisionManager().enabledDebugDraw = false;
+        }
+        else {
+            cc.director.getCollisionManager().enabledDebugDraw = this.showDebugDraw;
+        }
         // en: fix Video Player always displayed on top of the problem.
         // zh：修复 Video Player 一直显示在最上层的问题。
         var videoPlayer = cc.find('Canvas/VideoPlayer');

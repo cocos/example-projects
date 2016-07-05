@@ -32,7 +32,7 @@ cc.Class({
                 var bullet = cc.instantiate(this.bullet);
                 bullet.position = touchLoc;
                 bullet.active = true;
-                
+                bullet.zIndex = -1;
                 scene.addChild(bullet);
                 return true;
             },

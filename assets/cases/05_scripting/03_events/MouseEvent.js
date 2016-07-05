@@ -31,6 +31,7 @@ cc.Class({
         }, this);
         this.node.on(cc.Node.EventType.MOUSE_LEAVE, function () {
             this.node.opacity = 50;
+            this.node.off(cc.Node.EventType.MOUSE_MOVE, this.move, this);
         }, this);
         this.node.on(cc.Node.EventType.MOUSE_UP, function () {
             this.node.opacity = 50;
