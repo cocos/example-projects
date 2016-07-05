@@ -1,3 +1,5 @@
+// http://codepen.io/grgrdvrt/pen/bywBt
+
 let isMobileBrowser = cc.sys.platform === cc.sys.MOBILE_BROWSER;
 
 function Particle() {
