@@ -11,14 +11,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         if (cc.director.setClearColor) {
-            let color = cc.hexToColor('#d1f1ff');
-            if (!CC_JSB) {
-              color.r /= 255;
-              color.g /= 255;
-              color.b /= 255;
-              color.a /= 255;
-            }
-            cc.director.setClearColor( color );
+            cc.director.setClearColor( cc.hexToColor('#d1f1ff') );
         }
 
         this.graphics = this.getComponent(cc.Graphics);
@@ -42,6 +35,12 @@ cc.Class({
                 this.input = false;
             }
         }, this.node);
+    },
+    
+    onDisable: function () {
+        if (cc.director.setClearColor) {
+            cc.director.setClearColor( cc.Color.BLACK );
+        }
     },
 
     createBezierNodes: function () {

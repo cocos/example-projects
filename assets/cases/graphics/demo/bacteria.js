@@ -324,6 +324,12 @@ cc.Class({
         }
     },
 
+    onDisable: function () {
+        if (cc.director.setClearColor) {
+            cc.director.setClearColor( cc.Color.BLACK );
+        }
+    },
+
     update: function (dt) {
         let g = this.bacteriaGraphics;
         let s = this.stencil;
