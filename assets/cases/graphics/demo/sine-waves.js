@@ -208,14 +208,7 @@ let SineWaves = cc.Class({
     // use this for initialization
     onLoad: function () {
         if (cc.director.setClearColor) {
-            let color = cc.hexToColor('#01aaff');
-            if (!CC_JSB) {
-              color.r /= 255;
-              color.g /= 255;
-              color.b /= 255;
-              color.a /= 255;
-            }
-            cc.director.setClearColor( color );
+            cc.director.setClearColor( cc.hexToColor('#01aaff') );
         }
 
         this.time = 0;
@@ -228,6 +221,12 @@ let SineWaves = cc.Class({
         for (let i = 0, l = waves.length; i < l; i++) {
             waves[i].waveFn = Waves[Waves.Enum[waves[i].waveType]].bind(Waves);
             waves[i].easeFn = Ease[Ease.Enum[waves[i].easeType]].bind(Ease);
+        }
+    },
+    
+    onDisable: function () {
+        if (cc.director.setClearColor) {
+            cc.director.setClearColor( cc.Color.BLACK );
         }
     },
 

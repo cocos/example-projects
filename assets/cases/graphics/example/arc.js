@@ -32,6 +32,12 @@ cc.Class({
         g.fill();
     },
 
+    onDisable: function () {
+        if (cc.director.setClearColor) {
+            cc.director.setClearColor( cc.Color.BLACK );
+        }
+    },
+    
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 
