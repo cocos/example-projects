@@ -4,13 +4,11 @@ cc.Class({
     properties: {
         btnClearAll: cc.Node,
         label: cc.Prefab,
-        content: cc.Node,
         scrollView: cc.ScrollView
     },
 
     onLoad: function () {
-        this.count = 0;
-        this.content.height = 0;
+        this.scrollView.content.height = 0;
         this.btnClearAll.active = false;
     },
 
@@ -18,17 +16,16 @@ cc.Class({
         var node = cc.instantiate(this.label);
         var label = node.getComponent(cc.Label);
         label.textKey = text;
-        this.content.addChild(node);
+        this.scrollView.content.addChild(node);
     },
 
     _clear: function () {
-        this.content.removeAllChildren(true);
+        this.scrollView.content.removeAllChildren(true);
         cc.loader.releaseAll();
     },
 
     onClearAll: function () {
-        this.count = 0;
-        this.content.height = 0;
+        this.scrollView.content.height = 0;
         this.btnClearAll.active = false;
         this._clear();
     },
@@ -37,22 +34,20 @@ cc.Class({
         var self = this;
         this._clear();
         self._createLabel("Load All Assets");
+        self.scrollView.scrollToTop();
         cc.loader.loadResAll("test assets", function (err, assets) {
-            cc.log(assets.length);
-            self.count = assets.length;
             var text = "";
             for (var i = 0; i < assets.length; ++i) {
                 if (typeof assets[i] === 'string' ) {
                     text = assets[i]
                 }
                 else {
-                    text = assets[i].url || assets[i].name || assets[i] || textureFileName;
+                    text = assets[i].url || assets[i]._name || assets[i];
                 }
-                self._createLabel("asset: " + text);
+                self._createLabel(text);
             }
             self.btnClearAll.active = true;
-            self.content.height = self.count * 60;
-            self.scrollView.scrollToTop();
+            self.scrollView.content.height = assets.length * 60;
         });
     },
 
@@ -62,19 +57,18 @@ cc.Class({
         self._createLabel("Load All Sprite Frame");
         self.scrollView.scrollToTop();
         cc.loader.loadResAll("test assets", cc.SpriteFrame, function (err, assets) {
-            self.count = assets.length;
             var text = "";
             for (var i = 0; i < assets.length; ++i) {
                 if (typeof assets[i] === 'string' ) {
                     text = assets[i]
                 }
                 else {
-                    text = assets[i].url || assets[i]._name;
+                    text = assets[i].url || assets[i]._name || assets[i];
                 }
-                self._createLabel("sprite frame: " + text);
+                self._createLabel(text);
             }
             self.btnClearAll.active = true;
-            self.content.height = self.count * 20;
+            self.scrollView.content.height = assets.length * 20;
         });
     }
 
