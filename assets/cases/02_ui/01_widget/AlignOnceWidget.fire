@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "",
+    "_name": "AlignOnceWidget",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -393,6 +393,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
+    "_actualFontSize": 40,
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -428,8 +429,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 60
+      "width": 290,
+      "height": 80
     },
     "_children": [
       {
@@ -443,7 +444,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -200,
-      "y": -150
+      "y": -150.0000000000001
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -491,7 +492,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 106.74,
+      "width": 251.15,
       "height": 40
     },
     "_children": [],
@@ -530,9 +531,10 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_fontSize": 17,
+    "_actualFontSize": 40,
+    "_fontSize": 40,
     "_lineHeight": 40,
-    "_enableWrapText": false,
+    "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_N$string": "AlignOnce: true",
@@ -645,10 +647,10 @@
     "_enabled": true,
     "isAlignOnce": true,
     "_alignFlags": 12,
-    "_left": 205,
+    "_left": 135,
     "_right": 0,
     "_top": 0,
-    "_bottom": 140,
+    "_bottom": 129.9999999999999,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
@@ -679,8 +681,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 60
+      "width": 290,
+      "height": 80
     },
     "_children": [
       {
@@ -742,7 +744,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 113.36,
+      "width": 266.72,
       "height": 40
     },
     "_children": [],
@@ -781,7 +783,8 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_fontSize": 17,
+    "_actualFontSize": 40,
+    "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,
@@ -897,9 +900,9 @@
     "isAlignOnce": true,
     "_alignFlags": 36,
     "_left": 0,
-    "_right": 205,
+    "_right": 135,
     "_top": 0,
-    "_bottom": 140,
+    "_bottom": 130,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
@@ -910,7 +913,7 @@
   {
     "__type__": "cc.Canvas",
     "_name": "",
-    "_objFlags": 3932160,
+    "_objFlags": 0,
     "node": {
       "__id__": 2
     },
