@@ -28,8 +28,7 @@ cc.Class({
         btnBack: {
             default: null,
             type: cc.Button
-        },
-        sceneList: SceneList
+        }
     },
 
     onLoad: function () {
@@ -39,7 +38,21 @@ cc.Class({
         this.contentPos = null;
         this.isMenu = true;
         this.loadInstruction(this.currentSceneUrl);
-        this.sceneList.init(this);
+    },
+    
+    onEnable: function () {
+        // for this component, onEnable should be called after
+        // each time new scene launched
+        var sceneListNode = cc.find('Canvas/testList/viewport/list');
+        if (sceneListNode) {
+            // in main scene
+            this.sceneList = sceneListNode.getComponent('SceneList');
+            this.sceneList.init(this);
+        }
+        else {
+            // in other scene, this.sceneList should be destroyed
+            this.sceneList = null;
+        }
     },
 
     backToList: function () {
