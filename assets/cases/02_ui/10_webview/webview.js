@@ -24,7 +24,7 @@ cc.Class({
     },
 
     onWebFinishLoad: function () {
-        this.labelStatus.string = "WebView loaded!";
+        this.labelStatus.string = this.url.string + " loaded!";
     },
 
     visitURL: function () {
