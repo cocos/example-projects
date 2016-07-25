@@ -24,9 +24,15 @@ cc.Class({
     },
 
     onWebFinishLoad: function (sender, event) {
-        if (event === cc.WebView.EventType.LOADED) {
-            this.labelStatus.string = this.url.string + " loaded!";
+        var loadStatus = "";
+        if(event === cc.WebView.EventType.LOADED) {
+            loadStatus = " is loaded!";
+        } else if(event === cc.WebView.EventType.LOADING) {
+            loadStatus = " is loading!";
+        } else if (event === cc.WebView.EventType.ERROR) {
+            loadStatus = ' load error!';
         }
+        this.labelStatus.string = this.url.string + loadStatus;
     },
 
     visitURL: function () {
