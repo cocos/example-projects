@@ -161,7 +161,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
-    "_N$string": " loaded!",
+    "_N$string": " is loaded!",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
@@ -189,7 +189,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 142.34,
+      "width": 182.34,
       "height": 40
     },
     "_children": [],
@@ -227,7 +227,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_url": "",
+    "_url": "http://www.cocos.com",
     "webViewLoadedEvent": [
       {
         "__id__": 9
@@ -310,7 +310,7 @@
       "__id__": 2
     },
     "component": "webview",
-    "handler": "onWebFinishLoad"
+    "handler": "onShouldStartLoading"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -339,7 +339,7 @@
     },
     "_N$returnType": 0,
     "_N$inputFlag": 1,
-    "_N$inputMode": 6,
+    "_N$inputMode": 4,
     "_N$fontSize": 22.299999999999912,
     "_N$lineHeight": 40,
     "_N$fontColor": {

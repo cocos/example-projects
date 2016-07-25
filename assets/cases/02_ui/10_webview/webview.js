@@ -36,7 +36,7 @@ cc.Class({
     },
 
     visitURL: function () {
-        this.webview.URL = this.url.string;
+        this.webview.url = this.url.string;
     }
 
 });
