@@ -23,8 +23,10 @@ cc.Class({
 
     },
 
-    onWebFinishLoad: function () {
-        this.labelStatus.string = this.url.string + " loaded!";
+    onWebFinishLoad: function (sender, event) {
+        if (event === cc.WebView.EventType.LOADED) {
+            this.labelStatus.string = this.url.string + " loaded!";
+        }
     },
 
     visitURL: function () {
