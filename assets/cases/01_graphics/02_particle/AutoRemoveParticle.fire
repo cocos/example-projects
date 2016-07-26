@@ -10,7 +10,6 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -44,7 +43,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "36cbb0aa-b03d-42b0-92bf-b1c2eeef7e3e"
   },
   {
@@ -99,7 +97,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "be7e8bbFF9ELrOGnbUNJTAE",
     "_active": true,
     "_components": [
@@ -152,7 +149,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "7e496nplHRNSpy/6DMC5ZWT",
     "_active": true,
     "_components": [
@@ -238,8 +234,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -191,
-      "y": -86
+      "x": -190,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -247,7 +243,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "d78afpFyelLmYJB2nVznO5p",
     "_active": true,
     "_components": [
@@ -295,7 +290,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -60
+      "y": -180
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -303,7 +298,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "4300bC4vCNEmIJoB2869wnJ",
     "_active": true,
     "_components": [
@@ -323,6 +317,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
+    "_actualFontSize": 25,
     "_fontSize": 25,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -347,7 +342,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 234,
+    "_bottom": 320,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
@@ -368,52 +363,52 @@
       "__uuid__": "e24fa342-815a-4478-b9db-ed592e7c0293"
     },
     "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
+    "_dstBlendFactor": 1,
     "playOnLoad": true,
     "_autoRemoveOnFinish": false,
-    "_totalParticles": 150,
-    "_duration": 3,
-    "_emissionRate": 18,
-    "_life": 2,
+    "_totalParticles": 200,
+    "_duration": 1,
+    "_emissionRate": 999.9999850988391,
+    "_life": 0.2000000029802322,
     "_lifeVar": 0.5,
     "_startColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 107
+      "r": 202.705078125,
+      "g": 200.9204050898552,
+      "b": 86.0790990293026,
+      "a": 163.19999635219574
     },
     "_startColorVar": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 112
+      "r": 229.49999392032623,
+      "g": 255,
+      "b": 173.40000182390213,
+      "a": 198.89999270439148
     },
     "_endColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 0
+      "r": 173.6108449101448,
+      "g": 161.9067433476448,
+      "b": 19.6728515625,
+      "a": 214.19999331235886
     },
     "_endColorVar": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 0
+      "r": 107.09999665617941,
+      "g": 249.900004863739,
+      "b": 249.900004863739,
+      "a": 188.7000024318695
     },
-    "_angle": 90,
-    "_angleVar": 10,
-    "_startSize": 180,
+    "_angle": 360,
+    "_angleVar": 360,
+    "_startSize": 3.369999885559082,
     "_startSizeVar": 50,
-    "_endSize": 150,
-    "_endSizeVar": 20,
-    "_startSpin": 0,
+    "_endSize": 30.31999969482422,
+    "_endSizeVar": 0,
+    "_startSpin": -47.36999893188477,
     "_startSpinVar": 0,
-    "_endSpin": 0,
-    "_endSpinVar": 0,
+    "_endSpin": -47.36999893188477,
+    "_endSpinVar": -142.1100006103516,
     "_sourcePos": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -421,24 +416,24 @@
     },
     "_posVar": {
       "__type__": "cc.Vec2",
-      "x": 5,
-      "y": 5
+      "x": 7,
+      "y": 7
     },
     "_positionType": 0,
-    "_emitterMode": 0,
+    "_emitterMode": 1,
     "_gravity": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": -120
+      "x": 0.25,
+      "y": 0.8600000143051147
     },
-    "_speed": 150,
-    "_speedVar": 30,
-    "_tangentialAccel": 0,
-    "_tangentialAccelVar": 0,
-    "_radialAccel": 0,
-    "_radialAccelVar": 0,
+    "_speed": 0,
+    "_speedVar": 190.7899932861328,
+    "_tangentialAccel": -92.11000061035156,
+    "_tangentialAccelVar": 65.79000091552734,
+    "_radialAccel": -671.0499877929688,
+    "_radialAccelVar": 65.79000091552734,
     "_rotationIsDir": false,
-    "_startRadius": 0,
+    "_startRadius": 100,
     "_startRadiusVar": 0,
     "_endRadius": 0,
     "_endRadiusVar": 0,
@@ -483,8 +478,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 208,
-      "y": -86
+      "x": 190,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -492,7 +487,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "502f21vIG5IS5BFJpNv4Dqz",
     "_active": true,
     "_components": [
@@ -540,7 +534,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -60
+      "y": -180
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -548,7 +542,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "9b1a0iIhihLyrgNZmGUUYT1",
     "_active": true,
     "_components": [
@@ -568,9 +561,10 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
+    "_actualFontSize": 25,
     "_fontSize": 25,
     "_lineHeight": 40,
-    "_enableWrapText": false,
+    "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_N$string": "Particle 2\n\"Auto Remove On Finish\" enabled",
@@ -592,7 +586,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 234,
+    "_bottom": 320,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
@@ -613,52 +607,52 @@
       "__uuid__": "e24fa342-815a-4478-b9db-ed592e7c0293"
     },
     "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
+    "_dstBlendFactor": 1,
     "playOnLoad": true,
     "_autoRemoveOnFinish": true,
-    "_totalParticles": 150,
-    "_duration": 3,
-    "_emissionRate": 18,
-    "_life": 2,
+    "_totalParticles": 200,
+    "_duration": 1,
+    "_emissionRate": 999.9999850988391,
+    "_life": 0.2000000029802322,
     "_lifeVar": 0.5,
     "_startColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 107
+      "r": 202.705078125,
+      "g": 200.9204050898552,
+      "b": 86.0790990293026,
+      "a": 163.19999635219574
     },
     "_startColorVar": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 112
+      "r": 229.49999392032623,
+      "g": 255,
+      "b": 173.40000182390213,
+      "a": 198.89999270439148
     },
     "_endColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 0
+      "r": 173.6108449101448,
+      "g": 161.9067433476448,
+      "b": 19.6728515625,
+      "a": 214.19999331235886
     },
     "_endColorVar": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 0
+      "r": 107.09999665617941,
+      "g": 249.900004863739,
+      "b": 249.900004863739,
+      "a": 188.7000024318695
     },
-    "_angle": 90,
-    "_angleVar": 10,
-    "_startSize": 180,
+    "_angle": 360,
+    "_angleVar": 360,
+    "_startSize": 3.369999885559082,
     "_startSizeVar": 50,
-    "_endSize": 150,
-    "_endSizeVar": 20,
-    "_startSpin": 0,
+    "_endSize": 30.31999969482422,
+    "_endSizeVar": 0,
+    "_startSpin": -47.36999893188477,
     "_startSpinVar": 0,
-    "_endSpin": 0,
-    "_endSpinVar": 0,
+    "_endSpin": -47.36999893188477,
+    "_endSpinVar": -142.1100006103516,
     "_sourcePos": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -666,24 +660,24 @@
     },
     "_posVar": {
       "__type__": "cc.Vec2",
-      "x": 5,
-      "y": 5
+      "x": 7,
+      "y": 7
     },
     "_positionType": 0,
-    "_emitterMode": 0,
+    "_emitterMode": 1,
     "_gravity": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": -120
+      "x": 0.25,
+      "y": 0.8600000143051147
     },
-    "_speed": 150,
-    "_speedVar": 30,
-    "_tangentialAccel": 0,
-    "_tangentialAccelVar": 0,
-    "_radialAccel": 0,
-    "_radialAccelVar": 0,
+    "_speed": 0,
+    "_speedVar": 190.7899932861328,
+    "_tangentialAccel": -92.11000061035156,
+    "_tangentialAccelVar": 65.79000091552734,
+    "_radialAccel": -671.0499877929688,
+    "_radialAccelVar": 65.79000091552734,
     "_rotationIsDir": false,
-    "_startRadius": 0,
+    "_startRadius": 100,
     "_startRadiusVar": 0,
     "_endRadius": 0,
     "_endRadiusVar": 0,
@@ -694,7 +688,7 @@
   {
     "__type__": "cc.Canvas",
     "_name": "",
-    "_objFlags": 3932160,
+    "_objFlags": 0,
     "node": {
       "__id__": 2
     },
@@ -749,7 +743,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "718cckOgS5NlKLyR2Qtikqp",
     "_active": true,
     "_components": [
