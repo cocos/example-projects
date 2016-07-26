@@ -44,6 +44,9 @@ cc.Class({
                 else {
                     text = assets[i].url || assets[i]._name || assets[i];
                 }
+                if (typeof text !== 'string' ) {
+                    continue;
+                }
                 self._createLabel(text);
             }
             self.btnClearAll.active = true;
