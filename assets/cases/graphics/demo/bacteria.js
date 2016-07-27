@@ -112,6 +112,10 @@ cc.Class({
             cc.director.setClearColor( cc.Color.WHITE );
         }
         
+        if (!_ccsg.GraphicsNode) {
+            return;
+        }
+
         this.stencil = new _ccsg.GraphicsNode();
         this.mask._refreshStencil = function () {};
         this.mask.enabled = true;
@@ -331,6 +335,10 @@ cc.Class({
     },
 
     update: function (dt) {
+        if (!_ccsg.GraphicsNode) {
+            return;
+        }
+
         let g = this.bacteriaGraphics;
         let s = this.stencil;
         let pg = this.particleGraphics;
