@@ -101,10 +101,10 @@ cc.Class({
                 // move to up or down
                 if (movedY > 0) {
                     newTile.y -= 1;
-                    mapMoveDir = MoveDirection.UP;
+                    mapMoveDir = MoveDirection.DOWN;
                 } else {
                     newTile.y += 1;
-                    mapMoveDir = MoveDirection.DOWN;
+                    mapMoveDir = MoveDirection.UP;
                 }
             }
             this._tryMoveToNewTile(newTile, mapMoveDir);
