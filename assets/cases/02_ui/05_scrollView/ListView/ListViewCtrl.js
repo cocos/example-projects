@@ -72,7 +72,6 @@ cc.Class({
                 if (viewPos.y > buffer && items[i].y - offset > -this.content.height) {
                     items[i].setPositionY(items[i].y - offset );
                     let item = items[i].getComponent('Item');
-                    console.log('itemID: ' + item.itemID);
                     let itemId = item.itemID + items.length;
                     item.updateItem(i, itemId);
                 }

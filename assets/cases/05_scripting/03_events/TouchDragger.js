@@ -12,6 +12,7 @@ var TouchDragger = cc.Class({
     onLoad: function () {
         this.node.opacity = 160;
         this.node.on(cc.Node.EventType.TOUCH_START, function () {
+            cc.log('Drag stated ...');
             this.opacity = 255;
         }, this.node);
         this.node.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
