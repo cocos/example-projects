@@ -110,22 +110,23 @@ cc.Class({
         let items = this.itemList;
         let buffer = this.bufferZone;
         let isDown = this.node.y < this.lastContentPosY; // scrolling direction
-        let offset = 50 * (this.initItemCount - 1);
-        for (let i = 0; i < this.initItemCount; ++i) {
+        let curItemCount = this.itemList.length;
+        let offset = 50 * curItemCount;
+        for (let i = 0; i < curItemCount; ++i) {
             let item = items[i];
             let itemNode = item.node;
             let viewPos = this.getPositionInView(itemNode);
             if (isDown) {
                 // if away from buffer zone and not reaching top of content
                 if (viewPos.y < -buffer && itemNode.y + offset < 0) {
-                    let newIdx = item.index - (this.initItemCount - 1);
+                    let newIdx = item.index - curItemCount;
                     let newInfo = this.sceneList[newIdx];
                     item.updateItem(newIdx, itemNode.y + offset, newInfo.name, newInfo.url );
                 }
             } else {
                 // if away from buffer zone and not reaching bottom of content
                 if (viewPos.y > buffer && itemNode.y - offset > -this.node.height) {
-                    let newIdx = item.index + (this.initItemCount - 1);
+                    let newIdx = item.index + curItemCount;
                     let newInfo = this.sceneList[newIdx];
                     item.updateItem(newIdx, itemNode.y - offset, newInfo.name, newInfo.url);
                 }
