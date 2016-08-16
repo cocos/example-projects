@@ -15,7 +15,7 @@ cc.Class({
         g.lineWidth = 5;
         g.fillColor = cc.hexToColor('#ff0000');
         
-        g.arc(0, 0, 100, Math.PI/2, Math.PI, true);
+        g.arc(0, 0, 100, Math.PI/2, Math.PI, false);
         g.lineTo(0, 0);
         g.close();
 
@@ -24,7 +24,7 @@ cc.Class({
 
         g.fillColor = cc.hexToColor('#00ff00');
 
-        g.arc(-10, 10, 100, Math.PI/2, Math.PI, false);
+        g.arc(-10, 10, 100, Math.PI/2, Math.PI, true);
         g.lineTo(-10, 10);
         g.close();
 
