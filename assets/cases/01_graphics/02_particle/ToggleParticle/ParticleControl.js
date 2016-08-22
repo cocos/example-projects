@@ -2,22 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        canvas: cc.Node,
-        particle: cc.Node
-    },
-
-    // use this for initialization
-    onLoad: function () {
-        var self = this;
-        // use space to toggle particle
-        cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD, 
-            onKeyPressed: function(keyCode, event) {
-                if (keyCode === cc.KEY.space) {
-                    self.toggleParticlePlay();
-                }
-            }
-        }, self.node);
+        particle: cc.Node,
     },
 
     toggleParticlePlay: function() {

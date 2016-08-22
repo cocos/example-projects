@@ -13,7 +13,7 @@ module.exports = {
   "cases/01_graphics/01_sprite/TrimmedSprite.fire.12": "未自动剪裁",
   "cases/01_graphics/02_particle/AutoRemoveParticle.fire.9": "粒子 1\n\"完成时自动移除\" 禁止",
   "cases/01_graphics/02_particle/AutoRemoveParticle.fire.13": "粒子 2\n\"完成时自动移除\" 开启",
-  "cases/01_graphics/02_particle/ToggleParticle.fire.6": "按 \"空格键\" 开关粒子播放",
+  "cases/01_graphics/02_particle/ToggleParticle.fire.6": "按 \"按钮\" 进行开关粒子播放",
   "cases/02_ui/01_widget/AdvancedWidget.fire.7": "左上",
   "cases/02_ui/01_widget/AdvancedWidget.fire.9": "top: 10% left: 6%",
   "cases/02_ui/01_widget/AdvancedWidget.fire.14": "上",
