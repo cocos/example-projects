@@ -13,7 +13,7 @@ module.exports = {
   "cases/01_graphics/01_sprite/TrimmedSprite.fire.12": "No TRIMMED",
   "cases/01_graphics/02_particle/AutoRemoveParticle.fire.9": "Particle 1\n\"Auto Remove On Finish\" disabled",
   "cases/01_graphics/02_particle/AutoRemoveParticle.fire.13": "Particle 2\n\"Auto Remove On Finish\" enabled",
-  "cases/01_graphics/02_particle/ToggleParticle.fire.6": "Press \"Space\" to toggle particle play",
+  "cases/01_graphics/02_particle/ToggleParticle.fire.6": "Press \"Button\" to toggle particle play",
   "cases/02_ui/01_widget/AdvancedWidget.fire.7": "Top Left",
   "cases/02_ui/01_widget/AdvancedWidget.fire.9": "top: 10% left: 6%",
   "cases/02_ui/01_widget/AdvancedWidget.fire.14": "Top Left",
