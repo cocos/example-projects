@@ -18,10 +18,31 @@ cc.Class({
     },
 
     properties: {
-        canvas : {
+        touchHandler : {
             default: null,
             type: cc.Node
         },
+
+        upButton: {
+            default: null,
+            type: cc.Node
+        },
+
+        downButton: {
+            default: null,
+            type: cc.Node
+        },
+
+        leftButton: {
+            default: null,
+            type: cc.Node
+        },
+
+        rightButton: {
+            default: null,
+            type: cc.Node
+        },
+
         _bullets : [],
         _left : false,
         _right : false,
@@ -70,18 +91,57 @@ cc.Class({
         this._updateAnimation();
         dragonBones.WorldClock.clock.add(this._armature);
 
-        // touch events
-        this.canvas.on(cc.Node.EventType.TOUCH_START, event => {
-            this.attack(true);
-        }, this);
-        this.canvas.on(cc.Node.EventType.TOUCH_END, event => {
-            this.attack(false);
-        }, this);
-        this.canvas.on(cc.Node.EventType.TOUCH_MOVE, event => {
-            var touches = event.getTouches();
-            var touchLoc = touches[0].getLocation();
-            this.aim(touchLoc.x, touchLoc.y);
-        }, this);
+        if (this.touchHandler) {
+            // touch events
+            this.touchHandler.on(cc.Node.EventType.TOUCH_START, event => {
+                this.attack(true);
+            }, this);
+            this.touchHandler.on(cc.Node.EventType.TOUCH_END, event => {
+                this.attack(false);
+            }, this);
+            this.touchHandler.on(cc.Node.EventType.TOUCH_MOVE, event => {
+                var touches = event.getTouches();
+                var touchLoc = touches[0].getLocation();
+                this.aim(touchLoc.x, touchLoc.y);
+            }, this);
+        }
+
+        if (this.upButton) {
+            this.upButton.on(cc.Node.EventType.TOUCH_START, event => {
+                this.jump();
+            }, this);
+        }
+
+        if (this.downButton) {
+            this.downButton.on(cc.Node.EventType.TOUCH_START, event => {
+                this.squat(true);
+            }, this);
+            this.downButton.on(cc.Node.EventType.TOUCH_END, event => {
+                this.squat(false);
+            }, this);
+        }
+
+        if (this.leftButton) {
+            this.leftButton.on(cc.Node.EventType.TOUCH_START, event => {
+                this._left = true;
+                this._updateMove(-1);
+            }, this);
+            this.leftButton.on(cc.Node.EventType.TOUCH_END, event => {
+                this._left = false;
+                this._updateMove(-1);
+            }, this);
+        }
+
+        if (this.rightButton) {
+            this.rightButton.on(cc.Node.EventType.TOUCH_START, event => {
+                this._right = true;
+                this._updateMove(1);
+            }, this);
+            this.rightButton.on(cc.Node.EventType.TOUCH_END, event => {
+                this._right = false;
+                this._updateMove(1);
+            }, this);
+        }
 
         // keyboard events
         cc.eventManager.addListener({
