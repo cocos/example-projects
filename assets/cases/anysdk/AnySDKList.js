@@ -67,14 +67,14 @@ cc.Class({
                 if (viewPos.y < -buffer && itemNode.y + offset < 0) {
                     let newIdx = item.index - (this.initItemCount - 1);
                     let newInfo = this.interfaceList[newIdx];
-                    item.updateItem(newIdx, itemNode.y + offset, newInfo.name, newInfo.url );
+                    item.updateItem(newIdx, itemNode.y + offset, newInfo);
                 }
             } else {
                 // if away from buffer zone and not reaching bottom of content
                 if (viewPos.y > buffer && itemNode.y - offset > -this.node.height) {
                     let newIdx = item.index + (this.initItemCount - 1);
                     let newInfo = this.interfaceList[newIdx];
-                    item.updateItem(newIdx, itemNode.y - offset, newInfo.name, newInfo.url);
+                    item.updateItem(newIdx, itemNode.y - offset, newInfo);
                 }
             }
         }

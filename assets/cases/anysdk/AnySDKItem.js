@@ -19,12 +19,11 @@ cc.Class({
         this.menu.invoke(this.index)
     },
 
-    updateItem (idx, y, name, url) {
+    updateItem (idx, y, name) {
         this.index = idx;
         this.node.y = y;
         this.node.x = 100;
         this.label.string = name;
-        this.url = url;
         this.bg.enabled = true;
         this.btn.interactable = true;
     }
