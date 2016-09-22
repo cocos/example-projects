@@ -66,10 +66,7 @@ cc.Class({
         _aimState : null,
         _walkState : null,
         _attackState : null,
-        _target : {
-            default: cc.p(0, 0),
-            type: cc.Vec2
-        }
+        _target : cc.p(0, 0),
     },
 
     // use this for initialization
@@ -152,13 +149,6 @@ cc.Class({
             onKeyReleased: (keyCode, event) => {
                 this._keyHandler(keyCode, false);
             },
-        }, this.node);
-
-        cc.eventManager.addListener({
-            event: cc.EventListener.MOUSE,
-            onMouseDown : this._onMouseDown,
-            onMouseUp : this._onMouseUp,
-            onMouseMove : this._onMouseMove
         }, this.node);
     },
 
@@ -326,10 +316,10 @@ cc.Class({
 
     _frameEventHandler : function (event) {
         if (event.detail.name === "onFire") {
-            const firePointBone = event.detail.armature.getBone("firePoint");
+            var firePointBone = event.detail.armature.getBone("firePoint");
             var localPoint = cc.p(firePointBone.global.x, firePointBone.global.y);
 
-            const display = event.detail.armature.display;
+            var display = event.detail.armature.display;
             var globalPoint = display.convertToWorldSpace(localPoint);
 
             this._fire(globalPoint);
@@ -342,7 +332,7 @@ cc.Class({
 
         var armature = this._armatureDisplay.buildArmature("bullet_01");
         var effect = this._armatureDisplay.buildArmature("fireEffect_01");
-        const radian = this._faceDir < 0 ? Math.PI - this._aimRadian : this._aimRadian;
+        var radian = this._faceDir < 0 ? Math.PI - this._aimRadian : this._aimRadian;
         var bullet = new DragonBullet();
         bullet.init(this.node.parent._sgNode, armature, effect, radian + Math.random() * 0.02 - 0.01, 40, firePoint);
         this.addBullet(bullet);
@@ -430,7 +420,7 @@ cc.Class({
             }
         }
 
-        const aimOffsetY = this._armature.getBone("chest").global.y * this.node.scaleY;
+        var aimOffsetY = this._armature.getBone("chest").global.y * this.node.scaleY;
 
         if (this._faceDir > 0) {
             this._aimRadian = Math.atan2(-(this._target.y - this.node.y + aimOffsetY), this._target.x - this.node.x);
@@ -455,12 +445,12 @@ cc.Class({
             if (this._aimDir >= 0) {
                 this._aimState = this._armature.animation.fadeIn(
                     "aimUp", 0, 1,
-                    0, AIM_ANIMATION_GROUP, 2 //dragonBones.AnimationFadeOutMode.SameGroup
+                    0, AIM_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
                 );
             } else {
                 this._aimState = this._armature.animation.fadeIn(
                     "aimDown", 0, 1,
-                    0, AIM_ANIMATION_GROUP, 2 //dragonBones.AnimationFadeOutMode.SameGroup
+                    0, AIM_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
                 );
             }
 
@@ -484,7 +474,7 @@ cc.Class({
         // Animation mixing.
         this._attackState = this._armature.animation.fadeIn(
             "attack_01", -1, -1,
-            0, ATTACK_ANIMATION_GROUP, 2 //dragonBones.AnimationFadeOutMode.SameGroup
+            0, ATTACK_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
         );
 
         this._attackState.autoFadeOutTime = this._attackState.fadeTotalTime;
@@ -515,7 +505,7 @@ var DragonBullet = cc.Class({
 
         if (effect) {
             this._effect = effect;
-            const effectDisplay = this._effect.display;
+            var effectDisplay = this._effect.display;
             effectDisplay.rotation = radian * dragonBones.DragonBones.RADIAN_TO_ANGLE;
             effectDisplay.setPosition(thePos);
             effectDisplay.scaleX = 1 + Math.random() * 1;
