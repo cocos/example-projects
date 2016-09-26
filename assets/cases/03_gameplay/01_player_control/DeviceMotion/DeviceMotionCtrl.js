@@ -13,7 +13,11 @@ cc.Class({
         this._rangeX = screenSize.width / 2 - this.target.width / 2;
         this._rangeY = screenSize.height / 2 - this.target.height / 2;
         cc.inputManager.setAccelerometerEnabled(true);
-        cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent.bind(this), this.node);
+        cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
+    },
+
+    destroy () {
+        cc.systemEvent.off(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
     },
 
     onDeviceMotionEvent (event) {

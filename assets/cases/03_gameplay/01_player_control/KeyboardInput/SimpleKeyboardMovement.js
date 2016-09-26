@@ -14,7 +14,11 @@ cc.Class({
         this.turnRight();
 
         //add keyboard input listener to call turnLeft and turnRight
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown.bind(this), this.nodes);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+    },
+
+    destroy () {
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },
 
     onKeyDown (event) {
