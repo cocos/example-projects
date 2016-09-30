@@ -3,10 +3,17 @@ cc.Class({
 
     properties: {
         speed: 200,
-        target: cc.Node
+        target: cc.Node,
+        tips: cc.Node
     },
 
     onLoad () {
+        if (!(cc.sys.isMobile) || cc.runtime) {
+            this.target.active = false;
+            return;
+        }
+        this.tips.active = false;
+
         this._time = 0;
         this._acc = { x: 0, y: 0 };
         var screenSize = cc.view.getVisibleSize();
@@ -26,8 +33,11 @@ cc.Class({
     },
 
     update (dt) {
-        this._time+=5;
         var target = this.target;
+        if (!target.active) {
+            return;
+        }
+        this._time += 5;
         target.x += this._acc.x * dt * (this.speed + this._time);
         this.target.x = cc.clampf(target.x, -this._rangeX, this._rangeX);
         target.y += this._acc.y * dt * (this.speed + this._time);
