@@ -1,15 +1,18 @@
 
-const NORMAL_ANIMATION_GROUP = "normal";
-const AIM_ANIMATION_GROUP = "aim";
-const ATTACK_ANIMATION_GROUP = "attack";
-const JUMP_SPEED = -20;
-const NORMALIZE_MOVE_SPEED = 3.6;
-const MAX_MOVE_SPEED_FRONT = NORMALIZE_MOVE_SPEED * 1.4;
-const MAX_MOVE_SPEED_BACK = NORMALIZE_MOVE_SPEED * 1.0;
-const WEAPON_R_LIST = [ "weapon_1502b_r", "weapon_1005", "weapon_1005b", "weapon_1005c", "weapon_1005d", "weapon_1005e" ];
-const WEAPON_L_LIST = [ "weapon_1502b_l", "weapon_1005", "weapon_1005b", "weapon_1005c", "weapon_1005d" ];
-const GROUND = -200;
-const G = -0.6;
+if (!cc.runtime) {
+// runtime not support dragonbones.
+
+var NORMAL_ANIMATION_GROUP = "normal";
+var AIM_ANIMATION_GROUP = "aim";
+var ATTACK_ANIMATION_GROUP = "attack";
+var JUMP_SPEED = -20;
+var NORMALIZE_MOVE_SPEED = 3.6;
+var MAX_MOVE_SPEED_FRONT = NORMALIZE_MOVE_SPEED * 1.4;
+var MAX_MOVE_SPEED_BACK = NORMALIZE_MOVE_SPEED * 1.0;
+var WEAPON_R_LIST = ["weapon_1502b_r", "weapon_1005", "weapon_1005b", "weapon_1005c", "weapon_1005d", "weapon_1005e"];
+var WEAPON_L_LIST = ["weapon_1502b_l", "weapon_1005", "weapon_1005b", "weapon_1005c", "weapon_1005d"];
+var GROUND = -200;
+var G = -0.6;
 
 cc.Class({
     extends: cc.Component,
@@ -549,3 +552,4 @@ var DragonBullet = cc.Class({
         return false;
     }
 });
+} // end of !cc.runtime
