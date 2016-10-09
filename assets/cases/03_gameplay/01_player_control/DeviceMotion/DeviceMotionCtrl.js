@@ -28,6 +28,9 @@ cc.Class({
     },
 
     onDeviceMotionEvent (event) {
+        if (!this._acc) {
+            return;
+        }
         this._acc.x =  event.acc.x;
         this._acc.y =  event.acc.y;
     },
