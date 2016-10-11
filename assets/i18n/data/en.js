@@ -122,7 +122,7 @@ module.exports = {
   "cases/03_gameplay/01_player_control/EventManager/KeyboardInput.fire.6": "Press 'A' or 'D' to control sheep",
   "cases/03_gameplay/01_player_control/On/OnTouchCtrl.js.1": "touch (",
   "cases/03_gameplay/01_player_control/On/OnTouchInput.fire.10": "Try touching anywhere.",
-  "cases/03_gameplay/01_player_control/On/OnMultiTouchInput.fire.20": "The sample can only be effective on mobile platforms!£¡",
+  "cases/03_gameplay/01_player_control/On/OnMultiTouchInput.fire.20": "The sample can only be effective on mobile platforms!ï¿½ï¿½",
   "cases/03_gameplay/01_player_control/On/OnMultiTouchInput.fire.21": "Use your fingers to zoom image!",
   "cases/03_gameplay/02_actions/SimpleAction.fire.13": "This is Simple Action.",
   "cases/03_gameplay/03_animation/AnimateCustomProperty.fire.14": "Label",
@@ -231,7 +231,7 @@ module.exports = {
   "cases/collider/Shape.fire.43": "Show Polygon",
   "cases/collider/Shape.fire.50": "Show Circle",
   "cases/collider/Shape.fire.57": "Show Box",
-  "cases/motionStreak/MotionStreak.fire.1": "Only works in the WebGL!£¡",
+  "cases/motionStreak/MotionStreak.fire.1": "Only works in the WebGL!ï¿½ï¿½",
   "cases/motionStreak/MotionStreak.fire.2": "Change MotionStreak",
   "cases/spine/SpineBoy.fire.11": "Debug Slots",
   "cases/spine/SpineBoy.fire.18": "Debug Bones",
@@ -253,5 +253,7 @@ module.exports = {
   "resources/test assets/prefab.prefab.2": "This is Prefab",
   "resources/test assets/scene.fire.3": "Return Asset Loading Scene",
   "resources/test assets/scene.fire.6": "Return",
-  "scripts/Global/Menu.js.1": "Temporary lack of introduction"
+  "scripts/Global/Menu.js.1": "Temporary lack of introduction",
+  "cases/anysdk/1": "Only works in the Android or iOS or Web-Mobile platforms",
+  "cases/anysdk/2": "Only works in the Android or iOS platforms",
 }

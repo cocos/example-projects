@@ -7,7 +7,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if(cc.sys.isMobile){
+        if(cc.sys.isMobile && anysdk.agentManager.getRECPlugin){
             this.recPlugin = anysdk.agentManager.getRECPlugin();
             if(this.recPlugin){
                 this.recPlugin.setListener(this.onRECResult, this);
