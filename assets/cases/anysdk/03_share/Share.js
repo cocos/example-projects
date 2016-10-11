@@ -7,7 +7,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if(cc.sys.isMobile){
+        if(cc.sys.isMobile && anysdk.agentManager.getSharePlugin){
             this.sharePlugin = anysdk.agentManager.getSharePlugin();
             if(this.sharePlugin){
                 this.sharePlugin.setListener(this.onShareResult, this);

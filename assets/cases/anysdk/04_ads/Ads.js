@@ -7,7 +7,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if(cc.sys.isMobile){
+        if(cc.sys.isMobile && anysdk.agentManager.getAdsPlugin){
             this.adsPlugin = anysdk.agentManager.getAdsPlugin();
             if(this.adsPlugin){
                 this.adsPlugin.setListener(this.onAdsResult, this);
