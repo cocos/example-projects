@@ -40,7 +40,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "c68f7bb0-8770-47b5-a907-fcbf4a607618",
+    "_id": "6e2b0e06-d944-4238-a92d-3b23c8eccd8f",
     "autoReleaseAssets": false
   },
   {
@@ -221,7 +221,8 @@
     "asset": {
       "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
     },
-    "fileId": "78fd70+ls5GgJcFkzvLSRk8"
+    "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+    "sync": false
   },
   {
     "__type__": "cc.Node",
@@ -246,7 +247,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 604.55,
+      "width": 857.23,
       "height": 40
     },
     "_children": [],
@@ -265,7 +266,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "18245JnvTdBaLteoECrze+6",
+    "_id": "461087RmGlI04wCDjLHeXjC",
     "_active": true,
     "_components": [
       {
@@ -294,11 +295,11 @@
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
     "_N$overflow": 0,
-    "_N$textKey": "cases/anysdk/2"
+    "_N$textKey": "cases/anysdk/1"
   },
   {
     "__type__": "cc.Node",
-    "_name": "pushList",
+    "_name": "initList",
     "_objFlags": 0,
     "_opacity": 0,
     "_color": {
@@ -482,14 +483,9 @@
     },
     "bufferZone": 300,
     "interfaceList": [
-      "startPush",
-      "closePush",
-      "setAlias",
-      "delAlias",
-      "setTags",
-      "delTags"
+      "init"
     ],
-    "scriptName": "Push"
+    "scriptName": "Init"
   },
   {
     "__type__": "cc.ScrollView",
@@ -551,13 +547,17 @@
     "_atlas": null
   },
   {
-    "__type__": "48510+xGvVMBapIXNyrCMz/",
+    "__type__": "b0cebPnNF5K3aDcHXVfpjNg",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 9
     },
-    "_enabled": true
+    "_enabled": true,
+    "oauthLoginServer": "http://sandbox-s1.chinacloudapp.cn:3000/Login",
+    "appKey": "69A16BA4-6AE6-E8E8-0078-80E6C2182195",
+    "appSecret": "bd2f2cbf1fcafd81459e97732ffc4a41",
+    "privateKey": "E79D311B958876683851CD117D3B44B8"
   },
   {
     "__type__": "cc.Canvas",

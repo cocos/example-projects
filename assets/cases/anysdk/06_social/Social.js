@@ -7,7 +7,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if(cc.sys.isMobile){
+        if(cc.sys.isMobile && anysdk.agentManager.getSocialPlugin){
             this.socialPlugin = anysdk.agentManager.getSocialPlugin();
             if(this.socialPlugin){
                 this.socialPlugin.setListener(this.onSocialResult, this);

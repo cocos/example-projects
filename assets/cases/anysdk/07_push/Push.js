@@ -7,7 +7,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if(cc.sys.isMobile){
+        if(cc.sys.isMobile && anysdk.agentManager.getPushPlugin){
             this.pushPlugin = anysdk.agentManager.getPushPlugin();
             if(this.pushPlugin){
                 this.pushPlugin.setListener(this.onPushResult, this);
