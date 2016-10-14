@@ -15,7 +15,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        cc.audioEngine.setMaxWebAudioSize(1024*100);
+        // cc.audioEngine.setMaxWebAudioSize(1024*10);
     },
     
     update: function () {
