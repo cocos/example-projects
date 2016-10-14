@@ -15,7 +15,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        // cc.audioEngine.setMaxWebAudioSize(1024*10);
+        cc.audioEngine.setMaxWebAudioSize(1024*100);
     },
     
     update: function () {
@@ -28,7 +28,6 @@ cc.Class({
     
     play: function () {
         this.audioSource.play();
-        this.audioSource.setCurrentTime(70);
     },
     
     pause: function () {

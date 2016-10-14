@@ -16,6 +16,13 @@ cc.Class({
     onLoad: function () {
         this.maxNum = cc.audioEngine.getMaxAudioInstance();
         this.audioPool = [];
+        
+        // check deprecated
+        ['playMusic', 'playEffect'].forEach(function (name) {
+            if (!cc.audioEngine[name]) {
+                cc.warn('.' + name + ' is not found!');
+            }
+        });
     },
 
     update: function () {
@@ -34,7 +41,6 @@ cc.Class({
     play: function () {
         if (!this.audio) return;
         var id = cc.audioEngine.play(this.audio, false, 1);
-        cc.audioEngine.setCurrentTime(id, 70);
         this.audioPool.push(id);
     },
     
