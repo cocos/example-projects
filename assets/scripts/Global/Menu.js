@@ -38,6 +38,7 @@ cc.Class({
         this.contentPos = null;
         this.isMenu = true;
         this.loadInstruction(this.currentSceneUrl);
+        this.node.zIndex = 999;
     },
     
     onEnable: function () {
