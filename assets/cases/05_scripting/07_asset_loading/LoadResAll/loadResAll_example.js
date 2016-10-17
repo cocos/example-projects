@@ -8,6 +8,7 @@ cc.Class({
     },
 
     onLoad: function () {
+        this._hasLoading = false;
         this.scrollView.content.height = 0;
         this.btnClearAll.active = false;
     },
@@ -32,9 +33,13 @@ cc.Class({
 
     onLoadAll: function () {
         var self = this;
-        this._clear();
+        if (self._hasLoading) {
+            return;
+        }
+        self._clear();
         self._createLabel("Load All Assets");
         self.scrollView.scrollToTop();
+        self._hasLoading = true;
         cc.loader.loadResAll("test assets", function (err, assets) {
             var text = "";
             for (var i = 0; i < assets.length; ++i) {
@@ -51,6 +56,7 @@ cc.Class({
             }
             self.btnClearAll.active = true;
             self.scrollView.content.height = assets.length * 60;
+            self._hasLoading = false;
         });
     },
 
