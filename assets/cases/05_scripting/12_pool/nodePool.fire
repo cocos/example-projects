@@ -10,7 +10,6 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -41,7 +40,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "50eaf4cc-fa0d-431c-beb3-ca75b9943584"
   },
   {
@@ -90,15 +88,14 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "56480cK1ldGG6VDnEA48XBZ",
     "_active": true,
     "_components": [
       {
-        "__id__": 6
+        "__id__": 7
       },
       {
-        "__id__": 7
+        "__id__": 8
       }
     ],
     "_prefab": null,
@@ -127,7 +124,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1500,
+      "width": 960,
       "height": 640
     },
     "_children": [],
@@ -146,16 +143,18 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "7b662rp3AdLFZegu564zCCQ",
     "_active": true,
     "_components": [
       {
         "__id__": 4
+      },
+      {
+        "__id__": 5
       }
     ],
     "_prefab": {
-      "__id__": 5
+      "__id__": 6
     },
     "groupIndex": 0
   },
@@ -186,6 +185,31 @@
     "_atlas": null
   },
   {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "isAlignOnce": false,
+    "_alignFlags": 45,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 960,
+    "_originalHeight": 640
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 3
@@ -193,12 +217,13 @@
     "asset": {
       "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
     },
-    "fileId": "78fd70+ls5GgJcFkzvLSRk8"
+    "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+    "sync": false
   },
   {
     "__type__": "cc.Canvas",
     "_name": "",
-    "_objFlags": 3670016,
+    "_objFlags": 0,
     "node": {
       "__id__": 2
     },

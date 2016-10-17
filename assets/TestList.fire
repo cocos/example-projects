@@ -43,7 +43,8 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "d13475c7-b37e-45d6-b6c5-25929e8a0925"
+    "_id": "d13475c7-b37e-45d6-b6c5-25929e8a0925",
+    "autoReleaseAssets": false
   },
   {
     "__type__": "cc.Node",
@@ -195,16 +196,20 @@
       "__id__": 3
     },
     "_enabled": true,
-    "isAlignOnce": true,
+    "isAlignOnce": false,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 960,
     "_originalHeight": 640
   },
@@ -216,7 +221,8 @@
     "asset": {
       "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
     },
-    "fileId": "78fd70+ls5GgJcFkzvLSRk8"
+    "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+    "sync": false
   },
   {
     "__type__": "cc.Node",
@@ -420,6 +426,7 @@
     "elastic": true,
     "bounceDuration": 0.23,
     "scrollEvents": [],
+    "cancelInnerEvents": true,
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": null
   },
@@ -779,10 +786,14 @@
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 20,
     "_originalHeight": 20
   },
@@ -934,10 +945,14 @@
     "_right": 10,
     "_top": 0,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 177.6,
     "_originalHeight": 0
   },
@@ -966,10 +981,14 @@
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 240,
     "_originalHeight": 250
   },
@@ -991,6 +1010,7 @@
     "elastic": true,
     "bounceDuration": 0.23,
     "scrollEvents": [],
+    "cancelInnerEvents": true,
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": null
   },
@@ -1008,10 +1028,14 @@
     "_right": 0.25,
     "_top": 0.1,
     "_bottom": 0.2,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": false,
     "_isAbsRight": false,
     "_isAbsTop": false,
     "_isAbsBottom": false,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 500,
     "_originalHeight": 250
   },
@@ -1190,10 +1214,14 @@
     "_right": 10,
     "_top": 10,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 0,
     "_originalHeight": 0
   },
@@ -1221,6 +1249,7 @@
       "a": 255
     },
     "duration": 0.1,
+    "zoomScale": 1.2,
     "pressedSprite": null,
     "hoverSprite": null,
     "clickEvents": [
@@ -1229,6 +1258,7 @@
       }
     ],
     "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1432,10 +1462,14 @@
     "_right": 10.000000000000018,
     "_top": 10,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 0,
     "_originalHeight": 0
   },
@@ -1463,6 +1497,7 @@
       "a": 255
     },
     "duration": 0.1,
+    "zoomScale": 1.2,
     "pressedSprite": null,
     "hoverSprite": null,
     "clickEvents": [
@@ -1471,6 +1506,7 @@
       }
     ],
     "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1513,10 +1549,14 @@
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 0,
     "_originalHeight": 0
   },

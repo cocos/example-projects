@@ -7,7 +7,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if(cc.sys.isMobile){
+        if(cc.sys.isMobile && anysdk.agentManager.getIAPPlugin){
             this.iapPlugin = anysdk.agentManager.getIAPPlugin();
             if(this.iapPlugin){
                 this.iapPlugin.setListener(this.onIAPResult, this);

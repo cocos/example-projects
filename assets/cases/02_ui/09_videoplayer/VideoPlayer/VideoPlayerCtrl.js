@@ -9,13 +9,17 @@ cc.Class({
         statusLabel: {
             default: null,
             type: cc.Label
+        },
+        currentTime: {
+            default: null,
+            type: cc.Label
+        },
+        totalTime: {
+            default: null,
+            type: cc.Label
         }
     },
 
-    // use this for initialization
-    onLoad: function () {
-
-    },
 
     play: function() {
         this.videoPlayer.play();
@@ -39,6 +43,15 @@ cc.Class({
 
     onVideoPlayerEvent: function(sender, event) {
         this.statusLabel.string = event;
+        if (event === cc.VideoPlayer.EventType.META_LOADED) {
+            this.totalTime.string = this.videoPlayer.getDuration().toFixed(2);
+        } else if (event === cc.VideoPlayer.EventType.CLICKED) {
+            if(this.videoPlayer.isPlaying()) {
+                this.videoPlayer.pause();
+            } else {
+                this.videoPlayer.play();
+            }
+        }
     },
 
     toggleVisibility: function() {
@@ -49,6 +62,10 @@ cc.Class({
         this.videoPlayer.resourceType = 0;
         this.videoPlayer.url = "http://benchmark.cocos2d-x.org/cocosvideo.mp4";
         this.videoPlayer.play();
+    },
+
+    update: function () {
+        this.currentTime.string = parseFloat(this.videoPlayer.currentTime.toFixed(2));
     }
 
 });
