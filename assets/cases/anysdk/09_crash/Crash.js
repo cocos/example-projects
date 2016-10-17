@@ -7,7 +7,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if(cc.sys.isMobile){
+        if(cc.sys.isMobile && anysdk.agentManager.getCrashPlugin){
             this.crashPlugin = anysdk.agentManager.getCrashPlugin();
         }
     },
