@@ -15,7 +15,7 @@ cc.Class({
     onLoad () {
         var canvas = this.node.parent.parent.parent;
         var isSupported = canvas.getChildByName('Tips').getComponent('LabelLocalized').textKey.indexOf('1') == -1;
-        if (!cc.sys.isMobile || isSupported) { return; }
+        if (!cc.sys.isMobile || (cc.sys.isBrowser && isSupported)) { return; }
         this.node.parent.parent.opacity = 255;
         this.initItemCount = this.interfaceList.length;
         this.itemList = [];
