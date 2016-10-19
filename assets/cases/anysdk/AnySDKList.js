@@ -13,9 +13,11 @@ cc.Class({
     },
 
     onLoad () {
-        var canvas = this.node.parent.parent.parent;
-        var isSupported = canvas.getChildByName('Tips').getComponent('LabelLocalized').textKey.indexOf('1') == -1;
-        if (!cc.sys.isMobile || (cc.sys.isBrowser && isSupported)) { return; }
+        var tips = this.node.parent.parent.parent.getChildByName('Tips');
+        var isSupported = tips.getComponent('LabelLocalized').textKey.indexOf('1') == -1;
+        if (!cc.sys.isMobile) return;
+        if (cc.sys.isBrowser && isSupported) return;
+        tips.opacity = 0;
         this.node.parent.parent.opacity = 255;
         this.initItemCount = this.interfaceList.length;
         this.itemList = [];

@@ -13,45 +13,69 @@ cc.Class({
     },
     
 	startSession: function (){
-        if (!this.analyticsPlugin) return;
+        if (!this.analyticsPlugin){
+            cc.log('########## this.analyticsPlugin is null ##########');
+            return;
+        }
         this.analyticsPlugin.startSession();
 
 	},
 	
 	stopSession: function (){
-        if (!this.analyticsPlugin) return;
+        if (!this.analyticsPlugin){
+            cc.log('########## this.analyticsPlugin is null ##########');
+            return;
+        }
 		this.analyticsPlugin.stopSession();
 	},
 	
 	setSessionContinueMillis: function (){
-        if (!this.analyticsPlugin) return;
+        if (!this.analyticsPlugin){
+            cc.log('########## this.analyticsPlugin is null ##########');
+            return;
+        }
         this.analyticsPlugin.setSessionContinueMillis(100);
 
 	},
 	
 	logError: function (){
-        if (!this.analyticsPlugin) return;
+        if (!this.analyticsPlugin){
+            cc.log('########## this.analyticsPlugin is null ##########');
+            return;
+        }
 		this.analyticsPlugin.logError('error', 'errMsg');
 	},
 	
 	logEvent:function(eventID, paramMap){
-        if (!this.analyticsPlugin) return;
+        if (!this.analyticsPlugin) {
+            cc.log('########## this.analyticsPlugin is null ##########');
+            return;
+        }
         this.analyticsPlugin.logEvent('error');
         this.analyticsPlugin.logEvent('error',{'errMsg': 'errMsg'});
 	},
 	
 	logTimedEventBegin: function (){
-        if (!this.analyticsPlugin) return;
+        if (!this.analyticsPlugin){
+            cc.log('########## this.analyticsPlugin is null ##########');
+            return;
+        }
         this.analyticsPlugin.logTimedEventBegin('errorbegin');
 	},
 	
 	logTimedEventEnd: function (){
-        if (!this.analyticsPlugin) return;
+        if (!this.analyticsPlugin){
+            cc.log('########## this.analyticsPlugin is null ##########');
+            return;
+        }
         this.analyticsPlugin.logTimedEventEnd('errorend');
 	},
 	
 	setAccount:function(){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.setAccount) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.setAccount) {
+            cc.log('########## this.analyticsPlugin is null or setAccount is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Account_Id' : '123456',
 			'Account_Name' : 'test',
@@ -66,7 +90,10 @@ cc.Class({
 	},
 	
 	onChargeRequest: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeRequest) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeRequest) {
+            cc.log('########## this.analyticsPlugin is null or onChargeRequest is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Order_Id' : '123456',
 			'Product_Name' : 'test',
@@ -79,7 +106,10 @@ cc.Class({
 	},
 	
 	onChargeOnlySuccess: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeOnlySuccess) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeOnlySuccess) {
+            cc.log('########## this.analyticsPlugin is null or onChargeOnlySuccess is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Order_Id' : '123456',
 			'Product_Name' : 'test',
@@ -92,12 +122,18 @@ cc.Class({
 	},
 	
 	onChargeSuccess: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeSuccess) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeSuccess) {
+            cc.log('########## this.analyticsPlugin is null or onChargeSuccess is not support ##########');
+            return;
+        }
 		this.analyticsPlugin.onChargeSuccess('123456');
 	},
 	
 	onChargeFail: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeFail) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeFail)  {
+            cc.log('########## this.analyticsPlugin is null or onChargeFail is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Order_Id' : '123456',
 			'Fail_Reason' : 'test'
@@ -106,7 +142,10 @@ cc.Class({
 	},
 	
 	onPurchase: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.onPurchase) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.onPurchase) {
+            cc.log('########## this.analyticsPlugin is null or onPurchase is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Item_Id' : '123456',
 			'Item_Type' : 'test',
@@ -118,7 +157,10 @@ cc.Class({
 	},
 	
 	onUse: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.onUse) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.onUse) {
+            cc.log('########## this.analyticsPlugin is null or onUse is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Item_Id' : '123456',
 			'Item_Type' : 'test',
@@ -129,7 +171,10 @@ cc.Class({
 	},
 	
 	onReward: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.onReward) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.onReward) {
+            cc.log('########## this.analyticsPlugin is null or onReward is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Item_Id' : '123456',
 			'Item_Type' : 'test',
@@ -140,7 +185,10 @@ cc.Class({
 	},
 	
 	startLevel: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.startLevel) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.startLevel) {
+            cc.log('########## this.analyticsPlugin is null or startLevel is not support ##########');
+            return;
+        }
         var paramMap  ={
 			'Level_Id' : '123456',
 			'Seq_Num' : '1'
@@ -149,12 +197,18 @@ cc.Class({
 	},
 	
 	finishLevel: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.finishLevel) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.finishLevel) {
+            cc.log('########## this.analyticsPlugin is null or finishLevel is not support ##########');
+            return;
+        }
 		this.analyticsPlugin.finishLevel('123456');
 	},
 	
 	failLevel: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.failLevel) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.failLevel) {
+            cc.log('########## this.analyticsPlugin is null or failLevel is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Level_Id' : '123456',
 			'Fail_Reason' : 'test'
@@ -163,7 +217,10 @@ cc.Class({
 	},
 	
 	startTask: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.startTask) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.startTask) {
+            cc.log('########## this.analyticsPlugin is null or startTask is not support ##########');
+            return;
+        }
 		var paramMap  ={
 			'Task_Id' : '123456',
 			'Task_Type' : (anysdk.TaskType.GUIDE_LINE).toString()
@@ -172,12 +229,18 @@ cc.Class({
 	},
 	
 	finishTask: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.finishTask) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.finishTask) {
+            cc.log('########## this.analyticsPlugin is null or finishTask is not support ##########');
+            return;
+        }
 		this.analyticsPlugin.finishTask('123456');
 	},
 	
 	failTask: function (){
-        if (!this.analyticsPlugin || !this.analyticsPlugin.failTask) return;
+        if (!this.analyticsPlugin || !this.analyticsPlugin.failTask)  {
+            cc.log('########## this.analyticsPlugin is null or failTask is not support ##########');
+            return;
+        }
 		var paramMap = {
 			'Task_Id' : '123456',
 			'Fail_Reason' : 'test'

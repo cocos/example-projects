@@ -16,28 +16,43 @@ cc.Class({
     },
     
     preloadAds: function (){
-	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) return;
+	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)){
+            cc.log('########## this.adsPlugin is null or banner is not supported ##########');
+            return;
+        }
         this.adsPlugin.preloadAds(anysdk.AdsType.AD_TYPE_BANNER);
 	},
 	
 	showAds: function (){
-	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) return;
+	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)){
+            cc.log('########## this.adsPlugin is null or banner is not supported ##########');
+            return;
+        }
         this.adsPlugin.showAds(anysdk.AdsType.AD_TYPE_BANNER);
 	},
 	
 	hideAds: function (){
-	   if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) return;
+	   if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) {
+            cc.log('########## this.adsPlugin is null or banner is not supported ##########');
+            return;
+        }
        this.adsPlugin.hideAds(anysdk.AdsType.AD_TYPE_BANNER);
 	},
 	
 	queryPoints: function (){
-        if (!this.adsPlugin) return;
+        if (!this.adsPlugin){
+            cc.log('########## this.adsPlugin is null ##########');
+            return;
+        }
 		var point = this.adsPlugin.queryPoints();
 		cc.log('########## queryPoints ########## : ' + point);
 	},
 	
 	spendPoints: function(){
-        if (!this.adsPlugin) return;
+        if (!this.adsPlugin){
+            cc.log('########## this.adsPlugin is null ##########');
+            return;
+        }
 		this.adsPlugin.spendPoints(1);
 	},
 

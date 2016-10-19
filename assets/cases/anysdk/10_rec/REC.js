@@ -16,17 +16,26 @@ cc.Class({
     },
     
     startRecording: function (){
-        if (!this.recPlugin) return;
+        if (!this.recPlugin){
+            cc.log('########## this.recPlugin is null ##########');
+            return;
+        }
         this.recPlugin.startRecording();
     },
     
     stopRecording: function (){
-        if (!this.recPlugin) return;
+        if (!this.recPlugin){
+            cc.log('########## this.recPlugin is null ##########');
+            return;
+        }
         this.recPlugin.stopRecording();
     },
     
 	share: function (){
-        if (!this.recPlugin) return;
+        if (!this.recPlugin){
+            cc.log('########## this.recPlugin is null ##########');
+            return;
+        }
         var info = {
             Video_Title : "RECSDK",
             Video_Desc:"RECSDK是一个神奇的SDK"
@@ -35,51 +44,78 @@ cc.Class({
 	},
 	
     pauseRecording: function (){
-        if (!this.recPlugin || !this.recPlugin.pauseRecording) return;
+        if (!this.recPlugin || !this.recPlugin.pauseRecording){
+            cc.log('########## this.recPlugin is null or pauseRecording is not supported ##########');
+            return;
+        }
         this.recPlugin.pauseRecording();
     },
     
     resumeRecording: function (){
-        if (!this.recPlugin || !this.recPlugin.resumeRecording) return;
+        if (!this.recPlugin || !this.recPlugin.resumeRecording){
+            cc.log('########## this.recPlugin is null or resumeRecording is not supported ##########');
+            return;
+        }
         this.recPlugin.resumeRecording();
     },
     
     isAvailable: function (){
-        if (!this.recPlugin || !this.recPlugin.isAvailable) return false;
+        if (!this.recPlugin || !this.recPlugin.isAvailable){
+            cc.log('########## this.recPlugin is null or isAvailable is not supported ##########');
+            return false;
+        }
         var flag = this.rec.isAvailable();
         cc.log('########## isAvailable ########## code: ' + flag);
         return flag;    
     },
     
     showToolBar: function (){
-        if (!this.recPlugin || !this.recPlugin.showToolBar) return;
+        if (!this.recPlugin || !this.recPlugin.showToolBar) {
+            cc.log('########## this.recPlugin is null or showToolBar is not supported ##########');
+            return;
+        }
         this.recPlugin.showToolBar();
     },
     
     hideToolBar: function (){
-        if (!this.recPlugin || !this.recPlugin.hideToolBar) return;
+        if (!this.recPlugin || !this.recPlugin.hideToolBar){
+            cc.log('########## this.recPlugin is null or hideToolBar is not supported ##########');
+            return;
+        }
         this.recPlugin.hideToolBar();
     },
     
     isRecording: function (){
-        if (!this.recPlugin || !this.recPlugin.isRecording) return false;
+        if (!this.recPlugin || !this.recPlugin.isRecording) {
+            cc.log('########## this.recPlugin is null or isRecording is not supported ##########');
+            return false;
+        }
         var flag = this.rec.isRecording();
         cc.log('########## isRecording ########## code: ' + flag);
         return flag;
     },
     
     showVideoCenter: function (){
-        if (!this.recPlugin || !this.recPlugin.showVideoCenter) return;
+        if (!this.recPlugin || !this.recPlugin.showVideoCenter) {
+            cc.log('########## this.recPlugin is null or showVideoCenter is not supported ##########');
+            return;
+        }
         this.recPlugin.showVideoCenter();
     },
     
     enterPlatform: function (){
-        if (!this.recPlugin || !this.recPlugin.enterPlatform) return;
+        if (!this.recPlugin || !this.recPlugin.enterPlatform){
+            cc.log('########## this.recPlugin is null or enterPlatform is not supported ##########');
+            return;
+        }
         this.recPlugin.enterPlatform();
     },
     
     setMetaData: function (){
-        if (!this.recPlugin || !this.recPlugin.setMetaData) return;
+        if (!this.recPlugin || !this.recPlugin.setMetaData) {
+            cc.log('########## this.recPlugin is null or setMetaData is not supported ##########');
+            return;
+        }
         var data = {ext:"login"};
         this.recPlugin.setMetaData(data);
     },

@@ -16,32 +16,50 @@ cc.Class({
     },
     
 	startPush: function (){
-	    if (!this.pushPlugin) return;
+	    if (!this.pushPlugin){
+            cc.log('########## this.pushPlugin is null ##########');
+            return;
+        }
 	    this.pushPlugin.startPush();
 	},
 	
 	closePush: function (){
-        if (!this.pushPlugin) return;
+        if (!this.pushPlugin){
+            cc.log('########## this.pushPlugin is null ##########');
+            return;
+        }
 		this.pushPlugin.closePush();
 	},
 	
 	setAlias: function (){
-	    if (!this.pushPlugin) return;
+	    if (!this.pushPlugin){
+            cc.log('########## this.pushPlugin is null ##########');
+            return;
+        }
         this.pushPlugin.setAlias("ivenKill");
     },
     
 	delAlias: function (){
-	    if (!this.pushPlugin) return;
+	    if (!this.pushPlugin){
+            cc.log('########## this.pushPlugin is null ##########');
+            return;
+        }
 		this.pushPlugin.delAlias("ivenKill");
     },
     
     setTags: function (){
-        if (!this.pushPlugin) return;
+        if (!this.pushPlugin){
+            cc.log('########## this.pushPlugin is null ##########');
+            return;
+        }
     	this.pushPlugin.setTags(["easy","fast","qwe"]);
     },
     
     delTags: function (){
-        if (!this.pushPlugin) return;
+        if (!this.pushPlugin){
+            cc.log('########## this.pushPlugin is null ##########');
+            return;
+        }
     	this.pushPlugin.delTags(["easy","qwe"]);
     },
     

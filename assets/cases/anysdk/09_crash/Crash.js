@@ -13,17 +13,26 @@ cc.Class({
     },
     
     setUserIdentifier: function (){
-        if (!this.crashPlugin) return;
+        if (!this.crashPlugin){
+            cc.log('########## this.crashPlugin is null ##########');
+            return;
+        }
         this.crashPlugin.setUserIdentifier('AnySDK');                         
 	},
 	
 	reportException: function (){
-        if (!this.crashPlugin) return;
+        if (!this.crashPlugin){
+            cc.log('########## this.crashPlugin is null ##########');
+            return;
+        }
 		this.crashPlugin.reportException('error', 'AnySDK');
 	},
 	
 	leaveBreadcrumb: function (){
-        if (!this.crashPlugin) return;
+        if (!this.crashPlugin){
+            cc.log('########## this.crashPlugin is null ##########');
+            return;
+        }
 		this.crashPlugin.leaveBreadcrumb('AnySDK');
 	}
 
