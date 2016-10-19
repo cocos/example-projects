@@ -28,7 +28,6 @@ cc.Class({
     
     play: function () {
         this.audioSource.play();
-        this.audioSource.setCurrentTime(70);
     },
     
     pause: function () {
