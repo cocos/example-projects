@@ -37,13 +37,17 @@
       },
       {
         "__id__": 13
+      },
+      {
+        "__id__": 15
       }
     ],
     "_localZOrder": 0,
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "1c10790f-e76b-4e1b-a2b1-56568c4002ec"
+    "_id": "1c10790f-e76b-4e1b-a2b1-56568c4002ec",
+    "autoReleaseAssets": false
   },
   {
     "__type__": "cc.Node",
@@ -327,7 +331,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 420,
+      "width": 300,
       "height": 40
     },
     "_children": [],
@@ -368,7 +372,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 40,
+    "_actualFontSize": 30,
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -486,9 +490,72 @@
     },
     "target": {
       "__id__": 7
-    },
-    "tips": {
-      "__id__": 10
     }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "TipsManager",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 1
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "7e56bMYPjxBpoq6m5iu7ym/",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 16
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "6c9bezFtu5AHZUcydh+6QJj",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 15
+    },
+    "_enabled": true,
+    "tempTips": {
+      "__uuid__": "e14544db-56d7-472d-aaad-b5bc5f233aa4"
+    },
+    "support": true,
+    "platform": 1
   }
 ]

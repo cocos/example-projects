@@ -3,17 +3,10 @@ cc.Class({
 
     properties: {
         motionStreak: cc.MotionStreak,
-        newTexture: cc.Texture2D,
-        content: cc.Node,
-        tips: cc.Node
+        newTexture: cc.Texture2D
     },
 
     onLoad: function () {
-        if (cc._renderType !== cc.game.RENDER_TYPE_WEBGL) {
-            this.tips.active = true;
-            this.content.active = false;
-            return;
-        }
         this._changed = true;
         this.oldTexture = this.motionStreak.texture;
     },
