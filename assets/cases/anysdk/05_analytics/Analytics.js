@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -14,7 +15,7 @@ cc.Class({
     
 	startSession: function (){
         if (!this.analyticsPlugin){
-            cc.log('########## this.analyticsPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
             return;
         }
         this.analyticsPlugin.startSession();
@@ -23,7 +24,7 @@ cc.Class({
 	
 	stopSession: function (){
         if (!this.analyticsPlugin){
-            cc.log('########## this.analyticsPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
             return;
         }
 		this.analyticsPlugin.stopSession();
@@ -31,7 +32,7 @@ cc.Class({
 	
 	setSessionContinueMillis: function (){
         if (!this.analyticsPlugin){
-            cc.log('########## this.analyticsPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
             return;
         }
         this.analyticsPlugin.setSessionContinueMillis(100);
@@ -40,7 +41,7 @@ cc.Class({
 	
 	logError: function (){
         if (!this.analyticsPlugin){
-            cc.log('########## this.analyticsPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
             return;
         }
 		this.analyticsPlugin.logError('error', 'errMsg');
@@ -48,7 +49,7 @@ cc.Class({
 	
 	logEvent:function(eventID, paramMap){
         if (!this.analyticsPlugin) {
-            cc.log('########## this.analyticsPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
             return;
         }
         this.analyticsPlugin.logEvent('error');
@@ -57,7 +58,7 @@ cc.Class({
 	
 	logTimedEventBegin: function (){
         if (!this.analyticsPlugin){
-            cc.log('########## this.analyticsPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
             return;
         }
         this.analyticsPlugin.logTimedEventBegin('errorbegin');
@@ -65,7 +66,7 @@ cc.Class({
 	
 	logTimedEventEnd: function (){
         if (!this.analyticsPlugin){
-            cc.log('########## this.analyticsPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
             return;
         }
         this.analyticsPlugin.logTimedEventEnd('errorend');
@@ -73,7 +74,7 @@ cc.Class({
 	
 	setAccount:function(){
         if (!this.analyticsPlugin || !this.analyticsPlugin.setAccount) {
-            cc.log('########## this.analyticsPlugin is null or setAccount is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or setAccount is not support ');
             return;
         }
 		var paramMap = {
@@ -91,7 +92,7 @@ cc.Class({
 	
 	onChargeRequest: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeRequest) {
-            cc.log('########## this.analyticsPlugin is null or onChargeRequest is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeRequest is not support ');
             return;
         }
 		var paramMap = {
@@ -107,7 +108,7 @@ cc.Class({
 	
 	onChargeOnlySuccess: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeOnlySuccess) {
-            cc.log('########## this.analyticsPlugin is null or onChargeOnlySuccess is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeOnlySuccess is not support ');
             return;
         }
 		var paramMap = {
@@ -123,7 +124,7 @@ cc.Class({
 	
 	onChargeSuccess: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeSuccess) {
-            cc.log('########## this.analyticsPlugin is null or onChargeSuccess is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeSuccess is not support ');
             return;
         }
 		this.analyticsPlugin.onChargeSuccess('123456');
@@ -131,7 +132,7 @@ cc.Class({
 	
 	onChargeFail: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeFail)  {
-            cc.log('########## this.analyticsPlugin is null or onChargeFail is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeFail is not support ');
             return;
         }
 		var paramMap = {
@@ -143,7 +144,7 @@ cc.Class({
 	
 	onPurchase: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.onPurchase) {
-            cc.log('########## this.analyticsPlugin is null or onPurchase is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or onPurchase is not support ');
             return;
         }
 		var paramMap = {
@@ -158,7 +159,7 @@ cc.Class({
 	
 	onUse: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.onUse) {
-            cc.log('########## this.analyticsPlugin is null or onUse is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or onUse is not support ');
             return;
         }
 		var paramMap = {
@@ -172,7 +173,7 @@ cc.Class({
 	
 	onReward: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.onReward) {
-            cc.log('########## this.analyticsPlugin is null or onReward is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or onReward is not support ');
             return;
         }
 		var paramMap = {
@@ -186,7 +187,7 @@ cc.Class({
 	
 	startLevel: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.startLevel) {
-            cc.log('########## this.analyticsPlugin is null or startLevel is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or startLevel is not support ');
             return;
         }
         var paramMap  ={
@@ -198,7 +199,7 @@ cc.Class({
 	
 	finishLevel: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.finishLevel) {
-            cc.log('########## this.analyticsPlugin is null or finishLevel is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or finishLevel is not support ');
             return;
         }
 		this.analyticsPlugin.finishLevel('123456');
@@ -206,7 +207,7 @@ cc.Class({
 	
 	failLevel: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.failLevel) {
-            cc.log('########## this.analyticsPlugin is null or failLevel is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or failLevel is not support ');
             return;
         }
 		var paramMap = {
@@ -218,7 +219,7 @@ cc.Class({
 	
 	startTask: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.startTask) {
-            cc.log('########## this.analyticsPlugin is null or startTask is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or startTask is not support ');
             return;
         }
 		var paramMap  ={
@@ -230,7 +231,7 @@ cc.Class({
 	
 	finishTask: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.finishTask) {
-            cc.log('########## this.analyticsPlugin is null or finishTask is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or finishTask is not support ');
             return;
         }
 		this.analyticsPlugin.finishTask('123456');
@@ -238,7 +239,7 @@ cc.Class({
 	
 	failTask: function (){
         if (!this.analyticsPlugin || !this.analyticsPlugin.failTask)  {
-            cc.log('########## this.analyticsPlugin is null or failTask is not support ##########');
+            SuspensionTips.init.showTips(' this.analyticsPlugin is null or failTask is not support ');
             return;
         }
 		var paramMap = {
