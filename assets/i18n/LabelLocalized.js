@@ -24,6 +24,6 @@ cc.Class({
                 this.textKey = value;
                 cc.warn('Please set label text key in Text Key property.');
             }
-        },
+        }
     }
 });
