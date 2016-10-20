@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -17,7 +18,7 @@ cc.Class({
     
     startRecording: function (){
         if (!this.recPlugin){
-            cc.log('########## this.recPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null ');
             return;
         }
         this.recPlugin.startRecording();
@@ -25,7 +26,7 @@ cc.Class({
     
     stopRecording: function (){
         if (!this.recPlugin){
-            cc.log('########## this.recPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null ');
             return;
         }
         this.recPlugin.stopRecording();
@@ -33,7 +34,7 @@ cc.Class({
     
 	share: function (){
         if (!this.recPlugin){
-            cc.log('########## this.recPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null ');
             return;
         }
         var info = {
@@ -45,7 +46,7 @@ cc.Class({
 	
     pauseRecording: function (){
         if (!this.recPlugin || !this.recPlugin.pauseRecording){
-            cc.log('########## this.recPlugin is null or pauseRecording is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or pauseRecording is not supported ');
             return;
         }
         this.recPlugin.pauseRecording();
@@ -53,7 +54,7 @@ cc.Class({
     
     resumeRecording: function (){
         if (!this.recPlugin || !this.recPlugin.resumeRecording){
-            cc.log('########## this.recPlugin is null or resumeRecording is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or resumeRecording is not supported ');
             return;
         }
         this.recPlugin.resumeRecording();
@@ -61,17 +62,17 @@ cc.Class({
     
     isAvailable: function (){
         if (!this.recPlugin || !this.recPlugin.isAvailable){
-            cc.log('########## this.recPlugin is null or isAvailable is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or isAvailable is not supported ');
             return false;
         }
         var flag = this.rec.isAvailable();
-        cc.log('########## isAvailable ########## code: ' + flag);
+        SuspensionTips.init.showTips(' isAvailable ########## code: ' + flag);
         return flag;    
     },
     
     showToolBar: function (){
         if (!this.recPlugin || !this.recPlugin.showToolBar) {
-            cc.log('########## this.recPlugin is null or showToolBar is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or showToolBar is not supported ');
             return;
         }
         this.recPlugin.showToolBar();
@@ -79,7 +80,7 @@ cc.Class({
     
     hideToolBar: function (){
         if (!this.recPlugin || !this.recPlugin.hideToolBar){
-            cc.log('########## this.recPlugin is null or hideToolBar is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or hideToolBar is not supported ');
             return;
         }
         this.recPlugin.hideToolBar();
@@ -87,17 +88,17 @@ cc.Class({
     
     isRecording: function (){
         if (!this.recPlugin || !this.recPlugin.isRecording) {
-            cc.log('########## this.recPlugin is null or isRecording is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or isRecording is not supported ');
             return false;
         }
         var flag = this.rec.isRecording();
-        cc.log('########## isRecording ########## code: ' + flag);
+        SuspensionTips.init.showTips(' isRecording ########## code: ' + flag);
         return flag;
     },
     
     showVideoCenter: function (){
         if (!this.recPlugin || !this.recPlugin.showVideoCenter) {
-            cc.log('########## this.recPlugin is null or showVideoCenter is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or showVideoCenter is not supported ');
             return;
         }
         this.recPlugin.showVideoCenter();
@@ -105,7 +106,7 @@ cc.Class({
     
     enterPlatform: function (){
         if (!this.recPlugin || !this.recPlugin.enterPlatform){
-            cc.log('########## this.recPlugin is null or enterPlatform is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or enterPlatform is not supported ');
             return;
         }
         this.recPlugin.enterPlatform();
@@ -113,7 +114,7 @@ cc.Class({
     
     setMetaData: function (){
         if (!this.recPlugin || !this.recPlugin.setMetaData) {
-            cc.log('########## this.recPlugin is null or setMetaData is not supported ##########');
+            SuspensionTips.init.showTips(' this.recPlugin is null or setMetaData is not supported ');
             return;
         }
         var data = {ext:"login"};
@@ -121,37 +122,37 @@ cc.Class({
     },
     
     onRECResult: function (code, msg){
-        cc.log('########## REC RESULT ########## code: ' + code + ',msg: ' + msg);
+        cc.log(' REC RESULT ########## code: ' + code + ',msg: ' + msg);
         switch(code){
         case anysdk.RECResultCode.kRECInitSuccess://初始化成功
-            cc.log("########## kRECInitSuccess ##########");
+            SuspensionTips.init.showTips(' kRECInitSuccess ');
             break;
         case anysdk.RECResultCode.kRECInitFail://初始化失败
-            cc.log("########## kRECInitFail ##########");
+            SuspensionTips.init.showTips(' kRECInitFail ');
             break;
         case anysdk.RECResultCode.kRECStartRecording://开始录制
-            cc.log("########## kRECStartRecording ##########");
+            SuspensionTips.init.showTips(' kRECStartRecording ');
             break;
         case anysdk.RECResultCode.kRECStopRecording://结束录制
-            cc.log("########## kRECStopRecording ##########");
+            SuspensionTips.init.showTips(' kRECStopRecording ');
             break;
         case anysdk.RECResultCode.kRECPauseRecording://暂停录制
-            cc.log("########## kRECPauseRecording ##########");
+            SuspensionTips.init.showTips(' kRECPauseRecording ');
             break;
         case anysdk.RECResultCode.kRECResumeRecording://恢复录制
-            cc.log("########## kRECResumeRecording ##########");
+            SuspensionTips.init.showTips(' kRECResumeRecording ');
             break;
         case anysdk.RECResultCode.kRECEnterSDKPage://进入SDK页面
-            cc.log("########## kRECEnterSDKPage ##########");
+            SuspensionTips.init.showTips(' kRECEnterSDKPage ');
             break;
         case anysdk.RECResultCode.kRECQuitSDKPage://退出SDK页面
-            cc.log("########## kRECQuitSDKPage ##########");
+            SuspensionTips.init.showTips(' kRECQuitSDKPage ');
             break;
         case anysdk.RECResultCode.kRECShareSuccess://视频分享成功
-            cc.log("########## kRECShareSuccess ##########");
+            SuspensionTips.init.showTips(' kRECShareSuccess ');
             break;
         case anysdk.RECResultCode.kRECShareFail://视频分享失败
-            cc.log("########## kRECShareFail ##########");
+            SuspensionTips.init.showTips(' kRECShareFail ');
             break;
         default:
             break;

@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -16,7 +17,7 @@ cc.Class({
     
     login: function () {
         if (!this.userPlugin){
-            cc.log('########## this.userPlugin is null  ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null  ');
             return;
         }
         this.userPlugin.login();
@@ -24,16 +25,16 @@ cc.Class({
     
     isLogined: function () {
         if (!this.userPlugin){
-            cc.log('########## this.userPlugin is null  ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null  ');
             return;
         }
         var flag = this.userPlugin.isLogined();
-        cc.log("########## isLogined ##########" + flag);
+        SuspensionTips.init.showTips(' isLogined ' + flag);
     },
     
     logout: function () {
         if (!this.userPlugin || !this.userPlugin.logout){
-            cc.log('########## this.userPlugin is null or logout is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or logout is not supported ');
             return;
         }
     	this.userPlugin.logout();
@@ -41,7 +42,7 @@ cc.Class({
     
     enterPlatform: function () {
         if (!this.userPlugin || !this.userPlugin.enterPlatform){
-            cc.log('########## this.userPlugin is null or enterPlatform is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or enterPlatform is not supported ');
             return;
         }
     	this.userPlugin.enterPlatform();
@@ -49,7 +50,7 @@ cc.Class({
     
     showToolBar: function () {
         if (!this.userPlugin || !this.userPlugin.showToolBar){
-            cc.log('########## this.userPlugin is null or showToolBar is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or showToolBar is not supported ');
             return;
         }
         this.userPlugin.showToolBar(anysdk.ToolBarPlace.kToolBarTopLeft);
@@ -57,7 +58,7 @@ cc.Class({
     
     hideToolBar: function () {
         if (!this.userPlugin || !this.userPlugin.hideToolBar){
-            cc.log('########## this.userPlugin is null or hideToolBar is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or hideToolBar is not supported ');
             return;
         }
         this.userPlugin.hideToolBar();
@@ -65,7 +66,7 @@ cc.Class({
     
     accountSwitch: function () {
         if (!this.userPlugin || !this.userPlugin.accountSwitch){
-            cc.log('########## this.userPlugin is null or accountSwitch is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or accountSwitch is not supported ');
             return;
         }
         this.userPlugin.accountSwitch();
@@ -73,7 +74,7 @@ cc.Class({
     
     realNameRegister: function () {
         if (!this.userPlugin || !this.userPlugin.realNameRegister){
-            cc.log('########## this.userPlugin is null or realNameRegister is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or realNameRegister is not supported ');
             return;
         }
         this.userPlugin.realNameRegister();
@@ -81,7 +82,7 @@ cc.Class({
     
     antiAddictionQuery: function () {
         if (!this.userPlugin || !this.userPlugin.antiAddictionQuery){
-            cc.log('########## this.userPlugin is null or antiAddictionQuery is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or antiAddictionQuery is not supported ');
             return;
         }
         this.userPlugin.antiAddictionQuery();
@@ -89,7 +90,7 @@ cc.Class({
     
     submitLoginGameRole: function () {
         if (!this.userPlugin || !this.userPlugin.submitLoginGameRole){
-            cc.log('########## this.userPlugin is null or submitLoginGameRole is not supported ##########');
+            SuspensionTips.init.showTips(' this.userPlugin is null or submitLoginGameRole is not supported ');
             return;
         }
         var data = {
@@ -105,61 +106,61 @@ cc.Class({
     },
     
     onUserResult: function (code, msg){
-        cc.log('########## USER RESULT ########## code: ' + code + ',msg: ' + msg);
+        cc.log(' USER RESULT ########## code: ' + code + ',msg: ' + msg);
         switch(code){
         case anysdk.UserActionResultCode.kInitSuccess:
-            cc.log("########## kInitSuccess ##########");
+            SuspensionTips.init.showTips(' kInitSuccess ');
             break;
         case anysdk.UserActionResultCode.kInitFail:
-            cc.log("########## kInitFail ##########");
+            SuspensionTips.init.showTips(' kInitFail ');
             break;
         case anysdk.UserActionResultCode.kLoginSuccess:
-            cc.log("########## kLoginSuccess ##########");
+            SuspensionTips.init.showTips(' kLoginSuccess ');
             break;
         case anysdk.UserActionResultCode.kLoginNetworkError:
-            cc.log("########## kLoginNetworkError ##########");
+            SuspensionTips.init.showTips(' kLoginNetworkError ');
             break;
         case anysdk.UserActionResultCode.kLoginNoNeed:
-            cc.log("########## kLoginNoNeed ##########");
+            SuspensionTips.init.showTips(' kLoginNoNeed ');
             break;
         case anysdk.UserActionResultCode.kLoginFail:
-            cc.log("########## kLoginFail ##########");
+            SuspensionTips.init.showTips(' kLoginFail ');
             break;
         case anysdk.UserActionResultCode.kLoginCancel:
-            cc.log("########## kLoginCancel ##########");
+            SuspensionTips.init.showTips(' kLoginCancel ');
             break;
         case anysdk.UserActionResultCode.kLogoutSuccess:
-            cc.log("########## kLogoutSuccess ##########");
+            SuspensionTips.init.showTips(' kLogoutSuccess ');
             break;
         case anysdk.UserActionResultCode.kLogoutFail:
-            cc.log("########## kLogoutFail ##########");
+            SuspensionTips.init.showTips(' kLogoutFail ');
             break;
         case anysdk.UserActionResultCode.kPlatformEnter:
-            cc.log("########## kPlatformEnter ##########");
+            SuspensionTips.init.showTips(' kPlatformEnter ');
             break;
         case anysdk.UserActionResultCode.kPlatformBack:
-            cc.log("########## kPlatformBack ##########");
+            SuspensionTips.init.showTips(' kPlatformBack ');
             break;
         case anysdk.UserActionResultCode.kPausePage:
-            cc.log("########## kPausePage ##########");
+            SuspensionTips.init.showTips(' kPausePage ');
             break;
         case anysdk.UserActionResultCode.kExitPage:
-            cc.log("########## kExitPage ##########");
+            SuspensionTips.init.showTips(' kExitPage ');
             break;
         case anysdk.UserActionResultCode.kAntiAddictionQuery:
-            cc.log("########## kAntiAddictionQuery ##########");
+            SuspensionTips.init.showTips(' kAntiAddictionQuery ');
             break;
         case anysdk.UserActionResultCode.kRealNameRegister:
-            cc.log("########## kRealNameRegister ##########");
+            SuspensionTips.init.showTips(' kRealNameRegister ');
             break;
         case anysdk.UserActionResultCode.kAccountSwitchSuccess:
-            cc.log("########## kAccountSwitchSuccess ##########");
+            SuspensionTips.init.showTips(' kAccountSwitchSuccess ');
             break;
         case anysdk.UserActionResultCode.kAccountSwitchFail:
-            cc.log("########## kAccountSwitchFail ##########");
+            SuspensionTips.init.showTips(' kAccountSwitchFail ');
             break;
         case anysdk.UserActionResultCode.kOpenShop:
-            cc.log("########## kOpenShop ##########");
+            SuspensionTips.init.showTips(' kOpenShop ');
             break;
         default:
             break;

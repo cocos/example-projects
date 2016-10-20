@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -17,7 +18,7 @@ cc.Class({
     
 	startPush: function (){
 	    if (!this.pushPlugin){
-            cc.log('########## this.pushPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
             return;
         }
 	    this.pushPlugin.startPush();
@@ -25,7 +26,7 @@ cc.Class({
 	
 	closePush: function (){
         if (!this.pushPlugin){
-            cc.log('########## this.pushPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
             return;
         }
 		this.pushPlugin.closePush();
@@ -33,7 +34,7 @@ cc.Class({
 	
 	setAlias: function (){
 	    if (!this.pushPlugin){
-            cc.log('########## this.pushPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
             return;
         }
         this.pushPlugin.setAlias("ivenKill");
@@ -41,7 +42,7 @@ cc.Class({
     
 	delAlias: function (){
 	    if (!this.pushPlugin){
-            cc.log('########## this.pushPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
             return;
         }
 		this.pushPlugin.delAlias("ivenKill");
@@ -49,7 +50,7 @@ cc.Class({
     
     setTags: function (){
         if (!this.pushPlugin){
-            cc.log('########## this.pushPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
             return;
         }
     	this.pushPlugin.setTags(["easy","fast","qwe"]);
@@ -57,17 +58,17 @@ cc.Class({
     
     delTags: function (){
         if (!this.pushPlugin){
-            cc.log('########## this.pushPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
             return;
         }
     	this.pushPlugin.delTags(["easy","qwe"]);
     },
     
     onPushResult:function(code,msg){
-        cc.log('########## PUSH RESULT ########## code: ' + code + ',msg: ' + msg);
+        cc.log(' PUSH RESULT ########## code: ' + code + ',msg: ' + msg);
 		switch(code){
 	    	case anysdk.PushActionResultCode.kPushReceiveMessage:
-	    		cc.log("########## kPushReceiveMessage ##########");
+	    		SuspensionTips.init.showTips(' kPushReceiveMessage ');
 	    		break;
 	    	default:
 	    		break;

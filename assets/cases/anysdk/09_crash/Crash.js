@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -14,7 +15,7 @@ cc.Class({
     
     setUserIdentifier: function (){
         if (!this.crashPlugin){
-            cc.log('########## this.crashPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.crashPlugin is null ');
             return;
         }
         this.crashPlugin.setUserIdentifier('AnySDK');                         
@@ -22,7 +23,7 @@ cc.Class({
 	
 	reportException: function (){
         if (!this.crashPlugin){
-            cc.log('########## this.crashPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.crashPlugin is null ');
             return;
         }
 		this.crashPlugin.reportException('error', 'AnySDK');
@@ -30,7 +31,7 @@ cc.Class({
 	
 	leaveBreadcrumb: function (){
         if (!this.crashPlugin){
-            cc.log('########## this.crashPlugin is null ##########');
+            SuspensionTips.init.showTips(' this.crashPlugin is null ');
             return;
         }
 		this.crashPlugin.leaveBreadcrumb('AnySDK');
