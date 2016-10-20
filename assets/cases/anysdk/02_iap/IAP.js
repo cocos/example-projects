@@ -16,7 +16,10 @@ cc.Class({
     },
     
     payForProduct: function () {
-        if(!this.iapPlugin) return;
+        if(!this.iapPlugin){
+            cc.log('########## this.iapPlugin is null ##########');
+            return;
+        }
         var info = {
             'Product_Id': '107196',                    //商品唯一标示符
             'Product_Name': 'three hearts',            //商品名称
@@ -39,7 +42,10 @@ cc.Class({
     },
     
     getOrderId: function () {
-        if(!this.iapPlugin) return;
+        if(!this.iapPlugin){
+            cc.log('########## this.iapPlugin is null ##########');
+            return;
+        }
         var orderId = this.iapPlugin.getOrderId();
         cc.log('########## getOrderId ########## : ' + orderId);
     },

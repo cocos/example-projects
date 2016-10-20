@@ -15,32 +15,50 @@ cc.Class({
         }
     },
 	submitScore:function(){
-	    if (!this.socialPlugin) return;
+	    if (!this.socialPlugin){
+            cc.log('########## this.socialPlugin is null ##########');
+            return;
+        }
         var score = 131;
         this.socialPlugin.submitScore("friend", score);
 	},
 	showLeaderboard:function(){
-	    if (!this.socialPlugin) return;
+	    if (!this.socialPlugin) {
+            cc.log('########## this.socialPlugin is null ##########');
+            return;
+        }
 		this.socialPlugin.showLeaderboard("friend");
 	},
 	unlockAchievement:function(){
-	    if (!this.socialPlugin) return;
+	    if (!this.socialPlugin){
+            cc.log('########## this.socialPlugin is null ##########');
+            return;
+        }
         var achInfo = {"rank":"friends"}
         this.socialPlugin.unlockAchievement(achInfo);
 	},
 	
 	showAchievements: function (){
-	    if (!this.socialPlugin) return;
+	    if (!this.socialPlugin){
+            cc.log('########## this.socialPlugin is null ##########');
+            return;
+        }
 		this.socialPlugin.showAchievements();
 	},
 	
 	signIn: function (){
-	    if (!this.socialPlugin) return;
+	    if (!this.socialPlugin){
+            cc.log('########## this.socialPlugin is null ##########');
+            return;
+        }
 		this.socialPlugin.signIn();
 	},
 	
 	signOut: function (){
-	    if (!this.socialPlugin) return;
+	    if (!this.socialPlugin){
+            cc.log('########## this.socialPlugin is null ##########');
+            return;
+        }
 		this.socialPlugin.signOut();
 	},
 	

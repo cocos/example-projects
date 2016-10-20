@@ -13,12 +13,18 @@ cc.Class({
     },
 
 	onRegister: function (){
-        if (!this.adTrackingPlugin) return;
+        if (!this.adTrackingPlugin){
+            cc.log('########## this.adTrackingPlugin is null ##########');
+            return;
+        }
 		this.adTrackingPlugin.onRegister("userid");
 	},
 	
 	onLogin: function (){
-        if (!this.adTrackingPlugin) return;
+        if (!this.adTrackingPlugin){
+            cc.log('########## this.adTrackingPlugin is null ##########');
+            return;
+        }
         var info = {
         	"User_Id": "123456",
         	"Role_Id": "test",
@@ -29,7 +35,10 @@ cc.Class({
 	},
 	
 	onPay: function (){
-        if (!this.adTrackingPlugin) return;
+        if (!this.adTrackingPlugin){
+            cc.log('########## this.adTrackingPlugin is null ##########');
+            return;
+        }
         var myDate = new Date();
 		var info = {
         	"User_Id": "123456",
@@ -43,13 +52,19 @@ cc.Class({
 	},
 	
 	trackEvent: function (){
-        if (!this.adTrackingPlugin) return;
+        if (!this.adTrackingPlugin){
+            cc.log('########## this.adTrackingPlugin is null ##########');
+            return;
+        }
 		this.adTrackingPlugin.trackEvent("event_1");
 		this.adTrackingPlugin.trackEvent("event_2");
 	},
 	
 	onCreateRole: function (){
-        if (!this.adTrackingPlugin || !this.adTrackingPlugin.onCreateRole) return;
+        if (!this.adTrackingPlugin || !this.adTrackingPlugin.onCreateRole) {
+            cc.log('########## this.adTrackingPlugin is null or onCreateRole is not supported ##########');
+            return;
+        }
 		var info = {
         	"User_Id": "123456",
         	"Role_Id": "test",
@@ -59,7 +74,10 @@ cc.Class({
 	},
 	
 	onLevelUp: function (){
-        if (!this.adTrackingPlugin || !this.adTrackingPlugin.onLevelUp) return;
+        if (!this.adTrackingPlugin || !this.adTrackingPlugin.onLevelUp) {
+            cc.log('########## this.adTrackingPlugin is null  or onLevelUp is not supported##########');
+            return;
+        }
         var info = {
         	"User_Id": "123456",
         	"Role_Id": "test",
@@ -70,7 +88,10 @@ cc.Class({
 
 	},
 	onStartToPay: function (){
-        if (!this.adTrackingPlugin || !this.adTrackingPlugin.onStartToPay) return;
+        if (!this.adTrackingPlugin || !this.adTrackingPlugin.onStartToPay) {
+            cc.log('########## this.adTrackingPlugin is null or onStartToPay is not supported##########');
+            return;
+        }
         var myDate = new Date();
 		var info = {
         	"User_Id": "123456",

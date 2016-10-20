@@ -15,53 +15,83 @@ cc.Class({
     },
     
     login: function () {
-        if (!this.userPlugin) return;
+        if (!this.userPlugin){
+            cc.log('########## this.userPlugin is null  ##########');
+            return;
+        }
         this.userPlugin.login();
     },
     
     isLogined: function () {
-        if (!this.userPlugin) return;
+        if (!this.userPlugin){
+            cc.log('########## this.userPlugin is null  ##########');
+            return;
+        }
         var flag = this.userPlugin.isLogined();
         cc.log("########## isLogined ##########" + flag);
     },
     
     logout: function () {
-        if (!this.userPlugin || !this.userPlugin.logout) return;
+        if (!this.userPlugin || !this.userPlugin.logout){
+            cc.log('########## this.userPlugin is null or logout is not supported ##########');
+            return;
+        }
     	this.userPlugin.logout();
     },
     
     enterPlatform: function () {
-        if (!this.userPlugin || !this.userPlugin.enterPlatform) return;
+        if (!this.userPlugin || !this.userPlugin.enterPlatform){
+            cc.log('########## this.userPlugin is null or enterPlatform is not supported ##########');
+            return;
+        }
     	this.userPlugin.enterPlatform();
     },
     
     showToolBar: function () {
-        if (!this.userPlugin || !this.userPlugin.showToolBar) return;
+        if (!this.userPlugin || !this.userPlugin.showToolBar){
+            cc.log('########## this.userPlugin is null or showToolBar is not supported ##########');
+            return;
+        }
         this.userPlugin.showToolBar(anysdk.ToolBarPlace.kToolBarTopLeft);
     },
     
     hideToolBar: function () {
-        if (!this.userPlugin || !this.userPlugin.hideToolBar) return;
+        if (!this.userPlugin || !this.userPlugin.hideToolBar){
+            cc.log('########## this.userPlugin is null or hideToolBar is not supported ##########');
+            return;
+        }
         this.userPlugin.hideToolBar();
     },
     
     accountSwitch: function () {
-        if (!this.userPlugin || !this.userPlugin.accountSwitch) return;
+        if (!this.userPlugin || !this.userPlugin.accountSwitch){
+            cc.log('########## this.userPlugin is null or accountSwitch is not supported ##########');
+            return;
+        }
         this.userPlugin.accountSwitch();
     },
     
     realNameRegister: function () {
-        if (!this.userPlugin || !this.userPlugin.realNameRegister) return;
+        if (!this.userPlugin || !this.userPlugin.realNameRegister){
+            cc.log('########## this.userPlugin is null or realNameRegister is not supported ##########');
+            return;
+        }
         this.userPlugin.realNameRegister();
     },
     
     antiAddictionQuery: function () {
-        if (!this.userPlugin || !this.userPlugin.antiAddictionQuery) return;
+        if (!this.userPlugin || !this.userPlugin.antiAddictionQuery){
+            cc.log('########## this.userPlugin is null or antiAddictionQuery is not supported ##########');
+            return;
+        }
         this.userPlugin.antiAddictionQuery();
     },
     
     submitLoginGameRole: function () {
-        if (!this.userPlugin || !this.userPlugin.submitLoginGameRole) return;
+        if (!this.userPlugin || !this.userPlugin.submitLoginGameRole){
+            cc.log('########## this.userPlugin is null or submitLoginGameRole is not supported ##########');
+            return;
+        }
         var data = {
             'roleId': '123456',
             'roleName': 'test',

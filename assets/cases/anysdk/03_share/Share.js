@@ -16,7 +16,10 @@ cc.Class({
     },
 
 	share: function(){
-	    if (!this.sharePlugin) return;
+	    if (!this.sharePlugin){
+            cc.log('########## this.sharePlugin is null ##########');
+            return;
+        }
         var info = {
             'title' : 'Dark Slash',                   // 标题名称
             'titleUrl' : 'http://www.cocos.com',      // 标题链接
