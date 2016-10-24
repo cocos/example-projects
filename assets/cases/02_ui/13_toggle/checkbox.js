@@ -38,7 +38,7 @@ cc.Class({
         }
     },
 
-    radioButtonClicked: function(event, toggle) {
+    radioButtonClicked: function(toggle) {
         var index = this.radioButton.indexOf(toggle);
         var title = "RadioButton";
         switch(index) {
@@ -57,7 +57,7 @@ cc.Class({
         this._updateToggleEventString(title, this.radioButtonEventString, toggle);
     },
 
-    checkBoxClicked: function (event, toggle) {
+    checkBoxClicked: function (toggle) {
         this._updateToggleEventString("CheckBox", this.checkBoxEventString, toggle);
     }
 });
