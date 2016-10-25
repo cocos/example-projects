@@ -36,7 +36,7 @@
         "__id__": 2
       },
       {
-        "__id__": 23
+        "__id__": 20
       },
       {
         "__id__": 26
@@ -267,7 +267,7 @@
         "__id__": 14
       },
       {
-        "__id__": 20
+        "__id__": 23
       }
     ],
     "_rotationX": 0,
@@ -751,87 +751,10 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 2
-    },
-    "component": "webview",
-    "handler": "visitURL",
-    "customEventData": ""
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "webview",
-    "_objFlags": 0,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_parent": {
-      "__id__": 7
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 300,
-      "height": 200
-    },
-    "_children": [],
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": -51,
-      "y": 27
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_tag": -1,
-    "_opacityModifyRGB": false,
-    "_id": "67ac2H887BIa7OVwsIQORKK",
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 21
-      }
-    ],
-    "_prefab": null,
-    "groupIndex": 0
-  },
-  {
-    "__type__": "cc.WebView",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
       "__id__": 20
     },
-    "_enabled": true,
-    "_useOriginalSize": false,
-    "_url": "http://www.cocos.com",
-    "webviewEvents": [
-      {
-        "__id__": 22
-      }
-    ]
-  },
-  {
-    "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 23
-    },
     "component": "WebviewCtrl",
-    "handler": "onWebFinishLoad",
+    "handler": "visitURL",
     "customEventData": ""
   },
   {
@@ -880,7 +803,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 24
+        "__id__": 21
       }
     ],
     "_prefab": null,
@@ -891,18 +814,95 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 23
+      "__id__": 20
     },
     "_enabled": true,
     "labelStatus": {
       "__id__": 9
     },
     "webview": {
-      "__id__": 21
+      "__id__": 22
     },
     "url": {
       "__id__": 13
     }
+  },
+  {
+    "__type__": "cc.WebView",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 23
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_url": "http://www.cocos.com",
+    "webviewEvents": [
+      {
+        "__id__": 24
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "webview",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 7
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 300,
+      "height": 200
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -51,
+      "y": 27
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "67ac2H887BIa7OVwsIQORKK",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 22
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 20
+    },
+    "component": "WebviewCtrl",
+    "handler": "onWebFinishLoad",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Canvas",
