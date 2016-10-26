@@ -109,6 +109,7 @@ cc.Class({
 
     sendWebSocketBinary: function(sender)
     {
+        if (!this._wsiSendBinary) { return; }
         if (this._wsiSendBinary.readyState === WebSocket.OPEN)
         {
             this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.9");
