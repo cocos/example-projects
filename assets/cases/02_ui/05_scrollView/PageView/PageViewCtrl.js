@@ -42,7 +42,9 @@ cc.Class({
 
     // 插入页面
     onInsertPage () {
-        this.target.insertPage(this._createPage(), 1);
+        var curIndex = this.target.getCurrentPageIndex() - 1;
+        curIndex = curIndex < 0 ? 0 : curIndex;
+        this.target.insertPage(this._createPage(), curIndex);
     },
 
     // 移除最后一个页面
