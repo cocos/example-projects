@@ -7,10 +7,15 @@ cc.Class({
         scrollView: cc.ScrollView
     },
 
-    onLoad: function () {
+    _init: function () {
+        this._assets = [];
         this._hasLoading = false;
         this.scrollView.content.height = 0;
         this.btnClearAll.active = false;
+    },
+
+    onLoad: function () {
+        this._init();
     },
 
     _createLabel: function (text) {
@@ -22,7 +27,9 @@ cc.Class({
 
     _clear: function () {
         this.scrollView.content.removeAllChildren(true);
-        cc.loader.releaseAll();
+        for (var i = 0; i < this._assets.length; ++i) {
+            cc.loader.release(this._assets[i]);
+        }
     },
 
     onClearAll: function () {
@@ -32,18 +39,16 @@ cc.Class({
     },
 
     onLoadAll: function () {
-        var self = this;
-        if (self._hasLoading) {
-            return;
-        }
-        self._clear();
-        self._createLabel("Load All Assets");
-        self.scrollView.scrollToTop();
-        self._hasLoading = true;
-        cc.loader.loadResAll("test assets", function (err, assets) {
+        if (this._hasLoading) { return; }
+        this._hasLoading = true;
+        this._clear();
+        this._createLabel("Load All Assets");
+        this.scrollView.scrollToTop();
+        cc.loader.loadResAll("test assets", (err, assets) => {
+            this._assets = assets;
             var text = "";
             for (var i = 0; i < assets.length; ++i) {
-                if (typeof assets[i] === 'string' ) {
+                if (typeof assets[i] === 'string') {
                     text = assets[i]
                 }
                 else {
@@ -52,20 +57,21 @@ cc.Class({
                 if (typeof text !== 'string' ) {
                     continue;
                 }
-                self._createLabel(text);
+                this._createLabel(text);
             }
-            self.btnClearAll.active = true;
-            self.scrollView.content.height = assets.length * 60;
-            self._hasLoading = false;
+            this._hasLoading = false;
+            this.btnClearAll.active = true;
         });
     },
 
     onLoadSpriteFrameAll: function () {
-        var self = this;
+        if (this._hasLoading) { return; }
+        this._hasLoading = true;
         this._clear();
-        self._createLabel("Load All Sprite Frame");
-        self.scrollView.scrollToTop();
-        cc.loader.loadResAll("test assets", cc.SpriteFrame, function (err, assets) {
+        this._createLabel("Load All Sprite Frame");
+        this.scrollView.scrollToTop();
+        cc.loader.loadResAll("test assets", cc.SpriteFrame, (err, assets) => {
+            this._assets = assets;
             var text = "";
             for (var i = 0; i < assets.length; ++i) {
                 if (typeof assets[i] === 'string' ) {
@@ -74,10 +80,10 @@ cc.Class({
                 else {
                     text = assets[i].url || assets[i]._name || assets[i];
                 }
-                self._createLabel(text);
+                this._createLabel(text);
             }
-            self.btnClearAll.active = true;
-            self.scrollView.content.height = assets.length * 20;
+            this._hasLoading = false;
+            this.btnClearAll.active = true;
         });
     }
 
