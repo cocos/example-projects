@@ -2,15 +2,19 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        content: cc.Node
+        content: cc.Node,
+        _url:[]
+    },
+
+    onLoad: function () {
+        this._url = ["test assets/atlas", "test assets/prefab"];
     },
 
     loadSpriteFrame: function () {
-        this._clearResource();
-        var self = this;
-        cc.loader.loadRes("test assets/atlas", cc.SpriteAtlas, function (err, atlas) {
+        this._clearResource(this._url[0]);
+        cc.loader.loadRes(this._url[0], cc.SpriteAtlas, (err, atlas) => {
             var node = new cc.Node();
-            self.content.addChild(node);
+            this.content.addChild(node);
             node.position = cc.v2(0, 0);
             var sprite = node.addComponent(cc.Sprite);
             sprite.spriteFrame = atlas.getSpriteFrame('sheep_run_0');
@@ -18,17 +22,16 @@ cc.Class({
     },
 
     loadPrefab: function () {
-        this._clearResource();
-        var self = this;
-        cc.loader.loadRes("test assets/prefab", function (err, prefab) {
+        this._clearResource(this._url[1]);
+        cc.loader.loadRes(this._url[1], (err, prefab) => {
             var node = cc.instantiate(prefab);
-            self.content.addChild(node);
+            this.content.addChild(node);
             node.position = cc.v2(0, 0);
         });
     },
 
-    _clearResource: function () {
+    _clearResource: function (url) {
         this.content.removeAllChildren(true);
-        cc.loader.releaseAll();
+        cc.loader.release(url);
     }
 });

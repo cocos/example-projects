@@ -227,7 +227,8 @@
     "asset": {
       "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
     },
-    "fileId": "78fd70+ls5GgJcFkzvLSRk8"
+    "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+    "sync": false
   },
   {
     "__type__": "cc.Node",
@@ -603,7 +604,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 520,
-      "height": 1461.7
+      "height": 210
     },
     "_children": [],
     "_rotationX": 0,
@@ -709,9 +710,9 @@
     "_layoutSize": {
       "__type__": "cc.Size",
       "width": 520,
-      "height": 1461.7
+      "height": 210
     },
-    "_resize": 0,
+    "_resize": 1,
     "_N$layoutType": 2,
     "_N$cellSize": {
       "__type__": "cc.Size",
@@ -1071,6 +1072,7 @@
       "a": 255
     },
     "duration": 0.1,
+    "zoomScale": 1.2,
     "pressedSprite": {
       "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
     },
@@ -1083,6 +1085,7 @@
       }
     ],
     "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1113,7 +1116,8 @@
       "__id__": 2
     },
     "component": "loadResAll_example",
-    "handler": "onLoadAll"
+    "handler": "onLoadAll",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -1297,6 +1301,7 @@
       "a": 255
     },
     "duration": 0.1,
+    "zoomScale": 1.2,
     "pressedSprite": {
       "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
     },
@@ -1309,6 +1314,7 @@
       }
     ],
     "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1339,7 +1345,8 @@
       "__id__": 2
     },
     "component": "loadResAll_example",
-    "handler": "onLoadSpriteFrameAll"
+    "handler": "onLoadSpriteFrameAll",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -1523,6 +1530,7 @@
       "a": 255
     },
     "duration": 0.1,
+    "zoomScale": 1.2,
     "pressedSprite": {
       "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
     },
@@ -1535,6 +1543,7 @@
       }
     ],
     "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1565,7 +1574,8 @@
       "__id__": 2
     },
     "component": "loadResAll_example",
-    "handler": "onClearAll"
+    "handler": "onClearAll",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Widget",
