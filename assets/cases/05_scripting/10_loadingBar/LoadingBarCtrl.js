@@ -57,7 +57,7 @@ cc.Class({
                 url: cc.url.raw("resources/font/enligsh-chinese.png")
             }
         ];
-
+        this.resource = null;
         this.progressBar.progress = 0;
         this._clearAll();
         cc.loader.load(this._urls, this._progressCallback.bind(this), this._completeCallback.bind(this));
