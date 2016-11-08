@@ -40,7 +40,8 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "582767b7-f1b9-498a-94a4-836c11ff448a"
+    "_id": "582767b7-f1b9-498a-94a4-836c11ff448a",
+    "autoReleaseAssets": false
   },
   {
     "__type__": "cc.Node",
@@ -630,7 +631,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "toggleDebugSlots"
+    "handler": "toggleDebugSlots",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -886,7 +888,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "toggleDebugBones"
+    "handler": "toggleDebugBones",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -1142,7 +1145,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "toggleTimeScale"
+    "handler": "toggleTimeScale",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Layout",
@@ -1179,7 +1183,7 @@
       "__id__": 10
     },
     "_enabled": true,
-    "isAlignOnce": true,
+    "isAlignOnce": false,
     "_alignFlags": 12,
     "_left": 50,
     "_right": 0,
@@ -1577,7 +1581,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "stop"
+    "handler": "stop",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -1833,7 +1838,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "walk"
+    "handler": "walk",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -2089,7 +2095,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "run"
+    "handler": "run",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Layout",
@@ -2372,7 +2379,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "jump"
+    "handler": "jump",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -2628,7 +2636,8 @@
       "__id__": 7
     },
     "component": "SpineCtrl",
-    "handler": "shoot"
+    "handler": "shoot",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Layout",
@@ -2665,7 +2674,7 @@
       "__id__": 34
     },
     "_enabled": true,
-    "isAlignOnce": true,
+    "isAlignOnce": false,
     "_alignFlags": 9,
     "_left": 50,
     "_right": 0,
