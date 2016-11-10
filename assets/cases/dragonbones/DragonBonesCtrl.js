@@ -283,6 +283,21 @@ cc.Class({
         this._enterFrameHandler(dt);
     },
 
+    onDisable : function() {
+        // clean the bullets
+        for (var i = this._bullets.length - 1; i >= 0; i--)
+        {
+            var bullet = this._bullets[i];
+            bullet.doClean();
+        }
+        this._bullets = [];
+
+        if (this._armature) {
+            // remove the _armature from world clock
+            dragonBones.WorldClock.clock.remove(this._armature);
+        }
+    },
+
     addBullet : function(bullet) {
         this._bullets.push(bullet);
     },
@@ -536,20 +551,23 @@ var DragonBullet = cc.Class({
             worldPos.x < -100 || worldPos.x >= cc.visibleRect.width + 100 ||
             worldPos.y < -100 || worldPos.y >= cc.visibleRect.height + 100
         ) {
-            dragonBones.WorldClock.clock.remove(this._armature);
-            this._armatureDisplay.removeFromParent();
-            this._armature.dispose();
-
-            if (this._effect) {
-                dragonBones.WorldClock.clock.remove(this._effect);
-                this._effect.display.removeFromParent();
-                this._effect.dispose();
-            }
-
+            this.doClean();
             return true;
         }
 
         return false;
+    },
+
+    doClean : function() {
+        dragonBones.WorldClock.clock.remove(this._armature);
+        this._armatureDisplay.removeFromParent();
+        this._armature.dispose();
+
+        if (this._effect) {
+            dragonBones.WorldClock.clock.remove(this._effect);
+            this._effect.display.removeFromParent();
+            this._effect.dispose();
+        }
     }
 });
 } // end of !cc.runtime
