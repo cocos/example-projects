@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -16,40 +17,58 @@ cc.Class({
     },
     
 	startPush: function (){
-	    if (!this.pushPlugin) return;
+	    if (!this.pushPlugin){
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            return;
+        }
 	    this.pushPlugin.startPush();
 	},
 	
 	closePush: function (){
-        if (!this.pushPlugin) return;
+        if (!this.pushPlugin){
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            return;
+        }
 		this.pushPlugin.closePush();
 	},
 	
 	setAlias: function (){
-	    if (!this.pushPlugin) return;
+	    if (!this.pushPlugin){
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            return;
+        }
         this.pushPlugin.setAlias("ivenKill");
     },
     
 	delAlias: function (){
-	    if (!this.pushPlugin) return;
+	    if (!this.pushPlugin){
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            return;
+        }
 		this.pushPlugin.delAlias("ivenKill");
     },
     
     setTags: function (){
-        if (!this.pushPlugin) return;
+        if (!this.pushPlugin){
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            return;
+        }
     	this.pushPlugin.setTags(["easy","fast","qwe"]);
     },
     
     delTags: function (){
-        if (!this.pushPlugin) return;
+        if (!this.pushPlugin){
+            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            return;
+        }
     	this.pushPlugin.delTags(["easy","qwe"]);
     },
     
     onPushResult:function(code,msg){
-        cc.log('########## PUSH RESULT ########## code: ' + code + ',msg: ' + msg);
+        cc.log(' PUSH RESULT ########## code: ' + code + ',msg: ' + msg);
 		switch(code){
 	    	case anysdk.PushActionResultCode.kPushReceiveMessage:
-	    		cc.log("########## kPushReceiveMessage ##########");
+	    		SuspensionTips.init.showTips(' kPushReceiveMessage ');
 	    		break;
 	    	default:
 	    		break;

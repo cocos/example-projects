@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -16,7 +17,10 @@ cc.Class({
     },
 
 	share: function(){
-	    if (!this.sharePlugin) return;
+	    if (!this.sharePlugin){
+            SuspensionTips.init.showTips(' this.sharePlugin is null ');
+            return;
+        }
         var info = {
             'title' : 'Dark Slash',                   // 标题名称
             'titleUrl' : 'http://www.cocos.com',      // 标题链接
@@ -33,19 +37,19 @@ cc.Class({
 	},
 	
     onShareResult: function (code, msg){
-        cc.log('########## SHARE RESULT ########## code: ' + code + ',msg: ' + msg);
+        cc.log(' SHARE RESULT ########## code: ' + code + ',msg: ' + msg);
         switch(code){
             case anysdk.ShareResultCode.kShareSuccess:
-	    		cc.log("########## kShareSuccess ##########");
+	    		SuspensionTips.init.showTips(' kShareSuccess ');
                 break;
             case anysdk.ShareResultCode.kShareFail:
-	    		cc.log("########## kShareFail ##########");
+	    		SuspensionTips.init.showTips(' kShareFail ');
                 break;
             case anysdk.ShareResultCode.kShareCancel:
-	    		cc.log("########## kShareCancel ##########");
+	    		SuspensionTips.init.showTips(' kShareCancel ');
                 break;
             case anysdk.ShareResultCode.kShareNetworkError:
-	    		cc.log("########## kShareNetworkError ##########");
+	    		SuspensionTips.init.showTips(' kShareNetworkError ');
                 break;         
             default:
                 break;

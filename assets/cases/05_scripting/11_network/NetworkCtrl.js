@@ -109,6 +109,7 @@ cc.Class({
 
     sendWebSocketBinary: function(sender)
     {
+        if (!this._wsiSendBinary) { return; }
         if (this._wsiSendBinary.readyState === WebSocket.OPEN)
         {
             this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.9");
@@ -131,18 +132,24 @@ cc.Class({
         }
     },
 
-// Socket IO callbacks for testing
+    // Socket IO callbacks for testing
     testevent: function(data) {
+        if (!this.socketIO) { return; }
+
         var msg = this.tag + " says 'testevent' with data: " + data;
         this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.11") + msg;
     },
 
     message: function(data) {
+        if (!this.socketIO) { return; }
+
         var msg = this.tag + " received message: " + data;
         this.socketIOResp.string = msg;
     },
 
     disconnection: function() {
+        if (!this.socketIO) { return; }
+
         var msg = this.tag + " disconnected!";
         this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
     },
@@ -159,6 +166,8 @@ cc.Class({
         //register event callbacks
         //this is an example of a handler declared inline
         sioclient.on("connect", function() {
+            if (!this.socketIO) { return; }
+
             var msg = sioclient.tag + " Connected!";
             self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.13") + msg;
 
@@ -170,6 +179,8 @@ cc.Class({
         sioclient.on("message", this.message.bind(this));
 
         sioclient.on("echotest", function(data) {
+            if (!this.socketIO) { return; }
+
             cc.log("echotest 'on' callback fired!");
             var msg = this.tag + " says 'echotest' with data: " + data;
             self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.14") + msg;

@@ -1,9 +1,6 @@
 const i18n = require('i18n');
 
-
 //
-// Tips：
-// 找到的下载图片网址过长，可以忽略。
 // 本教程主要还是体现如何使用Loader的进度条。
 //
 
@@ -60,10 +57,17 @@ cc.Class({
                 url: cc.url.raw("resources/font/enligsh-chinese.png")
             }
         ];
-
+        this.resource = null;
         this.progressBar.progress = 0;
-        cc.loader.releaseAll();
+        this._clearAll();
         cc.loader.load(this._urls, this._progressCallback.bind(this), this._completeCallback.bind(this));
+    },
+
+    _clearAll: function () {
+        for (var i = 0; i < this._urls.length; ++i) {
+            var url = this._urls[i];
+            cc.loader.release(url);
+        }
     },
 
     _progressCallback: function (completedCount, totalCount, res) {
@@ -84,7 +88,7 @@ cc.Class({
         }
         var progress = this.progressBar.progress;
         if (progress >= 1) {
-            this.progressTips.string = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.1");
+            this.progressTips.textKey = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.1");
             this.laodBg.active = false;
             this.progressBar.node.active = false;
             this.enabled = false;
@@ -94,6 +98,6 @@ cc.Class({
             progress += dt;
         }
         this.progressBar.progress = progress;
-        this.progressTips.string = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.2")+ this.resource.id + " (" + this.completedCount + "/" + this.totalCount + ")";
+        this.progressTips.textKey = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.2")+ this.resource.id + " (" + this.completedCount + "/" + this.totalCount + ")";
     }
 });

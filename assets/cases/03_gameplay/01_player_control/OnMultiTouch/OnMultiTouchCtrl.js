@@ -5,18 +5,10 @@ cc.Class({
 
     properties: {
         canvas: cc.Node,
-        target: cc.Node,
-        tips: cc.Label
+        target: cc.Node
     },
 
     onLoad: function () {
-        // zh:该效果只能在移动平台上有效！
-        // en:The sample can only be effective on mobile platforms!
-        if (!cc.sys.isMobile) {
-            return;
-        }
-        this.tips.textKey = i18n.t("cases/03_gameplay/01_player_control/On/OnMultiTouchInput.fire.21");
-
         var self = this, parent = this.node.parent;
         self.canvas.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
             var touches = event.getTouches();

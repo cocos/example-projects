@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -16,7 +17,10 @@ cc.Class({
     },
     
     payForProduct: function () {
-        if(!this.iapPlugin) return;
+        if(!this.iapPlugin){
+            SuspensionTips.init.showTips(' this.iapPlugin is null ');
+            return;
+        }
         var info = {
             'Product_Id': '107196',                    //商品唯一标示符
             'Product_Name': 'three hearts',            //商品名称
@@ -39,33 +43,36 @@ cc.Class({
     },
     
     getOrderId: function () {
-        if(!this.iapPlugin) return;
+        if(!this.iapPlugin){
+            SuspensionTips.init.showTips(' this.iapPlugin is null ');
+            return;
+        }
         var orderId = this.iapPlugin.getOrderId();
-        cc.log('########## getOrderId ########## : ' + orderId);
+        SuspensionTips.init.showTips(' getOrderId : ' + orderId);
     },
     
     onPayResult (code, msg) {
-        cc.log('########## PAY RESULT ########## code: ' + code + ',msg: ' + msg);
+        cc.log(' PAY RESULT ########## code: ' + code + ',msg: ' + msg);
         switch(code){
             case anysdk.PayResultCode.kPaySuccess:// 支付系统支付成功
-                console.log('########## kPaySuccess ##########');
+                console.log(' kPaySuccess ');
                 break;
             case anysdk.PayResultCode.kPayCancel:// 支付系统支付取消
-                console.log('########## kPayCancel ##########');
+                console.log(' kPayCancel ');
                 break;
             case anysdk.PayResultCode.kPayFail:// 支付系统支付失败
             case anysdk.PayResultCode.kPayNetworkError:// 支付系统网络错误
             case anysdk.PayResultCode.kPayProductionInforIncomplete:// 支付系统支付信息不完整
-                console.log('########## kPayFail ##########');
+                console.log(' kPayFail ');
                 break;
             case anysdk.PayResultCode.kPayInitSuccess:// 支付系统初始化成功
-                console.log('########## kPayInitSuccess ##########');
+                console.log(' kPayInitSuccess ');
                 break;
             case anysdk.PayResultCode.kPayInitFail:// 支付系统初始化失败
-                console.log('########## kPayInitFail ##########');
+                console.log(' kPayInitFail ');
                  break;
             case anysdk.PayResultCode.kPayNowPaying:// 支付系统正在支付中
-                console.log('########## kPayNowPaying ##########');
+                console.log(' kPayNowPaying ');
                 break;
             default:
                 break;

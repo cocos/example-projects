@@ -73,7 +73,7 @@ cc.Class({
             self._touchStartPos = event.touch.getLocation();
         }, self);
         this.node.on(cc.Node.EventType.TOUCH_END, function (event) {
-            if (!self._touching) return;
+            if (!self._touching || !self._isMapLoaded || self._succeedLayer.active) return;
 
             self._touching = false;
             var touchPos = event.touch.getLocation();

@@ -1,3 +1,4 @@
+const SuspensionTips = require('SuspensionTips');
 cc.Class({
     extends: cc.Component,
 
@@ -16,57 +17,72 @@ cc.Class({
     },
     
     preloadAds: function (){
-	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) return;
+	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)){
+            SuspensionTips.init.showTips(' this.adsPlugin is null or banner is not supported ');
+            return;
+        }
         this.adsPlugin.preloadAds(anysdk.AdsType.AD_TYPE_BANNER);
 	},
 	
 	showAds: function (){
-	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) return;
+	    if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)){
+            SuspensionTips.init.showTips(' this.adsPlugin is null or banner is not supported ');
+            return;
+        }
         this.adsPlugin.showAds(anysdk.AdsType.AD_TYPE_BANNER);
 	},
 	
 	hideAds: function (){
-	   if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) return;
+	   if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) {
+            SuspensionTips.init.showTips(' this.adsPlugin is null or banner is not supported ');
+            return;
+        }
        this.adsPlugin.hideAds(anysdk.AdsType.AD_TYPE_BANNER);
 	},
 	
 	queryPoints: function (){
-        if (!this.adsPlugin) return;
+        if (!this.adsPlugin){
+            SuspensionTips.init.showTips(' this.adsPlugin is null ');
+            return;
+        }
 		var point = this.adsPlugin.queryPoints();
-		cc.log('########## queryPoints ########## : ' + point);
+		SuspensionTips.init.showTips(' queryPoints : ' + point);
 	},
 	
 	spendPoints: function(){
-        if (!this.adsPlugin) return;
+        if (!this.adsPlugin){
+            SuspensionTips.init.showTips(' this.adsPlugin is null ');
+            return;
+        }
 		this.adsPlugin.spendPoints(1);
 	},
 
 	onAdsResult:function(code, msg){
-        cc.log('########## ADS RESULT ########## code: ' + code + ',msg: ' + msg);
+        cc.log(' ADS RESULT ########## code: ' + code + ',msg: ' + msg);
 		switch(code){
 		case anysdk.AdsResultCode.kAdsReceived:
-            cc.log("########## kAdsReceived ##########");
+            SuspensionTips.init.showTips(' kAdsReceived ');
 			break;
 	    case anysdk.AdsResultCode.kAdsShown:
-            cc.log("########## kAdsShown ##########");
+            SuspensionTips.init.showTips(' kAdsShown ');
 	    	break;
 	    case anysdk.AdsResultCode.kAdsDismissed:
-            cc.log("########## kAdsDismissed ##########");
+            SuspensionTips.init.showTips(' kAdsDismissed ');
 	    	break;
 	    case anysdk.AdsResultCode.kPointsSpendSucceed:
-            cc.log("########## kPointsSpendSucceed ##########");
+            SuspensionTips.init.showTips(' kPointsSpendSucceed ');
 	    	break;
 	    case anysdk.AdsResultCode.kPointsSpendFailed:
-            cc.log("########## kPointsSpendFailed ##########");
+            SuspensionTips.init.showTips(' kPointsSpendFailed ');
 	    	break;
 	    case anysdk.AdsResultCode.kNetworkError:
-            cc.log("########## kNetworkError ##########");
+            SuspensionTips.init.showTips(' kNetworkError ');
 	    	break;
 	    case anysdk.AdsResultCode.kUnknownError:
-            cc.log("########## kUnknownError ##########");
+            SuspensionTips.init.showTips(' kUnknownError ');
 	    	break;
 	    case anysdk.AdsResultCode.kOfferWallOnPointsChanged:
-            cc.log("########## kOfferWallOnPointsChanged ##########");
+            SuspensionTips.init.showTips(' kOfferWallOnPointsChanged ');
 	    	break;
 	    default:
 	    	break;
