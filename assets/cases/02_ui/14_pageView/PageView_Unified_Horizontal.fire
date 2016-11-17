@@ -43,7 +43,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "0eab9cc2-440d-449a-b77f-af46ebd0d8fb",
+    "_id": "718bcbf6-676a-46f0-9665-eec5581fd614",
     "autoReleaseAssets": false
   },
   {
@@ -894,13 +894,17 @@
     },
     "_resize": 1,
     "_N$layoutType": 1,
+    "_N$padding": 0,
     "_N$cellSize": {
       "__type__": "cc.Size",
       "width": 40,
       "height": 40
     },
     "_N$startAxis": 0,
-    "_N$padding": 0,
+    "_N$paddingLeft": 0,
+    "_N$paddingRight": 0,
+    "_N$paddingTop": 0,
+    "_N$paddingBottom": 0,
     "_N$spacingX": 0,
     "_N$spacingY": 15,
     "_N$verticalDirection": 1,
@@ -1013,12 +1017,14 @@
     "scrollEvents": [],
     "cancelInnerEvents": true,
     "scrollThreshold": 0.5,
+    "pageTurningVelocity": 100,
     "pageTurningEventTiming": 0.1,
     "pageEvents": [
       {
         "__id__": 27
       }
     ],
+    "_N$unifiedSize": 0,
     "_N$direction": 0,
     "_N$indicator": {
       "__id__": 25
@@ -1199,7 +1205,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
+      "width": 166,
       "height": 0
     },
     "_children": [
@@ -1270,8 +1276,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 98.33333333333333,
-      "height": 60
+      "width": 126,
+      "height": 55
     },
     "_children": [
       {
@@ -1284,7 +1290,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -270.8333333333333,
+      "x": -340,
       "y": 0
     },
     "_skewX": 0,
@@ -1498,8 +1504,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 98.33333333333333,
-      "height": 60
+      "width": 126,
+      "height": 55
     },
     "_children": [
       {
@@ -1512,7 +1518,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -162.5,
+      "x": -204,
       "y": 0
     },
     "_skewX": 0,
@@ -1726,8 +1732,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 98.33333333333333,
-      "height": 60
+      "width": 126,
+      "height": 55
     },
     "_children": [
       {
@@ -1740,7 +1746,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -54.166666666666686,
+      "x": -68,
       "y": 0
     },
     "_skewX": 0,
@@ -1785,7 +1791,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
+      "width": 100,
       "height": 40
     },
     "_children": [],
@@ -1829,7 +1835,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
-    "_N$string": "插入",
+    "_N$string": "插入当前页",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
@@ -1954,8 +1960,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 98.33333333333333,
-      "height": 60
+      "width": 126,
+      "height": 55
     },
     "_children": [
       {
@@ -1968,7 +1974,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 54.16666666666664,
+      "x": 68,
       "y": 0
     },
     "_skewX": 0,
@@ -2182,8 +2188,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 98.33333333333333,
-      "height": 60
+      "width": 126,
+      "height": 55
     },
     "_children": [
       {
@@ -2196,7 +2202,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 162.49999999999997,
+      "x": 204,
       "y": 0
     },
     "_skewX": 0,
@@ -2285,7 +2291,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
-    "_N$string": "移除指定页",
+    "_N$string": "移除当前页",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
@@ -2410,7 +2416,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 98.33333333333333,
+      "width": 126,
       "height": 60
     },
     "_children": [
@@ -2424,7 +2430,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 270.8333333333333,
+      "x": 340,
       "y": 0
     },
     "_skewX": 0,
@@ -2625,18 +2631,22 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 0,
+      "width": 166,
       "height": 0
     },
-    "_resize": 2,
+    "_resize": 1,
     "_N$layoutType": 1,
+    "_N$padding": 0,
     "_N$cellSize": {
       "__type__": "cc.Size",
-      "width": 40,
-      "height": 40
+      "width": 126,
+      "height": 60
     },
     "_N$startAxis": 0,
-    "_N$padding": -320,
+    "_N$paddingLeft": -320,
+    "_N$paddingRight": -320,
+    "_N$paddingTop": -320,
+    "_N$paddingBottom": -320,
     "_N$spacingX": 10,
     "_N$spacingY": 20,
     "_N$verticalDirection": 1,
