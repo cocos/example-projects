@@ -44,7 +44,7 @@ cc.Class({
         this._clear();
         this._createLabel("Load All Assets");
         this.scrollView.scrollToTop();
-        cc.loader.loadResAll("test assets", (err, assets) => {
+        cc.loader.loadResDir("test assets", (err, assets) => {
             this._assets = assets;
             var text = "";
             for (var i = 0; i < assets.length; ++i) {
@@ -70,7 +70,7 @@ cc.Class({
         this._clear();
         this._createLabel("Load All Sprite Frame");
         this.scrollView.scrollToTop();
-        cc.loader.loadResAll("test assets", cc.SpriteFrame, (err, assets) => {
+        cc.loader.loadResDir("test assets", cc.SpriteFrame, (err, assets) => {
             this._assets = assets;
             var text = "";
             for (var i = 0; i < assets.length; ++i) {

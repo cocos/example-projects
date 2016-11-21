@@ -193,7 +193,7 @@ module.exports = {
   "cases/05_scripting/07_asset_loading/LoadRes.fire.10": "Load SpriteFrame",
   "cases/05_scripting/07_asset_loading/LoadRes.fire.17": "By Url",
   "cases/05_scripting/07_asset_loading/LoadRes.fire.20": "Load Prefab",
-  "cases/05_scripting/07_asset_loading/LoadResAll.fire.6": "LoadResAll",
+  "cases/05_scripting/07_asset_loading/LoadResAll.fire.6": "LoadResDir",
   "cases/05_scripting/07_asset_loading/LoadResAll.fire.24": "Load All",
   "cases/05_scripting/07_asset_loading/LoadResAll.fire.30": "Load SpriteFrame All",
   "cases/05_scripting/07_asset_loading/LoadResAll.fire.36": "Clear All",
