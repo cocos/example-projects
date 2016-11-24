@@ -166,7 +166,7 @@ cc.Class({
         //register event callbacks
         //this is an example of a handler declared inline
         sioclient.on("connect", function() {
-            if (!this.socketIO) { return; }
+            if (!self.socketIO) { return; }
 
             var msg = sioclient.tag + " Connected!";
             self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.13") + msg;
@@ -174,15 +174,15 @@ cc.Class({
             // Send message after connection
             self._sioClient.send("Hello Socket.IO!");
         });
-        
+
         //example of a handler that is shared between multiple clients
         sioclient.on("message", this.message.bind(this));
 
-        sioclient.on("echotest", function(data) {
-            if (!this.socketIO) { return; }
+        sioclient.on("echotest", function (data) {
+            if (!self.socketIO) { return; }
 
             cc.log("echotest 'on' callback fired!");
-            var msg = this.tag + " says 'echotest' with data: " + data;
+            var msg = self.tag + " says 'echotest' with data: " + data;
             self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.14") + msg;
         });
 
