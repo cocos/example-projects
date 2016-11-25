@@ -2,7 +2,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        curIndex: 0,
+        curNum: 3,
+        curTotal: 10,
         pageTeample: cc.Prefab,
         target: cc.PageView,
         label: cc.Label
@@ -36,35 +37,64 @@ cc.Class({
     },
 
     // 添加页面
-    onAddPage () {
-        this.target.addPage(this._createPage());
+    plusPage (callback) {
+        if (this.curNum > this.curTotal) {
+            return;
+        }
+        this.curNum++;
+        if (callback) {
+            callback();
+        }
     },
 
-    // 插入页面
+    // 减少页面
+    lessPageNum (callback) {
+        if (this.curNum <= 0) {
+            return;
+        }
+        this.curNum--;
+        if (callback) {
+            callback();
+        }
+    },
+
+    // 添加页面
+    onAddPage () {
+        this.plusPage(() => {
+            this.target.addPage(this._createPage());
+        });
+    },
+
+    // 插入当前页面
     onInsertPage () {
-        var curIndex = this.target.getCurrentPageIndex() - 1;
-        curIndex = curIndex < 0 ? 0 : curIndex;
-        this.target.insertPage(this._createPage(), curIndex);
+        this.plusPage(() => {
+            this.target.insertPage(this._createPage(), this.target.getCurrentPageIndex());
+        });
     },
 
     // 移除最后一个页面
     onRemovePage () {
-        var pages = this.target.getPages();
-        this.target.removePage(pages[pages.length - 1]);
+        this.lessPageNum(() => {
+            var pages = this.target.getPages();
+            this.target.removePage(pages[pages.length - 1]);
+        });
     },
 
-    // 移除指定页面
+    // 移除当前页面
     onRemovePageAtIndex () {
-        this.target.removePageAtIndex(1);
+        this.lessPageNum(() => {
+            this.target.removePageAtIndex(this.target.getCurrentPageIndex());
+        });
     },
 
     // 移除所有页面
     onRemoveAllPage () {
         this.target.removeAllPages();
+        this.curNum = 0;
     },
 
     // 监听事件
-    onPageEevent (sender, eventType) {
+    onPageEvent (sender, eventType) {
         // 翻页事件
         if (eventType !== cc.PageView.EventType.PAGE_TURNING) {
             return;
