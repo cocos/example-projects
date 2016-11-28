@@ -201,6 +201,7 @@ module.exports = {
   "cases/05_scripting/09_singleton/Singleton.fire.6": "这例子不包含运行时演示",
   "cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.1": "下载完成!!",
   "cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.2": "正在下载: ",
+  "cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.3": "点击任意地方进行下载...",
   "cases/05_scripting/10_loadingBar/loadingBar.fire.7": "加载完成",
   "cases/05_scripting/10_loadingBar/loadingBar.fire.18": "正在下载",
   "cases/05_scripting/11_network/NetworkCtrl.js.1": "请稍等...",
