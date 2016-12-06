@@ -28,6 +28,10 @@ cc.Class({
         btnBack: {
             default: null,
             type: cc.Button
+        },
+        testList: {
+            default: null,
+            type: cc.ScrollView
         }
     },
 
@@ -39,23 +43,15 @@ cc.Class({
         this.isMenu = true;
         this.loadInstruction(this.currentSceneUrl);
         this.node.zIndex = 999;
-    },
-    
-    onEnable: function () {
-        // for this component, onEnable should be called after
-        // each time new scene launched
-        var sceneListNode = cc.find('Canvas/testList/viewport/list');
-        if (sceneListNode) {
+
+        cc.game.addPersistRootNode(this.testList.node);
+        if (this.testList && this.testList.content) {
             // in main scene
-            this.sceneList = sceneListNode.getComponent('SceneList');
+            this.sceneList = this.testList.content.getComponent('SceneList');
             this.sceneList.init(this);
         }
-        else {
-            // in other scene, this.sceneList should be destroyed
-            this.sceneList = null;
-        }
     },
-
+    
     backToList: function () {
         this.showReadme(null, false);
         this.currentSceneUrl = 'TestList.fire';
@@ -64,9 +60,10 @@ cc.Class({
     },
 
     loadScene: function (url) {
-        this.contentPos = cc.find('Canvas/testList').getComponent(cc.ScrollView).getContentPosition();
+        this.contentPos = this.testList.getContentPosition();
         this.currentSceneUrl = url;
         this.isMenu = false;
+        this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
     },
 
@@ -74,7 +71,8 @@ cc.Class({
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
         if (this.isMenu && this.contentPos) {
-            cc.find('Canvas/testList').getComponent(cc.ScrollView).setContentPosition(this.contentPos);
+            this.testList.node.active = true;
+            this.testList.setContentPosition(this.contentPos);
         }
     },
 
