@@ -202,6 +202,7 @@ module.exports = {
   "cases/05_scripting/09_singleton/Singleton.fire.6": "This example does not include the runtime demonstration",
   "cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.1": "download complete!!",
   "cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.2": "dowloading: ",
+  "cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.3": "click anywhere to download...",
   "cases/05_scripting/10_loadingBar/loadingBar.fire.7": "Loading Completed",
   "cases/05_scripting/10_loadingBar/loadingBar.fire.18": "Dowloading",
   "cases/05_scripting/11_network/NetworkCtrl.js.1": "waiting...",

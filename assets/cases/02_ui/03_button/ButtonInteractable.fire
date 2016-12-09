@@ -10,7 +10,6 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -40,15 +39,15 @@
         "__id__": 15
       },
       {
-        "__id__": 28
+        "__id__": 26
       }
     ],
     "_localZOrder": 0,
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
-    "_id": "3ab6238d-dd8d-40e4-ae1b-bdd5122048b7"
+    "_id": "3ab6238d-dd8d-40e4-ae1b-bdd5122048b7",
+    "autoReleaseAssets": false
   },
   {
     "__type__": "cc.Node",
@@ -102,12 +101,11 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "0b951/6WMhCD6sAzEqnsgvw",
     "_active": true,
     "_components": [
       {
-        "__id__": 27
+        "__id__": 25
       }
     ],
     "_prefab": null,
@@ -155,7 +153,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "1f5cfIuyT5BnoknlFH4zLZS",
     "_active": true,
     "_components": [
@@ -211,10 +208,14 @@
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
     "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
     "_originalWidth": 960,
     "_originalHeight": 640
   },
@@ -226,7 +227,8 @@
     "asset": {
       "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
     },
-    "fileId": "78fd70+ls5GgJcFkzvLSRk8"
+    "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+    "sync": false
   },
   {
     "__type__": "cc.Node",
@@ -277,7 +279,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "65aeaiyioxLiJgBCdu/jQYV",
     "_active": true,
     "_components": [
@@ -286,9 +287,6 @@
       },
       {
         "__id__": 13
-      },
-      {
-        "__id__": 26
       }
     ],
     "_prefab": null,
@@ -336,7 +334,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "e4ec1+DwiZCroLdXe+3J7yv",
     "_active": true,
     "_components": [
@@ -356,6 +353,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
+    "_actualFontSize": 40,
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -409,7 +407,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "e6249e+My1CsqRojFU5oJDa",
     "_active": true,
     "_components": [
@@ -429,6 +426,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
+    "_actualFontSize": 40,
     "_fontSize": 35,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -490,6 +488,7 @@
       "a": 255
     },
     "duration": 0.1,
+    "zoomScale": 1.2,
     "pressedSprite": {
       "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
     },
@@ -502,6 +501,7 @@
       }
     ],
     "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 214,
@@ -532,7 +532,8 @@
       "__id__": 15
     },
     "component": "ButtonInteractable",
-    "handler": "onBtnLeftClicked"
+    "handler": "onBtnLeftClicked",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Node",
@@ -576,7 +577,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "0bcf39nDoBF0onarYht+jxC",
     "_active": true,
     "_components": [
@@ -632,6 +632,7 @@
       "a": 255
     },
     "duration": 0.1,
+    "zoomScale": 1.2,
     "pressedSprite": {
       "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
     },
@@ -640,10 +641,11 @@
     },
     "clickEvents": [
       {
-        "__id__": 25
+        "__id__": 24
       }
     ],
     "_N$interactable": false,
+    "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 214,
@@ -717,7 +719,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "1f3c3U8cqRH64WpCsxeJGqg",
     "_active": true,
     "_components": [
@@ -726,9 +727,6 @@
       },
       {
         "__id__": 17
-      },
-      {
-        "__id__": 24
       }
     ],
     "_prefab": null,
@@ -776,7 +774,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "f18d3DFEOtASKgpUKx8F9bn",
     "_active": true,
     "_components": [
@@ -796,6 +793,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
+    "_actualFontSize": 40,
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -849,7 +847,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "de8adSQEoBHFYf1G+ZVokgi",
     "_active": true,
     "_components": [
@@ -869,6 +866,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
+    "_actualFontSize": 40,
     "_fontSize": 35,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -907,54 +905,13 @@
     "_atlas": null
   },
   {
-    "__type__": "cc.Widget",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 18
-    },
-    "_enabled": true,
-    "isAlignOnce": true,
-    "_alignFlags": 32,
-    "_left": 0,
-    "_right": 200,
-    "_top": 0,
-    "_bottom": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_originalWidth": 0,
-    "_originalHeight": 0
-  },
-  {
     "__type__": "cc.ClickEvent",
     "target": {
       "__id__": 15
     },
     "component": "ButtonInteractable",
-    "handler": "onBtnRightClicked"
-  },
-  {
-    "__type__": "cc.Widget",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 7
-    },
-    "_enabled": true,
-    "isAlignOnce": true,
-    "_alignFlags": 8,
-    "_left": 200,
-    "_right": 0,
-    "_top": 0,
-    "_bottom": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_originalWidth": 0,
-    "_originalHeight": 0
+    "handler": "onBtnRightClicked",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Canvas",
@@ -1014,12 +971,11 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "be079lHuo1DrqjFPBTa4cJJ",
     "_active": true,
     "_components": [
       {
-        "__id__": 29
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -1030,7 +986,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 28
+      "__id__": 26
     },
     "_enabled": true,
     "text": "## Button 的 interactable 属性范例\n\n- 按下左边按钮时，左边按钮变灰，右边按钮变亮。\n- 按下右边按钮时，右边按钮变灰，左边按钮变亮。\n- 按钮一旦变灰，不能再被按下。"
