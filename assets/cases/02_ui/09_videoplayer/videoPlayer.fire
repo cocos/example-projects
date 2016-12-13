@@ -89,7 +89,7 @@
         "__id__": 13
       },
       {
-        "__id__": 20
+        "__id__": 21
       },
       {
         "__id__": 22
@@ -233,6 +233,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -1,
     "_right": 1,
@@ -623,6 +624,12 @@
     },
     "statusLabel": {
       "__id__": 18
+    },
+    "currentTime": {
+      "__id__": 12
+    },
+    "totalTime": {
+      "__id__": 20
     }
   },
   {
@@ -700,6 +707,26 @@
     "groupIndex": 0
   },
   {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 21
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_actualFontSize": 20,
+    "_fontSize": 20,
+    "_lineHeight": 20,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_N$string": "TotalTime:",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$overflow": 0
+  },
+  {
     "__type__": "cc.Node",
     "_name": "totalTimeTitle",
     "_objFlags": 0,
@@ -745,31 +772,11 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 21
+        "__id__": 20
       }
     ],
     "_prefab": null,
     "groupIndex": 0
-  },
-  {
-    "__type__": "cc.Label",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 20
-    },
-    "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
-    "_lineHeight": 20,
-    "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_N$string": "TotalTime:",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$overflow": 0
   },
   {
     "__type__": "cc.Node",
@@ -1025,7 +1032,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 40,
+    "_actualFontSize": 20,
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -2697,6 +2704,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 18,
     "_left": 0,
     "_right": 0,
@@ -2770,6 +2778,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,

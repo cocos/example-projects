@@ -65,7 +65,8 @@ cc.Class({
     },
 
     update: function () {
-        this.currentTime.string = parseFloat(this.videoPlayer.currentTime.toFixed(2));
+        if (this.currentTime)
+            this.currentTime.string = parseFloat(this.videoPlayer.currentTime.toFixed(2));
     }
 
 });
