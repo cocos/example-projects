@@ -13,6 +13,9 @@ cc.Class({
     },
 
     update: function (dt) {
+        if (cc._renderType !== cc.game.RENDER_TYPE_WEBGL && !CC_JSB) {
+            return;
+        }
         this.mask.alphaThreshold = this.slider.progress;
         this.label.string = this.slider.progress.toFixed(1);
     }
