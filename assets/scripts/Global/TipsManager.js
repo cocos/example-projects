@@ -15,6 +15,7 @@ var PlatformType = cc.Enum({
     Runtime: 20,
 
     WebGl: 30,
+    Canvas: 31,
 
     Native_Browser_Chrome: 100
 });
@@ -52,6 +53,10 @@ cc.Class({
             case PlatformType.Runtime:
                 showed = cc.runtime;
                 textKey = i18n.t("example_case_nonsupport_runtime_tips");
+                break;
+            case PlatformType.Canvas:
+                showed = cc._renderType === cc.game.RENDER_TYPE_CANVAS;
+                textKey = i18n.t("example_case_nonsupport_web_canvas_tips");
                 break;
         }
         return {

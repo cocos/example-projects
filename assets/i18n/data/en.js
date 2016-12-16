@@ -2,6 +2,7 @@ module.exports = {
   "example_case_nonsupport_native_desktop_tips": "The example case nonsupport the Mac platform and Windows platform",
   "example_case_nonsupport_runtime_tips": "The example case does not support the runtime platform",
   "example_case_nonsupport_mobile_tips": "The example case nonsupport mobile platforms",
+  "example_case_nonsupport_web_canvas_tips": "The example case nonsupport Canvas mode",
   "example_case_support_webGl_tips": "The example case only supports WebGL mode",
   "example_case_support_mobile_tips": "The example case only supports mobile platforms",
   "example_case_support_mobile_android_tips": "The example case only supports Android mobile platform",

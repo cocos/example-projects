@@ -2,6 +2,7 @@ module.exports = {
   "example_case_nonsupport_native_desktop_tips": "该测试用例不支持 Mac 平台和 Windows 平台",
   "example_case_nonsupport_runtime_tips": "该测试用例不支持 Runtime 平台",
   "example_case_nonsupport_mobile_tips": "该测试用例不支持移动平台",
+  "example_case_nonsupport_web_canvas_tips": "该测试用例不支持 Canvas 模式",
   "example_case_support_webGl_tips": "该测试用例只支持 WebGL 模式",
   "example_case_support_mobile_tips": "该测试用例只支持移动平台",
   "example_case_support_mobile_android_tips": "该测试用例只支持 Android 移动平台",
