@@ -36,6 +36,7 @@ cc.Class({
     },
 
     onLoad: function () {
+        this._isLoadingScene = false;
         this.showDebugDraw = false;
         cc.game.addPersistRootNode(this.node);
         this.currentSceneUrl = 'TestList.fire';
@@ -53,6 +54,10 @@ cc.Class({
     },
     
     backToList: function () {
+        if (this._isLoadingScene) {
+            return;
+        }
+        this._isLoadingScene = true;
         this.showReadme(null, false);
         this.currentSceneUrl = 'TestList.fire';
         this.isMenu = true;
@@ -60,6 +65,7 @@ cc.Class({
     },
 
     loadScene: function (url) {
+        this._isLoadingScene = true;
         this.contentPos = this.testList.getContentPosition();
         this.currentSceneUrl = url;
         this.isMenu = false;
@@ -70,10 +76,12 @@ cc.Class({
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
+        this.testList.node.active = false;
         if (this.isMenu && this.contentPos) {
             this.testList.node.active = true;
             this.testList.setContentPosition(this.contentPos);
         }
+        this._isLoadingScene = false;
     },
 
     loadInstruction: function (url) {
