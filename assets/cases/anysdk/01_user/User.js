@@ -9,9 +9,17 @@ cc.Class({
     onLoad: function () {
         if(cc.sys.isMobile && anysdk.agentManager.getUserPlugin){
             this.userPlugin = anysdk.agentManager.getUserPlugin();
-            if(this.userPlugin){
-                this.userPlugin.setListener(this.onUserResult, this);
-            }
+            var timeCallback = function (dt) {
+                if(SuspensionTips.init){
+                    if(this.userPlugin){
+                        this.userPlugin.setListener(this.onUserResult, this);
+                    }
+                    this.unschedule(timeCallback);
+                }
+                cc.log(' SuspensionTips.init ');
+            };
+            this.schedule(timeCallback, 1,this);
+            
         }
     },
     
