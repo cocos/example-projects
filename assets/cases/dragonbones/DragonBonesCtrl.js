@@ -119,6 +119,9 @@ cc.Class({
             this.downButton.on(cc.Node.EventType.TOUCH_END, event => {
                 this.squat(false);
             }, this);
+            this.downButton.on(cc.Node.EventType.TOUCH_CANCEL, event => {
+                this.squat(false);
+            }, this);
         }
 
         if (this.leftButton) {
@@ -130,6 +133,10 @@ cc.Class({
                 this._left = false;
                 this._updateMove(-1);
             }, this);
+            this.leftButton.on(cc.Node.EventType.TOUCH_CANCEL, event => {
+                this._left = false;
+                this._updateMove(-1);
+            }, this);
         }
 
         if (this.rightButton) {
@@ -138,6 +145,10 @@ cc.Class({
                 this._updateMove(1);
             }, this);
             this.rightButton.on(cc.Node.EventType.TOUCH_END, event => {
+                this._right = false;
+                this._updateMove(1);
+            }, this);
+            this.rightButton.on(cc.Node.EventType.TOUCH_CANCEL, event => {
                 this._right = false;
                 this._updateMove(1);
             }, this);
