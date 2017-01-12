@@ -51,6 +51,13 @@ cc.Class({
             this.sceneList = this.testList.content.getComponent('SceneList');
             this.sceneList.init(this);
         }
+        if (typeof cocosAnalytics !== 'undefined') {
+            //Cocos Analytics service, to learn more please visit:
+            // http://analytics.qudao.info/
+            cocosAnalytics.CAEvent.onEvent({
+                eventName: "打开范例"
+            });
+        }        
     },
     
     backToList: function () {
@@ -71,6 +78,13 @@ cc.Class({
         this.isMenu = false;
         this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
+        if (typeof cocosAnalytics !== 'undefined') {
+            //Cocos Analytics service, to learn more please visit:
+            // http://analytics.qudao.info/
+            cocosAnalytics.CALevels.begin({
+                level: url
+            });
+        }
     },
 
     onLoadSceneFinish: function () {
