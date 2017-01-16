@@ -42,6 +42,7 @@ cc.Class({
         this.currentSceneUrl = 'TestList.fire';
         this.contentPos = null;
         this.isMenu = true;
+        this.btnBack.node.active = false;
         this.loadInstruction(this.currentSceneUrl);
         this.node.zIndex = 999;
 
@@ -90,10 +91,14 @@ cc.Class({
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
-        this.testList.node.active = false;
         if (this.isMenu && this.contentPos) {
+            this.btnBack.node.active = false;
             this.testList.node.active = true;
             this.testList.setContentPosition(this.contentPos);
+        }
+        else {
+            this.btnBack.node.active = true;
+            this.testList.node.active = false;
         }
         this._isLoadingScene = false;
     },
