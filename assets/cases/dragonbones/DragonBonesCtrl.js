@@ -346,7 +346,7 @@ cc.Class({
     _frameEventHandler : function (event) {
         if (event.detail.name === "onFire") {
             var firePointBone = event.detail.armature.getBone("firePoint");
-            var localPoint = cc.p(firePointBone.global.x, firePointBone.global.y);
+            var localPoint = cc.p(firePointBone.global.x, -firePointBone.global.y);
 
             var display = event.detail.armature.display;
             var globalPoint = display.convertToWorldSpace(localPoint);
