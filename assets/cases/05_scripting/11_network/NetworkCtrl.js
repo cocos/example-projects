@@ -1,9 +1,5 @@
 const i18n = require('i18n');
 
-if (!window.io) {
-    cc.error('You should import the socket.io.js as a plugin!');
-}
-
 cc.Class({
     extends: cc.Component,
 
@@ -156,6 +152,10 @@ cc.Class({
     
     sendSocketIO: function () {
         var self = this;
+        if (typeof io === 'undefined') {
+            cc.error('You should import the socket.io.js as a plugin!');
+            return;
+        }
         //create a client by using this static method, url does not need to contain the protocol
         var sioclient = io.connect("ws://tools.itharbors.com:4000", {"force new connection" : true});
         this._sioClient = sioclient;
