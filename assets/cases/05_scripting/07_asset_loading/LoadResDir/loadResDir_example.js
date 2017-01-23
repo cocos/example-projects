@@ -28,6 +28,12 @@ cc.Class({
     _clear: function () {
         this.scrollView.content.removeAllChildren(true);
         for (var i = 0; i < this._assets.length; ++i) {
+            var asset = this._assets[i];
+            // 目前载入 plist 后的 Object 资源没有包含 _uuid 所以无法 release（PS：1.5 版本会加 _uuid）
+            // 暂时过滤 Object 并且没有 _uuid 类型的资源
+            if (typeof asset === 'object' && !asset._uuid) {
+                continue;
+            }
             cc.loader.release(this._assets[i]);
         }
     },
