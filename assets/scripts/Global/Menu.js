@@ -77,7 +77,6 @@ cc.Class({
         this.contentPos = this.testList.getContentPosition();
         this.currentSceneUrl = url;
         this.isMenu = false;
-        this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
         if (typeof cocosAnalytics !== 'undefined') {
             //Cocos Analytics service, to learn more please visit:
@@ -90,6 +89,7 @@ cc.Class({
 
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
+        this.testList.node.active = false;
         this.loadInstruction(url);
         if (this.isMenu && this.contentPos) {
             this.btnBack.node.active = false;
