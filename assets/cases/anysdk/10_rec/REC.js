@@ -6,7 +6,7 @@ cc.Class({
 
     onLoad: function () {
         this._super();
-        if (this.hasSupport(anysdk.agentManager.getRECPlugin)) {
+        if (this.hasSupport('getRECPlugin')) {
             this.recPlugin = anysdk.agentManager.getRECPlugin();
             if (this.recPlugin) {
                 this.recPlugin.setListener(this.onRECResult, this);
