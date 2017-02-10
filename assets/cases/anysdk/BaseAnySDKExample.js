@@ -10,6 +10,9 @@ cc.Class({
     },
 
     hasSupport: function (plugin) {
+        if (!cc.sys.isMobile) {
+            return;
+        }
         if (typeof anysdk === 'undefined') {
             this.tips.textKey = i18n.t("cases/anysdk/3");
             return false;
