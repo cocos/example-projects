@@ -14,21 +14,29 @@ cc.Class({
         this._setMix('run', 'jump');
         this._setMix('walk', 'jump');
         
-        spine.setStartListener(track => {
-            var entry = spine.getCurrent(track);
-            if (entry) {
-                var animationName = entry.animation ? entry.animation.name : "";
-                cc.log("[track %s] start: %s", track, animationName);
-            }
+        spine.setStartListener(trackEntry => {
+            var animationName = trackEntry.animation ? trackEntry.animation.name : "";
+            cc.log("[track %s][animation %s] start.", trackEntry.trackIndex, animationName);
         });
-        spine.setEndListener(track => {
-            cc.log("[track %s] end", track);
+        spine.setInterruptListener(trackEntry => {
+            var animationName = trackEntry.animation ? trackEntry.animation.name : "";
+            cc.log("[track %s][animation %s] interrupt.", trackEntry.trackIndex, animationName);
         });
-        spine.setCompleteListener((track, loopCount) => {
-            cc.log("[track %s] complete: %s", track, loopCount);
+        spine.setEndListener(trackEntry => {
+            var animationName = trackEntry.animation ? trackEntry.animation.name : "";
+            cc.log("[track %s][animation %s] end.", trackEntry.trackIndex, animationName);
         });
-        spine.setEventListener((track, event) => {
-            cc.log("[track %s] event: %s, %s, %s, %s", track, event.data.name, event.intValue, event.floatValue, event.stringValue);
+        spine.setDisposeListener(trackEntry => {
+            var animationName = trackEntry.animation ? trackEntry.animation.name : "";
+            cc.log("[track %s][animation %s] will be disposed.", trackEntry.trackIndex, animationName);
+        });
+        spine.setCompleteListener((trackEntry, loopCount) => {
+            var animationName = trackEntry.animation ? trackEntry.animation.name : "";
+            cc.log("[track %s][animation %s] complete: %s", trackEntry.trackIndex, animationName, loopCount);
+        });
+        spine.setEventListener((trackEntry, event) => {
+            var animationName = trackEntry.animation ? trackEntry.animation.name : "";
+            cc.log("[track %s][animation %s] event: %s, %s, %s, %s", trackEntry.trackIndex, animationName, event.data.name, event.intValue, event.floatValue, event.stringValue);
         });
 
         // var self = this;
