@@ -4,8 +4,7 @@ cc.Class({
 
     properties: {},
 
-    onLoad: function () {
-        this._super();
+    start: function () {
         if (this.hasSupport('getPushPlugin')) {
             this.pushPlugin = anysdk.agentManager.getPushPlugin();
             if (this.pushPlugin) {

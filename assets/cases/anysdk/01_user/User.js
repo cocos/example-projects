@@ -4,20 +4,12 @@ cc.Class({
 
     properties: {},
 
-    onLoad: function () {
-        this._super();
+    start: function () {
         if (this.hasSupport('getUserPlugin')) {
             this.userPlugin = anysdk.agentManager.getUserPlugin();
-            var timeCallback = function (dt) {
-                if (SuspensionTips.init) {
-                    if (this.userPlugin) {
-                        this.userPlugin.setListener(this.onUserResult, this);
-                    }
-                    this.unschedule(timeCallback);
-                }
-                cc.log(' SuspensionTips.init ');
-            };
-            this.schedule(timeCallback, 1, this);
+            if (this.userPlugin) {
+                this.userPlugin.setListener(this.onUserResult, this);
+            }
         }
     },
 

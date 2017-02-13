@@ -4,8 +4,7 @@ cc.Class({
 
     properties: {},
 
-    onLoad: function () {
-        this._super();
+    start: function () {
         if (this.hasSupport('getAdsPlugin')) {
             this.adsPlugin = anysdk.agentManager.getAdsPlugin();
             if (this.adsPlugin) {
