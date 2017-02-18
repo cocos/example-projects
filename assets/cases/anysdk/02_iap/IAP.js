@@ -4,8 +4,7 @@ cc.Class({
 
     properties: {},
 
-    onLoad: function () {
-        this._super();
+    start: function () {
         if (this.hasSupport('getIAPPlugin')) {
             this.iapPlugin = anysdk.agentManager.getIAPPlugin();
             if (this.iapPlugin) {
