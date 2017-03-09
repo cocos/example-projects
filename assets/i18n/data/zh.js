@@ -263,4 +263,5 @@ module.exports = {
   "scripts/Global/Menu.js.1": "说明暂缺",
   "cases/anysdk/1": "该类型只在Android、iOS、Web-Mobile上有效果",
   "cases/anysdk/2": "该类型只在Android、iOS上有效果",
-}
+  "cases/anysdk/3": "缺少 anysdk 模块，请添加",
+};

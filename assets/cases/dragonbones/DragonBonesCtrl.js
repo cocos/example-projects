@@ -119,6 +119,9 @@ cc.Class({
             this.downButton.on(cc.Node.EventType.TOUCH_END, event => {
                 this.squat(false);
             }, this);
+            this.downButton.on(cc.Node.EventType.TOUCH_CANCEL, event => {
+                this.squat(false);
+            }, this);
         }
 
         if (this.leftButton) {
@@ -130,6 +133,10 @@ cc.Class({
                 this._left = false;
                 this._updateMove(-1);
             }, this);
+            this.leftButton.on(cc.Node.EventType.TOUCH_CANCEL, event => {
+                this._left = false;
+                this._updateMove(-1);
+            }, this);
         }
 
         if (this.rightButton) {
@@ -138,6 +145,10 @@ cc.Class({
                 this._updateMove(1);
             }, this);
             this.rightButton.on(cc.Node.EventType.TOUCH_END, event => {
+                this._right = false;
+                this._updateMove(1);
+            }, this);
+            this.rightButton.on(cc.Node.EventType.TOUCH_CANCEL, event => {
                 this._right = false;
                 this._updateMove(1);
             }, this);
@@ -335,7 +346,7 @@ cc.Class({
     _frameEventHandler : function (event) {
         if (event.detail.name === "onFire") {
             var firePointBone = event.detail.armature.getBone("firePoint");
-            var localPoint = cc.p(firePointBone.global.x, firePointBone.global.y);
+            var localPoint = cc.p(firePointBone.global.x, -firePointBone.global.y);
 
             var display = event.detail.armature.display;
             var globalPoint = display.convertToWorldSpace(localPoint);

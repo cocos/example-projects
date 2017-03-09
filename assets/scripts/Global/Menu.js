@@ -42,6 +42,7 @@ cc.Class({
         this.currentSceneUrl = 'TestList.fire';
         this.contentPos = null;
         this.isMenu = true;
+        this.btnBack.node.active = false;
         this.loadInstruction(this.currentSceneUrl);
         this.node.zIndex = 999;
 
@@ -51,6 +52,13 @@ cc.Class({
             this.sceneList = this.testList.content.getComponent('SceneList');
             this.sceneList.init(this);
         }
+        if (typeof cocosAnalytics !== 'undefined') {
+            //Cocos Analytics service, to learn more please visit:
+            // http://analytics.qudao.info/
+            cocosAnalytics.CAEvent.onEvent({
+                eventName: "打开范例"
+            });
+        }        
     },
     
     backToList: function () {
@@ -71,15 +79,26 @@ cc.Class({
         this.isMenu = false;
         this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
+        if (typeof cocosAnalytics !== 'undefined') {
+            //Cocos Analytics service, to learn more please visit:
+            // http://analytics.qudao.info/
+            cocosAnalytics.CALevels.begin({
+                level: url
+            });
+        }
     },
 
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
-        this.testList.node.active = false;
         if (this.isMenu && this.contentPos) {
+            this.btnBack.node.active = false;
             this.testList.node.active = true;
             this.testList.setContentPosition(this.contentPos);
+        }
+        else {
+            this.btnBack.node.active = true;
+            this.testList.node.active = false;
         }
         this._isLoadingScene = false;
     },

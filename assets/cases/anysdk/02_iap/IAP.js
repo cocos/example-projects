@@ -1,23 +1,20 @@
 const SuspensionTips = require('SuspensionTips');
 cc.Class({
-    extends: cc.Component,
+    extends: require('BaseAnySDKExample'),
 
-    properties: {
-        
-    },
+    properties: {},
 
-    // use this for initialization
-    onLoad: function () {
-        if(cc.sys.isMobile && anysdk.agentManager.getIAPPlugin){
+    start: function () {
+        if (this.hasSupport('getIAPPlugin')) {
             this.iapPlugin = anysdk.agentManager.getIAPPlugin();
-            if(this.iapPlugin){
+            if (this.iapPlugin) {
                 this.iapPlugin.setListener(this.onIAPResult, this);
             }
         }
     },
-    
+
     payForProduct: function () {
-        if(!this.iapPlugin){
+        if (!this.iapPlugin) {
             SuspensionTips.init.showTips(' this.iapPlugin is null ');
             return;
         }
@@ -41,19 +38,19 @@ cc.Class({
         };
         this.iapPlugin.payForProduct(info);
     },
-    
+
     getOrderId: function () {
-        if(!this.iapPlugin){
+        if (!this.iapPlugin) {
             SuspensionTips.init.showTips(' this.iapPlugin is null ');
             return;
         }
         var orderId = this.iapPlugin.getOrderId();
         SuspensionTips.init.showTips(' getOrderId : ' + orderId);
     },
-    
-    onPayResult (code, msg) {
+
+    onPayResult: function (code, msg) {
         cc.log(' PAY RESULT ########## code: ' + code + ',msg: ' + msg);
-        switch(code){
+        switch (code) {
             case anysdk.PayResultCode.kPaySuccess:// 支付系统支付成功
                 console.log(' kPaySuccess ');
                 break;
@@ -70,13 +67,12 @@ cc.Class({
                 break;
             case anysdk.PayResultCode.kPayInitFail:// 支付系统初始化失败
                 console.log(' kPayInitFail ');
-                 break;
+                break;
             case anysdk.PayResultCode.kPayNowPaying:// 支付系统正在支付中
                 console.log(' kPayNowPaying ');
                 break;
             default:
                 break;
-            }
-    },
-
+        }
+    }
 });

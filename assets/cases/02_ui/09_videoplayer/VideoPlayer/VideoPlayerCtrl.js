@@ -30,6 +30,14 @@ cc.Class({
     },
 
     toggleFullscreen: function() {
+        if (
+            cc.sys.isBrowser &&
+            cc.sys.browserType === cc.sys.BROWSER_TYPE_MOBILE_QQ &&
+            cc.sys.browserVersion <= 7.2 &&
+            /Nexus 6/.test(navigator.userAgent)
+        ) {
+            return cc.log('May be crash, so prohibit full screen');
+        }
         this.videoPlayer.isFullscreen = true;
     },
 
