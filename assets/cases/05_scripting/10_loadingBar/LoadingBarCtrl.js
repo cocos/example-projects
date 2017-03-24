@@ -31,9 +31,9 @@ cc.Class({
             cc.url.raw("resources/audio/cheering.wav"),
             cc.url.raw("resources/audio/music_logo.mp3"),
             cc.url.raw("resources/test assets/audio.mp3"),
-            cc.url.raw("resources/test assets/font.png"),
-            cc.url.raw("resources/font/mikado_outline_shadow.png"),
-            cc.url.raw("resources/font/enligsh-chinese.png")
+            cc.url.raw("resources/loadingBar/font.png"),
+            cc.url.raw("resources/loadingBar/mikado_outline_shadow.png"),
+            cc.url.raw("resources/loadingBar/enligsh-chinese.png")
         ];
         this.resource = null;
         this.progressBar.progress = 0;
