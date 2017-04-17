@@ -20,9 +20,10 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         var anim = this.sheepAnim;
-        setTimeout(function() {
+        this._playAnimCallback = function() {
             anim.play('sheep_jump');
-        }, 2000);
+        };
+        this.scheduleOnce(this._playAnimCallback, 2);
     },
 
     // called every frame
