@@ -5,7 +5,7 @@ cc.Class({
     properties: {},
 
     start: function () {
-        if (this.hasSupport('getCrashPlugin')) {
+        if (this.hasSupport()) {
             this.crashPlugin = anysdk.agentManager.getCrashPlugin();
         }
     },
