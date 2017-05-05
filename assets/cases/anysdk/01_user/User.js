@@ -5,7 +5,7 @@ cc.Class({
     properties: {},
 
     start: function () {
-        if (this.hasSupport('getUserPlugin')) {
+        if (this.hasSupport()) {
             this.userPlugin = anysdk.agentManager.getUserPlugin();
             if (this.userPlugin) {
                 this.userPlugin.setListener(this.onUserResult, this);

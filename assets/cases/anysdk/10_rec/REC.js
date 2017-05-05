@@ -5,7 +5,7 @@ cc.Class({
     properties: {},
 
     start: function () {
-        if (this.hasSupport('getRECPlugin')) {
+        if (this.hasSupport()) {
             this.recPlugin = anysdk.agentManager.getRECPlugin();
             if (this.recPlugin) {
                 this.recPlugin.setListener(this.onRECResult, this);

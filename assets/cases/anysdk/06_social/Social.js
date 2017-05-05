@@ -5,7 +5,7 @@ cc.Class({
 	properties: {},
 
 	start: function () {
-		if (this.hasSupport('getSocialPlugin')) {
+		if (this.hasSupport()) {
 			this.socialPlugin = anysdk.agentManager.getSocialPlugin();
 			if (this.socialPlugin) {
 				this.socialPlugin.setListener(this.onSocialResult, this);

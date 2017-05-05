@@ -13,10 +13,10 @@ cc.Class({
     },
 
     onLoad () {
-        var tips = this.node.parent.parent.parent.getChildByName('Tips');
-        var isSupported = tips.getComponent('LabelLocalized').textKey.indexOf('1') == -1;
-        if (!cc.sys.isMobile) return;
-        if (cc.sys.isBrowser && isSupported) return;
+        var tips = this.scrollView.node.parent.getChildByName('Tips');
+        var exampleComp = this.scrollView.node.getComponent('BaseAnySDKExample');
+        var isSupported = exampleComp.hasSupport();
+        if (!isSupported) return;
         tips.opacity = 0;
         this.node.parent.parent.opacity = 255;
         this.initItemCount = this.interfaceList.length;
