@@ -39,6 +39,8 @@ cc.Class({
             cc.log("[track %s][animation %s] event: %s, %s, %s, %s", trackEntry.trackIndex, animationName, event.data.name, event.intValue, event.floatValue, event.stringValue);
         });
 
+        this._hasStop = false;
+
         // var self = this;
         // cc.eventManager.addListener({
         //     event: cc.EventListener.TOUCH_ALL_AT_ONCE,
@@ -71,20 +73,23 @@ cc.Class({
     
     stop () {
         this.spine.clearTrack(0);
+        this._hasStop = true;
     },
 
     walk () {
         this.spine.setAnimation(0, 'walk', true);
+        this._hasStop = false;
     },
     
     run () {
         this.spine.setAnimation(0, 'run', true);
+        this._hasStop = false;
     },
     
     jump () {
         var oldAnim = this.spine.animation;
         this.spine.setAnimation(0, 'jump', false);
-        if (oldAnim) {
+        if (oldAnim && !this._hasStop) {
             this.spine.addAnimation(0, oldAnim === 'run' ? 'run' : 'walk', true, 0);
         }
     },
