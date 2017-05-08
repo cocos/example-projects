@@ -32,6 +32,9 @@ cc.Class({
         });
         spine.setCompleteListener((trackEntry, loopCount) => {
             var animationName = trackEntry.animation ? trackEntry.animation.name : "";
+            if (animationName === 'shoot') {
+                this.spine.clearTrack(1);
+            }
             cc.log("[track %s][animation %s] complete: %s", trackEntry.trackIndex, animationName, loopCount);
         });
         spine.setEventListener((trackEntry, event) => {
