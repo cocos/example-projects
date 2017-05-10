@@ -60,25 +60,19 @@ cc.Class({
             this._player.active = false;
         }
 
-        var self = this;
-        cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD,
-            onKeyPressed: function(keyCode, event) {
-                self._onKeyPressed(keyCode, event);
-            }
-        }, self.node);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this._onKeyPressed, this);
 
-        this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-            self._touching = true;
-            self._touchStartPos = event.touch.getLocation();
-        }, self);
-        this.node.on(cc.Node.EventType.TOUCH_END, function (event) {
-            if (!self._touching || !self._isMapLoaded || self._succeedLayer.active) return;
+        this.node.on(cc.Node.EventType.TOUCH_START, (event) => {
+            this._touching = true;
+            this._touchStartPos = event.touch.getLocation();
+        });
+        this.node.on(cc.Node.EventType.TOUCH_END, (event) => {
+            if (!this._touching || !this._isMapLoaded || this._succeedLayer.active) return;
 
-            self._touching = false;
+            this._touching = false;
             var touchPos = event.touch.getLocation();
-            var movedX = touchPos.x - self._touchStartPos.x;
-            var movedY = touchPos.y - self._touchStartPos.y;
+            var movedX = touchPos.x - this._touchStartPos.x;
+            var movedY = touchPos.y - this._touchStartPos.y;
             var movedXValue = Math.abs(movedX);
             var movedYValue = Math.abs(movedY);
             if (movedXValue < minMoveValue && movedYValue < minMoveValue) {
@@ -108,7 +102,11 @@ cc.Class({
                 }
             }
             this._tryMoveToNewTile(newTile, mapMoveDir);
-        }, self);
+        });
+    },
+
+    destroy () {
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this._onKeyPressed, this);
     },
 
     restartGame: function() {
@@ -173,12 +171,12 @@ cc.Class({
         return cc.p(x, y);
     },
 
-    _onKeyPressed: function(keyCode, event) {
+    _onKeyPressed: function(event) {
         if (!this._isMapLoaded || this._succeedLayer.active) return;
 
         var newTile = cc.p(this._curTile.x, this._curTile.y);
         var mapMoveDir = MoveDirection.NONE;
-        switch(keyCode) {
+        switch(event.keyCode) {
             case cc.KEY.up:
                 newTile.y -= 1;
                 mapMoveDir = MoveDirection.DOWN;
