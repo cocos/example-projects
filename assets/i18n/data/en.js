@@ -265,5 +265,5 @@ module.exports = {
   "scripts/Global/Menu.js.1": "Temporary lack of introduction",
   "cases/anysdk/1": "Only works in the Android or iOS or Web-Mobile platforms",
   "cases/anysdk/2": "Only works in the Android or iOS platforms",
-  "cases/anysdk/3": "Unsupported or missing anysdk module",
+  "cases/anysdk/3": "The anysdk module is not supported",
 };
