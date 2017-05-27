@@ -12,7 +12,7 @@ cc.Class({
 
     loadSpriteFrame: function () {
         var url = this._url[0];
-        this._clearResource(url);
+        this._clearResource(url, cc.SpriteAtlas);
         cc.loader.loadRes(url, cc.SpriteAtlas, (err, atlas) => {
             cc.loader.setAutoRelease(url, true);
             var node = new cc.Node();
@@ -25,8 +25,8 @@ cc.Class({
 
     loadPrefab: function () {
         var url = this._url[1];
-        this._clearResource(url);
-        cc.loader.loadRes(url, (err, prefab) => {
+        this._clearResource(url, cc.Prefab);
+        cc.loader.loadRes(url, cc.Prefab, (err, prefab) => {
             cc.loader.setAutoRelease(url, true);
             var node = cc.instantiate(prefab);
             this.content.addChild(node);
@@ -34,9 +34,9 @@ cc.Class({
         });
     },
 
-    _clearResource: function (url) {
+    _clearResource: function (url, type) {
         this.content.removeAllChildren(true);
-        var deps = cc.loader.getDependsRecursively(url);
-        cc.loader.release(deps);
+        var res = cc.loader.getRes(url, type);
+        cc.loader.release(res);
     }
 });
