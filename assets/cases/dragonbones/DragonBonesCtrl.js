@@ -92,18 +92,21 @@ cc.Class({
         dragonBones.WorldClock.clock.add(this._armature);
 
         if (this.touchHandler) {
-            // touch events
-            this.touchHandler.on(cc.Node.EventType.TOUCH_START, event => {
-                this.attack(true);
-            }, this);
-            this.touchHandler.on(cc.Node.EventType.TOUCH_END, event => {
-                this.attack(false);
-            }, this);
-            this.touchHandler.on(cc.Node.EventType.TOUCH_MOVE, event => {
+            var makeAnim = function(event) {
                 var touches = event.getTouches();
                 var touchLoc = touches[0].getLocation();
                 this.aim(touchLoc.x, touchLoc.y);
+            }
+            // touch events
+            this.touchHandler.on(cc.Node.EventType.TOUCH_START, event => {
+                makeAnim.call(this, event);
+                this.attack(true);
             }, this);
+            this.touchHandler.on(cc.Node.EventType.TOUCH_END, event => {
+                makeAnim.call(this, event);
+                this.attack(false);
+            }, this);
+            this.touchHandler.on(cc.Node.EventType.TOUCH_MOVE, makeAnim, this);
         }
 
         if (this.upButton) {
