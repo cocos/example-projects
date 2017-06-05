@@ -15,7 +15,7 @@ cc.Class({
         },
         readme: {
             default: null,
-            type: cc.Node
+            type: cc.ScrollView
         },
         mask: {
             default: null,
@@ -58,9 +58,9 @@ cc.Class({
             cocosAnalytics.CAEvent.onEvent({
                 eventName: "打开范例"
             });
-        }        
+        }
     },
-    
+
     backToList: function () {
         if (this._isLoadingScene) {
             return;
@@ -118,23 +118,24 @@ cc.Class({
 
     showReadme: function (event, active) {
         if (active === undefined) {
-            this.readme.active = !this.readme.active;
+            this.readme.node.active = !this.readme.node.active;
         }
         else {
-            this.readme.active = active;
+            this.readme.node.active = active;
         }
-        if (this.readme.active) {
+        if (this.readme.node.active) {
+            this.readme.scrollToTop();
             this.mask.on('touchstart', emptyFunc, this);
         } else {
             this.mask.off('touchstart', emptyFunc, this);
         }
-        let labelTxt = this.readme.active ? '关闭说明' : '查看说明';
+        let labelTxt = this.readme.node.active ? '关闭说明' : '查看说明';
         cc.find('label', this.btnInfo.node).getComponent(cc.Label).textKey = labelTxt;
 
         // en: fix Collider DebugDraw always displayed on top of the problem.
         // zh：解决 Collider DebugDraw 一直显示在最上层的问题。
         var enabledDebugDraw = cc.director.getCollisionManager().enabledDebugDraw;
-        if (this.readme.active) {
+        if (this.readme.node.active) {
             this.showDebugDraw = enabledDebugDraw;
             cc.director.getCollisionManager().enabledDebugDraw = false;
         }
@@ -145,7 +146,7 @@ cc.Class({
         // zh：修复 Video Player 一直显示在最上层的问题。
         var videoPlayer = cc.find('Canvas/VideoPlayer');
         if (videoPlayer) {
-            videoPlayer.active = !this.readme.active;
+            videoPlayer.active = !this.readme.node.active;
         }
     }
 });
