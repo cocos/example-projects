@@ -30,6 +30,10 @@ cc.Class({
     	cc.log("data : = " +　data)
     	var node = this.buttons[data|0];
     	node.runAction(cc.sequence(cc.moveBy(1, cc.p(600,0)), cc.moveBy(1, cc.p(-600,0))));
+    },
+
+    onDestroy: function () {
+    	cc.director.setDisplayStats(false);
     }
 
     // called every frame, uncomment this function to activate update callback
