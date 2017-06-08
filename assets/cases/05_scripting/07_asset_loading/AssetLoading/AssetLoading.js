@@ -37,6 +37,7 @@ cc.Class({
             Animation: "test assets/sprite-anim",
             Scene: "test assets/scene",
             Spine: "spineboy/spineboy",
+            CORS: "http://tools.itharbors.com/res/logo.png",
         };
         // registered event
         this._onRegisteredEvent();
@@ -98,6 +99,10 @@ cc.Class({
             case 'Audio':
                 cc.loader.loadRes(url, loadCallBack);
                 break;
+            case 'CORS':
+                cc.loader.load(url, loadCallBack);
+                this.loadTips.textKey = "CORS image should report texImage2D error under WebGL and works ok under Canvas"
+                break;
             default:
                 cc.loader.load(url, loadCallBack);
                 break;
@@ -150,6 +155,7 @@ cc.Class({
                 component.spriteFrame = res;
                 break;
             case "Texture":
+            case "CORS":
                 component = node.addComponent(cc.Sprite);
                 component.spriteFrame = new cc.SpriteFrame(res);
                 break;

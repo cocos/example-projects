@@ -5,7 +5,7 @@ cc.Class({
     properties: {},
 
     start: function () {
-        if (this.hasSupport('getSharePlugin')) {
+        if (this.hasSupport()) {
             this.sharePlugin = anysdk.agentManager.getSharePlugin();
             if (this.sharePlugin) {
                 this.sharePlugin.setListener(this.onShareResult, this);

@@ -5,7 +5,7 @@ const i18n = require('i18n');
 
 // 平台检查
 var PlatformType = cc.Enum({
-    Node: 0,
+    None: 0,
     Native: 1,
     Native_Desktop: 2,
 
@@ -94,7 +94,7 @@ cc.Class({
     },
 
     _showTips () {
-        if (this.type === PlatformType.Node) { return; }
+        if (this.platform === PlatformType.None) { return; }
         var info = this.support ? this._checkSupport() : this._checkNonSupport();
         var bg = this.node.getComponent(cc.Sprite);
         bg.enabled = info.showed;

@@ -5,7 +5,7 @@ cc.Class({
 	properties: {},
 
 	start: function () {
-		if (this.hasSupport('getAnalyticsPlugin')) {
+		if (this.hasSupport()) {
 			this.analyticsPlugin = anysdk.agentManager.getAnalyticsPlugin();
 		}
 	},

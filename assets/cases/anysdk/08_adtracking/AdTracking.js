@@ -5,7 +5,7 @@ cc.Class({
 	properties: {},
 
 	start: function () {
-		if (this.hasSupport('getAdTrackingPlugin')) {
+		if (this.hasSupport()) {
 			this.adTrackingPlugin = anysdk.agentManager.getAdTrackingPlugin();
 		}
 	},
