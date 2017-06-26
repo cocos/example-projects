@@ -20,7 +20,8 @@ cc.Class({
         this.moveUpAction = cc.moveBy(1, cc.p(0, 200)).easing(cc.easeCubicActionOut());
         this.moveDownAction = cc.moveBy(1, cc.p(0, -200)).easing(cc.easeCubicActionIn());
         var seq = cc.sequence(this.squashAction, this.stretchAction, 
-            this.moveUpAction, this.scaleBackAction, this.moveDownAction, this.squashAction, this.scaleBackAction);
+            this.moveUpAction, this.scaleBackAction, this.moveDownAction, this.squashAction, this.scaleBackAction,
+            cc.callFunc(this.callback.bind(this)));
         // this is a temp api which will be combined to cc.Node
         this.jumper.runAction(seq);
         
@@ -34,4 +35,8 @@ cc.Class({
             cc.tintTo(2, 255, 255, 255)
         ).repeat(2));
     },
+    
+    callback: function () {
+        this.colorNode.scale = 2;
+    }
 });
