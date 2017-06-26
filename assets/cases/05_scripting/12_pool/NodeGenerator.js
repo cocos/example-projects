@@ -3,6 +3,7 @@ cc.Class({
 
     properties: {
         prefab: cc.Prefab,
+        hint: cc.Label,
         regionOrigin: cc.Vec2,
         regionSize: cc.Size
     },
@@ -11,12 +12,15 @@ cc.Class({
     onLoad: function () {
         this.schedule(this.generateNode, 2);
         this._pool = new cc.NodePool('PoolHandler');
+        this._count = 0;
     },
     
     generateNode: function () {
         var monster = this._pool.get();
         if (!monster) {
             monster = cc.instantiate(this.prefab);
+            this._count++;
+            this.hint.string = 'Node Created: ' + this._count;
         
             // Add pool handler component which will control the touch event
             monster.addComponent('PoolHandler');

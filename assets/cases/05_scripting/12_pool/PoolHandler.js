@@ -2,8 +2,8 @@ var lastClick = 0;
 
 function pauseresume () {
     var now = Date.now();
-    // Double click in 1 second
-    if (now - lastClick < 1000) {
+    // Double click in 300 ms
+    if (now - lastClick < 300) {
         this.stopAllActions();
         var pool = this.getComponent('PoolHandler')._pool;
         if (pool) {
