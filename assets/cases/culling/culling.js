@@ -2,7 +2,15 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-       buttons: [cc.Node]
+       buttons: [cc.Node],
+	   cameraNode: {
+		   default: null,
+		   type: cc.Node
+	   },
+	   cameraButtonLabel: {
+		   default: null,
+		   type: cc.Label
+	   }
     },
 
     // use this for initialization
@@ -23,18 +31,29 @@ cc.Class({
 	        g.fill();
     	}
 
-     
+		// this.changeCamera();
     },
 
     spawnGameObject: function (event, data) {
     	cc.log("data : = " +　data)
     	var node = this.buttons[data|0];
-    	node.runAction(cc.sequence(cc.moveBy(1, cc.p(600,0)), cc.moveBy(1, cc.p(-600,0))));
+    	node.runAction(cc.sequence(cc.moveBy(3, cc.p(1200,0)), cc.moveBy(3, cc.p(-1200,0))));
     },
 
     onDestroy: function () {
     	cc.director.setDisplayStats(false);
-    }
+    },
+
+	changeCamera: function () {
+		if (this.cameraNode.active) {
+			this.cameraNode.active = false;
+			this.cameraButtonLabel.string = 'Enable Camera';
+		}
+		else {
+			this.cameraNode.active = true;
+			this.cameraButtonLabel.string = 'Disable Camera';
+		}
+	},
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
