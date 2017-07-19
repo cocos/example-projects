@@ -37,6 +37,6 @@ cc.Class({
     },
     
     callback: function () {
-        this.colorNode.scale = 2;
+        this.node.removeFromParent();
     }
 });
