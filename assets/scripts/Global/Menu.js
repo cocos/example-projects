@@ -1,10 +1,6 @@
 const i18n = require('i18n');
 const SceneList = require('SceneList');
 
-var emptyFunc = function (event) {
-    event.stopPropagation();
-};
-
 cc.Class({
     extends: cc.Component,
 
@@ -125,9 +121,6 @@ cc.Class({
         }
         if (this.readme.node.active) {
             this.readme.scrollToTop();
-            this.mask.on('touchstart', emptyFunc, this);
-        } else {
-            this.mask.off('touchstart', emptyFunc, this);
         }
         let labelTxt = this.readme.node.active ? '关闭说明' : '查看说明';
         cc.find('label', this.btnInfo.node).getComponent(cc.Label).textKey = labelTxt;
