@@ -13,10 +13,6 @@ cc.Class({
             default: null,
             type: cc.ScrollView
         },
-        mask: {
-            default: null,
-            type: cc.Node
-        },
         btnInfo: {
             default: null,
             type: cc.Button
