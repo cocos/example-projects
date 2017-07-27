@@ -137,5 +137,13 @@ cc.Class({
         if (videoPlayer) {
             videoPlayer.active = !this.readme.node.active;
         }
+    },
+
+    restart: function () {
+        cc.game.restart();
+    },
+    
+    gc: function () {
+        cc.sys.garbageCollect();
     }
 });
