@@ -51,6 +51,13 @@ cc.Class({
                 eventName: "打开范例"
             });
         }
+
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, (event) => {
+            if (event.keyCode === cc.KEY.b) {
+                this.backToList();
+            }
+        }, this);
+
     },
 
     backToList: function () {
