@@ -252,7 +252,7 @@ module.exports = {
   "cases/spine/SpineBoy.fire.65": "Shoot",
   "cases/tiledmap/Puzzle.fire.18": "You Win",
   "cases/tiledmap/Puzzle.fire.21": "Restart",
-  "cases/tiledmap/dynamic.fire.22": 'Dynamically created TiledMap',
+  "cases/tiledmap/Dynamic-Tiledmap.fire.22": 'Dynamically created TiledMap',
   "res/prefabs/ListItem.prefab.2": "Label ssss",
   "res/prefabs/Monster.prefab.3": "Name:",
   "res/prefabs/Monster.prefab.11": "Level :",

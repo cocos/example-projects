@@ -250,7 +250,7 @@ module.exports = {
   "cases/spine/SpineBoy.fire.65": "射击",
   "cases/tiledmap/Puzzle.fire.18": "你赢了",
   "cases/tiledmap/Puzzle.fire.21": "重新开始",
-  "cases/tiledmap/dynamic.fire.22": '动态创建 TiledMap',
+  "cases/tiledmap/Dynamic-Tiledmap.fire.22": '动态创建 TiledMap',
   "res/prefabs/ListItem.prefab.2": "Label ssss",
   "res/prefabs/Monster.prefab.3": "名字:",
   "res/prefabs/Monster.prefab.11": "等级 :",
