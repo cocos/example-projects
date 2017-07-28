@@ -17,7 +17,7 @@ cc.Class({
         cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
     },
 
-    destroy () {
+    onDestroy () {
         cc.inputManager.setAccelerometerEnabled(false);
         cc.systemEvent.off(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
     },

@@ -105,7 +105,7 @@ cc.Class({
         });
     },
 
-    destroy () {
+    onDestroy () {
         cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this._onKeyPressed, this);
     },
 
