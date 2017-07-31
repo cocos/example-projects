@@ -262,6 +262,8 @@ module.exports = {
   "resources/test assets/scene.fire.3": "返回资源加载场景",
   "resources/test assets/scene.fire.6": "返回",
   "scripts/Global/Menu.js.1": "说明暂缺",
+  "scripts/Global/Menu.js.hide.info": "查看说明",
+  "scripts/Global/Menu.js.view.info": "关闭说明",
   "cases/anysdk/1": "该范例只在Android、iOS、Web-Mobile上有效果",
   "cases/anysdk/2": "该范例只在Android、iOS上有效果",
   "cases/anysdk/3": "不支持 anysdk 模块",
