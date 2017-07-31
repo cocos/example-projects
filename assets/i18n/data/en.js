@@ -263,6 +263,8 @@ module.exports = {
   "resources/test assets/scene.fire.3": "Return Asset Loading Scene",
   "resources/test assets/scene.fire.6": "Return",
   "scripts/Global/Menu.js.1": "Temporary lack of introduction",
+  "scripts/Global/Menu.js.hide.info": "View Info",
+  "scripts/Global/Menu.js.view.info": "Hide Info",
   "cases/anysdk/1": "Only works in the Android or iOS or Web-Mobile platforms",
   "cases/anysdk/2": "Only works in the Android or iOS platforms",
   "cases/anysdk/3": "The anysdk module is not supported",
