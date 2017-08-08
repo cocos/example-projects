@@ -6,11 +6,13 @@ cc.Class({
     properties: {
         xhr: cc.Label,
         xhrAB: cc.Label,
+        xhrTimeout: cc.Label,
         websocket: cc.Label,
         socketIO: cc.Label,
         
         xhrResp: cc.Label,
         xhrABResp: cc.Label,
+        xhrTimeoutResp: cc.Label,
         websocketResp: cc.Label,
         socketIOResp: cc.Label
     },
@@ -21,11 +23,13 @@ cc.Class({
         
         this.xhrResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.1");
         this.xhrABResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.2");
+        this.xhrTimeoutResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.2");
         this.websocketResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.3");
         this.socketIOResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.4");
         
         this.sendXHR();
         this.sendXHRAB();
+        this.sendXHRTimeout();
         this.prepareWebSocket();
         this.sendSocketIO();
     },
@@ -55,6 +59,18 @@ cc.Class({
         xhr.setRequestHeader("Content-Type","text/plain");
         // Uint8Array is an ArrayBufferView
         xhr.send(new Uint8Array([1,2,3,4,5]));
+    },
+    
+    sendXHRTimeout: function () {
+        var xhr = new XMLHttpRequest();
+        this.streamXHREventsToLabel(xhr, this.xhrTimeout, this.xhrTimeoutResp, 'GET');
+
+        xhr.open("GET", "https://192.168.22.222", true);
+
+        // note: In Internet Explorer, the timeout property may be set only after calling the open()
+        // method and before calling the send() method.
+        xhr.timeout = 5000;// 5 seconds for timeout
+        xhr.send();
     },
     
     prepareWebSocket: function () {
