@@ -8,7 +8,7 @@ cc.Class({
         if (this.hasSupport()) {
             this.iapPlugin = anysdk.agentManager.getIAPPlugin();
             if (this.iapPlugin) {
-                this.iapPlugin.setListener(this.onIAPResult, this);
+                this.iapPlugin.setListener(this.onPayResult, this);
             }
         }
     },
