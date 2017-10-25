@@ -18,7 +18,7 @@ cc.Class({
             this.counting = false;
         }
         this.time = 5;
-        this.counter.string = this.time.toFixed(2) + ' s';
+        this.counter.textKey = this.time.toFixed(2) + ' s';
     },
 
     // use this for initialization
@@ -37,7 +37,7 @@ cc.Class({
                                scaleBackAction);
                                
         this.counter = cc.find('Canvas/count_label').getComponent(cc.Label);
-        this.counter.string = this.time.toFixed(2) + ' s';
+        this.counter.textKey = this.time.toFixed(2) + ' s';
         this.counting = false;
         this.repeat = false;
     },
@@ -46,14 +46,14 @@ cc.Class({
     update: function (dt) {
         if (this.counting) {
             this.time -= dt;
-            this.counter.string = this.time.toFixed(2) + ' s';
+            this.counter.textKey = this.time.toFixed(2) + ' s';
         }
     },
     
     stopCounting: function () {
         this.unschedule(this._callback);
         this.counting = false;
-        this.counter.string = i18n.t("cases/05_scripting/04_scheduler/scheduleCallbacks.js.1");
+        this.counter.textKey = i18n.t("cases/05_scripting/04_scheduler/scheduleCallbacks.js.1");
         this.time = 5;
     },
     
