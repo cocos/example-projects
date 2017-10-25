@@ -26,12 +26,13 @@ cc.Class({
             var touchLoc = touches[0].getLocation();
             self.isMoving = true;
             self.moveToPos = self.follower.parent.convertToNodeSpaceAR(touchLoc);
+            self.touchLocationDisplay.textKey = i18n.t("cases/03_gameplay/01_player_control/On/OnTouchCtrl.js.1") + Math.floor(touchLoc.x) + ', ' + Math.floor(touchLoc.y) + ')';
         }, self.node);
         self.canvas.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
             var touches = event.getTouches();
             var touchLoc = touches[0].getLocation();
-            self.touchLocationDisplay.textKey = i18n.t("cases/03_gameplay/01_player_control/On/OnTouchCtrl.js.1") + Math.floor(touchLoc.x) + ', ' + Math.floor(touchLoc.y) + ')';
             self.moveToPos = self.follower.parent.convertToNodeSpaceAR(touchLoc);
+            self.touchLocationDisplay.textKey = i18n.t("cases/03_gameplay/01_player_control/On/OnTouchCtrl.js.1") + Math.floor(touchLoc.x) + ', ' + Math.floor(touchLoc.y) + ')';
         }, self.node);
         self.canvas.on(cc.Node.EventType.TOUCH_END, function (event) {
             self.isMoving = false; // when touch ended, stop moving
