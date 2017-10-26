@@ -35,6 +35,17 @@ cc.Class({
         animation.on('resume',    this.onResume,      this);
     },
 
+    onDisable: function () {
+        var animation = this.animation;
+
+        animation.off('play',      this.onPlay,        this);
+        animation.off('stop',      this.onStop,        this);
+        animation.off('lastframe', this.onLastFrame,   this);
+        animation.off('finished',  this.onFinished,    this);
+        animation.off('pause',     this.onPause,       this);
+        animation.off('resume',    this.onResume,      this);
+    },
+
     onPlayButtonClicked: function () {
         if (this.playLabel.string === 'play') {
             this.playLabel.string = 'stop';
