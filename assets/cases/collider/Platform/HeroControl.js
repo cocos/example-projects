@@ -13,16 +13,13 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = true;
-        
         //add keyboard input listener to call turnLeft and turnRight
         cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD, 
+            event: cc.EventListener.KEYBOARD,
             onKeyPressed: this.onKeyPressed.bind(this),
             onKeyReleased: this.onKeyReleased.bind(this),
         }, this.node);
-        
+
         this.collisionX = 0;
         this.collisionY = 0;
 
@@ -31,8 +28,13 @@ cc.Class({
 
         this.touchingNumber = 0;
     },
-    
-    onDisabled: function () {
+
+    onEnable: function () {
+        cc.director.getCollisionManager().enabled = true;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
+    },
+
+    onDisable: function () {
         cc.director.getCollisionManager().enabled = false;
         cc.director.getCollisionManager().enabledDebugDraw = false;
     },
