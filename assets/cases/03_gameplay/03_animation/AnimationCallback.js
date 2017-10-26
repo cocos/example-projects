@@ -23,8 +23,7 @@ cc.Class({
         }
     },
 
-    // use this for initialization
-    onLoad: function () {
+    onEnable: function () {
         var animation = this.animation;
 
         animation.on('play',      this.onPlay,        this);
