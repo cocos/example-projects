@@ -10,6 +10,7 @@ cc.Class({
     },
     
     _callback: function () {
+        this.node.stopAllActions();
         this.node.runAction(this.seq);
         if (this.repeat) {
             this.counting = true;
@@ -51,7 +52,7 @@ cc.Class({
     },
     
     stopCounting: function () {
-        this.unschedule(this._callback);
+        this.unscheduleAllCallbacks();
         this.counting = false;
         this.counter.textKey = i18n.t("cases/05_scripting/04_scheduler/scheduleCallbacks.js.1");
         this.time = 5;
