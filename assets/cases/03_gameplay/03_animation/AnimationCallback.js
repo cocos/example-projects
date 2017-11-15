@@ -23,8 +23,7 @@ cc.Class({
         }
     },
 
-    // use this for initialization
-    onLoad: function () {
+    onEnable: function () {
         var animation = this.animation;
 
         animation.on('play',      this.onPlay,        this);
@@ -33,6 +32,17 @@ cc.Class({
         animation.on('finished',  this.onFinished,    this);
         animation.on('pause',     this.onPause,       this);
         animation.on('resume',    this.onResume,      this);
+    },
+
+    onDisable: function () {
+        var animation = this.animation;
+
+        animation.off('play',      this.onPlay,        this);
+        animation.off('stop',      this.onStop,        this);
+        animation.off('lastframe', this.onLastFrame,   this);
+        animation.off('finished',  this.onFinished,    this);
+        animation.off('pause',     this.onPause,       this);
+        animation.off('resume',    this.onResume,      this);
     },
 
     onPlayButtonClicked: function () {

@@ -161,6 +161,7 @@ module.exports = {
   "cases/05_scripting/03_events/SimpleEvent.fire.23": "自定义事件可以手动触发\n(点击上面的按钮)",
   "cases/05_scripting/03_events/SimpleEvent.fire.25": "基本事件",
   "cases/05_scripting/03_events/TouchPropagation.fire.15": "触摸事件冒泡",
+  "cases/05_scripting/03_events/MousePropagation.fire.1": "鼠标事件冒泡",
   "cases/05_scripting/04_scheduler/scheduleCallbacks.js.1": "5.00 s",
   "cases/05_scripting/04_scheduler/scheduler.fire.9": "5.00 s",
   "cases/05_scripting/04_scheduler/scheduler.fire.12": "重复定时器",
