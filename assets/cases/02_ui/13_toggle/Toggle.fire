@@ -51,7 +51,7 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0,
-    "autoReleaseAssets": false
+    "autoReleaseAssets": {}
   },
   {
     "__type__": "cc.Node",
@@ -268,10 +268,10 @@
         "__id__": 30
       },
       {
-        "__id__": 38
+        "__id__": 37
       },
       {
-        "__id__": 45
+        "__id__": 44
       }
     ]
   },
@@ -805,17 +805,17 @@
         "__id__": 25
       },
       {
-        "__id__": 33
+        "__id__": 32
       },
       {
-        "__id__": 40
+        "__id__": 39
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 31
+        "__id__": 46
       }
     ],
     "_prefab": null,
@@ -1193,28 +1193,16 @@
     "_N$target": {
       "__id__": 26
     },
-    "toggleGroup": {
-      "__id__": 31
-    },
+    "toggleGroup": null,
     "checkMark": {
       "__id__": 29
     },
     "checkEvents": [
       {
-        "__id__": 32
+        "__id__": 31
       }
     ],
     "_N$isChecked": true
-  },
-  {
-    "__type__": "cc.ToggleGroup",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 22
-    },
-    "_enabled": true,
-    "allowSwitchOff": true
   },
   {
     "__type__": "cc.ClickEvent",
@@ -1234,17 +1222,17 @@
     },
     "_children": [
       {
-        "__id__": 34
+        "__id__": 33
       },
       {
-        "__id__": 36
+        "__id__": 35
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 38
+        "__id__": 37
       }
     ],
     "_prefab": null,
@@ -1289,14 +1277,14 @@
     "_name": "Background",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 33
+      "__id__": 32
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 35
+        "__id__": 34
       }
     ],
     "_prefab": null,
@@ -1341,7 +1329,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 34
+      "__id__": 33
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -1367,14 +1355,14 @@
     "_name": "checkmark",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 33
+      "__id__": 32
     },
     "_children": [],
     "_tag": -1,
     "_active": false,
     "_components": [
       {
-        "__id__": 37
+        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1419,7 +1407,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 36
+      "__id__": 35
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -1445,7 +1433,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 32
     },
     "_enabled": true,
     "transition": 3,
@@ -1487,17 +1475,15 @@
     "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
-      "__id__": 34
+      "__id__": 33
     },
-    "toggleGroup": {
-      "__id__": 31
-    },
+    "toggleGroup": null,
     "checkMark": {
-      "__id__": 37
+      "__id__": 36
     },
     "checkEvents": [
       {
-        "__id__": 39
+        "__id__": 38
       }
     ],
     "_N$isChecked": false
@@ -1520,17 +1506,17 @@
     },
     "_children": [
       {
-        "__id__": 41
+        "__id__": 40
       },
       {
-        "__id__": 43
+        "__id__": 42
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 45
+        "__id__": 44
       }
     ],
     "_prefab": null,
@@ -1575,14 +1561,14 @@
     "_name": "Background",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 40
+      "__id__": 39
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 42
+        "__id__": 41
       }
     ],
     "_prefab": null,
@@ -1627,7 +1613,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 41
+      "__id__": 40
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -1653,14 +1639,14 @@
     "_name": "checkmark",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 40
+      "__id__": 39
     },
     "_children": [],
     "_tag": -1,
     "_active": false,
     "_components": [
       {
-        "__id__": 44
+        "__id__": 43
       }
     ],
     "_prefab": null,
@@ -1705,7 +1691,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 43
+      "__id__": 42
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -1731,7 +1717,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 40
+      "__id__": 39
     },
     "_enabled": true,
     "transition": 3,
@@ -1773,17 +1759,15 @@
     "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
-      "__id__": 41
+      "__id__": 40
     },
-    "toggleGroup": {
-      "__id__": 31
-    },
+    "toggleGroup": null,
     "checkMark": {
-      "__id__": 44
+      "__id__": 43
     },
     "checkEvents": [
       {
-        "__id__": 46
+        "__id__": 45
       }
     ],
     "_N$isChecked": false
@@ -1796,5 +1780,15 @@
     "component": "checkbox",
     "handler": "radioButtonClicked",
     "customEventData": ""
+  },
+  {
+    "__type__": "cc.ToggleContainer",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 22
+    },
+    "_enabled": true,
+    "allowSwitchOff": true
   }
 ]
