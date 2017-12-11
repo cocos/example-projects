@@ -41,7 +41,9 @@ cc.Class({
     },
 
     _releaseResource: function (url, type) {
+        this._removeAllChildren();
         var res = cc.loader.getRes(url, type);
-        cc.loader.release(res);
+        var all = cc.loader.getDependsRecursively(res);
+        cc.loader.release(all);
     }
 });
