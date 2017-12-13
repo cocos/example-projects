@@ -45,8 +45,8 @@ cc.Class({
             this.sceneList.init(this);
         }
         if (typeof cocosAnalytics !== 'undefined') {
-            //Cocos Analytics service, to learn more please visit:
-            // http://analytics.qudao.info/
+            // Cocos Analytics service, to learn more please visit:
+            // https://analytics.cocos.com/docs/
             cocosAnalytics.CAEvent.onEvent({
                 eventName: "打开范例"
             });
@@ -80,8 +80,8 @@ cc.Class({
         this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
         if (typeof cocosAnalytics !== 'undefined') {
-            //Cocos Analytics service, to learn more please visit:
-            // http://analytics.qudao.info/
+            // Cocos Analytics service, to learn more please visit:
+            // https://analytics.cocos.com/docs/
             cocosAnalytics.CALevels.begin({
                 level: url
             });
