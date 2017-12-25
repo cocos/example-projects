@@ -3,7 +3,10 @@ cc.Class({
 
     properties: {
         motionStreak: cc.MotionStreak,
-        newTexture: cc.Texture2D
+        newTexture: {
+            default: null,
+            type: cc.Texture2D
+        }
     },
 
     onLoad: function () {
