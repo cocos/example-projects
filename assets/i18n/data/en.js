@@ -163,7 +163,6 @@ module.exports = {
   "cases/05_scripting/03_events/SimpleEvent.fire.25": "This is Simple Event.",
   "cases/05_scripting/03_events/TouchPropagation.fire.15": "This is Touch Propagation.",
   "cases/05_scripting/03_events/MousePropagation.fire.1": "This is Mouse Propagation.",
-  "cases/05_scripting/04_scheduler/scheduleCallbacks.js.1": "5.00 s",
   "cases/05_scripting/04_scheduler/scheduler.fire.9": "5.00 s",
   "cases/05_scripting/04_scheduler/scheduler.fire.12": "Repeat Schedule",
   "cases/05_scripting/04_scheduler/scheduler.fire.18": "Cancel Schedules",

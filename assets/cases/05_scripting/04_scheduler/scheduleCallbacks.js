@@ -6,7 +6,9 @@ cc.Class({
     properties: {
         time: {
             default: 5
-        }
+        },
+
+        counter: cc.Label
     },
     
     _callback: function () {
@@ -19,7 +21,7 @@ cc.Class({
             this.counting = false;
         }
         this.time = 5;
-        this.counter.textKey = this.time.toFixed(2) + ' s';
+        this.counter.string = this.time.toFixed(2) + ' s';
     },
 
     // use this for initialization
@@ -37,8 +39,7 @@ cc.Class({
                                squashAction,
                                scaleBackAction);
                                
-        this.counter = cc.find('Canvas/count_label').getComponent(cc.Label);
-        this.counter.textKey = this.time.toFixed(2) + ' s';
+        this.counter.string = this.time.toFixed(2) + ' s';
         this.counting = false;
         this.repeat = false;
     },
@@ -47,15 +48,15 @@ cc.Class({
     update: function (dt) {
         if (this.counting) {
             this.time -= dt;
-            this.counter.textKey = this.time.toFixed(2) + ' s';
+            this.counter.string = this.time.toFixed(2) + ' s';
         }
     },
     
     stopCounting: function () {
         this.unscheduleAllCallbacks();
         this.counting = false;
-        this.counter.textKey = i18n.t("cases/05_scripting/04_scheduler/scheduleCallbacks.js.1");
         this.time = 5;
+        this.counter.string = this.time.toFixed(2) + ' s';
     },
     
     repeatSchedule: function () {
