@@ -8,13 +8,10 @@ cc.Class({
             multiline: true,
             tooltip: 'Enter i18n key here',
             notify: function () {
-                if (this._sgNode) {
-                    this._sgNode.setString(this.string);
-                    this._updateNodeSize();
-                }
+                this.string = this.localizedString;
             }
         },
-        string: {
+        localizedString: {
             override: true,
             tooltip: 'Here shows the localized string of Text Key',
             get: function () {
@@ -24,6 +21,12 @@ cc.Class({
                 this.textKey = value;
                 cc.warn('Please set label text key in Text Key property.');
             }
+        },
+    },
+
+    onLoad () {
+        if (this.localizedString) {
+            this.string = this.localizedString;
         }
     }
 });
