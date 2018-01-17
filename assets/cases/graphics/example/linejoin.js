@@ -9,10 +9,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if (cc.director.setClearColor) {
-            cc.director.setClearColor( cc.Color.WHITE );
-        }
-        
         this.graphics = this.getComponent(cc.Graphics);
         this.graphics.lineWidth = 20;
         
@@ -20,12 +16,6 @@ cc.Class({
         this.radius = 100;
 
         this.draw();
-    },
-
-    onDisable: function () {
-        if (cc.director.setClearColor) {
-            cc.director.setClearColor( cc.Color.BLACK );
-        }
     },
     
     // called every frame, uncomment this function to activate update callback
