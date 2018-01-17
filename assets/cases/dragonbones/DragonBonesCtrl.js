@@ -89,7 +89,6 @@ cc.Class({
         this._weaponL.addEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
 
         this._updateAnimation();
-        dragonBones.WorldClock.clock.add(this._armature);
 
         if (this.touchHandler) {
             // touch events
@@ -263,7 +262,7 @@ cc.Class({
         this._weaponLIndex = (this._weaponLIndex + 1) % WEAPON_L_LIST.length;
         var newWeaponName = WEAPON_L_LIST[this._weaponLIndex];
         this._weaponL = this._armatureDisplay.buildArmature(newWeaponName);
-        this._armature.getSlot('weapon_l').childArmature = this._weaponL;
+        this._armature.getSlot('weapon_l').childArmature = this._weaponL.armature();
 
         this._weaponL.addEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
     },
@@ -274,7 +273,7 @@ cc.Class({
         this._weaponRIndex = (this._weaponRIndex + 1) % WEAPON_R_LIST.length;
         var newWeaponName = WEAPON_R_LIST[this._weaponRIndex];
         this._weaponR = this._armatureDisplay.buildArmature(newWeaponName);
-        this._armature.getSlot('weapon_r').childArmature = this._weaponR;
+        this._armature.getSlot('weapon_r').childArmature = this._weaponR.armature();
 
         this._weaponR.addEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
     },
@@ -302,11 +301,6 @@ cc.Class({
             bullet.doClean();
         }
         this._bullets = [];
-
-        if (this._armature) {
-            // remove the _armature from world clock
-            dragonBones.WorldClock.clock.remove(this._armature);
-        }
     },
 
     addBullet : function(bullet) {
@@ -322,7 +316,6 @@ cc.Class({
                 this._bullets.splice(i, 1);
             }
         }
-        dragonBones.WorldClock.clock.advanceTime(dt);
     },
 
     _animationEventHandler: function(event) {
@@ -349,7 +342,7 @@ cc.Class({
             var localPoint = cc.p(firePointBone.global.x, -firePointBone.global.y);
 
             var display = event.detail.armature.display;
-            var globalPoint = display.convertToWorldSpace(localPoint);
+            var globalPoint = display.node.convertToWorldSpace(localPoint);
 
             this._fire(globalPoint);
         }
@@ -363,7 +356,7 @@ cc.Class({
         var effect = this._armatureDisplay.buildArmature("fireEffect_01");
         var radian = this._faceDir < 0 ? Math.PI - this._aimRadian : this._aimRadian;
         var bullet = new DragonBullet();
-        bullet.init(this.node.parent._sgNode, armature, effect, radian + Math.random() * 0.02 - 0.01, 40, firePoint);
+        bullet.init(this.node.parent, armature, effect, radian + Math.random() * 0.02 - 0.01, 40, firePoint);
         this.addBullet(bullet);
     },
 
@@ -524,18 +517,20 @@ var DragonBullet = cc.Class({
     init : function (parentNode, armature, effect, radian, speed, position) {
         this._speedX = Math.cos(radian) * speed;
         this._speedY = -Math.sin(radian) * speed;
-        var thePos = parentNode.convertToNodeSpace(position);
+        var thePos = parentNode.convertToNodeSpaceAR(position);
+
+        armature.playAnimation("idle");
+        
+        let armatureNode = armature.node;
+        armatureNode.setPosition(thePos);
+        armatureNode.rotation = radian * cc.macro.DEG;
 
         this._armature = armature;
-        this._armatureDisplay = this._armature.display;
-        this._armatureDisplay.setPosition(thePos);
-        this._armatureDisplay.rotation = radian * dragonBones.DragonBones.RADIAN_TO_ANGLE;
-        this._armature.animation.play("idle");
-
+        
         if (effect) {
             this._effect = effect;
-            var effectDisplay = this._effect.display;
-            effectDisplay.rotation = radian * dragonBones.DragonBones.RADIAN_TO_ANGLE;
+            var effectDisplay = this._effect.node;
+            effectDisplay.rotation = radian * cc.macro.DEG;
             effectDisplay.setPosition(thePos);
             effectDisplay.scaleX = 1 + Math.random() * 1;
             effectDisplay.scaleY = 1 + Math.random() * 0.5;
@@ -543,21 +538,21 @@ var DragonBullet = cc.Class({
                 effectDisplay.scaleY *= -1;
             }
 
-            this._effect.animation.play("idle");
+            this._effect.playAnimation("idle");
 
-            dragonBones.WorldClock.clock.add(this._effect);
             parentNode.addChild(effectDisplay);
         }
 
-        dragonBones.WorldClock.clock.add(this._armature);
-        parentNode.addChild(this._armatureDisplay);
+        parentNode.addChild(armatureNode);
     },
 
     update : function() {
-        this._armatureDisplay.x += this._speedX;
-        this._armatureDisplay.y += this._speedY;
+        let armatureNode = this._armature.node;
 
-        var worldPos = this._armatureDisplay.parent.convertToWorldSpace(this._armatureDisplay.getPosition());
+        armatureNode.x += this._speedX;
+        armatureNode.y += this._speedY;
+
+        var worldPos = armatureNode.parent.convertToWorldSpaceAR(armatureNode.getPosition());
         if (
             worldPos.x < -100 || worldPos.x >= cc.visibleRect.width + 100 ||
             worldPos.y < -100 || worldPos.y >= cc.visibleRect.height + 100
@@ -570,14 +565,10 @@ var DragonBullet = cc.Class({
     },
 
     doClean : function() {
-        dragonBones.WorldClock.clock.remove(this._armature);
-        this._armatureDisplay.removeFromParent();
-        this._armature.dispose();
+        this._armature.node.removeFromParent();
 
         if (this._effect) {
-            dragonBones.WorldClock.clock.remove(this._effect);
-            this._effect.display.removeFromParent();
-            this._effect.dispose();
+            this._effect.node.removeFromParent();
         }
     }
 });
