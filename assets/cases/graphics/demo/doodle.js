@@ -10,10 +10,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if (cc.director.setClearColor) {
-            cc.director.setClearColor( cc.hexToColor('#d1f1ff') );
-        }
-
         this.graphics = this.getComponent(cc.Graphics);
 
         this.nodes = [];
@@ -37,12 +33,6 @@ cc.Class({
         }, this.node);
     },
     
-    onDisable: function () {
-        if (cc.director.setClearColor) {
-            cc.director.setClearColor( cc.Color.BLACK );
-        }
-    },
-
     createBezierNodes: function () {
     
         this.updateColorCycle();

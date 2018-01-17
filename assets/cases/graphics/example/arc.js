@@ -6,10 +6,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        if (cc.director.setClearColor) {
-            cc.director.setClearColor( cc.Color.WHITE );
-        }
-
         var g = this.getComponent(cc.Graphics);
 
         g.lineWidth = 5;
@@ -30,12 +26,6 @@ cc.Class({
 
         g.stroke();
         g.fill();
-    },
-
-    onDisable: function () {
-        if (cc.director.setClearColor) {
-            cc.director.setClearColor( cc.Color.BLACK );
-        }
     },
     
     // called every frame, uncomment this function to activate update callback
