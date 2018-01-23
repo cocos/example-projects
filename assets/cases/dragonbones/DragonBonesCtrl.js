@@ -94,6 +94,9 @@ cc.Class({
         if (this.touchHandler) {
             // touch events
             this.touchHandler.on(cc.Node.EventType.TOUCH_START, event => {
+                var touches = event.getTouches();
+                var touchLoc = touches[0].getLocation();
+                this.aim(touchLoc.x, touchLoc.y);
                 this.attack(true);
             }, this);
             this.touchHandler.on(cc.Node.EventType.TOUCH_END, event => {
