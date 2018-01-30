@@ -135,8 +135,8 @@ cc.Class({
         var endObj = objectGroup.getObject(this.successObjectName);
         if (!startObj || !endObj) return;
 
-        var startPos = cc.p(startObj.sgNode.x, startObj.sgNode.y);
-        var endPos = cc.p(endObj.sgNode.x, endObj.sgNode.y);
+        var startPos = cc.p(startObj.x, startObj.y);
+        var endPos = cc.p(endObj.x, endObj.y);
 
         this._layerFloor = this._tiledMap.getLayer(this.floorLayerName);
         this._layerBarrier = this._tiledMap.getLayer(this.barrierLayerName);
