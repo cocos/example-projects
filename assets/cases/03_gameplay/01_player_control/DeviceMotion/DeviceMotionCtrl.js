@@ -13,12 +13,12 @@ cc.Class({
         var screenSize = cc.view.getVisibleSize();
         this._range.x = screenSize.width / 2 - this.target.width / 2;
         this._range.y = screenSize.height / 2 - this.target.height / 2;
-        cc.inputManager.setAccelerometerEnabled(true);
+        cc.systemEvent.setAccelerometerEnabled(true);
         cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
     },
 
     onDestroy () {
-        cc.inputManager.setAccelerometerEnabled(false);
+        cc.systemEvent.setAccelerometerEnabled(false);
         cc.systemEvent.off(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
     },
 
