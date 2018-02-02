@@ -43,14 +43,6 @@ cc.Class({
         });
 
         this._hasStop = false;
-
-        // var self = this;
-        // cc.eventManager.addListener({
-        //     event: cc.EventListener.TOUCH_ALL_AT_ONCE,
-        //     onTouchesBegan () {
-        //         self.toggleTimeScale();
-        //     }
-        // }, this.node);
     },
     
     // OPTIONS
