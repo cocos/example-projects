@@ -298,7 +298,7 @@ cc.Class({
         for (var i = this._bullets.length - 1; i >= 0; i--)
         {
             var bullet = this._bullets[i];
-            bullet.doClean();
+            bullet.enabled = false;
         }
         this._bullets = [];
     },
@@ -562,6 +562,10 @@ var DragonBullet = cc.Class({
         }
 
         return false;
+    },
+
+    onDisable : function () {
+        this.doClean();
     },
 
     doClean : function() {
