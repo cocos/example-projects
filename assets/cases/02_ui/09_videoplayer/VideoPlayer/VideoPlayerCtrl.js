@@ -74,7 +74,7 @@ cc.Class({
 
     update: function () {
         if (this.currentTime)
-            this.currentTime.string = parseFloat(this.videoPlayer.currentTime.toFixed(2));
+            this.currentTime.string = this.videoPlayer.currentTime.toFixed(2);
     }
 
 });
