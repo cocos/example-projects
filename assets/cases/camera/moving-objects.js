@@ -76,7 +76,6 @@ cc.Class({
         if (cc.macro.ENABLE_CULLING === enable || CC_JSB) return;
 
         cc.macro.ENABLE_CULLING = enable;
-        cc.director.getScene()._sgNode._renderCmd.setDirtyFlag(_ccsg.Node._dirtyFlags.cullingDirty);
         cc.renderer.childrenOrderDirty = true;
     },
 
