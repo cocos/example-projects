@@ -10,6 +10,11 @@ cc.Class({
         cameraButtonLabel: {
             default: null,
             type: cc.Label
+        },
+
+        root: {
+            default: null,
+            type: cc.Node
         }
     },
 
@@ -46,13 +51,13 @@ cc.Class({
     },
 
     changeCamera: function () {
-        if (this.cameraNode.active) {
-            this.cameraNode.active = false;
-            this.cameraButtonLabel.string = 'Enable Camera';
+        if (this.root.group === 'Default') {
+            this.root.group = 'Actor';
+            this.cameraButtonLabel.string = 'Disable Camera';
         }
         else {
-            this.cameraNode.active = true;
-            this.cameraButtonLabel.string = 'Disable Camera';
+            this.root.group = 'Default';
+            this.cameraButtonLabel.string = 'Enable Camera';
         }
     }
 });
