@@ -32,7 +32,6 @@ cc.Class({
                     this.movingNode = v ? this.camera : this.root;
                     this.camera.x = this.root.x = 0;
                     this.moveSpeed = -this.moveSpeed;
-                    this.camera.active = !!v;
                 }
             }
         },
@@ -90,6 +89,7 @@ cc.Class({
 
     useCameraChanged: function (toggle) {
         this.useCamera = toggle.isChecked;
+        this.root.group = this.useCamera ? 'Actor' : 'Default';
     },
 
     enableCullingChanged: function (toggle) {
