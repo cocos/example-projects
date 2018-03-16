@@ -55,7 +55,7 @@ cc.Class({
                 textKey = i18n.t("example_case_nonsupport_runtime_tips");
                 break;
             case PlatformType.Canvas:
-                showed = cc._renderType === cc.game.RENDER_TYPE_CANVAS;
+                showed = cc.game.renderType === cc.game.RENDER_TYPE_CANVAS;
                 textKey = i18n.t("example_case_nonsupport_web_canvas_tips");
                 break;
         }
@@ -73,7 +73,7 @@ cc.Class({
                 textKey = i18n.t("example_case_support_mobile_tips");
                 break;
             case PlatformType.WebGl:
-                showed = cc._renderType !== cc.game.RENDER_TYPE_WEBGL;
+                showed = cc.game.renderType !== cc.game.RENDER_TYPE_WEBGL;
                 textKey = i18n.t("example_case_support_webGl_tips");
                 break;
             case PlatformType.Mobile_Android:
