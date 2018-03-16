@@ -6,7 +6,7 @@ module.exports = {
     updateRenderData (comp) {
         if (!comp._renderData) {
             comp._renderData = new IARenderData();
-            comp._renderData.effect = comp.getEffect();
+            comp._renderData.material = comp.getMaterial();
             comp._renderData.ia = comp._ia;
         }
 

@@ -21,7 +21,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         // camera not support canvas
-        this.cameraButtonLabel.node.parent.active = cc._renderType !== cc.game.RENDER_TYPE_CANVAS;
+        this.cameraButtonLabel.node.parent.active = cc.game.renderType !== cc.game.RENDER_TYPE_CANVAS;
         cc.director.setDisplayStats(true);
         var g = this.getComponent(cc.Graphics);
         if (g) {
