@@ -19,7 +19,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         var self = this;
-        self.moveToPos = cc.p(0, 0);
+        self.moveToPos = cc.v2(0, 0);
         self.isMoving = false;
         self.canvas.on(cc.Node.EventType.TOUCH_START, function (event) {
             var touches = event.getTouches();

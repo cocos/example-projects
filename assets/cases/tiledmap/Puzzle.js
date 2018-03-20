@@ -80,7 +80,7 @@ cc.Class({
                 return;
             }
 
-            var newTile = cc.p(this._curTile.x, this._curTile.y);
+            var newTile = cc.v2(this._curTile.x, this._curTile.y);
             var mapMoveDir = MoveDirection.NONE;
             if (movedXValue >= movedYValue) {
                 // move to right or left
@@ -135,8 +135,8 @@ cc.Class({
         var endObj = objectGroup.getObject(this.successObjectName);
         if (!startObj || !endObj) return;
 
-        var startPos = cc.p(startObj.x, startObj.y);
-        var endPos = cc.p(endObj.x, endObj.y);
+        var startPos = cc.v2(startObj.x, startObj.y);
+        var endPos = cc.v2(endObj.x, endObj.y);
 
         this._layerFloor = this._tiledMap.getLayer(this.floorLayerName);
         this._layerBarrier = this._tiledMap.getLayer(this.barrierLayerName);
@@ -168,13 +168,13 @@ cc.Class({
         var x = Math.floor(posInPixel.x / tileSize.width);
         var y = Math.floor((mapSize.height - posInPixel.y) / tileSize.height);
 
-        return cc.p(x, y);
+        return cc.v2(x, y);
     },
 
     _onKeyPressed: function(event) {
         if (!this._isMapLoaded || this._succeedLayer.active) return;
 
-        var newTile = cc.p(this._curTile.x, this._curTile.y);
+        var newTile = cc.v2(this._curTile.x, this._curTile.y);
         var mapMoveDir = MoveDirection.NONE;
         switch(event.keyCode) {
             case cc.KEY.up:
@@ -240,22 +240,22 @@ cc.Class({
         switch (moveDir) {
             case MoveDirection.UP:
                 if (disY < minDisY) {
-                    newPos = cc.p(mapPos.x, mapPos.y + tileSize.height * mapMoveStep);
+                    newPos = cc.v2(mapPos.x, mapPos.y + tileSize.height * mapMoveStep);
                 }
                 break;
             case MoveDirection.DOWN:
                 if (viewSize.height - disY - tileSize.height < minDisY) {
-                    newPos = cc.p(mapPos.x, mapPos.y - tileSize.height * mapMoveStep);
+                    newPos = cc.v2(mapPos.x, mapPos.y - tileSize.height * mapMoveStep);
                 }
                 break;
             case MoveDirection.LEFT:
                 if (viewSize.width - disX - tileSize.width < minDisX) {
-                    newPos = cc.p(mapPos.x - tileSize.width * mapMoveStep, mapPos.y);
+                    newPos = cc.v2(mapPos.x - tileSize.width * mapMoveStep, mapPos.y);
                 }
                 break;
             case MoveDirection.RIGHT:
                 if (disX < minDisX) {
-                    newPos = cc.p(mapPos.x + tileSize.width * mapMoveStep, mapPos.y);
+                    newPos = cc.v2(mapPos.x + tileSize.width * mapMoveStep, mapPos.y);
                 }
                 break;
             default:

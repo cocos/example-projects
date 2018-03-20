@@ -11,7 +11,7 @@ cc.Class({
 
     _createPage () {
         var page = cc.instantiate(this.pageTeample);
-        page.position = new cc.p(0, 0);
+        page.position = new cc.v2(0, 0);
         var color = new cc.Color();
         color.r = Math.floor(Math.random() * 255);
         color.g = Math.floor(Math.random() * 255);

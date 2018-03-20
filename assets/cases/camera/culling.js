@@ -26,7 +26,7 @@ cc.Class({
         var g = this.getComponent(cc.Graphics);
         if (g) {
             g.lineWidth = 10;
-            g.fillColor = cc.hexToColor('#ff0000');
+            g.fillColor.fromHEX('#ff0000');
 
             g.moveTo(-20, 0);
             g.lineTo(0, -100);
@@ -43,7 +43,7 @@ cc.Class({
     spawnGameObject: function (event, data) {
         cc.log("data : = " + data);
         var node = this.buttons[data | 0];
-        node.runAction(cc.sequence(cc.moveBy(3, cc.p(1200, 0)), cc.moveBy(3, cc.p(-1200, 0))));
+        node.runAction(cc.sequence(cc.moveBy(3, cc.v2(1200, 0)), cc.moveBy(3, cc.v2(-1200, 0))));
     },
 
     onDestroy: function () {

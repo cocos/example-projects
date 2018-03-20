@@ -29,8 +29,8 @@ cc.Class({
         var squashAction = cc.scaleTo(0.2, 1, 0.6);
         var stretchAction = cc.scaleTo(0.2, 1, 1.2);
         var scaleBackAction = cc.scaleTo(0.1, 1, 1);
-        var moveUpAction = cc.moveBy(1, cc.p(0, 100)).easing(cc.easeCubicActionOut());
-        var moveDownAction = cc.moveBy(1, cc.p(0, -100)).easing(cc.easeCubicActionIn());
+        var moveUpAction = cc.moveBy(1, cc.v2(0, 100)).easing(cc.easeCubicActionOut());
+        var moveDownAction = cc.moveBy(1, cc.v2(0, -100)).easing(cc.easeCubicActionIn());
         this.seq = cc.sequence(squashAction,
                                stretchAction,
                                moveUpAction,

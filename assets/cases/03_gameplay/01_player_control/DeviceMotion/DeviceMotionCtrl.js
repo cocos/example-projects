@@ -5,8 +5,8 @@ cc.Class({
         speed: 200,
         target: cc.Node,
         _time: 0,
-        _range: cc.p(0, 0),
-        _acc: cc.p(0, 0)
+        _range: cc.v2(0, 0),
+        _acc: cc.v2(0, 0)
     },
 
     onLoad () {

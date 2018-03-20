@@ -62,7 +62,7 @@ cc.Class({
             if (isDown) {
                 // if away from buffer zone and not reaching top of content
                 if (viewPos.y < -buffer && items[i].y + offset < 0) {
-                    items[i].setPositionY(items[i].y + offset );
+                    items[i].y = items[i].y + offset;
                     let item = items[i].getComponent('Item');
                     let itemId = item.itemID - items.length; // update item id
                     item.updateItem(i, itemId);
@@ -70,7 +70,7 @@ cc.Class({
             } else {
                 // if away from buffer zone and not reaching bottom of content
                 if (viewPos.y > buffer && items[i].y - offset > -this.content.height) {
-                    items[i].setPositionY(items[i].y - offset );
+                    items[i].y = items[i].y - offset;
                     let item = items[i].getComponent('Item');
                     let itemId = item.itemID + items.length;
                     item.updateItem(i, itemId);
@@ -133,6 +133,6 @@ cc.Class({
     },
 
     scrollToFixedPosition: function () {
-        this.scrollView.scrollToOffset(cc.p(0, 500), 2);
+        this.scrollView.scrollToOffset(cc.v2(0, 500), 2);
     }
 });

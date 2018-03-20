@@ -8,8 +8,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        var moveTo = cc.moveTo(0.5, cc.p(0, 0));
-        var moveBy = cc.moveBy(0.5, cc.p(100, 100));
+        var moveTo = cc.moveTo(0.5, cc.v2(0, 0));
+        var moveBy = cc.moveBy(0.5, cc.v2(100, 100));
         this.moveTo.runAction(moveTo);
         this.moveBy.runAction(moveBy);
     }

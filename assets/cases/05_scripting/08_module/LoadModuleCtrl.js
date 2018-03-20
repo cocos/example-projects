@@ -24,7 +24,7 @@ cc.Class({
         var InitData = require("InitData");
         monsterComp.initInfo(InitData.monsterInfo);
         monster.parent = this.node;
-        monster.setPosition(cc.p(0, 0));
+        monster.setPosition(cc.v2(0, 0));
         this.btn_createMonster.active = false;
     }
 
