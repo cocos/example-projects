@@ -170,7 +170,7 @@ cc.Class({
             xc = currentIndex.x + (nextIndex.x - currentIndex.x) * 0.5;
             yc = currentIndex.y + (nextIndex.y - currentIndex.y) * 0.5;
         
-            let strokeColor = cc.hexToColor(this.debug ? '#a9a9a9' : '#e5e5e5');
+            let strokeColor = cc.color().fromHEX(this.debug ? '#a9a9a9' : '#e5e5e5');
             strokeColor.a = this.debug ? 255 : 255/2;
             graphics.strokeColor = strokeColor;
 
@@ -198,8 +198,8 @@ cc.Class({
             graphics.lineWidth = 1;
             graphics.lineCap = cc.Graphics.LineCap.ROUND;
             graphics.lineJoin = cc.Graphics.LineJoin.ROUND;
-            graphics.strokeColor = cc.hexToColor('#a9a9a9');
-            graphics.fillColor = cc.hexToColor('#a9a9a9');
+            graphics.strokeColor.fromHEX('#a9a9a9');
+            graphics.fillColor.fromHEX('#a9a9a9');
             
             // Draw through N points
             for(var N = 0; N < nodes.length; N++) {
@@ -251,7 +251,7 @@ cc.Class({
         
             var ripple = ripples[index];
             
-            let fillColor = cc.hexToColor('#ffffff');
+            let fillColor = cc.color().fromHEX('#ffffff');
             fillColor.a = ripple.fade * 255;
             graphics.fillColor = fillColor;
             

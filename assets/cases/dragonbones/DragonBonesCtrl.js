@@ -69,7 +69,7 @@ cc.Class({
         _aimState : null,
         _walkState : null,
         _attackState : null,
-        _target : cc.p(0, 0),
+        _target : cc.v2(0, 0),
     },
 
     // use this for initialization
@@ -283,7 +283,7 @@ cc.Class({
             this._aimDir = 10;
         }
 
-        this._target = this.node.parent.convertToNodeSpaceAR(cc.p(x, y));
+        this._target = this.node.parent.convertToNodeSpaceAR(cc.v2(x, y));
     },
 
     update : function (dt) {
@@ -339,7 +339,7 @@ cc.Class({
     _frameEventHandler : function (event) {
         if (event.detail.name === "onFire") {
             var firePointBone = event.detail.armature.getBone("firePoint");
-            var localPoint = cc.p(firePointBone.global.x, -firePointBone.global.y);
+            var localPoint = cc.v2(firePointBone.global.x, -firePointBone.global.y);
 
             var display = event.detail.armature.display;
             var globalPoint = display.node.convertToWorldSpace(localPoint);

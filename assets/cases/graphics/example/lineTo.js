@@ -9,7 +9,7 @@ cc.Class({
         var g = this.getComponent(cc.Graphics);
 
         g.lineWidth = 10;
-        g.fillColor = cc.hexToColor('#ff0000');
+        g.fillColor.fromHEX('#ff0000');
         
         g.moveTo(-20, 0);
         g.lineTo(0, -100);

@@ -20,7 +20,7 @@ var SuspensionTips = cc.Class({
     showTips: function (message) {
         var node = cc.instantiate(this.tipsPrefab);
         node.parent = this.node;
-        node.position = cc.p(0, 0);
+        node.position = cc.v2(0, 0);
         var label = node.getComponent(cc.Label);
         label.string = message || "没有添加消息！";
     }
