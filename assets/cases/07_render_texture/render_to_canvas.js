@@ -51,6 +51,12 @@ cc.Class({
         img.style.display = 'block';
         // img.style.left = img.style.top = '0px';
         img.zIndex = 100;
+
+        img.onclick = function (event) {
+            event.stopPropagation();
+            img.remove();
+        }
+
         document.getElementById('content').appendChild(img);
     }
 
