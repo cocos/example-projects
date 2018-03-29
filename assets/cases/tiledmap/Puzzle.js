@@ -218,7 +218,7 @@ cc.Class({
         this._tryMoveMap(mapMoveDir);
 
         // check the player is success or not
-        if (cc.pointEqualToPoint(this._curTile, this._endTile)) {
+        if (this._curTile.equals(this._endTile)) {
             cc.log('succeed');
             this._succeedLayer.active = true;
         }
@@ -274,7 +274,7 @@ cc.Class({
             if (newPos.y < minY) newPos.y = minY;
             if (newPos.y > maxY) newPos.y = maxY;
 
-            if (!cc.pointEqualToPoint(newPos, mapPos)) {
+            if (!newPos.equals(mapPos)) {
                 cc.log('Move the map to new position: ', newPos);
                 this.node.setPosition(newPos);
             }
