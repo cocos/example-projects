@@ -39,7 +39,7 @@ cc.Class({
     },
 
     getRandomPosition: function() {
-        return cc.v2(cc.randomMinus1To1() * this.randomRange.x, cc.randomMinus1To1() * this.randomRange.y);
+        return cc.v2((Math.random() - 0.5) * 2 * this.randomRange.x, (Math.random() - 0.5) * 2 * this.randomRange.y);
     },
 
     clearRepeater: function() {
