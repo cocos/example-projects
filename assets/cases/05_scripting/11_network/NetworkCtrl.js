@@ -21,11 +21,11 @@ cc.Class({
     onLoad: function () {
         this._wsiSendBinary = null;
         
-        this.xhrResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.1");
-        this.xhrABResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.2");
-        this.xhrTimeoutResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.2");
-        this.websocketResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.3");
-        this.socketIOResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.4");
+        this.xhrResp.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.1";
+        this.xhrABResp.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.2";
+        this.xhrTimeoutResp.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.2";
+        this.websocketResp.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.3";
+        this.socketIOResp.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.4";
         
         this.sendXHR();
         this.sendXHRAB();
@@ -80,7 +80,7 @@ cc.Class({
         this._wsiSendBinary = new WebSocket("ws://echo.websocket.org");
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
+            websocketLabel.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.5";
         };
 
         this._wsiSendBinary.onmessage = function(evt) {
@@ -102,15 +102,15 @@ cc.Class({
 
             binaryStr += str;
             respLabel.string = binaryStr;
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.6");
+            websocketLabel.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.6";
         };
 
         this._wsiSendBinary.onerror = function(evt) {
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.7");
+            websocketLabel.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.7";
         };
 
         this._wsiSendBinary.onclose = function(evt) {
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.8");
+            websocketLabel.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.8";
             // After close, it's no longer possible to use it again, 
             // if you want to send another request, you need to create a new websocket instance
             self._wsiSendBinary = null;
@@ -124,7 +124,7 @@ cc.Class({
         if (!this._wsiSendBinary) { return; }
         if (this._wsiSendBinary.readyState === WebSocket.OPEN)
         {
-            this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.9");
+            this.websocket.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.9";
             var buf = "Hello WebSocket中文,\0 I'm\0 a\0 binary\0 message\0.";
             
             var arrData = new Uint16Array(buf.length);
@@ -217,6 +217,9 @@ cc.Class({
         ['loadstart', 'abort', 'error', 'load', 'loadend', 'timeout'].forEach(function (eventname) {
             xhr["on" + eventname] = function () {
                 eventLabel.string = eventLabelOrigin + "\nEvent : " + eventname;
+                if (eventname === 'timeout') {
+                    label.string = '(timeout)';
+                }
             };
         });
     
