@@ -107,12 +107,12 @@ cc.Class({
         let self = this;
         let urlArr = url.split('/');
         let fileName = urlArr[urlArr.length - 1].replace('.fire', '');
-        cc.loader.loadRes('readme/' + fileName, function(err, txt) {
+        cc.loader.loadRes('readme/' + fileName, cc.TextAsset, function (err, asset) {
             if (err) {
                 self.text.string = i18n.t("scripts/Global/Menu.js.1");
                 return;
             }
-            self.text.string = txt;
+            self.text.string = asset.text;
         });
     },
 

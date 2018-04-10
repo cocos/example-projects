@@ -34,7 +34,7 @@ cc.Class({
         },
         myAudioClip: {
             default: null,
-            url: cc.AudioClip
+            type: cc.AudioClip
         }
     },
 
