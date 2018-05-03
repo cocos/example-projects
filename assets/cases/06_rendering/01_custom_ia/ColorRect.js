@@ -113,6 +113,13 @@ let ColorRect = cc.Class({
         this._ia._count = this._iData.length;
     },
 
+    onEnable () {
+        this._super();
+
+        this.node._renderFlag &= ~cc.RenderFlow.FLAG_RENDER;
+        this.node._renderFlag |= cc.RenderFlow.FLAG_COMSTOM_IA_RENDER;
+    },
+
     // LIFE-CYCLE CALLBACKS:
     onLoad () {
         this._material = new renderEngine.SpriteMaterial();
