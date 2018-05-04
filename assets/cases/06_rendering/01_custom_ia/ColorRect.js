@@ -117,7 +117,7 @@ let ColorRect = cc.Class({
         this._super();
 
         this.node._renderFlag &= ~cc.RenderFlow.FLAG_RENDER;
-        this.node._renderFlag |= cc.RenderFlow.FLAG_COMSTOM_IA_RENDER;
+        this.node._renderFlag |= cc.RenderFlow.FLAG_CUSTOM_IA_RENDER;
     },
 
     // LIFE-CYCLE CALLBACKS:

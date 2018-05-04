@@ -10,7 +10,7 @@ module.exports = {
         }
     },
 
-    _renderIA (comp, renderer) {
+    renderIA (comp, renderer) {
         renderer._flushIA(comp._renderData);
     }
 }
