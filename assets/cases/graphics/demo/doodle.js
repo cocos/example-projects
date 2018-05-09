@@ -4,12 +4,12 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        reactivity: 0.5, 
+        reactivity: 0.5,
         debug: false
     },
 
     // use this for initialization
-    onLoad: function () {
+    onEnable: function () {
         this.graphics = this.getComponent(cc.Graphics);
 
         this.nodes = [];
@@ -20,17 +20,14 @@ cc.Class({
 
         this.createBezierNodes();
 
-        cc.eventManager.addListener({
-            event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            onTouchBegan: (touch, event) => {
-                this.mouse = touch.getLocation();
-                this.addRipple();
-                return true;
-            },
-            onTouchEnded: () => {
-                this.input = false;
-            }
-        }, this.node);
+        let canvas = cc.find('Canvas');
+        canvas.on(cc.Node.EventType.TOUCH_START, function (touch, event) {
+            this.mouse = touch.getLocation();
+            this.addRipple();
+        }, this);
+        canvas.on(cc.Node.EventType.TOUCH_END, function () {
+            this.input = false;
+        }, this);
     },
     
     createBezierNodes: function () {

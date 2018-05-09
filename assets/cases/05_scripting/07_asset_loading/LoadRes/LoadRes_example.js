@@ -36,6 +36,11 @@ cc.Class({
         });
     },
 
+    onDisable () {
+        this._releaseResource(this._url[0], cc.SpriteAtlas);
+        this._releaseResource(this._url[1], cc.Prefab);
+    },
+
     _removeAllChildren: function () {
         this.content.removeAllChildren(true);
     },
