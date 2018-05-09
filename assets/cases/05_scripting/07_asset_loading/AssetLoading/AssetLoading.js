@@ -24,14 +24,11 @@ cc.Class({
         this._isLoading = false;
         // add load res url
         this._urls = {
-            // Raw Asset
             Audio: "test assets/audio",
             Txt: "test assets/text",
             Texture: "test assets/PurpleMonster",
             Font: "test assets/font",
-            // Raw Asset, use raw url
-            Plist: cc.url.raw("resources/test assets/atom.plist"),
-            // Asset
+            Plist: "test assets/atom.plist",
             SpriteFrame: "test assets/image",
             Prefab: "test assets/prefab",
             Animation: "test assets/sprite-anim",
@@ -90,6 +87,9 @@ cc.Class({
                 break;
             case 'Font':
                 cc.loader.loadRes(url, cc.Font, loadCallBack);
+                break;
+            case 'Plist':
+                cc.loader.loadRes(url, cc.ParticleAsset, loadCallBack);
                 break;
             case 'Animation':
             case 'Prefab':
@@ -179,7 +179,7 @@ cc.Class({
                 break;
             case "Plist":
                 component = node.addComponent(cc.ParticleSystem);
-                component.file = this._urls.Plist;
+                component.file = res;
                 component.resetSystem();
                 break;
             case "Prefab":
