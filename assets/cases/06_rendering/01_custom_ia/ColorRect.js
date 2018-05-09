@@ -44,7 +44,6 @@ let ColorRect = cc.Class({
         y = -appy;
         verts[i++] = x * a + y * c + tx;
         verts[i++] = x * b + y * d + ty;
-        verts[i++] = 0;
         // color._val is rgba packed into uint32
         uintV[i++] = this.blColor._val;
         // br
@@ -52,21 +51,18 @@ let ColorRect = cc.Class({
         y = -appy;
         verts[i++] = x * a + y * c + tx;
         verts[i++] = x * b + y * d + ty;
-        verts[i++] = 0;
         uintV[i++] = this.brColor._val;
         // tl
         x = -appx;
         y = h - appy;
         verts[i++] = x * a + y * c + tx;
         verts[i++] = x * b + y * d + ty;
-        verts[i++] = 0;
         uintV[i++] = this.tlColor._val;
         // tr
         x = w - appx;
         y = h - appy;
         verts[i++] = x * a + y * c + tx;
         verts[i++] = x * b + y * d + ty;
-        verts[i++] = 0;
         uintV[i++] = this.trColor._val;
 
         this._vb.update(0, verts);
@@ -74,14 +70,14 @@ let ColorRect = cc.Class({
 
     _createIA () {
         let device = cc.renderer.device;
-        // Vertex format defines vertex buffer layout: x, y, z, color
+        // Vertex format defines vertex buffer layout: x, y, color
         this._vertexFormat = new gfx.VertexFormat([
-            { name: gfx.ATTR_POSITION, type: gfx.ATTR_TYPE_FLOAT32, num: 3 },
+            { name: gfx.ATTR_POSITION, type: gfx.ATTR_TYPE_FLOAT32, num: 2 },
             { name: gfx.ATTR_COLOR, type: gfx.ATTR_TYPE_UINT8, num: 4, normalize: true }
         ]);
 
         // six float for each vertex
-        this._vData = new Float32Array(4 * 4);
+        this._vData = new Float32Array(3 * 4);
         this._uintVData = new Uint32Array(this._vData.buffer);
         this._iData = new Uint16Array([0, 1, 2, 1, 3, 2]);
 
@@ -113,10 +109,18 @@ let ColorRect = cc.Class({
         this._ia._count = this._iData.length;
     },
 
+    onEnable () {
+        this._super();
+
+        this.node._renderFlag &= ~cc.RenderFlow.FLAG_RENDER;
+        this.node._renderFlag |= cc.RenderFlow.FLAG_CUSTOM_IA_RENDER;
+    },
+
     // LIFE-CYCLE CALLBACKS:
     onLoad () {
         this._material = new renderEngine.SpriteMaterial();
         this._material.useTexture = false;
+        this._material.useColor = false;
 
         this._createIA();
     },
