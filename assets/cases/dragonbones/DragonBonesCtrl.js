@@ -154,15 +154,12 @@ cc.Class({
         }
 
         // keyboard events
-        cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD,
-            onKeyPressed: (keyCode, event) => {
-                this._keyHandler(keyCode, true);
-            },
-            onKeyReleased: (keyCode, event) => {
-                this._keyHandler(keyCode, false);
-            },
-        }, this.node);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, function (event) {
+            this._keyHandler(event.keyCode, true);
+        }, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, function (event) {
+            this._keyHandler(event.keyCode, false);
+        }, this);
     },
 
     _keyHandler: function(keyCode, isDown) {

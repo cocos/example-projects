@@ -14,11 +14,8 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         //add keyboard input listener to call turnLeft and turnRight
-        cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD,
-            onKeyPressed: this.onKeyPressed.bind(this),
-            onKeyReleased: this.onKeyReleased.bind(this),
-        }, this.node);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyPressed, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyReleased, this);
 
         this.collisionX = 0;
         this.collisionY = 0;
@@ -39,7 +36,8 @@ cc.Class({
         cc.director.getCollisionManager().enabledDebugDraw = false;
     },
     
-    onKeyPressed: function (keyCode, event) {
+    onKeyPressed: function (event) {
+        let keyCode = event.keyCode;
         switch(keyCode) {
             case cc.macro.KEY.a:
             case cc.macro.KEY.left:
@@ -59,7 +57,8 @@ cc.Class({
         }
     },
     
-    onKeyReleased: function (keyCode, event) {
+    onKeyReleased: function (event) {
+        let keyCode = event.keyCode;
         switch(keyCode) {
             case cc.macro.KEY.a:
             case cc.macro.KEY.left:

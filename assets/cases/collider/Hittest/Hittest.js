@@ -20,26 +20,22 @@ cc.Class({
 
         this.title.string = 'normal';
 
-        cc.eventManager.addListener({
-            event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            onTouchBegan: (touch, event) => {
-                var touchLoc = touch.getLocation();
-                
-                if (cc.Intersection.pointInPolygon(touchLoc, this.collider.world.points)) {
-                    this.title.string = 'Hit';
-                }
-                else {
-                    this.title.string = 'Not hit';
-                }
-
-                return true;
-            },
-        }, this.node);
+        this.node.on(cc.Node.EventType.TOUCH_START, function (touch, event) {
+            var touchLoc = touch.getLocation();
+            
+            if (cc.Intersection.pointInPolygon(touchLoc, this.collider.world.points)) {
+                this.title.string = 'Hit';
+            }
+            else {
+                this.title.string = 'Not hit';
+            }
+        }, this);
     },
 
     onDisable: function () {
         cc.director.getCollisionManager().enabled = false;
         cc.director.getCollisionManager().enabledDebugDraw = false;
+        this.node.off(cc.Node.EventType.TOUCH_START);
     }
 
     // called every frame, uncomment this function to activate update callback
