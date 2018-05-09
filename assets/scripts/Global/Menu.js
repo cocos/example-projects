@@ -58,7 +58,7 @@ cc.Class({
         }
 
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, (event) => {
-            if (event.keyCode === cc.KEY.b) {
+            if (event.keyCode === cc.macro.KEY.b) {
                 this.backToList();
             }
         }, this);

@@ -22,14 +22,15 @@ cc.Class({
     },
 
     onKeyDown (event) {
+        var macro = cc.macro;
         switch(event.keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
+            case macro.KEY.a:
+            case macro.KEY.left:
                 console.log('turn left');
                 this.turnLeft();
                 break;
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case macro.KEY.d:
+            case macro.KEY.right:
                 console.log('turn right');
                 this.turnRight();
                 break;

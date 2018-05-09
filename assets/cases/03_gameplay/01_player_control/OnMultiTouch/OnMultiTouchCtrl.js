@@ -18,8 +18,8 @@ cc.Class({
                 var touchPoint1 = parent.convertToNodeSpaceAR(touch1.getLocation());
                 var touchPoint2 = parent.convertToNodeSpaceAR(touch2.getLocation());
                 //缩放
-                var distance = cc.pSub(touchPoint1, touchPoint2);
-                var delta = cc.pSub(delta1, delta2);
+                var distance = touchPoint1.sub(touchPoint2);
+                var delta = delta1.sub(delta2);
                 var scale = 1;
                 if (Math.abs(distance.x) > Math.abs(distance.y)) {
                     scale = (distance.x + delta.x) / distance.x * self.target.scale;

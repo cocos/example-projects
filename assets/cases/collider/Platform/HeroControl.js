@@ -41,16 +41,16 @@ cc.Class({
     
     onKeyPressed: function (keyCode, event) {
         switch(keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
+            case cc.macro.KEY.a:
+            case cc.macro.KEY.left:
                 this.direction = -1;
                 break;
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case cc.macro.KEY.d:
+            case cc.macro.KEY.right:
                 this.direction = 1;
                 break;
-            case cc.KEY.w:
-            case cc.KEY.up:
+            case cc.macro.KEY.w:
+            case cc.macro.KEY.up:
                 if (!this.jumping) {
                     this.jumping = true;
                     this.speed.y = this.jumpSpeed;    
@@ -61,10 +61,10 @@ cc.Class({
     
     onKeyReleased: function (keyCode, event) {
         switch(keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case cc.macro.KEY.a:
+            case cc.macro.KEY.left:
+            case cc.macro.KEY.d:
+            case cc.macro.KEY.right:
                 this.direction = 0;
                 break;
         }
