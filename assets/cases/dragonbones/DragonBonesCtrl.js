@@ -167,37 +167,37 @@ cc.Class({
 
     _keyHandler: function(keyCode, isDown) {
         switch(keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
+            case cc.macro.KEY.a:
+            case cc.macro.KEY.left:
                 this._left = isDown;
                 this._updateMove(-1);
                 break;
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case cc.macro.KEY.d:
+            case cc.macro.KEY.right:
                 this._right = isDown;
                 this._updateMove(1);
                 break;
-            case cc.KEY.w:
-            case cc.KEY.up:
+            case cc.macro.KEY.w:
+            case cc.macro.KEY.up:
                 if (isDown) {
                     this.jump();
                 }
                 break;
-            case cc.KEY.s:
-            case cc.KEY.down:
+            case cc.macro.KEY.s:
+            case cc.macro.KEY.down:
                 this.squat(isDown);
                 break;
-            case cc.KEY.q:
+            case cc.macro.KEY.q:
                 if (isDown) {
                     this.switchWeaponR();
                 }
                 break;
-            case cc.KEY.e:
+            case cc.macro.KEY.e:
                 if (isDown) {
                     this.switchWeaponL();
                 }
                 break;
-            case cc.KEY.space:
+            case cc.macro.KEY.space:
                 if (isDown) {
                     this.switchWeaponR();
                     this.switchWeaponL();

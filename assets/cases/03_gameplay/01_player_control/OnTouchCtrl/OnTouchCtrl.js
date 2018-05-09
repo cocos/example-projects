@@ -44,9 +44,9 @@ cc.Class({
         if (!this.isMoving) return;
         var oldPos = this.follower.position;
         // get move direction
-        var direction = cc.pNormalize(cc.pSub(this.moveToPos, oldPos));
+        var direction = this.moveToPos.sub(oldPos).normalize();
         // multiply direction with distance to get new position
-        var newPos = cc.pAdd(oldPos, cc.pMult(direction, this.followSpeed * dt));
+        var newPos = oldPos.add(direction.mul(this.followSpeed * dt));
         // set new position
         this.follower.setPosition(newPos);
     }

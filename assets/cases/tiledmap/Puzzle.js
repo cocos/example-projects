@@ -177,19 +177,19 @@ cc.Class({
         var newTile = cc.v2(this._curTile.x, this._curTile.y);
         var mapMoveDir = MoveDirection.NONE;
         switch(event.keyCode) {
-            case cc.KEY.up:
+            case cc.macro.KEY.up:
                 newTile.y -= 1;
                 mapMoveDir = MoveDirection.DOWN;
                 break;
-            case cc.KEY.down:
+            case cc.macro.KEY.down:
                 newTile.y += 1;
                 mapMoveDir = MoveDirection.UP;
                 break;
-            case cc.KEY.left:
+            case cc.macro.KEY.left:
                 newTile.x -= 1;
                 mapMoveDir = MoveDirection.RIGHT;
                 break;
-            case cc.KEY.right:
+            case cc.macro.KEY.right:
                 newTile.x += 1;
                 mapMoveDir = MoveDirection.LEFT;
                 break;

@@ -31,9 +31,9 @@ cc.Class({
         var target = this.target, range = this._range;
         this._time += 5;
         target.x += this._acc.x * dt * (this.speed + this._time);
-        target.x = cc.clampf(target.x, -range.x, range.x);
+        target.x = cc.misc.clampf(target.x, -range.x, range.x);
         target.y += this._acc.y * dt * (this.speed + this._time);
-        target.y = cc.clampf(target.y, -range.y, range.y);
+        target.y = cc.misc.clampf(target.y, -range.y, range.y);
 
         if (target.x <= -range.x || target.x >= range.x ||
             target.y <= -range.y || target.y >= range.y) {
