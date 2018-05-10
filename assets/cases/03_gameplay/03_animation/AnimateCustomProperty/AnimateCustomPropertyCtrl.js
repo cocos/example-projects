@@ -5,18 +5,9 @@ cc.Class({
         hp: 0,
         emissionRote: 0,
         num: 0,
-        hpBar: {
-            default: null,
-            type: cc.ProgressBar
-        },
-        particle: {
-            default: null,
-            type: cc.ParticleSystem
-        },
-        score: {
-            default: null,
-            type: cc.Label
-        }
+        hpBar: cc.ProgressBar,
+        particle: cc.ParticleSystem,
+        score: cc.Label
     },
 
     update: function (dt) {
