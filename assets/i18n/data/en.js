@@ -18,6 +18,7 @@ module.exports = {
   "cases/01_graphics/01_sprite/SimpleSprite.fire.7": "This is Simple Sprite.",
   "cases/01_graphics/01_sprite/SlicedSprite.fire.7": "This is Sliced Sprite.",
   "cases/01_graphics/01_sprite/TiledSprite.fire.6": "This is Tiled Sprite.",
+  "cases/01_graphics/01_sprite/ChangeColor.fire.1": "Draw Call should be changed when change color.",
   "cases/01_graphics/01_sprite/TrimmedSprite.fire.7": "TRIMMED ",
   "cases/01_graphics/01_sprite/TrimmedSprite.fire.12": "No TRIMMED",
   "cases/01_graphics/02_particle/AutoRemoveParticle.fire.9": "Particle 1\n\"Auto Remove On Finish\" disabled",
