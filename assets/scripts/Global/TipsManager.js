@@ -96,8 +96,7 @@ cc.Class({
     _showTips () {
         if (this.platform === PlatformType.None) { return; }
         var info = this.support ? this._checkSupport() : this._checkNonSupport();
-        var bg = this.node.getComponent(cc.Sprite);
-        bg.enabled = info.showed;
+        this.node.active = info.showed;
         if (info.showed) {
             var content = this.node.getChildByName('Content').getComponent(cc.Label);
             content.textKey = info.textKey;
