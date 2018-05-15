@@ -58,7 +58,6 @@ cc.Class({
             }
 
             this._assets = assets;
-            var text = "";
             for (var i = 0; i < assets.length; ++i) {
                 var asset = assets[i];
                 var info = asset.toString();
@@ -90,10 +89,9 @@ cc.Class({
                 return;
             }
             this._assets = assets;
-            var text = "";
             for (var i = 0; i < assets.length; ++i) {
                 var asset = assets[i];
-                this._createLabel(asset.toString() || asset.name || cc.js.getClassName(asset));
+                this._createLabel(asset.name);
             }
             this._hasLoading = false;
             this.btnClearAll.active = true;

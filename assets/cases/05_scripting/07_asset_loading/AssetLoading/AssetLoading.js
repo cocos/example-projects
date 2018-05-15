@@ -169,7 +169,7 @@ cc.Class({
             case "Txt":
                 component = node.addComponent(cc.Label);
                 component.lineHeight = 40;
-                component.string = res;
+                component.string = res.text;
                 break;
             case "Font":
                 component = node.addComponent(cc.Label);
