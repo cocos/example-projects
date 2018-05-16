@@ -5277,6 +5277,13 @@
 
   var global = (function() { return this; })();
 
+  if (cc.sys.WECHAT_GAME) {
+    if (!global) {
+      cc.error('socket-io doesn\'t support to translate to ES5 mode.');
+      return;
+    }
+  }
+  
   /**
    * WebSocket constructor.
    */
