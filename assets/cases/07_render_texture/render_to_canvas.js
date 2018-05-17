@@ -49,8 +49,8 @@ cc.Class({
         var img = this.capture();
         img.style.position = 'absolute';
         img.style.display = 'block';
-        img.style.left = `0px`
-        img.style.top = `0px`;
+        img.style.left = '0px'
+        img.style.top = '0px';
         img.zIndex = 100;
 
         img.onclick = function (event) {
@@ -58,8 +58,7 @@ cc.Class({
             img.remove();
         }
 
-        let container = document.getElementById('Cocos2dGameContainer');
-        container.appendChild(img);
+        cc.game.container.appendChild(img);
     }
 
     // update (dt) {},
