@@ -101,7 +101,7 @@ cc.Class({
             }
 
             binaryStr += str;
-            respLabel.string = binaryStr;
+            respLabel.textKey = binaryStr;
             websocketLabel.textKey = "cases/05_scripting/11_network/NetworkCtrl.js.6";
         };
 
@@ -137,7 +137,7 @@ cc.Class({
         else
         {
             var warningStr = "send binary websocket instance wasn't ready...";
-            this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.10") + warningStr;
+            this.websocket.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.10") + warningStr;
             this.scheduleOnce(function () {
                 this.sendWebSocketBinary();
             }, 1);
@@ -149,21 +149,21 @@ cc.Class({
         if (!this.socketIO) { return; }
 
         var msg = this.tag + " says 'testevent' with data: " + data;
-        this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.11") + msg;
+        this.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.11") + msg;
     },
 
     message: function(data) {
         if (!this.socketIO) { return; }
 
         var msg = this.tag + " received message: " + data;
-        this.socketIOResp.string = msg;
+        this.socketIOResp.textKey = msg;
     },
 
     disconnection: function() {
         if (!this.socketIO) { return; }
 
         var msg = this.tag + " disconnected!";
-        this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
+        this.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
     },
     
     sendSocketIO: function () {
@@ -185,7 +185,7 @@ cc.Class({
             if (!self.socketIO) { return; }
 
             var msg = sioclient.tag + " Connected!";
-            self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.13") + msg;
+            self.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.13") + msg;
 
             // Send message after connection
             self._sioClient.send("Hello Socket.IO!");
@@ -199,7 +199,7 @@ cc.Class({
 
             cc.log("echotest 'on' callback fired!");
             var msg = self.tag + " says 'echotest' with data: " + data;
-            self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.14") + msg;
+            self.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.14") + msg;
         });
 
         sioclient.on("testevent", this.testevent.bind(this));
@@ -212,13 +212,13 @@ cc.Class({
             return method + " Response (30 chars): " + response.substring(0, 30) + "...";
         };
         
-        var eventLabelOrigin = eventLabel.string;
+        var eventLabelOrigin = eventLabel.textKey;
         // Simple events
         ['loadstart', 'abort', 'error', 'load', 'loadend', 'timeout'].forEach(function (eventname) {
             xhr["on" + eventname] = function () {
-                eventLabel.string = eventLabelOrigin + "\nEvent : " + eventname;
+                eventLabel.textKey = eventLabelOrigin + "\nEvent : " + eventname;
                 if (eventname === 'timeout') {
-                    label.string = '(timeout)';
+                    label.textKey = '(timeout)';
                 }
             };
         });
@@ -226,7 +226,7 @@ cc.Class({
         // Special event
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && (xhr.status >= 200 && xhr.status < 300)) {
-                label.string = handler(xhr.responseText);
+                label.textKey = handler(xhr.responseText);
             }
         };
     }
