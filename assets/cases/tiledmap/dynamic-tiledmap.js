@@ -20,6 +20,7 @@ cc.Class({
     },
 
     onCreateTileMap (tmxAsset) {
+        this.node.destroyAllChildren();
         var node = new cc.Node();
         this.node.addChild(node);
         var tileMap = node.addComponent(cc.TiledMap);
