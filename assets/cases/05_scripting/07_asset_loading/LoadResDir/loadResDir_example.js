@@ -34,7 +34,9 @@ cc.Class({
             if (typeof asset === 'object' && !asset._uuid) {
                 continue;
             }
-            cc.loader.release(this._assets[i]);
+            // 需要释放所有资源依赖
+            var deps = cc.loader.getDependsRecursively(asset);
+            cc.loader.release(deps);
         }
     },
 
