@@ -19,7 +19,9 @@ cc.Class({
             },
             set: function (value) {
                 this.textKey = value;
-                cc.warn('Please set label text key in Text Key property.');
+                if (CC_EDITOR) {
+                    cc.warn('Please set label text key in Text Key property.');
+                }
             }
         },
     },
