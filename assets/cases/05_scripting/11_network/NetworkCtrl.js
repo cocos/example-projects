@@ -80,7 +80,7 @@ cc.Class({
         this._wsiSendBinary = new WebSocket("ws://echo.websocket.org");
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
+            websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
         };
 
         this._wsiSendBinary.onmessage = function(evt) {
@@ -102,15 +102,15 @@ cc.Class({
 
             binaryStr += str;
             respLabel.string = binaryStr;
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.6");
+            websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.6");
         };
 
         this._wsiSendBinary.onerror = function(evt) {
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.7");
+            websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.7");
         };
 
         this._wsiSendBinary.onclose = function(evt) {
-            websocketLabel.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.8");
+            websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.8");
             // After close, it's no longer possible to use it again, 
             // if you want to send another request, you need to create a new websocket instance
             self._wsiSendBinary = null;
@@ -124,7 +124,7 @@ cc.Class({
         if (!this._wsiSendBinary) { return; }
         if (this._wsiSendBinary.readyState === WebSocket.OPEN)
         {
-            this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.9");
+            this.websocket.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.9");
             var buf = "Hello WebSocket中文,\0 I'm\0 a\0 binary\0 message\0.";
             
             var arrData = new Uint16Array(buf.length);
@@ -137,7 +137,7 @@ cc.Class({
         else
         {
             var warningStr = "send binary websocket instance wasn't ready...";
-            this.websocket.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.10") + warningStr;
+            this.websocket.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.10") + warningStr;
             this.scheduleOnce(function () {
                 this.sendWebSocketBinary();
             }, 1);
@@ -149,7 +149,7 @@ cc.Class({
         if (!this.socketIO) { return; }
 
         var msg = this.tag + " says 'testevent' with data: " + data;
-        this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.11") + msg;
+        this.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.11") + msg;
     },
 
     message: function(data) {
@@ -163,7 +163,7 @@ cc.Class({
         if (!this.socketIO) { return; }
 
         var msg = this.tag + " disconnected!";
-        this.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
+        this.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
     },
     
     sendSocketIO: function () {
@@ -185,7 +185,7 @@ cc.Class({
             if (!self.socketIO) { return; }
 
             var msg = sioclient.tag + " Connected!";
-            self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.13") + msg;
+            self.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.13") + msg;
 
             // Send message after connection
             self._sioClient.send("Hello Socket.IO!");
@@ -199,7 +199,7 @@ cc.Class({
 
             cc.log("echotest 'on' callback fired!");
             var msg = self.tag + " says 'echotest' with data: " + data;
-            self.socketIO.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.14") + msg;
+            self.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.14") + msg;
         });
 
         sioclient.on("testevent", this.testevent.bind(this));
