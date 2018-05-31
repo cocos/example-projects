@@ -1,20 +1,34 @@
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
     properties: {
         speed: 200,
         target: cc.Node,
+        btn_label: cc.Label,
         _time: 0,
         _range: cc.v2(0, 0),
         _acc: cc.v2(0, 0)
     },
 
     onLoad () {
+        this._enabled = false;
         var screenSize = cc.view.getVisibleSize();
         this._range.x = screenSize.width / 2 - this.target.width / 2;
         this._range.y = screenSize.height / 2 - this.target.height / 2;
-        cc.systemEvent.setAccelerometerEnabled(true);
         cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
+    },
+
+    onOpenAccelerometer () {
+        this._enabled = !this._enabled;
+        if (this._enabled) {
+            this.btn_label.textKey = i18n.t('cases/03_gameplay/01_player_control/On/DeviceMotion.fire.2');
+        }
+        else {
+            this.btn_label.textKey = i18n.t('cases/03_gameplay/01_player_control/On/DeviceMotion.fire.1');
+        }
+        cc.systemEvent.setAccelerometerEnabled(this._enabled);
     },
 
     onDestroy () {
