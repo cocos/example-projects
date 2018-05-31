@@ -134,6 +134,8 @@ module.exports = {
   "cases/03_gameplay/01_player_control/On/OnTouchInput.fire.10": "Try touching anywhere.",
   "cases/03_gameplay/01_player_control/On/OnMultiTouchInput.fire.20": "The sample can only be effective on mobile platforms!",
   "cases/03_gameplay/01_player_control/On/OnMultiTouchInput.fire.21": "Use your fingers to zoom image!",
+  "cases/03_gameplay/01_player_control/On/DeviceMotion.fire.1": "Open Accelerometer",
+  "cases/03_gameplay/01_player_control/On/DeviceMotion.fire.2": "Close Accelerometer",
   "cases/03_gameplay/02_actions/SimpleAction.fire.13": "This is Simple Action.",
   "cases/03_gameplay/03_animation/AnimateCustomProperty.fire.14": "Label",
   "cases/03_gameplay/03_animation/AnimateCustomProperty.fire.18": "This is Animate Custom Property.",
