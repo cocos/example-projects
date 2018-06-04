@@ -17,7 +17,9 @@ var PlatformType = cc.Enum({
     WebGl: 30,
     Canvas: 31,
 
-    Native_Browser_Chrome: 100
+    Native_Browser_Chrome: 100,
+
+    WechatGame: 200,
 });
 
 var canvas = null;
@@ -29,7 +31,7 @@ cc.Class({
         support: false,
         // 需要检测的平台
         platform: {
-            default: PlatformType.Node,
+            default: PlatformType.None,
             type: PlatformType
         }
     },
@@ -58,6 +60,10 @@ cc.Class({
                 showed = cc.game.renderType === cc.game.RENDER_TYPE_CANVAS;
                 textKey = i18n.t("example_case_nonsupport_web_canvas_tips");
                 break;
+            case PlatformType.WechatGame:
+                showed = cc.sys.platform === cc.sys.WECHAT_GAME;
+                textKey = i18n.t("example_case_nonsupport_wechat_game_tips");
+                break;
         }
         return {
             showed: showed,
@@ -85,6 +91,10 @@ cc.Class({
                             cc.sys.isBrowser &&
                             cc.sys.browserType === cc.sys.BROWSER_TYPE_CHROME);
                 textKey = i18n.t("example_case_support_native_chrome_tips");
+                break;
+            case PlatformType.WechatGame:
+                showed = cc.sys.platform === cc.sys.WECHAT_GAME;
+                textKey = i18n.t("example_case_support_wechat_game_tips");
                 break;
         }
         return {
