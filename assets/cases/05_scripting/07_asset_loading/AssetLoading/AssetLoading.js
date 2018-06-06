@@ -13,7 +13,6 @@ cc.Class({
         }
     },
 
-    // use this for initialization
     onLoad: function () {
         // cur load Target
         this._curType = "";
@@ -25,17 +24,17 @@ cc.Class({
         // add load res url
         this._urls = {
             // Raw Asset
-            Audio: "test assets/audio",
-            Txt: "test assets/text",
-            Texture: "test assets/PurpleMonster",
-            Font: "test assets/font",
+            Audio: "test_assets/audio",
+            Txt: "test_assets/text",
+            Texture: "test_assets/PurpleMonster",
+            Font: "test_assets/font",
             // Raw Asset, use raw url
-            Plist: cc.url.raw("resources/test assets/atom.plist"),
+            Plist: cc.url.raw("resources/test_assets/atom.plist"),
             // Asset
-            SpriteFrame: "test assets/image",
-            Prefab: "test assets/prefab",
-            Animation: "test assets/sprite-anim",
-            Scene: "test assets/scene",
+            SpriteFrame: "test_assets/image",
+            Prefab: "test_assets/prefab",
+            Animation: "test_assets/sprite-anim",
+            Scene: "test_assets/scene",
             Spine: "spineboy/spineboy",
             CORS: "http://tools.itharbors.com/res/logo.png",
         };

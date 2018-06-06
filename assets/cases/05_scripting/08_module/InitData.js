@@ -5,7 +5,7 @@ var _monsterInfo = {
     lv: 1,
     atk: 10,
     defense: 5,
-    imageUrl: "test assets/PurpleMonster"
+    imageUrl: "test_assets/PurpleMonster"
 };
 
 module.exports = {
