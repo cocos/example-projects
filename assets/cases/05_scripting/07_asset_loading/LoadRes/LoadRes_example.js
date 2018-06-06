@@ -7,7 +7,7 @@ cc.Class({
     },
 
     onLoad: function () {
-        this._url = ["test assets/atlas", "test assets/prefab"];
+        this._url = ["test_assets/atlas", "test_assets/prefab"];
     },
 
     loadSpriteFrame: function () {
