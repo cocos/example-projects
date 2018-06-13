@@ -2,21 +2,18 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        videoPlayer: cc.VideoPlayer,
-        title: cc.Label,
+        videoPlayer: cc.VideoPlayer
     },
 
-    // use this for initialization
-    onLoad: function () {
-    },
-
-    videoPlayerEvent: function(sender, event) {
-        if(event === cc.VideoPlayer.EventType.READY_TO_PLAY) {
-            this.videoPlayer.play();
-        } else if(event === cc.VideoPlayer.EventType.CLICKED) {
-            this.videoPlayer.node.removeFromParent();
-            this.title.enabled = true;
+    videoPlayerEvent (sender, event) {
+        if(event === cc.VideoPlayer.EventType.CLICKED) {
+            this.videoPlayer.stop();
+            this.videoPlayer.enabled = false;
         }
-    }
+    },
 
+    openVideoPlayer () {
+        this.videoPlayer.enabled = true;
+        this.videoPlayer.play();
+    }
 });
