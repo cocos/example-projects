@@ -20,6 +20,9 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this._wsiSendBinary = null;
+        this._xhrXHR = null;
+        this._xhrHRAB = null;
+        this._xhrXHRTimeout = null;
         
         this.xhrResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.1");
         this.xhrABResp.string = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.2");
@@ -32,6 +35,19 @@ cc.Class({
         this.sendXHRTimeout();
         this.prepareWebSocket();
         this.sendSocketIO();
+    },
+
+    onDisable: function () {
+        var wsiSendBinary = this._wsiSendBinary;
+        if (wsiSendBinary) {
+            wsiSendBinary.onopen = null;
+            wsiSendBinary.onmessage = null;
+            wsiSendBinary.onerror = null;
+            wsiSendBinary.onclose = null;
+        }
+        this.rmXhrEventListener(this._xhrXHR);
+        this.rmXhrEventListener(this._xhrHRAB);
+        this.rmXhrEventListener(this._xhrXHRTimeout);
     },
     
     sendXHR: function () {
@@ -48,6 +64,7 @@ cc.Class({
         xhr.timeout = 5000;// 5 seconds for timeout
 
         xhr.send();
+        this._xhrXHR = xhr;
     },
     
     sendXHRAB: function () {
@@ -59,6 +76,7 @@ cc.Class({
         xhr.setRequestHeader("Content-Type","text/plain");
         // Uint8Array is an ArrayBufferView
         xhr.send(new Uint8Array([1,2,3,4,5]));
+        this._xhrHRAB = xhr;
     },
     
     sendXHRTimeout: function () {
@@ -71,6 +89,7 @@ cc.Class({
         // method and before calling the send() method.
         xhr.timeout = 5000;// 5 seconds for timeout
         xhr.send();
+        this._xhrXHRTimeout = xhr;
     },
     
     prepareWebSocket: function () {
@@ -119,8 +138,7 @@ cc.Class({
         this.scheduleOnce(this.sendWebSocketBinary, 1);
     },
 
-    sendWebSocketBinary: function(sender)
-    {
+    sendWebSocketBinary: function(sender) {
         if (!this._wsiSendBinary) { return; }
         if (this._wsiSendBinary.readyState === WebSocket.OPEN)
         {
@@ -226,5 +244,15 @@ cc.Class({
                 label.string = handler(xhr.responseText);
             }
         };
+    },
+
+    rmXhrEventListener: function (xhr) {
+        if (!xhr) {
+            return;
+        }
+        ['loadstart', 'abort', 'error', 'load', 'loadend', 'timeout'].forEach(function (eventname) {
+            xhr["on" + eventname] = null;
+        });
+        xhr.onreadystatechange = null;
     }
 });
