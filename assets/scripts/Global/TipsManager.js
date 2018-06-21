@@ -26,6 +26,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        content: cc.Label,
+        background: cc.Node,
         support: false,
         // 需要检测的平台
         platform: {
@@ -96,11 +98,9 @@ cc.Class({
     _showTips () {
         if (this.platform === PlatformType.None) { return; }
         var info = this.support ? this._checkSupport() : this._checkNonSupport();
-        var bg = this.node.getComponent(cc.Sprite);
-        bg.enabled = info.showed;
+        this.background.active = info.showed;
         if (info.showed) {
-            var content = this.node.getChildByName('Content').getComponent(cc.Label);
-            content.textKey = info.textKey;
+            this.content.textKey = info.textKey;
         }
     }
 });
