@@ -128,6 +128,7 @@ module.exports = {
   "cases/02_ui/07_editBox/EditBox.fire.29": "多行文本框:",
   "cases/02_ui/07_editBox/EditBox.fire.32": "点击",
   "cases/02_ui/07_editBox/EditBox.fire.38": "按钮必须在 EditBox 的上面, \n并且它应该允许点击.",
+  "cases/02_ui/09_videoplayer/fullscreenVideo.fire": "点击按钮进行播放",
   "cases/03_gameplay/01_player_control/EventManager/KeyboardInput.fire.6": "按 'A' 或 'D' 键控制小绵羊",
   "cases/03_gameplay/01_player_control/On/OnTouchCtrl.js.1": "touch (",
   "cases/03_gameplay/01_player_control/On/OnTouchInput.fire.10": "请触摸任意位置试试",

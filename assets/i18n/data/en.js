@@ -128,6 +128,7 @@ module.exports = {
   "cases/02_ui/07_editBox/EditBox.fire.29": "Mutiple Line Text:",
   "cases/02_ui/07_editBox/EditBox.fire.32": "Click",
   "cases/02_ui/07_editBox/EditBox.fire.38": "Button must be on top of EditBox, \nand it should enable click.",
+  "cases/02_ui/09_videoplayer/fullscreenVideo.fire": "Click button to play",
   "cases/03_gameplay/01_player_control/EventManager/KeyboardInput.fire.6": "Press 'A' or 'D' to control sheep",
   "cases/03_gameplay/01_player_control/On/OnTouchCtrl.js.1": "touch (",
   "cases/03_gameplay/01_player_control/On/OnTouchInput.fire.10": "Try touching anywhere.",
