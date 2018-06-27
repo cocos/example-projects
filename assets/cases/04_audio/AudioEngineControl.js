@@ -25,28 +25,24 @@ cc.Class({
         });
     },
 
-    update: function () {
-        if (!this.label) return;
-        for (var i=0; i<this.audioPool.length; i++) {
-            var id = this.audioPool[i];
-            var state = cc.audioEngine.getState(id);
-            if (state < 0) {
-                this.audioPool.splice(i, 1);
-                i--;
-            }
-        }
-        this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
-    },
-    
     play: function () {
         if (!this.audio) return;
         var id = cc.audioEngine.play(this.audio, false, 1);
         this.audioPool.push(id);
+        this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
+
+        // set finish callback
+        cc.audioEngine.setFinishCallback(id, () => {
+            this.audioPool.splice(i, 1);
+            this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
+        });
     },
     
     stopAll: function () {
         if (!this.audio) return;
         cc.audioEngine.stopAll();
+        this.audioPool = [];
+        this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
     },
     
     pauseAll: function () {
