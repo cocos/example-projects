@@ -25,6 +25,14 @@ cc.Class({
         });
     },
 
+    removeAudio: function (id) {
+        var idx = this.audioPool.indexOf(id);
+        if (idx > -1) {
+            this.audioPool.splice(idx, 1);
+        }
+        this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
+    },
+
     play: function () {
         if (!this.audio) return;
         var id = cc.audioEngine.play(this.audio, false, 1);
@@ -32,10 +40,7 @@ cc.Class({
         this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
 
         // set finish callback
-        cc.audioEngine.setFinishCallback(id, () => {
-            this.audioPool.splice(i, 1);
-            this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
-        });
+        cc.audioEngine.setFinishCallback(id, this.removeAudio.bind(this, id));
     },
     
     stopAll: function () {
