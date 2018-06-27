@@ -12,7 +12,7 @@ var TouchDragger = cc.Class({
     onLoad: function () {
         this._down = false;
         this.node.opacity = 160;
-        this.node.on(cc.Node.EventType.MOUSE_DOWN, function () {
+        this.node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
             cc.log('Drag stated ...');
             this.node.opacity = 255;
             this._down = true;
@@ -31,7 +31,7 @@ var TouchDragger = cc.Class({
             if (!this.propagate)
                 event.stopPropagation();
         }, this);
-        this.node.on(cc.Node.EventType.MOUSE_LEAVE, function () {
+        this.node.on(cc.Node.EventType.MOUSE_LEAVE, function (event) {
             if (!this._down) {
                 event.stopPropagation();
                 return
@@ -40,7 +40,7 @@ var TouchDragger = cc.Class({
             cc.log('Drag leave ...');
             this._down = false;
         }, this);
-        this.node.on(cc.Node.EventType.MOUSE_UP, function () {
+        this.node.on(cc.Node.EventType.MOUSE_UP, function (event) {
             if (!this._down) {
                 event.stopPropagation();
                 return

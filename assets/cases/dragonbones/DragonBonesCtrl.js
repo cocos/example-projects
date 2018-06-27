@@ -315,18 +315,18 @@ cc.Class({
         }
     },
 
-    _animationEventHandler: function(event) {
+    _animationEventHandler: function (event) {
         if (event.type === dragonBones.EventObject.FADE_IN_COMPLETE) {
-            if (event.detail.animationState.name === "jump_1") {
+            if (event.animationState.name === "jump_1") {
                 this._isJumpingB = true;
                 this._speedY = -JUMP_SPEED;
                 this._armature.animation.fadeIn("jump_2", -1, -1, 0, NORMAL_ANIMATION_GROUP);
-            } else if (event.detail.animationState.name === "jump_4") {
+            } else if (event.animationState.name === "jump_4") {
                 this._updateAnimation();
             }
         }
         else if (event.type === dragonBones.EventObject.FADE_OUT_COMPLETE) {
-            if (event.detail.animationState.name === "attack_01") {
+            if (event.animationState.name === "attack_01") {
                 this._isAttackingB = false;
                 this._attackState = null;
             }
@@ -334,11 +334,11 @@ cc.Class({
     },
 
     _frameEventHandler : function (event) {
-        if (event.detail.name === "onFire") {
-            var firePointBone = event.detail.armature.getBone("firePoint");
+        if (event.name === "onFire") {
+            var firePointBone = event.armature.getBone("firePoint");
             var localPoint = cc.v2(firePointBone.global.x, -firePointBone.global.y);
 
-            var display = event.detail.armature.display;
+            var display = event.armature.display;
             var globalPoint = display.node.convertToWorldSpace(localPoint);
 
             this._fire(globalPoint);
