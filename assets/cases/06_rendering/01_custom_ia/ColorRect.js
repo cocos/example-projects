@@ -9,13 +9,20 @@
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
 let assembler = require('./ColorRectAssembler');
-const renderEngine = cc.renderer.renderEngine;
-const gfx = renderEngine.gfx;
-const math = renderEngine.math;
+let renderEngine;
+let gfx;
+let math;
+let _prevMat;
+let _currMat;
 
+cc.game.once(cc.game.EVENT_ENGINE_INITED, function () {
+    renderEngine = cc.renderer.renderEngine;
+    gfx = renderEngine.gfx;
+    math = renderEngine.math;
 
-let _prevMat = math.mat4.create();
-let _currMat = math.mat4.create();
+    _prevMat = math.mat4.create();
+    _currMat = math.mat4.create();
+})
 
 let ColorRect = cc.Class({
     extends: cc.RenderComponent,
