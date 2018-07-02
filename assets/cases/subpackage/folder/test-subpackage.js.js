@@ -8,6 +8,8 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
+const i18n = require('i18n');
+
 cc.Class({
     extends: cc.Component,
 
@@ -35,6 +37,7 @@ cc.Class({
 
     start () {
         this.getComponent(cc.Label).textKey = 'cases/subpackage.loaded';
+        console.log(i18n.t('cases/subpackage.loaded'));
     },
 
     update (dt) {
