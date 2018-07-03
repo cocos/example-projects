@@ -17,7 +17,12 @@ var PlatformType = cc.Enum({
     WebGl: 30,
     Canvas: 31,
 
-    Native_Browser_Chrome: 100
+    Native_Browser_Chrome: 100,
+
+    Preview:200,
+    QQPlay: 201,
+    Wechatgame: 202,
+    Preview_QQPlay: 203
 });
 
 var canvas = null;
@@ -26,6 +31,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        content: cc.Label,
+        background: cc.Node,
         support: false,
         // 需要检测的平台
         platform: {
@@ -57,6 +64,24 @@ cc.Class({
             case PlatformType.Canvas:
                 showed = cc._renderType === cc.game.RENDER_TYPE_CANVAS;
                 textKey = i18n.t("example_case_nonsupport_web_canvas_tips");
+                break;
+            case PlatformType.Preview_QQPlay:
+                showed = cc.sys.browserType === cc.sys.BROWSER_TYPE_QQ_PLAY;
+                if (!showed) {
+                    showed = CC_PREVIEW;
+                    textKey = i18n.t("example_case_nonsupport_preview_tips");
+                }
+                else {
+                    textKey = i18n.t("example_case_nonsupport_qqplay_tips");
+                }
+                break;
+            case PlatformType.QQPlay:
+                showed = cc.sys.browserType === cc.sys.BROWSER_TYPE_QQ_PLAY;
+                textKey = i18n.t("example_case_nonsupport_qqplay_tips");
+                break;
+            case PlatformType.Wechatgame:
+                showed = cc.sys.browserType === cc.sys.BROWSER_TYPE_WECHAT_GAME;
+                textKey = i18n.t("example_case_nonsupport_Wechatgame_tips");
                 break;
         }
         return {
@@ -96,10 +121,9 @@ cc.Class({
     _showTips () {
         if (this.platform === PlatformType.None) { return; }
         var info = this.support ? this._checkSupport() : this._checkNonSupport();
-        this.node.active = info.showed;
+        this.background.active = info.showed;
         if (info.showed) {
-            var content = this.node.getChildByName('Content').getComponent(cc.Label);
-            content.textKey = info.textKey;
+            this.content.textKey = info.textKey;
         }
     }
 });
