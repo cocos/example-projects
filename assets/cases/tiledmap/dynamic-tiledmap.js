@@ -2,11 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
-    },
-
-    onLoad () {
-        
+        map_root: cc.Node
     },
 
     onLoadTileMap (url) {
@@ -20,9 +16,9 @@ cc.Class({
     },
 
     onCreateTileMap (tmxAsset) {
-        this.node.destroyAllChildren();
+        this.map_root.destroyAllChildren();
         var node = new cc.Node();
-        this.node.addChild(node);
+        this.map_root.addChild(node);
         var tileMap = node.addComponent(cc.TiledMap);
         tileMap.tmxAsset = tmxAsset;
     },
