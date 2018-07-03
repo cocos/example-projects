@@ -63,6 +63,8 @@ cc.Class({
                 return 'STOPPED';
             case cc.VideoPlayer.EventType.COMPLETED:
                 return 'COMPLETED';
+            case cc.VideoPlayer.EventType.META_LOADED:
+                return 'META_LOADED';
             case cc.VideoPlayer.EventType.CLICKED:
                 return 'CLICKED';
             case cc.VideoPlayer.EventType.READY_TO_PLAY:
@@ -97,8 +99,13 @@ cc.Class({
     },
 
     playOnlineVideo () {
-        this.videoPlayer.resourceType = 0;
-        this.videoPlayer.url = 'http://benchmark.cocos2d-x.org/cocosvideo.mp4';
+        this.videoPlayer.resourceType = cc.VideoPlayer.ResourceType.REMOTE;
+        this.videoPlayer.remoteURL = 'http://benchmark.cocos2d-x.org/cocosvideo.mp4';
+        this.videoPlayer.play();
+    },
+
+    playLocalVideo () {
+        this.videoPlayer.resourceType = cc.VideoPlayer.ResourceType.LOCAL;
         this.videoPlayer.play();
     },
 
