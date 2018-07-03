@@ -34,7 +34,7 @@ cc.Class({
     },
 
     play: function () {
-        if (!this.audio) return;
+        if (!this.audio || this.audioPool.length === this.maxNum) return;
         var id = cc.audioEngine.play(this.audio, false, 1);
         this.audioPool.push(id);
         this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;

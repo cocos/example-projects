@@ -68,7 +68,7 @@ cc.Class({
 
     playOnlineVideo: function() {
         this.videoPlayer.resourceType = 0;
-        this.videoPlayer.url = "http://benchmark.cocos2d-x.org/cocosvideo.mp4";
+        this.videoPlayer.remoteURL = "http://benchmark.cocos2d-x.org/cocosvideo.mp4";
         this.videoPlayer.play();
     },
 
