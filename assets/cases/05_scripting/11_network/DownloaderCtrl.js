@@ -5,7 +5,7 @@ cc.Class({
         label: cc.Label,
         sprite: cc.Sprite,
         imgUrl: "http://www.cocos.com/wp-content/themes/cocos/img/download1.png",
-        txtUrl: "http://api.lololyrics.com/0.5/getLyric?artist=John%20Lennon&track=Imagine",
+        txtUrl: "https://raw.githubusercontent.com/cocos-creator/tutorial-dark-slash/master/LICENSE.md",
         _downloader: null,
         _imgTask: null,
         _txtTask: null,
