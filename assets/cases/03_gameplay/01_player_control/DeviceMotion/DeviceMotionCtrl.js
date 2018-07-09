@@ -28,6 +28,11 @@ cc.Class({
         else {
             this.btn_label.textKey = i18n.t('cases/03_gameplay/01_player_control/On/DeviceMotion.fire.1');
         }
+        if (!this._enabled) {
+            this._acc.x =  0;
+            this._acc.y =  0;
+            this._time = 0;
+        }
         cc.systemEvent.setAccelerometerEnabled(this._enabled);
     },
 
