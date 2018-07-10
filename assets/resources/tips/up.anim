@@ -1,0 +1,93 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "up",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2,
+  "sample": 60,
+  "speed": 1.5,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "opacity": [
+        {
+          "frame": 1.3333333333333333,
+          "value": 255
+        },
+        {
+          "frame": 2,
+          "value": 0
+        }
+      ]
+    },
+    "paths": {
+      "Background": {
+        "props": {
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 0,
+                "y": 0.4
+              }
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 1.4,
+                "y": 1.4
+              }
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        }
+      },
+      "Content": {
+        "props": {
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 0.4,
+                "y": 0.4
+              }
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 1.4,
+                "y": 1.4
+              }
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": [
+    {
+      "frame": 2,
+      "func": "onDestroySelf",
+      "params": []
+    }
+  ]
+}
