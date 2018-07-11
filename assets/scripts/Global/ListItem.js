@@ -1,3 +1,6 @@
+
+const TipsManager = require('TipsManager');
+
 cc.Class({
     extends: cc.Component,
 
@@ -13,11 +16,12 @@ cc.Class({
 
     init (menu) {
         this.index = -1;
+        this.__name = '';
         this.menu = menu;
     },
 
-    loadExample: function () {
-        if (this.url) {
+    loadExample () {
+        if (this.url && TipsManager.hasSupport(this.__name)) {
             this.menu.loadScene(this.url);
         }
     },
@@ -27,7 +31,7 @@ cc.Class({
         this.index = idx;
         this.node.y = y;
         this.node.x = isDir ? 50 : 100;
-        this.label.string = name;
+        this.label.string = this.__name = name;
         this.url = url;
         this.bg.enabled = !isDir;
         this.btn.interactable = !isDir;
