@@ -3,7 +3,7 @@
     "__type__": "cc.SceneAsset",
     "_name": "",
     "_objFlags": 0,
-    "_rawFiles": null,
+    "_native": "",
     "scene": {
       "__id__": 1
     }
@@ -48,7 +48,7 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0,
-    "autoReleaseAssets": false
+    "autoReleaseAssets": true
   },
   {
     "__type__": "cc.Node",
@@ -206,7 +206,7 @@
       "__id__": 3
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,
@@ -509,7 +509,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 61.16,
+      "width": 61,
       "height": 40
     },
     "_rotationX": 0,
@@ -547,6 +547,7 @@
     "_N$string": "Linear",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$textKey": "cases/03_gameplay/03_animation/MoveAnimation.fire.11"
   },
@@ -558,7 +559,7 @@
       "__id__": 11
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 0,
     "_left": 0,
@@ -627,12 +628,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": {
-      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
-    },
-    "hoverSprite": {
-      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
-    },
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
@@ -651,6 +646,18 @@
       "a": 255
     },
     "_N$normalSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "hoverSprite": {
       "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
     },
     "_N$disabledSprite": {
@@ -755,7 +762,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 132.08,
+      "width": 132,
       "height": 40
     },
     "_rotationX": 0,
@@ -793,6 +800,7 @@
     "_N$string": "Case In Expo",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$textKey": "cases/03_gameplay/03_animation/MoveAnimation.fire.17"
   },
@@ -804,7 +812,7 @@
       "__id__": 17
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 0,
     "_left": 0,
@@ -873,12 +881,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": {
-      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
-    },
-    "hoverSprite": {
-      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
-    },
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
@@ -897,6 +899,18 @@
       "a": 255
     },
     "_N$normalSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "hoverSprite": {
       "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
     },
     "_N$disabledSprite": {
@@ -1001,7 +1015,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 149.19,
+      "width": 149,
       "height": 40
     },
     "_rotationX": 0,
@@ -1039,6 +1053,7 @@
     "_N$string": "Case Out Expo",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$textKey": "cases/03_gameplay/03_animation/MoveAnimation.fire.23"
   },
@@ -1050,7 +1065,7 @@
       "__id__": 23
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 0,
     "_left": 0,
@@ -1119,12 +1134,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": {
-      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
-    },
-    "hoverSprite": {
-      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
-    },
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
@@ -1143,6 +1152,18 @@
       "a": 255
     },
     "_N$normalSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "hoverSprite": {
       "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
     },
     "_N$disabledSprite": {
@@ -1247,7 +1268,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 173.65,
+      "width": 174,
       "height": 40
     },
     "_rotationX": 0,
@@ -1285,6 +1306,7 @@
     "_N$string": "Case Out In Expo",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$textKey": "cases/03_gameplay/03_animation/MoveAnimation.fire.29"
   },
@@ -1296,7 +1318,7 @@
       "__id__": 29
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 0,
     "_left": 0,
@@ -1365,12 +1387,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": {
-      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
-    },
-    "hoverSprite": {
-      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
-    },
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
@@ -1389,6 +1405,18 @@
       "a": 255
     },
     "_N$normalSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "hoverSprite": {
       "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
     },
     "_N$disabledSprite": {
@@ -1493,7 +1521,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 135.71,
+      "width": 136,
       "height": 40
     },
     "_rotationX": 0,
@@ -1531,6 +1559,7 @@
     "_N$string": "Back Forward",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$textKey": "cases/03_gameplay/03_animation/MoveAnimation.fire.35"
   },
@@ -1542,7 +1571,7 @@
       "__id__": 35
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 0,
     "_left": 0,
@@ -1611,12 +1640,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": {
-      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
-    },
-    "hoverSprite": {
-      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
-    },
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
@@ -1637,6 +1660,18 @@
     "_N$normalSprite": {
       "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
     },
+    "_N$pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "pressedSprite": {
+      "__uuid__": "ba9dc5f7-45ab-4ff5-be92-97c7a73b8ad5"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
+    "hoverSprite": {
+      "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
+    },
     "_N$disabledSprite": {
       "__uuid__": "cb79e92b-2b6b-4445-91cc-6276f7496ddc"
     },
@@ -1652,7 +1687,7 @@
       "__id__": 10
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 33,
     "_left": 0,
@@ -1741,6 +1776,7 @@
     "_N$string": "This is Move Animation.",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$textKey": "cases/03_gameplay/03_animation/MoveAnimation.fire.41"
   },
