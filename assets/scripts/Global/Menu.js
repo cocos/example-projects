@@ -33,7 +33,7 @@ cc.Class({
     },
 
     onLoad: function () {
-        this._isLoadingScene = false;
+        this._isLoadingScene = true;
         this.showDebugDraw = false;
         cc.game.addPersistRootNode(this.node);
         this.currentSceneUrl = 'TestList.fire';

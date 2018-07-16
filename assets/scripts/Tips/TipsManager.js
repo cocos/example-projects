@@ -7,38 +7,36 @@ module.exports = {
 
     SupportConfig: function (name) {
         switch (name) {
-            case 'webp-test':
-                return cc.sys.capabilities['webp'];
-            case 'EditBoxTabIndex':
-                return !cc.sys.isNative;
-            case 'fullscreenVideo':
-                return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
-            case 'videoPlayer':
-                return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
-            case 'webview':
-                return (cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
-            case 'Mask_IMAGE_STENCIL':
-                return cc.game.renderType === cc.game.RENDER_TYPE_WEBGL;
-            case 'Mask_NESTED':
-                return cc.game.renderType === cc.game.RENDER_TYPE_WEBGL;
-            case 'DeviceMotion':
-                return cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.isMobile;
-            case 'KeyboardInput':
-                return !cc.sys.isMobile;
-            case 'OnMultiTouchInput':
-                return cc.sys.isMobile;
-            case 'downloader':
-                return cc.sys.isNative;
-            case 'render_to_canvas':
-                return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY);
+            case 'EditBoxTabIndex':     return !cc.sys.isNative;
+            case 'OnMultiTouchInput':   return cc.sys.isMobile;
+            case 'downloader':          return cc.sys.isNative;
+            case 'webp-test':           return cc.sys.capabilities['webp'];
+            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
+            case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
+            case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY);
+
+            // 不支持 QQ_PLAY，WECHAT_GAME 平台
             case 'render_to_sprite':
                 return (cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+
+            // 只支持 RENDER_TYPE_WEBGL
+            case 'MotionStreak':
+            case 'Mask_IMAGE_STENCIL':
+            case 'Mask_NESTED':
+                return cc.game.renderType === cc.game.RENDER_TYPE_WEBGL;
+
+            // 不支持 isMobile
+            case 'KeyboardInput':
             case 'platform':
                 return !cc.sys.isMobile;
-            case 'MotionStreak':
-                return cc.game.renderType === cc.game.RENDER_TYPE_WEBGL;
-            case 'Native_Call':
-                return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
+
+            // 不支持 模拟器，QQ_PLAY，WECHAT_GAME 平台
+            case 'TTFFontLabel':
+            case 'fullscreenVideo':
+            case 'videoPlayer':
+            case 'webview':
+                return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+
             // anysdk
             case '01_user':
             case '02_iap':
