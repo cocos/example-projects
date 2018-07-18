@@ -3,7 +3,7 @@
     "__type__": "cc.SceneAsset",
     "_name": "",
     "_objFlags": 0,
-    "_rawFiles": null,
+    "_native": "",
     "scene": {
       "__id__": 1
     }
@@ -51,7 +51,7 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0,
-    "autoReleaseAssets": false
+    "autoReleaseAssets": true
   },
   {
     "__type__": "cc.Node",
@@ -200,7 +200,7 @@
       "__id__": 3
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,
@@ -502,7 +502,7 @@
       "__id__": 8
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 18,
     "_left": 0,
@@ -748,7 +748,9 @@
       "__id__": 18
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 1,
+    "_wasAlignOnce": null,
+    "isAlignOnce": null,
     "_target": {
       "__id__": 16
     },
@@ -866,7 +868,9 @@
       "__id__": 22
     },
     "_enabled": true,
-    "isAlignOnce": true,
+    "alignMode": 1,
+    "_wasAlignOnce": {},
+    "isAlignOnce": {},
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,
@@ -1028,7 +1032,9 @@
       "__id__": 26
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 1,
+    "_wasAlignOnce": null,
+    "isAlignOnce": null,
     "_target": null,
     "_alignFlags": 40,
     "_left": 10,
@@ -1068,7 +1074,9 @@
       "__id__": 25
     },
     "_enabled": true,
-    "isAlignOnce": true,
+    "alignMode": 1,
+    "_wasAlignOnce": {},
+    "isAlignOnce": {},
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,
@@ -1116,7 +1124,9 @@
       "__id__": 17
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 1,
+    "_wasAlignOnce": null,
+    "isAlignOnce": null,
     "_target": null,
     "_alignFlags": 45,
     "_left": 0.25,
@@ -1305,7 +1315,7 @@
       "__id__": 33
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 33,
     "_left": 0,
@@ -1348,8 +1358,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": null,
-    "hoverSprite": null,
     "clickEvents": [
       {
         "__id__": 39
@@ -1372,6 +1380,10 @@
       "a": 255
     },
     "_N$normalSprite": null,
+    "_N$pressedSprite": null,
+    "pressedSprite": null,
+    "_N$hoverSprite": null,
+    "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 33
@@ -1557,7 +1569,7 @@
       "__id__": 40
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 9,
     "_left": 11,
@@ -1600,8 +1612,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": null,
-    "hoverSprite": null,
     "clickEvents": [
       {
         "__id__": 46
@@ -1624,6 +1634,10 @@
       "a": 255
     },
     "_N$normalSprite": null,
+    "_N$pressedSprite": null,
+    "pressedSprite": null,
+    "_N$hoverSprite": null,
+    "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 40
@@ -1733,7 +1747,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 64.46,
+      "width": 64,
       "height": 40
     },
     "_rotationX": 0,
@@ -1808,7 +1822,7 @@
       "__id__": 47
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 36,
     "_left": 811,
@@ -1851,8 +1865,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": null,
-    "hoverSprite": null,
     "clickEvents": [
       {
         "__id__": 53
@@ -1875,6 +1887,10 @@
       "a": 255
     },
     "_N$normalSprite": null,
+    "_N$pressedSprite": null,
+    "pressedSprite": null,
+    "_N$hoverSprite": null,
+    "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 47
@@ -2059,7 +2075,7 @@
       "__id__": 54
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 36,
     "_left": 811,
@@ -2102,8 +2118,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": null,
-    "hoverSprite": null,
     "clickEvents": [
       {
         "__id__": 60
@@ -2126,6 +2140,10 @@
       "a": 255
     },
     "_N$normalSprite": null,
+    "_N$pressedSprite": null,
+    "pressedSprite": null,
+    "_N$hoverSprite": null,
+    "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 54
@@ -2148,7 +2166,7 @@
       "__id__": 16
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,

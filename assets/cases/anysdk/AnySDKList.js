@@ -13,6 +13,9 @@ cc.Class({
     },
 
     onLoad () {
+        if (typeof anysdk === 'undefined') {
+            return;
+        }
         var tips = this.scrollView.node.parent.getChildByName('Tips');
         var exampleComp = this.scrollView.node.getComponent('BaseAnySDKExample');
         var isSupported = exampleComp.hasSupport();
