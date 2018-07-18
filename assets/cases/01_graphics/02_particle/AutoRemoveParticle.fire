@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.7109130859375,
-      "y": 0.7109130859375,
+      "x": 0.7395670572916667,
+      "y": 0.7395670572916667,
       "z": 1
     },
     "_quat": {
@@ -55,7 +55,7 @@
       "z": 0,
       "w": 1
     },
-    "_localZOrder": 2,
+    "_localZOrder": 180,
     "groupIndex": 0,
     "autoReleaseAssets": true,
     "_id": "36cbb0aa-b03d-42b0-92bf-b1c2eeef7e3e"
@@ -130,7 +130,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 3,
+    "_localZOrder": 181,
     "groupIndex": 0,
     "_id": "be7e8bbFF9ELrOGnbUNJTAE"
   },
@@ -150,6 +150,7 @@
       }
     ],
     "_prefab": null,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -190,7 +191,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 4,
+    "_localZOrder": 182,
     "groupIndex": 0,
     "_id": "beobmxsqFIoavkytyZ8nYj"
   },
@@ -278,7 +279,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 5,
+    "_localZOrder": 183,
     "groupIndex": 0,
     "_id": "7e496nplHRNSpy/6DMC5ZWT"
   },
@@ -290,6 +291,8 @@
       "__id__": 5
     },
     "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_spriteFrame": {
       "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
     },
@@ -305,8 +308,6 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_state": 0,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
     "_atlas": null,
     "_id": "36sr6ZoNpLkZwGFP4YlM/F"
   },
@@ -409,7 +410,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 6,
+    "_localZOrder": 184,
     "groupIndex": 0,
     "_id": "d78afpFyelLmYJB2nVznO5p"
   },
@@ -439,7 +440,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 383.22,
+      "width": 249.69,
       "height": 80
     },
     "_anchorPoint": {
@@ -470,7 +471,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 7,
+    "_localZOrder": 185,
     "groupIndex": 0,
     "_id": "4300bC4vCNEmIJoB2869wnJ"
   },
@@ -482,9 +483,11 @@
       "__id__": 10
     },
     "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "Particle 1\n\"Auto Remove On Finish\" disabled",
-    "_N$string": "Particle 1\n\"Auto Remove On Finish\" disabled",
+    "_string": "粒子 1\n\"完成时自动移除\" 禁止",
+    "_N$string": "粒子 1\n\"完成时自动移除\" 禁止",
     "_fontSize": 25,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -506,13 +509,13 @@
       "__id__": 9
     },
     "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 1,
     "_custom": true,
     "_file": {
       "__uuid__": "e24fa342-815a-4478-b9db-ed592e7c0293"
     },
     "_spriteFrame": null,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 1,
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
@@ -653,7 +656,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 8,
+    "_localZOrder": 186,
     "groupIndex": 0,
     "_id": "502f21vIG5IS5BFJpNv4Dqz"
   },
@@ -683,7 +686,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 379.06,
+      "width": 249.69,
       "height": 80
     },
     "_anchorPoint": {
@@ -714,7 +717,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 9,
+    "_localZOrder": 187,
     "groupIndex": 0,
     "_id": "9b1a0iIhihLyrgNZmGUUYT1"
   },
@@ -726,9 +729,11 @@
       "__id__": 14
     },
     "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "Particle 2\n\"Auto Remove On Finish\" enabled",
-    "_N$string": "Particle 2\n\"Auto Remove On Finish\" enabled",
+    "_string": "粒子 2\n\"完成时自动移除\" 开启",
+    "_N$string": "粒子 2\n\"完成时自动移除\" 开启",
     "_fontSize": 25,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -750,13 +755,13 @@
       "__id__": 13
     },
     "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 1,
     "_custom": true,
     "_file": {
       "__uuid__": "e24fa342-815a-4478-b9db-ed592e7c0293"
     },
     "_spriteFrame": null,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 1,
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": true,
@@ -910,7 +915,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 10,
+    "_localZOrder": 188,
     "groupIndex": 0,
     "_id": "718cckOgS5NlKLyR2Qtikqp"
   },
