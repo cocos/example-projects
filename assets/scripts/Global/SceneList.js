@@ -1,3 +1,5 @@
+const TipsManager = require('TipsManager');
+
 cc.Class({
     extends: cc.Component,
 
@@ -35,6 +37,7 @@ cc.Class({
         this.updateTimer = 0;
         this.updateInterval = 0.2;
         this.lastContentPosY = 0; // use this variable to detect if we are scrolling up or down
+        TipsManager.init();
         this.initList();
     },
 
