@@ -243,7 +243,7 @@ cc.Class({
     
         // Special event
         xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && (xhr.status >= 200 && xhr.status < 300)) {
+            if (xhr.readyState === 4 && xhr.status >= 200) {
                 label.string = handler(xhr.responseText);
             }
         };
