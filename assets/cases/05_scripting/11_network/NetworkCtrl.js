@@ -235,6 +235,9 @@ cc.Class({
         ['loadstart', 'abort', 'error', 'load', 'loadend', 'timeout'].forEach(function (eventname) {
             xhr["on" + eventname] = function () {
                 eventLabel.string = eventLabelOrigin + "\nEvent : " + eventname;
+                if (eventname === 'timeout') {
+                    label.string = '(timeout)';
+                }
             };
         });
     

@@ -49,7 +49,7 @@ cc.Class({
             this.sceneList = this.testList.content.getComponent('SceneList');
             this.sceneList.init(this);
         }
-        if (typeof cocosAnalytics !== 'undefined') {
+        if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited()) {
             // Cocos Analytics service, to learn more please visit:
             // https://analytics.cocos.com/docs/
             cocosAnalytics.CAEvent.onEvent({
@@ -99,7 +99,7 @@ cc.Class({
         this.isMenu = false;
         this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
-        if (typeof cocosAnalytics !== 'undefined') {
+        if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited()) {
             // Cocos Analytics service, to learn more please visit:
             // https://analytics.cocos.com/docs/
             cocosAnalytics.CALevels.begin({
@@ -127,12 +127,12 @@ cc.Class({
         let self = this;
         let urlArr = url.split('/');
         let fileName = urlArr[urlArr.length - 1].replace('.fire', '');
-        cc.loader.loadRes('readme/' + fileName, function(err, txt) {
+        cc.loader.loadRes('readme/' + fileName, cc.TextAsset, function (err, asset) {
             if (err) {
                 self.text.string = i18n.t("scripts/Global/Menu.js.1");
                 return;
             }
-            self.text.string = txt;
+            self.text.string = asset.text;
         });
     },
 

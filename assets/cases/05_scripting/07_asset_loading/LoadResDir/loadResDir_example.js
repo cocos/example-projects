@@ -49,27 +49,29 @@ cc.Class({
     onLoadAll: function () {
         if (this._hasLoading) { return; }
         this._hasLoading = true;
+
         this._clear();
         this._createLabel("Load All Assets");
         this.scrollView.scrollToTop();
-        cc.loader.loadResDir("test assets", (err, assets) => {
+
+        cc.loader.loadResDir("test_assets", (err, assets) => {
             if (!this.isValid) {
                 return;
             }
 
             this._assets = assets;
-            var text = "";
             for (var i = 0; i < assets.length; ++i) {
-                if (typeof assets[i] === 'string') {
-                    text = assets[i]
+                var asset = assets[i];
+                var info = asset.toString();
+                if (!info) {
+                    if (asset instanceof cc.JsonAsset) {
+                        info = JSON.stringify(asset.json, null, 4);
+                    }
+                    else {
+                        info = info || asset.name || cc.js.getClassName(asset);
+                    }
                 }
-                else {
-                    text = assets[i].url || assets[i]._name || assets[i];
-                }
-                if (typeof text !== 'string' ) {
-                    continue;
-                }
-                this._createLabel(text);
+                this._createLabel(info);
             }
             this._hasLoading = false;
             this.btnClearAll.active = true;
@@ -79,27 +81,22 @@ cc.Class({
     onLoadSpriteFrameAll: function () {
         if (this._hasLoading) { return; }
         this._hasLoading = true;
+
         this._clear();
         this._createLabel("Load All Sprite Frame");
         this.scrollView.scrollToTop();
-        cc.loader.loadResDir("test assets", cc.SpriteFrame, (err, assets) => {
+
+        cc.loader.loadResDir("test_assets", cc.SpriteFrame, (err, assets) => {
             if (!this.isValid) {
                 return;
             }
             this._assets = assets;
-            var text = "";
             for (var i = 0; i < assets.length; ++i) {
-                if (typeof assets[i] === 'string' ) {
-                    text = assets[i]
-                }
-                else {
-                    text = assets[i].url || assets[i]._name || assets[i];
-                }
-                this._createLabel(text);
+                var asset = assets[i];
+                this._createLabel(asset.name);
             }
             this._hasLoading = false;
             this.btnClearAll.active = true;
         });
     }
-
 });

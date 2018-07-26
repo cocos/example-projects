@@ -6,17 +6,22 @@ cc.Class({
             type: cc.AudioClip,
             default: null
         },
-        
+
         label: {
             type: cc.Label,
             default: null
         }
     },
 
-    onLoad: function () {
+    _updateLabel () {
+        this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
+    },
+
+    onLoad () {
         this.maxNum = cc.audioEngine.getMaxAudioInstance();
         this.audioPool = [];
-        
+        this._updateLabel();
+
         // check deprecated
         ['playMusic', 'playEffect'].forEach(function (name) {
             if (!cc.audioEngine[name]) {
@@ -25,37 +30,35 @@ cc.Class({
         });
     },
 
-    update: function () {
-        if (!this.label) return;
-        for (var i=0; i<this.audioPool.length; i++) {
-            var id = this.audioPool[i];
-            var state = cc.audioEngine.getState(id);
-            if (state < 0) {
-                this.audioPool.splice(i, 1);
-                i--;
-            }
+    removeAudio (id) {
+        var idx = this.audioPool.indexOf(id);
+        if (idx > -1) {
+            this.audioPool.splice(idx, 1);
         }
-        this.label.string = 'Instance: ' + this.audioPool.length + ' / ' + this.maxNum;
+        this._updateLabel();
     },
-    
-    play: function () {
-        if (!this.audio) return;
+
+    play () {
+        if (!this.audio || this.audioPool.length === this.maxNum) return;
         var id = cc.audioEngine.play(this.audio, false, 1);
         this.audioPool.push(id);
+        this._updateLabel();
+
+        // set finish callback
+        cc.audioEngine.setFinishCallback(id, this.removeAudio.bind(this, id));
     },
-    
-    stopAll: function () {
-        if (!this.audio) return;
+
+    stopAll () {
         cc.audioEngine.stopAll();
+        this.audioPool = [];
+        this._updateLabel();
     },
-    
-    pauseAll: function () {
-        if (!this.audio) return;
+
+    pauseAll () {
         cc.audioEngine.pauseAll();
     },
-    
-    resumeAll: function () {
-        if (!this.audio) return;
+
+    resumeAll () {
         cc.audioEngine.resumeAll();
     },
 });
