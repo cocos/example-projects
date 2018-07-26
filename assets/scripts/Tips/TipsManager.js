@@ -14,6 +14,7 @@ module.exports = {
             case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
             case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+            case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
 
             // 不支持 QQ_PLAY，WECHAT_GAME 平台
             case 'render_to_sprite':
@@ -31,7 +32,6 @@ module.exports = {
                 return !cc.sys.isMobile;
 
             // 不支持 模拟器，QQ_PLAY，WECHAT_GAME 平台
-            case 'TTFFontLabel':
             case 'fullscreenVideo':
             case 'videoPlayer':
             case 'webview':
