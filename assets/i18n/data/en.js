@@ -10,6 +10,9 @@ module.exports = {
     "example_case_support_mobile_android_tips": "The example case only supports Android mobile platform",
     "example_case_support_native_chrome_tips": "The example case only supports Chrome browser (Native)",
     "example_case_support_native_desktop_tips": "The example case only supports the Mac platform and Windows platform",
+    "example_case_nonsupport_preview_tips": "The example case nonsupport Preview",
+    "example_case_nonsupport_qqplay_tips": "The example case nonsupport QQplay",
+    "example_case_nonsupport_Wechatgame_tips": "The example case nonsupport Wechatgame",
     "TestList.fire.30": "Back list",
     "TestList.fire.37": "View intro",
     "cases/01_graphics/01_sprite/AtlasSprite.fire.7": "This is Spirte Single.",
@@ -171,6 +174,7 @@ module.exports = {
     "cases/05_scripting/03_events/SimpleEvent.fire.25": "This is Simple Event.",
     "cases/05_scripting/03_events/TouchPropagation.fire.15": "This is Touch Propagation.",
     "cases/05_scripting/03_events/MousePropagation.fire.1": "This is Mouse Propagation.",
+    "cases/05_scripting/04_scheduler/scheduleCallbacks.js.1": "5.00 s",
     "cases/05_scripting/04_scheduler/scheduler.fire.9": "5.00 s",
     "cases/05_scripting/04_scheduler/scheduler.fire.12": "Repeat Schedule",
     "cases/05_scripting/04_scheduler/scheduler.fire.18": "Cancel Schedules",
@@ -281,4 +285,8 @@ module.exports = {
     "cases/anysdk/1": "Only works in the Android or iOS or Web-Mobile platforms",
     "cases/anysdk/2": "Only works in the Android or iOS platforms",
     "cases/anysdk/3": "The anysdk module is not supported",
+    "cases/subpackage": "Load Subpackage",
+    "cases/subpackage.loaded": "Subpackage is loaded",
+    "cases/subpackage.failed": "Failed to load the package, please check the console for details"
+
 };

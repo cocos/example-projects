@@ -12,6 +12,8 @@ module.exports = {
     "example_case_support_native_chrome_tips": "该测试用例只支持 PC 平台上的 Chrome 浏览器",
     "example_case_support_native_desktop_tips": "该测试用例只支持 Mac 平台和 Windows 平台",
     "example_case_support_wechat_game_tips": "该测试用例支持 wechatGame 平台",
+    "example_case_nonsupport_qqplay_tips": "该测试用例不支持 QQplay 平台",
+    "example_case_nonsupport_Wechatgame_tips": "该测试用例不支持 Wechatgame 平台",
     "TestList.fire.30": "返回列表",
     "TestList.fire.37": "查看说明",
     "cases/01_graphics/01_sprite/AtlasSprite.fire.7": "这个精灵来自单张图片",
@@ -172,6 +174,7 @@ module.exports = {
     "cases/05_scripting/03_events/SimpleEvent.fire.25": "基本事件",
     "cases/05_scripting/03_events/TouchPropagation.fire.15": "触摸事件冒泡",
     "cases/05_scripting/03_events/MousePropagation.fire.1": "鼠标事件冒泡",
+    "cases/05_scripting/04_scheduler/scheduleCallbacks.js.1": "5.00 s",
     "cases/05_scripting/04_scheduler/scheduler.fire.9": "5.00 s",
     "cases/05_scripting/04_scheduler/scheduler.fire.12": "重复定时器",
     "cases/05_scripting/04_scheduler/scheduler.fire.18": "取消定时器",
@@ -281,4 +284,6 @@ module.exports = {
     "cases/anysdk/1": "该范例只在Android、iOS、Web-Mobile上有效果",
     "cases/anysdk/2": "该范例只在Android、iOS上有效果",
     "cases/anysdk/3": "不支持 anysdk 模块",
+    "cases/subpackage": "加载子包",
+    "cases/subpackage.loaded": "子包已经成功加载"
 };

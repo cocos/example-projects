@@ -40,36 +40,41 @@ assets
 ### 图像相关 Graphics
 
 - [01_sprite](assets/cases/01_graphics/01_sprite)
-  - [Simple Sprite](assets/cases/01_graphics/01_sprite/simple_sprite.md)
-  - [Atlas Sprite](assets/cases/01_graphics/01_sprite/atlas_sprite.md)
-  - [Sliced Sprite](assets/cases/01_graphics/01_sprite/sliced_sprite.md)
+  - [Simple Sprite](assets/resources/readme/SimpleSprite.md)
+  - [Atlas Sprite](assets/resources/readme/AtlasSprite.md)
+  - [Sliced Sprite](assets/resources/readme/SlicedSprite.md)
+   
 - [02_particle](assets/cases/01_graphics/02_particle)
-  - [Simple Particle](assets/cases/01_graphics/02_particle/simple_particle.md)
+  - [Toggle Particle](assets/resources/readme/ToggleParticle.md)
 
 
 ### 界面相关 UI
 
-- [01_widget](assets/cases/02_ui/01_widget)
-  - [Widget Align](assets/cases/02_ui/01_widget/widget_align.md)
-  - [Auto Resize](assets/cases/02_ui/01_widget/auto_resize.md)
+- [01_widget](assets/cases/02_ui/01_widget) 
+  - [Widget Align](assets/resources/readme/WidgetAlign.md)
+  - [Auto Resize](assets/resources/readme/AutoResize.md)
+
 - [02_label](assets/cases/02_ui/02_label)
-  - [Label Overflows](assets/cases/02_ui/02_label/label_overflows.md)
+  - [System Font Label](assets/resources/readme/SystemFontLabel.md)
+
 - [03_button](assets/cases/02_ui/03_button)
-  - [Simple Button](assets/cases/02_ui/03_button/simple_button.md)
+  - [Simple Button](assets/resources/readme/SimpleButton.md)
 
 ### 玩法相关 Gameplay
 
 - [01_player_control](assets/cases/03_gameplay/01_player_control)
-  - [Keyboard Input](assets/cases/03_gameplay/01_player_control/keyboard_input.md)
-  - [Touch Input](assets/cases/03_gameplay/01_player_control/touch_input.md)
+  - [Keyboard Input](assets/resources/readme/KeyboardInput.md)
+  - [Touch Input](assets/resources/readme/TouchInput.md)
+
 - [02_actions](assets/cases/03_gameplay/02_actions)
-  - [Simple Action](assets/cases/03_gameplay/02_actions/simple_action.md)
+  - [Simple Action](assets/resources/readme/SimpleAction.md)
+
 - [03_animation](assets/cases/03_gameplay/03_animation)
-  - [Sprite Animation](assets/cases/03_gameplay/03_animation/sprite_animation.md)
+  - [Sprite Animation](assets/resources/readme/SpriteAnimation.md)
 
 ### 音效相关 Audio
 
-- [Simple Audio](assets/cases/04_audio/simple_audio.md)
+- [Simple Audio](assets/resources/readme/SimpleAudio.md)
 
 
 

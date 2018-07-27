@@ -7,7 +7,7 @@ cc.Class({
     },
 
     onLoad: function () {
-        this._url = ["test assets/atlas", "test assets/prefab"];
+        this._url = ["test_assets/atlas", "test_assets/prefab"];
     },
 
     loadSpriteFrame: function () {
@@ -15,7 +15,7 @@ cc.Class({
         this._releaseResource(url, cc.SpriteAtlas);
         cc.loader.loadRes(url, cc.SpriteAtlas, (err, atlas) => {
             this._removeAllChildren();
-            cc.loader.setAutoRelease(url, true);
+            cc.loader.setAutoRelease(atlas, true);
             var node = new cc.Node();
             this.content.addChild(node);
             node.position = cc.v2(0, 0);
@@ -29,7 +29,7 @@ cc.Class({
         this._releaseResource(url, cc.Prefab);
         cc.loader.loadRes(url, cc.Prefab, (err, prefab) => {
             this._removeAllChildren();
-            cc.loader.setAutoRelease(url, true);
+            cc.loader.setAutoRelease(prefab, true);
             var node = cc.instantiate(prefab);
             this.content.addChild(node);
             node.position = cc.v2(0, 0);

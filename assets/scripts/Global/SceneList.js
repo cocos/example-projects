@@ -51,7 +51,7 @@ cc.Class({
             for (i = 0; i < scenes.length; ++i) {
                 let url = scenes[i].url;
                 let dirname = cc.path.dirname(url).replace('db://assets/cases/', '');
-                if (dirname === 'db://assets/resources/test assets') {
+                if (dirname === 'db://assets/resources/test_assets') {
                     continue;
                 }
                 let scenename = cc.path.basename(url, '.fire');
