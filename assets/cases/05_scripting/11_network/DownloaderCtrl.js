@@ -6,6 +6,7 @@ cc.Class({
         sprite: cc.Sprite,
         imgUrl: "http://www.cocos.com/wp-content/themes/cocos/img/download1.png",
         txtUrl: "https://raw.githubusercontent.com/cocos-creator/tutorial-dark-slash/master/LICENSE.md",
+        tempImgUrl: "http://www.cocos.com/wp-content/uploads/2018/03/%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BA%95%E9%83%A8%E4%BA%8C%E7%BB%B4%E7%A0%81_2018.03.08.png",
         _downloader: null,
         _imgTask: null,
         _txtTask: null,
@@ -69,6 +70,25 @@ cc.Class({
             return;
         }
         this._imgTask = this._downloader.createDownloadFileTask(this.imgUrl, this._storagePath + 'download1.png');
+    },
+
+    loadImg () {
+        if (!this.tempImgUrl || !this._inited) {
+            return;
+        }
+        var self = this;
+        cc.loader.load(this.tempImgUrl, function (error, tex) {
+            if (error) {
+                console.log("Load remote image failed: " + error);
+            }
+            else {
+                var spriteFrame = new cc.SpriteFrame(tex);
+                self.sprite.spriteFrame = spriteFrame;
+
+                self.sprite.node.active = true;
+                self.label.node.active = false;
+            }
+        });
     },
 
     downloadTxt () {
