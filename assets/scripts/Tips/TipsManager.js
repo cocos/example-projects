@@ -14,7 +14,7 @@ module.exports = {
             case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'subpackage':
-            case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY);
+            case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader':          return cc.sys.isNative;
 
