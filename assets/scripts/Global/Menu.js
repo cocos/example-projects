@@ -49,7 +49,7 @@ cc.Class({
             this.sceneList = this.testList.content.getComponent('SceneList');
             this.sceneList.init(this);
         }
-        if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited()) {
+        if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited && cocosAnalytics.isInited()) {
             // Cocos Analytics service, to learn more please visit:
             // https://analytics.cocos.com/docs/
             cocosAnalytics.CAEvent.onEvent({
@@ -99,7 +99,7 @@ cc.Class({
         this.isMenu = false;
         this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
-        if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited()) {
+        if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited && cocosAnalytics.isInited()) {
             // Cocos Analytics service, to learn more please visit:
             // https://analytics.cocos.com/docs/
             cocosAnalytics.CALevels.begin({
