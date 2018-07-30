@@ -24,15 +24,15 @@ cc.Class({
         this._isLoading = false;
         // add load res url
         this._urls = {
-            Audio: "test assets/audio",
-            Txt: "test assets/text",
-            Texture: "test assets/PurpleMonster",
-            Font: "test assets/font",
-            Plist: "test assets/atom.plist",
-            SpriteFrame: "test assets/image",
-            Prefab: "test assets/prefab",
-            Animation: "test assets/sprite-anim",
-            Scene: "test assets/scene",
+            Audio: "test_assets/audio",
+            Txt: "test_assets/text",
+            Texture: "test_assets/PurpleMonster",
+            Font: "test_assets/font",
+            Plist: "test_assets/atom.plist",
+            SpriteFrame: "test_assets/image",
+            Prefab: "test_assets/prefab",
+            Animation: "test_assets/sprite-anim",
+            Scene: "test_assets/scene",
             Spine: "spineboy/spineboy",
             CORS: "http://tools.itharbors.com/res/logo.png",
         };

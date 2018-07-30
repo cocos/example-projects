@@ -9,12 +9,14 @@ module.exports = {
         switch (name) {
             case 'EditBoxTabIndex':     return !cc.sys.isNative;
             case 'OnMultiTouchInput':   return cc.sys.isMobile;
-            case 'downloader':          return cc.sys.isNative;
             case 'webp-test':           return cc.sys.capabilities['webp'];
             case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
-            case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
+            case 'subpackage':
+            case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY);
+            case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
+            case 'downloader':          return cc.sys.isNative;
 
             // 不支持 QQ_PLAY，WECHAT_GAME 平台
             case 'render_to_sprite':
