@@ -1,5 +1,3 @@
-const TipsManager = require('TipsManager');
-
 cc.Class({
     extends: cc.Component,
 

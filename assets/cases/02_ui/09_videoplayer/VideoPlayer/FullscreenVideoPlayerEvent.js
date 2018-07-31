@@ -1,4 +1,3 @@
-
 let videoPlayer = null;
 
 cc.Class({
