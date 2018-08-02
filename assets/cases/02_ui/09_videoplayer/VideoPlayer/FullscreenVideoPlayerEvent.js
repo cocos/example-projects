@@ -10,6 +10,7 @@ cc.Class({
         if (event === cc.VideoPlayer.EventType.COMPLETED) {
             videoPlayer.isFullscreen = false;
             videoPlayer.node.removeFromParent();
+            videoPlayer = null;
         }
     }
 });
