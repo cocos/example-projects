@@ -1,9 +1,6 @@
 cc.Class({
     extends: cc.Component,
 
-    properties: {
-    },
-
     // use this for initialization
     onLoad: function () {
         console.log("Pos: " + this.node.getPosition().x + ", " + this.node.getPosition().y);

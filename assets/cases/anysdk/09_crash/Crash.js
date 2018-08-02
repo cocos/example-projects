@@ -1,18 +1,14 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-    extends: require('BaseAnySDKExample'),
-
-    properties: {},
+    extends: cc.Component,
 
     start: function () {
-        if (this.hasSupport()) {
-            this.crashPlugin = anysdk.agentManager.getCrashPlugin();
-        }
+        this.crashPlugin = anysdk.agentManager.getCrashPlugin();
     },
 
     setUserIdentifier: function () {
         if (!this.crashPlugin) {
-            SuspensionTips.init.showTips(' this.crashPlugin is null ');
+            TipsManager.createTips(' this.crashPlugin is null ');
             return;
         }
         this.crashPlugin.setUserIdentifier('AnySDK');
@@ -20,7 +16,7 @@ cc.Class({
 
     reportException: function () {
         if (!this.crashPlugin) {
-            SuspensionTips.init.showTips(' this.crashPlugin is null ');
+            TipsManager.createTips(' this.crashPlugin is null ');
             return;
         }
         this.crashPlugin.reportException('error', 'AnySDK');
@@ -28,7 +24,7 @@ cc.Class({
 
     leaveBreadcrumb: function () {
         if (!this.crashPlugin) {
-            SuspensionTips.init.showTips(' this.crashPlugin is null ');
+            TipsManager.createTips(' this.crashPlugin is null ');
             return;
         }
         this.crashPlugin.leaveBreadcrumb('AnySDK');

@@ -1,3 +1,4 @@
+const TipsManager = require('TipsManager');
 cc.Class({
     extends: cc.Component,
 
@@ -16,11 +17,7 @@ cc.Class({
         if (typeof anysdk === 'undefined') {
             return;
         }
-        var tips = this.scrollView.node.parent.getChildByName('Tips');
-        var exampleComp = this.scrollView.node.getComponent('BaseAnySDKExample');
-        var isSupported = exampleComp.hasSupport();
-        if (!isSupported) return;
-        tips.opacity = 0;
+        TipsManager.init();
         this.node.parent.parent.opacity = 255;
         this.initItemCount = this.interfaceList.length;
         this.itemList = [];

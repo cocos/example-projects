@@ -4,9 +4,6 @@ let LineCap = cc.Graphics.LineCap;
 cc.Class({
     extends: cc.Component,
 
-    properties: {
-    },
-
     // use this for initialization
     onLoad: function () {
         this.graphics = this.getComponent(cc.Graphics);

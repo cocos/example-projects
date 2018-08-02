@@ -1,8 +1,6 @@
 cc.Class({
     extends: cc.Component,
 
-    properties: {},
-    
     move: function (event) {
         this.node.x += event.getDeltaX();
         this.node.y += event.getDeltaY();

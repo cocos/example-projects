@@ -1,21 +1,17 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-    extends: require('BaseAnySDKExample'),
-
-    properties: {},
+    extends: cc.Component,
 
     start: function () {
-        if (this.hasSupport()) {
-            this.sharePlugin = anysdk.agentManager.getSharePlugin();
-            if (this.sharePlugin) {
-                this.sharePlugin.setListener(this.onShareResult, this);
-            }
-        }
+        this.sharePlugin = anysdk.agentManager.getSharePlugin();
+        if (this.sharePlugin) {
+            this.sharePlugin.setListener(this.onShareResult, this);
+        }    
     },
 
     share: function () {
         if (!this.sharePlugin) {
-            SuspensionTips.init.showTips(' this.sharePlugin is null ');
+            TipsManager.createTips(' this.sharePlugin is null ');
             return;
         }
         var info = {
@@ -37,16 +33,16 @@ cc.Class({
         cc.log(' SHARE RESULT ########## code: ' + code + ',msg: ' + msg);
         switch (code) {
             case anysdk.ShareResultCode.kShareSuccess:
-                SuspensionTips.init.showTips(' kShareSuccess ');
+                TipsManager.createTips(' kShareSuccess ');
                 break;
             case anysdk.ShareResultCode.kShareFail:
-                SuspensionTips.init.showTips(' kShareFail ');
+                TipsManager.createTips(' kShareFail ');
                 break;
             case anysdk.ShareResultCode.kShareCancel:
-                SuspensionTips.init.showTips(' kShareCancel ');
+                TipsManager.createTips(' kShareCancel ');
                 break;
             case anysdk.ShareResultCode.kShareNetworkError:
-                SuspensionTips.init.showTips(' kShareNetworkError ');
+                TipsManager.createTips(' kShareNetworkError ');
                 break;
             default:
                 break;

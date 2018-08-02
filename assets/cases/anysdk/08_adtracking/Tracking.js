@@ -1,18 +1,14 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-	extends: require('BaseAnySDKExample'),
-
-	properties: {},
+    extends: cc.Component,
 
 	start: function () {
-		if (this.hasSupport()) {
-			this.adTrackingPlugin = anysdk.agentManager.getAdTrackingPlugin();
-		}
+		this.adTrackingPlugin = anysdk.agentManager.getAdTrackingPlugin();
 	},
 
 	onRegister: function () {
 		if (!this.adTrackingPlugin) {
-			SuspensionTips.init.showTips(' this.adTrackingPlugin is null ');
+			TipsManager.createTips(' this.adTrackingPlugin is null ');
 			return;
 		}
 		this.adTrackingPlugin.onRegister("userid");
@@ -20,7 +16,7 @@ cc.Class({
 
 	onLogin: function () {
 		if (!this.adTrackingPlugin) {
-			SuspensionTips.init.showTips(' this.adTrackingPlugin is null ');
+			TipsManager.createTips(' this.adTrackingPlugin is null ');
 			return;
 		}
 		var info = {
@@ -33,7 +29,7 @@ cc.Class({
 
 	onPay: function () {
 		if (!this.adTrackingPlugin) {
-			SuspensionTips.init.showTips(' this.adTrackingPlugin is null ');
+			TipsManager.createTips(' this.adTrackingPlugin is null ');
 			return;
 		}
 		var myDate = new Date();
@@ -50,7 +46,7 @@ cc.Class({
 
 	trackEvent: function () {
 		if (!this.adTrackingPlugin) {
-			SuspensionTips.init.showTips(' this.adTrackingPlugin is null ');
+			TipsManager.createTips(' this.adTrackingPlugin is null ');
 			return;
 		}
 		this.adTrackingPlugin.trackEvent("event_1");
@@ -59,7 +55,7 @@ cc.Class({
 
 	onCreateRole: function () {
 		if (!this.adTrackingPlugin || !this.adTrackingPlugin.onCreateRole) {
-			SuspensionTips.init.showTips(' this.adTrackingPlugin is null or onCreateRole is not supported ');
+			TipsManager.createTips(' this.adTrackingPlugin is null or onCreateRole is not supported ');
 			return;
 		}
 		var info = {
@@ -72,7 +68,7 @@ cc.Class({
 
 	onLevelUp: function () {
 		if (!this.adTrackingPlugin || !this.adTrackingPlugin.onLevelUp) {
-			SuspensionTips.init.showTips(' this.adTrackingPlugin is null  or onLevelUp is not supported');
+			TipsManager.createTips(' this.adTrackingPlugin is null  or onLevelUp is not supported');
 			return;
 		}
 		var info = {
@@ -86,7 +82,7 @@ cc.Class({
 
 	onStartToPay: function () {
 		if (!this.adTrackingPlugin || !this.adTrackingPlugin.onStartToPay) {
-			SuspensionTips.init.showTips(' this.adTrackingPlugin is null or onStartToPay is not supported');
+			TipsManager.createTips(' this.adTrackingPlugin is null or onStartToPay is not supported');
 			return;
 		}
 		var myDate = new Date();

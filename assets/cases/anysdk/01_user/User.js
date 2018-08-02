@@ -1,21 +1,17 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-    extends: require('BaseAnySDKExample'),
-
-    properties: {},
+    extends: cc.Component,
 
     start: function () {
-        if (this.hasSupport()) {
-            this.userPlugin = anysdk.agentManager.getUserPlugin();
-            if (this.userPlugin) {
-                this.userPlugin.setListener(this.onUserResult, this);
-            }
-        }
+        this.userPlugin = anysdk.agentManager.getUserPlugin();
+        if (this.userPlugin) {
+            this.userPlugin.setListener(this.onUserResult, this);
+        }    
     },
 
     login: function () {
         if (!this.userPlugin) {
-            SuspensionTips.init.showTips(' this.userPlugin is null  ');
+            TipsManager.createTips(' this.userPlugin is null  ');
             return;
         }
         this.userPlugin.login();
@@ -23,16 +19,16 @@ cc.Class({
 
     isLogined: function () {
         if (!this.userPlugin) {
-            SuspensionTips.init.showTips(' this.userPlugin is null  ');
+            TipsManager.createTips(' this.userPlugin is null  ');
             return;
         }
         var flag = this.userPlugin.isLogined();
-        SuspensionTips.init.showTips(' isLogined ' + flag);
+        TipsManager.createTips(' isLogined ' + flag);
     },
 
     logout: function () {
         if (!this.userPlugin || !this.userPlugin.logout) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or logout is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or logout is not supported ');
             return;
         }
         this.userPlugin.logout();
@@ -40,7 +36,7 @@ cc.Class({
 
     enterPlatform: function () {
         if (!this.userPlugin || !this.userPlugin.enterPlatform) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or enterPlatform is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or enterPlatform is not supported ');
             return;
         }
         this.userPlugin.enterPlatform();
@@ -48,7 +44,7 @@ cc.Class({
 
     showToolBar: function () {
         if (!this.userPlugin || !this.userPlugin.showToolBar) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or showToolBar is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or showToolBar is not supported ');
             return;
         }
         this.userPlugin.showToolBar(anysdk.ToolBarPlace.kToolBarTopLeft);
@@ -56,7 +52,7 @@ cc.Class({
 
     hideToolBar: function () {
         if (!this.userPlugin || !this.userPlugin.hideToolBar) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or hideToolBar is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or hideToolBar is not supported ');
             return;
         }
         this.userPlugin.hideToolBar();
@@ -64,7 +60,7 @@ cc.Class({
 
     accountSwitch: function () {
         if (!this.userPlugin || !this.userPlugin.accountSwitch) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or accountSwitch is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or accountSwitch is not supported ');
             return;
         }
         this.userPlugin.accountSwitch();
@@ -72,7 +68,7 @@ cc.Class({
 
     realNameRegister: function () {
         if (!this.userPlugin || !this.userPlugin.realNameRegister) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or realNameRegister is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or realNameRegister is not supported ');
             return;
         }
         this.userPlugin.realNameRegister();
@@ -80,7 +76,7 @@ cc.Class({
 
     antiAddictionQuery: function () {
         if (!this.userPlugin || !this.userPlugin.antiAddictionQuery) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or antiAddictionQuery is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or antiAddictionQuery is not supported ');
             return;
         }
         this.userPlugin.antiAddictionQuery();
@@ -88,7 +84,7 @@ cc.Class({
 
     submitLoginGameRole: function () {
         if (!this.userPlugin || !this.userPlugin.submitLoginGameRole) {
-            SuspensionTips.init.showTips(' this.userPlugin is null or submitLoginGameRole is not supported ');
+            TipsManager.createTips(' this.userPlugin is null or submitLoginGameRole is not supported ');
             return;
         }
         var data = {
@@ -107,58 +103,58 @@ cc.Class({
         cc.log(' USER RESULT ########## code: ' + code + ',msg: ' + msg);
         switch (code) {
             case anysdk.UserActionResultCode.kInitSuccess:
-                SuspensionTips.init.showTips(' kInitSuccess ');
+                TipsManager.createTips(' kInitSuccess ');
                 break;
             case anysdk.UserActionResultCode.kInitFail:
-                SuspensionTips.init.showTips(' kInitFail ');
+                TipsManager.createTips(' kInitFail ');
                 break;
             case anysdk.UserActionResultCode.kLoginSuccess:
-                SuspensionTips.init.showTips(' kLoginSuccess ');
+                TipsManager.createTips(' kLoginSuccess ');
                 break;
             case anysdk.UserActionResultCode.kLoginNetworkError:
-                SuspensionTips.init.showTips(' kLoginNetworkError ');
+                TipsManager.createTips(' kLoginNetworkError ');
                 break;
             case anysdk.UserActionResultCode.kLoginNoNeed:
-                SuspensionTips.init.showTips(' kLoginNoNeed ');
+                TipsManager.createTips(' kLoginNoNeed ');
                 break;
             case anysdk.UserActionResultCode.kLoginFail:
-                SuspensionTips.init.showTips(' kLoginFail ');
+                TipsManager.createTips(' kLoginFail ');
                 break;
             case anysdk.UserActionResultCode.kLoginCancel:
-                SuspensionTips.init.showTips(' kLoginCancel ');
+                TipsManager.createTips(' kLoginCancel ');
                 break;
             case anysdk.UserActionResultCode.kLogoutSuccess:
-                SuspensionTips.init.showTips(' kLogoutSuccess ');
+                TipsManager.createTips(' kLogoutSuccess ');
                 break;
             case anysdk.UserActionResultCode.kLogoutFail:
-                SuspensionTips.init.showTips(' kLogoutFail ');
+                TipsManager.createTips(' kLogoutFail ');
                 break;
             case anysdk.UserActionResultCode.kPlatformEnter:
-                SuspensionTips.init.showTips(' kPlatformEnter ');
+                TipsManager.createTips(' kPlatformEnter ');
                 break;
             case anysdk.UserActionResultCode.kPlatformBack:
-                SuspensionTips.init.showTips(' kPlatformBack ');
+                TipsManager.createTips(' kPlatformBack ');
                 break;
             case anysdk.UserActionResultCode.kPausePage:
-                SuspensionTips.init.showTips(' kPausePage ');
+                TipsManager.createTips(' kPausePage ');
                 break;
             case anysdk.UserActionResultCode.kExitPage:
-                SuspensionTips.init.showTips(' kExitPage ');
+                TipsManager.createTips(' kExitPage ');
                 break;
             case anysdk.UserActionResultCode.kAntiAddictionQuery:
-                SuspensionTips.init.showTips(' kAntiAddictionQuery ');
+                TipsManager.createTips(' kAntiAddictionQuery ');
                 break;
             case anysdk.UserActionResultCode.kRealNameRegister:
-                SuspensionTips.init.showTips(' kRealNameRegister ');
+                TipsManager.createTips(' kRealNameRegister ');
                 break;
             case anysdk.UserActionResultCode.kAccountSwitchSuccess:
-                SuspensionTips.init.showTips(' kAccountSwitchSuccess ');
+                TipsManager.createTips(' kAccountSwitchSuccess ');
                 break;
             case anysdk.UserActionResultCode.kAccountSwitchFail:
-                SuspensionTips.init.showTips(' kAccountSwitchFail ');
+                TipsManager.createTips(' kAccountSwitchFail ');
                 break;
             case anysdk.UserActionResultCode.kOpenShop:
-                SuspensionTips.init.showTips(' kOpenShop ');
+                TipsManager.createTips(' kOpenShop ');
                 break;
             default:
                 break;

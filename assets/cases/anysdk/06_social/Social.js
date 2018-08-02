@@ -1,21 +1,17 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-	extends: require('BaseAnySDKExample'),
-
-	properties: {},
+    extends: cc.Component,
 
 	start: function () {
-		if (this.hasSupport()) {
-			this.socialPlugin = anysdk.agentManager.getSocialPlugin();
-			if (this.socialPlugin) {
-				this.socialPlugin.setListener(this.onSocialResult, this);
-			}
+		this.socialPlugin = anysdk.agentManager.getSocialPlugin();
+		if (this.socialPlugin) {
+			this.socialPlugin.setListener(this.onSocialResult, this);
 		}
 	},
 
 	submitScore: function () {
 		if (!this.socialPlugin) {
-			SuspensionTips.init.showTips(' this.socialPlugin is null ');
+			TipsManager.createTips(' this.socialPlugin is null ');
 			return;
 		}
 		var score = 131;
@@ -24,7 +20,7 @@ cc.Class({
 
 	showLeaderboard: function () {
 		if (!this.socialPlugin) {
-			SuspensionTips.init.showTips(' this.socialPlugin is null ');
+			TipsManager.createTips(' this.socialPlugin is null ');
 			return;
 		}
 		this.socialPlugin.showLeaderboard("friend");
@@ -32,7 +28,7 @@ cc.Class({
 
 	unlockAchievement: function () {
 		if (!this.socialPlugin) {
-			SuspensionTips.init.showTips(' this.socialPlugin is null ');
+			TipsManager.createTips(' this.socialPlugin is null ');
 			return;
 		}
 		var achInfo = {"rank": "friends"};
@@ -41,7 +37,7 @@ cc.Class({
 
 	showAchievements: function () {
 		if (!this.socialPlugin) {
-			SuspensionTips.init.showTips(' this.socialPlugin is null ');
+			TipsManager.createTips(' this.socialPlugin is null ');
 			return;
 		}
 		this.socialPlugin.showAchievements();
@@ -49,7 +45,7 @@ cc.Class({
 
 	signIn: function () {
 		if (!this.socialPlugin) {
-			SuspensionTips.init.showTips(' this.socialPlugin is null ');
+			TipsManager.createTips(' this.socialPlugin is null ');
 			return;
 		}
 		this.socialPlugin.signIn();
@@ -57,7 +53,7 @@ cc.Class({
 
 	signOut: function () {
 		if (!this.socialPlugin) {
-			SuspensionTips.init.showTips(' this.socialPlugin is null ');
+			TipsManager.createTips(' this.socialPlugin is null ');
 			return;
 		}
 		this.socialPlugin.signOut();
@@ -67,29 +63,29 @@ cc.Class({
 		cc.log(' SOCIAL RESULT ########## code: ' + code + ',msg: ' + msg);
 		switch (code) {
 			case anysdk.SocialRetCode.kScoreSubmitSucceed:
-				SuspensionTips.init.showTips(' kScoreSubmitSucceed ');
+				TipsManager.createTips(' kScoreSubmitSucceed ');
 				break;
 			case anysdk.SocialRetCode.kScoreSubmitfail:
-				SuspensionTips.init.showTips(' kScoreSubmitfail ');
+				TipsManager.createTips(' kScoreSubmitfail ');
 				break;
 			case anysdk.SocialRetCode.kAchUnlockSucceed:
-				SuspensionTips.init.showTips(' kAchUnlockSucceed ');
+				TipsManager.createTips(' kAchUnlockSucceed ');
 				break;
 			case anysdk.SocialRetCode.kAchUnlockFail:
-				SuspensionTips.init.showTips(' kAchUnlockFail ');
+				TipsManager.createTips(' kAchUnlockFail ');
 				break;
 			case anysdk.SocialRetCode.kSocialSignInSucceed:
-				SuspensionTips.init.showTips(' kSocialSignInSucceed ');
+				TipsManager.createTips(' kSocialSignInSucceed ');
 				break;
 			case anysdk.SocialRetCode.kSocialSignOutSucceed:
-				SuspensionTips.init.showTips(' kSocialSignOutSucceed ');
+				TipsManager.createTips(' kSocialSignOutSucceed ');
 				break;
 			case anysdk.SocialRetCode.kSocialSignOutFail:
-				SuspensionTips.init.showTips(' kSocialSignOutFail ');
+				TipsManager.createTips(' kSocialSignOutFail ');
 				break;
 				break;
 			case anysdk.SocialRetCode.kSocialGetGameFriends:
-				SuspensionTips.init.showTips(' kSocialGetGameFriends ');
+				TipsManager.createTips(' kSocialGetGameFriends ');
 				break;
 		}
 	}
