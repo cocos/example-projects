@@ -1,7 +1,6 @@
 cc.Class({
     extends: cc.Component,
 
-
     // use this for initialization
     onLoad: function () {
         var animation = this.getComponent(cc.Animation);

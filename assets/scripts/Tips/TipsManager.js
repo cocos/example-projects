@@ -54,7 +54,34 @@ module.exports = {
         }
     },
 
+    AnySDKConfig: function (name) {
+        switch (name) {
+            case '01_user':
+                return 'getUserPlugin';
+            case '02_iap':
+                return 'getIAPPlugin';
+            case '03_share':
+                return 'getSharePlugin';
+            case '04_ads':
+                return 'getAdsPlugin';
+            case '05_analytics':
+                return 'getAnalyticsPlugin';
+            case '06_social':
+                return 'getSocialPlugin';
+            case '07_push':
+                return 'getPushPlugin';
+            case '08_adtracking':
+                return 'getAdTrackingPlugin';
+            case '09_crash':
+                return 'getCrashPlugin';
+            case '10_rec':
+                return 'getRECPlugin';
+        }
+    },
+
     init () {
+        if (this.tipsPrefab) return;
+
         cc.loader.loadRes('tips/Tips', (err, prefab) => {
             this.tispPrefab = prefab;
         });
@@ -74,6 +101,10 @@ module.exports = {
         if (!support && support !== undefined) {
             this.createTips();
             return false;
+        }
+        // when in the anysdk scene
+        if (typeof anysdk !== 'undefined') {
+            return anysdk.agentManager[this.AnySDKConfig(name)];
         }
         return true;
     }

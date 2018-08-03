@@ -1,8 +1,6 @@
 cc.Class({
     extends: cc.Component,
 
-    properties: {},
-    
     _callback: null,
 
     // use this for initialization

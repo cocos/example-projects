@@ -1,21 +1,17 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-    extends: require('BaseAnySDKExample'),
-
-    properties: {},
+    extends: cc.Component,
 
     start: function () {
-        if (this.hasSupport()) {
-            this.adsPlugin = anysdk.agentManager.getAdsPlugin();
-            if (this.adsPlugin) {
-                this.adsPlugin.setListener(this.onAdsResult, this);
-            }
-        }
+        this.adsPlugin = anysdk.agentManager.getAdsPlugin();
+        if (this.adsPlugin) {
+            this.adsPlugin.setListener(this.onAdsResult, this);
+        }    
     },
 
     preloadAds: function () {
         if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) {
-            SuspensionTips.init.showTips(' this.adsPlugin is null or banner is not supported ');
+            TipsManager.createTips(' this.adsPlugin is null or banner is not supported ');
             return;
         }
         this.adsPlugin.preloadAds(anysdk.AdsType.AD_TYPE_BANNER);
@@ -23,7 +19,7 @@ cc.Class({
 
     showAds: function () {
         if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) {
-            SuspensionTips.init.showTips(' this.adsPlugin is null or banner is not supported ');
+            TipsManager.createTips(' this.adsPlugin is null or banner is not supported ');
             return;
         }
         this.adsPlugin.showAds(anysdk.AdsType.AD_TYPE_BANNER);
@@ -31,7 +27,7 @@ cc.Class({
 
     hideAds: function () {
         if (!this.adsPlugin || !this.adsPlugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER)) {
-            SuspensionTips.init.showTips(' this.adsPlugin is null or banner is not supported ');
+            TipsManager.createTips(' this.adsPlugin is null or banner is not supported ');
             return;
         }
         this.adsPlugin.hideAds(anysdk.AdsType.AD_TYPE_BANNER);
@@ -39,16 +35,16 @@ cc.Class({
 
     queryPoints: function () {
         if (!this.adsPlugin) {
-            SuspensionTips.init.showTips(' this.adsPlugin is null ');
+            TipsManager.createTips(' this.adsPlugin is null ');
             return;
         }
         var point = this.adsPlugin.queryPoints();
-        SuspensionTips.init.showTips(' queryPoints : ' + point);
+        TipsManager.createTips(' queryPoints : ' + point);
     },
 
     spendPoints: function () {
         if (!this.adsPlugin) {
-            SuspensionTips.init.showTips(' this.adsPlugin is null ');
+            TipsManager.createTips(' this.adsPlugin is null ');
             return;
         }
         this.adsPlugin.spendPoints(1);
@@ -58,28 +54,28 @@ cc.Class({
         cc.log(' ADS RESULT ########## code: ' + code + ',msg: ' + msg);
         switch (code) {
             case anysdk.AdsResultCode.kAdsReceived:
-                SuspensionTips.init.showTips(' kAdsReceived ');
+                TipsManager.createTips(' kAdsReceived ');
                 break;
             case anysdk.AdsResultCode.kAdsShown:
-                SuspensionTips.init.showTips(' kAdsShown ');
+                TipsManager.createTips(' kAdsShown ');
                 break;
             case anysdk.AdsResultCode.kAdsDismissed:
-                SuspensionTips.init.showTips(' kAdsDismissed ');
+                TipsManager.createTips(' kAdsDismissed ');
                 break;
             case anysdk.AdsResultCode.kPointsSpendSucceed:
-                SuspensionTips.init.showTips(' kPointsSpendSucceed ');
+                TipsManager.createTips(' kPointsSpendSucceed ');
                 break;
             case anysdk.AdsResultCode.kPointsSpendFailed:
-                SuspensionTips.init.showTips(' kPointsSpendFailed ');
+                TipsManager.createTips(' kPointsSpendFailed ');
                 break;
             case anysdk.AdsResultCode.kNetworkError:
-                SuspensionTips.init.showTips(' kNetworkError ');
+                TipsManager.createTips(' kNetworkError ');
                 break;
             case anysdk.AdsResultCode.kUnknownError:
-                SuspensionTips.init.showTips(' kUnknownError ');
+                TipsManager.createTips(' kUnknownError ');
                 break;
             case anysdk.AdsResultCode.kOfferWallOnPointsChanged:
-                SuspensionTips.init.showTips(' kOfferWallOnPointsChanged ');
+                TipsManager.createTips(' kOfferWallOnPointsChanged ');
                 break;
             default:
                 break;

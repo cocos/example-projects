@@ -1,21 +1,17 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-    extends: require('BaseAnySDKExample'),
-
-    properties: {},
+    extends: cc.Component,
 
     start: function () {
-        if (this.hasSupport()) {
-            this.iapPlugin = anysdk.agentManager.getIAPPlugin();
-            if (this.iapPlugin) {
-                this.iapPlugin.setListener(this.onPayResult, this);
-            }
-        }
+        this.iapPlugin = anysdk.agentManager.getIAPPlugin();
+        if (this.iapPlugin) {
+            this.iapPlugin.setListener(this.onPayResult, this);
+        }        
     },
 
     payForProduct: function () {
         if (!this.iapPlugin) {
-            SuspensionTips.init.showTips(' this.iapPlugin is null ');
+            TipsManager.createTips(' this.iapPlugin is null ');
             return;
         }
         var info = {
@@ -41,11 +37,11 @@ cc.Class({
 
     getOrderId: function () {
         if (!this.iapPlugin) {
-            SuspensionTips.init.showTips(' this.iapPlugin is null ');
+            TipsManager.createTips(' this.iapPlugin is null ');
             return;
         }
         var orderId = this.iapPlugin.getOrderId();
-        SuspensionTips.init.showTips(' getOrderId : ' + orderId);
+        TipsManager.createTips(' getOrderId : ' + orderId);
     },
 
     onPayResult: function (code, msg) {

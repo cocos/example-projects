@@ -1,21 +1,17 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-    extends: require('BaseAnySDKExample'),
-
-    properties: {},
+    extends: cc.Component,
 
     start: function () {
-        if (this.hasSupport()) {
-            this.recPlugin = anysdk.agentManager.getRECPlugin();
-            if (this.recPlugin) {
-                this.recPlugin.setListener(this.onRECResult, this);
-            }
+        this.recPlugin = anysdk.agentManager.getRECPlugin();
+        if (this.recPlugin) {
+            this.recPlugin.setListener(this.onRECResult, this);
         }
     },
 
     startRecording: function () {
         if (!this.recPlugin) {
-            SuspensionTips.init.showTips(' this.recPlugin is null ');
+            TipsManager.createTips(' this.recPlugin is null ');
             return;
         }
         this.recPlugin.startRecording();
@@ -23,7 +19,7 @@ cc.Class({
 
     stopRecording: function () {
         if (!this.recPlugin) {
-            SuspensionTips.init.showTips(' this.recPlugin is null ');
+            TipsManager.createTips(' this.recPlugin is null ');
             return;
         }
         this.recPlugin.stopRecording();
@@ -31,7 +27,7 @@ cc.Class({
 
     share: function () {
         if (!this.recPlugin) {
-            SuspensionTips.init.showTips(' this.recPlugin is null ');
+            TipsManager.createTips(' this.recPlugin is null ');
             return;
         }
         var info = {
@@ -43,7 +39,7 @@ cc.Class({
 
     pauseRecording: function () {
         if (!this.recPlugin || !this.recPlugin.pauseRecording) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or pauseRecording is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or pauseRecording is not supported ');
             return;
         }
         this.recPlugin.pauseRecording();
@@ -51,7 +47,7 @@ cc.Class({
 
     resumeRecording: function () {
         if (!this.recPlugin || !this.recPlugin.resumeRecording) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or resumeRecording is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or resumeRecording is not supported ');
             return;
         }
         this.recPlugin.resumeRecording();
@@ -59,17 +55,17 @@ cc.Class({
 
     isAvailable: function () {
         if (!this.recPlugin || !this.recPlugin.isAvailable) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or isAvailable is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or isAvailable is not supported ');
             return false;
         }
         var flag = this.rec.isAvailable();
-        SuspensionTips.init.showTips(' isAvailable ########## code: ' + flag);
+        TipsManager.createTips(' isAvailable ########## code: ' + flag);
         return flag;
     },
 
     showToolBar: function () {
         if (!this.recPlugin || !this.recPlugin.showToolBar) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or showToolBar is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or showToolBar is not supported ');
             return;
         }
         this.recPlugin.showToolBar();
@@ -77,7 +73,7 @@ cc.Class({
 
     hideToolBar: function () {
         if (!this.recPlugin || !this.recPlugin.hideToolBar) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or hideToolBar is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or hideToolBar is not supported ');
             return;
         }
         this.recPlugin.hideToolBar();
@@ -85,17 +81,17 @@ cc.Class({
 
     isRecording: function () {
         if (!this.recPlugin || !this.recPlugin.isRecording) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or isRecording is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or isRecording is not supported ');
             return false;
         }
         var flag = this.rec.isRecording();
-        SuspensionTips.init.showTips(' isRecording ########## code: ' + flag);
+        TipsManager.createTips(' isRecording ########## code: ' + flag);
         return flag;
     },
 
     showVideoCenter: function () {
         if (!this.recPlugin || !this.recPlugin.showVideoCenter) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or showVideoCenter is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or showVideoCenter is not supported ');
             return;
         }
         this.recPlugin.showVideoCenter();
@@ -103,7 +99,7 @@ cc.Class({
 
     enterPlatform: function () {
         if (!this.recPlugin || !this.recPlugin.enterPlatform) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or enterPlatform is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or enterPlatform is not supported ');
             return;
         }
         this.recPlugin.enterPlatform();
@@ -111,7 +107,7 @@ cc.Class({
 
     setMetaData: function () {
         if (!this.recPlugin || !this.recPlugin.setMetaData) {
-            SuspensionTips.init.showTips(' this.recPlugin is null or setMetaData is not supported ');
+            TipsManager.createTips(' this.recPlugin is null or setMetaData is not supported ');
             return;
         }
         var data = {ext: "login"};
@@ -122,34 +118,34 @@ cc.Class({
         cc.log(' REC RESULT ########## code: ' + code + ',msg: ' + msg);
         switch (code) {
             case anysdk.RECResultCode.kRECInitSuccess://初始化成功
-                SuspensionTips.init.showTips(' kRECInitSuccess ');
+                TipsManager.createTips(' kRECInitSuccess ');
                 break;
             case anysdk.RECResultCode.kRECInitFail://初始化失败
-                SuspensionTips.init.showTips(' kRECInitFail ');
+                TipsManager.createTips(' kRECInitFail ');
                 break;
             case anysdk.RECResultCode.kRECStartRecording://开始录制
-                SuspensionTips.init.showTips(' kRECStartRecording ');
+                TipsManager.createTips(' kRECStartRecording ');
                 break;
             case anysdk.RECResultCode.kRECStopRecording://结束录制
-                SuspensionTips.init.showTips(' kRECStopRecording ');
+                TipsManager.createTips(' kRECStopRecording ');
                 break;
             case anysdk.RECResultCode.kRECPauseRecording://暂停录制
-                SuspensionTips.init.showTips(' kRECPauseRecording ');
+                TipsManager.createTips(' kRECPauseRecording ');
                 break;
             case anysdk.RECResultCode.kRECResumeRecording://恢复录制
-                SuspensionTips.init.showTips(' kRECResumeRecording ');
+                TipsManager.createTips(' kRECResumeRecording ');
                 break;
             case anysdk.RECResultCode.kRECEnterSDKPage://进入SDK页面
-                SuspensionTips.init.showTips(' kRECEnterSDKPage ');
+                TipsManager.createTips(' kRECEnterSDKPage ');
                 break;
             case anysdk.RECResultCode.kRECQuitSDKPage://退出SDK页面
-                SuspensionTips.init.showTips(' kRECQuitSDKPage ');
+                TipsManager.createTips(' kRECQuitSDKPage ');
                 break;
             case anysdk.RECResultCode.kRECShareSuccess://视频分享成功
-                SuspensionTips.init.showTips(' kRECShareSuccess ');
+                TipsManager.createTips(' kRECShareSuccess ');
                 break;
             case anysdk.RECResultCode.kRECShareFail://视频分享失败
-                SuspensionTips.init.showTips(' kRECShareFail ');
+                TipsManager.createTips(' kRECShareFail ');
                 break;
             default:
                 break;

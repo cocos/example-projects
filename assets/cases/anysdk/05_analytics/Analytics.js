@@ -1,18 +1,14 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-	extends: require('BaseAnySDKExample'),
-
-	properties: {},
+    extends: cc.Component,
 
 	start: function () {
-		if (this.hasSupport()) {
-			this.analyticsPlugin = anysdk.agentManager.getAnalyticsPlugin();
-		}
+		this.analyticsPlugin = anysdk.agentManager.getAnalyticsPlugin();
 	},
 
 	startSession: function () {
 		if (!this.analyticsPlugin) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
+			TipsManager.createTips(' this.analyticsPlugin is null ');
 			return;
 		}
 		this.analyticsPlugin.startSession();
@@ -21,7 +17,7 @@ cc.Class({
 
 	stopSession: function () {
 		if (!this.analyticsPlugin) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
+			TipsManager.createTips(' this.analyticsPlugin is null ');
 			return;
 		}
 		this.analyticsPlugin.stopSession();
@@ -29,7 +25,7 @@ cc.Class({
 
 	setSessionContinueMillis: function () {
 		if (!this.analyticsPlugin) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
+			TipsManager.createTips(' this.analyticsPlugin is null ');
 			return;
 		}
 		this.analyticsPlugin.setSessionContinueMillis(100);
@@ -38,7 +34,7 @@ cc.Class({
 
 	logError: function () {
 		if (!this.analyticsPlugin) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
+			TipsManager.createTips(' this.analyticsPlugin is null ');
 			return;
 		}
 		this.analyticsPlugin.logError('error', 'errMsg');
@@ -46,7 +42,7 @@ cc.Class({
 
 	logEvent: function (eventID, paramMap) {
 		if (!this.analyticsPlugin) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
+			TipsManager.createTips(' this.analyticsPlugin is null ');
 			return;
 		}
 		this.analyticsPlugin.logEvent('error');
@@ -55,7 +51,7 @@ cc.Class({
 
 	logTimedEventBegin: function () {
 		if (!this.analyticsPlugin) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
+			TipsManager.createTips(' this.analyticsPlugin is null ');
 			return;
 		}
 		this.analyticsPlugin.logTimedEventBegin('errorbegin');
@@ -63,7 +59,7 @@ cc.Class({
 
 	logTimedEventEnd: function () {
 		if (!this.analyticsPlugin) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null ');
+			TipsManager.createTips(' this.analyticsPlugin is null ');
 			return;
 		}
 		this.analyticsPlugin.logTimedEventEnd('errorend');
@@ -71,7 +67,7 @@ cc.Class({
 
 	setAccount: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.setAccount) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or setAccount is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or setAccount is not support ');
 			return;
 		}
 		var paramMap = {
@@ -89,7 +85,7 @@ cc.Class({
 
 	onChargeRequest: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeRequest) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeRequest is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or onChargeRequest is not support ');
 			return;
 		}
 		var paramMap = {
@@ -105,7 +101,7 @@ cc.Class({
 
 	onChargeOnlySuccess: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeOnlySuccess) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeOnlySuccess is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or onChargeOnlySuccess is not support ');
 			return;
 		}
 		var paramMap = {
@@ -121,7 +117,7 @@ cc.Class({
 
 	onChargeSuccess: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeSuccess) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeSuccess is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or onChargeSuccess is not support ');
 			return;
 		}
 		this.analyticsPlugin.onChargeSuccess('123456');
@@ -129,7 +125,7 @@ cc.Class({
 
 	onChargeFail: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.onChargeFail) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or onChargeFail is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or onChargeFail is not support ');
 			return;
 		}
 		var paramMap = {
@@ -141,7 +137,7 @@ cc.Class({
 
 	onPurchase: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.onPurchase) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or onPurchase is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or onPurchase is not support ');
 			return;
 		}
 		var paramMap = {
@@ -156,7 +152,7 @@ cc.Class({
 
 	onUse: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.onUse) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or onUse is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or onUse is not support ');
 			return;
 		}
 		var paramMap = {
@@ -170,7 +166,7 @@ cc.Class({
 
 	onReward: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.onReward) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or onReward is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or onReward is not support ');
 			return;
 		}
 		var paramMap = {
@@ -184,7 +180,7 @@ cc.Class({
 
 	startLevel: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.startLevel) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or startLevel is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or startLevel is not support ');
 			return;
 		}
 		var paramMap = {
@@ -196,7 +192,7 @@ cc.Class({
 
 	finishLevel: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.finishLevel) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or finishLevel is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or finishLevel is not support ');
 			return;
 		}
 		this.analyticsPlugin.finishLevel('123456');
@@ -204,7 +200,7 @@ cc.Class({
 
 	failLevel: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.failLevel) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or failLevel is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or failLevel is not support ');
 			return;
 		}
 		var paramMap = {
@@ -216,7 +212,7 @@ cc.Class({
 
 	startTask: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.startTask) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or startTask is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or startTask is not support ');
 			return;
 		}
 		var paramMap = {
@@ -228,7 +224,7 @@ cc.Class({
 
 	finishTask: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.finishTask) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or finishTask is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or finishTask is not support ');
 			return;
 		}
 		this.analyticsPlugin.finishTask('123456');
@@ -236,7 +232,7 @@ cc.Class({
 
 	failTask: function () {
 		if (!this.analyticsPlugin || !this.analyticsPlugin.failTask) {
-			SuspensionTips.init.showTips(' this.analyticsPlugin is null or failTask is not support ');
+			TipsManager.createTips(' this.analyticsPlugin is null or failTask is not support ');
 			return;
 		}
 		var paramMap = {

@@ -11,14 +11,6 @@
 cc.Class({
     extends: cc.Component,
 
-    properties: {
-        
-    },
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
     start () {
         var layer = this.getComponent(cc.TiledLayer);
         var tile = layer.getTiledTileAt(0, 22, true);

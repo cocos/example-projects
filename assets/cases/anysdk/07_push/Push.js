@@ -1,21 +1,17 @@
-const SuspensionTips = require('SuspensionTips');
+const TipsManager = require('TipsManager');
 cc.Class({
-    extends: require('BaseAnySDKExample'),
-
-    properties: {},
+    extends: cc.Component,
 
     start: function () {
-        if (this.hasSupport()) {
-            this.pushPlugin = anysdk.agentManager.getPushPlugin();
-            if (this.pushPlugin) {
-                this.pushPlugin.setListener(this.onPushResult, this);
-            }
+        this.pushPlugin = anysdk.agentManager.getPushPlugin();
+        if (this.pushPlugin) {
+            this.pushPlugin.setListener(this.onPushResult, this);
         }
     },
 
     startPush: function () {
         if (!this.pushPlugin) {
-            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            TipsManager.createTips(' this.pushPlugin is null ');
             return;
         }
         this.pushPlugin.startPush();
@@ -23,7 +19,7 @@ cc.Class({
 
     closePush: function () {
         if (!this.pushPlugin) {
-            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            TipsManager.createTips(' this.pushPlugin is null ');
             return;
         }
         this.pushPlugin.closePush();
@@ -31,7 +27,7 @@ cc.Class({
 
     setAlias: function () {
         if (!this.pushPlugin) {
-            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            TipsManager.createTips(' this.pushPlugin is null ');
             return;
         }
         this.pushPlugin.setAlias("ivenKill");
@@ -39,7 +35,7 @@ cc.Class({
 
     delAlias: function () {
         if (!this.pushPlugin) {
-            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            TipsManager.createTips(' this.pushPlugin is null ');
             return;
         }
         this.pushPlugin.delAlias("ivenKill");
@@ -47,7 +43,7 @@ cc.Class({
 
     setTags: function () {
         if (!this.pushPlugin) {
-            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            TipsManager.createTips(' this.pushPlugin is null ');
             return;
         }
         this.pushPlugin.setTags(["easy", "fast", "qwe"]);
@@ -55,7 +51,7 @@ cc.Class({
 
     delTags: function () {
         if (!this.pushPlugin) {
-            SuspensionTips.init.showTips(' this.pushPlugin is null ');
+            TipsManager.createTips(' this.pushPlugin is null ');
             return;
         }
         this.pushPlugin.delTags(["easy", "qwe"]);
@@ -65,7 +61,7 @@ cc.Class({
         cc.log(' PUSH RESULT ########## code: ' + code + ',msg: ' + msg);
         switch (code) {
             case anysdk.PushActionResultCode.kPushReceiveMessage:
-                SuspensionTips.init.showTips(' kPushReceiveMessage ');
+                TipsManager.createTips(' kPushReceiveMessage ');
                 break;
             default:
                 break;
