@@ -37,7 +37,7 @@ module.exports = {
             case 'fullscreenVideo':
             case 'videoPlayer':
             case 'webview':
-                return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+                return ((cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
 
             // anysdk
             case '01_user':
