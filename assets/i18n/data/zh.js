@@ -84,7 +84,7 @@ module.exports = {
     "cases/02_ui/03_button/ButtonInScroll.js.1": "顶部按钮被点击！",
     "cases/02_ui/03_button/ButtonInScroll.js.2": "底部按钮被点击！",
     "cases/02_ui/03_button/ButtonInScroll.fire.21": "哪个按钮被点击？",
-    "cases/02_ui/03_button/ButtonInScroll.fire.27": "拖动显示更多按钮\n\n",
+    "cases/02_ui/03_button/ButtonInScroll.fire.27": "拖动显示更多按钮",
     "cases/02_ui/03_button/SimpleButton.js.1": "左边的按钮被点击！",
     "cases/02_ui/03_button/SimpleButton.js.2": "右边的按钮被点击！",
     "cases/02_ui/03_button/ButtonInteractable.fire.7": "播放",
