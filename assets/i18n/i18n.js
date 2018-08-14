@@ -1,9 +1,6 @@
 const Polyglot = require('polyglot');
-let lang = cc.sys.language;
-if (lang !== 'zh') {
-    lang = 'en';
-}
-let data = require(lang); // update this to set your default displaying language in editor
+
+let data = cc.sys.language === 'zh' ? require('zh') : require('en');
 // let polyglot = null;
 let polyglot = new Polyglot({phrases: data, allowMissing: true});
 
@@ -17,7 +14,7 @@ module.exports = {
      */
     init (language) {
         lang = language;
-        data = require(lang);
+        data = language === 'zh' ? require('zh') : require('en');
         polyglot.replace(data);
     },
     /**

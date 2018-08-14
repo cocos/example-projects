@@ -83,7 +83,7 @@ module.exports = {
     "cases/02_ui/03_button/ButtonInScroll.js.1": "Top button clicked!",
     "cases/02_ui/03_button/ButtonInScroll.js.2": "Bottom button clicked!",
     "cases/02_ui/03_button/ButtonInScroll.fire.21": "Which button is clicked?",
-    "cases/02_ui/03_button/ButtonInScroll.fire.27": "drag to reveal more buttons\n\n",
+    "cases/02_ui/03_button/ButtonInScroll.fire.27": "drag to reveal more buttons",
     "cases/02_ui/03_button/SimpleButton.js.1": "Left button clicked!",
     "cases/02_ui/03_button/SimpleButton.js.2": "Right button clicked!",
     "cases/02_ui/03_button/ButtonInteractable.fire.7": "PLAY",
