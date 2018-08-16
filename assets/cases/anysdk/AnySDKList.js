@@ -14,10 +14,11 @@ cc.Class({
     },
 
     onLoad () {
-        if (typeof anysdk === 'undefined') {
+        TipsManager.init();
+        if (!TipsManager.hasAnySDK(cc.director.getScene().name)) {
+            TipsManager.createTips('anysdk is undefined!');
             return;
         }
-        TipsManager.init();
         this.node.parent.parent.opacity = 255;
         this.initItemCount = this.interfaceList.length;
         this.itemList = [];
