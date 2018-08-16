@@ -102,11 +102,11 @@ module.exports = {
         if (!support && support !== undefined) {
             this.createTips();
             return false;
-        }
-        // when in the anysdk scene
-        if (typeof anysdk !== 'undefined') {
-            return anysdk.agentManager[this.AnySDKConfig(name)];
-        }
+        }        
         return true;
+    },
+
+    hasAnySDK (name) {
+        return (typeof anysdk !== 'undefined' && anysdk.agentManager[this.AnySDKConfig(name)]); 
     }
 };
