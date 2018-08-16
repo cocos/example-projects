@@ -14,7 +14,8 @@ cc.Class({
 
     start () {
         let texture = new cc.RenderTexture();
-        texture.initWithSize(cc.visibleRect.width, cc.visibleRect.height);
+        let gl = cc.game._renderContext;
+        texture.initWithSize(cc.visibleRect.width, cc.visibleRect.height, gl.STENCIL_INDEX8);
         this.camera.targetTexture = texture;
         this.texture = texture;
     },
