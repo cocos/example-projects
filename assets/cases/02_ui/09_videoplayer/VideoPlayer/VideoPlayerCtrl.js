@@ -1,3 +1,4 @@
+const i18n = require('i18n');
 cc.Class({
     extends: cc.Component,
 
@@ -18,10 +19,15 @@ cc.Class({
             default: null,
             type: cc.Label
         },
-        tips: {
+        resSwitchBtnLabel: {
             default: null,
             type: cc.Label
-        }
+        },
+        _resStatus: false,
+        _tips: null
+    },
+    start () {
+        this._tips = this.node.getComponent('SuspensionTips');
     },
 
     play () {
@@ -39,7 +45,7 @@ cc.Class({
             cc.sys.browserVersion <= 7.2 &&
             /Nexus 6/.test(navigator.userAgent)
         ) {
-            this.tips.textKey = 'cases/02_ui/09_videoplayer/videoPlayer.nonsupport_fullscreen';
+            this._tips.showTips(i18n.t('cases/02_ui/09_videoplayer/videoPlayer.nonsupport_fullscreen'));
             return cc.log('May be crash, so prohibit full screen');
         }
         this.videoPlayer.isFullscreen = true;
@@ -99,14 +105,10 @@ cc.Class({
     },
 
     playOnlineVideo () {
-        this.videoPlayer.resourceType = cc.VideoPlayer.ResourceType.REMOTE;
         this.videoPlayer.remoteURL = 'http://benchmark.cocos2d-x.org/cocosvideo.mp4';
-        this.videoPlayer.play();
-    },
-
-    playLocalVideo () {
-        this.videoPlayer.resourceType = cc.VideoPlayer.ResourceType.LOCAL;
-        this.videoPlayer.play();
+        this._resStatus = !this._resStatus;
+        this.resSwitchBtnLabel.string = this._resStatus ? 'Switch Resource To Local' : 'Switch Resource To Remote';
+        this.videoPlayer.resourceType = this._resStatus ? cc.VideoPlayer.ResourceType.REMOTE : cc.VideoPlayer.ResourceType.LOCAL;
     },
 
     update () {
