@@ -4,12 +4,17 @@ cc.Class({
     properties: {
         label: cc.Label,
         sprite: cc.Sprite,
+        audioControlBtns: cc.Node,
+        audioBtnLabel: cc.Label,
         imgUrl: "http://www.cocos.com/wp-content/themes/cocos/img/download1.png",
         txtUrl: "https://raw.githubusercontent.com/cocos-creator/tutorial-dark-slash/master/LICENSE.md",
         tempImgUrl: "http://www.cocos.com/wp-content/uploads/2018/03/%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BA%95%E9%83%A8%E4%BA%8C%E7%BB%B4%E7%A0%81_2018.03.08.png",
+        audioUrl: "http://tools.itharbors.com/christmas/res/sounds/ss.mp3",
         _downloader: null,
         _imgTask: null,
         _txtTask: null,
+        _audioTask: null,
+        _audioPlayer: null,
         _storagePath: "",
         _inited: false
     },
@@ -25,7 +30,7 @@ cc.Class({
         this._downloader.setOnFileTaskSuccess(this.onSucceed.bind(this));
         this._downloader.setOnTaskProgress(this.onProgress.bind(this));
         this._downloader.setOnTaskError(this.onError.bind(this));
-
+        this._audioPlayer = this.node.getComponent('AudioCtrl');
         this._storagePath = jsb.fileUtils.getWritablePath() + '/example-cases/downloader/';
         this._inited = jsb.fileUtils.createDirectory(this._storagePath);
         if (!this._inited) {
@@ -34,7 +39,6 @@ cc.Class({
     },
 
     onSucceed (task) {
-        var atlasRelated = false;
         switch (task.requestURL) {
         case this.imgUrl:
             var self = this;
@@ -52,6 +56,13 @@ cc.Class({
             this.label.node.active = true;
             this.label.string = content.substr(0, 350);
             break;
+        case this.audioUrl:
+            this.audioBtnLabel.string = 'Show';
+            this.label.string = 'Audio Download Complete.';
+            let _self = this;
+            cc.loader.load(task.storagePath, function (err, audio) {
+                _self._audioPlayer.setAudioTask(audio);
+            });
         }
     },
 
@@ -96,5 +107,28 @@ cc.Class({
             return;
         }
         this._txtTask = this._downloader.createDownloadFileTask(this.txtUrl, this._storagePath + 'imagine.txt');
+    },
+
+    downloadAudio () {
+        if (!this.audioUrl || !this._inited) {
+            return;
+        }
+        if (!this._audioTask) {
+            this._audioTask = this._downloader.createDownloadFileTask(this.audioUrl, this._storagePath + 'audioTest.mp3');
+        }
+        else {
+            this.controlAudioBtns();
+        }
+    },
+
+    controlAudioBtns () {
+        this.audioControlBtns.active = !this.audioControlBtns.active;
+        console.log(this.audioControlBtns.active);
+        this.audioBtnLabel.string = this.audioControlBtns.active ? 'Hide' : 'Show';
+    },
+
+    onDisable () {
+        this._audioPlayer.stopAudio();
     }
+
 });

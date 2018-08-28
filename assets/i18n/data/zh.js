@@ -244,6 +244,18 @@ module.exports = {
     "cases/05_scripting/11_network/network.fire.14": "WebSocket",
     "cases/05_scripting/11_network/network.fire.19": "Label",
     "cases/05_scripting/11_network/network.fire.18": "SocketIO",
+    "cases/05_scripting/11_network/download-web.fire.1.1": "远程音频资源下载",
+    "cases/05_scripting/11_network/download-web.fire.1.2": "远程图片资源下载",
+    "cases/05_scripting/11_network/download-web.fire.2": "等待下载中。。。",
+    "cases/05_scripting/11_network/download-web.fire.3": "下载进度：",
+    "cases/05_scripting/11_network/download-web.fire.4.1": "远程音频资源下载完成",
+    "cases/05_scripting/11_network/download-web.fire.4.2": "远程图片资源下载完成",
+    "cases/05_scripting/11_network/download-web.fire.5.1": "远程音频资源下载失败",
+    "cases/05_scripting/11_network/download-web.fire.5.2": "远程图片资源下载失败",
+    "cases/05_scripting/11_network/download-web.fire.6": "资源地址：",
+    "cases/05_scripting/11_network/download-web.fire.7": "下载",
+    "cases/05_scripting/11_network/download-web.fire.8": "下一页",
+    "cases/05_scripting/11_network/download-web.fire.9": "上一页",
     "cases/native_call/native_call.fire.1": "点击按钮调用静态方法！",
     "cases/native_call/native_call.fire.2": "点击",
     "cases/collider/Category.fire.3": "组: 碰撞",
@@ -285,5 +297,11 @@ module.exports = {
     "cases/anysdk/2": "该范例只在Android、iOS上有效果",
     "cases/anysdk/3": "不支持 anysdk 模块",
     "cases/subpackage": "加载子包",
-    "cases/subpackage.loaded": "子包已经成功加载"
+    "cases/subpackage.loaded": "子包已经成功加载",
+
+    // Audio Play use the cc.AuidioEngine
+    "scripts/AudioCtrl_Play": "播放",
+    "scripts/AUdioCtrl_Stop": "停止",
+    "scripts/AUdioCtrl_Pause": "暂停",
+    "scripts/AUdioCtrl_Resume": "恢复",
 };

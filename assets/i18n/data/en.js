@@ -244,6 +244,18 @@ module.exports = {
     "cases/05_scripting/11_network/network.fire.14": "WebSocket",
     "cases/05_scripting/11_network/network.fire.19": "Label",
     "cases/05_scripting/11_network/network.fire.18": "SocketIO",
+    "cases/05_scripting/11_network/download-web.fire.1.1": "Remote Audio DownLoad",
+    "cases/05_scripting/11_network/download-web.fire.1.2": "Remote Picture DownLoad",
+    "cases/05_scripting/11_network/download-web.fire.2": "Wait For DownLoading。。。",
+    "cases/05_scripting/11_network/download-web.fire.3": "DownLoad Process：",
+    "cases/05_scripting/11_network/download-web.fire.4.1": "Audio DownLoad Completed",
+    "cases/05_scripting/11_network/download-web.fire.4.2": "Picture DownLoad Completed",
+    "cases/05_scripting/11_network/download-web.fire.5.1": "Audio DownLoad Failed",
+    "cases/05_scripting/11_network/download-web.fire.4.2": "Picture DownLoad Failed",
+    "cases/05_scripting/11_network/download-web.fire.6": "Remote Url:",
+    "cases/05_scripting/11_network/download-web.fire.7": "download",
+    "cases/05_scripting/11_network/download-web.fire.8": "Next",
+    "cases/05_scripting/11_network/download-web.fire.9": "Preview",
     "cases/native_call/native_call.fire.1": "JS to JAVA reflection only works Android mobile platform!",
     "cases/native_call/native_call.fire.2": "Click on the button calls the static method!",
     "cases/native_call/native_call.fire.3": "Click",
@@ -287,6 +299,12 @@ module.exports = {
     "cases/anysdk/3": "The anysdk module is not supported",
     "cases/subpackage": "Load Subpackage",
     "cases/subpackage.loaded": "Subpackage is loaded",
-    "cases/subpackage.failed": "Failed to load the package, please check the console for details"
+    "cases/subpackage.failed": "Failed to load the package, please check the console for details",
+
+    // Audio Play use the cc.AuidioEngine
+    "scripts/AudioCtrl_Play": "Play",
+    "scripts/AUdioCtrl_Stop": "Stop",
+    "scripts/AUdioCtrl_Pause": "Pause",
+    "scripts/AUdioCtrl_Resume": "Resume",        
 
 };
