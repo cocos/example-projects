@@ -304,4 +304,8 @@ module.exports = {
     "scripts/AUdioCtrl_Stop": "停止",
     "scripts/AUdioCtrl_Pause": "暂停",
     "scripts/AUdioCtrl_Resume": "恢复",
+
+    // LoadRes asset callback textkey
+    "sprite_loadRes_asset_success": "资源加载成功",
+    "sprite_loadRes_asset_failed": "资源加载失败",
 };
