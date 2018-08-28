@@ -305,6 +305,9 @@ module.exports = {
     "scripts/AudioCtrl_Play": "Play",
     "scripts/AUdioCtrl_Stop": "Stop",
     "scripts/AUdioCtrl_Pause": "Pause",
-    "scripts/AUdioCtrl_Resume": "Resume",        
-
+    "scripts/AUdioCtrl_Resume": "Resume",
+    
+    // LoadRes asset callback textkey
+    "sprite_loadRes_asset_success": "Load Success",
+    "sprite_loadRes_asset_failed": "Load Failed",
 };
