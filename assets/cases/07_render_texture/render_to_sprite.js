@@ -57,5 +57,8 @@ cc.Class({
                 cc.error("save render texture failed!");
             }
         }
+        else {
+            cc.log("save render texture to image, only supported on native platform.");
+        }
     },
 });
