@@ -36,7 +36,26 @@ cc.Class({
         this.sprite.spriteFrame = spriteFrame;
         
         this.camera.targetTexture = texture;
+
+        this.renderTexture = texture;
     },
 
     // update (dt) {},
+    saveToFile () {
+        if (CC_JSB) {
+
+            let data = this.renderTexture.readPixels();
+            let width = this.renderTexture.width;
+            let height = this.renderTexture.height;
+            let filePath = jsb.fileUtils.getWritablePath() + 'render_to_sprite_cocos.png';
+
+            let success = jsb.savePixelsToFile(data, width, height, filePath);
+            if (success) {
+                cc.log("save  render texture success, file: " + filePath);
+            }
+            else {
+                cc.error("save render texture failed!");
+            }
+        }
+    },
 });
