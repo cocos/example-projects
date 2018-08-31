@@ -41,6 +41,7 @@ cc.Class({
     },
 
     // update (dt) {},
+
     saveToFile () {
         if (CC_JSB) {
 
@@ -51,7 +52,7 @@ cc.Class({
 
             let success = jsb.savePixelsToFile(data, width, height, filePath);
             if (success) {
-                cc.log("save  render texture success, file: " + filePath);
+                cc.log("save render texture success, file: " + filePath);
             }
             else {
                 cc.error("save render texture failed!");
