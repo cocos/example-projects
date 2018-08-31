@@ -42,24 +42,24 @@ cc.Class({
 
     // update (dt) {},
 
-    saveToFile () {
+    saveImage () {
         if (CC_JSB) {
 
             let data = this.renderTexture.readPixels();
             let width = this.renderTexture.width;
             let height = this.renderTexture.height;
-            let filePath = jsb.fileUtils.getWritablePath() + 'render_to_sprite_cocos.png';
+            let filePath = jsb.fileUtils.getWritablePath() + 'render_to_sprite_image.png';
 
-            let success = jsb.savePixelsToFile(data, width, height, filePath);
+            let success = jsb.saveImageData(data, width, height, filePath);
             if (success) {
-                cc.log("save render texture success, file: " + filePath);
+                cc.log("save image data success, file: " + filePath);
             }
             else {
-                cc.error("save render texture failed!");
+                cc.error("save image data failed!");
             }
         }
         else {
-            cc.log("save render texture to image, only supported on native platform.");
+            cc.log("saveImage, only supported on native platform.");
         }
     },
 });
