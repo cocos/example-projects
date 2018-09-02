@@ -36,7 +36,30 @@ cc.Class({
         this.sprite.spriteFrame = spriteFrame;
         
         this.camera.targetTexture = texture;
+
+        this.renderTexture = texture;
     },
 
     // update (dt) {},
+
+    saveImage () {
+        if (CC_JSB) {
+
+            let data = this.renderTexture.readPixels();
+            let width = this.renderTexture.width;
+            let height = this.renderTexture.height;
+            let filePath = jsb.fileUtils.getWritablePath() + 'render_to_sprite_image.png';
+
+            let success = jsb.saveImageData(data, width, height, filePath);
+            if (success) {
+                cc.log("save image data success, file: " + filePath);
+            }
+            else {
+                cc.error("save image data failed!");
+            }
+        }
+        else {
+            cc.log("saveImage, only supported on native platform.");
+        }
+    },
 });
