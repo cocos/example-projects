@@ -1,4 +1,6 @@
 const i18n = require('i18n');
+const TipsManager = require('TipsManager');
+
 cc.Class({
     extends: cc.Component,
 
@@ -24,10 +26,9 @@ cc.Class({
             type: cc.Label
         },
         _resStatus: false,
-        _tips: null
     },
     start () {
-        this._tips = this.node.getComponent('SuspensionTips');
+        TipsManager.init();
     },
 
     play () {
@@ -45,7 +46,7 @@ cc.Class({
             cc.sys.browserVersion <= 7.2 &&
             /Nexus 6/.test(navigator.userAgent)
         ) {
-            this._tips.showTips(i18n.t('cases/02_ui/09_videoplayer/videoPlayer.nonsupport_fullscreen'));
+            TipsManager.createTips(i18n.t('cases/02_ui/09_videoplayer/videoPlayer.nonsupport_fullscreen'));
             return cc.log('May be crash, so prohibit full screen');
         }
         this.videoPlayer.isFullscreen = true;

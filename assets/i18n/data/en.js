@@ -136,6 +136,7 @@ module.exports = {
     "cases/02_ui/07_editBox/EditBox.fire.38": "Button must be on top of EditBox, \nand it should enable click.",
 
     "cases/02_ui/09_videoplayer/fullscreenVideo.fire": "When you touch the screen, video will be played. \n It will be removed when video complete.",
+    "cases/02_ui/09_videoplayer/videoPlayer.nonsupport_fullscreen": "currect device does nonsupport fullscreen.",
 
     "cases/03_gameplay/01_player_control/EventManager/KeyboardInput.fire.6": "Press 'A' or 'D' to control sheep",
     "cases/03_gameplay/01_player_control/On/OnTouchCtrl.js.1": "touch (",
