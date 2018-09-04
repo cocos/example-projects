@@ -63,8 +63,6 @@ cc.Class({
             }
         }, this);
 
-        this._updateInfoButton();
-
         cc.director.on(cc.Director.EVENT_AFTER_SCENE_LAUNCH, this._onSceneLaunched, this);
     },
 
@@ -136,11 +134,6 @@ cc.Class({
         });
     },
 
-    _updateInfoButton: function () {
-        let labelTxt = i18n.t("scripts/Global/Menu.js." + (this.readme.node.active ? "view" : "hide") + ".info");
-        cc.find('label', this.btnInfo.node).getComponent(cc.Label).textKey = labelTxt;
-    },
-
     showReadme: function (event, active) {
         if (active === undefined) {
             this.readme.node.active = !this.readme.node.active;
@@ -151,7 +144,6 @@ cc.Class({
         if (this.readme.node.active) {
             this.readme.scrollToTop();
         }
-        this._updateInfoButton()
 
         // en: fix Collider DebugDraw always displayed on top of the problem.
         // zh：解决 Collider DebugDraw 一直显示在最上层的问题。
