@@ -16,7 +16,7 @@ cc.Class({
             default: null,
             type: cc.Sprite
         },
-        _picUrl: 'http://www.cocos.com/wp-content/themes/cocos/img/download1.png',
+        _picUrl: 'http://tools.itharbors.com/christmas/res/tree.png'
     },
 
     onLoad () {
@@ -25,22 +25,24 @@ cc.Class({
 
     startLoad () {
         // set url
-        if (this.inputUrlBox && this.inputUrlBox.string) {
-            this._picUrl = this.inputUrlBox.string;
-        }
+        this._picUrl = this.inputUrlBox.string;
         // download pic
         if (this._picUrl) {
             cc.loader.load({url: this._picUrl, type: 'png'}, this.onProgress.bind(this), this.picLoadComplete.bind(this));
             this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.2');
         }
+        else {
+            this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.10');
+        }
     },
 
     picLoadComplete (err, res) {
-        if (err) {
+        if (err || !res) {
             console.log(err);
             this.remindLabel.textKey =  i18n.t('cases/05_scripting/11_network/download-web.fire.5.2');
             return;
         }
+
         this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.4.2');
 
         let spriteFrame = new cc.SpriteFrame(res);
