@@ -23,18 +23,19 @@ cc.Class({
 
     startLoad () {
         // set url
-        if (this.inputUrlBox && this.inputUrlBox.string) {
-            this._audioUrl = this.inputUrlBox.string;
-        }
+        this._audioUrl = this.inputUrlBox.string;
         // download audio
         if (this._audioUrl) {
             cc.loader.load({url: this._audioUrl, type: 'mp3'}, this.onProgress.bind(this), this.audioLoadComplete.bind(this));
             this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.2');
         }
+        else {
+            this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.10');
+        }
     },
 
     audioLoadComplete (err, res) {
-        if (err) {
+        if (err || !res) {
             console.log(err);
             this.remindLabel.textKey =  i18n.t('cases/05_scripting/11_network/download-web.fire.5.1');
             return;
@@ -49,10 +50,10 @@ cc.Class({
     },
 
     update () {
-        this._audioPlayer.currentTime ();
+        this._audioPlayer.currentTime();
     },
 
     onDisable() {
-        this._audioPlayer.stopAudio();
+        this._audioPlayer.stopAllAudio();
     }
 });

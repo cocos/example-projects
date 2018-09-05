@@ -31,6 +31,18 @@ cc.Class({
         cc.audioEngine.resume(this._audioID);
     },
 
+    stopAllAudio () {
+        cc.audioEngine.stopAll();
+    },
+
+    pauseAllAudio () {
+        cc.audioEngine.pauseAll();
+    },
+
+    resumeAllAudio () {
+        cc.audioEngine.resumeAll();
+    },
+
     currentTime () {
         if (!this._audioTask || this._audioID === null) {
             return;
