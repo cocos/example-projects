@@ -1,6 +1,6 @@
 const TipsManager = require('TipsManager');
 
-cc.Class({
+const SceneList = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -11,6 +11,10 @@ cc.Class({
         initItemCount: 0,
         scrollView: cc.ScrollView,
         bufferZone: 0, // when item is away from bufferZone, we relocate it
+    },
+
+    statics: {
+        cases: [],
     },
 
     createItem: function (x, y, name, url) {
@@ -45,27 +49,28 @@ cc.Class({
     initList () {
         var scenes = cc.game._sceneInfos;
         var dict = {};
+        var cases = SceneList.cases;
 
         if (scenes) {
-            var i, j;
-            for (i = 0; i < scenes.length; ++i) {
+            for (let i = 0; i < scenes.length; ++i) {
                 let url = scenes[i].url;
-                let dirname = cc.path.dirname(url).replace('db://assets/cases/', '');
-                if (dirname === 'db://assets/resources/test_assets') {
+                if (!url.startsWith('db://assets/cases/')) {
                     continue;
                 }
+                let dirname = cc.path.dirname(url).replace('db://assets/cases/', '');
                 let scenename = cc.path.basename(url, '.fire');
-                if (scenename === 'TestList') continue;
 
                 if (!dirname) dirname = '_root';
                 if (!dict[dirname]) {
                     dict[dirname] = {};
                 }
                 dict[dirname][scenename] = url;
-            }
 
-        } else {
-            cc.log('failed to get scene list!');
+                cases.push(url);
+            }
+        }
+        else {
+            cc.error('failed to get scene list!');
         }
         // compile scene dict to an array
         let dirs = Object.keys(dict);

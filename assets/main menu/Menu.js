@@ -1,44 +1,27 @@
 const i18n = require('i18n');
 const SceneList = require('SceneList');
 
+const MainScene = 'TestList.fire';
+
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        text: {
-            default: null,
-            type: cc.Label
-        },
-        readme: {
-            default: null,
-            type: cc.ScrollView
-        },
-        btnInfo: {
-            default: null,
-            type: cc.Button
-        },
-        btnBack: {
-            default: null,
-            type: cc.Button
-        },
-        testList: {
-            default: null,
-            type: cc.ScrollView
-        },
-
-        uiCamera: {
-            default: null,
-            type: cc.Camera
-        }
+        text: cc.Label,
+        readme: cc.ScrollView,
+        btnInfo: cc.Button,
+        btnBack: cc.Button,
+        testList: cc.ScrollView,
+        uiCamera: cc.Camera,
+        sceneTitle: cc.Label,
     },
 
     onLoad: function () {
-        this._isLoadingScene = true;
+        this._isLoadingScene = false;
         this.showDebugDraw = false;
         cc.game.addPersistRootNode(this.node);
-        this.currentSceneUrl = 'TestList.fire';
+        this.currentSceneUrl = MainScene;
         this.contentPos = null;
-        this.isMenu = true;
         this.btnBack.node.active = false;
         this.loadInstruction(this.currentSceneUrl);
         this.node.zIndex = 999;
@@ -80,23 +63,21 @@ cc.Class({
     },
 
     backToList: function () {
+        this.loadScene(MainScene);
+    },
+
+    loadScene: function (url) {
         if (this._isLoadingScene) {
             return;
         }
         this._isLoadingScene = true;
-        this.showReadme(null, false);
-        this.currentSceneUrl = 'TestList.fire';
-        this.isMenu = true;
-        cc.director.loadScene('TestList', this.onLoadSceneFinish.bind(this));
-    },
 
-    loadScene: function (url) {
-        this._isLoadingScene = true;
+        this.showReadme(null, false);
         this.contentPos = this.testList.getContentPosition();
+
         this.currentSceneUrl = url;
-        this.isMenu = false;
-        this.testList.node.active = false;
         cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
+
         if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited && cocosAnalytics.isInited()) {
             // Cocos Analytics service, to learn more please visit:
             // https://analytics.cocos.com/docs/
@@ -109,16 +90,65 @@ cc.Class({
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
-        if (this.isMenu && this.contentPos) {
-            this.btnBack.node.active = false;
-            this.testList.node.active = true;
-            this.testList.setContentPosition(this.contentPos);
+
+
+        this.testList.node.active = false;
+
+        let isMenu = url.endsWith(MainScene);
+        this.btnBack.node.active = this.sceneTitle.node.active = !isMenu;
+        this.testList.node.active = isMenu;
+        if (isMenu) {
+            if (this.contentPos) {
+                this.testList.setContentPosition(this.contentPos);
+            }
         }
         else {
-            this.btnBack.node.active = true;
-            this.testList.node.active = false;
+            this.sceneTitle.string = url.replace('db://assets/cases/', '');
         }
+
         this._isLoadingScene = false;
+    },
+
+    _getAdjacentScenes () {
+        let res = { next: '', prev: '' };
+        let scenes = SceneList.cases;
+
+        if (this.currentSceneUrl.endsWith(MainScene)) {
+            res.prev = scenes[scenes.length - 1];
+            res.next = scenes[0];
+        }
+        else {
+            let i = scenes.indexOf(this.currentSceneUrl);
+            if (i !== -1) {
+                if (i + 1 < scenes.length) {
+                    res.next = scenes[i + 1];
+                }
+                else {
+                    res.next = MainScene;
+                }
+                if (i - 1 >= 0) {
+                    res.prev = scenes[i - 1];
+                }
+                else {
+                    res.prev = MainScene;
+                }
+            }
+        }
+        return res;
+    },
+
+    nextScene () {
+        let { next } = this._getAdjacentScenes();
+        if (next) {
+            this.loadScene(next);
+        }
+    },
+
+    prevScene () {
+        let { prev } = this._getAdjacentScenes();
+        if (prev) {
+            this.loadScene(prev);
+        }
     },
 
     loadInstruction: function (url) {
@@ -136,12 +166,11 @@ cc.Class({
 
     showReadme: function (event, active) {
         if (active === undefined) {
-            this.readme.node.active = !this.readme.node.active;
+            active = !this.readme.node.active;
         }
-        else {
-            this.readme.node.active = active;
-        }
-        if (this.readme.node.active) {
+
+        this.readme.node.active = active;
+        if (active) {
             this.readme.scrollToTop();
         }
 
@@ -155,6 +184,7 @@ cc.Class({
         else {
             cc.director.getCollisionManager().enabledDebugDraw = this.showDebugDraw;
         }
+
         // en: fix Video Player always displayed on top of the problem.
         // zh：修复 Video Player 一直显示在最上层的问题。
         var videoPlayer = cc.find('Canvas/VideoPlayer');
