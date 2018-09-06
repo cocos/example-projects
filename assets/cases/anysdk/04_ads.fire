@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.778125,
-      "y": 0.778125,
+      "x": 0.7109130859375,
+      "y": 0.7109130859375,
       "z": 1
     },
     "_quat": {
@@ -52,7 +52,7 @@
       "z": 0,
       "w": 1
     },
-    "_localZOrder": 143,
+    "_zIndex": 0,
     "groupIndex": 0,
     "autoReleaseAssets": true,
     "_id": "100d7783-0208-4ff9-9652-e4763e8f3bd7"
@@ -124,7 +124,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 144,
+    "_zIndex": 0,
     "groupIndex": 0,
     "_id": "c6d1cKksN9OQ5lv8TS4I88V"
   },
@@ -185,7 +185,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 145,
+    "_zIndex": 0,
     "groupIndex": 0,
     "_id": "eeWDrII0VK5KieRr/4lGlC"
   },
@@ -198,7 +198,7 @@
     },
     "_enabled": true,
     "_cullingMask": 4294967295,
-    "_clearFlags": 3,
+    "_clearFlags": 7,
     "_backgroundColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -273,7 +273,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 146,
+    "_zIndex": 0,
     "groupIndex": 0,
     "_id": "776e4AzscRGzI8PfU22XUnO"
   },
@@ -410,7 +410,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 147,
+    "_zIndex": 0,
     "groupIndex": 0,
     "_id": "76dfdjjHgBExZ++GF3jaTpm"
   },
@@ -475,7 +475,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 148,
+    "_zIndex": 0,
     "groupIndex": 0,
     "_id": "4f64a7x9ThKeIfdjzFtWWtl"
   },
@@ -536,7 +536,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 149,
+    "_zIndex": 0,
     "groupIndex": 0,
     "_id": "2abbeakRPlBY4Okzhqf1EmJ"
   },
@@ -573,9 +573,6 @@
       "__id__": 9
     },
     "_enabled": true,
-    "content": {
-      "__id__": 11
-    },
     "horizontal": false,
     "vertical": true,
     "inertia": true,
@@ -584,6 +581,12 @@
     "bounceDuration": 0.23,
     "scrollEvents": [],
     "cancelInnerEvents": true,
+    "_N$content": {
+      "__id__": 11
+    },
+    "content": {
+      "__id__": 11
+    },
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": null,
     "_id": "8bar/UgllAYZzgrBgfM8vN"
