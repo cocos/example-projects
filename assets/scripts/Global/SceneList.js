@@ -65,8 +65,6 @@ const SceneList = cc.Class({
                     dict[dirname] = {};
                 }
                 dict[dirname][scenename] = url;
-
-                cases.push(url);
             }
         }
         else {
@@ -84,10 +82,9 @@ const SceneList = cc.Class({
             scenenames.sort();
             for (let j = 0; j < scenenames.length; ++j) {
                 let name = scenenames[j];
-                this.sceneList.push({
-                    name: name,
-                    url: dict[dirs[i]][name]
-                });
+                let url = dict[dirs[i]][name];
+                this.sceneList.push({ name, url });
+                cases.push(url);
             }
         }
         let y = 0;
