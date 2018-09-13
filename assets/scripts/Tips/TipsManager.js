@@ -98,10 +98,12 @@ module.exports = {
         node.parent = cc.director.getScene();
     },
 
-    hasSupport (name) {
+    hasSupport (name, hideTip) {
         let support = this.SupportConfig(name);
         if (!support && support !== undefined) {
-            this.createTips();
+            if (!hideTip) {
+                this.createTips();
+            }
             return false;
         }        
         return true;
