@@ -291,9 +291,6 @@ module.exports = {
     "resources/test_assets/scene.fire.3": "返回资源加载场景",
     "resources/test_assets/scene.fire.6": "返回",
     "scripts/Global/Menu.js.1": "说明暂缺",
-    "cases/anysdk/1": "该范例只在Android、iOS、Web-Mobile上有效果",
-    "cases/anysdk/2": "该范例只在Android、iOS上有效果",
-    "cases/anysdk/3": "不支持 anysdk 模块",
     "cases/subpackage": "加载子包",
     "cases/subpackage.loaded": "子包已经成功加载",
 
