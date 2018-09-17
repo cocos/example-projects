@@ -1,5 +1,6 @@
 const i18n = require('i18n');
 const SceneList = require('SceneList');
+const TipsManager = require('TipsManager');
 
 const MainScene = 'TestList.fire';
 
@@ -29,7 +30,7 @@ cc.Class({
         cc.game.addPersistRootNode(this.testList.node);
         if (this.testList && this.testList.content) {
             // in main scene
-            this.sceneList = this.testList.content.getComponent('SceneList');
+            this.sceneList = this.testList.content.getComponent(SceneList);
             this.sceneList.init(this);
         }
         if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited && cocosAnalytics.isInited()) {
@@ -111,27 +112,40 @@ cc.Class({
 
     _getAdjacentScenes () {
         let res = { next: '', prev: '' };
-        let scenes = SceneList.cases;
+        let sceneList = this.sceneList.sceneList;
+
+        function findAvailableScene (startIndex, step) {
+            for (var i = startIndex; 0 <= i && i < sceneList.length; i += step) {
+                let url = sceneList[i].url;
+                if (url) {
+                    let sceneName = cc.path.basename(url, '.fire');
+                    let available = TipsManager.hasSupport(sceneName, true);
+                    if (available) {
+                        return url;
+                    }
+                }
+            }
+            return MainScene;
+        }
 
         if (this.currentSceneUrl.endsWith(MainScene)) {
-            res.prev = scenes[scenes.length - 1];
-            res.next = scenes[0];
+            res.next = findAvailableScene(0, 1);
+            res.prev = findAvailableScene(sceneList.length - 1, -1);
         }
         else {
-            let i = scenes.indexOf(this.currentSceneUrl);
+            // findIndex
+            let i = -1;
+            sceneList.some((item, index) => {
+                if (item.url === this.currentSceneUrl) {
+                    i = index;
+                    return true;
+                }
+                return false;
+            });
+
             if (i !== -1) {
-                if (i + 1 < scenes.length) {
-                    res.next = scenes[i + 1];
-                }
-                else {
-                    res.next = MainScene;
-                }
-                if (i - 1 >= 0) {
-                    res.prev = scenes[i - 1];
-                }
-                else {
-                    res.prev = MainScene;
-                }
+                res.next = findAvailableScene(i + 1, 1);
+                res.prev = findAvailableScene(i - 1, -1);
             }
         }
         return res;

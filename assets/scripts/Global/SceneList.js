@@ -13,10 +13,6 @@ const SceneList = cc.Class({
         bufferZone: 0, // when item is away from bufferZone, we relocate it
     },
 
-    statics: {
-        cases: [],
-    },
-
     createItem: function (x, y, name, url) {
         var item = cc.instantiate(this.itemPrefab);
         var itemComp = item.getComponent('ListItem');
@@ -49,7 +45,6 @@ const SceneList = cc.Class({
     initList () {
         var scenes = cc.game._sceneInfos;
         var dict = {};
-        var cases = SceneList.cases;
 
         if (scenes) {
             for (let i = 0; i < scenes.length; ++i) {
@@ -65,8 +60,6 @@ const SceneList = cc.Class({
                     dict[dirname] = {};
                 }
                 dict[dirname][scenename] = url;
-
-                cases.push(url);
             }
         }
         else {
@@ -84,10 +77,8 @@ const SceneList = cc.Class({
             scenenames.sort();
             for (let j = 0; j < scenenames.length; ++j) {
                 let name = scenenames[j];
-                this.sceneList.push({
-                    name: name,
-                    url: dict[dirs[i]][name]
-                });
+                let url = dict[dirs[i]][name];
+                this.sceneList.push({ name, url });
             }
         }
         let y = 0;

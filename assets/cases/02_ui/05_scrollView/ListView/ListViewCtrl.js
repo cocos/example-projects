@@ -130,6 +130,32 @@ cc.Class({
 
         this.content.height = (this.totalCount - 1) * (this.itemTemplate.height + this.spacing) + this.spacing; // get total content height
         this.totalCount = this.totalCount - 1;
+
+        this.moveBottomItemToTop();
+    },
+
+    moveBottomItemToTop () {
+        let offset = (this.itemTemplate.height + this.spacing) * this.items.length;
+        let length = this.items.length;
+        let item = this.getItemAtBottom();
+
+        // whether need to move to top
+        if (item.y + offset < 0) {
+            item.y = item.y + offset;
+            let itemComp = item.getComponent('Item');
+            let itemId = itemComp.itemID - length;
+            itemComp.updateItem(length-1, itemId);
+        }
+    },
+
+    getItemAtBottom () {
+        let item = this.items[0];
+        for (let i = 1; i < this.items.length; ++i) {
+            if (item.y > this.items[i].y) {
+                item = this.items[i];
+            }
+        }
+        return item;
     },
 
     scrollToFixedPosition: function () {

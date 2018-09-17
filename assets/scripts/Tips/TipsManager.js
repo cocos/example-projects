@@ -40,44 +40,6 @@ module.exports = {
             case 'webview':
                 // 2.0 native still not support the video play feature.
                 return (!cc.sys.isNative && (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
-
-            // anysdk
-            case '01_user':
-            case '02_iap':
-            case '03_share':
-            case '04_ads':
-            case '05_analytics':
-            case '06_social':
-            case '07_push':
-            case '08_adtracking':
-            case '09_crash':
-            case '10_rec':
-                return (typeof anysdk !== 'undefined' && cc.sys.isMobile);
-        }
-    },
-
-    AnySDKConfig: function (name) {
-        switch (name) {
-            case '01_user':
-                return 'getUserPlugin';
-            case '02_iap':
-                return 'getIAPPlugin';
-            case '03_share':
-                return 'getSharePlugin';
-            case '04_ads':
-                return 'getAdsPlugin';
-            case '05_analytics':
-                return 'getAnalyticsPlugin';
-            case '06_social':
-                return 'getSocialPlugin';
-            case '07_push':
-                return 'getPushPlugin';
-            case '08_adtracking':
-                return 'getAdTrackingPlugin';
-            case '09_crash':
-                return 'getCrashPlugin';
-            case '10_rec':
-                return 'getRECPlugin';
         }
     },
 
@@ -98,16 +60,14 @@ module.exports = {
         node.parent = cc.director.getScene();
     },
 
-    hasSupport (name) {
+    hasSupport (name, hideTip) {
         let support = this.SupportConfig(name);
         if (!support && support !== undefined) {
-            this.createTips();
+            if (!hideTip) {
+                this.createTips();
+            }
             return false;
         }        
         return true;
-    },
-
-    hasAnySDK (name) {
-        return (typeof anysdk !== 'undefined' && anysdk.agentManager[this.AnySDKConfig(name)]); 
     }
 };
