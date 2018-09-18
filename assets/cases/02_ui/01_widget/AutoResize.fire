@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 16
+        "__id__": 15
       }
     ],
     "_active": true,
@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.7109130859375,
-      "y": 0.7109130859375,
+      "x": 0.5697916666666667,
+      "y": 0.5697916666666667,
       "z": 1
     },
     "_quat": {
@@ -75,17 +75,17 @@
         "__id__": 5
       },
       {
-        "__id__": 8
+        "__id__": 7
       },
       {
-        "__id__": 13
+        "__id__": 12
       }
     ],
     "_active": true,
     "_level": 0,
     "_components": [
       {
-        "__id__": 15
+        "__id__": 14
       }
     ],
     "_prefab": null,
@@ -219,94 +219,24 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Background",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
     },
-    "_children": [],
-    "_active": true,
-    "_level": 0,
-    "_components": [
-      {
-        "__id__": 6
-      }
-    ],
+    "_id": "30d6azR0ohIhYTWH9Gtc6Ct",
     "_prefab": {
-      "__id__": 7
+      "__id__": 6
     },
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 57,
-      "g": 61,
-      "b": 64,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
+    "_name": "Background",
+    "_active": true,
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
       "z": 0
     },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 2,
-      "y": 2,
-      "z": 1
-    },
     "_rotationX": 0,
-    "_rotationY": 0,
-    "_quat": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_zIndex": 0,
-    "groupIndex": 0,
-    "_id": "30d6azR0ohIhYTWH9Gtc6Ct"
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 5
-    },
-    "_enabled": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
-    },
-    "_type": 0,
-    "_sizeMode": 0,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_state": 0,
-    "_atlas": null,
-    "_id": "b381sQnB1J6q0keGHIuN6f"
+    "_rotationY": 0
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -317,7 +247,7 @@
       "__uuid__": "b8392351-be97-4f01-985e-3e7d2118f3c9"
     },
     "fileId": "78fd70+ls5GgJcFkzvLSRk8",
-    "sync": false
+    "sync": true
   },
   {
     "__type__": "cc.Node",
@@ -328,10 +258,10 @@
     },
     "_children": [
       {
-        "__id__": 9
+        "__id__": 8
       },
       {
-        "__id__": 11
+        "__id__": 10
       }
     ],
     "_active": true,
@@ -388,14 +318,14 @@
     "_name": "Top",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 8
+      "__id__": 7
     },
     "_children": [],
     "_active": true,
     "_level": 0,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 9
       }
     ],
     "_prefab": null,
@@ -449,7 +379,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 8
     },
     "_enabled": true,
     "_srcBlendFactor": 770,
@@ -477,14 +407,14 @@
     "_name": "Bottom",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 8
+      "__id__": 7
     },
     "_children": [],
     "_active": true,
     "_level": 0,
     "_components": [
       {
-        "__id__": 12
+        "__id__": 11
       }
     ],
     "_prefab": null,
@@ -538,7 +468,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 11
+      "__id__": 10
     },
     "_enabled": true,
     "_srcBlendFactor": 770,
@@ -573,7 +503,7 @@
     "_level": 0,
     "_components": [
       {
-        "__id__": 14
+        "__id__": 13
       }
     ],
     "_prefab": null,
@@ -627,7 +557,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 13
+      "__id__": 12
     },
     "_enabled": true,
     "_srcBlendFactor": 1,
@@ -677,7 +607,7 @@
     "_level": 0,
     "_components": [
       {
-        "__id__": 17
+        "__id__": 16
       }
     ],
     "_prefab": null,
@@ -731,7 +661,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 16
+      "__id__": 15
     },
     "_enabled": true,
     "text": "## Widget 带自动缩放的对齐使用说明\n\n1. 点击 Top_Sprite, 确认四个方向的对齐选项都已经开启，可以修改每个对齐方向的偏移距离，注意距离的单位是 px（像素）\n2. 点击 Bottom_Sprite，确认左右两个方向的对齐已经开启，可以修改对齐的偏移距离，单位使用 % （百分比）\n3. 修改他们的父节点 Content 的 size 属性，可以看到随着父节点 size 的变化，两个 sprite 的尺寸也会自动变化，使得他们距离屏幕左右两边的距离符合我们设置的要求。注意使用百分比作为偏移距离时，该 Sprite 的边和屏幕对应边的距离会保持在父节点宽度的一定百分比。",
