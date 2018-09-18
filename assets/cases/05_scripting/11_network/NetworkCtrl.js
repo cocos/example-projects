@@ -61,7 +61,7 @@ cc.Class({
 
         // note: In Internet Explorer, the timeout property may be set only after calling the open()
         // method and before calling the send() method.
-        xhr.timeout = 5000;// 5 seconds for timeout
+        xhr.timeout = 10000;// 10 seconds for timeout
 
         xhr.send();
         this._xhrXHR = xhr;
