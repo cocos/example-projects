@@ -9,22 +9,17 @@ cc.Class({
     },
 
     dynamicCreate () {
-        cc.loader.loadRes('dragonBones/NewDragonTest', dragonBones.DragonBonesAsset, this.onComplete.bind(this));
-        cc.loader.loadRes('dragonBones/texture', dragonBones.DragonBonesAtlasAsset, this.onComplete.bind(this));
+        cc.loader.loadRes('dragonBones/NewDragonTest', dragonBones.DragonBonesAsset, (err, res) => {
+            if (err) cc.error(err);
+            this.dragonBone.dragonAsset = res;
+            cc.loader.loadRes('dragonBones/texture', dragonBones.DragonBonesAtlasAsset, this.onComplete.bind(this));
+        });
     },
 
     onComplete (err, res) {
         if (err) cc.error(err);
-        switch (res._name) {
-            case 'NewDragonTest':
-                this.dragonBone.dragonAsset = res;
-                break;
-            case 'texture':
-                this.dragonBone.dragonAtlasAsset = res;
-                this.dragonBone.armatureName = 'armatureName';
-                this.dragonBone.playAnimation('stand', 0);
-                this.dragonBone.timeScale = 1;
-                break;
-        }
+        this.dragonBone.dragonAtlasAsset = res;
+        this.dragonBone.armatureName = 'armatureName';
+        this.dragonBone.playAnimation('stand', 0);
     }
 });
