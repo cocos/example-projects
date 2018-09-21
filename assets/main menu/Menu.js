@@ -15,6 +15,7 @@ cc.Class({
         testList: cc.ScrollView,
         uiCamera: cc.Camera,
         sceneTitle: cc.Label,
+        searchBlock: cc.Node
     },
 
     onLoad: function () {
@@ -25,9 +26,10 @@ cc.Class({
         this.contentPos = null;
         this.btnBack.node.active = false;
         this.loadInstruction(this.currentSceneUrl);
-        this.node.zIndex = 999;
-
+        
+        // keep the node res 
         cc.game.addPersistRootNode(this.testList.node);
+        cc.game.addPersistRootNode(this.searchBlock);
         if (this.testList && this.testList.content) {
             // in main scene
             this.sceneList = this.testList.content.getComponent(SceneList);
@@ -91,7 +93,6 @@ cc.Class({
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
-
 
         this.testList.node.active = false;
 
@@ -207,11 +208,11 @@ cc.Class({
         }
     },
 
-    restart: function () {
+    restart () {
         cc.game.restart();
     },
     
-    gc: function () {
+    gc () {
         cc.sys.garbageCollect();
-    }
+    },
 });
