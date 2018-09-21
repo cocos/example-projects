@@ -5,10 +5,13 @@ cc.Class({
         dragonBone: {
             default: null,
             type: dragonBones.ArmatureDisplay
-        }   
+        }
     },
 
     dynamicCreate () {
+        if (this.dragonBone.dragonAtlasAsset) {
+            return;
+        }
         cc.loader.loadRes('dragonBones/NewDragonTest', dragonBones.DragonBonesAsset, (err, res) => {
             if (err) cc.error(err);
             this.dragonBone.dragonAsset = res;
