@@ -11,6 +11,7 @@ const SceneList = cc.Class({
         initItemCount: 0,
         scrollView: cc.ScrollView,
         bufferZone: 0, // when item is away from bufferZone, we relocate it
+        searchBlock: cc.Node
     },
 
     createItem: function (x, y, name, url) {
@@ -92,6 +93,11 @@ const SceneList = cc.Class({
             item.updateItem (i, y, itemInfo.name, itemInfo.url);
             this.itemList.push(item);
         }
+
+        // get item list in order to check the loadScene condition
+        let searchComp = this.searchBlock.getComponent('SearchBlock');
+        searchComp.init(this.menu);
+        searchComp.setItemList(this.sceneList);
     },
 
     getPositionInView: function (item) { // get item position in scrollview's node space
