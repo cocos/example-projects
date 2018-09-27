@@ -5288,15 +5288,8 @@
    * Module dependencies.
    */
 
-  var global = (function() { return this; })();
+  var global = (function() { return window; })();
 
-  if (CC_WECHATGAME) {
-    if (!global) {
-      cc.error('socket-io doesn\'t support to translate to ES5 mode.');
-      return;
-    }
-  }
-  
   /**
    * WebSocket constructor.
    */
@@ -5434,7 +5427,7 @@
    * "global" scope of the current JS execution.
    */
 
-  module.exports = (function () { return this; })();
+  module.exports = (function () { return window; })();
 
 },{}],40:[function(_dereq_,module,exports){
 
