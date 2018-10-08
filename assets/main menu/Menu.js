@@ -15,6 +15,7 @@ cc.Class({
         testList: cc.ScrollView,
         uiCamera: cc.Camera,
         sceneTitle: cc.Label,
+        searchBlock: cc.Node
     },
 
     onLoad: function () {
@@ -25,8 +26,10 @@ cc.Class({
         this.contentPos = null;
         this.btnBack.node.active = false;
         this.loadInstruction(this.currentSceneUrl);
-        this.node.zIndex = 999;
 
+        this.storage = this.node.getComponent('StorageUtil');
+        // keep the search scene list res
+        cc.game.addPersistRootNode(this.searchBlock);
         cc.game.addPersistRootNode(this.testList.node);
         if (this.testList && this.testList.content) {
             // in main scene
@@ -48,6 +51,11 @@ cc.Class({
         }, this);
 
         cc.director.on(cc.Director.EVENT_AFTER_SCENE_LAUNCH, this._onSceneLaunched, this);
+
+        let url = this.storage.getCurrentScene();
+        if (url) {
+            this.loadScene(url);
+        }
     },
 
     _onSceneLaunched () {
@@ -91,7 +99,8 @@ cc.Class({
     onLoadSceneFinish: function () {
         let url = this.currentSceneUrl;
         this.loadInstruction(url);
-
+        // record the last close scene 
+        this.storage.setCurrentScene(url);
 
         this.testList.node.active = false;
 
@@ -207,11 +216,11 @@ cc.Class({
         }
     },
 
-    restart: function () {
+    restart () {
         cc.game.restart();
     },
     
-    gc: function () {
+    gc () {
         cc.sys.garbageCollect();
-    }
+    },
 });
