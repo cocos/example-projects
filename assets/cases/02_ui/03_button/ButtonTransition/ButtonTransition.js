@@ -16,4 +16,8 @@ cc.Class({
     onSpriteTransition (event) {
         this.btn.transition = cc.Button.Transition.SPRITE;
     },
+
+    onScaleTransition (event) {
+        this.btn.transition = cc.Button.Transition.SCALE;
+    },
 });
