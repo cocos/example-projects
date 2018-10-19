@@ -11,7 +11,7 @@ module.exports = {
             case 'EditBoxTabIndex':     return !cc.sys.isNative;
             case 'OnMultiTouchInput':   return cc.sys.isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
-            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
+            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.ANDROID;
             case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'subpackage':          return (!CC_PREVIEW && cc.sys.platform !== cc.sys.QQ_PLAY);
@@ -39,7 +39,7 @@ module.exports = {
             case 'videoPlayer':
             case 'webview':
                 // 2.0 native still not support the video play feature.
-                return (!cc.sys.isNative && (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+                return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
         }
     },
 
