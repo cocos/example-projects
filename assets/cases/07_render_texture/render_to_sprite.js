@@ -1,13 +1,3 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
@@ -48,9 +38,11 @@ cc.Class({
             let data = this.renderTexture.readPixels();
             let width = this.renderTexture.width;
             let height = this.renderTexture.height;
+            let picData = this.filpYImage(data, width, height);
+
             let filePath = jsb.fileUtils.getWritablePath() + 'render_to_sprite_image.png';
 
-            let success = jsb.saveImageData(data, width, height, filePath);
+            let success = jsb.saveImageData(picData, width, height, filePath)
             if (success) {
                 cc.log("save image data success, file: " + filePath);
             }
@@ -62,4 +54,20 @@ cc.Class({
             cc.log("saveImage, only supported on native platform.");
         }
     },
+    // This is a temporary solution
+    filpYImage (data, width, height) {
+        // create the data array
+        let picData = new Uint8Array(width * height * 4);
+        let rowBytes = width * 4;
+        let reStart = row * width * 4;
+        for (let row = 0; row < height; row++) {
+            let srow = height - 1 - row;
+            let start = srow * width * 4;
+            // save the piexls data
+            for (let i = 0; i < rowBytes; i++) {
+                picData[reStart + i] = data[start + i];
+            }
+        }    
+        return picData;
+    }
 });

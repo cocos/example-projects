@@ -16,7 +16,7 @@ cc.Class({
         } else if (event === cc.WebView.EventType.ERROR) {
             loadStatus = ' load error!';
         }
-        this.labelStatus.string = this.url.string + loadStatus;
+        this.labelStatus.string = this.webview.url + loadStatus;
     },
 
     visitURL: function () {
