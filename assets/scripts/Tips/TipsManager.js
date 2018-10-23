@@ -18,7 +18,7 @@ module.exports = {
             case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':   return cc.sys.isNative;
-
+            case 'IOS_SafeArea':        return cc.sys.isMobile && cc.sys.os === cc.sys.OS_IOS;
             // 不支持 QQ_PLAY，WECHAT_GAME 平台
             case 'render_to_sprite':
                 return (cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
