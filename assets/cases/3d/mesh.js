@@ -31,6 +31,9 @@ cc.Class({
             cc.v3(-100, 100, -100), cc.v3(-100, -100, -100), cc.v3(100, 100, -100), cc.v3(100, -100, -100)
         ]);
 
+        mesh._minPos = cc.v3(-100, -100, -100);
+        mesh._maxPos = cc.v3(100, 100, 100);
+
         this.updateColor(cc.Color.RED, cc.Color.BLUE);
 
         mesh.setIndices([
@@ -47,9 +50,6 @@ cc.Class({
             renderer = this.node.addComponent(cc.MeshRenderer);
         }
         renderer.mesh = mesh;
-
-        this.node.eulerAngles = cc.v3(-45, -45, 0);
-        this.node.is3DNode = true;
     },
 
     updateColor (c1, c2) {
