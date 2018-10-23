@@ -47,12 +47,12 @@ module.exports = {
         if (this.tipsPrefab) return;
 
         cc.loader.loadRes('tips/Tips', (err, prefab) => {
-            this.tispPrefab = prefab;
+            this.tipsPrefab = prefab;
         });
     },
 
     createTips (content) {
-        let node = cc.instantiate(this.tispPrefab);
+        let node = cc.instantiate(this.tipsPrefab);
         let tipsCtrl = node.getComponent('TipsCtrl');
         if (content) {
             tipsCtrl.setContent(content);
