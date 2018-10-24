@@ -5,11 +5,13 @@ cc.Class({
         camera: {
             default: null,
             type: cc.Camera
-        }
+        },
+        label: cc.Label
     },
     
     start () {
         let texture = new cc.RenderTexture();
+        this.label.string = '';
         let gl = cc.game._renderContext;
         texture.initWithSize(cc.visibleRect.width, cc.visibleRect.height, gl.STENCIL_INDEX8);
         this.camera.targetTexture = texture;
