@@ -22,6 +22,8 @@ module.exports = {
             // 不支持 QQ_PLAY，WECHAT_GAME 平台
             case 'render_to_sprite':
                 return (cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+            case 'capture_to_wecaht':
+                return  cc.sys.platform === cc.sys.WECHAT_GAME;
 
             // 只支持 RENDER_TYPE_WEBGL
             case 'MotionStreak':

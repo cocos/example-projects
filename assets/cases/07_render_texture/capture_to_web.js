@@ -7,11 +7,7 @@ cc.Class({
             type: cc.Camera
         }
     },
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
+    
     start () {
         let texture = new cc.RenderTexture();
         let gl = cc.game._renderContext;
@@ -43,8 +39,8 @@ cc.Class({
 
             ctx.putImageData(imageData, 0, row);
         }
-
-        var dataURL = canvas.toDataURL("image/jpeg");
+        // return the type and dataUrl
+        var dataURL = canvas.toDataURL("image/png");
         var img = document.createElement("img");
         img.src = dataURL;
         return img;
@@ -90,7 +86,17 @@ cc.Class({
         node.on(cc.Node.EventType.TOUCH_START, () => {
             node.parent = null;
         });
+        // download the pic as the file to your local
+        function saveFile (fileName, dataUrl) {
+            let a = document.createElement('a');
+            a.href = dataUrl;
+            a.download = fileName;
+            const event = document.createEvent('MouseEvents');
+            event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            a.dispatchEvent(event);
+        }
+
+        saveFile('capture_to_web.png', img.src);
     }
 
-    // update (dt) {},
 });
