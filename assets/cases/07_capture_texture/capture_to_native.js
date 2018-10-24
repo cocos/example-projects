@@ -59,8 +59,8 @@ cc.Class({
         // create the data array
         let picData = new Uint8Array(width * height * 4);
         let rowBytes = width * 4;
-        let reStart = row * width * 4;
         for (let row = 0; row < height; row++) {
+            let reStart = row * width * 4;
             let srow = height - 1 - row;
             let start = srow * width * 4;
             // save the piexls data
