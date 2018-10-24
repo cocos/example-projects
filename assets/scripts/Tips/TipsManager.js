@@ -20,10 +20,12 @@ module.exports = {
             case 'downloader-native':   return cc.sys.isNative;
             case 'IOS_SafeArea':        return cc.sys.isMobile && cc.sys.os === cc.sys.OS_IOS;
             // 不支持 QQ_PLAY，WECHAT_GAME 平台
-            case 'render_to_sprite':
-                return (cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
-            case 'capture_to_wecaht':
+            case 'capture_to_native':
+                return (cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.isNative);
+            case 'capture_to_wechat':
                 return  cc.sys.platform === cc.sys.WECHAT_GAME;
+            case 'capture_to_web':
+                return cc.sys.isBrowser;
 
             // 只支持 RENDER_TYPE_WEBGL
             case 'MotionStreak':
