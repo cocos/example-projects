@@ -17,8 +17,7 @@ cc.Class({
     },
 
     onToRecoverClick: function () {
-        this.rotationToNode.rotationX = 0;
-        this.rotationToNode.rotationY = 0;
+        this.rotationToNode.eulerAngles = cc.v3();
     },
 
     onByClick: function () {
@@ -32,8 +31,7 @@ cc.Class({
     },
 
     onByRecoverClick: function () {
-        this.rotateByNode.rotationX = 0;
-        this.rotateByNode.rotationY = 0;
+        this.rotateByNode.eulerAngles = cc.v3();
     }
 
 });
