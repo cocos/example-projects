@@ -79,13 +79,20 @@ cc.Class({
         if (this._isLoadingScene) {
             return;
         }
+
+        let result = cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
+        if (!result) {
+            this.storage.setCurrentScene('');
+            return;
+        }
+
         this._isLoadingScene = true;
 
         this.showReadme(null, false);
         this.contentPos = this.testList.getContentPosition();
 
         this.currentSceneUrl = url;
-        cc.director.loadScene(url, this.onLoadSceneFinish.bind(this));
+
 
         if (typeof cocosAnalytics !== 'undefined' && cocosAnalytics.isInited && cocosAnalytics.isInited()) {
             // Cocos Analytics service, to learn more please visit:
