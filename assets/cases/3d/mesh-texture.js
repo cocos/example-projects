@@ -23,9 +23,9 @@ cc.Class({
         
         this.vertexes = [cc.v2(-100, 100), cc.v2(-100, -100), cc.v2(100, 100), cc.v2(100, -100)];
 
-        mesh.setVertexes(gfx.ATTR_POSITION, this.vertexes);
+        mesh.setVertices(gfx.ATTR_POSITION, this.vertexes);
 
-        mesh.setVertexes(gfx.ATTR_UV0, [
+        mesh.setVertices(gfx.ATTR_UV0, [
             cc.v2(0,0), cc.v2(0, 1), cc.v2(1, 0), cc.v2(1, 1),
         ]);
 

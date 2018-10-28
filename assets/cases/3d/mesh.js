@@ -26,7 +26,7 @@ cc.Class({
         mesh.init(vfmtPosColor, 8, true);
         this.mesh = mesh;
         
-        mesh.setVertexes(gfx.ATTR_POSITION, [
+        mesh.setVertices(gfx.ATTR_POSITION, [
             cc.v3(-100, 100, 100), cc.v3(-100, -100, 100), cc.v3(100, 100, 100), cc.v3(100, -100, 100),
             cc.v3(-100, 100, -100), cc.v3(-100, -100, -100), cc.v3(100, 100, -100), cc.v3(100, -100, -100)
         ]);
@@ -53,7 +53,7 @@ cc.Class({
     },
 
     updateColor (c1, c2) {
-        this.mesh.setVertexes(gfx.ATTR_COLOR, [
+        this.mesh.setVertices(gfx.ATTR_COLOR, [
             c1, c1, c1, c1,
             c2, c2, c2, c2,
         ]);
