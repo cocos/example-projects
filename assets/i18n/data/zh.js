@@ -91,6 +91,7 @@ module.exports = {
     "cases/02_ui/03_button/ButtonInteractable.fire.23": "交互(interactable): false",
     "cases/02_ui/03_button/ButtonInteractable.js.1": "交互(interactable): ",
     "cases/02_ui/03_button/ButtonInteractable.js.2": "交互(interactable): ",
+    "cases/02_ui/03_button/ButtonSizeMode.fire": "不同的按钮的响应区域",
     "cases/02_ui/03_button/SimpleButton.fire.6": "哪个按钮被点击？",
     "cases/02_ui/05_scrollView/Item.js.1": "Tmpl#",
     "cases/02_ui/04_progressbar/progressbar.fire.7": "水平进度条，进度 0.3",
