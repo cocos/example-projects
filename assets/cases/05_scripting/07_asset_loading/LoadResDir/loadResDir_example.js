@@ -29,11 +29,6 @@ cc.Class({
         this.scrollView.content.removeAllChildren(true);
         for (var i = 0; i < this._assets.length; ++i) {
             var asset = this._assets[i];
-            // 目前载入 plist 后的 Object 资源没有包含 _uuid 所以无法 release（PS：1.5 版本会加 _uuid）
-            // 暂时过滤 Object 并且没有 _uuid 类型的资源
-            if (typeof asset === 'object' && !asset._uuid) {
-                continue;
-            }
             // 需要释放所有资源依赖
             var deps = cc.loader.getDependsRecursively(asset);
             cc.loader.release(deps);
