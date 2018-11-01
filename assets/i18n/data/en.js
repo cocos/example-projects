@@ -90,6 +90,7 @@ module.exports = {
     "cases/02_ui/03_button/ButtonInteractable.fire.23": "interactable: false",
     "cases/02_ui/03_button/ButtonInteractable.js.1": "interactable: ",
     "cases/02_ui/03_button/ButtonInteractable.js.2": "interactable: ",
+    "cases/02_ui/03_button/ButtonSizeMode.fire": "Buttons with different hit areas",
     "cases/02_ui/03_button/SimpleButton.fire.6": "Which button is clicked?",
     "cases/02_ui/04_progressbar/progressbar.fire.7": "Horizontal bar with progress 0.3",
     "cases/02_ui/04_progressbar/progressbar.fire.11": "Horizontal bar reverse with progress 1.0",
