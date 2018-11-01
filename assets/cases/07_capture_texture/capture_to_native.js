@@ -1,43 +1,22 @@
 cc.Class({
-    extends: cc.Component,
-
-    properties: {
-        sprite: {
-            default: null,
-            type: cc.Sprite
-        },
-
-        camera: {
-            default: null,
-            type: cc.Camera
-        }
-    },
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
+    extends: require('./textureRenderUtils'),
 
     start () {
-        let texture = new cc.RenderTexture();
-        texture.initWithSize(cc.visibleRect.width, cc.visibleRect.height);
-
-        let spriteFrame = new cc.SpriteFrame();
-        spriteFrame.setTexture(texture)
-        this.sprite.spriteFrame = spriteFrame;
-        
-        this.camera.targetTexture = texture;
-
-        this.renderTexture = texture;
+        this.init();
     },
 
-    // update (dt) {},
+    captureAndShow () {
+        this.createSprite();
+        let img = this.initImage();
+        this.showSprite(img);
+        this.saveFile();
+    },
 
-    saveImage () {
+    saveFile () {
         if (CC_JSB) {
-
-            let data = this.renderTexture.readPixels();
-            let width = this.renderTexture.width;
-            let height = this.renderTexture.height;
+            let data = this.texture.readPixels();
+            let width = this.texture.width;
+            let height = this.texture.height;
             let picData = this.filpYImage(data, width, height);
 
             let filePath = jsb.fileUtils.getWritablePath() + 'render_to_sprite_image.png';
@@ -60,14 +39,14 @@ cc.Class({
         let picData = new Uint8Array(width * height * 4);
         let rowBytes = width * 4;
         for (let row = 0; row < height; row++) {
-            let reStart = row * width * 4;
             let srow = height - 1 - row;
             let start = srow * width * 4;
+            let reStart = row * width * 4;
             // save the piexls data
             for (let i = 0; i < rowBytes; i++) {
                 picData[reStart + i] = data[start + i];
             }
         }    
         return picData;
-    }
-});
+    }       
+}); 
