@@ -140,7 +140,2595 @@
       "uuid": "c62b6641-8bf5-4f48-852f-8ccbae162e06",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
-      "content": "[\n  {\n    \"__type__\": \"cc.Prefab\",\n    \"_name\": \"Drone\",\n    \"_objFlags\": 0,\n    \"_native\": \"\",\n    \"data\": {\n      \"__id__\": 1\n    },\n    \"optimizationPolicy\": 0,\n    \"asyncLoadAssets\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"RootNode\",\n    \"_objFlags\": 0,\n    \"_parent\": null,\n    \"_children\": [\n      {\n        \"__id__\": 2\n      },\n      {\n        \"__id__\": 5\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 0,\n    \"_components\": [\n      {\n        \"__id__\": 76\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 77\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0,\n      \"y\": 0,\n      \"z\": 0\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 200,\n      \"y\": 200,\n      \"z\": 200\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0,\n      \"y\": 0,\n      \"z\": 0,\n      \"w\": 1\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"droid\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 1\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 1,\n    \"_components\": [\n      {\n        \"__id__\": 3\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 4\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0,\n      \"y\": 0,\n      \"z\": 1.11820563919451e-9\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -0.70710676908493,\n      \"y\": 0,\n      \"z\": 0,\n      \"w\": 0.70710676908493\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.SkinnedMeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 2\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"fcba6c69-2fa6-423c-8752-a4e0aafb8915\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_skeleton\": {\n      \"__uuid__\": \"3b8b60dd-c58c-4f2c-b757-48819950a0a0\"\n    },\n    \"_rootBone\": {\n      \"__id__\": 1\n    },\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"05N+AhgOxBXZUyl9z71EFq\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Body\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 1\n    },\n    \"_children\": [\n      {\n        \"__id__\": 6\n      },\n      {\n        \"__id__\": 12\n      },\n      {\n        \"__id__\": 14\n      },\n      {\n        \"__id__\": 16\n      },\n      {\n        \"__id__\": 18\n      },\n      {\n        \"__id__\": 24\n      },\n      {\n        \"__id__\": 41\n      },\n      {\n        \"__id__\": 58\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 1,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 75\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0,\n      \"y\": 0.899999976158142,\n      \"z\": 3.93402466158932e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0.70710676908493,\n      \"y\": -4.21608215006586e-9,\n      \"z\": -0.70710676908493,\n      \"w\": -4.21608215006586e-9\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"ArmL1\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [\n      {\n        \"__id__\": 7\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 11\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 3.81469718035987e-8,\n      \"y\": 0.0140554048120975,\n      \"z\": 0.591644406318665\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -0.242280721664429,\n      \"y\": -0.664303839206696,\n      \"z\": 0.242280870676041,\n      \"w\": 0.664304435253143\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"ArmL2\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 6\n    },\n    \"_children\": [\n      {\n        \"__id__\": 8\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 10\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.525458455085754,\n      \"y\": 1.52587887214395e-7,\n      \"z\": 7.6294014661471e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 4.37608989045657e-8,\n      \"y\": 7.54691953375186e-8,\n      \"z\": -0.000656187650747597,\n      \"w\": 0.999999761581421\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"PinceR\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 7\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 4,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 9\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.548488318920135,\n      \"y\": -0.0752153769135475,\n      \"z\": 4.19616753788432e-7\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -1.94707226341961e-7,\n      \"y\": -4.37113634177422e-8,\n      \"z\": 7.45057988638109e-8,\n      \"w\": 1\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"1d7Wpp02RELZHDIvRG2zcu\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"8awaGMWxFN9JqpVdMzJNUN\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"effjrA4s1ItI4TmFwzUqNv\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Flap3\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 13\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": -0.466148316860199,\n      \"y\": 0.269256442785263,\n      \"z\": -1.90734880334276e-7\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0.49999937415123,\n      \"y\": 0.499999344348907,\n      \"z\": 0.500000596046448,\n      \"w\": 0.500000655651093\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"95q3TTBghDeLYapemVdpUN\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Flap2\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 15\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.233074218034744,\n      \"y\": 0.269256502389908,\n      \"z\": -0.4036965072155\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0.68301248550415,\n      \"y\": 0.683012425899506,\n      \"z\": 0.183013632893562,\n      \"w\": 0.183013647794724\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"d8G5zX07NOdJSVZzcHunXL\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Flap1\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 17\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.233074218034744,\n      \"y\": 0.269256442785263,\n      \"z\": 0.403696209192276\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -0.353553146123886,\n      \"y\": -0.353553116321564,\n      \"z\": 0.612372577190399,\n      \"w\": 0.612372636795044\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"0aQJwz02ZJvY/m4JQYza5Y\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"ArmR1\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [\n      {\n        \"__id__\": 19\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 23\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": -3.81469718035987e-8,\n      \"y\": 0.0140555566176772,\n      \"z\": -0.591644287109375\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -0.664304137229919,\n      \"y\": -0.242280572652817,\n      \"z\": 0.664304196834564,\n      \"w\": 0.242280960083008\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"ArmR2\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 18\n    },\n    \"_children\": [\n      {\n        \"__id__\": 20\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 22\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.52545827627182,\n      \"y\": -1.52587887214395e-7,\n      \"z\": 4.42939551703603e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -5.29482366733512e-23,\n      \"y\": 1.32001428445562e-23,\n      \"z\": 0.000656291958875954,\n      \"w\": 0.999999761581421\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"PinceL\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 19\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 4,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 21\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.548488438129425,\n      \"y\": 0.0752147659659386,\n      \"z\": 3.81469362764619e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -2.38418579101562e-7,\n      \"y\": -2.38418579101562e-7,\n      \"z\": -5.6846020946022e-14,\n      \"w\": 1\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"10qY2YRNxI/rdP/ZGgUv5C\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"322wki8WBDI4mreDVEOtAu\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"60CIrar4RNlJrE2D/60agH\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Fire\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [\n      {\n        \"__id__\": 25\n      },\n      {\n        \"__id__\": 28\n      },\n      {\n        \"__id__\": 31\n      },\n      {\n        \"__id__\": 34\n      },\n      {\n        \"__id__\": 37\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 40\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 5.57299806303035e-8,\n      \"y\": 0.650990903377533,\n      \"z\": -3.9318901912111e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.798315584659576,\n      \"y\": 0.776472330093384,\n      \"z\": 0.798315465450287\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0.707106828689575,\n      \"y\": 1.84536617098274e-7,\n      \"z\": -0.70710676908493,\n      \"w\": 1.84536617098274e-7\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone1\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 24\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 26\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 27\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20689119096096e-8,\n      \"y\": -0.105553910136223,\n      \"z\": -9.09494681444138e-15\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -2.5121481026587e-15,\n      \"y\": -0.707106649875641,\n      \"z\": -2.51214725562575e-15,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 25\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"e2a1592f-fcb6-4d4d-a0cb-c10a0d3b1811\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"7afFkqvwVAvo8hEcjfwnOw\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone2\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 24\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 29\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 30\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20689119096096e-8,\n      \"y\": -0.105553910136223,\n      \"z\": -9.09494681444138e-15\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -2.5121481026587e-15,\n      \"y\": -0.707106649875641,\n      \"z\": -2.51214725562575e-15,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 28\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"0430e0b1-7161-4abf-996d-de6d82419088\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"82L4lHeM5L4owCmSL2LZrD\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone3\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 24\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 32\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 33\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20689048041822e-8,\n      \"y\": -0.567895770072937,\n      \"z\": 5.51154428762857e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.448606133460999,\n      \"y\": 1,\n      \"z\": 0.448606133460999\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -1.21894639163331e-24,\n      \"y\": -0.707106649875641,\n      \"z\": -1.21894599720286e-24,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 31\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"971d9a79-7a00-4ece-9daf-e556f5f16154\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"afDUeg0q5OTKVNsKF/MAqZ\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone4\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 24\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 35\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 36\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20689119096096e-8,\n      \"y\": -0.105553910136223,\n      \"z\": -9.09494681444138e-15\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -2.5121481026587e-15,\n      \"y\": -0.707106649875641,\n      \"z\": -2.51214725562575e-15,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 34\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"f692527d-4027-4255-b900-5f80c65d429f\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"da0V3R9ONJzZQwIitglMRi\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"ConeBleu\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 24\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 38\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 39\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20689119096096e-8,\n      \"y\": -0.105553910136223,\n      \"z\": -9.09494681444138e-15\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1.0453884601593,\n      \"y\": 1,\n      \"z\": 1.0453884601593\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -1.20153804677862e-15,\n      \"y\": -0.707106649875641,\n      \"z\": -1.20153772914126e-15,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 37\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"3c773963-21fb-4e61-b929-2ee9c5c7a65c\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"74f4D1m2BOvoe/nzYjbt+s\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"1fLjD/gMFA2ruhiOfNKubF\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"FireBis\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [\n      {\n        \"__id__\": 42\n      },\n      {\n        \"__id__\": 45\n      },\n      {\n        \"__id__\": 48\n      },\n      {\n        \"__id__\": 51\n      },\n      {\n        \"__id__\": 54\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 57\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 9.51436760487923e-8,\n      \"y\": 0.613844811916351,\n      \"z\": -3.7917978090718e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.443731486797333,\n      \"y\": 0.776472330093384,\n      \"z\": 0.443731278181076\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0.573576271533966,\n      \"y\": 2.82900316506129e-7,\n      \"z\": 0.819152176380157,\n      \"w\": -3.69959934687358e-7\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"ConeBleu001\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 41\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 43\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 44\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688941460412e-8,\n      \"y\": -0.105553895235062,\n      \"z\": 7.2759574515531e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1.0453884601593,\n      \"y\": 1,\n      \"z\": 1.0453884601593\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 4.80615345766389e-15,\n      \"y\": -0.707106649875641,\n      \"z\": 4.80615176359799e-15,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 42\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"b37e6b40-3e66-40c8-8229-695191789cdf\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"1dFBr3rQxBVKrz0/2X9F7u\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone005\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 41\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 46\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 47\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688941460412e-8,\n      \"y\": -0.105553895235062,\n      \"z\": 7.2759574515531e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0,\n      \"y\": -0.707106649875641,\n      \"z\": 0,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 45\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"774b1497-d382-4241-b19f-c81aa69382a0\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"1fkJJdWLZLzJ4zQ4aw2JJj\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone006\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 41\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 49\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 50\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688941460412e-8,\n      \"y\": -0.567895710468292,\n      \"z\": 5.51155601158371e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.448606133460999,\n      \"y\": 1,\n      \"z\": 0.448606133460999\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 1.04306218114198e-23,\n      \"y\": -0.707106649875641,\n      \"z\": 1.04306186559762e-23,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 48\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"062d5bf3-2055-416e-b8da-7590a92137c5\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"9fxZx0KC5EloOatbVA0ZN/\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone007\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 41\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 52\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 53\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688941460412e-8,\n      \"y\": -0.105553895235062,\n      \"z\": 7.2759574515531e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0,\n      \"y\": -0.707106649875641,\n      \"z\": 0,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 51\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"da629da7-466e-4235-b9a9-c1ee943bb98f\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"45Upq8SFxMUL0z4mah1gxH\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone008\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 41\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 55\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 56\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688941460412e-8,\n      \"y\": -0.105553895235062,\n      \"z\": 7.2759574515531e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0,\n      \"y\": -0.707106649875641,\n      \"z\": 0,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 54\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"b733605b-d9fc-4b35-beb2-19c096f0489a\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"7c3Y1rYb9ETousEeAuqWEu\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"c1BVsI3JFIYoH2D3+pR6t1\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"FireTert\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 5\n    },\n    \"_children\": [\n      {\n        \"__id__\": 59\n      },\n      {\n        \"__id__\": 62\n      },\n      {\n        \"__id__\": 65\n      },\n      {\n        \"__id__\": 68\n      },\n      {\n        \"__id__\": 71\n      }\n    ],\n    \"_active\": true,\n    \"_level\": 2,\n    \"_components\": [],\n    \"_prefab\": {\n      \"__id__\": 74\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 255,\n      \"b\": 255,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 9.51436760487923e-8,\n      \"y\": 0.613844811916351,\n      \"z\": -3.7917978090718e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.174983397126198,\n      \"y\": 0.835750341415405,\n      \"z\": 0.174983292818069\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": 0.0871556550264359,\n      \"y\": 9.69826245977856e-8,\n      \"z\": 0.99619472026825,\n      \"w\": -0.00000101942816854717\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"ConeBleu002\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 58\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 60\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 61\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688586189044e-8,\n      \"y\": -0.105553895235062,\n      \"z\": -1.81898936288828e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1.0453884601593,\n      \"y\": 1,\n      \"z\": 1.0453884601593\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -9.61230522126188e-15,\n      \"y\": -0.707106649875641,\n      \"z\": -9.61230268016304e-15,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 59\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"54214dd7-6214-4678-896e-c6e562c61a67\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"d0ro4MnMRLJICqbkAIgB5z\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone009\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 58\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 63\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 64\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688586189044e-8,\n      \"y\": -0.105553895235062,\n      \"z\": -1.81898936288828e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -1.00485932576677e-14,\n      \"y\": -0.707106649875641,\n      \"z\": -1.00485898695359e-14,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 62\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"7af28154-4e6e-494b-a3e4-ef6e1ccfb235\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"e0V44b+RpNcYThpUWYOVll\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone010\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 58\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 66\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 67\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688586189044e-8,\n      \"y\": -0.105553895235062,\n      \"z\": -1.81898936288828e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -1.00485932576677e-14,\n      \"y\": -0.707106649875641,\n      \"z\": -1.00485898695359e-14,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 65\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"0138cd90-f9e8-4014-bdc3-a39bde276f94\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"64RK7GdcVDj5T55KyKOrbt\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone011\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 58\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 69\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 70\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688230917676e-8,\n      \"y\": -0.567895770072937,\n      \"z\": 5.51154322181446e-8\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 0.448606133460999,\n      \"y\": 1,\n      \"z\": 0.448606133460999\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -1.11997940422152e-14,\n      \"y\": -0.707106649875641,\n      \"z\": -1.11997906540834e-14,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 68\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"bb20e8f1-eb7f-42ef-a473-b8f24b19af63\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"07VAFFClJCz4UkpgYKSCTQ\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.Node\",\n    \"_name\": \"Cone012\",\n    \"_objFlags\": 0,\n    \"_parent\": {\n      \"__id__\": 58\n    },\n    \"_children\": [],\n    \"_active\": true,\n    \"_level\": 3,\n    \"_components\": [\n      {\n        \"__id__\": 72\n      }\n    ],\n    \"_prefab\": {\n      \"__id__\": 73\n    },\n    \"_opacity\": 255,\n    \"_color\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 149,\n      \"g\": 149,\n      \"b\": 149,\n      \"a\": 255\n    },\n    \"_contentSize\": {\n      \"__type__\": \"cc.Size\",\n      \"width\": 0,\n      \"height\": 0\n    },\n    \"_anchorPoint\": {\n      \"__type__\": \"cc.Vec2\",\n      \"x\": 0.5,\n      \"y\": 0.5\n    },\n    \"_position\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 4.20688586189044e-8,\n      \"y\": -0.105553895235062,\n      \"z\": -1.81898936288828e-14\n    },\n    \"_scale\": {\n      \"__type__\": \"cc.Vec3\",\n      \"x\": 1,\n      \"y\": 1,\n      \"z\": 1\n    },\n    \"_quat\": {\n      \"__type__\": \"cc.Quat\",\n      \"x\": -1.00485932576677e-14,\n      \"y\": -0.707106649875641,\n      \"z\": -1.00485898695359e-14,\n      \"w\": 0.70710688829422\n    },\n    \"_skewX\": 0,\n    \"_skewY\": 0,\n    \"_zIndex\": 0,\n    \"_is3DNode\": true,\n    \"groupIndex\": 0,\n    \"showInEditor\": true,\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.MeshRenderer\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 71\n    },\n    \"_enabled\": true,\n    \"_srcBlendFactor\": 770,\n    \"_dstBlendFactor\": 771,\n    \"_mesh\": {\n      \"__uuid__\": \"ede6415d-e893-416f-89c6-c9185d472d56\"\n    },\n    \"textures\": [\n      {\n        \"__uuid__\": \"0275e94c-56a7-410f-bd1a-fc7483f7d14a\"\n      }\n    ],\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"870zWHtn1KRJtg4K3zDEyq\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"32NA1PA1FLi55UCyiL7ML6\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"c85rN9YxZG3IhMXn3DSBq8\",\n    \"sync\": false\n  },\n  {\n    \"__type__\": \"cc.SkeletonAnimation\",\n    \"_name\": \"\",\n    \"_objFlags\": 0,\n    \"node\": {\n      \"__id__\": 1\n    },\n    \"_enabled\": true,\n    \"_defaultClip\": null,\n    \"_clips\": [],\n    \"playOnLoad\": false,\n    \"_model\": {\n      \"__uuid__\": \"aab87da7-d54e-47eb-a942-a59402cd3e9c\"\n    },\n    \"_id\": \"\"\n  },\n  {\n    \"__type__\": \"cc.PrefabInfo\",\n    \"root\": {\n      \"__id__\": 1\n    },\n    \"asset\": {\n      \"__id__\": 0\n    },\n    \"fileId\": \"baP0GhYWJFgrNuXvrfZ2K+\",\n    \"sync\": false\n  }\n]",
+      "readonly": true,
+      "content": [
+        {
+          "__type__": "cc.Prefab",
+          "_name": "Drone",
+          "_objFlags": 0,
+          "_native": "",
+          "data": {
+            "__id__": 1
+          },
+          "optimizationPolicy": 0,
+          "asyncLoadAssets": false,
+          "readonly": true
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "RootNode",
+          "_objFlags": 0,
+          "_parent": null,
+          "_children": [
+            {
+              "__id__": 2
+            },
+            {
+              "__id__": 5
+            }
+          ],
+          "_active": true,
+          "_level": 0,
+          "_components": [
+            {
+              "__id__": 76
+            }
+          ],
+          "_prefab": {
+            "__id__": 77
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 200,
+            "y": 200,
+            "z": 200
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "droid",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 1
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 1,
+          "_components": [
+            {
+              "__id__": 3
+            }
+          ],
+          "_prefab": {
+            "__id__": 4
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0,
+            "y": 0,
+            "z": 1.11820563919451e-9
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -0.70710676908493,
+            "y": 0,
+            "z": 0,
+            "w": 0.70710676908493
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.SkinnedMeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 2
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "fcba6c69-2fa6-423c-8752-a4e0aafb8915"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_skeleton": {
+            "__uuid__": "3b8b60dd-c58c-4f2c-b757-48819950a0a0"
+          },
+          "_rootBone": {
+            "__id__": 1
+          },
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "droid",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Body",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 1
+          },
+          "_children": [
+            {
+              "__id__": 6
+            },
+            {
+              "__id__": 12
+            },
+            {
+              "__id__": 14
+            },
+            {
+              "__id__": 16
+            },
+            {
+              "__id__": 18
+            },
+            {
+              "__id__": 24
+            },
+            {
+              "__id__": 41
+            },
+            {
+              "__id__": 58
+            }
+          ],
+          "_active": true,
+          "_level": 1,
+          "_components": [],
+          "_prefab": {
+            "__id__": 75
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0,
+            "y": 0.899999976158142,
+            "z": 3.93402466158932e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0.70710676908493,
+            "y": -4.21608215006586e-9,
+            "z": -0.70710676908493,
+            "w": -4.21608215006586e-9
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "ArmL1",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [
+            {
+              "__id__": 7
+            }
+          ],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 11
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 3.81469718035987e-8,
+            "y": 0.0140554048120975,
+            "z": 0.591644406318665
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -0.242280721664429,
+            "y": -0.664303839206696,
+            "z": 0.242280870676041,
+            "w": 0.664304435253143
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "ArmL2",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 6
+          },
+          "_children": [
+            {
+              "__id__": 8
+            }
+          ],
+          "_active": true,
+          "_level": 3,
+          "_components": [],
+          "_prefab": {
+            "__id__": 10
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0.525458455085754,
+            "y": 1.52587887214395e-7,
+            "z": 7.6294014661471e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 4.37608989045657e-8,
+            "y": 7.54691953375186e-8,
+            "z": -0.000656187650747597,
+            "w": 0.999999761581421
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "PinceR",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 7
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 4,
+          "_components": [],
+          "_prefab": {
+            "__id__": 9
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0.548488318920135,
+            "y": -0.0752153769135475,
+            "z": 4.19616753788432e-7
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -1.94707226341961e-7,
+            "y": -4.37113634177422e-8,
+            "z": 7.45057988638109e-8,
+            "w": 1
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/ArmL1/ArmL2/PinceR",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/ArmL1/ArmL2",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/ArmL1",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Flap3",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 13
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": -0.466148316860199,
+            "y": 0.269256442785263,
+            "z": -1.90734880334276e-7
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0.49999937415123,
+            "y": 0.499999344348907,
+            "z": 0.500000596046448,
+            "w": 0.500000655651093
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Flap3",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Flap2",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 15
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0.233074218034744,
+            "y": 0.269256502389908,
+            "z": -0.4036965072155
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0.68301248550415,
+            "y": 0.683012425899506,
+            "z": 0.183013632893562,
+            "w": 0.183013647794724
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Flap2",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Flap1",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 17
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0.233074218034744,
+            "y": 0.269256442785263,
+            "z": 0.403696209192276
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -0.353553146123886,
+            "y": -0.353553116321564,
+            "z": 0.612372577190399,
+            "w": 0.612372636795044
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Flap1",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "ArmR1",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [
+            {
+              "__id__": 19
+            }
+          ],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 23
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": -3.81469718035987e-8,
+            "y": 0.0140555566176772,
+            "z": -0.591644287109375
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -0.664304137229919,
+            "y": -0.242280572652817,
+            "z": 0.664304196834564,
+            "w": 0.242280960083008
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "ArmR2",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 18
+          },
+          "_children": [
+            {
+              "__id__": 20
+            }
+          ],
+          "_active": true,
+          "_level": 3,
+          "_components": [],
+          "_prefab": {
+            "__id__": 22
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0.52545827627182,
+            "y": -1.52587887214395e-7,
+            "z": 4.42939551703603e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -5.29482366733512e-23,
+            "y": 1.32001428445562e-23,
+            "z": 0.000656291958875954,
+            "w": 0.999999761581421
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "PinceL",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 19
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 4,
+          "_components": [],
+          "_prefab": {
+            "__id__": 21
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 0.548488438129425,
+            "y": 0.0752147659659386,
+            "z": 3.81469362764619e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -2.38418579101562e-7,
+            "y": -2.38418579101562e-7,
+            "z": -5.6846020946022e-14,
+            "w": 1
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/ArmR1/ArmR2/PinceL",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/ArmR1/ArmR2",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/ArmR1",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Fire",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [
+            {
+              "__id__": 25
+            },
+            {
+              "__id__": 28
+            },
+            {
+              "__id__": 31
+            },
+            {
+              "__id__": 34
+            },
+            {
+              "__id__": 37
+            }
+          ],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 40
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 5.57299806303035e-8,
+            "y": 0.650990903377533,
+            "z": -3.9318901912111e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 0.798315584659576,
+            "y": 0.776472330093384,
+            "z": 0.798315465450287
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0.707106828689575,
+            "y": 1.84536617098274e-7,
+            "z": -0.70710676908493,
+            "w": 1.84536617098274e-7
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone1",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 24
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 26
+            }
+          ],
+          "_prefab": {
+            "__id__": 27
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20689119096096e-8,
+            "y": -0.105553910136223,
+            "z": -9.09494681444138e-15
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -2.5121481026587e-15,
+            "y": -0.707106649875641,
+            "z": -2.51214725562575e-15,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 25
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "e2a1592f-fcb6-4d4d-a0cb-c10a0d3b1811"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Fire/Cone1",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone2",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 24
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 29
+            }
+          ],
+          "_prefab": {
+            "__id__": 30
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20689119096096e-8,
+            "y": -0.105553910136223,
+            "z": -9.09494681444138e-15
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -2.5121481026587e-15,
+            "y": -0.707106649875641,
+            "z": -2.51214725562575e-15,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 28
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "0430e0b1-7161-4abf-996d-de6d82419088"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Fire/Cone2",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone3",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 24
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 32
+            }
+          ],
+          "_prefab": {
+            "__id__": 33
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20689048041822e-8,
+            "y": -0.567895770072937,
+            "z": 5.51154428762857e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 0.448606133460999,
+            "y": 1,
+            "z": 0.448606133460999
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -1.21894639163331e-24,
+            "y": -0.707106649875641,
+            "z": -1.21894599720286e-24,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 31
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "971d9a79-7a00-4ece-9daf-e556f5f16154"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Fire/Cone3",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone4",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 24
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 35
+            }
+          ],
+          "_prefab": {
+            "__id__": 36
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20689119096096e-8,
+            "y": -0.105553910136223,
+            "z": -9.09494681444138e-15
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -2.5121481026587e-15,
+            "y": -0.707106649875641,
+            "z": -2.51214725562575e-15,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 34
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "f692527d-4027-4255-b900-5f80c65d429f"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Fire/Cone4",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "ConeBleu",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 24
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 38
+            }
+          ],
+          "_prefab": {
+            "__id__": 39
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20689119096096e-8,
+            "y": -0.105553910136223,
+            "z": -9.09494681444138e-15
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1.0453884601593,
+            "y": 1,
+            "z": 1.0453884601593
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -1.20153804677862e-15,
+            "y": -0.707106649875641,
+            "z": -1.20153772914126e-15,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 37
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "3c773963-21fb-4e61-b929-2ee9c5c7a65c"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Fire/ConeBleu",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/Fire",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "FireBis",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [
+            {
+              "__id__": 42
+            },
+            {
+              "__id__": 45
+            },
+            {
+              "__id__": 48
+            },
+            {
+              "__id__": 51
+            },
+            {
+              "__id__": 54
+            }
+          ],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 57
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 9.51436760487923e-8,
+            "y": 0.613844811916351,
+            "z": -3.7917978090718e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 0.443731486797333,
+            "y": 0.776472330093384,
+            "z": 0.443731278181076
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0.573576271533966,
+            "y": 2.82900316506129e-7,
+            "z": 0.819152176380157,
+            "w": -3.69959934687358e-7
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "ConeBleu001",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 41
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 43
+            }
+          ],
+          "_prefab": {
+            "__id__": 44
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688941460412e-8,
+            "y": -0.105553895235062,
+            "z": 7.2759574515531e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1.0453884601593,
+            "y": 1,
+            "z": 1.0453884601593
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 4.80615345766389e-15,
+            "y": -0.707106649875641,
+            "z": 4.80615176359799e-15,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 42
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "b37e6b40-3e66-40c8-8229-695191789cdf"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireBis/ConeBleu001",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone005",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 41
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 46
+            }
+          ],
+          "_prefab": {
+            "__id__": 47
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688941460412e-8,
+            "y": -0.105553895235062,
+            "z": 7.2759574515531e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0,
+            "y": -0.707106649875641,
+            "z": 0,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 45
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "774b1497-d382-4241-b19f-c81aa69382a0"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireBis/Cone005",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone006",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 41
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 49
+            }
+          ],
+          "_prefab": {
+            "__id__": 50
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688941460412e-8,
+            "y": -0.567895710468292,
+            "z": 5.51155601158371e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 0.448606133460999,
+            "y": 1,
+            "z": 0.448606133460999
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 1.04306218114198e-23,
+            "y": -0.707106649875641,
+            "z": 1.04306186559762e-23,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 48
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "062d5bf3-2055-416e-b8da-7590a92137c5"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireBis/Cone006",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone007",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 41
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 52
+            }
+          ],
+          "_prefab": {
+            "__id__": 53
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688941460412e-8,
+            "y": -0.105553895235062,
+            "z": 7.2759574515531e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0,
+            "y": -0.707106649875641,
+            "z": 0,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 51
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "da629da7-466e-4235-b9a9-c1ee943bb98f"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireBis/Cone007",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone008",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 41
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 55
+            }
+          ],
+          "_prefab": {
+            "__id__": 56
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688941460412e-8,
+            "y": -0.105553895235062,
+            "z": 7.2759574515531e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0,
+            "y": -0.707106649875641,
+            "z": 0,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 54
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "b733605b-d9fc-4b35-beb2-19c096f0489a"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireBis/Cone008",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireBis",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "FireTert",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 5
+          },
+          "_children": [
+            {
+              "__id__": 59
+            },
+            {
+              "__id__": 62
+            },
+            {
+              "__id__": 65
+            },
+            {
+              "__id__": 68
+            },
+            {
+              "__id__": 71
+            }
+          ],
+          "_active": true,
+          "_level": 2,
+          "_components": [],
+          "_prefab": {
+            "__id__": 74
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 9.51436760487923e-8,
+            "y": 0.613844811916351,
+            "z": -3.7917978090718e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 0.174983397126198,
+            "y": 0.835750341415405,
+            "z": 0.174983292818069
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": 0.0871556550264359,
+            "y": 9.69826245977856e-8,
+            "z": 0.99619472026825,
+            "w": -0.00000101942816854717
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "ConeBleu002",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 58
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 60
+            }
+          ],
+          "_prefab": {
+            "__id__": 61
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688586189044e-8,
+            "y": -0.105553895235062,
+            "z": -1.81898936288828e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1.0453884601593,
+            "y": 1,
+            "z": 1.0453884601593
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -9.61230522126188e-15,
+            "y": -0.707106649875641,
+            "z": -9.61230268016304e-15,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 59
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "54214dd7-6214-4678-896e-c6e562c61a67"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireTert/ConeBleu002",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone009",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 58
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 63
+            }
+          ],
+          "_prefab": {
+            "__id__": 64
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688586189044e-8,
+            "y": -0.105553895235062,
+            "z": -1.81898936288828e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -1.00485932576677e-14,
+            "y": -0.707106649875641,
+            "z": -1.00485898695359e-14,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 62
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "7af28154-4e6e-494b-a3e4-ef6e1ccfb235"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireTert/Cone009",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone010",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 58
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 66
+            }
+          ],
+          "_prefab": {
+            "__id__": 67
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688586189044e-8,
+            "y": -0.105553895235062,
+            "z": -1.81898936288828e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -1.00485932576677e-14,
+            "y": -0.707106649875641,
+            "z": -1.00485898695359e-14,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 65
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "0138cd90-f9e8-4014-bdc3-a39bde276f94"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireTert/Cone010",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone011",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 58
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 69
+            }
+          ],
+          "_prefab": {
+            "__id__": 70
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688230917676e-8,
+            "y": -0.567895770072937,
+            "z": 5.51154322181446e-8
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 0.448606133460999,
+            "y": 1,
+            "z": 0.448606133460999
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -1.11997940422152e-14,
+            "y": -0.707106649875641,
+            "z": -1.11997906540834e-14,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 68
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "bb20e8f1-eb7f-42ef-a473-b8f24b19af63"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireTert/Cone011",
+          "sync": false
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Cone012",
+          "_objFlags": 0,
+          "_parent": {
+            "__id__": 58
+          },
+          "_children": [],
+          "_active": true,
+          "_level": 3,
+          "_components": [
+            {
+              "__id__": 72
+            }
+          ],
+          "_prefab": {
+            "__id__": 73
+          },
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 149,
+            "g": 149,
+            "b": 149,
+            "a": 255
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 0,
+            "height": 0
+          },
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_position": {
+            "__type__": "cc.Vec3",
+            "x": 4.20688586189044e-8,
+            "y": -0.105553895235062,
+            "z": -1.81898936288828e-14
+          },
+          "_scale": {
+            "__type__": "cc.Vec3",
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "_quat": {
+            "__type__": "cc.Quat",
+            "x": -1.00485932576677e-14,
+            "y": -0.707106649875641,
+            "z": -1.00485898695359e-14,
+            "w": 0.70710688829422
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_zIndex": 0,
+          "_is3DNode": true,
+          "groupIndex": 0,
+          "_id": ""
+        },
+        {
+          "__type__": "cc.MeshRenderer",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 71
+          },
+          "_enabled": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_mesh": {
+            "__uuid__": "ede6415d-e893-416f-89c6-c9185d472d56"
+          },
+          "textures": [
+            {
+              "__uuid__": "0275e94c-56a7-410f-bd1a-fc7483f7d14a"
+            }
+          ],
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireTert/Cone012",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body/FireTert",
+          "sync": false
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "Body",
+          "sync": false
+        },
+        {
+          "__type__": "cc.SkeletonAnimation",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 1
+          },
+          "_enabled": true,
+          "_defaultClip": null,
+          "_clips": [],
+          "playOnLoad": false,
+          "_model": {
+            "__uuid__": "aab87da7-d54e-47eb-a942-a59402cd3e9c"
+          },
+          "_id": ""
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": {
+            "__id__": 0
+          },
+          "fileId": "aab87da7-d54e-47eb-a942-a59402cd3e9c",
+          "sync": false
+        }
+      ],
       "subMetas": {}
     }
   }
