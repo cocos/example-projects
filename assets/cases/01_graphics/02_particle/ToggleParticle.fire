@@ -47,9 +47,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.5697916666666667,
-      "y": 0.5697916666666667,
-      "z": 1
+      "x": 0.6298583984375,
+      "y": 0.6298583984375,
+      "z": 0.6298583984375
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -59,6 +59,7 @@
       "w": 1
     },
     "_zIndex": 0,
+    "_is3DNode": true,
     "groupIndex": 0,
     "autoReleaseAssets": true,
     "_id": "7635674b-bf5e-43a4-bf6a-88fb8953a071"
@@ -122,8 +123,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -134,7 +133,10 @@
     "_skewX": 0,
     "_skewY": 0,
     "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "be7e8bbFF9ELrOGnbUNJTAE"
   },
   {
@@ -183,8 +185,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -195,7 +195,10 @@
     "_skewX": 0,
     "_skewY": 0,
     "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "59nTwV39JHoKBrtkrxXjDD"
   },
   {
@@ -218,6 +221,18 @@
     "_depth": -1,
     "_zoomRatio": 1,
     "_targetTexture": null,
+    "_fov": 60,
+    "_orthoSize": 10,
+    "_nearClip": 0.1,
+    "_farClip": 4096,
+    "_ortho": true,
+    "_rect": {
+      "__type__": "cc.Rect",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
     "_id": "72oWG+EWtCf4D8gXswVHQ6"
   },
   {
@@ -298,8 +313,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -310,7 +323,10 @@
     "_skewX": 0,
     "_skewY": 0,
     "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "5c15deqL9xHOpPLgqM/keTd"
   },
   {
@@ -460,8 +476,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -472,7 +486,10 @@
     "_skewX": 0,
     "_skewY": 0,
     "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "8526052qx9KSLY7cmmF7mP+"
   },
   {
@@ -521,8 +538,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -533,7 +548,10 @@
     "_skewX": 0,
     "_skewY": 0,
     "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "114b2lQCzxAC7TT80EOQQs/"
   },
   {
@@ -598,21 +616,6 @@
       "__id__": 9
     },
     "_enabled": true,
-    "transition": 2,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "hoverColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
     "duration": 0.1,
     "zoomScale": 1.2,
     "clickEvents": [
@@ -622,7 +625,37 @@
     ],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
+    "_N$transition": 3,
+    "transition": 3,
     "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$hoverColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "hoverColor": {
       "__type__": "cc.Color",
       "r": 255,
       "g": 255,
@@ -664,7 +697,8 @@
     "target": {
       "__id__": 15
     },
-    "component": "ParticleControl",
+    "component": "",
+    "_componentId": "79ae3hiP+JAhIKehaWyiKuh",
     "handler": "toggleParticlePlay",
     "customEventData": ""
   },
@@ -714,8 +748,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -726,7 +758,10 @@
     "_skewX": 0,
     "_skewY": 0,
     "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "f014c19SB1AJpiOnK2c8p9L"
   },
   {
@@ -805,8 +840,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -817,7 +850,10 @@
     "_skewX": 0,
     "_skewY": 0,
     "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "718cckOgS5NlKLyR2Qtikqp"
   },
   {
