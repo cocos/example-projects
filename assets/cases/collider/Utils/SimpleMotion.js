@@ -14,6 +14,6 @@ cc.Class({
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
         this.node.x += dt * this.moveSpeed;
-        this.node.rotation += dt * this.rotationSpeed;
+        this.node.angle += dt * this.rotationSpeed;
     },
 });

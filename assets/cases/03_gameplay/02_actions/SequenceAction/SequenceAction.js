@@ -13,13 +13,13 @@ cc.Class({
         const eachTime = 0.5;
 
         let sequence1 = cc.sequence(
-            cc.moveBy(eachTime, cc.p(0, -300)),       
-            cc.moveBy(eachTime / 2, cc.p(0, 300)),
+            cc.moveBy(eachTime, cc.v2(0, -300)),
+            cc.moveBy(eachTime / 2, cc.v2(0, 300)),
         ).repeat(2);
 
         let sequence2 = cc.sequence(
-            cc.moveBy(eachTime, cc.p(0, -200)),
-            cc.moveBy(eachTime, cc.p(0, 200)),
+            cc.moveBy(eachTime, cc.v2(0, -200)),
+            cc.moveBy(eachTime, cc.v2(0, 200)),
         ).repeat(2);
 
         this.node.runAction(
