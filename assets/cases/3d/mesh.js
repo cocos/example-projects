@@ -1,3 +1,4 @@
+const chroma = require('chroma');
 
 let gfx = cc.renderer.renderEngine.gfx;
 
