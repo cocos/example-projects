@@ -45,10 +45,10 @@ cc.Class({
         this._isShow = !this._isShow;
         let action = null;
         if (this._isShow) {
-            action = cc.moveBy(0.5, cc.v2(0, -52));
+            action = cc.moveBy(0.5, cc.v2(0, -48));
         }
         else {
-            action = cc.moveBy(0.5, cc.v2(0, 52));
+            action = cc.moveBy(0.5, cc.v2(0, 48));
         }
         this.node.runAction(action);
     }
