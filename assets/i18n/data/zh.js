@@ -294,6 +294,9 @@ module.exports = {
     "cases/subpackage": "加载子包",
     "cases/subpackage.loaded": "子包已经成功加载",
 
+    // QQPlay
+    "cases/qqplay/scene.tips:1": "该测试仅能够在 QQ 厘米游戏平台运行",
+
     // Audio Play use the cc.AuidioEngine
     "scripts/AudioCtrl_Play": "播放",
     "scripts/AUdioCtrl_Stop": "停止",
