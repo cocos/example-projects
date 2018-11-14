@@ -1,16 +1,17 @@
 /**
- * @author Javen 
- * @copyright 2018-09-22 17:30:58 javendev@126.com 
+ * @origin Javen 
  * @description QQ玩一玩工具类 
  */
 
-var Global = require("Global");
+// 是否显示 debug
+const isDebug =  true;
+
 /**
  * 日志输出
  * @param {String} msg 
  */
 function log(msg) {
-    if (Global.isDebug) {
+    if (isDebug) {
         cc.log(msg);
     }
 }
@@ -82,7 +83,7 @@ function makeDir(dirPath) {
  * @param {Number} gameId 
  */
 function skipGame(gameId) {
-    BK.QQ.skipGame(gameId, "IJPay");
+    BK.QQ.skipGame(gameId, "");
 }
 /**
  * 判断手Q版本
@@ -115,11 +116,11 @@ function getShareInfo(localPicPath) {
     if (!localPicPath) {
         localPicPath = "GameRes://qrcode.png";
     }
-    let summarys = ["IJPay 让支付触手可及!", "JPay简易而不简单的Android支付SDK!", "游戏太刺激了，邀请还能领抱枕!", "快上车!"];
+    let summarys = ["游戏太刺激了，邀请还能领抱枕!", "快上车!"];
     let shareInfo = {
         summary: summarys[getRandomInt(0, 3)],
-        picUrl: "https://javen205.gitee.io/ijpay/doc/assets/IJPay-t.png", //支持HTTPS
-        extendInfo: Global.openId,
+        picUrl: "http://tools.itharbors.com/christmas/res/tree.png", //支持HTTPS
+        extendInfo: GameStatusInfo.openId,
         localPicPath: localPicPath, //分享至空间、微信、朋友圈时需要的图。（选填，若无该字段，系统使用游戏对应的二维码）
     };
     return shareInfo;
@@ -173,14 +174,17 @@ function toShare(shareInfo, callback) {
 /**
  * 关注公众号
  */
-function follow() {
-    log("Global.PUIN>" + Global.PUIN);
-    BK.QQ.enterPubAccountCard(Global.PUIN);
+function follow(PUIN) {
+    log("this.PUIN: " + PUIN);
+    BK.QQ.enterPubAccountCard(PUIN);
 }
 /**
  * 游戏事件以及生命周期
  */
 function addGameEvent() {
+    if (!BK.Game) {
+        return false;
+    }
     new BK.Game({
         //游戏启动后
         onLoad: function (app) {
@@ -231,7 +235,7 @@ function addGameEvent() {
  * @param {*} isWin 
  * @param {*} callback 
  */
-function uploadScore(isWin, callback) {
+function uploadScore(isWin, startTime, callback) {
     if (cc.sys.platform != cc.sys.QQ_PLAY) {
         if (callback) {
             callback(-1, "此接口只支持QQ玩一玩平台");
@@ -243,10 +247,11 @@ function uploadScore(isWin, callback) {
     } else {
         isWin = 1;
     }
+
     var data = {
         userData: [{
             openId: GameStatusInfo.openId,
-            startMs: Global.startGameTime.toString(),
+            startMs: startTime,
             endMs: ((new Date()).getTime()).toString(),
             scoreInfo: {
                 score: isWin,
@@ -303,75 +308,6 @@ function getRankList(callback) {
     });
 }
 
-
-/**
- * 加载视频广告
- */
-function fetchVideoAd(videoType) {
-    if (!videoType) {
-        videoType = 0;
-    }
-    log("开始加载视频广告..." + videoType);
-    BK.Advertisement.fetchVideoAd(videoType, function (retCode, msg, handle) {
-        log("retCode:" + retCode + " msg:" + msg);
-        //返回码0表示成功 
-        if (retCode == 0) {
-            Global.videoHandle = handle;
-            //广告监听在业务逻辑中处理
-        } else {
-            log("拉取视频广告失败error:" + retCode + " msg:" + msg);
-        }
-    }.bind(this));
-    log("加载了视频广告...");
-}
-
-/**
- * 加载条幅广告
- */
-function fetchBannerAd() {
-    BK.Advertisement.fetchBannerAd(function (retCode, msg, bannerHandle) {
-        log("retCode:" + retCode + " msg:" + msg);
-        if (retCode == 0) {
-            Global.bannerHandle = bannerHandle;
-            bannerHandle.onClickContent(function () {
-                log("用户点击了落地页");
-            });
-            bannerHandle.onClickClose(function () {
-                log("用户点击了X关闭广告");
-            });
-        } else {
-            log("fetchBannerAd failed. retCode:" + retCode);
-        }
-    }.bind(this));
-}
-
-function closeBannerAd() {
-    log("关闭广告....");
-    if (Global.bannerHandle) {
-        Global.bannerHandle.close();
-        Global.bannerHandle = undefined;
-    }
-}
-
-function loadBannerAd() {
-    if (cc.sys.platform == cc.sys.QQ_PLAY) {
-        log("预加载Banner");
-        fetchBannerAd();
-    }
-}
-
-function loadVideoAd() {
-    if (cc.sys.platform == cc.sys.QQ_PLAY) {
-        log("预加载Video");
-        fetchVideoAd();
-    }
-}
-
-function getNick(callback) {
-    if (cc.sys.platform == cc.sys.QQ_PLAY) {
-        BK.MQQ.Account.getNick(GameStatusInfo.openId, callback);
-    }
-}
 module.exports = {
     makeDir: makeDir, //新建文件夹
     post: post, //post请求
@@ -386,9 +322,4 @@ module.exports = {
     BKGet: BKGet,
     uploadScore: uploadScore,
     getRankList: getRankList,
-    loadVideoAd: loadVideoAd,
-    loadBannerAd: loadBannerAd,
-    closeBannerAd: closeBannerAd,
-    getNick: getNick,
-
 };

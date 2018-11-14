@@ -296,6 +296,9 @@ module.exports = {
     "cases/subpackage.loaded": "Subpackage is loaded",
     "cases/subpackage.failed": "Failed to load the package, please check the console for details",
 
+    // QQPlay
+    "cases/qqplay/scene.tips:1": "This test only work on QQPlay platform",
+
     // Audio Play use the cc.AuidioEngine
     "scripts/AudioCtrl_Play": "Play",
     "scripts/AUdioCtrl_Stop": "Stop",

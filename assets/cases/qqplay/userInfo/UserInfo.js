@@ -1,25 +1,39 @@
 /**
- * @author Javen 
- * @copyright 2018-09-25 21:51:14 javendev@126.com 
- * @description 获取用户图像
+ * @origin Javen 
+ * @description Get user info
+ * 
+ *  QQ 厘米游戏相关文档链接:
+ *  https://hudong.qq.com/docs/engine/engine/native/login/intro.html
+ *  https://hudong.qq.com/docs/engine/userInfo/intro.html
  */
-let BKTools = require("BKTools");
+
+let BKTools = require("../BKTools");
+
 cc.Class({
     extends: cc.Component,
 
     properties: {
         head: {
             default: null,
-            type: cc.Node,
+            type: cc.Sprite,
             tooltip: "用户图像",
         },
-        nick: {
-            default: null,
-            type: cc.Label
+        nick: cc.Label
+    },
+    /**
+     * 获取用户信息
+     */
+    getUserInfo (event, data) {
+        BKTools.log("获取用户信息");
+        if (BK.MQQ) {
+            this.getHeadEx();
+            this.getNick();
         }
     },
-
-    getHead() {
+    /**
+     * 获取用户头像并保存本地
+     */
+    getHeadEx () {
         let self = this;
         let absolutePath = "GameSandBox://_head/" + GameStatusInfo.openId + ".jpg";
         let isExit = BK.FileUtil.isFileExist(absolutePath);
@@ -27,9 +41,11 @@ cc.Class({
         //如果指定目录中存在此图像就直接显示否则从网络获取
         if (isExit) {
             cc.loader.load(absolutePath, function (err, texture) {
-                if (err == null) {
-                    self.head.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture);
+                if (err !== undefined) {
+                    cc.error("Load header img error: " + err);
+                    return;
                 }
+                self.head.spriteFrame = new cc.SpriteFrame(texture);
             });
         } else {
             BK.MQQ.Account.getHeadEx(GameStatusInfo.openId, function (oId, imgPath) {
@@ -38,38 +54,22 @@ cc.Class({
                 image.onload = function () {
                     var tex = new cc.Texture2D();
                     tex.initWithElement(image);
-                    tex.handleLoadedTexture();
-                    self.head.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(tex);
+                    self.head.spriteFrame = new cc.SpriteFrame(tex);
                 }
                 image.src = imgPath;
             });
         }
     },
 
-    // onLoad () {},
-    btn(event, data) {
-        cc.log("点击了按钮>" + data);
-        if (data == 'back') {
-            cc.director.loadScene("QQPlay");
-        } else {
-            if (cc.sys.platform == cc.sys.QQ_PLAY) {
-                this.getHead();
-            } else {
-                cc.log("请在QQ玩一玩平台中测试");
-            }
-        }
-    },
-    start() {
-        let self = this;
+    /**
+     * 获取昵称
+     */
+    getNick () {
         if (cc.sys.platform == cc.sys.QQ_PLAY) {
-            BKTools.getNick(function (openId, nick) {
-                self.nick.string = nick;
+            // getNick(openID, callBack)
+            BK.MQQ.Account.getNick(GameStatusInfo.openId, (openId, nick) => {
+                this.nick.string = nick;
             });
-        } else {
-            this.nick.string = "Javen";
         }
-
     },
-
-    // update (dt) {},
 });
