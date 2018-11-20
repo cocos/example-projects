@@ -11,17 +11,21 @@ module.exports = {
             case 'EditBoxTabIndex':     return !cc.sys.isNative;
             case 'OnMultiTouchInput':   return cc.sys.isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
-            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.ANDROID;
+            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'subpackage':          return (!CC_PREVIEW && cc.sys.platform !== cc.sys.QQ_PLAY);
             case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
-            case 'downloader-native':   return cc.sys.isNative;
-
-            // 不支持 QQ_PLAY，WECHAT_GAME 平台
-            case 'render_to_sprite':
-                return (cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+            case 'downloader-native':
+            case 'capture_to_native':
+                return cc.sys.isNative;
+            case 'iOS_getSafeArea':
+                return (cc.sys.platform === cc.sys.IPHONE && cc.sys.isNative);
+            case 'capture_to_wechat':
+                return  cc.sys.platform === cc.sys.WECHAT_GAME;
+            case 'capture_to_web':
+                return cc.sys.isBrowser;
 
             // 只支持 RENDER_TYPE_WEBGL
             case 'MotionStreak':
@@ -38,7 +42,6 @@ module.exports = {
             case 'fullscreenVideo':
             case 'videoPlayer':
             case 'webview':
-                // 2.0 native still not support the video play feature.
                 return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
 
             case 'QQPlay':
@@ -52,12 +55,12 @@ module.exports = {
         if (this.tipsPrefab) return;
 
         cc.loader.loadRes('tips/Tips', (err, prefab) => {
-            this.tispPrefab = prefab;
+            this.tipsPrefab = prefab;
         });
     },
 
     createTips (content) {
-        let node = cc.instantiate(this.tispPrefab);
+        let node = cc.instantiate(this.tipsPrefab);
         let tipsCtrl = node.getComponent('TipsCtrl');
         if (content) {
             tipsCtrl.setContent(content);

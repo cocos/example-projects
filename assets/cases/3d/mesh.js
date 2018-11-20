@@ -1,3 +1,4 @@
+const chroma = require('chroma');
 
 let gfx = cc.renderer.renderEngine.gfx;
 
@@ -26,10 +27,13 @@ cc.Class({
         mesh.init(vfmtPosColor, 8, true);
         this.mesh = mesh;
         
-        mesh.setVertexes(gfx.ATTR_POSITION, [
+        mesh.setVertices(gfx.ATTR_POSITION, [
             cc.v3(-100, 100, 100), cc.v3(-100, -100, 100), cc.v3(100, 100, 100), cc.v3(100, -100, 100),
             cc.v3(-100, 100, -100), cc.v3(-100, -100, -100), cc.v3(100, 100, -100), cc.v3(100, -100, -100)
         ]);
+
+        mesh._minPos = cc.v3(-100, -100, -100);
+        mesh._maxPos = cc.v3(100, 100, 100);
 
         this.updateColor(cc.Color.RED, cc.Color.BLUE);
 
@@ -47,13 +51,10 @@ cc.Class({
             renderer = this.node.addComponent(cc.MeshRenderer);
         }
         renderer.mesh = mesh;
-
-        this.node.eulerAngles = cc.v3(-45, -45, 0);
-        this.node.is3DNode = true;
     },
 
     updateColor (c1, c2) {
-        this.mesh.setVertexes(gfx.ATTR_COLOR, [
+        this.mesh.setVertices(gfx.ATTR_COLOR, [
             c1, c1, c1, c1,
             c2, c2, c2, c2,
         ]);
