@@ -3,13 +3,12 @@ cc.Class({
 
     start () {
         this.init();
-    },
-
-    captureAndShow () {
-        let canvas = this.createSprite();
-        var img = this.initImage();
-        this.showSprite(img);
-        this.saveFile(canvas);
+        // create the capture
+        this.schedule(() => {
+            let canvas = this.createSprite();
+            this.initImage();
+            this.saveFile(canvas);
+        }, 1, 0);
     },
 
     saveFile (tempCanvas) {

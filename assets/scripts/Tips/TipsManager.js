@@ -21,7 +21,7 @@ module.exports = {
             case 'capture_to_native':
                 return cc.sys.isNative;
             case 'iOS_getSafeArea':
-                return cc.sys.os === cc.sys.OS_IOS;
+                return (cc.sys.platform === cc.sys.IPHONE && cc.sys.isNative);
             case 'capture_to_wechat':
                 return  cc.sys.platform === cc.sys.WECHAT_GAME;
             case 'capture_to_web':
