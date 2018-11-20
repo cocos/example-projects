@@ -42,7 +42,6 @@ module.exports = {
             case 'fullscreenVideo':
             case 'videoPlayer':
             case 'webview':
-                // 2.0 native still not support the video play feature.
                 return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
         }
     },
