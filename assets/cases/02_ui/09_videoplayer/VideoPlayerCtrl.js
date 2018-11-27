@@ -74,6 +74,7 @@ cc.Class({
 
     toggleVisibility () {
         this.videoPlayer.enabled = !this.videoPlayer.enabled;
+        this.playVideoArea.active = this.videoPlayer.enabled;
     },
 
     keepRatioSwitch () {

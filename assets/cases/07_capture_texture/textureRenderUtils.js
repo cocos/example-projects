@@ -82,15 +82,15 @@ cc.Class({
         this.captureAction(node, width, height);
     },
     // sprite action
-    captureAction (node, width, height) {
+    captureAction (capture, width, height) {
         let scaleAction = cc.scaleTo(1,0.3);
         let targetPos = cc.v2(width - width / 6,  height / 4);
         let moveAction = cc.moveTo(1, targetPos); 
         let spawn = cc.spawn(scaleAction, moveAction);
-        node.runAction(spawn);
+        capture.runAction(spawn);
         let blinkAction = cc.blink(0.1, 1);
         // scene action
-        this.node.parent.runAction(blinkAction);
+        this.node.runAction(blinkAction);
     },
 
     clearCanvas () {
