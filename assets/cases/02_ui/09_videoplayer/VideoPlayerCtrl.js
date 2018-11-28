@@ -33,15 +33,15 @@ cc.Class({
         controlButtons: cc.Node,
         keep_Ratio_Switch: cc.Node,
         playVideoArea: cc.Node,
+        visibility: cc.Label,
     },
 
     start () {
         TipsManager.init();
         this.controlButtons.active = false;
         this.keep_Ratio_Switch.active = !cc.sys.isBrowser;
-        this.playVideoArea.on('touchstart', () => {
+        this.playVideoArea.on('touchend', () => {
             this.videoPlayer.play();
-            this.playVideoArea.active = false;
         });
     },
 
@@ -56,6 +56,10 @@ cc.Class({
         }
         else if (event === cc.VideoPlayer.EventType.READY_TO_PLAY || event === cc.VideoPlayer.EventType.META_LOADED) {
             this.controlButtons.active = true;
+            this.playVideoArea.active = true;
+        }
+        else if (event === cc.VideoPlayer.EventType.PLAYING) {
+            this.playVideoArea.active = false;
         }
     },
 
@@ -72,9 +76,10 @@ cc.Class({
         this.videoPlayer.isFullscreen = true;
     },
 
-    toggleVisibility () {
-        this.videoPlayer.enabled = !this.videoPlayer.enabled;
-        this.playVideoArea.active = this.videoPlayer.enabled;
+    toggleVisibility (event) {
+        this.videoPlayer.node.active = !this.videoPlayer.node.active;
+        this.playVideoArea.active = this.videoPlayer.node.active;
+        this.visibility.string = 'Visibility: ' + this.videoPlayer.node.active;
     },
 
     keepRatioSwitch () {
