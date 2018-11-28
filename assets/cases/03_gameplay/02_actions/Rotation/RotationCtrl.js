@@ -7,31 +7,31 @@ cc.Class({
     },
 
     onToClick: function () {
-        var rotationTo = cc.rotateTo(1, 0, 100);
+        var rotationTo = cc.rotateTo(1, 90);
         this.rotationToNode.runAction(rotationTo);
     },
 
     onReverseToClick: function () {
-        var rotationTo = cc.rotateTo(1, 100, 0);
+        var rotationTo = cc.rotateTo(1, 180);
         this.rotationToNode.runAction(rotationTo);
     },
 
     onToRecoverClick: function () {
-        this.rotationToNode.eulerAngles = cc.v3();
+        this.rotationToNode.angle = 0;
     },
 
     onByClick: function () {
-        var rotateBy = cc.rotateBy(1, 0, 100);
+        var rotateBy = cc.rotateBy(1, 90);
         this.rotateByNode.runAction(rotateBy);
     },
 
     onReverseByClick: function () {
-        var rotateBy = cc.rotateBy(1, 100, 100);
+        var rotateBy = cc.rotateBy(1, 180);
         this.rotateByNode.runAction(rotateBy);
     },
 
     onByRecoverClick: function () {
-        this.rotateByNode.eulerAngles = cc.v3();
+        this.rotateByNode.angle = 0;
     }
 
 });
