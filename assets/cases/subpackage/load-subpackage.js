@@ -1,21 +1,33 @@
 cc.Class({
     extends: cc.Component,
 
-    start () {
-        this.label = cc.find('Canvas/New Label').getComponent(cc.Label);
-        this.label.textKey = '';
+    properties: {
+        tips1: cc.Label,
+        tips2: cc.Label
     },
 
-    loadSubpackage () {
+    loadSubpackage1 () {
         if (CC_PREVIEW || CC_QQPLAY) return;
-        cc.loader.downloader.loadSubpackage('subpackage', err => {
+        cc.loader.downloader.loadSubpackage('First', err => {
             if (err) {
                 console.error(err);
-                this.label.textKey = 'cases/subpackage.failed';
+                this.tips1.textKey = 'cases/subpackage.failed';
                 return;
             }
-            console.log('load subpackage successfully.');
+            cc.director.loadScene('subpackage');
+        });
+    },
+
+    loadSubpackage2 () {
+        if (CC_PREVIEW || CC_QQPLAY) return;
+        cc.loader.downloader.loadSubpackage('Second', err => {
+            if (err) {
+                console.error(err);
+                this.tips2.textKey = 'cases/subpackage.failed';
+                return;
+            }
             cc.director.loadScene('subpackage');
         });
     }
+
 });
