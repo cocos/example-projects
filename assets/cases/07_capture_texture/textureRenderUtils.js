@@ -29,7 +29,7 @@ cc.Class({
         let height = this.texture.height;
         if (!this._canvas) {
             this._canvas = document.createElement('canvas');
-    
+
             this._canvas.width = width;
             this._canvas.height = height;
         }
@@ -53,6 +53,7 @@ cc.Class({
         }
         return this._canvas;
     },
+    
     // show on the canvas
     showSprite (img) {
         let texture = new cc.Texture2D();
@@ -67,13 +68,29 @@ cc.Class({
 
         node.zIndex = cc.macro.MAX_ZINDEX;
         node.parent = cc.director.getScene();
-        node.x = cc.winSize.width / 2;
-        node.y = cc.winSize.height / 2;
+        // set position
+        let width = cc.winSize.width;
+        let height = cc.winSize.height;
+        node.x = width / 2;
+        node.y = height / 2;
         node.on(cc.Node.EventType.TOUCH_START, () => {
             node.parent = null;
             this.label.string = '';
             node.destroy();
-        }); 
+        });
+
+        this.captureAction(node, width, height);
+    },
+    // sprite action
+    captureAction (capture, width, height) {
+        let scaleAction = cc.scaleTo(1,0.3);
+        let targetPos = cc.v2(width - width / 6,  height / 4);
+        let moveAction = cc.moveTo(1, targetPos); 
+        let spawn = cc.spawn(scaleAction, moveAction);
+        capture.runAction(spawn);
+        let blinkAction = cc.blink(0.1, 1);
+        // scene action
+        this.node.runAction(blinkAction);
     },
 
     clearCanvas () {
