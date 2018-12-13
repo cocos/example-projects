@@ -293,8 +293,10 @@ module.exports = {
     "resources/test_assets/scene.fire.3": "Return Asset Loading Scene",
     "resources/test_assets/scene.fire.6": "Return",
     "scripts/Global/Menu.js.1": "Temporary lack of introduction",
-    "cases/subpackage": "Load Subpackage",
-    "cases/subpackage.loaded": "Subpackage is loaded",
+    "cases/subpackage1": "Load First Subpackage",
+    "cases/subpackage1.loaded": "First Subpackage is loaded",
+    "cases/subpackage2": "Load Second Subpackage",
+    "cases/subpackage2.loaded": "Second Subpackage is loaded",
     "cases/subpackage.failed": "Failed to load the package, please check the console for details",
 
     // Audio Play use the cc.AuidioEngine
