@@ -15,7 +15,6 @@ module.exports = {
             case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'subpackage':          return (!CC_PREVIEW && cc.sys.platform !== cc.sys.QQ_PLAY);
-            case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':
             case 'capture_to_native':
@@ -33,16 +32,16 @@ module.exports = {
             case 'Mask_NESTED':
                 return cc.game.renderType === cc.game.RENDER_TYPE_WEBGL;
 
-            // 不支持 isMobile
+            // 不支持 isMobile, WECHAT_GAME, BAIDU_GAME 平台
             case 'KeyboardInput':
             case 'platform':
-                return !cc.sys.isMobile;
+                return !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME;
 
-            // 不支持 模拟器，QQ_PLAY，WECHAT_GAME 平台
+            // 不支持 模拟器，QQ_PLAY，WECHAT_GAME, BAIDU_GAME 平台
             case 'fullscreenVideo':
             case 'videoPlayer':
             case 'webview':
-                return ((cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+                return ((cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME);
         }
     },
 
