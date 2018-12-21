@@ -1,7 +1,6 @@
 //
-// 用于提示用户哪些范例不支持平台
+// Restricted the scenes platform permissions
 //
-
 module.exports = {
     tispPrefab: null,
 
@@ -18,8 +17,11 @@ module.exports = {
             case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':
-            case 'capture_to_native':
                 return cc.sys.isNative;
+
+            // Not support the VIVO_GAME and OPPO_GAME
+            case 'capture_to_native':
+                return cc.sys.isNative && cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
             case 'iOS_getSafeArea':
                 return (cc.sys.platform === cc.sys.IPHONE && cc.sys.isNative);
             case 'capture_to_wechat':
@@ -27,22 +29,27 @@ module.exports = {
             case 'capture_to_web':
                 return cc.sys.isBrowser;
 
-            // 只支持 RENDER_TYPE_WEBGL
+            // Only support the RENDER_TYPE_WEBGL
             case 'MotionStreak':
             case 'Mask_IMAGE_STENCIL':
             case 'Mask_NESTED':
                 return cc.game.renderType === cc.game.RENDER_TYPE_WEBGL;
 
-            // 不支持 isMobile
+            // Not support isMobile
             case 'KeyboardInput':
             case 'platform':
                 return !cc.sys.isMobile;
 
-            // 不支持 模拟器，QQ_PLAY，WECHAT_GAME 平台
+            // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'fullscreenVideo':
             case 'videoPlayer':
-            case 'webview':
                 return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
+
+            // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY
+            case 'webview':
+                return  (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
+            case 'mesh':
+                return cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
         }
     },
 
@@ -70,7 +77,7 @@ module.exports = {
                 this.createTips();
             }
             return false;
-        }        
+        }
         return true;
     }
 };
