@@ -16,6 +16,15 @@ cc.Class({
             this.saveFile(picData);
         }, 1);
     },
+    
+    // override
+    initImage () { 
+        let data = this.texture.readPixels();
+        this._width = this.texture.width;
+        this._height = this.texture.height;
+        let picData = this.filpYImage(data, this._width, this._height);
+        return picData;
+    },
 
     // override
     initImage () {

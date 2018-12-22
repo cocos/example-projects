@@ -22,7 +22,7 @@ module.exports = {
     "cases/01_graphics/01_sprite/SimpleSprite.fire.7": "这是普通精灵",
     "cases/01_graphics/01_sprite/SlicedSprite.fire.7": "这是九宫格精灵",
     "cases/01_graphics/01_sprite/TiledSprite.fire.6": "这是平铺精灵",
-    "cases/01_graphics/01_sprite/ChangeColor.fire.1": "改变颜色将会改变 Draw Call",
+    "cases/01_graphics/01_sprite/ChangeColor.fire.1": "改变颜色 Draw Call 的值不发生改变",
     "cases/01_graphics/01_sprite/TrimmedSprite.fire.7": "自动剪裁 ",
     "cases/01_graphics/01_sprite/TrimmedSprite.fire.12": "未自动剪裁",
     "cases/01_graphics/02_particle/AutoRemoveParticle.fire.9": "粒子 1\n\"完成时自动移除\" 禁止",
