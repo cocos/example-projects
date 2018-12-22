@@ -84,7 +84,8 @@ const SceneList = cc.Class({
         }
         let y = 0;
         this.node.height = (this.sceneList.length + 1) * 50;
-        for (let i = 0; i < this.initItemCount; ++i) {
+        let initItemCount = Math.min(this.initItemCount, this.sceneList.length);
+        for (let i = 0; i < initItemCount; ++i) {
             let item = cc.instantiate(this.itemPrefab).getComponent('ListItem');
             let itemInfo = this.sceneList[i];
             item.init(this.menu);
