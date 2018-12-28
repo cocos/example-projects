@@ -13,7 +13,7 @@ module.exports = {
             case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
-            case 'subpackage':          return (!CC_PREVIEW && cc.sys.platform !== cc.sys.QQ_PLAY);
+            case 'subpackage':          return (!CC_PREVIEW && !CC_JSB && cc.sys.platform !== cc.sys.QQ_PLAY);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':
                 return cc.sys.isNative;
