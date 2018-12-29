@@ -41,13 +41,12 @@ module.exports = {
                 return !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME;
 
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
-            case 'fullscreenVideo':
             case 'videoPlayer':
-                return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
+                return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && !CC_RUNTIME;
 
-            // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY
+            // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
             case 'webview':
-                return  (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
+                return  (cc.sys.isMobile || cc.sys.isBrowser) && !CC_RUNTIME && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
             case 'mesh':
                 return cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
         }
