@@ -12,7 +12,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        label: require('../../../i18n/LabelLocalized')
+        label: require('LabelLocalized')
     },
 
     // LIFE-CYCLE CALLBACKS:
