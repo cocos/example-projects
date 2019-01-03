@@ -295,13 +295,13 @@ module.exports = {
     "scripts/Global/Menu.js.1": "Temporary lack of introduction",
 
     "cases/subpackage1": "Load First Subpackage",
-    "cases/goSubpackage1": "go to First scene",
-    "cases/goSubpackage1.failed": "The go to First scene failed. Please load the First Subpackage",
+    "cases/goSubpackage1": "Go to the first scene",
+    "cases/goSubpackage1.failed": "Can not go to the first scene, Please load the First Subpackage",
     "cases/subpackage1.loaded": "First Subpackage is loaded",
 
     "cases/subpackage2": "Load Second Subpackage",
-    "cases/goSubpackage2": "go to Second scene",
-    "cases/goSubpackage2.failed": "The go to Second scene failed. Please load the Second Subpackage",
+    "cases/goSubpackage2": "Go to the second scene",
+    "cases/goSubpackage2.failed": "Can not go to the second scene, Please load the Second Subpackage",
     "cases/subpackage2.loaded": "First Subpackage is loaded",
 
     "cases/subpackage.complete": "Load the sub-package successfully, you can jump to the scene to view",
