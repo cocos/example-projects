@@ -2,32 +2,40 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        tips1: cc.Label,
-        tips2: cc.Label
+        tips: require('LabelLocalized')
+    },
+
+    onLoadSubpackageCallback (err) {
+        if (err) {
+            console.error(err);
+            this.tips.textKey = 'cases/subpackage.failed';
+            return;
+        }
+        this.tips.textKey = 'cases/subpackage.complete';
     },
 
     loadSubpackage1 () {
-        if (CC_PREVIEW || CC_QQPLAY) return;
-        cc.loader.downloader.loadSubpackage('First', err => {
-            if (err) {
-                console.error(err);
-                this.tips1.textKey = 'cases/subpackage.failed';
-                return;
-            }
-            cc.director.loadScene('subpackage');
-        });
+        cc.loader.downloader.loadSubpackage('First', this.onLoadSubpackageCallback.bind(this));
     },
 
     loadSubpackage2 () {
-        if (CC_PREVIEW || CC_QQPLAY) return;
-        cc.loader.downloader.loadSubpackage('Second', err => {
+        cc.loader.downloader.loadSubpackage('Second', this.onLoadSubpackageCallback.bind(this));
+    },
+
+    goSubpackage1 () {
+        cc.director.loadScene('sub-first', (err) => {
             if (err) {
-                console.error(err);
-                this.tips2.textKey = 'cases/subpackage.failed';
-                return;
+                this.tips.textKey = 'cases/goSubpackage1.failed';
             }
-            cc.director.loadScene('subpackage');
         });
-    }
+    },
+
+    goSubpackage2 () {
+        cc.director.loadScene('sub-second', (err) => {
+            if (err) {
+                this.tips.textKey = 'cases/goSubpackage2.failed';
+            }
+        });
+    },
 
 });

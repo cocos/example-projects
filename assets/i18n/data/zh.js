@@ -292,11 +292,20 @@ module.exports = {
     "resources/test_assets/scene.fire.3": "返回资源加载场景",
     "resources/test_assets/scene.fire.6": "返回",
     "scripts/Global/Menu.js.1": "说明暂缺",
+
     "cases/subpackage1": "加载第一个子包",
+    "cases/goSubpackage1": "进入第一个子包场景",
+    "cases/goSubpackage1.failed": "进入第一个子包场景失败，请先加载第一子包",
     "cases/subpackage1.loaded": "第一个子包已经成功加载",
+
     "cases/subpackage2": "加载第二个子包",
+    "cases/goSubpackage2": "进入第二个子包场景",
+    "cases/goSubpackage2.failed": "进入第二个子包场景失败，请先加载第二子包",
     "cases/subpackage2.loaded": "第二个子包已经成功加载",
+
+    "cases/subpackage.complete": "加载子包成功，可跳转场景进行查看",
     "cases/subpackage.failed": "无法加载子包，请检查控制台以获取详细信息",
+    "cases/subpackage.back": "返回加载分包场景",
 
     // Audio Play use the cc.AuidioEngine
     "scripts/AudioCtrl_Play": "播放",
