@@ -10,14 +10,14 @@ module.exports = {
             case 'EditBoxTabIndex':     return !cc.sys.isNative;
             case 'OnMultiTouchInput':   return cc.sys.isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
-            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
-            case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
+            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.VIVO_GAME;
+            case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID && !CC_RUNTIME;
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
-            case 'subpackage':
+            case 'Subpackages':
                 return (!CC_PREVIEW && !CC_JSB && !cc.sys.isBrowser && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.VIVO_GAME);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':
-                return cc.sys.isNative;
+                return cc.sys.isNative && !CC_RUNTIME;
 
             // Not support the VIVO_GAME and OPPO_GAME
             case 'capture_to_native':
