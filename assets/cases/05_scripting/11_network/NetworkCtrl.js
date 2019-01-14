@@ -96,7 +96,7 @@ cc.Class({
         var self = this;
         var websocketLabel = this.websocket;
         var respLabel = this.websocketResp;
-        this._wsiSendBinary = new WebSocket("ws://echo.websocket.org");
+        this._wsiSendBinary = new WebSocket("wss://echo.websocket.org");
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
             websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
