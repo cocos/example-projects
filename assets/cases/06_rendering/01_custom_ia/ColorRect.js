@@ -9,16 +9,16 @@
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
 let assembler = require('./ColorRectAssembler');
-let renderEngine;
 let gfx;
 let math;
 let _prevMat;
 let _currMat;
+let InputAssembler;
 
 cc.game.once(cc.game.EVENT_ENGINE_INITED, function () {
-    renderEngine = cc.renderer.renderEngine;
-    gfx = renderEngine.gfx;
-    math = renderEngine.math;
+    gfx = cc.gfx;
+    math = cc.vmath;
+    InputAssembler = cc.renderer.InputAssembler;
 
     _prevMat = math.mat4.create();
     _currMat = math.mat4.create();
@@ -109,7 +109,7 @@ let ColorRect = cc.Class({
         this.node.getWorldMatrix(_currMat);
         this._updateVertexData(_currMat);
 
-        this._ia = new renderEngine.InputAssembler();
+        this._ia = new InputAssembler();
         this._ia._vertexBuffer = this._vb;
         this._ia._indexBuffer = this._ib;
         this._ia._start = 0;
@@ -125,9 +125,7 @@ let ColorRect = cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
     onLoad () {
-        this._material = new renderEngine.SpriteMaterial();
-        this._material.useTexture = false;
-        this._material.useColor = false;
+        this.setMaterial(0, cc.Material.getBuiltinMaterial('sprite'));
 
         this._createIA();
     },

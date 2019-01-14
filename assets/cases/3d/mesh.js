@@ -1,6 +1,6 @@
 const chroma = require('chroma');
 
-let gfx = cc.renderer.renderEngine.gfx;
+let gfx = cc.gfx;
 
 cc.Class({
     extends: cc.Component,
