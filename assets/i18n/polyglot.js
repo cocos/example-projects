@@ -17,15 +17,7 @@
 
 
 (function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define([], function() {
-      return factory(root);
-    });
-  } else if (typeof exports === 'object') {
-    module.exports = factory(root);
-  } else {
-    root.Polyglot = factory(root);
-  }
+  module.exports = factory(root);
 }(typeof global !== 'undefined' ? global : this, function(root) {
   'use strict';
 
