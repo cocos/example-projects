@@ -293,9 +293,20 @@ module.exports = {
     "resources/test_assets/scene.fire.3": "Return Asset Loading Scene",
     "resources/test_assets/scene.fire.6": "Return",
     "scripts/Global/Menu.js.1": "Temporary lack of introduction",
-    "cases/subpackage": "Load Subpackage",
-    "cases/subpackage.loaded": "Subpackage is loaded",
+
+    "cases/subpackage1": "Load First Subpackage",
+    "cases/goSubpackage1": "Go to the first scene",
+    "cases/goSubpackage1.failed": "Can not go to the first scene, Please load the First Subpackage",
+    "cases/subpackage1.loaded": "First Subpackage is loaded",
+
+    "cases/subpackage2": "Load Second Subpackage",
+    "cases/goSubpackage2": "Go to the second scene",
+    "cases/goSubpackage2.failed": "Can not go to the second scene, Please load the Second Subpackage",
+    "cases/subpackage2.loaded": "First Subpackage is loaded",
+
+    "cases/subpackage.complete": "Load the sub-package successfully, you can jump to the scene to view",
     "cases/subpackage.failed": "Failed to load the package, please check the console for details",
+    "cases/subpackage.back": "Back",
 
     // Audio Play use the cc.AuidioEngine
     "scripts/AudioCtrl_Play": "Play",

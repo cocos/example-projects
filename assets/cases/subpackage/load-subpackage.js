@@ -1,21 +1,41 @@
 cc.Class({
     extends: cc.Component,
 
-    start () {
-        this.label = cc.find('Canvas/New Label').getComponent(cc.Label);
-        this.label.textKey = '';
+    properties: {
+        tips: require('LabelLocalized')
     },
 
-    loadSubpackage () {
-        if (CC_PREVIEW || CC_QQPLAY) return;
-        cc.loader.downloader.loadSubpackage('subpackage', err => {
+    onLoadSubpackageCallback (err) {
+        if (err) {
+            console.error(err);
+            this.tips.textKey = 'cases/subpackage.failed';
+            return;
+        }
+        this.tips.textKey = 'cases/subpackage.complete';
+    },
+
+    loadSubpackage1 () {
+        cc.loader.downloader.loadSubpackage('First', this.onLoadSubpackageCallback.bind(this));
+    },
+
+    loadSubpackage2 () {
+        cc.loader.downloader.loadSubpackage('Second', this.onLoadSubpackageCallback.bind(this));
+    },
+
+    goSubpackage1 () {
+        cc.director.loadScene('sub-first', (err) => {
             if (err) {
-                console.error(err);
-                this.label.textKey = 'cases/subpackage.failed';
-                return;
+                this.tips.textKey = 'cases/goSubpackage1.failed';
             }
-            console.log('load subpackage successfully.');
-            cc.director.loadScene('subpackage');
         });
-    }
+    },
+
+    goSubpackage2 () {
+        cc.director.loadScene('sub-second', (err) => {
+            if (err) {
+                this.tips.textKey = 'cases/goSubpackage2.failed';
+            }
+        });
+    },
+
 });
