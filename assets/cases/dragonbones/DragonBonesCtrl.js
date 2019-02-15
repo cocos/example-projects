@@ -466,12 +466,12 @@ cc.Class({
             // Animation mixing.
             if (this._aimDir >= 0) {
                 this._aimState = this._armature.animation.fadeIn(
-                    "aimUp", 0, 1,
+                    "aimUp", 0.01, 1,
                     0, AIM_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
                 );
             } else {
                 this._aimState = this._armature.animation.fadeIn(
-                    "aimDown", 0, 1,
+                    "aimDown", 0.01, 1,
                     0, AIM_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
                 );
             }

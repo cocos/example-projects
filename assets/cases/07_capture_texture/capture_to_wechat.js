@@ -4,11 +4,11 @@ cc.Class({
     start () {
         this.init();
         // create the capture
-        this.schedule(() => {
+        this.scheduleOnce(() => {
             let canvas = this.createSprite();
             this.initImage();
             this.saveFile(canvas);
-        }, 1, 0);
+        }, 1);
     },
 
     saveFile (tempCanvas) {
