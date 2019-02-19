@@ -48,6 +48,7 @@ cc.Class({
         this._clear();
         this._createLabel("Load All Assets");
         this.scrollView.scrollToTop();
+        this.btnClearAll.active = false;  // 防止加载的过程中清除资源
 
         cc.loader.loadResDir("test_assets", (err, assets) => {
             if (!this.isValid) {
@@ -80,6 +81,7 @@ cc.Class({
         this._clear();
         this._createLabel("Load All Sprite Frame");
         this.scrollView.scrollToTop();
+        this.btnClearAll.active = false;  // 防止加载的过程中清除资源
 
         cc.loader.loadResDir("test_assets", cc.SpriteFrame, (err, assets) => {
             if (!this.isValid) {
