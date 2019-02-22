@@ -59,11 +59,12 @@ cc.Class({
             this.tip.string = 'Color_changed successd';
         }
         this.basicNode.on(cc.Node.EventType.COLOR_CHANGED, colorChanged, this);
-        this.basicNode.color = new cc.Color(229, 232, 232);
+        this.basicNode.color = new cc.Color(100, 100, 100);
         this.basicNode.off(cc.Node.EventType.COLOR_CHANGED, colorChanged, this);
     },
 
     addingChild () {
+        this.resetChildNode();
         function childAdded (child) {
             this.tip.string = `Add_child successd: ${this.getChildrenContent()}`;
             console.log(child);
@@ -76,6 +77,7 @@ cc.Class({
     },
 
     removingChild () {
+        this.resetChildNode();
         function childRemoved (child) {
             this.tip.string = `Remove_child successd: ${this.getChildrenContent()}`;
             console.log(child);
@@ -144,9 +146,16 @@ cc.Class({
     getChildrenContent () {
         let str = '';
         let children = this.preNode.children;
+        let tempObj = children[0];
         for (let i = 0; i < children.length; i++) {
-            str += children[i].name + ' ';
+            let child = children[i];
+            str += child.name + ' ';
+            if (child.zIndex > tempObj.zIndex) {
+                tempObj = child;
+            }
+            child.color = new cc.Color(255, 255, 255);
         }
+        tempObj.color = new cc.Color(255, 0, 0);
         return str;
     }
 });
