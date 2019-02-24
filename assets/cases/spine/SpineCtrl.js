@@ -30,11 +30,12 @@ cc.Class({
             var animationName = trackEntry.animation ? trackEntry.animation.name : "";
             cc.log("[track %s][animation %s] will be disposed.", trackEntry.trackIndex, animationName);
         });
-        spine.setCompleteListener((trackEntry, loopCount) => {
+        spine.setCompleteListener((trackEntry) => {
             var animationName = trackEntry.animation ? trackEntry.animation.name : "";
             if (animationName === 'shoot') {
                 this.spine.clearTrack(1);
             }
+            var loopCount = Math.floor(trackEntry.trackTime / trackEntry.animationEnd); 
             cc.log("[track %s][animation %s] complete: %s", trackEntry.trackIndex, animationName, loopCount);
         });
         spine.setEventListener((trackEntry, event) => {
