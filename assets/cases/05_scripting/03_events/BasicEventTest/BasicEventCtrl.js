@@ -1,3 +1,6 @@
+
+const TipsManager = require('TipsManager');
+
 cc.Class({
     extends: cc.Component,
 
@@ -6,6 +9,10 @@ cc.Class({
         preNode: cc.Node,
         childNode: cc.Node,
         tip: cc.Label
+    },
+
+    start () {
+        TipsManager.init();
     },
 
     changePosition () {
@@ -64,39 +71,42 @@ cc.Class({
     },
 
     addingChild () {
-        this.resetChildNode();
         function childAdded (child) {
-            this.tip.string = `Add_child successd: ${this.getChildrenContent()}`;
+            this.tip.string = `Add_child successd\n zIndex order: ${this.getChildrenContent()}`;
             console.log(child);
         }
         this.preNode.on(cc.Node.EventType.CHILD_ADDED, childAdded, this);
-        if (this.preNode.children.length == 2) {
-            this.preNode.addChild(this.childNode);
+        if (this.preNode.children.length !== 2) {
+            TipsManager.createTips(`Only support when there is 2 stars existing`);
+            return;
         }
+        this.preNode.addChild(this.childNode);
         this.preNode.off(cc.Node.EventType.CHILD_ADDED, childAdded, this);
     },
 
     removingChild () {
         this.resetChildNode();
         function childRemoved (child) {
-            this.tip.string = `Remove_child successd: ${this.getChildrenContent()}`;
+            this.tip.string = `Remove_child successd\n zIndex order: ${this.getChildrenContent()}`;
             console.log(child);
         }
         this.preNode.on(cc.Node.EventType.CHILD_REMOVED, childRemoved, this);
-        if (this.preNode.children.length == 3) {
-            this.preNode.removeChild(this.childNode);
+        if (this.preNode.children.length !== 3) {
+           TipsManager.createTips(`Only support when there is 3 stars existing`);
+           return;
         }
+        this.preNode.removeChild(this.childNode);
         this.preNode.off(cc.Node.EventType.CHILD_REMOVED, childRemoved, this);
     },
 
     reorderChild () {
         this.resetChildNode();
         function childReordered (parent) {
-            this.tip.string = `Reorder_child successd: ${this.getChildrenContent()}`;
+            this.tip.string = `Reorder_child successd\n zIndex order: ${this.getChildrenContent()}`;
             console.log(parent);
         }
         this.preNode.on(cc.Node.EventType.CHILD_REORDER, childReordered, this);
-        this.preNode.children[1].zIndex = 10;
+        this.preNode.children[0].zIndex = 10;
         this.preNode.sortAllChildren();
         this.preNode.off(cc.Node.EventType.CHILD_REORDER, childReordered, this);
     },
@@ -145,14 +155,17 @@ cc.Class({
 
     getChildrenContent () {
         let str = '';
-        let children = this.preNode.children;
+        let children = this.preNode.children.sort((a, b) => {
+            return a.zIndex - b.zIndex;
+        });
+
         let tempObj = children[0];
         for (let i = 0; i < children.length; i++) {
             let child = children[i];
-            str += child.name + ' ';
             if (child.zIndex > tempObj.zIndex) {
                 tempObj = child;
             }
+            str += `${child.name} `;
             child.color = new cc.Color(255, 255, 255);
         }
         tempObj.color = new cc.Color(255, 0, 0);
