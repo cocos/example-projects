@@ -8,7 +8,8 @@ cc.Class({
             default: null,
             type: cc.Label
         },
-        itemID: 0
+        tmplID: 0,
+        itemID: 0,
     },
     
     onLoad: function () {
@@ -17,8 +18,14 @@ cc.Class({
         }, this);
     },
 
-    updateItem: function(tmplId, itemId) {
-        this.itemID = itemId;
-        this.label.textKey = i18n.t("cases/02_ui/05_scrollView/Item.js.1") + tmplId + ' Item#' + this.itemID;
+    initItem: function (tmplID, itemID) {
+        this.tmplID = tmplID;
+        this.itemID = itemID;
+        this.label.textKey = i18n.t("cases/02_ui/05_scrollView/Item.js.1") + this.tmplID + ' Item#' + this.itemID;
+    },
+
+    updateItem: function(itemID) {
+        this.itemID = itemID;
+        this.label.textKey = i18n.t("cases/02_ui/05_scrollView/Item.js.1") + this.tmplID + ' Item#' + this.itemID;
     },
 });
