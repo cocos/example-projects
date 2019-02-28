@@ -3,9 +3,9 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        texture: {
+        sprite: {
             default: null,
-            type: cc.Texture2D
+            type: cc.Sprite
         },
         infoLabel: cc.Label
     },
@@ -15,7 +15,8 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        this.infoLabel.string = this.texture.url;
+        let texture = this.sprite.spriteFrame.getTexture();
+        this.infoLabel.string = texture.url + '@' + texture.getPixelFormat();
     },
 
     // update (dt) {},
