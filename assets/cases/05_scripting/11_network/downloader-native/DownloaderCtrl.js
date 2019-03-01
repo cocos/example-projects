@@ -13,7 +13,8 @@ cc.Class({
         _txtTask: null,
         _audioTask: null,
         _storagePath: "",
-        _inited: false
+        _inited: false,
+        _downloading: false
     },
 
     // use this for initialization
@@ -61,6 +62,8 @@ cc.Class({
                 this._audioID = cc.audioEngine.play(clip);
             });
         }
+        // download success
+        this._downloading = false;
     },
 
     onProgress (task, bytesReceived, totalBytesReceived, totalBytesExpected) {
@@ -74,24 +77,29 @@ cc.Class({
     },
 
     downloadImg () {
-        if (!this.imgUrl || !this._inited) {
+        if (!this.imgUrl || !this._inited || this._downloading) {
             return;
         }
         this.sprite.node.active = false;
         this.label.node.active = true;
         this.label.string = 'Downloading image';
         this._imgTask = this._downloader.createDownloadFileTask(this.imgUrl, this._storagePath + 'download1.png');
+        this._downloading = true;
     },
 
     loadImg () {
-        if (!this.tempImgUrl || !this._inited) {
+        if (!this.tempImgUrl || !this._inited || this._downloading) {
             return;
         }
+
+        this._downloading = true;
+        this.label.string = 'Downloading image (mem)';
         cc.loader.load(this.tempImgUrl, (error, tex) => {
             if (error) {
                 console.log("Load remote image failed: " + error);
             }
             else {
+                this._downloading = false;
                 this.sprite.spriteFrame = new cc.SpriteFrame(tex);
                 this.sprite.node.active = true;
                 this.label.node.active = false;
@@ -101,22 +109,24 @@ cc.Class({
     },
 
     downloadTxt () {
-        if (!this.txtUrl || !this._inited) {
+        if (!this.txtUrl || !this._inited || this._downloading) {
             return;
         }
         this.label.node.active = true;
         this.sprite.node.active = false;
-        this.label.string = 'Downloading Txt';
+        this.label.string = 'Downloading Text';
+        this._downloading = true;
         this._txtTask = this._downloader.createDownloadFileTask(this.txtUrl, this._storagePath + 'imagine.txt');
     },
 
     downloadAudio () {
-        if (!this.audioUrl || !this._inited) {
+        if (!this.audioUrl || !this._inited || this._downloading) {
             return;
         }
         this.sprite.node.active = false;
         this.label.node.active = true;
         this.label.string = 'Downloading Audio';
+        this._downloading = true;
         this._audioTask = this._downloader.createDownloadFileTask(this.audioUrl, this._storagePath + 'audioTest.mp3');
     },
 
