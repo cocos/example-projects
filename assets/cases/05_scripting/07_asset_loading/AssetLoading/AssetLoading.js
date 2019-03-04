@@ -40,6 +40,10 @@ cc.Class({
         this._onRegisteredEvent();
     },
 
+    onDestroy () {
+        cc.loader.releaseAsset(this._curRes);
+    },
+
     _onRegisteredEvent: function () {
         for (var i = 0; i < this.loadList.length; ++i) {
             this.loadList[i].on(cc.Node.EventType.TOUCH_END, this._onClick.bind(this));
