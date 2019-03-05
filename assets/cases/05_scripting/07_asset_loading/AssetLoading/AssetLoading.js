@@ -41,7 +41,9 @@ cc.Class({
     },
 
     onDestroy () {
-        cc.loader.releaseAsset(this._curRes);
+        if (this._curRes) {
+            cc.loader.releaseAsset(this._curRes);
+        }
     },
 
     _onRegisteredEvent: function () {
