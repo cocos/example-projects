@@ -14,7 +14,8 @@ cc.Class({
         xhrABResp: cc.Label,
         xhrTimeoutResp: cc.Label,
         websocketResp: cc.Label,
-        socketIOResp: cc.Label
+        socketIOResp: cc.Label,
+        wssCacert: cc.Asset,
     },
 
     // use this for initialization
@@ -96,7 +97,8 @@ cc.Class({
         var self = this;
         var websocketLabel = this.websocket;
         var respLabel = this.websocketResp;
-        this._wsiSendBinary = new WebSocket("wss://echo.websocket.org");
+        // We should pass the cacert to libwebsockets used in native platform, otherwise the wss connection would be closed.
+        this._wsiSendBinary = new WebSocket("wss://echo.websocket.org", [], this.wssCacert);
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
             websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
