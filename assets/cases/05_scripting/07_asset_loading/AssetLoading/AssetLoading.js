@@ -140,8 +140,6 @@ cc.Class({
     _onShowResClick: function (event) {
         if (this._curType === "Scene") {
             cc.director.runScene(this._curRes.scene);
-            cc.loader.releaseAsset(this._curRes);
-            this._curRes = null;
 
             return;
         }
