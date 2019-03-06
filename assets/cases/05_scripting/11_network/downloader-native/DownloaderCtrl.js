@@ -71,6 +71,7 @@ cc.Class({
     },
 
     onError (task, errorCode, errorCodeInternal, errorStr) {
+        this._downloading = false;
         this.sprite.node.active = false;
         this.label.node.active = true;
         this.label.string = 'Failed to download file (' + task.requestURL + '): ' + errorStr + '(' + errorCode + ')';
@@ -95,11 +96,11 @@ cc.Class({
         this._downloading = true;
         this.label.string = 'Downloading image (mem)';
         cc.loader.load(this.tempImgUrl, (error, tex) => {
+            this._downloading = false;
             if (error) {
                 console.log("Load remote image failed: " + error);
             }
             else {
-                this._downloading = false;
                 this.sprite.spriteFrame = new cc.SpriteFrame(tex);
                 this.sprite.node.active = true;
                 this.label.node.active = false;
