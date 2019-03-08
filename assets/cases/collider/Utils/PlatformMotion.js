@@ -13,22 +13,16 @@ cc.Class({
         this._movedDiff = 0;
     },
 
-    // called every frame, uncomment this function to activate update callback
     update: function (dt) {
         var d = this.speed * this._direction * dt;
-        
-        var movedDistance = this._movedDistance + Math.abs(d);
+
         this._movedDistance += Math.abs(d);
-        
-        if (movedDistance > this.distance) {
+        if (this._movedDistance > this.distance) {
             d = this.distance - this._movedDistance;
             this._movedDistance = 0;
             this._direction *= -1;
         }
-        else {
-            this._movedDistance = movedDistance;
-        }
-        
+
         this.node.x += d;
         this._movedDiff = d;
     },
