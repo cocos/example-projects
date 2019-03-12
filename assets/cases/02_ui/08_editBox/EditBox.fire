@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.5697916666666667,
-      "y": 0.5697916666666667,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_quat": {
@@ -55,7 +55,7 @@
       "z": 0,
       "w": 1
     },
-    "_zIndex": 0,
+    "_is3DNode": true,
     "groupIndex": 0,
     "autoReleaseAssets": true,
     "_id": "253eae38-f8c7-422a-86a7-34ad03a112b0"
@@ -140,8 +140,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -151,8 +149,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "18e21hLtmdC27BpZFkxX2D9"
   },
   {
@@ -201,8 +201,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -212,8 +210,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "65h3u5xsJMqKMPuh7VxYLY"
   },
   {
@@ -236,6 +236,19 @@
     "_depth": -1,
     "_zoomRatio": 1,
     "_targetTexture": null,
+    "_fov": 60,
+    "_orthoSize": 10,
+    "_nearClip": 0.1,
+    "_farClip": 4096,
+    "_ortho": true,
+    "_rect": {
+      "__type__": "cc.Rect",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "_renderStages": 1,
     "_id": "05jiBU3xJMYYnuQW2vmV94"
   },
   {
@@ -297,7 +310,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 251.15,
-      "height": 80
+      "height": 90
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -316,8 +329,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -327,8 +338,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "c5f7anqPAhEc4YGy/Spv0Tf"
   },
   {
@@ -339,8 +352,7 @@
       "__id__": 7
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": false,
     "_string": "按钮必须在 EditBox 的上面, \n并且它应该允许点击.",
     "_N$string": "按钮必须在 EditBox 的上面, \n并且它应该允许点击.",
@@ -350,10 +362,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
+    "_N$cacheMode": 0,
     "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.38",
     "_id": "82Z/kMdDVPv7GmqW9NFF33"
   },
@@ -413,8 +427,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -424,8 +436,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "888d5r6Bc5BVKOfDqhSuEwh"
   },
   {
@@ -474,8 +488,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -485,8 +497,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "91X/J6mj5J4JvUPmRaEl7P"
   },
   {
@@ -497,6 +511,7 @@
       "__id__": 10
     },
     "_enabled": true,
+    "_materials": [],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -563,8 +578,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -574,8 +587,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "39xK3vy59Aw6G7F1U9S9vb"
   },
   {
@@ -586,8 +601,7 @@
       "__id__": 12
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": true,
     "_string": "",
     "_N$string": "",
@@ -597,10 +611,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
+    "_N$cacheMode": 0,
     "_id": "a0g+9fPRFPmag1MPtEjAhY"
   },
   {
@@ -649,8 +665,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -660,8 +674,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "6aAdJD3VlHmolb3tAh9jM1"
   },
   {
@@ -672,8 +688,7 @@
       "__id__": 14
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": true,
     "_string": "Enter text here...",
     "_N$string": "Enter text here...",
@@ -683,10 +698,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
+    "_N$cacheMode": 0,
     "_id": "e520V+rL9GJ5NgYg/KfGz0"
   },
   {
@@ -699,6 +716,8 @@
     "_enabled": true,
     "_useOriginalSize": false,
     "_string": "",
+    "returnType": 0,
+    "maxLength": 50,
     "_tabIndex": 0,
     "editingDidBegan": [
       {
@@ -716,31 +735,17 @@
       }
     ],
     "editingReturn": [],
-    "_N$backgroundImage": {
-      "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
+    "_N$textLabel": {
+      "__id__": 13
     },
-    "_N$returnType": 0,
+    "_N$placeholderLabel": {
+      "__id__": 15
+    },
+    "_N$background": {
+      "__id__": 11
+    },
     "_N$inputFlag": 4,
     "_N$inputMode": 6,
-    "_N$fontSize": 25,
-    "_N$lineHeight": 40,
-    "_N$fontColor": {
-      "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 255
-    },
-    "_N$placeholder": "Enter text here...",
-    "_N$placeholderFontSize": 25,
-    "_N$placeholderFontColor": {
-      "__type__": "cc.Color",
-      "r": 127,
-      "g": 127,
-      "b": 127,
-      "a": 255
-    },
-    "_N$maxLength": 50,
     "_N$stayOnTop": false,
     "_id": "a2W2yneJpCx6sS5Vux97bH"
   },
@@ -750,6 +755,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "singleLineEditBoxDidBeginEditing",
     "customEventData": ""
   },
@@ -799,8 +805,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -810,8 +814,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "1e663cU7CtCz6f9K1IF+HZJ"
   },
   {
@@ -846,6 +852,8 @@
     "_enabled": true,
     "_useOriginalSize": false,
     "_string": "",
+    "returnType": 0,
+    "maxLength": 20,
     "_tabIndex": 0,
     "editingDidBegan": [
       {
@@ -863,31 +871,17 @@
       }
     ],
     "editingReturn": [],
-    "_N$backgroundImage": {
-      "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
+    "_N$textLabel": {
+      "__id__": 25
     },
-    "_N$returnType": 0,
+    "_N$placeholderLabel": {
+      "__id__": 27
+    },
+    "_N$background": {
+      "__id__": 23
+    },
     "_N$inputFlag": 0,
     "_N$inputMode": 6,
-    "_N$fontSize": 25,
-    "_N$lineHeight": 39.9,
-    "_N$fontColor": {
-      "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 255
-    },
-    "_N$placeholder": "Enter text here...",
-    "_N$placeholderFontSize": 25,
-    "_N$placeholderFontColor": {
-      "__type__": "cc.Color",
-      "r": 131,
-      "g": 129,
-      "b": 129,
-      "a": 255
-    },
-    "_N$maxLength": 20,
     "_N$stayOnTop": false,
     "_id": "d4qieMRRxLeIhQJzFAmJQO"
   },
@@ -947,8 +941,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -958,8 +950,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "3143fGhYk5GnZlsYel4kh75"
   },
   {
@@ -1008,8 +1002,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1019,8 +1011,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "6emiTa9xlCTJ0uW7qs76bR"
   },
   {
@@ -1031,6 +1025,7 @@
       "__id__": 22
     },
     "_enabled": true,
+    "_materials": [],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -1097,8 +1092,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1108,8 +1101,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "babuyFz2pDUJF7935Tm29n"
   },
   {
@@ -1120,8 +1115,7 @@
       "__id__": 24
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": true,
     "_string": "",
     "_N$string": "",
@@ -1131,10 +1125,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
+    "_N$cacheMode": 0,
     "_id": "19ZlrAyYRBN4ekSM6r24IL"
   },
   {
@@ -1183,8 +1179,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1194,8 +1188,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "51hDfyqx1JqZkOdFw7Aljg"
   },
   {
@@ -1206,8 +1202,7 @@
       "__id__": 26
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": true,
     "_string": "Enter text here...",
     "_N$string": "Enter text here...",
@@ -1217,10 +1212,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
+    "_N$cacheMode": 0,
     "_id": "f6sP9i/mpKP5PKVVNIIN7E"
   },
   {
@@ -1229,6 +1226,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "singleLinePasswordEditBoxDidBeginEditing",
     "customEventData": ""
   },
@@ -1238,6 +1236,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "singleLinePasswordEditBoxDidChanged",
     "customEventData": ""
   },
@@ -1247,6 +1246,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "singleLinePasswordEditBoxDidEndEditing",
     "customEventData": ""
   },
@@ -1260,6 +1260,8 @@
     "_enabled": true,
     "_useOriginalSize": false,
     "_string": "",
+    "returnType": 0,
+    "maxLength": 10000,
     "_tabIndex": 0,
     "editingDidBegan": [
       {
@@ -1277,31 +1279,17 @@
       }
     ],
     "editingReturn": [],
-    "_N$backgroundImage": {
-      "__uuid__": "0aa0b36c-c4a9-4ce2-ab3b-efede708e6d4"
+    "_N$textLabel": {
+      "__id__": 36
     },
-    "_N$returnType": 0,
+    "_N$placeholderLabel": {
+      "__id__": 38
+    },
+    "_N$background": {
+      "__id__": 34
+    },
     "_N$inputFlag": 2,
     "_N$inputMode": 0,
-    "_N$fontSize": 25,
-    "_N$lineHeight": 31,
-    "_N$fontColor": {
-      "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 255
-    },
-    "_N$placeholder": "Enter text here...",
-    "_N$placeholderFontSize": 25,
-    "_N$placeholderFontColor": {
-      "__type__": "cc.Color",
-      "r": 127,
-      "g": 127,
-      "b": 127,
-      "a": 255
-    },
-    "_N$maxLength": 10000,
     "_N$stayOnTop": false,
     "_id": "f85F+OdApNZZxHu1ICuHjU"
   },
@@ -1361,8 +1349,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1372,8 +1358,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "0aecdhdv3hGZr17xc1iOvBk"
   },
   {
@@ -1422,8 +1410,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1433,8 +1419,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "ddN5fNPfJGE4dK7BxAyTjm"
   },
   {
@@ -1445,6 +1433,7 @@
       "__id__": 33
     },
     "_enabled": true,
+    "_materials": [],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -1511,8 +1500,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1522,8 +1509,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "51jNtyPtVFHLS3g9nZY7e+"
   },
   {
@@ -1534,21 +1523,22 @@
       "__id__": 35
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": true,
     "_string": "",
     "_N$string": "",
     "_fontSize": 25,
-    "_lineHeight": 31,
+    "_lineHeight": 30,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
+    "_N$cacheMode": 0,
     "_id": "5a+XVvUlNJaavgKqD9VwHH"
   },
   {
@@ -1597,8 +1587,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1608,8 +1596,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "a2jyUti/BO0KnxTW46ij78"
   },
   {
@@ -1620,21 +1610,22 @@
       "__id__": 37
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": true,
     "_string": "Enter text here...",
     "_N$string": "Enter text here...",
     "_fontSize": 25,
-    "_lineHeight": 112,
+    "_lineHeight": 30,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
+    "_N$cacheMode": 0,
     "_id": "6cRIpgSPVEZZYaOxS4k5sY"
   },
   {
@@ -1643,6 +1634,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "multiLinePasswordEditBoxDidBeginEditing",
     "customEventData": ""
   },
@@ -1652,6 +1644,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "multiLinePasswordEditBoxDidChanged",
     "customEventData": ""
   },
@@ -1661,6 +1654,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "multiLinePasswordEditBoxDidEndEditing",
     "customEventData": ""
   },
@@ -1672,8 +1666,7 @@
       "__id__": 43
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": false,
     "_string": "",
     "_N$string": "",
@@ -1683,10 +1676,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
+    "_N$cacheMode": 0,
     "_id": "cfIaAeZlhOq7Ck+zQBFa3B"
   },
   {
@@ -1716,7 +1711,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 0,
-      "height": 40
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1735,8 +1730,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1746,8 +1739,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "bed39et4jZKmqiiMmyEXwgO"
   },
   {
@@ -1756,6 +1751,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "singleLineEditBoxDidChanged",
     "customEventData": ""
   },
@@ -1765,6 +1761,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "singleLineEditBoxDidEndEditing",
     "customEventData": ""
   },
@@ -1795,7 +1792,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 211.11,
-      "height": 48
+      "height": 60
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1814,8 +1811,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1825,8 +1820,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "c0231eoBL9MmI6spms+LGbP"
   },
   {
@@ -1837,8 +1834,7 @@
       "__id__": 46
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": false,
     "_string": "单行文本框:",
     "_N$string": "单行文本框:",
@@ -1848,10 +1844,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
+    "_N$cacheMode": 0,
     "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.27",
     "_id": "6d9OqZBhxHjL5rvNB7rRoF"
   },
@@ -1908,8 +1906,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1919,8 +1915,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "0cb4aWA29ZHa4v5Of8wLBWh"
   },
   {
@@ -1950,7 +1948,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 40,
-      "height": 40
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1969,8 +1967,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -1980,8 +1976,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "d6600k68H5JlLPSULJUDkh0"
   },
   {
@@ -1992,8 +1990,7 @@
       "__id__": 49
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": false,
     "_string": "点击",
     "_N$string": "点击",
@@ -2003,10 +2000,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
+    "_N$cacheMode": 0,
     "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.32",
     "_id": "97Okx8oLpNvrRvHVBrX0P7"
   },
@@ -2018,6 +2017,7 @@
       "__id__": 48
     },
     "_enabled": true,
+    "_materials": [],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -2046,21 +2046,6 @@
       "__id__": 48
     },
     "_enabled": true,
-    "transition": 2,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "hoverColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
     "duration": 0.1,
     "zoomScale": 1.2,
     "clickEvents": [
@@ -2070,7 +2055,37 @@
     ],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
+    "_N$transition": 2,
+    "transition": 2,
     "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$hoverColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "hoverColor": {
       "__type__": "cc.Color",
       "r": 255,
       "g": 255,
@@ -2113,6 +2128,7 @@
       "__id__": 18
     },
     "component": "EditboxCtrl",
+    "_componentId": "",
     "handler": "buttonClicked",
     "customEventData": ""
   },
@@ -2143,7 +2159,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 211.11,
-      "height": 73
+      "height": 91.25
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2162,8 +2178,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -2173,8 +2187,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "490402osfVB54NYabvTU9d8"
   },
   {
@@ -2185,8 +2201,7 @@
       "__id__": 54
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": false,
     "_string": "单行密码框:",
     "_N$string": "单行密码框:",
@@ -2196,10 +2211,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
+    "_N$cacheMode": 0,
     "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.25",
     "_id": "3fJRUA90RK/ZCPw7KLlcrl"
   },
@@ -2230,7 +2247,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 211.11,
-      "height": 58
+      "height": 72.5
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2249,8 +2266,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -2260,8 +2275,10 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "60ee5Ra/PlJ+5POl9OPEfZ5"
   },
   {
@@ -2272,8 +2289,7 @@
       "__id__": 56
     },
     "_enabled": true,
-    "_srcBlendFactor": 1,
-    "_dstBlendFactor": 771,
+    "_materials": [],
     "_useOriginalSize": false,
     "_string": "多行文本框:",
     "_N$string": "多行文本框:",
@@ -2283,10 +2299,12 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
+    "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
+    "_N$cacheMode": 0,
     "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.29",
     "_id": "261GoS7JtJfqfOmPK53Xr+"
   },
