@@ -16,7 +16,7 @@ cc.Class({
         // The defference delay should only eval once
         .delay(0.5 + i * 0.2)
         // repeat 1000 times
-        .repeat(
+        .repeat(1000,
           t()
             // first reset node properties
             .set({ opacity: 0, scale: 10, x: 0, rotation: 0 })
@@ -30,8 +30,7 @@ cc.Class({
             .delay(1)
             .to(0.3, { opacity: 0, scale: 3 }, { easing: "quintIn" })
             .delay(1)
-
-        , 1000)
+        )
         .start()
     }
   },
