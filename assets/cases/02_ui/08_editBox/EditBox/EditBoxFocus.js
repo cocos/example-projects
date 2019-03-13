@@ -15,11 +15,11 @@ cc.Class({
     setFocus: function (event){
         var target = event.target;
         if (target.name === "Button1") {
-            this.editBox1.setFocus(true);
+            this.editBox1.focus();
         } else if (target.name === "Button2") {
-            this.editBox2.setFocus(true);
+            this.editBox2.focus();
         } else if (target.name === "Button3"){
-            this.editBox3.setFocus(true);
+            this.editBox3.focus();
         }
 
         if (this.editBox1.isFocused()) {
