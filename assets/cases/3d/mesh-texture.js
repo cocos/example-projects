@@ -1,8 +1,11 @@
 
-let gfx = cc.renderer.renderEngine.gfx;
+let gfx = cc.gfx;
 
 cc.Class({
     extends: cc.Component,
+    editor: {
+        executeInEditMode: true
+    },
 
     properties: {
         speed: 50
@@ -52,6 +55,8 @@ cc.Class({
     },
 
     update (dt) {
+        if (CC_EDITOR) return;
+        
         let lm = this.vertexes[3];
         let rm = this.vertexes[5];
         if ((lm.x < -200 && this.speed < 0) || (lm.x > 0 && this.speed > 0)) {

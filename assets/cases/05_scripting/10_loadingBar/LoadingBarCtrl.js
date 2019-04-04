@@ -48,7 +48,8 @@ cc.Class({
     _clearAll: function () {
         for (var i = 0; i < this._urls.length; ++i) {
             var url = this._urls[i];
-            cc.loader.release(url);
+            var deps = cc.loader.getDependsRecursively(url);
+            cc.loader.release(deps);
         }
     },
 

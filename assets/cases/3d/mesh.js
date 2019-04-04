@@ -1,9 +1,13 @@
 const chroma = require('chroma');
 
-let gfx = cc.renderer.renderEngine.gfx;
+let gfx = cc.gfx;
 
 cc.Class({
     extends: cc.Component,
+
+    editor: {
+        executeInEditMode: true
+    },
 
     properties: {
     },
@@ -61,6 +65,8 @@ cc.Class({
     },
 
     update (dt) {
+        if (CC_EDITOR) return;
+
         let c1 = chroma.hsl(330, 1, this.lighten);
         let c2 = chroma.hsl(100, 1, (1-this.lighten));
 

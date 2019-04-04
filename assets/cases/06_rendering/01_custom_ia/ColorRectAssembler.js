@@ -2,9 +2,9 @@ module.exports = {
     useModel: false,
     updateRenderData (comp) {
         if (!comp._renderData) {
-            let IARenderData = cc.renderer.renderEngine.IARenderData;
+            let IARenderData = cc.renderer.IARenderData;
             comp._renderData = new IARenderData();
-            comp._renderData.material = comp.getMaterial();
+            comp._renderData.material = comp.getMaterial(0);
             comp._renderData.ia = comp._ia;
         }
     },

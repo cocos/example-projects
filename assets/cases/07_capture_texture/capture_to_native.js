@@ -81,7 +81,7 @@ cc.Class({
             for (let i = 0; i < rowBytes; i++) {
                 picData[reStart + i] = data[start + i];
             }
-        }    
+        }
         return picData;
     }
 }); 

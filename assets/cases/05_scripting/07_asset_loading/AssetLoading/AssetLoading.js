@@ -40,6 +40,12 @@ cc.Class({
         this._onRegisteredEvent();
     },
 
+    onDestroy () {
+        if (this._curRes) {
+            cc.loader.releaseAsset(this._curRes);
+        }
+    },
+
     _onRegisteredEvent: function () {
         for (var i = 0; i < this.loadList.length; ++i) {
             this.loadList[i].on(cc.Node.EventType.TOUCH_END, this._onClick.bind(this));
@@ -136,8 +142,6 @@ cc.Class({
     _onShowResClick: function (event) {
         if (this._curType === "Scene") {
             cc.director.runScene(this._curRes.scene);
-            cc.loader.releaseAsset(this._curRes);
-            this._curRes = null;
 
             return;
         }

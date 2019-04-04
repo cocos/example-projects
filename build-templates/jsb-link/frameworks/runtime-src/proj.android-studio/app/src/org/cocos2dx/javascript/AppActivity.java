@@ -1,5 +1,6 @@
 /****************************************************************************
-Copyright (c) 2015 Chukong Technologies Inc.
+Copyright (c) 2015-2016 Chukong Technologies Inc.
+Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
  
 http://www.cocos2d-x.org
 
@@ -47,7 +48,18 @@ public class AppActivity extends Cocos2dxActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         app = this;
+        // Workaround in
+        // https://stackoverflow.com/questions/16283079/re-launch-of-activity-on-home-button-but-only-the-first-time/16447508
+        if (!isTaskRoot()) {
+            // Android launched another instance of the root activity into an existing task
+            // so just quietly finish and go away, dropping the user back into the activity
+            // at the top of the stack (ie: the last state of this task)
+            // Don't need to finish it again since it's finished in super.onCreate .
+            return;
+        }
+        // DO OTHER INITIALIZATION BELOW
         SDKWrapper.getInstance().init(this);
+
     }
 	
     @Override
@@ -55,8 +67,7 @@ public class AppActivity extends Cocos2dxActivity {
         Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);
         // TestCpp should create stencil buffer
         glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
-
-        SDKWrapper.getInstance().setGLSurfaceView(glSurfaceView);
+        SDKWrapper.getInstance().setGLSurfaceView(glSurfaceView, this);
 
         return glSurfaceView;
     }
@@ -90,18 +101,21 @@ public class AppActivity extends Cocos2dxActivity {
     protected void onResume() {
         super.onResume();
         SDKWrapper.getInstance().onResume();
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         SDKWrapper.getInstance().onPause();
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         SDKWrapper.getInstance().onDestroy();
+
     }
 
     @Override
@@ -127,7 +141,7 @@ public class AppActivity extends Cocos2dxActivity {
         super.onStop();
         SDKWrapper.getInstance().onStop();
     }
-        
+
     @Override
     public void onBackPressed() {
         SDKWrapper.getInstance().onBackPressed();

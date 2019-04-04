@@ -1,7 +1,6 @@
 //
-// 用于提示用户哪些范例不支持平台
+// Restricted the scenes platform permissions
 //
-
 module.exports = {
     tispPrefab: null,
 
@@ -11,15 +10,18 @@ module.exports = {
             case 'EditBoxTabIndex':     return !cc.sys.isNative;
             case 'OnMultiTouchInput':   return cc.sys.isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
-            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY;
-            case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID;
+            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.VIVO_GAME;
+            case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID && !CC_RUNTIME;
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
-            case 'subpackage':          return (!CC_PREVIEW && cc.sys.platform !== cc.sys.QQ_PLAY);
-            case 'render_to_canvas':    return (!cc.sys.isNative && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME);
+            case 'Subpackages':
+                return (!CC_PREVIEW && !CC_JSB && !cc.sys.isBrowser && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.VIVO_GAME);
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':
+                return cc.sys.isNative && !CC_RUNTIME;
+
+            // Not support the VIVO_GAME and OPPO_GAME
             case 'capture_to_native':
-                return cc.sys.isNative;
+                return cc.sys.isNative && cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
             case 'iOS_getSafeArea':
                 return (cc.sys.platform === cc.sys.IPHONE && cc.sys.isNative);
             case 'capture_to_wechat':
@@ -27,23 +29,27 @@ module.exports = {
             case 'capture_to_web':
                 return cc.sys.isBrowser;
 
-            // 只支持 RENDER_TYPE_WEBGL
+            // Only support the RENDER_TYPE_WEBGL
             case 'MotionStreak':
             case 'Mask_IMAGE_STENCIL':
             case 'Mask_NESTED':
                 return cc.game.renderType === cc.game.RENDER_TYPE_WEBGL;
 
-            // 不支持 isMobile
+            // Not support isMobile
             case 'KeyboardInput':
             case 'platform':
-                return !cc.sys.isMobile;
+                return !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME;
 
-            // 不支持 模拟器，QQ_PLAY，WECHAT_GAME 平台
-            case 'fullscreenVideo':
+            // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-            case 'webview':
-                return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
+                return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME && !CC_RUNTIME;
 
+            // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
+            case 'webview':
+                return  (cc.sys.isMobile || cc.sys.isBrowser) && !CC_RUNTIME && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
+            case 'mesh':
+                return cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
+            
             case 'QQPlay':
             case 'UserInfo':
             case 'BkAd':
@@ -75,7 +81,7 @@ module.exports = {
                 this.createTips();
             }
             return false;
-        }        
+        }
         return true;
     }
 };

@@ -3,21 +3,9 @@ cc.Class({
 
     properties: {
         editBox: cc.EditBox,
-        stayOnTop: cc.Toggle,
         eventDisplay: cc.Label,
-        platfromTip: cc.Node,
 
         _isEditingReturn: false,
-    },
-
-    start () {
-        this.editBox.stayOnTop = this.stayOnTop.isChecked;
-        this.stayOnTop.node.active = cc.sys.isBrowser;
-        this.platfromTip.active = !cc.sys.isBrowser;
-    },
-
-    onStayOnTop (event) {
-        this.editBox.stayOnTop = event.isChecked;        
     },
     
     editingDidBegan (event) {
