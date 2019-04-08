@@ -30,6 +30,10 @@ cc.Class({
         });
     },
 
+    onDestroy () {
+        cc.audioEngine.stopAll();
+    },
+
     removeAudio (id) {
         var idx = this.audioPool.indexOf(id);
         if (idx > -1) {
