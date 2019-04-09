@@ -5,6 +5,7 @@ module.exports = {
     tispPrefab: null,
 
     SupportConfig: function (name) {
+        console.log(name);
         switch (name) {
             case 'downloader-web':
             case 'EditBoxTabIndex':     return !cc.sys.isNative;
@@ -18,7 +19,6 @@ module.exports = {
             case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':
                 return cc.sys.isNative && !CC_RUNTIME;
-
             // Not support the VIVO_GAME and OPPO_GAME
             case 'capture_to_native':
                 return cc.sys.isNative && cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
@@ -42,6 +42,7 @@ module.exports = {
 
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
+            case 'ShadowLabel':
                 return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME && !CC_RUNTIME;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
