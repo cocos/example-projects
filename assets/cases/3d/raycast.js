@@ -14,7 +14,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        mesh: cc.Node
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -65,8 +65,7 @@ cc.Class({
             
             let d = cc.vmath.vec3.normalize(cc.v3(), ray.d);
             let p = cc.vmath.vec3.scaleAndAdd(cc.v3(), ray.o, d, distance);
-            cc.find('mesh').position = p;
-            cc.find('mesh').color = cc.Color.BLUE;
+            this.mesh.position = p;
         }
         this.results = results;
     },
