@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         label: cc.Label,
         sprite: cc.Sprite,
-        imgUrl: "http://www.cocos.com/wp-content/themes/cocos/img/download1.png",
+        imgUrl: "http://tools.itharbors.com/res/logo.png",
         txtUrl: "https://raw.githubusercontent.com/cocos-creator/tutorial-dark-slash/master/LICENSE.md",
         tempImgUrl: "http://www.cocos.com/wp-content/uploads/2018/03/%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BA%95%E9%83%A8%E4%BA%8C%E7%BB%B4%E7%A0%81_2018.03.08.png",
         audioUrl: "http://tools.itharbors.com/christmas/res/sounds/ss.mp3",
@@ -16,6 +16,7 @@ cc.Class({
         _inited: false,
         _downloading: false
     },
+
 
     // use this for initialization
     onLoad () {
