@@ -27,6 +27,7 @@ module.exports = {
             case 'capture_to_wechat':
                 return  cc.sys.platform === cc.sys.WECHAT_GAME;
             case 'capture_to_web':
+            case 'ShadowLabel':
                 return cc.sys.isBrowser;
 
             // Only support the RENDER_TYPE_WEBGL
@@ -39,10 +40,8 @@ module.exports = {
             case 'KeyboardInput':
             case 'platform':
                 return !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME;
-
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-            case 'ShadowLabel':
                 return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME && !CC_RUNTIME;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
