@@ -16,7 +16,7 @@ module.exports = {
             case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
             case 'Subpackages':
                 return (!CC_PREVIEW && !CC_JSB && !cc.sys.isBrowser && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.VIVO_GAME);
-            case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
+            case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.HUAWEI_GAME) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
             case 'downloader-native':
                 return cc.sys.isNative && !CC_RUNTIME;
             // Not support the VIVO_GAME and OPPO_GAME
@@ -27,6 +27,7 @@ module.exports = {
             case 'capture_to_wechat':
                 return  cc.sys.platform === cc.sys.WECHAT_GAME;
             case 'capture_to_web':
+            case 'ShadowLabel':
                 return cc.sys.isBrowser;
 
             // Only support the RENDER_TYPE_WEBGL
@@ -38,11 +39,9 @@ module.exports = {
             // Not support isMobile
             case 'KeyboardInput':
             case 'platform':
-                return !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME;
-
+                return !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME && cc.sys.platform !== cc.sys.HUAWEI_GAME;
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-            case 'ShadowLabel':
                 return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME && !CC_RUNTIME;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
