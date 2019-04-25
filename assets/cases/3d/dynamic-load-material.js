@@ -11,7 +11,7 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        setTimeout(() => {
+        this.scheduleOnce(() => {
             cc.loader.loadRes('materials/dynamic-load-material', cc.Material, (err, material) => {
                 if (err) {
                     cc.error(err);
@@ -19,7 +19,7 @@ cc.Class({
                 }
                 this.meshRenderer.setMaterial(0, material);
             })
-        }, 1000);
+        }, 1);
     },
 
     // update (dt) {},
