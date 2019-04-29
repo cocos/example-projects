@@ -1,6 +1,23 @@
 //
 // Restricted the scenes platform permissions
 //
+
+// init platform info
+const isAndroid = cc.sys.platform === cc.sys.ANDROID;
+const isNative = cc.sys.isNative;
+const isBrowser = cc.sys.isBrowser;
+const isMobile = cc.sys.isMobile;
+const isIphone = cc.sys.platform === cc.sys.IPHONE;
+const isDesktopBrowser = cc.sys.platform === cc.sys.DESKTOP_BROWSER;
+
+const isWechat = cc.sys.platform === cc.sys.WECHAT_GAME;
+const isQQPlay = cc.sys.platform === cc.sys.QQ_PLAY;
+const isBaidu = cc.sys.platform === cc.sys.BAIDU_GAME;
+const isVivo = cc.sys.platform === cc.sys.VIVO_GAME;
+const isOPPO = cc.sys.platform === cc.sys.OPPO_GAME;
+const isXiaomi = cc.sys.platform === cc.sys.XIAOMI_GAME;
+const isHuawei = cc.sys.platform === cc.sys.HUAWEI_GAME;
+ 
 module.exports = {
     tispPrefab: null,
 
@@ -8,27 +25,27 @@ module.exports = {
         console.log(name);
         switch (name) {
             case 'downloader-web':
-            case 'EditBoxTabIndex':     return !cc.sys.isNative;
-            case 'OnMultiTouchInput':   return cc.sys.isMobile;
+            case 'EditBoxTabIndex':     return !isNative;
+            case 'OnMultiTouchInput':   return isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
-            case 'DeviceMotion':        return cc.sys.isMobile && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.VIVO_GAME;
-            case 'Native_Call':         return cc.sys.isMobile && cc.sys.platform === cc.sys.ANDROID && !CC_RUNTIME;
-            case 'TTFFontLabel':        return cc.sys.platform !== cc.sys.QQ_PLAY;
+            case 'DeviceMotion':        return isMobile && !isQQPlay && !isVivo;
+            case 'Native_Call':         return isMobile && isAndroid && !CC_RUNTIME;
+            case 'TTFFontLabel':        return !isQQPlay;
             case 'Subpackages':
-                return (!CC_PREVIEW && !CC_JSB && !cc.sys.isBrowser && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.VIVO_GAME);
-            case 'MousePropagation':    return ((cc.sys.isNative && !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.HUAWEI_GAME) || cc.sys.platform === cc.sys.DESKTOP_BROWSER);
+                return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isVivo);
+            case 'MousePropagation':    return ((isNative && !isMobile && !isWechat && !isQQPlay && !isXiaomi && !isHuawei) || isDesktopBrowser);
             case 'downloader-native':
-                return cc.sys.isNative && !CC_RUNTIME;
+                return isNative && !CC_RUNTIME;
             // Not support the VIVO_GAME and OPPO_GAME
             case 'capture_to_native':
-                return cc.sys.isNative && cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
+                return isNative && !isVivo && !isOPPO;
             case 'iOS_getSafeArea':
-                return (cc.sys.platform === cc.sys.IPHONE && cc.sys.isNative);
+                return (isIphone && isNative);
             case 'capture_to_wechat':
-                return  cc.sys.platform === cc.sys.WECHAT_GAME;
+                return  isWechat;
             case 'capture_to_web':
             case 'ShadowLabel':
-                return cc.sys.isBrowser;
+                return isBrowser;
 
             // Only support the RENDER_TYPE_WEBGL
             case 'MotionStreak':
@@ -39,21 +56,22 @@ module.exports = {
             // Not support isMobile
             case 'KeyboardInput':
             case 'platform':
-                return !cc.sys.isMobile && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME && cc.sys.platform !== cc.sys.HUAWEI_GAME;
+                return !isMobile && !isWechat && !isBaidu && !isXiaomi && !isHuawei;
+
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-                return (cc.sys.isMobile || cc.sys.isBrowser) && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME && cc.sys.platform !== cc.sys.BAIDU_GAME && !CC_RUNTIME;
+                return (isMobile || isBrowser) && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !CC_RUNTIME;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
             case 'webview':
-                return  (cc.sys.isMobile || cc.sys.isBrowser) && !CC_RUNTIME && cc.sys.platform !== cc.sys.QQ_PLAY && cc.sys.platform !== cc.sys.WECHAT_GAME;
+                return  (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi;
             case 'mesh':
-                return cc.sys.platform !== cc.sys.VIVO_GAME && cc.sys.platform !== cc.sys.OPPO_GAME;
+                return !isVivo && !isOPPO;
             
             case 'QQPlay':
             case 'UserInfo':
             case 'BkAd':
-                return cc.sys.platform === cc.sys.QQ_PLAY;
+                return isQQPlay;
         }
     },
 
