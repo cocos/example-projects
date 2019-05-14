@@ -44,12 +44,6 @@ cc.Class({
             });
         }
 
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, (event) => {
-            if (event.keyCode === cc.macro.KEY.b || event.keyCode === cc.macro.KEY.back) {
-                this.backToList();
-            }
-        }, this);
-
         cc.director.on(cc.Director.EVENT_AFTER_SCENE_LAUNCH, this._onSceneLaunched, this);
 
         let url = this.storage.getCurrentScene();
