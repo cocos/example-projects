@@ -59,7 +59,7 @@ module.exports = {
 
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-                return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !isHUAWEI;
+                return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
             case 'webview':
