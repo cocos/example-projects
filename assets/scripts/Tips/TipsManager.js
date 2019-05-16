@@ -15,6 +15,7 @@ const isQQPlay = cc.sys.platform === cc.sys.QQ_PLAY;
 const isBaidu = cc.sys.platform === cc.sys.BAIDU_GAME;
 const isVivo = cc.sys.platform === cc.sys.VIVO_GAME;
 const isOPPO = cc.sys.platform === cc.sys.OPPO_GAME;
+const isHUAWEI = cc.sys.platform === cc.sys.HUAWEI_GAME;
 const isXiaomi = cc.sys.platform === cc.sys.XIAOMI_GAME;
 
 module.exports = {
@@ -31,7 +32,7 @@ module.exports = {
             case 'TTFFontLabel':        return !isQQPlay;
             case 'Subpackages':
                 return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isVivo);
-            case 'MousePropagation':    return ((isNative && !isMobile && !isWechat && !isQQPlay && !isXiaomi) || isDesktopBrowser);
+            case 'MousePropagation':    return ((isNative && !isMobile && !isWechat && !isQQPlay && !isXiaomi && !isHUAWEI) || isDesktopBrowser);
             case 'downloader-native':
                 return isNative && !CC_RUNTIME;
 
@@ -54,15 +55,15 @@ module.exports = {
             // Not support isMobile
             case 'KeyboardInput':
             case 'platform':
-                return !isMobile && !isWechat && !isBaidu && !isXiaomi;
+                return !isMobile && !isWechat && !isBaidu && !isXiaomi && !isHUAWEI;
 
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-                return (isMobile || isBrowser) && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !CC_RUNTIME;
+                return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
             case 'webview':
-                return  (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi;
+                return  (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !isHUAWEI;
             case 'mesh':
                 return !isVivo && !isOPPO;
         }
