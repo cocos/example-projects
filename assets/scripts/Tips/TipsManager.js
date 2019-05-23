@@ -17,6 +17,7 @@ const isVivo = cc.sys.platform === cc.sys.VIVO_GAME;
 const isOPPO = cc.sys.platform === cc.sys.OPPO_GAME;
 const isHUAWEI = cc.sys.platform === cc.sys.HUAWEI_GAME;
 const isXiaomi = cc.sys.platform === cc.sys.XIAOMI_GAME;
+const isJkw = cc.sys.platform === cc.sys.JKW_GAME;
 
 module.exports = {
     tispPrefab: null,
@@ -31,7 +32,7 @@ module.exports = {
             case 'Native_Call':         return isMobile && isAndroid && !CC_RUNTIME;
             case 'TTFFontLabel':        return !isQQPlay;
             case 'Subpackages':
-                return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isVivo);
+                return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isVivo && !isJkw);
             case 'MousePropagation':    return ((isNative && !isMobile && !isWechat && !isQQPlay && !isXiaomi && !isHUAWEI) || isDesktopBrowser);
             case 'downloader-native':
                 return isNative && !CC_RUNTIME;
