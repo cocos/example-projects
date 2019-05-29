@@ -1,0 +1,411 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "TiledSprite",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 11
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 9
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 57,
+        "g": 61,
+        "b": 64
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "e1059/MAapCk43+afwX4/z/"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "36b7dTZkAxKwbrVgok3f4TK",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 5
+          },
+          "_useOriginalSize": false,
+          "_string": "这是平铺精灵",
+          "_N$string": "这是平铺精灵",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/01_graphics/01_sprite/TiledSprite.fire.6"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 240,
+        "height": 40
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tiled Sprite 1",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -252,
+        "y": 200
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "barBg",
+      "_parent": {
+        "__id__": 6
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "ceNzPrzX1KgLadkTyxbT3u"
+          },
+          "_type": 2,
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 500,
+        "height": 31
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "progressBar",
+      "_parent": {
+        "__id__": 6
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 8
+          },
+          "_spriteFrame": {
+            "__uuid__": "a7EfnYcwRIkIwU4lojpEoa"
+          },
+          "_type": 2,
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "height": 31
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -2.8
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tiled Sprite 2",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 10
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -500,
+        "y": -193
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "ground",
+      "_parent": {
+        "__id__": 9
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 10
+          },
+          "_spriteFrame": {
+            "__uuid__": "4eBGB/HktFE46b2XkwRKiz"
+          },
+          "_type": 2,
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 256
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -83
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 11
+          },
+          "text": "## Tiled Sprite 使用说明\n\n1. 场景正中显示是由tiled Sprite 类型的sprite 组合而成的 进度条.\n2. Sprite 组件里的 Type 属性应设为 Tiled. \n3. 设置Anchor 可以控制进度条的朝向.\n4. 设置Size的width 控制进度条的进度."
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "bfd14rypCpOoZ6buHfoEB5f"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "TiledSpriteControl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "e6941HLrIVFLokuMTS8HSUo",
+          "node": {
+            "__id__": 12
+          },
+          "progressBar": {
+            "__id__": 8
+          },
+          "ground": {
+            "__id__": 10
+          }
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "04fda71jaBMWIMCezJEoGPw"
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "ground",
+      "texture": "25hAJPk2pDJZX0OFcHlqgc",
+      "rect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        256,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "barFg",
+      "texture": "2dNsD4dcBFaYw7bAZ2NAZE",
+      "rect": [
+        0,
+        0,
+        15,
+        31
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        15,
+        31
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "barBg",
+      "texture": "e5HOsc9sND9IE7qNeLtIJZ",
+      "rect": [
+        0,
+        0,
+        10,
+        29
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        10,
+        29
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

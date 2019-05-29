@@ -1,0 +1,5 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "BottomLeftAnchor",
+  "text": "## 将 Canvas 的坐标原点设置到左下角\n\nCanvas 的 Anchor 是不可修改的，但是可以通过添加空节点的方式变相实现。\n\n- 在 Canvas 下增加一个新节点 \"Anchor\"，将其 `Anchor` 设置为 (0, 0)。\n- 设置 Anchor 的 `Size` 和 Canvas 一致，同时修改坐标使它和 Canvas 完全重合。\n\n这样一来添加到该节点下的所有节点就会自动以左下角作为坐标原点了。\n如果希望原点在左上角，也是一样的方法，只要把 `Anchor` 设置成 (0, 1)。\n"
+}

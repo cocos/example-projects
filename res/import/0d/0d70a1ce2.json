@@ -1,0 +1,396 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "scrollview_bg",
+      "texture": "06gADN5K1HtoY06kxf4R9N",
+      "rect": [
+        0,
+        0,
+        14,
+        14
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        14,
+        14
+      ],
+      "capInsets": [
+        5,
+        5,
+        5,
+        5
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "Layout_ResizeContainer_Grid",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 11
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "23b37xRaDtB9LVCeGnATb5k"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "8c2e3X2DchB+bW+L15H5a0y",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Horizontal",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 7
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -240,
+        "y": 41
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "06_Title",
+      "_parent": {
+        "__id__": 5
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 6
+          },
+          "_useOriginalSize": false,
+          "_string": "横向网格布局容器",
+          "_N$string": "横向网格布局容器",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/06_layout/LayoutResizeContainer.fire.41"
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 6
+          },
+          "alignMode": 0,
+          "_alignFlags": 32,
+          "_right": -160
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 320,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -180
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "06_Grid_Layout_Axis_Horizontal",
+      "_parent": {
+        "__id__": 5
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "7ewuO0jsFIiKv5sYyeKk6T"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Layout",
+          "node": {
+            "__id__": 7
+          },
+          "_layoutSize": {
+            "__type__": "cc.Size",
+            "width": 290,
+            "height": 180
+          },
+          "_resize": 1,
+          "_N$layoutType": 3,
+          "_N$cellSize": {
+            "__type__": "cc.Size",
+            "width": 30,
+            "height": 30
+          },
+          "_N$paddingLeft": 10,
+          "_N$paddingRight": 10,
+          "_N$paddingTop": 10,
+          "_N$paddingBottom": 10,
+          "_N$spacingX": 10,
+          "_N$spacingY": 12
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 290,
+        "height": 180
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Vertical",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 10
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 240,
+        "y": 41
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "07_Title",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 9
+          },
+          "_useOriginalSize": false,
+          "_string": "纵向网格布局容器",
+          "_N$string": "纵向网格布局容器",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/06_layout/LayoutResizeContainer.fire.46"
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 9
+          },
+          "alignMode": 0,
+          "_alignFlags": 32,
+          "_right": -160
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 320,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -180
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "07_Grid_Layout_Axis_Vertical",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 10
+          },
+          "_spriteFrame": {
+            "__uuid__": "7ewuO0jsFIiKv5sYyeKk6T"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Layout",
+          "node": {
+            "__id__": 10
+          },
+          "_layoutSize": {
+            "__type__": "cc.Size",
+            "width": 290,
+            "height": 170
+          },
+          "_resize": 1,
+          "_N$layoutType": 3,
+          "_N$startAxis": 1,
+          "_N$paddingLeft": 15,
+          "_N$paddingRight": 15,
+          "_N$paddingTop": 15,
+          "_N$paddingBottom": 15,
+          "_N$spacingX": 10,
+          "_N$spacingY": 19,
+          "_N$verticalDirection": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 290,
+        "height": 170
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "LayoutResizeContainerCtrl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "2bbedtV3blCVJbmf2E9h/0V",
+          "node": {
+            "__id__": 11
+          },
+          "itemTemp": {
+            "__uuid__": "a8rM0uZiJMMYoeTbXytWi1"
+          },
+          "targetAry": [
+            {
+              "__type__": "info",
+              "target": {
+                "__id__": 7
+              },
+              "num": 12
+            },
+            {
+              "__type__": "info",
+              "target": {
+                "__id__": 10
+              },
+              "num": 10
+            }
+          ]
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "381f7y0PAFLEYCKqHsY8U5f"
+    }
+  ]
+]

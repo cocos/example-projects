@@ -1,0 +1,113 @@
+[
+  {
+    "__type__": "cc.Mesh",
+    "_native": ".bin",
+    "_vertexBundles": [
+      {
+        "__type__": "cc.mesh.VertexBundle",
+        "data": {
+          "__type__": "cc.BufferRange",
+          "length": 768
+        },
+        "formats": [
+          {
+            "__type__": "cc.mesh.VertexFormat",
+            "name": "a_normal",
+            "type": 5126,
+            "num": 3
+          },
+          {
+            "__type__": "cc.mesh.VertexFormat",
+            "name": "a_position",
+            "type": 5126,
+            "num": 3
+          },
+          {
+            "__type__": "cc.mesh.VertexFormat",
+            "name": "a_uv0",
+            "type": 5126,
+            "num": 2
+          }
+        ],
+        "verticesCount": 24
+      }
+    ],
+    "_primitives": [
+      {
+        "__type__": "cc.mesh.Primitive",
+        "vertexBundleIndices": [
+          0
+        ],
+        "data": {
+          "__type__": "cc.BufferRange",
+          "offset": 768,
+          "length": 72
+        }
+      }
+    ],
+    "_minPos": {
+      "__type__": "cc.Vec3",
+      "x": -0.5,
+      "y": -0.5,
+      "z": -0.5
+    },
+    "_maxPos": {
+      "__type__": "cc.Vec3",
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  [
+    {
+      "__type__": "cc.Prefab",
+      "_name": "box",
+      "data": {
+        "__id__": 1
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "box",
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.MeshRenderer",
+          "node": {
+            "__id__": 1
+          },
+          "_materials": [
+            {
+              "__uuid__": "a5hJI5OtNB0Yq0rp/qEfl/"
+            }
+          ],
+          "_mesh": {
+            "__uuid__": "04bxcsFXRIi7u4ZBWprblt"
+          }
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 1
+        },
+        "asset": {
+          "__id__": 0
+        },
+        "fileId": "04A14e1BZJxrPk6zgr35H5"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 100,
+        "y": 100,
+        "z": 100
+      },
+      "_eulerAngles": {
+        "__type__": "cc.Vec3",
+        "x": 0.000009334666828389458
+      },
+      "_zIndex": 0,
+      "_is3DNode": true
+    }
+  ]
+]

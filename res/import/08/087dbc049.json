@@ -1,0 +1,426 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "star",
+      "texture": "b1HE18sVtOtog7FpfBOI4h",
+      "rect": [
+        0,
+        12,
+        169,
+        185
+      ],
+      "offset": [
+        0,
+        -4
+      ],
+      "originalSize": [
+        169,
+        201
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_sprite_splash",
+      "texture": "02delMVqdBD70a/HSD99FK",
+      "rect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2,
+        2
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "Tag",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 7
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "10f205FLi9LZoxZbNaXTU/w"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "60c9f96ENJN7I7bJoFYr/x8",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "star",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "28J1mVxrtNt4x6jPwYU6v+"
+          }
+        },
+        {
+          "__type__": "cc.PolygonCollider",
+          "node": {
+            "__id__": 5
+          },
+          "points": [
+            {
+              "__type__": "cc.Vec2",
+              "x": -61,
+              "y": -79
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": -58,
+              "y": -29
+            },
+            {
+              "__type__": "cc.Vec2",
+              "y": -71
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": -36,
+              "y": -93
+            }
+          ]
+        },
+        {
+          "__type__": "cc.PolygonCollider",
+          "node": {
+            "__id__": 5
+          },
+          "tag": 1,
+          "points": [
+            {
+              "__type__": "cc.Vec2",
+              "x": 1,
+              "y": -72
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 58,
+              "y": -33
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 64,
+              "y": -79
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 42,
+              "y": -95
+            }
+          ]
+        },
+        {
+          "__type__": "cc.PolygonCollider",
+          "node": {
+            "__id__": 5
+          },
+          "tag": 2,
+          "points": [
+            {
+              "__type__": "cc.Vec2",
+              "x": 32,
+              "y": 51
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 82,
+              "y": 41
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 88
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 58,
+              "y": -33
+            }
+          ]
+        },
+        {
+          "__type__": "cc.PolygonCollider",
+          "node": {
+            "__id__": 5
+          },
+          "tag": 3,
+          "points": [
+            {
+              "__type__": "cc.Vec2",
+              "x": -34,
+              "y": 48
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": -18,
+              "y": 91
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 11,
+              "y": 93
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": 33,
+              "y": 51
+            }
+          ]
+        },
+        {
+          "__type__": "cc.PolygonCollider",
+          "node": {
+            "__id__": 5
+          },
+          "tag": 4,
+          "points": [
+            {
+              "__type__": "cc.Vec2",
+              "x": -86,
+              "y": -4
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": -84,
+              "y": 43
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": -36,
+              "y": 50
+            },
+            {
+              "__type__": "cc.Vec2",
+              "x": -59,
+              "y": -29
+            }
+          ]
+        },
+        {
+          "__type__": "fde33rWt81MvZWO7QQ3jv3j",
+          "node": {
+            "__id__": 5
+          },
+          "moveSpeed": 0
+        },
+        {
+          "__type__": "cc2a1tfAtlEWoLmkfLbgQS3",
+          "node": {
+            "__id__": 5
+          },
+          "label": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 169,
+        "height": 185
+      },
+      "_zIndex": 0,
+      "groupIndex": 5
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 7
+      },
+      "_useOriginalSize": false,
+      "_string": "Tag:",
+      "_N$string": "Tag:",
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "tag",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 75.61,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 176
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "stick",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 8
+          },
+          "_spriteFrame": {
+            "__uuid__": "a2MjXRFdtLlYQ5ouAFv/+R"
+          },
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.BoxCollider",
+          "node": {
+            "__id__": 8
+          },
+          "_size": {
+            "__type__": "cc.Size",
+            "width": 19,
+            "height": 222.5
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 19,
+        "height": 222
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": -192
+      },
+      "_zIndex": 0,
+      "groupIndex": 5
+    }
+  ]
+]

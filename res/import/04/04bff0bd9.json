@@ -1,0 +1,483 @@
+[
+  {
+    "__type__": "cc.AnimationClip",
+    "_name": "customAnim",
+    "_duration": 6,
+    "sample": 10,
+    "wrapMode": "22",
+    "curveData": {
+      "comps": {
+        "AnimateCustomPropertyCtrl": {
+          "hp": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "quintInOut"
+            },
+            {
+              "frame": 3,
+              "value": 1
+            },
+            {
+              "frame": 6,
+              "value": 0
+            }
+          ],
+          "emissionRote": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "expoOut"
+            },
+            {
+              "frame": 3,
+              "value": 20
+            },
+            {
+              "frame": 6,
+              "value": 0
+            }
+          ],
+          "num": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 3,
+              "value": 100
+            },
+            {
+              "frame": 6,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "gold",
+      "texture": "99zidzwohNZ5hoJ7uNXp6p",
+      "rect": [
+        0,
+        0,
+        80,
+        80
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        80,
+        80
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "bg",
+      "texture": "5cSEe6cUVByreKJqRNvahb",
+      "rect": [
+        0,
+        0,
+        14,
+        14
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        14,
+        14
+      ],
+      "capInsets": [
+        5,
+        5,
+        5,
+        5
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "AnimateCustomProperty",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 14
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "abdffR8bvVNXI132K5EZheQ"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_backgroundColor": {
+            "__type__": "cc.Color",
+            "r": 51,
+            "g": 77,
+            "b": 120
+          },
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "e12bfbHXRlLr6FzspUNGR+k",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Root",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 10
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "fb14cmn7KJJCo4qVcOy/GmS",
+          "node": {
+            "__id__": 5
+          },
+          "hpBar": {
+            "__id__": 9
+          },
+          "particle": {
+            "__id__": 13
+          },
+          "score": {
+            "__id__": 11
+          }
+        },
+        {
+          "__type__": "cc.Animation",
+          "node": {
+            "__id__": 5
+          },
+          "_defaultClip": {
+            "__uuid__": "9bB1S5u/xCWY5jkfNDb4Z5"
+          },
+          "_clips": [
+            {
+              "__uuid__": "9bB1S5u/xCWY5jkfNDb4Z5"
+            }
+          ],
+          "playOnLoad": true
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -33
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "HpBar",
+      "_parent": {
+        "__id__": 5
+      },
+      "_children": [
+        {
+          "__id__": 7
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "c0GPA1PjJA7bli4XEgVjPQ"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        },
+        {
+          "__id__": 9
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 77,
+        "g": 77,
+        "b": 77
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 606,
+        "height": 46
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 146
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "bar",
+      "_parent": {
+        "__id__": 6
+      },
+      "_components": [
+        {
+          "__id__": 8
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 600,
+        "height": 40
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 7
+      },
+      "_spriteFrame": {
+        "__uuid__": "c0GPA1PjJA7bli4XEgVjPQ"
+      },
+      "_type": 1,
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.ProgressBar",
+      "node": {
+        "__id__": 6
+      },
+      "_N$totalLength": 600,
+      "_N$barSprite": {
+        "__id__": 8
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Score",
+      "_parent": {
+        "__id__": 5
+      },
+      "_components": [
+        {
+          "__id__": 11
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 97.87,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 194,
+        "y": -86
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 10
+      },
+      "_useOriginalSize": false,
+      "_string": "Label",
+      "_N$string": "Label"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "particle",
+      "_parent": {
+        "__id__": 5
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 13
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -147,
+        "y": -82
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.ParticleSystem",
+      "node": {
+        "__id__": 12
+      },
+      "_custom": true,
+      "_spriteFrame": {
+        "__uuid__": "a7F3ZqgbtMZ7QXau4AW1JU"
+      },
+      "_startColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_startColorVar": {
+        "__type__": "cc.Color"
+      },
+      "_endColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 0
+      },
+      "_endColorVar": {
+        "__type__": "cc.Color",
+        "a": 0
+      },
+      "angle": 360,
+      "angleVar": 180,
+      "startSize": 80,
+      "_positionType": 1,
+      "positionType": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 14
+          },
+          "_useOriginalSize": false,
+          "_string": "自定义动画属性",
+          "_N$string": "自定义动画属性",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/03_gameplay/03_animation/AnimateCustomProperty.fire.18"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 280,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 219
+      },
+      "_zIndex": 0
+    }
+  ]
+]

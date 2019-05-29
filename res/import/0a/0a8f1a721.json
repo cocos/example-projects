@@ -1,0 +1,341 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "add",
+      "texture": "1dmaKWbqBDRr0DGxPFGPOq",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "TouchPropagation",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "37ad0lx/xZPQY1A62aOvBmN"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "1bc5cxrZBxD57ob4BiIuVs4",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "add",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "abU8wXWxFDRoZ91iTA5Vpr"
+          }
+        },
+        {
+          "__type__": "95021X5KjxP369OONe316sH",
+          "node": {
+            "__id__": 5
+          },
+          "propagate": true
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -37,
+        "y": -17
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "attention",
+      "_parent": {
+        "__id__": 5
+      },
+      "_children": [
+        {
+          "__id__": 7
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "e6EuHXknlGVosH+AyXjF56"
+          }
+        },
+        {
+          "__type__": "95021X5KjxP369OONe316sH",
+          "node": {
+            "__id__": 6
+          },
+          "propagate": true
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 57,
+        "y": 54
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "restart",
+      "_parent": {
+        "__id__": 6
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "d9NF/Ax0JHw69xDvMyHO15"
+          }
+        },
+        {
+          "__type__": "95021X5KjxP369OONe316sH",
+          "node": {
+            "__id__": 7
+          },
+          "propagate": true
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 64,
+        "y": -58
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 8
+          },
+          "_useOriginalSize": false,
+          "_string": "触摸事件冒泡",
+          "_N$string": "触摸事件冒泡",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/05_scripting/03_events/TouchPropagation.fire.15"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 240,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -227
+      },
+      "_zIndex": 0
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "restart",
+      "texture": "887whr6shMUZiP2qEuohI+",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "attention",
+      "texture": "c5+qvrxbhBNIImRBZNOao3",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

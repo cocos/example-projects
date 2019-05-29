@@ -1,0 +1,191 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "Hexa",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 5
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "09lS1J479E9pwOy8Va/AyR"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "e9QTTNsc5PP5Ro6QhVu6Rq",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "hexa",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.TiledMap",
+          "node": {
+            "__id__": 5
+          },
+          "_tmxFile": {
+            "__uuid__": "5673VbJppB44EXCk2I42bE"
+          }
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 5
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 540,
+        "height": 370.5
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 259,
+        "y": 152
+      },
+      "_zIndex": 0,
+      "_id": "f5edRKcLRFDbT/NMPfe+Iz"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Floor",
+      "_parent": {
+        "__id__": 5
+      },
+      "_level": 2,
+      "_components": [
+        {
+          "__type__": "cc.TiledLayer",
+          "node": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 420,
+        "height": 370.5
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_zIndex": 0
+    }
+  ],
+  {
+    "__type__": "cc.TiledMapAsset",
+    "_name": "hexa",
+    "tmxXmlStr": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<map version=\"1.0\" orientation=\"hexagonal\" renderorder=\"right-down\" width=\"9\" height=\"9\" tilewidth=\"60\" tileheight=\"39\" hexsidelength=\"30\" staggeraxis=\"x\" staggerindex=\"odd\" nextobjectid=\"1\">\n <tileset firstgid=\"1\" name=\"Tileset_Hexagonal_FlatTop_60x39_60x60\" tilewidth=\"60\" tileheight=\"60\" tilecount=\"12\" columns=\"4\">\n  <image source=\"hexa.png\" width=\"240\" height=\"180\"/>\n </tileset>\n <layer name=\"Floor\" width=\"9\" height=\"9\">\n  <data encoding=\"base64\" compression=\"zlib\">\n   eJxjY2BgYINiFiTMhoZh4oxIGFktCxZxbGKMSDQbGh9dDRsW89HV4GOj24/N3eh+w+V/ZLXoYgC/VAE0\n  </data>\n </layer>\n</map>\n",
+    "textures": [
+      {
+        "__uuid__": "5bizKYxgRICqP2x1IvmLD/"
+      }
+    ],
+    "textureNames": [
+      "hexa.png"
+    ]
+  }
+]

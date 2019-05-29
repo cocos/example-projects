@@ -1,0 +1,201 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "PurpleMonster",
+      "texture": "18BB1/fGpHvatvehi0BKIU",
+      "rect": [
+        0,
+        0,
+        78,
+        67
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        78,
+        67
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "GreenMonster",
+      "texture": "08we3qRtRB3pndT4t/a0Oz",
+      "rect": [
+        0,
+        0,
+        68,
+        71
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        68,
+        71
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "YellowMonster",
+      "texture": "15reJ+AhJHdbXkiooljotj",
+      "rect": [
+        0,
+        0,
+        80,
+        71
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        80,
+        71
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "RedMonster",
+      "texture": "8abFgwQSdN26PmAos/eT6D",
+      "rect": [
+        0,
+        0,
+        68,
+        75
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        68,
+        75
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.Prefab",
+      "_name": "MonsterPrefab",
+      "data": {
+        "__id__": 1
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "MonsterPrefab",
+      "_components": [
+        {
+          "__type__": "8cb4dm2QEpJ7pnaS/cjrvgF",
+          "node": {
+            "__id__": 1
+          },
+          "spriteList": [
+            {
+              "__uuid__": "d8qrTTn65FPpZvJAwHh5Eg"
+            },
+            {
+              "__uuid__": "04Z0Q+b7hNe6NPV7PlwUn7"
+            },
+            {
+              "__uuid__": "04Odl6SSRHZJsSrqSLsXBy"
+            },
+            {
+              "__uuid__": "1dX38+1LVDxJsJW4MlhwuJ"
+            },
+            {
+              "__uuid__": "0aN/1Q3ZtDMLFcMr6F7L5y"
+            }
+          ]
+        },
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 1
+          },
+          "_spriteFrame": {
+            "__uuid__": "d8qrTTn65FPpZvJAwHh5Eg"
+          }
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 1
+        },
+        "fileId": "b614ddv31xH2KaTBkX57h2I"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 77,
+        "height": 77
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 319.9999999999999,
+        "y": 240.34236804564904
+      }
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "BuleMonster",
+      "texture": "c0loGxDD5HlLaHF1bmRtlw",
+      "rect": [
+        0,
+        0,
+        77,
+        77
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        77,
+        77
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

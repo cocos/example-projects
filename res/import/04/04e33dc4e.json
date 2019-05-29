@@ -1,0 +1,469 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "add",
+      "texture": "1dmaKWbqBDRr0DGxPFGPOq",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "SimpleEvent",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "caec2aCGBJHhqtxsEIYv6fs"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "9dd06JtN2tJyZrm6n8k0Us4",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "cancel",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "d5Xah5AdNMaJdQwO62Wj4z"
+          }
+        },
+        {
+          "__type__": "6df0ft1jy5Jg4cQ039jt8jC",
+          "node": {
+            "__id__": 5
+          }
+        },
+        {
+          "__type__": "2881e6K1edLBbgvc+6/YN7o",
+          "node": {
+            "__id__": 5
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "restart",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "d9NF/Ax0JHw69xDvMyHO15"
+          }
+        },
+        {
+          "__type__": "a14bfaD+gRJKrTVjKwitc53",
+          "node": {
+            "__id__": 6
+          }
+        },
+        {
+          "__type__": "5cc23aoYcxIKazRFwKWGEI7",
+          "node": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 200
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "add",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "abU8wXWxFDRoZ91iTA5Vpr"
+          }
+        },
+        {
+          "__type__": "a14bfaD+gRJKrTVjKwitc53",
+          "node": {
+            "__id__": 7
+          }
+        },
+        {
+          "__type__": "2881e6K1edLBbgvc+6/YN7o",
+          "node": {
+            "__id__": 7
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -200
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 10
+        },
+        {
+          "__id__": 11
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -100
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "tip1",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 9
+          },
+          "_useOriginalSize": false,
+          "_string": "触摸事件可以支持点击",
+          "_N$string": "触摸事件可以支持点击",
+          "_fontSize": 20,
+          "_lineHeight": 24,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 1,
+          "_N$textKey": "cases/05_scripting/03_events/SimpleEvent.fire.19"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 190,
+        "height": 100
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -201
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "tip2",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 10
+          },
+          "_useOriginalSize": false,
+          "_string": "鼠标事件可以支持单击、悬停、滚轮",
+          "_N$string": "鼠标事件可以支持单击、悬停、滚轮",
+          "_fontSize": 20,
+          "_lineHeight": 24,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 1,
+          "_N$textKey": "cases/05_scripting/03_events/SimpleEvent.fire.21"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 190,
+        "height": 100
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "tip3",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 11
+          },
+          "_useOriginalSize": false,
+          "_string": "自定义事件可以手动触发\n(点击上面的按钮)",
+          "_N$string": "自定义事件可以手动触发\n(点击上面的按钮)",
+          "_fontSize": 20,
+          "_lineHeight": 24,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 1,
+          "_N$textKey": "cases/05_scripting/03_events/SimpleEvent.fire.23"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 190,
+        "height": 100
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 201
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 12
+          },
+          "_useOriginalSize": false,
+          "_string": "基本事件",
+          "_N$string": "基本事件",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/05_scripting/03_events/SimpleEvent.fire.25"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 160,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 186
+      },
+      "_zIndex": 0
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "cancel",
+      "texture": "79GrC55C9D7LPzn9cupVph",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "restart",
+      "texture": "887whr6shMUZiP2qEuohI+",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

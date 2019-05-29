@@ -1,0 +1,166 @@
+[
+  {
+    "__type__": "cc.SceneAsset",
+    "_name": "CreateClip",
+    "scene": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Scene",
+    "_name": "New Node",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 0.5697916666666667,
+      "y": 0.5697916666666667,
+      "z": 1
+    },
+    "_zIndex": 0,
+    "autoReleaseAssets": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Canvas",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 6
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Canvas",
+        "node": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 480,
+      "y": 320
+    },
+    "_zIndex": 0,
+    "_id": "f1a699NZ/hGcrZIN6c//QUJ"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Main Camera",
+    "_parent": {
+      "__id__": 2
+    },
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "cc.Camera",
+        "node": {
+          "__id__": 3
+        },
+        "_clearFlags": 7,
+        "_depth": -1
+      }
+    ],
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_parent": {
+      "__id__": 2
+    },
+    "_id": "e52cc3q+HxCz7K8TIu3J1Jv",
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 4
+      },
+      "asset": {
+        "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+      },
+      "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+      "sync": true
+    },
+    "_name": "Background"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Target",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 5
+        }
+      },
+      {
+        "__type__": "cc.Animation",
+        "node": {
+          "__id__": 5
+        }
+      },
+      {
+        "__type__": "0c450SopmNKmbcQu50ror3a",
+        "node": {
+          "__id__": 5
+        }
+      }
+    ],
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Tips",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+        "node": {
+          "__id__": 6
+        },
+        "_useOriginalSize": false,
+        "_string": "动态创建动画剪辑",
+        "_N$string": "动态创建动画剪辑",
+        "_N$textKey": "cases/03_gameplay/03_animation/CreateClip.fire.1"
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 320,
+      "height": 40
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "y": -151
+    },
+    "_zIndex": 0
+  }
+]

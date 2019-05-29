@@ -1,0 +1,112 @@
+[
+  [
+    {
+      "__type__": "cc.Prefab",
+      "_name": "prefab",
+      "data": {
+        "__id__": 1
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "load_prefab_test",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 1
+          },
+          "_spriteFrame": {
+            "__uuid__": "a7F3ZqgbtMZ7QXau4AW1JU"
+          }
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 1
+        },
+        "fileId": "7d24colhHpKVZpx5yk13X73"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 80,
+        "height": 80
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 264,
+        "y": 308
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Label",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 2
+          },
+          "_useOriginalSize": false,
+          "_string": "This is Prefab",
+          "_N$string": "This is Prefab",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "resources/test_assets/prefab.prefab.2"
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 1
+        },
+        "fileId": "9a04bywh9pFYK0OJDot50IL"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 244.53125,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -80
+      }
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "gold",
+      "texture": "99zidzwohNZ5hoJ7uNXp6p",
+      "rect": [
+        0,
+        0,
+        80,
+        80
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        80,
+        80
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

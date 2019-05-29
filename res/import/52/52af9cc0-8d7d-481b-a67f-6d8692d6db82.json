@@ -1,0 +1,144 @@
+[
+  {
+    "__type__": "cc.SceneAsset",
+    "_name": "CustomIA",
+    "scene": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Scene",
+    "_name": "New Node",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 0.5697916666666667,
+      "y": 0.5697916666666667,
+      "z": 1
+    },
+    "_zIndex": 0,
+    "autoReleaseAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Canvas",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Canvas",
+        "node": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 480,
+      "y": 320
+    },
+    "_zIndex": 0,
+    "_id": "a8/ETQ1vpCxLWXMeXTk0mq"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Main Camera",
+    "_parent": {
+      "__id__": 2
+    },
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "cc.Camera",
+        "node": {
+          "__id__": 3
+        },
+        "_clearFlags": 7,
+        "_depth": -1
+      }
+    ],
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_parent": {
+      "__id__": 2
+    },
+    "_id": "307Ly6t5BGwrs2JQ8WRpmc",
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 4
+      },
+      "asset": {
+        "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+      },
+      "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+      "sync": true
+    },
+    "_name": "Background"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ColorNode",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "fba8045Ab5Jn4yj2EBO8nRt",
+        "node": {
+          "__id__": 5
+        },
+        "blColor": {
+          "__type__": "cc.Color",
+          "r": 255
+        },
+        "brColor": {
+          "__type__": "cc.Color",
+          "b": 255
+        },
+        "tlColor": {
+          "__type__": "cc.Color",
+          "g": 255
+        },
+        "trColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 200,
+      "height": 200
+    },
+    "_zIndex": 0
+  }
+]

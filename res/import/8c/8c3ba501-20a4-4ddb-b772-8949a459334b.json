@@ -1,0 +1,140 @@
+[
+  {
+    "__type__": "cc.SceneAsset",
+    "_name": "ValueType",
+    "scene": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Scene",
+    "_name": "New Node",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 0.5697916666666667,
+      "y": 0.5697916666666667,
+      "z": 1
+    },
+    "_zIndex": 0,
+    "autoReleaseAssets": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Canvas",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Canvas",
+        "node": {
+          "__id__": 2
+        }
+      },
+      {
+        "__type__": "d9bf6bFb+tF779stLEmjzTV",
+        "node": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 480,
+      "y": 320
+    },
+    "_zIndex": 0,
+    "_id": "62719YpDCNF/qJfFit3h2jN"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Main Camera",
+    "_parent": {
+      "__id__": 2
+    },
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "cc.Camera",
+        "node": {
+          "__id__": 3
+        },
+        "_clearFlags": 7,
+        "_depth": -1
+      }
+    ],
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_parent": {
+      "__id__": 2
+    },
+    "_id": "4ae9f85POhH85ZCGCDYBArQ",
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 4
+      },
+      "asset": {
+        "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+      },
+      "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+      "sync": true
+    },
+    "_name": "Background"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Instruction",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+        "node": {
+          "__id__": 5
+        },
+        "_useOriginalSize": false,
+        "_string": "这个例子不包括运行时演示",
+        "_N$string": "这个例子不包括运行时演示",
+        "_fontSize": 30,
+        "_N$horizontalAlign": 1,
+        "_N$verticalAlign": 1,
+        "_N$textKey": "cases/05_scripting/01_properties/ValueType.fire.6"
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 360,
+      "height": 40
+    },
+    "_zIndex": 0
+  }
+]

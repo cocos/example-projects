@@ -1,0 +1,265 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "mesh-texture",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_id": "8aR48m/zVFqasq/8pwOQPE"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_backgroundColor": {
+            "__type__": "cc.Color",
+            "r": 56,
+            "g": 59,
+            "b": 65
+          },
+          "_depth": -1,
+          "_ortho": false
+        }
+      ]
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.MeshRenderer",
+          "node": {
+            "__id__": 4
+          },
+          "_materials": [
+            {
+              "__uuid__": "e3titQGA5LMKAvoKAZXT/B"
+            }
+          ],
+          "textures": [
+            {
+              "__uuid__": "6bT67Vq8NKd6+dNe1npaSL"
+            }
+          ]
+        },
+        {
+          "__type__": "95a3dIihBlE1bM4psBuANTA",
+          "node": {
+            "__id__": 4
+          }
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 155.917,
+        "y": 0.858
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.MeshRenderer",
+          "node": {
+            "__id__": 5
+          },
+          "_materials": [
+            {
+              "__uuid__": "e3titQGA5LMKAvoKAZXT/B"
+            }
+          ],
+          "textures": [
+            {
+              "__uuid__": "6bT67Vq8NKd6+dNe1npaSL"
+            }
+          ]
+        },
+        {
+          "__type__": "95a3dIihBlE1bM4psBuANTA",
+          "node": {
+            "__id__": 5
+          }
+        }
+      ]
+    }
+  ],
+  {
+    "__type__": "cc.EffectAsset",
+    "_name": "mesh-texture",
+    "properties": {
+      "texture": {
+        "type": 13,
+        "value": null
+      },
+      "alphaThreshold": {
+        "value": 0.5
+      }
+    },
+    "techniques": [
+      {
+        "passes": [
+          {
+            "cullMode": 0,
+            "blend": true,
+            "program": "47b687eb500246e6c8dc88222904f2bd6d8a2f13a07d4b831558b0e5"
+          }
+        ],
+        "layer": 0,
+        "stages": [
+          "opaque"
+        ],
+        "queue": 0,
+        "priority": 0
+      }
+    ],
+    "shaders": [
+      {
+        "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nuniform mat4 cc_matViewProj;\n\n#if USE_MODEL\n  uniform mat4 cc_matWorld;\n#endif\n\nattribute vec3 a_position;\n\n#if USE_TEXTURE\n  attribute mediump vec2 a_uv0;\n  varying mediump vec2 v_uv0;\n#endif\n\nvoid main () {\n  mat4 mvp;\n  \n  #if USE_MODEL\n    mvp = cc_matViewProj * cc_matWorld;\n  #else\n    mvp = cc_matViewProj;\n  #endif\n\n  #if USE_TEXTURE\n    v_uv0 = a_uv0;\n  #endif\n\n  gl_Position = mvp * vec4(a_position, 1);\n}\n\n\n",
+        "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\n#if USE_TEXTURE\n  uniform sampler2D texture;\n  varying mediump vec2 v_uv0;\n#endif\n\n#if USE_ALPHA_TEST\n  uniform float alphaThreshold;\n#endif\n\nvoid ALPHA_TEST (in vec4 color) {\n  #if USE_ALPHA_TEST\n      if (color.a < alphaThreshold) discard;\n  #endif\n}\n\nvoid ALPHA_TEST (in float alpha) {\n  #if USE_ALPHA_TEST\n      if (alpha < alphaThreshold) discard;\n  #endif\n}\n\nvoid main () {\n  vec4 color = vec4(1.);\n\n  #if USE_TEXTURE\n    color *= texture2D(texture, v_uv0);\n    #if _USE_ETC1_TEXTURE\n      color.a *= texture2D(texture, v_uv0 + vec2(0, 0.5)).r;\n    #endif\n  #endif\n\n  ALPHA_TEST(color);\n\n  gl_FragColor = color;\n}\n\n\n",
+        "defines": [
+          {
+            "name": "USE_MODEL",
+            "type": "boolean",
+            "defines": []
+          },
+          {
+            "name": "USE_TEXTURE",
+            "type": "boolean",
+            "defines": []
+          },
+          {
+            "name": "USE_ALPHA_TEST",
+            "type": "boolean",
+            "defines": []
+          },
+          {
+            "name": "_USE_ETC1_TEXTURE",
+            "type": "boolean",
+            "defines": [
+              "USE_TEXTURE"
+            ]
+          }
+        ],
+        "uniforms": [
+          {
+            "name": "texture",
+            "type": 13,
+            "defines": [
+              "USE_TEXTURE"
+            ]
+          },
+          {
+            "name": "alphaThreshold",
+            "type": 4,
+            "property": true,
+            "defines": [
+              "USE_ALPHA_TEST"
+            ]
+          }
+        ],
+        "attributes": [
+          {
+            "name": "a_position",
+            "type": 6,
+            "defines": []
+          },
+          {
+            "name": "a_uv0",
+            "type": 5,
+            "defines": [
+              "USE_TEXTURE"
+            ]
+          }
+        ],
+        "extensions": [],
+        "name": "47b687eb500246e6c8dc88222904f2bd6d8a2f13a07d4b831558b0e5"
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Material",
+    "_name": "mesh-texture",
+    "_effectAsset": {
+      "__uuid__": "2crixoCFNCWKJesrFp4HcA"
+    },
+    "_defines": {
+      "USE_MODEL": true,
+      "USE_TEXTURE": true
+    },
+    "_props": {
+      "texture": {
+        "__uuid__": "6bT67Vq8NKd6+dNe1npaSL"
+      }
+    }
+  }
+]

@@ -1,0 +1,1133 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "singleColor",
+      "texture": "1bags8Kg5BCpWrU9yaA6Ng",
+      "rect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2,
+        2
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "EditBox",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 14
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 33
+        },
+        {
+          "__id__": 32
+        },
+        {
+          "__id__": 34
+        },
+        {
+          "__id__": 16
+        },
+        {
+          "__id__": 36
+        },
+        {
+          "__id__": 24
+        },
+        {
+          "__id__": 37
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_id": "18e21hLtmdC27BpZFkxX2D9"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ]
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "a791e0+xWROGJ/ugkAFcEaI",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Title",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 5
+          },
+          "_useOriginalSize": false,
+          "_string": "按钮必须在 EditBox 的上面, \n并且它应该允许点击.",
+          "_N$string": "按钮必须在 EditBox 的上面, \n并且它应该允许点击.",
+          "_fontSize": 20,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.38"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 251.15,
+        "height": 90
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 2,
+        "y": 203
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "01_Single_Line_EditBox",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 11
+        }
+      ],
+      "_components": [
+        {
+          "__id__": 13
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 250,
+        "height": 41
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 51,
+        "y": 130
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "BACKGROUND_SPRITE",
+      "_parent": {
+        "__id__": 6
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 8
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 250,
+        "height": 41
+      }
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 7
+      },
+      "_spriteFrame": {
+        "__uuid__": "0aoLNsxKlM4qs77+3nCObU"
+      },
+      "_type": 1,
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "TEXT_LABEL",
+      "_parent": {
+        "__id__": 6
+      },
+      "_active": false,
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 10
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 248,
+        "height": 41
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -123,
+        "y": 20.5
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 9
+      },
+      "_fontSize": 25,
+      "_enableWrapText": false,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "PLACEHOLDER_LABEL",
+      "_parent": {
+        "__id__": 6
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 12
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 127,
+        "g": 127,
+        "b": 127
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 248,
+        "height": 41
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -123,
+        "y": 20.5
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 11
+      },
+      "_string": "Enter text here...",
+      "_N$string": "Enter text here...",
+      "_fontSize": 25,
+      "_lineHeight": 41,
+      "_enableWrapText": false,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.EditBox",
+      "node": {
+        "__id__": 6
+      },
+      "_useOriginalSize": false,
+      "maxLength": 50,
+      "editingDidBegan": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "singleLineEditBoxDidBeginEditing"
+        }
+      ],
+      "textChanged": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "singleLineEditBoxDidChanged"
+        }
+      ],
+      "editingDidEnded": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "singleLineEditBoxDidEndEditing"
+        }
+      ],
+      "_N$textLabel": {
+        "__id__": 10
+      },
+      "_N$placeholderLabel": {
+        "__id__": 12
+      },
+      "_N$background": {
+        "__id__": 8
+      },
+      "_N$inputFlag": 4,
+      "_N$inputMode": 6
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "EditboxCtrl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "dd654DFPoRNVKRWOuQdLiEE",
+          "node": {
+            "__id__": 14
+          },
+          "singleLineText": {
+            "__id__": 13
+          },
+          "singleLinePassword": {
+            "__id__": 15
+          },
+          "multiLineText": {
+            "__id__": 23
+          },
+          "showEditorBoxLabel": {
+            "__id__": 31
+          }
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 246
+      },
+      "_id": "1e663cU7CtCz6f9K1IF+HZJ"
+    },
+    {
+      "__type__": "cc.EditBox",
+      "node": {
+        "__id__": 16
+      },
+      "_useOriginalSize": false,
+      "editingDidBegan": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "singleLinePasswordEditBoxDidBeginEditing"
+        }
+      ],
+      "textChanged": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "singleLinePasswordEditBoxDidChanged"
+        }
+      ],
+      "editingDidEnded": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "singleLinePasswordEditBoxDidEndEditing"
+        }
+      ],
+      "_N$textLabel": {
+        "__id__": 20
+      },
+      "_N$placeholderLabel": {
+        "__id__": 22
+      },
+      "_N$background": {
+        "__id__": 18
+      },
+      "_N$inputFlag": 0,
+      "_N$inputMode": 6
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "02_Single_Line_EditBox_Password",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 17
+        },
+        {
+          "__id__": 19
+        },
+        {
+          "__id__": 21
+        }
+      ],
+      "_components": [
+        {
+          "__id__": 15
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 250,
+        "height": 45
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 51
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "BACKGROUND_SPRITE",
+      "_parent": {
+        "__id__": 16
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 18
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 250,
+        "height": 45
+      }
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 17
+      },
+      "_spriteFrame": {
+        "__uuid__": "0aoLNsxKlM4qs77+3nCObU"
+      },
+      "_type": 1,
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "TEXT_LABEL",
+      "_parent": {
+        "__id__": 16
+      },
+      "_active": false,
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 20
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 248,
+        "height": 45
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -123,
+        "y": 22.5
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 19
+      },
+      "_fontSize": 25,
+      "_lineHeight": 39.9,
+      "_enableWrapText": false,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "PLACEHOLDER_LABEL",
+      "_parent": {
+        "__id__": 16
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 22
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 131,
+        "g": 129,
+        "b": 129
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 248,
+        "height": 45
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -123,
+        "y": 22.5
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 21
+      },
+      "_string": "Enter text here...",
+      "_N$string": "Enter text here...",
+      "_fontSize": 25,
+      "_lineHeight": 45,
+      "_enableWrapText": false,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.EditBox",
+      "node": {
+        "__id__": 24
+      },
+      "_useOriginalSize": false,
+      "maxLength": 10000,
+      "editingDidBegan": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "multiLinePasswordEditBoxDidBeginEditing"
+        }
+      ],
+      "textChanged": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "multiLinePasswordEditBoxDidChanged"
+        }
+      ],
+      "editingDidEnded": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 14
+          },
+          "component": "EditboxCtrl",
+          "handler": "multiLinePasswordEditBoxDidEndEditing"
+        }
+      ],
+      "_N$textLabel": {
+        "__id__": 28
+      },
+      "_N$placeholderLabel": {
+        "__id__": 30
+      },
+      "_N$background": {
+        "__id__": 26
+      },
+      "_N$inputFlag": 2
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "03_Multiline_EditBox",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 25
+        },
+        {
+          "__id__": 27
+        },
+        {
+          "__id__": 29
+        }
+      ],
+      "_components": [
+        {
+          "__id__": 23
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 250,
+        "height": 112
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 51,
+        "y": -176
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "BACKGROUND_SPRITE",
+      "_parent": {
+        "__id__": 24
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 26
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 250,
+        "height": 112
+      }
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 25
+      },
+      "_spriteFrame": {
+        "__uuid__": "0aoLNsxKlM4qs77+3nCObU"
+      },
+      "_type": 1,
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "TEXT_LABEL",
+      "_parent": {
+        "__id__": 24
+      },
+      "_active": false,
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 28
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 248,
+        "height": 112
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -123,
+        "y": 56
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 27
+      },
+      "_fontSize": 25,
+      "_lineHeight": 30,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "PLACEHOLDER_LABEL",
+      "_parent": {
+        "__id__": 24
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 30
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 127,
+        "g": 127,
+        "b": 127
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 248,
+        "height": 112
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -123,
+        "y": 56
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 29
+      },
+      "_string": "Enter text here...",
+      "_N$string": "Enter text here...",
+      "_fontSize": 25,
+      "_lineHeight": 30,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 32
+      },
+      "_useOriginalSize": false,
+      "_fontSize": 30,
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Show_EditBox_Label",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 31
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "height": 50
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -68,
+        "y": 66
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "01_Single_Line_Text",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 33
+          },
+          "_useOriginalSize": false,
+          "_string": "单行文本框:",
+          "_N$string": "单行文本框:",
+          "_lineHeight": 48,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.27"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 211.11,
+        "height": 60
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "x": 1,
+        "y": 0.6
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -77,
+        "y": 138
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "TestButton",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 35
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 34
+          },
+          "_spriteFrame": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Button",
+          "node": {
+            "__id__": 34
+          },
+          "clickEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 14
+              },
+              "component": "EditboxCtrl",
+              "handler": "buttonClicked"
+            }
+          ],
+          "_N$transition": 2,
+          "transition": 2,
+          "_N$normalColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "_N$pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "_N$disabledColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "_N$normalSprite": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "_N$pressedSprite": {
+            "__uuid__": "bancX3RatP9b6Sl8enO4rV"
+          },
+          "pressedSprite": {
+            "__uuid__": "bancX3RatP9b6Sl8enO4rV"
+          },
+          "_N$hoverSprite": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "hoverSprite": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "_N$disabledSprite": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "_N$target": {
+            "__id__": 34
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 44.2
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 224,
+        "y": 129
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 34
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 35
+          },
+          "_useOriginalSize": false,
+          "_string": "点击",
+          "_N$string": "点击",
+          "_fontSize": 20,
+          "_enableWrapText": false,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.32"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 40,
+        "height": 50
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -1
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "02_Single_Line_Text",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 36
+          },
+          "_useOriginalSize": false,
+          "_string": "单行密码框:",
+          "_N$string": "单行密码框:",
+          "_lineHeight": 73,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.25"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 211.11,
+        "height": 91.25
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "x": 1,
+        "y": 0.6
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -77,
+        "y": 7
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "03_Multi_Line_Text",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 37
+          },
+          "_useOriginalSize": false,
+          "_string": "多行文本框:",
+          "_N$string": "多行文本框:",
+          "_lineHeight": 58,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/07_editBox/EditBox.fire.29"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 211.11,
+        "height": 72.5
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "x": 1,
+        "y": 0.6
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -77,
+        "y": -172
+      }
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btn_pressed",
+      "texture": "e8Mstb/RhJRYtVfmIFGaJg",
+      "rect": [
+        0,
+        0,
+        194,
+        68
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        194,
+        68
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btn_normal",
+      "texture": "7a/zKdXVNGWYopVAO8wQSg",
+      "rect": [
+        0,
+        0,
+        194,
+        68
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        194,
+        68
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

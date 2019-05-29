@@ -1,0 +1,239 @@
+[
+  {
+    "__type__": "cc.SceneAsset",
+    "_name": "Hittest",
+    "scene": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Scene",
+    "_name": "New Node",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 0.5697916666666667,
+      "y": 0.5697916666666667,
+      "z": 1
+    },
+    "_zIndex": 0,
+    "autoReleaseAssets": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Canvas",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 7
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Canvas",
+        "node": {
+          "__id__": 2
+        }
+      },
+      {
+        "__type__": "49ade5wuu9ILKDuwPmdIALx",
+        "node": {
+          "__id__": 2
+        },
+        "collider": {
+          "__id__": 6
+        },
+        "title": {
+          "__id__": 8
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 480,
+      "y": 320
+    },
+    "_zIndex": 0,
+    "_id": "455f0pCEnRGSqLsYY80pT5/"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Main Camera",
+    "_parent": {
+      "__id__": 2
+    },
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "cc.Camera",
+        "node": {
+          "__id__": 3
+        },
+        "_clearFlags": 7,
+        "_depth": -1
+      }
+    ],
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_parent": {
+      "__id__": 2
+    },
+    "_id": "b74e5Z14JNAi7EjY3RODGeq",
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 4
+      },
+      "asset": {
+        "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+      },
+      "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+      "sync": true
+    },
+    "_name": "Background"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "collider",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__id__": 6
+      }
+    ],
+    "_position": {
+      "__type__": "cc.Vec3",
+      "y": -10
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.PolygonCollider",
+    "node": {
+      "__id__": 5
+    },
+    "points": [
+      {
+        "__type__": "cc.Vec2",
+        "x": -258,
+        "y": -73
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -139.5,
+        "y": 39.3
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -7.3,
+        "y": -1.4
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -50,
+        "y": 50
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 15,
+        "y": 95.9
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 45,
+        "y": 39
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 160.9,
+        "y": 47.8
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 307,
+        "y": -26
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 171,
+        "y": -158
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 66,
+        "y": -41
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -58,
+        "y": -47
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -38,
+        "y": -159
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "title",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__id__": 8
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 97.87,
+      "height": 40
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "y": 227
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Label",
+    "node": {
+      "__id__": 7
+    },
+    "_useOriginalSize": false,
+    "_string": "Label",
+    "_N$string": "Label",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1
+  }
+]

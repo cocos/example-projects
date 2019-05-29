@@ -1,0 +1,240 @@
+[
+  {
+    "__type__": "cc.EffectAsset",
+    "_name": "custom_material",
+    "properties": {
+      "texture": {
+        "type": 13,
+        "value": null
+      },
+      "time": {
+        "value": 0
+      }
+    },
+    "techniques": [
+      {
+        "passes": [
+          {
+            "cullMode": 0,
+            "blend": true,
+            "program": "6fcd1170aa07dbbd78cd7a8df074148c6354993114ac4fedf42fd83c"
+          }
+        ],
+        "layer": 0,
+        "stages": [
+          "opaque"
+        ],
+        "queue": 0,
+        "priority": 0
+      }
+    ],
+    "shaders": [
+      {
+        "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nuniform mat4 cc_matViewProj;\n\n#if _USE_MODEL\n  uniform mat4 cc_matWorld;\n#endif\n\nattribute vec3 a_position;\nattribute lowp vec4 a_color;\n\n#if USE_TEXTURE\n  attribute mediump vec2 a_uv0;\n  varying mediump vec2 v_uv0;\n#endif\n\nvarying lowp vec4 v_color;\n\nvoid main () {\n  mat4 mvp;\n  \n  #if _USE_MODEL\n    mvp = cc_matViewProj * cc_matWorld;\n  #else\n    mvp = cc_matViewProj;\n  #endif\n\n  #if USE_TEXTURE\n    v_uv0 = a_uv0;\n  #endif\n\n  v_color = a_color;\n\n  gl_Position = mvp * vec4(a_position, 1);\n}\n\n\n",
+        "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\n#if USE_TEXTURE\n  uniform sampler2D texture;\n  varying mediump vec2 v_uv0;\n#endif\n\nuniform float time;\n\nvarying lowp vec4 v_color;\n\nvoid main () {\n  vec4 c = v_color * texture2D(texture, v_uv0);\n  gl_FragColor = c;\n  float temp = v_uv0.x - time;\n  if (temp <= 0.0) {\n      float temp2 = abs(temp);\n      if (temp2 <= 0.2) {\n          gl_FragColor.w = 1.0 - temp2/0.2;\n      } else {\n          gl_FragColor.w = 0.0;\n      }\n  } else {\n      gl_FragColor.w = 1.0;\n  }\n}\n\n\n",
+        "defines": [
+          {
+            "name": "_USE_MODEL",
+            "type": "boolean",
+            "defines": []
+          },
+          {
+            "name": "USE_TEXTURE",
+            "type": "boolean",
+            "defines": []
+          }
+        ],
+        "uniforms": [
+          {
+            "name": "texture",
+            "type": 13,
+            "defines": [
+              "USE_TEXTURE"
+            ]
+          },
+          {
+            "name": "time",
+            "type": 4,
+            "defines": []
+          }
+        ],
+        "attributes": [
+          {
+            "name": "a_position",
+            "type": 6,
+            "defines": []
+          },
+          {
+            "name": "a_color",
+            "type": 7,
+            "defines": []
+          },
+          {
+            "name": "a_uv0",
+            "type": 5,
+            "defines": [
+              "USE_TEXTURE"
+            ]
+          }
+        ],
+        "extensions": [],
+        "name": "6fcd1170aa07dbbd78cd7a8df074148c6354993114ac4fedf42fd83c"
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Material",
+    "_name": "custom_material",
+    "_effectAsset": {
+      "__uuid__": "7cV0JX5FBDK5W1i21WqqXx"
+    },
+    "_defines": {},
+    "_props": {
+      "time": 0
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "content",
+      "texture": "6bT67Vq8NKd6+dNe1npaSL",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        512,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "custom_material",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_id": "72/PwrI7hLf45+Q3CHpNyT"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ]
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "content",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 5
+        },
+        {
+          "__type__": "cf55fSDhJtE4YLQLmUchrgd",
+          "node": {
+            "__id__": 4
+          },
+          "sprite": {
+            "__id__": 5
+          },
+          "speed": 0.05
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 4
+      },
+      "_materials": [
+        {
+          "__uuid__": "b02bg8ABFFcp7fdhnJfsdS"
+        }
+      ],
+      "_spriteFrame": {
+        "__uuid__": "bfhnyuiiFP/52t0htQmKGm"
+      }
+    }
+  ]
+]

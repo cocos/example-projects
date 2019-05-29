@@ -1,0 +1,284 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "GreenMonster",
+      "texture": "08we3qRtRB3pndT4t/a0Oz",
+      "rect": [
+        0,
+        0,
+        68,
+        71
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        68,
+        71
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "OnTouchInput",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 10
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 100
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.7421875,
+        "y": 0.7421875,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "c8725B+SrxDPJkbCr54l850"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "77014/5MhNKNrCBsKnb/grH",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "touchLocationDisplay",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 204.51,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 200
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+      "node": {
+        "__id__": 5
+      },
+      "_useOriginalSize": false,
+      "_string": "TEXT_KEY",
+      "_N$string": "TEXT_KEY",
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "sprite",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "04Z0Q+b7hNe6NPV7PlwUn7"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 68,
+        "height": 71
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 8
+          },
+          "_useOriginalSize": false,
+          "_string": "请触摸任意位置试试",
+          "_N$string": "请触摸任意位置试试",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/03_gameplay/01_player_control/On/OnTouchInput.fire.10"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 360,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -150
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "OnTouchCtrl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "f9b352jbGtMIqjEuud60Wpx",
+          "node": {
+            "__id__": 9
+          },
+          "canvas": {
+            "__id__": 2
+          },
+          "touchLocationDisplay": {
+            "__id__": 6
+          },
+          "follower": {
+            "__id__": 7
+          }
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "308a8YCeAdNlYErRJ0j2puy"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 10
+          },
+          "text": "## 点击/触摸输入使用说明\n\n点击 play 按钮预览游戏，使用鼠标或触屏点击并拖拽到游戏视窗内的任意位置，绿色角色会向点击或触摸位置移动。\n\n同时屏幕上方还会显示用户最后一次点击或拖拽所在的屏幕坐标位置。\n\n在浏览器预览时，请确认游戏视窗处于激活状态（点击游戏视窗区域），才能正确获取输入事件。\n\n查看 OnTouchCtrl.js 脚本，了解监听鼠标或触屏输入事件的脚本书写方法。"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "dfe5646WrlMa5Un+1usdHlF"
+    }
+  ]
+]

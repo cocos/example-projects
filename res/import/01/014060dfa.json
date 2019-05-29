@@ -1,0 +1,330 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "capture_to_web",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.75,
+        "y": 0.75,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 10
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        },
+        {
+          "__type__": "5ac74J4RCNKq6XeV8GboJXx",
+          "node": {
+            "__id__": 2
+          },
+          "camera": {
+            "__id__": 6
+          },
+          "label": {
+            "__id__": 11
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "d498jzFUdD6bjmw+MQKhki"
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "33rF9Se69KfKvJRUzK0KaS",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 3
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 4
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Camera",
+      "node": {
+        "__id__": 5
+      },
+      "_cullingMask": -4,
+      "_backgroundColor": {
+        "__type__": "cc.Color",
+        "r": 51,
+        "g": 77,
+        "b": 120,
+        "a": 0
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Mask",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 8
+        }
+      ],
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Mask",
+          "node": {
+            "__id__": 7
+          },
+          "_type": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 300,
+        "height": 300
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -100
+      },
+      "_zIndex": 0,
+      "groupIndex": 2
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "content",
+      "_parent": {
+        "__id__": 7
+      },
+      "_children": [
+        {
+          "__id__": 9
+        }
+      ],
+      "_level": 2,
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 8
+          },
+          "_spriteFrame": {
+            "__uuid__": "bfhnyuiiFP/52t0htQmKGm"
+          },
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 300,
+        "height": 300
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "goldcoin",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 9
+          },
+          "_spriteFrame": {
+            "__uuid__": "e3BKZDfgROhagh0UmGu1Ys"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 80,
+        "height": 80
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tip",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 11
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 415.61,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 238
+      },
+      "_zIndex": 0,
+      "groupIndex": 1
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 10
+      },
+      "_useOriginalSize": false,
+      "_string": "该场景仅支持 web 平台",
+      "_N$string": "该场景仅支持 web 平台",
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "content",
+      "texture": "6bT67Vq8NKd6+dNe1npaSL",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        512,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "goldcoin",
+      "texture": "6e4xGvLlZICpjd7mPj1bJM",
+      "rect": [
+        0,
+        0,
+        80,
+        80
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        80,
+        80
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

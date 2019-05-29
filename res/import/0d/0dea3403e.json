@@ -1,0 +1,672 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "scrollbarVertical",
+      "texture": "1cIR+PYGhCO43inEc1Qn19",
+      "rect": [
+        0,
+        0,
+        13,
+        17
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        13,
+        17
+      ],
+      "capInsets": [
+        4,
+        4,
+        5,
+        4
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "moving-objects",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.7109130859375,
+        "y": 0.7109130859375,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 13
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        },
+        {
+          "__type__": "6d056HwAmhA7ZTa6tqf8K23",
+          "node": {
+            "__id__": 2
+          },
+          "tempPrefab": {
+            "__id__": 6
+          },
+          "camera": {
+            "__id__": 4
+          },
+          "root": {
+            "__id__": 5
+          },
+          "nodeCount": 10000
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "81jHIz4fFNhJOtDkzyW8p6"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_cullingMask": -5,
+          "_clearFlags": 7,
+          "_backgroundColor": {
+            "__type__": "cc.Color",
+            "r": 51,
+            "g": 77,
+            "b": 120
+          },
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 4
+          },
+          "_cullingMask": 4,
+          "_backgroundColor": {
+            "__type__": "cc.Color",
+            "r": 51,
+            "g": 77,
+            "b": 120
+          }
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "root",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_zIndex": 0,
+      "groupIndex": 2
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "star",
+      "_parent": {
+        "__id__": 5
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "48KP0aqRJL+orOxuWgLA4k"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 13,
+        "height": 17
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Toggle",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 10
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Toggle",
+          "node": {
+            "__id__": 7
+          },
+          "_N$transition": 3,
+          "transition": 3,
+          "_N$target": {
+            "__id__": 9
+          },
+          "checkMark": {
+            "__id__": 11
+          },
+          "checkEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 2
+              },
+              "component": "moving-objects",
+              "handler": "useCameraChanged"
+            }
+          ]
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 165.4,
+        "height": 40.1
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -203,
+        "y": 260
+      },
+      "_zIndex": 0,
+      "groupIndex": 7
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Button",
+      "_parent": {
+        "__id__": 7
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 8
+          },
+          "_spriteFrame": {
+            "__uuid__": "f0BIwQ8D5Ml7nTNQbh1YlS"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 161.4,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 83.3,
+        "y": -2
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 7
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 9
+          },
+          "_spriteFrame": {
+            "__uuid__": "68J8oyAQdFUrqy37MXmbtE"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 28,
+        "height": 28
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 17.1
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "checkmark",
+      "_parent": {
+        "__id__": 7
+      },
+      "_components": [
+        {
+          "__id__": 11
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 28,
+        "height": 28
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 17.1,
+        "y": 4
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 10
+      },
+      "_spriteFrame": {
+        "__uuid__": "90AErWL21A4ZPvtxQ3XG8G"
+      },
+      "_sizeMode": 2,
+      "_isTrimmedMode": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 7
+      },
+      "_components": [
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 12
+          },
+          "_useOriginalSize": false,
+          "_string": "Use Camera",
+          "_N$string": "Use Camera",
+          "_fontSize": 20,
+          "_enableWrapText": false,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 1
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 128,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 99.4,
+        "y": -1
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Toggle",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 14
+        },
+        {
+          "__id__": 15
+        },
+        {
+          "__id__": 16
+        },
+        {
+          "__id__": 18
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Toggle",
+          "node": {
+            "__id__": 13
+          },
+          "_N$transition": 3,
+          "transition": 3,
+          "_N$target": {
+            "__id__": 15
+          },
+          "checkMark": {
+            "__id__": 17
+          },
+          "checkEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 2
+              },
+              "component": "moving-objects",
+              "handler": "enableCullingChanged"
+            }
+          ]
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 172.1,
+        "height": 40.1
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 55,
+        "y": 260
+      },
+      "_zIndex": 0,
+      "groupIndex": 7
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Button",
+      "_parent": {
+        "__id__": 13
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 14
+          },
+          "_spriteFrame": {
+            "__uuid__": "f0BIwQ8D5Ml7nTNQbh1YlS"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 170.6,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 87.9,
+        "y": -2
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 13
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 15
+          },
+          "_spriteFrame": {
+            "__uuid__": "68J8oyAQdFUrqy37MXmbtE"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 28,
+        "height": 28
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 17.1
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "checkmark",
+      "_parent": {
+        "__id__": 13
+      },
+      "_components": [
+        {
+          "__id__": 17
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 28,
+        "height": 28
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 17.1,
+        "y": 4
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 16
+      },
+      "_spriteFrame": {
+        "__uuid__": "90AErWL21A4ZPvtxQ3XG8G"
+      },
+      "_sizeMode": 2,
+      "_isTrimmedMode": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 13
+      },
+      "_components": [
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 18
+          },
+          "_useOriginalSize": false,
+          "_string": "Enable Culling",
+          "_N$string": "Enable Culling",
+          "_fontSize": 20,
+          "_enableWrapText": false,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 1
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 128,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 99.4,
+        "y": -1
+      },
+      "_zIndex": 0
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_toggle_normal",
+      "texture": "d2kHe6FidKcpV5e1aiNTQM",
+      "rect": [
+        0,
+        0,
+        28,
+        28
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        28,
+        28
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_toggle_checkmark",
+      "texture": "73oJA92A5OPKpn+ZlUPAj1",
+      "rect": [
+        4,
+        5,
+        20,
+        18
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        28,
+        28
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_btn_normal",
+      "texture": "e8Ueib+qJEhL6mXAHdnwbi",
+      "rect": [
+        0,
+        0,
+        40,
+        40
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        12,
+        12,
+        12,
+        12
+      ]
+    }
+  }
+]

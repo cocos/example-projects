@@ -1,0 +1,181 @@
+[
+  {
+    "__type__": "cc.SceneAsset",
+    "_name": "dynamic-load-material",
+    "scene": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Scene",
+    "_name": "New Node",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "autoReleaseAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Canvas",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Canvas",
+        "node": {
+          "__id__": 2
+        }
+      },
+      {
+        "__type__": "93268zvFsZAKpSHQw+2ixa3",
+        "node": {
+          "__id__": 2
+        },
+        "meshRenderer": {
+          "__id__": 7
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 480,
+      "y": 320
+    },
+    "_id": "b8pIgoMk9J/aRiucDpZHj8"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Main Camera",
+    "_parent": {
+      "__id__": 2
+    },
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "cc.Camera",
+        "node": {
+          "__id__": 3
+        },
+        "_clearFlags": 7,
+        "_depth": -1
+      }
+    ],
+    "_position": {
+      "__type__": "cc.Vec3",
+      "z": 554.2562584220408
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "New Light",
+    "_parent": {
+      "__id__": 2
+    },
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "cc.Light",
+        "node": {
+          "__id__": 4
+        },
+        "_shadowMaxDepth": 1000,
+        "_shadowFrustumSize": 50
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "root",
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [
+      {
+        "__id__": 6
+      }
+    ],
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "b8182lpDXBKXKHB4KDgd7AY",
+        "node": {
+          "__id__": 5
+        }
+      }
+    ],
+    "_is3DNode": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "box",
+    "_parent": {
+      "__id__": 5
+    },
+    "_level": 2,
+    "_components": [
+      {
+        "__id__": 7
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 6
+      },
+      "asset": {
+        "__uuid__": "a8fMFHAbJD+I5Cp8qQsMdX"
+      },
+      "fileId": "04A14e1BZJxrPk6zgr35H5"
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 300,
+      "y": 300,
+      "z": 300
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 45,
+      "y": 45,
+      "z": 3.1805546814635168e-15
+    },
+    "_is3DNode": true
+  },
+  {
+    "__type__": "cc.MeshRenderer",
+    "node": {
+      "__id__": 6
+    },
+    "_materials": [
+      {
+        "__uuid__": "a5hJI5OtNB0Yq0rp/qEfl/"
+      }
+    ],
+    "_mesh": {
+      "__uuid__": "04bxcsFXRIi7u4ZBWprblt"
+    }
+  }
+]

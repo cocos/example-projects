@@ -1,0 +1,527 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "question",
+      "texture": "697tsJqfJAJ40d1pT4Ec2C",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "SimpleButton",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 100
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 11
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "0b951/6WMhCD6sAzEqnsgvw"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "e02633eCWVO37awr03JDiOQ",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Report_button",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 240,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 16,
+        "y": 128
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+      "node": {
+        "__id__": 5
+      },
+      "_useOriginalSize": false,
+      "_string": "哪个按钮被点击？",
+      "_N$string": "哪个按钮被点击？",
+      "_fontSize": 30,
+      "_N$horizontalAlign": 1,
+      "_N$textKey": "cases/02_ui/03_button/SimpleButton.fire.6"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Button_Switch_Sprite",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "abU8wXWxFDRoZ91iTA5Vpr"
+          }
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -107,
+        "y": -27
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Button",
+      "node": {
+        "__id__": 7
+      },
+      "clickEvents": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 9
+          },
+          "component": "SimpleButtonCtrl",
+          "handler": "onBtnLeftClicked"
+        }
+      ],
+      "_N$transition": 2,
+      "transition": 2,
+      "_N$normalColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$pressedColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "pressedColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$disabledColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$normalSprite": {
+        "__uuid__": "abU8wXWxFDRoZ91iTA5Vpr"
+      },
+      "_N$pressedSprite": {
+        "__uuid__": "e6EuHXknlGVosH+AyXjF56"
+      },
+      "pressedSprite": {
+        "__uuid__": "e6EuHXknlGVosH+AyXjF56"
+      },
+      "_N$hoverSprite": {
+        "__uuid__": "02UiTH4ktHrrVtC1FLFLUE"
+      },
+      "hoverSprite": {
+        "__uuid__": "02UiTH4ktHrrVtC1FLFLUE"
+      },
+      "_N$disabledSprite": {
+        "__uuid__": "d5Xah5AdNMaJdQwO62Wj4z"
+      },
+      "_N$target": {
+        "__id__": 7
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "SimpleButtonCtrl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "68675KwfElAdaumPl1byNh7",
+          "node": {
+            "__id__": 9
+          },
+          "buttonLeft": {
+            "__id__": 8
+          },
+          "buttonRight": {
+            "__id__": 10
+          },
+          "display": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "d72538ArIBItZ1Dm5PNxGuJ"
+    },
+    {
+      "__type__": "cc.Button",
+      "node": {
+        "__id__": 11
+      },
+      "clickEvents": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 9
+          },
+          "component": "SimpleButtonCtrl",
+          "handler": "onBtnRightClicked"
+        }
+      ],
+      "_N$transition": 1,
+      "transition": 1,
+      "_N$normalColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$pressedColor": {
+        "__type__": "cc.Color",
+        "r": 109,
+        "g": 105,
+        "b": 105
+      },
+      "pressedColor": {
+        "__type__": "cc.Color",
+        "r": 109,
+        "g": 105,
+        "b": 105
+      },
+      "_N$hoverColor": {
+        "__type__": "cc.Color",
+        "r": 213,
+        "g": 213,
+        "b": 213
+      },
+      "hoverColor": {
+        "__type__": "cc.Color",
+        "r": 213,
+        "g": 213,
+        "b": 213
+      },
+      "_N$disabledColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$target": {
+        "__id__": 11
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Button_Switch_Color",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 10
+        },
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 11
+          },
+          "_spriteFrame": {
+            "__uuid__": "d1Z6l1hFVJ57SNXKwRjzZ3"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 195,
+        "height": 57
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 142,
+        "y": -33
+      },
+      "_eulerAngles": {
+        "__type__": "cc.Vec3",
+        "z": -45.00000000000001
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 12
+          },
+          "text": "## Button 使用说明\n\n场景中应该显示一左一右两个按钮。点击 play 按钮预览游戏，按钮会有如下行为：\n\n- 移动鼠标到左边按钮上时，按钮图案变成问号\n- 按下左边按钮时，按钮图案变成惊叹号，同时上方有文字显示\"Left Button Clicked\"\n- 移动鼠标到右边按钮上时，按钮颜色加深\n- 按下右边按钮时，按钮颜色变得更深，同时上方文字显示\"Right Button Clicked\"\n\n### 贴图切换\n\n1. 选中 Button_Switch_Sprite 节点，关注 Button 组件\n2. Target 属性规定了 Button 状态变化时，应该更新哪个对象的图像\n3. Interactable 规定了 Button 是否可以交互\n4. Transition 属性里选择 SPRITE，就是状态改变时切换 Sprite 图像显示的模式\n5. Normal/Pressed/Hover/Disabled 属性分别指定在相应状态下显示的 Sprite 图像资源\n6. Click Events 里可以指定按钮按下后的事件处理方法\n\n### 颜色变化\n\n1. 选中 Button_Switch_Color 节点，关注 Button 组件\n2. Transition 属性里选择 COLOR，就是状态改变时过渡 Sprite 颜色显示的模式\n3. Normal/Pressed/Hover/Disabled 属性分别指定在相应状态下 Sprite 的颜色\n4. Duration 属性指定颜色过渡的时长\n\n### 添加点击事件处理\n\n1. 选中 Button_Switch_Sprite，关注 Button 组件\n2. 在 Click Events 列表里，添加一个新的点击事件\n3. 将事件监听脚本所在节点拖拽到该事件的 Target 属性上\n4. 在 Component 属性列表中选择事件监听脚本所属的组件\n5. 在 Handler 属性列表中选择事件发生时调用的方法"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "be079lHuo1DrqjFPBTa4cJJ"
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "add",
+      "texture": "1dmaKWbqBDRr0DGxPFGPOq",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btn_play",
+      "texture": "c0T/piTOlOA6idP3YCeQwK",
+      "rect": [
+        0,
+        0,
+        195,
+        57
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        195,
+        57
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "cancel",
+      "texture": "79GrC55C9D7LPzn9cupVph",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "attention",
+      "texture": "c5+qvrxbhBNIImRBZNOao3",
+      "rect": [
+        0,
+        0,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        94,
+        94
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

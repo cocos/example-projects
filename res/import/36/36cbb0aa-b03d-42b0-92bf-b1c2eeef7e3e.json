@@ -1,0 +1,373 @@
+[
+  {
+    "__type__": "cc.SceneAsset",
+    "_name": "AutoRemoveParticle",
+    "scene": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Scene",
+    "_name": "New Node",
+    "_children": [
+      {
+        "__id__": 2
+      },
+      {
+        "__id__": 9
+      }
+    ],
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 0.5697916666666667,
+      "y": 0.5697916666666667,
+      "z": 1
+    },
+    "_zIndex": 0,
+    "autoReleaseAssets": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Canvas",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 7
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Canvas",
+        "node": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 480,
+      "y": 320
+    },
+    "_zIndex": 0,
+    "_id": "be7e8bbFF9ELrOGnbUNJTAE"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Main Camera",
+    "_parent": {
+      "__id__": 2
+    },
+    "_level": 1,
+    "_components": [
+      {
+        "__type__": "cc.Camera",
+        "node": {
+          "__id__": 3
+        },
+        "_clearFlags": 7,
+        "_depth": -1
+      }
+    ],
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_parent": {
+      "__id__": 2
+    },
+    "_id": "7e496nplHRNSpy/6DMC5ZWT",
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 4
+      },
+      "asset": {
+        "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+      },
+      "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+      "sync": true
+    },
+    "_name": "Background"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Normal",
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [
+      {
+        "__id__": 6
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 5
+        },
+        "_dstBlendFactor": 1,
+        "_custom": true,
+        "_file": {
+          "__uuid__": "e2T6NCgVpEeLnb7VkufAKT"
+        },
+        "totalParticles": 200,
+        "duration": 10,
+        "emissionRate": 999.9999850988391,
+        "life": 0.2000000029802322,
+        "lifeVar": 0.5,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 202,
+          "g": 200,
+          "b": 86,
+          "a": 163
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color",
+          "r": 229,
+          "g": 255,
+          "b": 173,
+          "a": 198
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 173,
+          "g": 161,
+          "b": 19,
+          "a": 214
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "r": 107,
+          "g": 249,
+          "b": 249,
+          "a": 188
+        },
+        "angle": 360,
+        "angleVar": 360,
+        "startSize": 3.369999885559082,
+        "startSizeVar": 50,
+        "endSize": 30.31999969482422,
+        "startSpin": -47.36999893188477,
+        "endSpin": -47.36999893188477,
+        "endSpinVar": -142.1100006103516,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 7,
+          "y": 7
+        },
+        "_positionType": 1,
+        "positionType": 1,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "x": 0.25,
+          "y": 0.8600000143051147
+        },
+        "speed": 0,
+        "speedVar": 190.7899932861328,
+        "tangentialAccel": -92.11000061035156,
+        "tangentialAccelVar": 65.79000091552734,
+        "radialAccel": -671.0499877929688,
+        "radialAccelVar": 65.79000091552734
+      }
+    ],
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": -190
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Tips",
+    "_parent": {
+      "__id__": 5
+    },
+    "_components": [
+      {
+        "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+        "node": {
+          "__id__": 6
+        },
+        "_useOriginalSize": false,
+        "_string": "粒子 1\n\"完成时自动移除\" 禁止",
+        "_N$string": "粒子 1\n\"完成时自动移除\" 禁止",
+        "_fontSize": 25,
+        "_N$horizontalAlign": 1,
+        "_N$verticalAlign": 1,
+        "_N$textKey": "cases/01_graphics/02_particle/AutoRemoveParticle.fire.9"
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 249.69,
+      "height": 80
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "y": -180
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Auto Remove OnFinish",
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [
+      {
+        "__id__": 8
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 7
+        },
+        "_dstBlendFactor": 1,
+        "_custom": true,
+        "_file": {
+          "__uuid__": "e2T6NCgVpEeLnb7VkufAKT"
+        },
+        "autoRemoveOnFinish": true,
+        "totalParticles": 200,
+        "duration": 10,
+        "emissionRate": 999.9999850988391,
+        "life": 0.2000000029802322,
+        "lifeVar": 0.5,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 202,
+          "g": 200,
+          "b": 86,
+          "a": 163
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color",
+          "r": 229,
+          "g": 255,
+          "b": 173,
+          "a": 198
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 173,
+          "g": 161,
+          "b": 19,
+          "a": 214
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "r": 107,
+          "g": 249,
+          "b": 249,
+          "a": 188
+        },
+        "angle": 360,
+        "angleVar": 360,
+        "startSize": 3.369999885559082,
+        "startSizeVar": 50,
+        "endSize": 30.31999969482422,
+        "startSpin": -47.36999893188477,
+        "endSpin": -47.36999893188477,
+        "endSpinVar": -142.1100006103516,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 7,
+          "y": 7
+        },
+        "_positionType": 1,
+        "positionType": 1,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "x": 0.25,
+          "y": 0.8600000143051147
+        },
+        "speed": 0,
+        "speedVar": 190.7899932861328,
+        "tangentialAccel": -92.11000061035156,
+        "tangentialAccelVar": 65.79000091552734,
+        "radialAccel": -671.0499877929688,
+        "radialAccelVar": 65.79000091552734
+      }
+    ],
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 190
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Tips",
+    "_parent": {
+      "__id__": 7
+    },
+    "_components": [
+      {
+        "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+        "node": {
+          "__id__": 8
+        },
+        "_useOriginalSize": false,
+        "_string": "粒子 2\n\"完成时自动移除\" 开启",
+        "_N$string": "粒子 2\n\"完成时自动移除\" 开启",
+        "_fontSize": 25,
+        "_N$horizontalAlign": 1,
+        "_N$verticalAlign": 1,
+        "_N$textKey": "cases/01_graphics/02_particle/AutoRemoveParticle.fire.13"
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 249.69,
+      "height": 80
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "y": -180
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Instruction",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "6a871gy73FDLap3Eje/2h6i",
+        "node": {
+          "__id__": 9
+        },
+        "text": "## AutoRemoveOnFinish 参数示例\n\n左边的粒子未选中 AutoRemoveOnFinish，播放完后节点不会消失。\n\n右边的粒子选中了 AutoRemoveOnFinish，播放完后节点跟着消失。"
+      }
+    ],
+    "_zIndex": 0,
+    "_id": "718cckOgS5NlKLyR2Qtikqp"
+  }
+]

@@ -1,0 +1,418 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "AlignOnceWidget",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 10
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "92471AysI1ERIB/UcwwI9Om"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "0ca08frCB5JOJX6w71T6dR0",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Top",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "a2MjXRFdtLlYQ5ouAFv/+R"
+          },
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Animation",
+          "node": {
+            "__id__": 5
+          },
+          "_defaultClip": {
+            "__uuid__": "c03NGBgolKCqnjMb0Q8v8/"
+          },
+          "_clips": [
+            {
+              "__uuid__": "c03NGBgolKCqnjMb0Q8v8/"
+            }
+          ],
+          "playOnLoad": true
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 800,
+        "height": 150
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 129
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "AlignOnce_False",
+      "_parent": {
+        "__id__": 5
+      },
+      "_components": [
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 6
+          },
+          "alignMode": 2,
+          "_alignFlags": 8,
+          "_left": 14.999999999999986
+        },
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 6
+          },
+          "_useOriginalSize": false,
+          "_string": "AlignMode is ALWAYS",
+          "_N$string": "AlignMode is ALWAYS",
+          "_fontSize": 30,
+          "_N$file": {
+            "__uuid__": "e9DdfGzRhMeq6D3O+bChta"
+          },
+          "_isSystemFontUsed": false,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 315,
+        "height": 33.33
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -385
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Top_Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 7
+          },
+          "_useOriginalSize": false,
+          "_string": "AlignOne 为 false 时，会一直保持对齐",
+          "_N$string": "AlignOne 为 false 时，会一直保持对齐",
+          "_fontSize": 35,
+          "_N$textKey": "cases/02_ui/01_widget/AlignOnceWidget.fire.1"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 597.08,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 8
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Bottom",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 9
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 8
+          },
+          "_spriteFrame": {
+            "__uuid__": "a2MjXRFdtLlYQ5ouAFv/+R"
+          },
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Animation",
+          "node": {
+            "__id__": 8
+          },
+          "_defaultClip": {
+            "__uuid__": "c03NGBgolKCqnjMb0Q8v8/"
+          },
+          "_clips": [
+            {
+              "__uuid__": "c03NGBgolKCqnjMb0Q8v8/"
+            }
+          ],
+          "playOnLoad": true
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 800,
+        "height": 150
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -117
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "AlignOnce_True",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 9
+          },
+          "alignMode": 0,
+          "_alignFlags": 8,
+          "_left": 10.999999999999986
+        },
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 9
+          },
+          "_useOriginalSize": false,
+          "_string": "AlignMode is ONCE",
+          "_N$string": "AlignMode is ONCE",
+          "_fontSize": 30,
+          "_N$file": {
+            "__uuid__": "e9DdfGzRhMeq6D3O+bChta"
+          },
+          "_isSystemFontUsed": false,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 271.67,
+        "height": 33.33
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -389
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Bottom_Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 10
+          },
+          "_useOriginalSize": false,
+          "_string": "AlignOne 为 true 时，只在 Widget 生效时对齐一次",
+          "_N$string": "AlignOne 为 true 时，只在 Widget 生效时对齐一次",
+          "_fontSize": 35,
+          "_N$textKey": "cases/02_ui/01_widget/AlignOnceWidget.fire.2"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 781.84,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -239
+      },
+      "_zIndex": 0
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_sprite_splash",
+      "texture": "02delMVqdBD70a/HSD99FK",
+      "rect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2,
+        2
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.AnimationClip",
+    "_name": "alignOnce_scale",
+    "_duration": 0.9833333333333333,
+    "wrapMode": 22,
+    "curveData": {
+      "props": {
+        "width": [
+          {
+            "frame": 0,
+            "value": 800
+          },
+          {
+            "frame": 0.9833333333333333,
+            "value": 270
+          }
+        ]
+      }
+    }
+  }
+]

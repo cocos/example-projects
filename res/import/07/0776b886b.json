@@ -1,0 +1,397 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "EditBoxEvent",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 13
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        },
+        {
+          "__type__": "5984fyb0ONArqT4eV/OjCgP",
+          "node": {
+            "__id__": 2
+          },
+          "editBox": {
+            "__id__": 12
+          },
+          "eventDisplay": {
+            "__id__": 14
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_id": "02bNiUW+REgqdh5G12BxdS"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ]
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "6aPf5YBjpJxaVZ7ckfnGSF",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "EditBox",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 10
+        }
+      ],
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 12
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 5
+          },
+          "_alignFlags": 16
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 160,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 80
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "BACKGROUND_SPRITE",
+      "_parent": {
+        "__id__": 5
+      },
+      "_level": 2,
+      "_components": [
+        {
+          "__id__": 7
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 160,
+        "height": 40
+      }
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 6
+      },
+      "_spriteFrame": {
+        "__uuid__": "ffDpHHVcZAhqOfy25Fe4w7"
+      },
+      "_type": 1,
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "TEXT_LABEL",
+      "_parent": {
+        "__id__": 5
+      },
+      "_active": false,
+      "_level": 2,
+      "_components": [
+        {
+          "__id__": 9
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 158,
+        "height": 40
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -78,
+        "y": 20
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 8
+      },
+      "_fontSize": 20,
+      "_enableWrapText": false,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "PLACEHOLDER_LABEL",
+      "_parent": {
+        "__id__": 5
+      },
+      "_level": 2,
+      "_components": [
+        {
+          "__id__": 11
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 187,
+        "g": 187,
+        "b": 187
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 158,
+        "height": 40
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -78,
+        "y": 20
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 10
+      },
+      "_string": "Enter text here...",
+      "_N$string": "Enter text here...",
+      "_fontSize": 20,
+      "_enableWrapText": false,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 1
+    },
+    {
+      "__type__": "cc.EditBox",
+      "node": {
+        "__id__": 5
+      },
+      "_useOriginalSize": false,
+      "editingDidBegan": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 2
+          },
+          "_componentId": "5984fyb0ONArqT4eV/OjCgP",
+          "handler": "editingDidBegan"
+        }
+      ],
+      "textChanged": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 2
+          },
+          "_componentId": "5984fyb0ONArqT4eV/OjCgP",
+          "handler": "textChanged"
+        }
+      ],
+      "editingDidEnded": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 2
+          },
+          "_componentId": "5984fyb0ONArqT4eV/OjCgP",
+          "handler": "editingDidEnded"
+        }
+      ],
+      "editingReturn": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 2
+          },
+          "_componentId": "5984fyb0ONArqT4eV/OjCgP",
+          "handler": "editingReturn"
+        }
+      ],
+      "_N$textLabel": {
+        "__id__": 9
+      },
+      "_N$placeholderLabel": {
+        "__id__": 11
+      },
+      "_N$background": {
+        "__id__": 7
+      },
+      "_N$inputMode": 6
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "eventDisplay",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 14
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 13
+          },
+          "_alignFlags": 40,
+          "_left": 20,
+          "_right": 20,
+          "_originalWidth": 370
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 920,
+        "height": 62.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 157
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 13
+      },
+      "_useOriginalSize": false,
+      "_string": "editBox event display",
+      "_N$string": "editBox event display",
+      "_fontSize": 30,
+      "_lineHeight": 50,
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1,
+      "_N$fontFamily": "microsoft yahei",
+      "_N$overflow": 3
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_editbox_bg",
+      "texture": "ed0hW5J5ZKBar1gflskoHO",
+      "rect": [
+        0,
+        0,
+        40,
+        40
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        12,
+        12,
+        12,
+        12
+      ]
+    }
+  }
+]

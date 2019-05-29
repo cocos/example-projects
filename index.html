@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Cocos Creator | examplecases</title>
+
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="full-screen" content="yes"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  
+  <link rel="stylesheet" type="text/css" href="style-desktop.css"/>
+</head>
+<body>
+<h1 class="header">examplecases</h1>
+
+<div id="GameDiv"  style="width:960px; height: 640px;">
+  <canvas id="GameCanvas" width="960" height="640"></canvas>
+  <div id="splash">
+    <div class="progress-bar stripes">
+      <span style="width: 0%"></span>
+    </div>
+  </div>
+</div>
+
+<p class="footer">Created with <a href="http://cocos.com/cocoscreator" title="Cocos Creator">Cocos Creator</a></p>
+
+<script src="src/settings.js" charset="utf-8"></script>
+<script src="main.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+(function () {
+    // open web debugger console
+    if (typeof VConsole !== 'undefined') {
+        window.vConsole = new VConsole();
+    }
+
+    var splash = document.getElementById('splash');
+    splash.style.display = 'block';
+
+    var cocos2d = document.createElement('script');
+    cocos2d.async = true;
+    cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
+
+    var engineLoaded = function () {
+        document.body.removeChild(cocos2d);
+        cocos2d.removeEventListener('load', engineLoaded, false);
+        window.boot();
+    };
+    cocos2d.addEventListener('load', engineLoaded, false);
+    document.body.appendChild(cocos2d);
+})();
+</script>
+</body>
+</html>

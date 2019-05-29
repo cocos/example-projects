@@ -1,0 +1,265 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "builtin-unlit-transparent",
+  "properties": {
+    "diffuseTexture": {
+      "type": 13,
+      "value": null
+    },
+    "diffuseColor": {
+      "type": 9,
+      "value": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "techniques": [
+    {
+      "stages": [
+        "transparent"
+      ],
+      "passes": [
+        {
+          "depthTest": true,
+          "depthWrite": false,
+          "blend": true,
+          "blendEq": 32774,
+          "blendSrc": 770,
+          "blendDst": 771,
+          "blendAlphaEq": 32774,
+          "blendSrcAlpha": 1,
+          "blendDstAlpha": 771,
+          "program": "061403a4fee41e99c7fbd0d70d603c430d3f85dbed5674580d6326e7"
+        }
+      ],
+      "layer": 0,
+      "queue": 0,
+      "priority": 0
+    }
+  ],
+  "shaders": [
+    {
+      "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nuniform mat4 cc_matWorld;\nuniform mat3 cc_matWorldIT;\n\nuniform mat4 cc_matView;\n\nuniform mat4 cc_matViewProj;\n\nuniform vec3 cc_cameraPos;                       \n\nuniform vec3 cc_sceneAmbient;                    \n\n#ifndef USE_DIFFUSE_TEXTURE\n  #ifndef USE_EMISSIVE_TEXTURE\n    #ifndef USE_SPECULAR_TEXTURE\n      #ifndef USE_NORMAL_TEXTURE\n        #define _NOT_USE_TEXTURE 1\n      #endif\n    #endif\n  #endif\n#endif\n\n#if USE_TILING_OFFSET && _USE_ATTRIBUTE_UV0\n  uniform vec2 mainTiling;\n  uniform vec2 mainOffset;\n#endif\n\n#ifdef _IS_VERT_SHADER\n  attribute vec3 a_position;\n#endif\n\n#ifndef _NOT_USE_TEXTURE\n\n  #if _USE_ATTRIBUTE_UV0\n    #ifdef _IS_VERT_SHADER\n      attribute mediump vec2 a_uv0;\n    #endif\n\n    varying mediump vec2 v_uv0;\n  #endif\n\n#endif\n\n#if _USE_ATTRIBUTE_COLOR\n\n  #ifdef _IS_VERT_SHADER\n    attribute lowp vec4 a_color;\n  #endif\n\n  varying lowp vec4 v_color;\n#endif\n\n#if _USE_ATTRIBUTE_NORMAL\n  #ifdef _IS_VERT_SHADER\n    attribute vec3 a_normal;\n  #endif\n#endif\n\n#ifdef _IS_VERT_SHADER\n\n  void ATTRIBUTE_TO_VARYING () {\n\n    #if _USE_ATTRIBUTE_COLOR\n        v_color = a_color;\n    #endif\n\n    #ifndef _NOT_USE_TEXTURE\n      #if _USE_ATTRIBUTE_UV0\n        v_uv0 = a_uv0;\n\n        #if USE_TILING_OFFSET\n          v_uv0 = v_uv0 * mainTiling + mainOffset;\n        #endif\n      #endif\n    #endif\n\n  }\n\n#endif\n\nvoid MUL_ATTR_COLOR (inout vec4 color) {\n  #if _USE_ATTRIBUTE_COLOR\n    #ifdef _IS_VERT_SHADER\n      color *= a_color;\n    #else\n      color *= v_color;\n    #endif\n  #endif\n}\n\nvoid MUL_ATTR_NORMAL (inout vec3 normal) {\n  #if _USE_ATTRIBUTE_NORMAL\n    #ifdef _IS_VERT_SHADER\n      normal *= a_normal;\n    #endif\n  #endif\n}\nvoid MUL_ATTR_NORMAL (inout vec4 normal) {\n  #if _USE_ATTRIBUTE_NORMAL\n    #ifdef _IS_VERT_SHADER\n      normal.xyz *= a_normal;\n    #endif\n  #endif\n}\n\n#if _USE_SKINNING\n\n  attribute vec4 a_weights;\n  attribute vec4 a_joints;\n\n  #if _USE_JOINTS_TEXTRUE\n  uniform sampler2D _jointsTexture;\n  uniform float _jointsTextureSize;\n\n  mat4 getBoneMatrix(const in float i) {\n    float size = _jointsTextureSize;\n    float j = i * 4.0;\n    float x = mod(j, size);\n    float y = floor(j / size);\n\n    float dx = 1.0 / size;\n    float dy = 1.0 / size;\n\n    y = dy * (y + 0.5);\n\n    vec4 v1 = texture2D(_jointsTexture, vec2(dx * (x + 0.5), y));\n    vec4 v2 = texture2D(_jointsTexture, vec2(dx * (x + 1.5), y));\n    vec4 v3 = texture2D(_jointsTexture, vec2(dx * (x + 2.5), y));\n    vec4 v4 = texture2D(_jointsTexture, vec2(dx * (x + 3.5), y));\n\n    return mat4(v1, v2, v3, v4);\n  }\n  #else\n  uniform mat4 _jointMatrices[_JOINT_MATRICES_SIZE];\n\n  mat4 getBoneMatrix(const in float i) {\n    return _jointMatrices[int(i)];\n  }\n  #endif\n\n  mat4 skinMatrix() {\n    return\n      getBoneMatrix(a_joints.x) * a_weights.x +\n      getBoneMatrix(a_joints.y) * a_weights.y +\n      getBoneMatrix(a_joints.z) * a_weights.z +\n      getBoneMatrix(a_joints.w) * a_weights.w\n      ;\n  }\n#endif\n\nvoid SKIN_VERTEX(inout vec4 a1) {\n  #if _USE_SKINNING\n    mat4 m = skinMatrix();\n    a1 = m * a1;\n  #endif\n}\n\nvoid SKIN_VERTEX(inout vec4 a1, inout vec4 a2) {\n  #if _USE_SKINNING\n    mat4 m = skinMatrix();\n    a1 = m * a1;\n    a2 = m * a2;\n  #endif\n}\n\nvoid SKIN_VERTEX(inout vec4 a1, inout vec4 a2, inout vec4 a3) {\n  #if _USE_SKINNING\n    mat4 m = skinMatrix();\n    a1 = m * a1;\n    a2 = m * a2;\n    a3 = m * a3;\n  #endif\n}\n\nvoid main () {\n  vec4 position = vec4(a_position, 1);\n\n  SKIN_VERTEX(position);\n  ATTRIBUTE_TO_VARYING();\n\n  gl_Position = cc_matViewProj * cc_matWorld * position;\n}\n\n\n",
+      "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\n#ifndef USE_DIFFUSE_TEXTURE\n  #ifndef USE_EMISSIVE_TEXTURE\n    #ifndef USE_SPECULAR_TEXTURE\n      #ifndef USE_NORMAL_TEXTURE\n        #define _NOT_USE_TEXTURE 1\n      #endif\n    #endif\n  #endif\n#endif\n\n#if USE_TILING_OFFSET && _USE_ATTRIBUTE_UV0\n  uniform vec2 mainTiling;\n  uniform vec2 mainOffset;\n#endif\n\n#ifdef _IS_VERT_SHADER\n  attribute vec3 a_position;\n#endif\n\n#ifndef _NOT_USE_TEXTURE\n\n  #if _USE_ATTRIBUTE_UV0\n    #ifdef _IS_VERT_SHADER\n      attribute mediump vec2 a_uv0;\n    #endif\n\n    varying mediump vec2 v_uv0;\n  #endif\n\n#endif\n\n#if _USE_ATTRIBUTE_COLOR\n\n  #ifdef _IS_VERT_SHADER\n    attribute lowp vec4 a_color;\n  #endif\n\n  varying lowp vec4 v_color;\n#endif\n\n#if _USE_ATTRIBUTE_NORMAL\n  #ifdef _IS_VERT_SHADER\n    attribute vec3 a_normal;\n  #endif\n#endif\n\n#ifdef _IS_VERT_SHADER\n\n  void ATTRIBUTE_TO_VARYING () {\n\n    #if _USE_ATTRIBUTE_COLOR\n        v_color = a_color;\n    #endif\n\n    #ifndef _NOT_USE_TEXTURE\n      #if _USE_ATTRIBUTE_UV0\n        v_uv0 = a_uv0;\n\n        #if USE_TILING_OFFSET\n          v_uv0 = v_uv0 * mainTiling + mainOffset;\n        #endif\n      #endif\n    #endif\n\n  }\n\n#endif\n\nvoid MUL_ATTR_COLOR (inout vec4 color) {\n  #if _USE_ATTRIBUTE_COLOR\n    #ifdef _IS_VERT_SHADER\n      color *= a_color;\n    #else\n      color *= v_color;\n    #endif\n  #endif\n}\n\nvoid MUL_ATTR_NORMAL (inout vec3 normal) {\n  #if _USE_ATTRIBUTE_NORMAL\n    #ifdef _IS_VERT_SHADER\n      normal *= a_normal;\n    #endif\n  #endif\n}\nvoid MUL_ATTR_NORMAL (inout vec4 normal) {\n  #if _USE_ATTRIBUTE_NORMAL\n    #ifdef _IS_VERT_SHADER\n      normal.xyz *= a_normal;\n    #endif\n  #endif\n}\n\nvec3 gammaToLinearSpaceRGB(in vec3 sRGB) { \n  return sRGB * (sRGB * (sRGB * 0.305306011 + 0.682171111) + 0.012522878);\n}\n\nvec3 linearToGammaSpaceRGB(in vec3 RGB) { \n  vec3 S1 = sqrt(RGB);\n  vec3 S2 = sqrt(S1);\n  vec3 S3 = sqrt(S2);\n  return 0.585122381 * S1 + 0.783140355 * S2 - 0.368262736 * S3;\n}\n\nvec4 gammaToLinearSpaceRGBA(in vec4 sRGBA) {\n  return vec4(gammaToLinearSpaceRGB(sRGBA.rgb), sRGBA.a);\n}\n\nvec4 linearToGammaSpaceRGBA(in vec4 RGBA) {\n  return vec4(linearToGammaSpaceRGB(RGBA.rgb), RGBA.a);\n}\n\nvec4 linearToLinear (in vec4 value) {\n  return value;\n}\n\n#if INPUT_IS_GAMMA\n  #define TEXEL_TO_LINEAR gammaToLinearSpaceRGBA\n#else\n  #define TEXEL_TO_LINEAR linearToLinear\n#endif\n\n#if OUTPUT_TO_GAMMA\n  #define LINEAR_TO_OUTPUT_TEXEL linearToGammaSpaceRGBA\n#else\n  #define LINEAR_TO_OUTPUT_TEXEL linearToLinear\n#endif\n\nuniform lowp vec4 diffuseColor;\n\n#if USE_DIFFUSE_TEXTURE\n  uniform sampler2D diffuseTexture;\n#endif\n\nvoid MULTIPLY_DIFFUSE_TEXTRUE_COLOR (inout vec4 color, in vec2 uv) {\n  #if USE_DIFFUSE_TEXTURE && _USE_ATTRIBUTE_UV0\n    vec4 diffuseTextureColor = texture2D(diffuseTexture, uv);\n    #if _USE_ETC1_DIFFUSETEXTURE\n      diffuseTextureColor.a *= texture2D(diffuseTexture, uv + vec2(0, 0.5)).r;\n    #endif\n    color *= TEXEL_TO_LINEAR(diffuseTextureColor);\n  #endif\n}\n\nvoid MULTIPLY_DIFFUSE_TEXTRUE_COLOR (inout vec4 color) {\n  #if USE_DIFFUSE_TEXTURE && _USE_ATTRIBUTE_UV0\n    \n    #ifdef _IS_VERT_SHADER\n      vec2 uv = a_uv0;\n    #else\n      vec2 uv = v_uv0;\n    #endif\n\n    MULTIPLY_DIFFUSE_TEXTRUE_COLOR(color, uv);\n  #endif\n}\n\nvoid CALC_DIFFUSE (inout vec4 diffuse, in vec2 uv) {\n  diffuse = diffuseColor;\n\n  MUL_ATTR_COLOR(diffuse);\n  MULTIPLY_DIFFUSE_TEXTRUE_COLOR(diffuse, uv);\n}\n\nvoid CALC_DIFFUSE (inout vec4 diffuse) {\n  diffuse = diffuseColor;\n\n  MUL_ATTR_COLOR(diffuse);\n  MULTIPLY_DIFFUSE_TEXTRUE_COLOR(diffuse);\n}\n\n#if USE_ALPHA_TEST\n  uniform float alphaThreshold;\n#endif\n\nvoid ALPHA_TEST (in vec4 color) {\n  #if USE_ALPHA_TEST\n      if (color.a < alphaThreshold) discard;\n  #endif\n}\n\nvoid ALPHA_TEST (in float alpha) {\n  #if USE_ALPHA_TEST\n      if (alpha < alphaThreshold) discard;\n  #endif\n}\n\nvoid main () {\n  vec4 diffuse;\n  CALC_DIFFUSE(diffuse);\n  ALPHA_TEST(diffuse);\n  gl_FragColor = LINEAR_TO_OUTPUT_TEXEL( diffuse );\n}\n\n\n",
+      "defines": [
+        {
+          "name": "USE_DIFFUSE_TEXTURE",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_EMISSIVE_TEXTURE",
+          "type": "boolean",
+          "defines": [
+            "USE_DIFFUSE_TEXTURE"
+          ]
+        },
+        {
+          "name": "USE_SPECULAR_TEXTURE",
+          "type": "boolean",
+          "defines": [
+            "USE_DIFFUSE_TEXTURE",
+            "USE_EMISSIVE_TEXTURE"
+          ]
+        },
+        {
+          "name": "USE_NORMAL_TEXTURE",
+          "type": "boolean",
+          "defines": [
+            "USE_DIFFUSE_TEXTURE",
+            "USE_EMISSIVE_TEXTURE",
+            "USE_SPECULAR_TEXTURE"
+          ]
+        },
+        {
+          "name": "USE_TILING_OFFSET",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "_USE_ATTRIBUTE_UV0",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "_USE_ATTRIBUTE_COLOR",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "_USE_ATTRIBUTE_NORMAL",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "_USE_SKINNING",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "_USE_JOINTS_TEXTRUE",
+          "type": "boolean",
+          "defines": [
+            "_USE_SKINNING"
+          ]
+        },
+        {
+          "name": "INPUT_IS_GAMMA",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "OUTPUT_TO_GAMMA",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "_USE_ETC1_DIFFUSETEXTURE",
+          "type": "boolean",
+          "defines": [
+            "USE_DIFFUSE_TEXTURE",
+            "_USE_ATTRIBUTE_UV0"
+          ]
+        },
+        {
+          "name": "USE_ALPHA_TEST",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "uniforms": [
+        {
+          "name": "mainTiling",
+          "type": 5,
+          "property": true,
+          "defines": [
+            "USE_TILING_OFFSET",
+            "_USE_ATTRIBUTE_UV0"
+          ]
+        },
+        {
+          "name": "mainOffset",
+          "type": 5,
+          "property": true,
+          "defines": [
+            "USE_TILING_OFFSET",
+            "_USE_ATTRIBUTE_UV0"
+          ]
+        },
+        {
+          "name": "mainTiling",
+          "type": 5,
+          "property": true,
+          "defines": [
+            "USE_TILING_OFFSET",
+            "_USE_ATTRIBUTE_UV0"
+          ]
+        },
+        {
+          "name": "mainOffset",
+          "type": 5,
+          "property": true,
+          "defines": [
+            "USE_TILING_OFFSET",
+            "_USE_ATTRIBUTE_UV0"
+          ]
+        },
+        {
+          "name": "diffuseColor",
+          "type": 9,
+          "property": true,
+          "defines": []
+        },
+        {
+          "name": "diffuseTexture",
+          "type": 13,
+          "property": true,
+          "defines": [
+            "USE_DIFFUSE_TEXTURE"
+          ]
+        },
+        {
+          "name": "alphaThreshold",
+          "type": 4,
+          "property": true,
+          "defines": [
+            "USE_ALPHA_TEST"
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "name": "a_position",
+          "type": 6,
+          "defines": []
+        },
+        {
+          "name": "a_uv0",
+          "type": 5,
+          "defines": [
+            "_USE_ATTRIBUTE_UV0"
+          ]
+        },
+        {
+          "name": "a_color",
+          "type": 7,
+          "defines": [
+            "_USE_ATTRIBUTE_COLOR"
+          ]
+        },
+        {
+          "name": "a_normal",
+          "type": 6,
+          "defines": [
+            "_USE_ATTRIBUTE_NORMAL"
+          ]
+        },
+        {
+          "name": "a_weights",
+          "type": 7,
+          "defines": [
+            "_USE_SKINNING"
+          ]
+        },
+        {
+          "name": "a_joints",
+          "type": 7,
+          "defines": [
+            "_USE_SKINNING"
+          ]
+        },
+        {
+          "name": "a_position",
+          "type": 6,
+          "defines": []
+        },
+        {
+          "name": "a_uv0",
+          "type": 5,
+          "defines": [
+            "_USE_ATTRIBUTE_UV0"
+          ]
+        },
+        {
+          "name": "a_color",
+          "type": 7,
+          "defines": [
+            "_USE_ATTRIBUTE_COLOR"
+          ]
+        },
+        {
+          "name": "a_normal",
+          "type": 6,
+          "defines": [
+            "_USE_ATTRIBUTE_NORMAL"
+          ]
+        }
+      ],
+      "extensions": [],
+      "name": "061403a4fee41e99c7fbd0d70d603c430d3f85dbed5674580d6326e7"
+    }
+  ]
+}

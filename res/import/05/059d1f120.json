@@ -1,0 +1,647 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "ReferenceType",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 10
+        },
+        {
+          "__id__": 11
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        },
+        {
+          "__type__": "9341f3fDdBMjJLKh4D+kJJK",
+          "node": {
+            "__id__": 2
+          },
+          "myNode": {
+            "__id__": 9
+          },
+          "mySprite": {
+            "__id__": 6
+          },
+          "myLabel": {
+            "__id__": 8
+          },
+          "myComponent": {
+            "__id__": 12
+          },
+          "mySpriteFrame": {
+            "__uuid__": "bfhnyuiiFP/52t0htQmKGm"
+          },
+          "myAtlas": {
+            "__uuid__": "553bz3COJP4KKyuatzr2Sd"
+          },
+          "myPrefab": {
+            "__uuid__": "42Ghp1AW9Ilrkm52f/+8b4"
+          },
+          "myAudioClip": {
+            "__uuid__": "4covOHOI1G6IXHOuU29dua"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "00585n+9KFBobjeB+/TNFrL"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "635c6oeJ2BGs7OmFeQ2IiWj",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "mySprite",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 50,
+        "height": 50
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -6
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 5
+      },
+      "_spriteFrame": {
+        "__uuid__": "8c20Sso/ZEn7NUfNSM+EBh"
+      },
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "myLabel",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 8
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 128,
+        "height": 50
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 75
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+      "node": {
+        "__id__": 7
+      },
+      "_useOriginalSize": false,
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 1,
+      "_N$textKey": ""
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "myNode",
+      "_parent": {
+        "__id__": 2
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -121
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 10
+          },
+          "_useOriginalSize": false,
+          "_string": "这个例子不包括运行时演示",
+          "_N$string": "这个例子不包括运行时演示",
+          "_fontSize": 30,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/05_scripting/01_properties/ReferenceType.fire.11"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 360,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -143
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "myComponent",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 12
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -6
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "6b8baEpLuxACIMNlIL2vw2W",
+      "node": {
+        "__id__": 11
+      }
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "radio_button_off",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        187,
+        14,
+        30,
+        32
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        32,
+        32
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "radio_button_on",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        153,
+        14,
+        32,
+        32
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        32,
+        32
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.AudioClip",
+    "_name": "ding",
+    "_native": ".wav"
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "CheckBox_Disable",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        1,
+        1,
+        40,
+        40
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteAtlas",
+    "_name": "ui.plist",
+    "_spriteFrames": {
+      "CheckBoxNode_Disable": {
+        "__uuid__": "97Tnf8AbFIKL5Vpa3HbhXG"
+      },
+      "CheckBoxNode_Normal": {
+        "__uuid__": "fdj8sKQp1JW4vxdgJ4gPBr"
+      },
+      "CheckBox_Disable": {
+        "__uuid__": "55uc0BVRxI8anXbpQMesgd"
+      },
+      "CheckBox_Normal": {
+        "__uuid__": "6fSMakYGpF+bzK+iad7gBg"
+      },
+      "CheckBox_Press": {
+        "__uuid__": "79oLlKO2hHy7lK0Nut8HiL"
+      },
+      "radio_button_off": {
+        "__uuid__": "1bMQn619tMDKI2ku61Hhly"
+      },
+      "radio_button_on": {
+        "__uuid__": "33h2AePTVEbIly0475DY0u"
+      },
+      "sliderProgress2": {
+        "__uuid__": "99C+G1o9lMuaX6Uc0x/tWR"
+      },
+      "sliderThumb": {
+        "__uuid__": "58XwIgfCpLdKViqO6kXV6c"
+      },
+      "sliderTrack2": {
+        "__uuid__": "e93wwmYxtNzKppzRNtIELI"
+      }
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "sliderThumb",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        125,
+        14,
+        26,
+        26
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        26,
+        26
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "CheckBox_Normal",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        43,
+        1,
+        40,
+        40
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "CheckBox_Press",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        85,
+        1,
+        38,
+        38
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_sprite",
+      "texture": "6eBWFz0oVHPLIGQKf/9Thu",
+      "rect": [
+        0,
+        2,
+        40,
+        36
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "CheckBoxNode_Disable",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        219,
+        14,
+        30,
+        22
+      ],
+      "offset": [
+        -1,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "sliderProgress2",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        125,
+        1,
+        131,
+        11
+      ],
+      "offset": [
+        0,
+        1
+      ],
+      "originalSize": [
+        131,
+        13
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "content",
+      "texture": "6bT67Vq8NKd6+dNe1npaSL",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        512,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "sliderTrack2",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        1,
+        43,
+        131,
+        13
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        131,
+        13
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "CheckBoxNode_Normal",
+      "texture": "9cXuGMWwlHJrI75G5JobAI",
+      "rect": [
+        219,
+        38,
+        30,
+        22
+      ],
+      "offset": [
+        -1,
+        0
+      ],
+      "originalSize": [
+        40,
+        40
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

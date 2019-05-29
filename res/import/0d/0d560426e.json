@@ -1,0 +1,181 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "compressed_texture",
+      "texture": "a8rYtK+3xFZLRsEsW2GDjg",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        512,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "compressed-texture",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 6
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_id": "1ezSY8x/tFCZ4MCwUR3UDZ"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ]
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "content",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 5
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 200
+      }
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 4
+      },
+      "_spriteFrame": {
+        "__uuid__": "de5IoUzYRPsZHlfYSQ0Fiw"
+      },
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "info",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 7
+        },
+        {
+          "__type__": "615a1E9o7JL16wYETk3dcOV",
+          "node": {
+            "__id__": 6
+          },
+          "sprite": {
+            "__id__": 5
+          },
+          "infoLabel": {
+            "__id__": 7
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 500,
+        "height": 50
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -166.434
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 6
+      },
+      "_useOriginalSize": false,
+      "_string": "Label",
+      "_N$string": "Label",
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1,
+      "_N$overflow": 3
+    }
+  ]
+]

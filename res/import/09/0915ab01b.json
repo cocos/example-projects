@@ -1,0 +1,901 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "SystemFontLabel",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 30
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 16
+        },
+        {
+          "__id__": 26
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "1c77cL2HbNJg58Dqy4oN+t+"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "7b876FermlPr5Lb2crikBOB",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Title",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 5
+          },
+          "_useOriginalSize": false,
+          "_string": "系统字体",
+          "_N$string": "系统字体",
+          "_fontSize": 50,
+          "_lineHeight": 50,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.6"
+        },
+        {
+          "__type__": "cc.LabelOutline",
+          "node": {
+            "__id__": 5
+          },
+          "_color": {
+            "__type__": "cc.Color",
+            "g": 189,
+            "b": 45
+          },
+          "_width": 3
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 206,
+        "height": 50
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 256
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Wrap",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -199,
+        "y": 91
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Wrap_Title",
+      "_parent": {
+        "__id__": 6
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 7
+          },
+          "_useOriginalSize": false,
+          "_string": "换行",
+          "_N$string": "换行",
+          "_fontSize": 35,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.9"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 70,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 82
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "CLAMP",
+      "_parent": {
+        "__id__": 6
+      },
+      "_children": [
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 10
+        },
+        {
+          "__id__": 11
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -110
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 9
+          },
+          "_spriteFrame": {
+            "__uuid__": "c0GPA1PjJA7bli4XEgVjPQ"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 87,
+        "g": 87,
+        "b": 87
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 80
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 10
+          },
+          "_useOriginalSize": false,
+          "_string": "这是系统默认字体这是系统默认字体",
+          "_N$string": "这是系统默认字体这是系统默认字体",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 1,
+          "_N$textKey": "这是系统默认字体这是系统默认字体"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 190,
+        "height": 60
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 8
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 11
+          },
+          "_useOriginalSize": false,
+          "_string": "Overflow: CLAMP",
+          "_N$string": "Overflow: CLAMP",
+          "_fontSize": 20,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.16"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 158.93,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -65.6
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "SHRINK",
+      "_parent": {
+        "__id__": 6
+      },
+      "_children": [
+        {
+          "__id__": 13
+        },
+        {
+          "__id__": 14
+        },
+        {
+          "__id__": 15
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 110
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 12
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 13
+          },
+          "_spriteFrame": {
+            "__uuid__": "c0GPA1PjJA7bli4XEgVjPQ"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 87,
+        "g": 87,
+        "b": 87
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 80
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 12
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 14
+          },
+          "_useOriginalSize": false,
+          "_string": "这是系统默认字体这是系统默认字体",
+          "_N$string": "这是系统默认字体这是系统默认字体",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 2,
+          "_N$textKey": "这是系统默认字体这是系统默认字体"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 190,
+        "height": 60
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 12
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 15
+          },
+          "_useOriginalSize": false,
+          "_string": "Overflow: SHRINK",
+          "_N$string": "Overflow: SHRINK",
+          "_fontSize": 20,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.23"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 165.59,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -64.7
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "No Wrap",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 17
+        },
+        {
+          "__id__": 18
+        },
+        {
+          "__id__": 22
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -199,
+        "y": -140
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "No_Wrap_Title",
+      "_parent": {
+        "__id__": 16
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 17
+          },
+          "_useOriginalSize": false,
+          "_string": "不换行",
+          "_N$string": "不换行",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.26"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 120,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 82
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "CLAMP",
+      "_parent": {
+        "__id__": 16
+      },
+      "_children": [
+        {
+          "__id__": 19
+        },
+        {
+          "__id__": 20
+        },
+        {
+          "__id__": 21
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -110
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 18
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 19
+          },
+          "_spriteFrame": {
+            "__uuid__": "c0GPA1PjJA7bli4XEgVjPQ"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 87,
+        "g": 87,
+        "b": 87
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 80
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 18
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 20
+          },
+          "_useOriginalSize": false,
+          "_string": "这是系统默认字体",
+          "_N$string": "这是系统默认字体",
+          "_enableWrapText": false,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.31"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 190,
+        "height": 60
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 18
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 21
+          },
+          "_useOriginalSize": false,
+          "_string": "Overflow: CLAMP",
+          "_N$string": "Overflow: CLAMP",
+          "_fontSize": 20,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.33"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 158.93,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -65.6
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "SHRINK",
+      "_parent": {
+        "__id__": 16
+      },
+      "_children": [
+        {
+          "__id__": 23
+        },
+        {
+          "__id__": 24
+        },
+        {
+          "__id__": 25
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 110
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 22
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 23
+          },
+          "_spriteFrame": {
+            "__uuid__": "c0GPA1PjJA7bli4XEgVjPQ"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 87,
+        "g": 87,
+        "b": 87
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 80
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 22
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 24
+          },
+          "_useOriginalSize": false,
+          "_string": "这是系统默认字体",
+          "_N$string": "这是系统默认字体",
+          "_enableWrapText": false,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 2,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.38"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 190,
+        "height": 60
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 22
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 25
+          },
+          "_useOriginalSize": false,
+          "_string": "Overflow: SHRINK",
+          "_N$string": "Overflow: SHRINK",
+          "_fontSize": 20,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.40"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 165.59,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -64.7
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "RESIZE HEIGHT",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 27
+        },
+        {
+          "__id__": 28
+        },
+        {
+          "__id__": 29
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 239
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 26
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 27
+          },
+          "_spriteFrame": {
+            "__uuid__": "c0GPA1PjJA7bli4XEgVjPQ"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 87,
+        "g": 87,
+        "b": 87
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 80
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 26
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 28
+          },
+          "_useOriginalSize": false,
+          "_string": "哈喽! 欢迎使用 Cocos Creator",
+          "_N$string": "哈喽! 欢迎使用 Cocos Creator",
+          "_fontSize": 25,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 3,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.45"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 80
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 26
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 29
+          },
+          "_useOriginalSize": false,
+          "_string": "Overflow: RESZIE_HEIGHT",
+          "_N$string": "Overflow: RESZIE_HEIGHT",
+          "_fontSize": 20,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/02_label/SystemFontLabel.fire.47"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 248.94,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -94
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "AdaptiveSprite",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "4edf1JTF/BHIKZVY3FaAqsT",
+          "node": {
+            "__id__": 30
+          },
+          "label": {
+            "__id__": 28
+          },
+          "backgroup": {
+            "__id__": 27
+          }
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "f9f4fMET5REqIkA9fcq1o9b"
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "bg",
+      "texture": "5cSEe6cUVByreKJqRNvahb",
+      "rect": [
+        0,
+        0,
+        14,
+        14
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        14,
+        14
+      ],
+      "capInsets": [
+        5,
+        5,
+        5,
+        5
+      ]
+    }
+  }
+]

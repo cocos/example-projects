@@ -1,0 +1,299 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "ui_panel",
+      "texture": "e2+JVotVRBt6Ias6A7PFQx",
+      "rect": [
+        0,
+        0,
+        151,
+        101
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        151,
+        101
+      ],
+      "capInsets": [
+        23,
+        13,
+        22,
+        33
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "button_empty",
+      "texture": "da2rFXPuhGF6KcVNW0+3qo",
+      "rect": [
+        0,
+        0,
+        442,
+        141
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        442,
+        141
+      ],
+      "capInsets": [
+        43,
+        34,
+        52,
+        63
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "AutoResize",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 9
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 100
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "92ad4SjMb5AxYL0KnMboHwu"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "30d6azR0ohIhYTWH9Gtc6Ct",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "AutoResize",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 7
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 600,
+        "height": 400
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Top",
+      "_parent": {
+        "__id__": 5
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "c74+0DxWhKl4pJoAx06mhW"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 550,
+        "height": 130
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 115
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Bottom",
+      "_parent": {
+        "__id__": 5
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "dam32CS91FS61LbPfK1kTt"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 300,
+        "height": 141
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -120
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 8
+          },
+          "_useOriginalSize": false,
+          "_string": "挂件自动调整大小。",
+          "_N$string": "挂件自动调整大小。",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/01_widget/AutoResize.fire.13"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 360,
+        "height": 40
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 9
+          },
+          "text": "## Widget 带自动缩放的对齐使用说明\n\n1. 点击 Top_Sprite, 确认四个方向的对齐选项都已经开启，可以修改每个对齐方向的偏移距离，注意距离的单位是 px（像素）\n2. 点击 Bottom_Sprite，确认左右两个方向的对齐已经开启，可以修改对齐的偏移距离，单位使用 % （百分比）\n3. 修改他们的父节点 Content 的 size 属性，可以看到随着父节点 size 的变化，两个 sprite 的尺寸也会自动变化，使得他们距离屏幕左右两边的距离符合我们设置的要求。注意使用百分比作为偏移距离时，该 Sprite 的边和屏幕对应边的距离会保持在父节点宽度的一定百分比。"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "a973cU67JFGJ4rbX+Rqyb4l"
+    }
+  ]
+]

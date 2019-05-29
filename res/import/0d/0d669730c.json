@@ -1,0 +1,50 @@
+[
+  {
+    "__type__": "cc.EffectAsset",
+    "_name": "builtin-clear-stencil",
+    "properties": {},
+    "techniques": [
+      {
+        "passes": [
+          {
+            "cullMode": 0,
+            "blend": true,
+            "program": "ecffb93dd8898d482a87ab9b7d996968df31634fee23f1aa5de47906"
+          }
+        ],
+        "layer": 0,
+        "stages": [
+          "opaque"
+        ],
+        "queue": 0,
+        "priority": 0
+      }
+    ],
+    "shaders": [
+      {
+        "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nattribute vec3 a_position;\n\nvoid main () {\n  gl_Position = vec4(a_position, 1);\n}\n\n\n",
+        "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\nvoid main () {\n  gl_FragColor = vec4(1.0);\n}\n\n\n",
+        "defines": [],
+        "uniforms": [],
+        "attributes": [
+          {
+            "name": "a_position",
+            "type": 6,
+            "defines": []
+          }
+        ],
+        "extensions": [],
+        "name": "ecffb93dd8898d482a87ab9b7d996968df31634fee23f1aa5de47906"
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Material",
+    "_name": "builtin-clear-stencil",
+    "_effectAsset": {
+      "__uuid__": "c0BAyVxX9JzZy8EjFrc9DU"
+    },
+    "_defines": {},
+    "_props": {}
+  }
+]

@@ -1,0 +1,743 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "ButtonInScroll",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 15
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 19
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "54111uRYoVG8rjeHzb1Phj+"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "c9f50LQHIpGsIGkdogHWDhH",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "ScrollView",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_components": [
+        {
+          "__id__": 10
+        },
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "9bvaMerUlDyary99mJa6xp"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 184,
+        "g": 184,
+        "b": 184
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 250,
+        "height": 250
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "ScrollBar",
+      "_parent": {
+        "__id__": 5
+      },
+      "_children": [
+        {
+          "__id__": 7
+        }
+      ],
+      "_components": [
+        {
+          "__id__": 9
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 6
+          },
+          "alignMode": 2,
+          "_alignFlags": 5,
+          "_left": 350.07654921020657,
+          "_originalHeight": 237
+        },
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "5f5dyqtRNNxaFmVzYns6FZ"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 238,
+        "g": 217,
+        "b": 227
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 15,
+        "height": 250
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "x": 1,
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 125
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Bar",
+      "_parent": {
+        "__id__": 6
+      },
+      "_components": [
+        {
+          "__id__": 8
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 236,
+        "g": 241,
+        "b": 245
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 15,
+        "height": 156.25
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -14.999999999999886,
+        "y": -31.250000000000057
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 7
+      },
+      "_spriteFrame": {
+        "__uuid__": "5cO7kybDxGj4ipyMYdRYZB"
+      },
+      "_type": 1,
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Scrollbar",
+      "node": {
+        "__id__": 6
+      },
+      "_scrollView": {
+        "__id__": 10
+      },
+      "_N$handle": {
+        "__id__": 8
+      },
+      "_N$direction": 1
+    },
+    {
+      "__type__": "cc.ScrollView",
+      "node": {
+        "__id__": 5
+      },
+      "horizontal": false,
+      "brake": 0.75,
+      "bounceDuration": 0.23,
+      "_N$content": {
+        "__id__": 11
+      },
+      "content": {
+        "__id__": 11
+      },
+      "_N$horizontalScrollBar": null,
+      "_N$verticalScrollBar": {
+        "__id__": 9
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Content",
+      "_parent": {
+        "__id__": 12
+      },
+      "_children": [
+        {
+          "__id__": 13
+        },
+        {
+          "__id__": 17
+        },
+        {
+          "__id__": 20
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 220,
+        "height": 400
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "x": 0.5,
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -4,
+        "y": 125
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "View",
+      "_parent": {
+        "__id__": 5
+      },
+      "_children": [
+        {
+          "__id__": 11
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Mask",
+          "node": {
+            "__id__": 12
+          },
+          "_N$alphaThreshold": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 240,
+        "height": 250
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -6.969993568000234,
+        "y": 5.684341886080802e-14
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Button_1",
+      "_parent": {
+        "__id__": 11
+      },
+      "_components": [
+        {
+          "__id__": 14
+        },
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 13
+          },
+          "_srcBlendFactor": 1,
+          "_spriteFrame": {
+            "__uuid__": "d1Z6l1hFVJ57SNXKwRjzZ3"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 195,
+        "height": 57
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -3,
+        "y": -154
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Button",
+      "node": {
+        "__id__": 13
+      },
+      "clickEvents": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 15
+          },
+          "component": "ButtonControlCtrl",
+          "handler": "onClickedButton_1"
+        }
+      ],
+      "_N$transition": 1,
+      "transition": 1,
+      "_N$normalColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$pressedColor": {
+        "__type__": "cc.Color",
+        "r": 109,
+        "g": 105,
+        "b": 105
+      },
+      "pressedColor": {
+        "__type__": "cc.Color",
+        "r": 109,
+        "g": 105,
+        "b": 105
+      },
+      "_N$hoverColor": {
+        "__type__": "cc.Color",
+        "r": 213,
+        "g": 213,
+        "b": 213
+      },
+      "hoverColor": {
+        "__type__": "cc.Color",
+        "r": 213,
+        "g": 213,
+        "b": 213
+      },
+      "_N$disabledColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$target": {
+        "__id__": 13
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "ButtonInScrollCtrl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "e6dc7dWcxxJuofXB7ergGnC",
+          "node": {
+            "__id__": 15
+          },
+          "button_1": {
+            "__id__": 14
+          },
+          "button_2": {
+            "__id__": 16
+          },
+          "display": {
+            "__id__": 18
+          }
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "bc590846b1AYK8nbE9o7dHC"
+    },
+    {
+      "__type__": "cc.Button",
+      "node": {
+        "__id__": 17
+      },
+      "clickEvents": [
+        {
+          "__type__": "cc.ClickEvent",
+          "target": {
+            "__id__": 15
+          },
+          "component": "ButtonControlCtrl",
+          "handler": "onClickedButton_2"
+        }
+      ],
+      "_N$transition": 1,
+      "transition": 1,
+      "_N$normalColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$pressedColor": {
+        "__type__": "cc.Color",
+        "r": 109,
+        "g": 105,
+        "b": 105
+      },
+      "pressedColor": {
+        "__type__": "cc.Color",
+        "r": 109,
+        "g": 105,
+        "b": 105
+      },
+      "_N$hoverColor": {
+        "__type__": "cc.Color",
+        "r": 213,
+        "g": 213,
+        "b": 213
+      },
+      "hoverColor": {
+        "__type__": "cc.Color",
+        "r": 213,
+        "g": 213,
+        "b": 213
+      },
+      "_N$disabledColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$target": {
+        "__id__": 17
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Button_2",
+      "_parent": {
+        "__id__": 11
+      },
+      "_components": [
+        {
+          "__id__": 16
+        },
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 17
+          },
+          "_srcBlendFactor": 1,
+          "_spriteFrame": {
+            "__uuid__": "d1Z6l1hFVJ57SNXKwRjzZ3"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 195,
+        "height": 57
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -307
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+      "node": {
+        "__id__": 19
+      },
+      "_useOriginalSize": false,
+      "_string": "哪个按钮被点击？",
+      "_N$string": "哪个按钮被点击？",
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1,
+      "_N$textKey": "cases/02_ui/03_button/ButtonInScroll.fire.21"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Display",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 18
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 320,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 177
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Item",
+      "_parent": {
+        "__id__": 11
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 20
+          },
+          "_useOriginalSize": false,
+          "_string": "拖动显示更多按钮",
+          "_N$string": "拖动显示更多按钮",
+          "_fontSize": 20,
+          "_lineHeight": 20,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$overflow": 2,
+          "_N$textKey": "cases/02_ui/03_button/ButtonInScroll.fire.27"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 177.6,
+        "height": 40
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 1
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -102.2,
+        "y": -10.15
+      },
+      "_zIndex": 0
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_scrollbar_vertical",
+      "texture": "d608qFRoFHwbXd0Dap056i",
+      "rect": [
+        0,
+        0,
+        15,
+        30
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        15,
+        30
+      ],
+      "capInsets": [
+        4,
+        10,
+        4,
+        10
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_scrollbar_vertical_bg",
+      "texture": "61cyPdEfRN047sDK9rO0W5",
+      "rect": [
+        0,
+        0,
+        15,
+        30
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        15,
+        30
+      ],
+      "capInsets": [
+        4,
+        10,
+        4,
+        10
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_panel",
+      "texture": "d8HsitJHxOYqo801xBk8ev",
+      "rect": [
+        0,
+        0,
+        20,
+        20
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        20,
+        20
+      ],
+      "capInsets": [
+        6,
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btn_play",
+      "texture": "c0T/piTOlOA6idP3YCeQwK",
+      "rect": [
+        0,
+        0,
+        195,
+        57
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        195,
+        57
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

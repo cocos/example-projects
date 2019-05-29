@@ -1,0 +1,257 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "singleColor",
+      "texture": "1bags8Kg5BCpWrU9yaA6Ng",
+      "rect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2,
+        2
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "nodePool",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.7109130859375,
+        "y": 0.7109130859375,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        },
+        {
+          "__type__": "c2149G/5j1JIKd2GGzQfS72",
+          "node": {
+            "__id__": 2
+          },
+          "prefab": {
+            "__uuid__": "42Ghp1AW9Ilrkm52f/+8b4"
+          },
+          "hint": {
+            "__id__": 6
+          },
+          "regionOrigin": {
+            "__type__": "cc.Vec2",
+            "x": -240,
+            "y": -160
+          },
+          "regionSize": {
+            "__type__": "cc.Size",
+            "width": 480,
+            "height": 320
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "56480cK1ldGG6VDnEA48XBZ"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 4
+          },
+          "_spriteFrame": {
+            "__uuid__": "0aoLNsxKlM4qs77+3nCObU"
+          },
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 4
+          },
+          "alignMode": 2,
+          "_alignFlags": 45,
+          "_originalWidth": 960,
+          "_originalHeight": 640
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8"
+      },
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 57,
+        "g": 61,
+        "b": 64
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "created",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__id__": 6
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 271.27,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 250
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 5
+      },
+      "_useOriginalSize": false,
+      "_string": "Node Created: ",
+      "_N$string": "Node Created: ",
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Label",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 7
+          },
+          "_useOriginalSize": false,
+          "_string": "Click to pause a node, \ndouble click to delete a node immediately",
+          "_N$string": "Click to pause a node, \ndouble click to delete a node immediately",
+          "_fontSize": 30,
+          "_lineHeight": 30,
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 548.66,
+        "height": 60
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -250
+      },
+      "_zIndex": 0
+    }
+  ]
+]

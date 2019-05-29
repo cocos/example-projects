@@ -1,0 +1,256 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "sheep_run_0",
+      "texture": "834FFm1hFFKqwvTL9cPVoG",
+      "rect": [
+        178,
+        236,
+        168,
+        113
+      ],
+      "offset": [
+        -4,
+        0
+      ],
+      "originalSize": [
+        228,
+        159
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "KeyboardInput",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 100
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.7421875,
+        "y": 0.7421875,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "403d4qSkFBJMJ0tva3XMp1i"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "8913fCVy/FBS5ytpr9e1PkY",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "instruction",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 5
+          },
+          "_useOriginalSize": false,
+          "_string": "按 'A' 或 'D' 键控制小绵羊",
+          "_N$string": "按 'A' 或 'D' 键控制小绵羊",
+          "_N$horizontalAlign": 1,
+          "_N$textKey": "cases/03_gameplay/01_player_control/EventManager/KeyboardInput.fire.6"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 450.57,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -174
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "sheep",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "7cy3hPfFFKC6We6V2kDzAT"
+          }
+        },
+        {
+          "__type__": "cc.Animation",
+          "node": {
+            "__id__": 6
+          },
+          "_defaultClip": {
+            "__uuid__": "dc6EXKZqdE3bGMvUmHbhqa"
+          },
+          "_clips": [
+            {
+              "__uuid__": "dc6EXKZqdE3bGMvUmHbhqa"
+            }
+          ],
+          "playOnLoad": true
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 168,
+        "height": 113
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "SheepControl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "c3f971iyCdIh6xdaO49XP0F",
+          "node": {
+            "__id__": 7
+          },
+          "sheep": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "e83080k57tCdJUdSqjcQe+r"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 8
+          },
+          "text": "## 键盘输入使用说明\n\n点击 play 按钮预览游戏，控制脚本监听键盘\"A\"和\"D\"按键输入，分别控制绵羊向左或向右转向。\n\n在浏览器预览时，请确认游戏视窗处于激活状态（点击游戏视窗区域），才能正确获取输入事件。\n\n查看 SimpleKeyboardMovement.js 脚本，了解监听键盘输入事件的脚本书写方法。"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "9e7c8kSCGhAeZRxGQNjEAhM"
+    }
+  ]
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "__type__": "cc.EffectAsset",
+    "_name": "builtin-2d-gray-sprite",
+    "properties": {
+      "texture": {
+        "type": 13,
+        "value": null
+      }
+    },
+    "techniques": [
+      {
+        "passes": [
+          {
+            "cullMode": 0,
+            "blend": true,
+            "program": "4c10e7ec534d3f65baabc458cc91fd8dfe66821a283acb75aea070ac"
+          }
+        ],
+        "layer": 0,
+        "stages": [
+          "opaque"
+        ],
+        "queue": 0,
+        "priority": 0
+      }
+    ],
+    "shaders": [
+      {
+        "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nuniform mat4 cc_matViewProj;\nattribute vec3 a_position;\nattribute mediump vec2 a_uv0;\nvarying mediump vec2 v_uv0;\n\nvoid main () {\n  gl_Position = cc_matViewProj * vec4(a_position, 1);\n  v_uv0 = a_uv0;\n}\n\n\n",
+        "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\nuniform sampler2D texture;\nvarying mediump vec2 v_uv0;\n\nvoid main () {\n  vec4 color = texture2D(texture, v_uv0);\n  #if _USE_ETC1_TEXTURE\n      color.a *= texture2D(texture, v_uv0 + vec2(0, 0.5)).r;\n  #endif\n  float gray = 0.2126*color.r + 0.7152*color.g + 0.0722*color.b;\n  gl_FragColor = vec4(gray, gray, gray, color.a);\n}\n\n\n",
+        "defines": [
+          {
+            "name": "_USE_ETC1_TEXTURE",
+            "type": "boolean",
+            "defines": []
+          }
+        ],
+        "uniforms": [
+          {
+            "name": "texture",
+            "type": 13,
+            "defines": []
+          }
+        ],
+        "attributes": [
+          {
+            "name": "a_position",
+            "type": 6,
+            "defines": []
+          },
+          {
+            "name": "a_uv0",
+            "type": 5,
+            "defines": []
+          }
+        ],
+        "extensions": [],
+        "name": "4c10e7ec534d3f65baabc458cc91fd8dfe66821a283acb75aea070ac"
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Material",
+    "_name": "builtin-2d-gray-sprite",
+    "_effectAsset": {
+      "__uuid__": "14TDKXr2NJ6LjvHPops74o"
+    },
+    "_defines": {},
+    "_props": {}
+  }
+]

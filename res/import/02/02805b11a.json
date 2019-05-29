@@ -1,0 +1,326 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "ButtonSizeMode",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 100
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.3265625,
+        "y": 0.3265625,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 7
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "0b951/6WMhCD6sAzEqnsgvw"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "e02633eCWVO37awr03JDiOQ",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Report_button",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 5
+          },
+          "_useOriginalSize": false,
+          "_string": "Different hit areas of the buttons",
+          "_N$string": "Different hit areas of the buttons",
+          "_fontSize": 30,
+          "_N$horizontalAlign": 1,
+          "_N$textKey": "cases/02_ui/03_button/ButtonSizeMode.fire"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 426.37,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 128
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Button Trimmed",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "99+nkf+kRMZImW5g1uwCq+"
+          }
+        },
+        {
+          "__type__": "cc.Button",
+          "node": {
+            "__id__": 6
+          },
+          "_N$transition": 1,
+          "transition": 1,
+          "_N$normalColor": {
+            "__type__": "cc.Color",
+            "r": 187,
+            "g": 187,
+            "b": 187
+          },
+          "_N$pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 104,
+            "b": 104
+          },
+          "pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 104,
+            "b": 104
+          },
+          "_N$target": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 187,
+        "g": 187,
+        "b": 187
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 94,
+        "height": 94
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -150,
+        "y": -27
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Button Raw",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "99+nkf+kRMZImW5g1uwCq+"
+          },
+          "_sizeMode": 2,
+          "_isTrimmedMode": false
+        },
+        {
+          "__type__": "cc.Button",
+          "node": {
+            "__id__": 7
+          },
+          "_N$transition": 1,
+          "transition": 1,
+          "_N$normalColor": {
+            "__type__": "cc.Color",
+            "r": 187,
+            "g": 187,
+            "b": 187
+          },
+          "_N$pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 104,
+            "b": 104
+          },
+          "pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 104,
+            "b": 104
+          },
+          "_N$target": {
+            "__id__": 7
+          }
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 187,
+        "g": 187,
+        "b": 187
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 200
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 150,
+        "y": -27
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 8
+          },
+          "text": "## Button 响应区域\n\n点击左右两个按钮时，按钮发生颜色变化，左边是鼠标移动到按钮所在区域才触发，右边是鼠标接近按钮时就触发了。\n其实这两个按钮显示的是同一个 SpriteFrame，而这个 SpriteFrame 的原图四周存在很大的透明区域。\n因此当两个按钮对应的 Sprite 组件的设置不同，它们所在的节点大小也就不一样，所以它们的触发区域并不一样。\n关于 Sprite 的详细设置可以参考 Sprite 相关范例。"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "be079lHuo1DrqjFPBTa4cJJ"
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "attention_padded",
+      "texture": "28YckXm5hHabDYmfb3451d",
+      "rect": [
+        53,
+        53,
+        94,
+        94
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        200,
+        200
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

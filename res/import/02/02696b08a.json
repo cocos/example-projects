@@ -1,0 +1,1215 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "singleColor",
+      "texture": "1bags8Kg5BCpWrU9yaA6Ng",
+      "rect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2,
+        2
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btnNormal",
+      "texture": "35vxBT1O5HIJVsBBaaG5cZ",
+      "rect": [
+        0,
+        0,
+        195,
+        57
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        195,
+        57
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_radio_button_on",
+      "texture": "9dYAAftfRHJqYpJlnj3tC4",
+      "rect": [
+        1,
+        1,
+        30,
+        30
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        32,
+        32
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_toggle_normal",
+      "texture": "d2kHe6FidKcpV5e1aiNTQM",
+      "rect": [
+        0,
+        0,
+        28,
+        28
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        28,
+        28
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btnDisabled",
+      "texture": "79udCFDudPH5q5QcQVViXa",
+      "rect": [
+        0,
+        0,
+        195,
+        57
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        195,
+        57
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btnPressed",
+      "texture": "ab3HrzjU5Jkpi2CcKl32D1",
+      "rect": [
+        0,
+        0,
+        195,
+        57
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        195,
+        57
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_toggle_checkmark",
+      "texture": "73oJA92A5OPKpn+ZlUPAj1",
+      "rect": [
+        4,
+        5,
+        20,
+        18
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        28,
+        28
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "ButtonTransition",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5595458984375,
+        "y": 0.5595458984375,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 12
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        },
+        {
+          "__type__": "d6525ck4GdCHbg0bUMMfDYY",
+          "node": {
+            "__id__": 2
+          },
+          "btn": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "faxOTNd4lIl58JvkwLbQgE"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1,
+          "_ortho": false
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 4
+          },
+          "_spriteFrame": {
+            "__uuid__": "0aoLNsxKlM4qs77+3nCObU"
+          },
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 4
+          },
+          "alignMode": 2,
+          "_alignFlags": 45,
+          "_originalWidth": 960,
+          "_originalHeight": 640
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8"
+      },
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 56,
+        "g": 59,
+        "b": 65
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "btn",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "0b5dLcRVpObKFXQUae+IVl"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 5
+          },
+          "_alignFlags": 16
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 195,
+        "height": 57
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 65
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Button",
+      "node": {
+        "__id__": 5
+      },
+      "_N$enableAutoGrayEffect": true,
+      "_N$transition": 1,
+      "transition": 1,
+      "_N$normalColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "_N$disabledColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 100
+      },
+      "_N$normalSprite": {
+        "__uuid__": "0b5dLcRVpObKFXQUae+IVl"
+      },
+      "_N$pressedSprite": {
+        "__uuid__": "80axWj8PBAQIemuuW1x/Wt"
+      },
+      "pressedSprite": {
+        "__uuid__": "80axWj8PBAQIemuuW1x/Wt"
+      },
+      "_N$hoverSprite": {
+        "__uuid__": "e7wDEA2oNGM5DEn7nv9lBI"
+      },
+      "hoverSprite": {
+        "__uuid__": "e7wDEA2oNGM5DEn7nv9lBI"
+      },
+      "_N$disabledSprite": {
+        "__uuid__": "6aTD8N1Z5ENbeJDjU0JhCW"
+      },
+      "_N$target": {
+        "__id__": 5
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "toggle",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 11
+        }
+      ],
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Toggle",
+          "node": {
+            "__id__": 7
+          },
+          "_N$target": {
+            "__id__": 8
+          },
+          "checkMark": {
+            "__id__": 10
+          },
+          "checkEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 2
+              },
+              "component": "ButtonTransition",
+              "_componentId": "d6525ck4GdCHbg0bUMMfDYY",
+              "handler": "onInteractable"
+            }
+          ]
+        },
+        {
+          "__type__": "cc.Layout",
+          "node": {
+            "__id__": 7
+          },
+          "_layoutSize": {
+            "__type__": "cc.Size",
+            "width": 118,
+            "height": 28
+          },
+          "_resize": 1,
+          "_N$layoutType": 1,
+          "_N$spacingX": 10
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 7
+          },
+          "_alignFlags": 16
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 118,
+        "height": 28
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -24
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 7
+      },
+      "_children": [
+        {
+          "__id__": 9
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 8
+          },
+          "_spriteFrame": {
+            "__uuid__": "68J8oyAQdFUrqy37MXmbtE"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 28,
+        "height": 28
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -45
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "checkmark",
+      "_parent": {
+        "__id__": 8
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 10
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 28,
+        "height": 28
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 9
+      },
+      "_spriteFrame": {
+        "__uuid__": "90AErWL21A4ZPvtxQ3XG8G"
+      },
+      "_sizeMode": 2,
+      "_isTrimmedMode": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "label",
+      "_parent": {
+        "__id__": 7
+      },
+      "_level": 2,
+      "_components": [
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 11
+          },
+          "_useOriginalSize": false,
+          "_string": "交互",
+          "_N$string": "交互",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 80,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 19
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "toggleContainer",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 13
+        },
+        {
+          "__id__": 18
+        },
+        {
+          "__id__": 23
+        }
+      ],
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.ToggleContainer",
+          "node": {
+            "__id__": 12
+          }
+        },
+        {
+          "__type__": "cc.Layout",
+          "node": {
+            "__id__": 12
+          },
+          "_layoutSize": {
+            "__type__": "cc.Size",
+            "width": 717.23,
+            "height": 61
+          },
+          "_resize": 1,
+          "_N$layoutType": 1,
+          "_N$spacingX": 20
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 12
+          },
+          "_alignFlags": 16,
+          "_left": 0.2,
+          "_isAbsLeft": false
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 717.23,
+        "height": 61
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -358.615,
+        "y": -92
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "toggle",
+      "_parent": {
+        "__id__": 12
+      },
+      "_children": [
+        {
+          "__id__": 14
+        },
+        {
+          "__id__": 17
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Toggle",
+          "node": {
+            "__id__": 13
+          },
+          "_N$target": {
+            "__id__": 13
+          },
+          "checkMark": {
+            "__id__": 16
+          },
+          "checkEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 2
+              },
+              "component": "ButtonTransition",
+              "_componentId": "d6525ck4GdCHbg0bUMMfDYY",
+              "handler": "onColorTransition"
+            }
+          ]
+        },
+        {
+          "__type__": "cc.Layout",
+          "node": {
+            "__id__": 13
+          },
+          "_layoutSize": {
+            "__type__": "cc.Size",
+            "width": 219.81,
+            "height": 28
+          },
+          "_resize": 1,
+          "_N$layoutType": 1,
+          "_N$spacingX": 10
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 219.81,
+        "height": 28
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 3
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 13
+      },
+      "_children": [
+        {
+          "__id__": 15
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 14
+          },
+          "_spriteFrame": {
+            "__uuid__": "e7q6FL+VZEgLJUjVeDLic/"
+          },
+          "_sizeMode": 2,
+          "_isTrimmedMode": false
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 32,
+        "height": 32
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 16
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "checkmark",
+      "_parent": {
+        "__id__": 14
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 16
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 32,
+        "height": 32
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 15
+      },
+      "_spriteFrame": {
+        "__uuid__": "1aMvx28L1PZpgPVpKcDKCz"
+      },
+      "_sizeMode": 2,
+      "_isTrimmedMode": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 13
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 17
+          },
+          "_useOriginalSize": false,
+          "_string": "color 模式",
+          "_N$string": "color 模式",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 177.81,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 130.905
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "toggle",
+      "_parent": {
+        "__id__": 12
+      },
+      "_children": [
+        {
+          "__id__": 19
+        },
+        {
+          "__id__": 22
+        }
+      ],
+      "_level": 2,
+      "_components": [
+        {
+          "__type__": "cc.Toggle",
+          "node": {
+            "__id__": 18
+          },
+          "_N$target": {
+            "__id__": 18
+          },
+          "_N$isChecked": false,
+          "checkMark": {
+            "__id__": 21
+          },
+          "checkEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 2
+              },
+              "component": "ButtonTransition",
+              "_componentId": "d6525ck4GdCHbg0bUMMfDYY",
+              "handler": "onSpriteTransition"
+            }
+          ]
+        },
+        {
+          "__type__": "cc.Layout",
+          "node": {
+            "__id__": 18
+          },
+          "_layoutSize": {
+            "__type__": "cc.Size",
+            "width": 230.93,
+            "height": 28
+          },
+          "_resize": 1,
+          "_N$layoutType": 1,
+          "_N$spacingX": 10
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 230.93,
+        "height": 28
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 239.81,
+        "y": 3
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 18
+      },
+      "_children": [
+        {
+          "__id__": 20
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 19
+          },
+          "_spriteFrame": {
+            "__uuid__": "e7q6FL+VZEgLJUjVeDLic/"
+          },
+          "_sizeMode": 2,
+          "_isTrimmedMode": false
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 32,
+        "height": 32
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 16
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "checkmark",
+      "_parent": {
+        "__id__": 19
+      },
+      "_active": false,
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 21
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 32,
+        "height": 32
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 20
+      },
+      "_spriteFrame": {
+        "__uuid__": "1aMvx28L1PZpgPVpKcDKCz"
+      },
+      "_sizeMode": 2,
+      "_isTrimmedMode": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 18
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 22
+          },
+          "_useOriginalSize": false,
+          "_string": "sprite 模式",
+          "_N$string": "sprite 模式",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 188.93,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 136.465
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "toggle",
+      "_parent": {
+        "__id__": 12
+      },
+      "_children": [
+        {
+          "__id__": 24
+        },
+        {
+          "__id__": 27
+        }
+      ],
+      "_level": 2,
+      "_components": [
+        {
+          "__type__": "cc.Toggle",
+          "node": {
+            "__id__": 23
+          },
+          "_N$target": {
+            "__id__": 23
+          },
+          "_N$isChecked": false,
+          "checkMark": {
+            "__id__": 26
+          },
+          "checkEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 2
+              },
+              "component": "ButtonTransition",
+              "_componentId": "d6525ck4GdCHbg0bUMMfDYY",
+              "handler": "onScaleTransition"
+            }
+          ]
+        },
+        {
+          "__type__": "cc.Layout",
+          "node": {
+            "__id__": 23
+          },
+          "_layoutSize": {
+            "__type__": "cc.Size",
+            "width": 226.49,
+            "height": 28
+          },
+          "_resize": 1,
+          "_N$layoutType": 1,
+          "_N$spacingX": 10
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 226.49,
+        "height": 28
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "y": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 490.74,
+        "y": 3
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Background",
+      "_parent": {
+        "__id__": 23
+      },
+      "_children": [
+        {
+          "__id__": 25
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 24
+          },
+          "_spriteFrame": {
+            "__uuid__": "e7q6FL+VZEgLJUjVeDLic/"
+          },
+          "_sizeMode": 2,
+          "_isTrimmedMode": false
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 32,
+        "height": 32
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 16
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "checkmark",
+      "_parent": {
+        "__id__": 24
+      },
+      "_active": false,
+      "_level": 1,
+      "_components": [
+        {
+          "__id__": 26
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 32,
+        "height": 32
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 25
+      },
+      "_spriteFrame": {
+        "__uuid__": "1aMvx28L1PZpgPVpKcDKCz"
+      },
+      "_sizeMode": 2,
+      "_isTrimmedMode": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Label",
+      "_parent": {
+        "__id__": 23
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Label",
+          "node": {
+            "__id__": 27
+          },
+          "_useOriginalSize": false,
+          "_string": "scale 模式",
+          "_N$string": "scale 模式",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 184.49,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 134.245
+      },
+      "_zIndex": 0
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_radio_button_off",
+      "texture": "56fc2Ai/RFNYpaMT8crweK",
+      "rect": [
+        3,
+        3,
+        26,
+        26
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        32,
+        32
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btnHover",
+      "texture": "54J3Xl+GhIvrAgBUZrPeQO",
+      "rect": [
+        0,
+        0,
+        195,
+        57
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        195,
+        57
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

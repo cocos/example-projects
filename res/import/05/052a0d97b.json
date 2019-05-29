@@ -1,0 +1,41 @@
+[
+  {
+    "__type__": "cc.TextAsset",
+    "_name": "tile_iso_offset_with_tsx2",
+    "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<tileset name=\"tile_iso_offset_with_tsx2\" tilewidth=\"101\" tileheight=\"101\" tilecount=\"2\" columns=\"1\">\n <image source=\"tile_iso_offset_with_tsx2.png\" width=\"101\" height=\"202\"/>\n</tileset>\n"
+  },
+  {
+    "__type__": "cc.TiledMapAsset",
+    "_name": "tile_iso_offset_with_tsx",
+    "tmxXmlStr": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<map version=\"1.0\" tiledversion=\"1.1.4\" orientation=\"isometric\" renderorder=\"right-down\" width=\"10\" height=\"10\" tilewidth=\"100\" tileheight=\"50\" infinite=\"0\" nextobjectid=\"1\">\n <tileset firstgid=\"1\" source=\"tile_iso_offset_with_tsx2.tsx\"/>\n <tileset firstgid=\"3\" source=\"tile_iso_offset_with_tsx1.tsx\"/>\n <layer name=\"baseLayer\" width=\"10\" height=\"10\">\n  <data encoding=\"base64\" compression=\"zlib\">\n   eJxtkDEOADEIwwjk/2++GzpYUQYvrWtUNDMC97NAhXsYnst9ax7cdISZ2b9ob3lHz3G+Mcvw2Kbr8i9Fl3vx9D1tOAndD6DcANU=\n  </data>\n </layer>\n</map>\n",
+    "textures": [
+      {
+        "__uuid__": "dfNVU7l/5LNIl/04FTumlY"
+      },
+      {
+        "__uuid__": "76ZWCl4rFG2KT1xe9b5qcc"
+      }
+    ],
+    "textureNames": [
+      "tile_iso_offset_with_tsx2.png",
+      "tile_iso_offset_with_tsx1.png"
+    ],
+    "tsxFiles": [
+      {
+        "__uuid__": "09opgaXm1JBo0U6Eqdb6S4"
+      },
+      {
+        "__uuid__": "55iuERL6JIPaWsxjCIGjON"
+      }
+    ],
+    "tsxFileNames": [
+      "tile_iso_offset_with_tsx2.tsx",
+      "tile_iso_offset_with_tsx1.tsx"
+    ]
+  },
+  {
+    "__type__": "cc.TextAsset",
+    "_name": "tile_iso_offset_with_tsx1",
+    "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<tileset name=\"tile_iso_offset_with_tsx1\" tilewidth=\"101\" tileheight=\"101\" tilecount=\"2\" columns=\"1\">\n <image source=\"tile_iso_offset_with_tsx1.png\" width=\"101\" height=\"202\"/>\n</tileset>\n"
+  }
+]

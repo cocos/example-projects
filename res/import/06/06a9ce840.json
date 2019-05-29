@@ -1,0 +1,408 @@
+[
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "ToggleParticle",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.804443359375,
+        "y": 0.804443359375,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "be7e8bbFF9ELrOGnbUNJTAE"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "374d0NKFo1HvI9UWi1Dfsmp",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Particle",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.ParticleSystem",
+          "node": {
+            "__id__": 5
+          },
+          "_dstBlendFactor": 1,
+          "_file": {
+            "__uuid__": "e2T6NCgVpEeLnb7VkufAKT"
+          },
+          "totalParticles": 200,
+          "emissionRate": 999.999985098839,
+          "life": 0.20000000298023224,
+          "lifeVar": 0.5,
+          "_startColor": {
+            "__type__": "cc.Color",
+            "r": 202,
+            "g": 200,
+            "b": 86,
+            "a": 163
+          },
+          "_startColorVar": {
+            "__type__": "cc.Color",
+            "r": 229,
+            "g": 255,
+            "b": 173,
+            "a": 198
+          },
+          "_endColor": {
+            "__type__": "cc.Color",
+            "r": 173,
+            "g": 161,
+            "b": 19,
+            "a": 214
+          },
+          "_endColorVar": {
+            "__type__": "cc.Color",
+            "r": 107,
+            "g": 249,
+            "b": 249,
+            "a": 188
+          },
+          "angle": 360,
+          "angleVar": 360,
+          "startSize": 3.369999885559082,
+          "startSizeVar": 50,
+          "endSize": 30.31999969482422,
+          "startSpin": -47.369998931884766,
+          "endSpin": -47.369998931884766,
+          "endSpinVar": -142.11000061035156,
+          "posVar": {
+            "__type__": "cc.Vec2",
+            "x": 7,
+            "y": 7
+          },
+          "_positionType": 1,
+          "positionType": 1,
+          "gravity": {
+            "__type__": "cc.Vec2",
+            "x": 0.25,
+            "y": 0.8600000143051147
+          },
+          "speed": 0,
+          "speedVar": 190.7899932861328,
+          "tangentialAccel": -92.11000061035156,
+          "tangentialAccelVar": 65.79000091552734,
+          "radialAccel": -671.0499877929688,
+          "radialAccelVar": 65.79000091552734
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "SwitchButton",
+      "_parent": {
+        "__id__": 2
+      },
+      "_children": [
+        {
+          "__id__": 7
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Button",
+          "node": {
+            "__id__": 6
+          },
+          "clickEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 8
+              },
+              "_componentId": "79ae3hiP+JAhIKehaWyiKuh",
+              "handler": "toggleParticlePlay"
+            }
+          ],
+          "_N$transition": 3,
+          "transition": 3,
+          "_N$pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "pressedColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "_N$disabledColor": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "_N$normalSprite": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "_N$pressedSprite": {
+            "__uuid__": "bancX3RatP9b6Sl8enO4rV"
+          },
+          "pressedSprite": {
+            "__uuid__": "bancX3RatP9b6Sl8enO4rV"
+          },
+          "_N$hoverSprite": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "hoverSprite": {
+            "__uuid__": "cbeekrK2tERZHMYnb3SW3c"
+          },
+          "_N$disabledSprite": {
+            "__uuid__": "bancX3RatP9b6Sl8enO4rV"
+          },
+          "_N$target": {
+            "__id__": 6
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 450,
+        "height": 60
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -166
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 6
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 7
+          },
+          "_useOriginalSize": false,
+          "_string": "按 \"按钮\" 进行开关粒子播放",
+          "_N$string": "按 \"按钮\" 进行开关粒子播放",
+          "_fontSize": 25,
+          "_N$horizontalAlign": 1,
+          "_N$textKey": "cases/01_graphics/02_particle/ToggleParticle.fire.6"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 306.64,
+        "height": 40
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "ParticleControl",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "79ae3hiP+JAhIKehaWyiKuh",
+          "node": {
+            "__id__": 8
+          },
+          "particle": {
+            "__id__": 5
+          }
+        }
+      ],
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "f014c19SB1AJpiOnK2c8p9L"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 9
+          },
+          "text": "## Particle 粒子系统使用说明\n\n点击 play 按钮预览游戏，按下 Space 键切换粒子系统的停止和重新播放。\n\n1. 点击选中 particle 节点，关注 ParticleSystem 组件\n2. 点击切换 preview 属性，可以切换该粒子在场景中的显隐（不会影响运行时的显示）\n3. PlayOnLoad 属性决定是否在游戏运行时自动播放该粒子\n4. AutoRemoveOnFinish 属性决定该粒子是否播放完就会自动销毁\n5. 点击 File 属性里引用的资源，可以看到在 Assets 面板里高亮了外部工具制作好并导入的粒子资源\n6. 可以拖拽另一个粒子资源到 File 属性，预览另外粒子的效果\n\n### 使用 Inspector 自制粒子\n\n除了使用外部工具制作 plist 格式的粒子资源，用户还可以使用 Inspector 自己制作粒子。由于目前缺少编辑器，这种做法不推荐用户采用。\n\n1. 点击开启 Custom 属性，可以看到下面的粒子参数都被激活并可以修改了\n2. 根据用户需要调整每一个参数，直到达成希望的效果"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "718cckOgS5NlKLyR2Qtikqp"
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btn_pressed",
+      "texture": "e8Mstb/RhJRYtVfmIFGaJg",
+      "rect": [
+        0,
+        0,
+        194,
+        68
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        194,
+        68
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "btn_normal",
+      "texture": "7a/zKdXVNGWYopVAO8wQSg",
+      "rect": [
+        0,
+        0,
+        194,
+        68
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        194,
+        68
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

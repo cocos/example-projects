@@ -1,0 +1,345 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "star",
+      "texture": "b1HE18sVtOtog7FpfBOI4h",
+      "rect": [
+        0,
+        12,
+        169,
+        185
+      ],
+      "offset": [
+        0,
+        -4
+      ],
+      "originalSize": [
+        169,
+        201
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "WidgetAlign",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 10
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 100,
+        "height": 100
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        },
+        {
+          "__id__": 9
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "f4733J0BylHrYgFmZetwWUp"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "90c64XOLLZESqwdL+7k39E8",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Align Left",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "28J1mVxrtNt4x6jPwYU6v+"
+          }
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 5
+          },
+          "alignMode": 2,
+          "_alignFlags": 10
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 169,
+        "height": 185
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -395.5
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Align Right",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "28J1mVxrtNt4x6jPwYU6v+"
+          }
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 6
+          },
+          "alignMode": 2,
+          "_alignFlags": 34,
+          "_originalWidth": 169
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 169,
+        "height": 185
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 395.5
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Align Top",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "28J1mVxrtNt4x6jPwYU6v+"
+          }
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 7
+          },
+          "alignMode": 2,
+          "_alignFlags": 17
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 169,
+        "height": 185
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 227.5
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Align Bottom",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 8
+          },
+          "_spriteFrame": {
+            "__uuid__": "28J1mVxrtNt4x6jPwYU6v+"
+          }
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 8
+          },
+          "alignMode": 2,
+          "_alignFlags": 20
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 169,
+        "height": 185
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -227.5
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Tips",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 9
+          },
+          "_useOriginalSize": false,
+          "_string": "挂件对齐方式。",
+          "_N$string": "挂件对齐方式。",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/02_ui/01_widget/WidgetAlign.fire.18"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 280,
+        "height": 40
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 10
+          },
+          "text": "## Widget 基础对齐功能使用说明\n\n1. 依次点击场景中 align_left, align_right, align_top, align_bottom 四个 sprite，确认他们的位置\n2. 拖拽修改 Scene 面板上方的设计分辨率，可以看到四个 sprite 依然紧贴四条边对齐\n3. 在 align_left 的节点 Widget 组件里，修改 Left 对齐下方的偏移值，可以看到 align_left 和场景最左边的距离发生变化\n4. 再次修改 Scene 面板上的设计分辨率，align_left 将和屏幕左边保持刚刚设定的偏移距离"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "82523DNQAFGUIux59z3HG0r"
+    }
+  ]
+]

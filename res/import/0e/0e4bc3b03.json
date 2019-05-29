@@ -1,0 +1,110 @@
+[
+  {
+    "__type__": "cc.EffectAsset",
+    "_name": "builtin-2d-spine",
+    "properties": {
+      "texture": {
+        "type": 13,
+        "value": null
+      },
+      "alphaThreshold": {
+        "value": 0.5
+      }
+    },
+    "techniques": [
+      {
+        "passes": [
+          {
+            "cullMode": 0,
+            "blend": true,
+            "program": "7b385aeea63c6235fbf39dd4bf009f23c884ecc0ebb6dcef392ae264"
+          }
+        ],
+        "layer": 0,
+        "stages": [
+          "opaque"
+        ],
+        "queue": 0,
+        "priority": 0
+      }
+    ],
+    "shaders": [
+      {
+        "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nuniform mat4 cc_matViewProj;\n\n#if _USE_MODEL\n  uniform mat4 cc_matWorld;\n#endif\n\nattribute vec3 a_position;\nattribute lowp vec4 a_color;\n#if USE_TINT\n  attribute lowp vec4 a_color0;\n#endif\n\nattribute mediump vec2 a_uv0;\nvarying mediump vec2 v_uv0;\n\nvarying lowp vec4 v_light;\n#if USE_TINT\n  varying lowp vec4 v_dark;\n#endif\n\nvoid main () {\n  mat4 mvp;\n  \n  #if _USE_MODEL\n    mvp = cc_matViewProj * cc_matWorld;\n  #else\n    mvp = cc_matViewProj;\n  #endif\n\n  v_uv0 = a_uv0;\n\n  v_light = a_color;\n  #if USE_TINT\n    v_dark = a_color0;\n  #endif\n\n  gl_Position = mvp * vec4(a_position, 1);\n}\n\n\n",
+        "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\nuniform sampler2D texture;\nvarying mediump vec2 v_uv0;\n\n#if USE_ALPHA_TEST\n  uniform float alphaThreshold;\n#endif\n\nvoid ALPHA_TEST (in vec4 color) {\n  #if USE_ALPHA_TEST\n      if (color.a < alphaThreshold) discard;\n  #endif\n}\n\nvoid ALPHA_TEST (in float alpha) {\n  #if USE_ALPHA_TEST\n      if (alpha < alphaThreshold) discard;\n  #endif\n}\n\nvarying lowp vec4 v_light;\n#if USE_TINT\n  varying lowp vec4 v_dark;\n#endif\n\nvoid main () {\n  vec4 texColor = texture2D(texture, v_uv0);\n  #if _USE_ETC1_TEXTURE\n      texColor.a *= texture2D(texture, v_uv0 + vec2(0, 0.5)).r;\n  #endif\n  vec4 finalColor;\n\n  #if USE_TINT\n    finalColor.a = v_light.a * texColor.a;\n    finalColor.rgb = ((texColor.a - 1.0) * v_dark.a + 1.0 - texColor.rgb) * v_dark.rgb + texColor.rgb * v_light.rgb;\n  #else\n    finalColor = texColor * v_light;\n  #endif\n\n  ALPHA_TEST(finalColor);\n\n  gl_FragColor = finalColor;\n}\n\n\n",
+        "defines": [
+          {
+            "name": "_USE_MODEL",
+            "type": "boolean",
+            "defines": []
+          },
+          {
+            "name": "USE_TINT",
+            "type": "boolean",
+            "defines": []
+          },
+          {
+            "name": "USE_ALPHA_TEST",
+            "type": "boolean",
+            "defines": []
+          },
+          {
+            "name": "_USE_ETC1_TEXTURE",
+            "type": "boolean",
+            "defines": []
+          }
+        ],
+        "uniforms": [
+          {
+            "name": "texture",
+            "type": 13,
+            "defines": []
+          },
+          {
+            "name": "alphaThreshold",
+            "type": 4,
+            "property": true,
+            "defines": [
+              "USE_ALPHA_TEST"
+            ]
+          }
+        ],
+        "attributes": [
+          {
+            "name": "a_position",
+            "type": 6,
+            "defines": []
+          },
+          {
+            "name": "a_color",
+            "type": 7,
+            "defines": []
+          },
+          {
+            "name": "a_color0",
+            "type": 7,
+            "defines": [
+              "USE_TINT"
+            ]
+          },
+          {
+            "name": "a_uv0",
+            "type": 5,
+            "defines": []
+          }
+        ],
+        "extensions": [],
+        "name": "7b385aeea63c6235fbf39dd4bf009f23c884ecc0ebb6dcef392ae264"
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Material",
+    "_name": "builtin-2d-spine",
+    "_effectAsset": {
+      "__uuid__": "0ek66qC1NOQLjgYmi04HvX"
+    },
+    "_defines": {},
+    "_props": {}
+  }
+]

@@ -1,0 +1,374 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "PurpleMonster",
+      "texture": "18BB1/fGpHvatvehi0BKIU",
+      "rect": [
+        0,
+        0,
+        78,
+        67
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        78,
+        67
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "GreenMonster",
+      "texture": "08we3qRtRB3pndT4t/a0Oz",
+      "rect": [
+        0,
+        0,
+        68,
+        71
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        68,
+        71
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "SimpleAction",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 9
+        },
+        {
+          "__id__": 10
+        }
+      ],
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.5697916666666667,
+        "y": 0.5697916666666667,
+        "z": 1
+      },
+      "_zIndex": 0,
+      "autoReleaseAssets": true
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        },
+        {
+          "__id__": 4
+        },
+        {
+          "__id__": 5
+        },
+        {
+          "__id__": 6
+        },
+        {
+          "__id__": 7
+        },
+        {
+          "__id__": 8
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 640
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 480,
+        "y": 320
+      },
+      "_zIndex": 0,
+      "_id": "060c94HlGZOjrxZfOK5rXJg"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_parent": {
+        "__id__": 2
+      },
+      "_id": "4a751hMkjdOXrdg9szqCZV1",
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 4
+        },
+        "asset": {
+          "__uuid__": "b8OSNRvpdPAZhePn0hGPPJ"
+        },
+        "fileId": "78fd70+ls5GgJcFkzvLSRk8",
+        "sync": true
+      },
+      "_name": "Background"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "PurpleMonster",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 5
+          },
+          "_spriteFrame": {
+            "__uuid__": "04Odl6SSRHZJsSrqSLsXBy"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 78,
+        "height": 67
+      },
+      "_anchorPoint": {
+        "__type__": "cc.Vec2",
+        "x": 0.5
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": -235,
+        "y": -220
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "panelBG",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 6
+          },
+          "_spriteFrame": {
+            "__uuid__": "93IPCkVxlHqI9nYkpyw1bw"
+          },
+          "_type": 1,
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 6
+          },
+          "alignMode": 0,
+          "_alignFlags": 44,
+          "_originalWidth": 640
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 960,
+        "height": 100
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": -270
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "GreenMonster",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 7
+          },
+          "_spriteFrame": {
+            "__uuid__": "04Z0Q+b7hNe6NPV7PlwUn7"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 68,
+        "height": 71
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 239,
+        "y": -185
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Label",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "e4f88adp3hERoJ48DZ2PSAl",
+          "node": {
+            "__id__": 8
+          },
+          "_useOriginalSize": false,
+          "_string": "简单的动作",
+          "_N$string": "简单的动作",
+          "_N$horizontalAlign": 1,
+          "_N$verticalAlign": 1,
+          "_N$textKey": "cases/03_gameplay/02_actions/SimpleAction.fire.13"
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 200,
+        "height": 40
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "y": 194
+      },
+      "_zIndex": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "actions",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "b6067a1+J5FW4G30nmVLU/d",
+          "node": {
+            "__id__": 9
+          },
+          "jumper": {
+            "__id__": 5
+          },
+          "colorNode": {
+            "__id__": 7
+          }
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "4c38ei8NuRFsKcZvmh7EB4m"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Instruction",
+      "_parent": {
+        "__id__": 1
+      },
+      "_components": [
+        {
+          "__type__": "6a871gy73FDLap3Eje/2h6i",
+          "node": {
+            "__id__": 10
+          },
+          "text": "## Action 使用说明\n\n点击 Play 按钮预览游戏，可以看到小怪物跳起又落下的动作。\n目前 Action 只能通过脚本使用，以后的版本会加入组件化和数据化的 action 支持。\n\nSimpleAction.js 脚本中大部分都是使用了原来的 cocos2d-js action 接口，唯一需要注意的是在运行 action 时目前必须使用：\n\nmyNode._sgNode.runAction(action);\n\n后续版本中会支持正常的写法：\n\nmyNode.runAction(action);\n"
+        }
+      ],
+      "_zIndex": 0,
+      "_id": "a60e8AjKZtMUZS8bMC6u8VM"
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "panelBG",
+      "texture": "32Kf6rsGJMda2RuWJgLe8h",
+      "rect": [
+        0,
+        0,
+        27,
+        30
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        27,
+        30
+      ],
+      "capInsets": [
+        11,
+        12,
+        11,
+        15
+      ]
+    }
+  }
+]

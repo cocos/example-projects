@@ -1,0 +1,5 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "SimpleButton",
+  "text": "## Button 使用说明\n\n场景中应该显示一左一右两个按钮。点击 play 按钮预览游戏，按钮会有如下行为：\n\n- 移动鼠标到左边按钮上时，按钮图案变成问号\n- 按下左边按钮时，按钮图案变成惊叹号，同时上方有文字显示\"Left Button Clicked\"\n- 移动鼠标到右边按钮上时，按钮颜色加深\n- 按下右边按钮时，按钮颜色变得更深，同时上方文字显示\"Right Button Clicked\"\n\n### 贴图切换\n\n1. 选中 Button_Switch_Sprite 节点，关注 Button 组件\n2. Target 属性规定了 Button 状态变化时，应该更新哪个对象的图像\n3. Interactable 规定了 Button 是否可以交互\n4. Transition 属性里选择 SPRITE，就是状态改变时切换 Sprite 图像显示的模式\n5. Normal/Pressed/Hover/Disabled 属性分别指定在相应状态下显示的 Sprite 图像资源\n6. Click Events 里可以指定按钮按下后的事件处理方法\n\n### 颜色变化\n\n1. 选中 Button_Switch_Color 节点，关注 Button 组件\n2. Transition 属性里选择 COLOR，就是状态改变时过渡 Sprite 颜色显示的模式\n3. Normal/Pressed/Hover/Disabled 属性分别指定在相应状态下 Sprite 的颜色\n4. Duration 属性指定颜色过渡的时长\n\n### 添加点击事件处理\n\n1. 选中 Button_Switch_Sprite，关注 Button 组件\n2. 在 Click Events 列表里，添加一个新的点击事件\n3. 将事件监听脚本所在节点拖拽到该事件的 Target 属性上\n4. 在 Component 属性列表中选择事件监听脚本所属的组件\n5. 在 Handler 属性列表中选择事件发生时调用的方法"
+}
