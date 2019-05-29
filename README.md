@@ -2,7 +2,7 @@
 
 本项目同时面向 Cocos Creator 引擎开发人员和最终用户，目的是建立一套贯穿开发、测试、学习使用的完整的功能范例。
 
-[范例在线预览](http://cocos-creator.github.io/example-cases/)
+https://cocos-creator.github.io/example-cases/
 
 ## 项目结构
 
