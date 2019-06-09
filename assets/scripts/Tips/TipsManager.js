@@ -17,6 +17,7 @@ const isVivo = cc.sys.platform === cc.sys.VIVO_GAME;
 const isOPPO = cc.sys.platform === cc.sys.OPPO_GAME;
 const isXiaomi = cc.sys.platform === cc.sys.XIAOMI_GAME;
 const isHuawei = cc.sys.platform === cc.sys.HUAWEI_GAME;
+const isJkw = cc.sys.platform === cc.sys.JKW_GAME;
  
 module.exports = {
     tispPrefab: null,
@@ -32,7 +33,7 @@ module.exports = {
             case 'Native_Call':         return isMobile && isAndroid && !CC_RUNTIME;
             case 'TTFFontLabel':        return !isQQPlay;
             case 'Subpackages':
-                return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isVivo);
+                return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isVivo && !isJkw);
             case 'MousePropagation':    return ((isNative && !isMobile && !isWechat && !isQQPlay && !isXiaomi && !isHuawei) || isDesktopBrowser);
             case 'downloader-native':
                 return isNative && !CC_RUNTIME;
@@ -60,11 +61,11 @@ module.exports = {
 
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-                return (isMobile || isBrowser) && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !CC_RUNTIME;
+                return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !isHuawei;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
             case 'webview':
-                return  (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi;
+                return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !isHuawei;
             case 'mesh':
                 return !isVivo && !isOPPO;
         }
