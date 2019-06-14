@@ -125,7 +125,7 @@ let ColorRect = cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
     onLoad () {
-        this.setMaterial(0, cc.Material.getBuiltinMaterial('sprite'));
+        this.setMaterial(0, cc.Material.getBuiltinMaterial('2d-base'));
 
         this._createIA();
     },
