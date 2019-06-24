@@ -44,10 +44,8 @@ uniform mat4 cc_matViewProj;
 attribute vec3 a_position;
 attribute lowp vec4 a_color;
 
-#if USE_TEXTURE
-  attribute mediump vec2 a_uv0;
-  varying mediump vec2 v_uv0;
-#endif
+attribute mediump vec2 a_uv0;
+varying mediump vec2 v_uv0;
 
 varying lowp vec4 v_color;
 
@@ -60,10 +58,7 @@ void main () {
     mvp = cc_matViewProj;
   #endif
 
-  #if USE_TEXTURE
-    v_uv0 = a_uv0;
-  #endif
-
+  v_uv0 = a_uv0;
   v_color = a_color;
 
   gl_Position = mvp * vec4(a_position, 1);
@@ -75,10 +70,8 @@ void main () {
 
 precision highp float;
 
-#if USE_TEXTURE
-  uniform sampler2D texture;
-  varying mediump vec2 v_uv0;
-#endif
+uniform sampler2D texture;
+varying mediump vec2 v_uv0;
 
 uniform float time;
 
