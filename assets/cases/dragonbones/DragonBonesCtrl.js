@@ -523,14 +523,14 @@ var DragonBullet = cc.Class({
         
         let armatureNode = armature.node;
         armatureNode.setPosition(thePos);
-        armatureNode.rotation = radian * cc.macro.DEG;
+        armatureNode.angle = -radian * cc.macro.DEG;
 
         this._armature = armature;
         
         if (effect) {
             this._effect = effect;
             var effectDisplay = this._effect.node;
-            effectDisplay.rotation = radian * cc.macro.DEG;
+            effectDisplay.angle = -radian * cc.macro.DEG;
             effectDisplay.setPosition(thePos);
             effectDisplay.scaleX = 1 + Math.random() * 1;
             effectDisplay.scaleY = 1 + Math.random() * 0.5;

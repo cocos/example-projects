@@ -72,16 +72,19 @@
       },
       {
         "__id__": 7
+      },
+      {
+        "__id__": 9
       }
     ],
     "_active": true,
     "_level": 0,
     "_components": [
       {
-        "__id__": 16
+        "__id__": 18
       },
       {
-        "__id__": 17
+        "__id__": 19
       }
     ],
     "_prefab": null,
@@ -222,7 +225,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Node",
+    "_name": "goblin",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -315,9 +318,110 @@
     "_N$_defaultCacheMode": 0,
     "_N$debugSlots": false,
     "_N$debugBones": false,
+    "_N$debugMesh": false,
     "_N$useTint": false,
     "_N$enableBatch": false,
     "_id": "b6qGdC9NlNtoJ4s1HekvWT"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "goblingirl",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 1,
+    "_components": [
+      {
+        "__id__": 8
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 266.94,
+      "height": 349.61
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 948.91,
+      "y": -88.02,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": "2fWaBKMZ9D/YY8kzKeZ84f"
+  },
+  {
+    "__type__": "sp.Skeleton",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 7
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "7afd064b-113f-480e-b793-8817d19f63c3"
+      }
+    ],
+    "paused": false,
+    "defaultSkin": "goblingirl",
+    "defaultAnimation": "walk",
+    "_preCacheMode": 0,
+    "_cacheMode": 0,
+    "loop": true,
+    "premultipliedAlpha": true,
+    "timeScale": 1,
+    "_accTime": 0,
+    "_playCount": 0,
+    "_frameCache": null,
+    "_curFrame": null,
+    "_skeletonCache": null,
+    "_animationName": "walk",
+    "_animationQueue": [],
+    "_headAniInfo": null,
+    "_playTimes": 0,
+    "_isAniComplete": true,
+    "_N$skeletonData": {
+      "__uuid__": "1e152296-04ea-4ada-8664-c8643c5872b3"
+    },
+    "_N$_defaultCacheMode": 0,
+    "_N$debugSlots": false,
+    "_N$debugBones": false,
+    "_N$debugMesh": false,
+    "_N$useTint": false,
+    "_N$enableBatch": false,
+    "_id": "baOCEjybFMOrnsxbPs+jFu"
   },
   {
     "__type__": "cc.Node",
@@ -328,17 +432,17 @@
     },
     "_children": [
       {
-        "__id__": 8
+        "__id__": 10
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 15
       },
       {
-        "__id__": 15
+        "__id__": 17
       }
     ],
     "_prefab": null,
@@ -391,21 +495,21 @@
     "_name": "Background",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 7
+      "__id__": 9
     },
     "_children": [
       {
-        "__id__": 9
+        "__id__": 11
       }
     ],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 13
       },
       {
-        "__id__": 12
+        "__id__": 14
       }
     ],
     "_prefab": null,
@@ -458,14 +562,14 @@
     "_name": "Label",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 8
+      "__id__": 10
     },
     "_children": [],
     "_active": true,
     "_level": 3,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 12
       }
     ],
     "_prefab": null,
@@ -518,7 +622,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 11
     },
     "_enabled": true,
     "_materials": [
@@ -548,7 +652,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 10
     },
     "_enabled": true,
     "_materials": [
@@ -580,7 +684,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 10
     },
     "_enabled": true,
     "alignMode": 0,
@@ -607,14 +711,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 7
+      "__id__": 9
     },
     "_enabled": true,
     "duration": 0.1,
     "zoomScale": 1.2,
     "clickEvents": [
       {
-        "__id__": 14
+        "__id__": 16
       }
     ],
     "_N$interactable": true,
@@ -682,7 +786,7 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 8
+      "__id__": 10
     },
     "_id": "601MBQDEhE+Z53XjEYipQd"
   },
@@ -701,7 +805,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 7
+      "__id__": 9
     },
     "_enabled": true,
     "alignMode": 1,
@@ -748,8 +852,11 @@
       "__id__": 2
     },
     "_enabled": true,
-    "skeleton": {
+    "goblin": {
       "__id__": 6
+    },
+    "goblingirl": {
+      "__id__": 8
     },
     "_id": "7dzUrj0wFOg6FwSwkLxPXT"
   }

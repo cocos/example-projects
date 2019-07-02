@@ -2,7 +2,11 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        skeleton:{
+        goblin:{
+            type:sp.Skeleton,
+            default:null,
+        },
+        goblingirl:{
             type:sp.Skeleton,
             default:null,
         }
@@ -10,14 +14,22 @@ cc.Class({
 
     start () {
         this._skinIdx = 0;
-        this.skinArr = ['goblin','goblingirl'];
-        this.change();
+        this.parts = ["left-arm", "left-hand", "left-shoulder"];
     },
 
     change () {
-        if (this._skinIdx == 0) this._skinIdx = 1;
-        else if (this._skinIdx == 1) this._skinIdx = 0;
-        this.skeleton.setSkin(this.skinArr[this._skinIdx]);
-        this.skeleton.setSlotsToSetupPose();
+        if (this._skinIdx == 0) {
+            this._skinIdx = 1;
+            for (let i = 0; i < this.parts.length; i++) {
+                let goblin = this.goblin.findSlot(this.parts[i]);
+                let goblingirl = this.goblingirl.findSlot(this.parts[i]);
+                let attachment = goblingirl.getAttachment();
+                goblin.setAttachment(attachment);
+            }
+        } else if (this._skinIdx == 1) {
+            this._skinIdx = 0;
+            this.goblin.setSkin('goblin');
+            this.goblin.setSlotsToSetupPose();
+        }
     }
 });
