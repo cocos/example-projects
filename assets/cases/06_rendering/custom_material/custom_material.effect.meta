@@ -1,10 +1,10 @@
 {
-  "ver": "1.0.14",
+  "ver": "1.0.15",
   "uuid": "7c574257-e450-432b-95b5-8b6d56aaa5f1",
   "compiledShaders": [
     {
-      "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nuniform mat4 cc_matViewProj;\n\n#if _USE_MODEL\n  uniform mat4 cc_matWorld;\n#endif\n\nattribute vec3 a_position;\nattribute lowp vec4 a_color;\n\n#if USE_TEXTURE\n  attribute mediump vec2 a_uv0;\n  varying mediump vec2 v_uv0;\n#endif\n\nvarying lowp vec4 v_color;\n\nvoid main () {\n  mat4 mvp;\n  \n  #if _USE_MODEL\n    mvp = cc_matViewProj * cc_matWorld;\n  #else\n    mvp = cc_matViewProj;\n  #endif\n\n  #if USE_TEXTURE\n    v_uv0 = a_uv0;\n  #endif\n\n  v_color = a_color;\n\n  gl_Position = mvp * vec4(a_position, 1);\n}\n\n\n",
-      "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\n#if USE_TEXTURE\n  uniform sampler2D texture;\n  varying mediump vec2 v_uv0;\n#endif\n\nuniform float time;\n\nvarying lowp vec4 v_color;\n\nvoid main () {\n  vec4 c = v_color * texture2D(texture, v_uv0);\n  gl_FragColor = c;\n  float temp = v_uv0.x - time;\n  if (temp <= 0.0) {\n      float temp2 = abs(temp);\n      if (temp2 <= 0.2) {\n          gl_FragColor.w = 1.0 - temp2/0.2;\n      } else {\n          gl_FragColor.w = 0.0;\n      }\n  } else {\n      gl_FragColor.w = 1.0;\n  }\n}\n\n\n"
+      "vert": "\n#define _IS_VERT_SHADER 1\n\nprecision highp float;\n\nuniform mat4 cc_matViewProj;\n\n#if _USE_MODEL\n  uniform mat4 cc_matWorld;\n#endif\n\nattribute vec3 a_position;\nattribute lowp vec4 a_color;\n\nattribute mediump vec2 a_uv0;\nvarying mediump vec2 v_uv0;\n\nvarying lowp vec4 v_color;\n\nvoid main () {\n  mat4 mvp;\n  \n  #if _USE_MODEL\n    mvp = cc_matViewProj * cc_matWorld;\n  #else\n    mvp = cc_matViewProj;\n  #endif\n\n  v_uv0 = a_uv0;\n  v_color = a_color;\n\n  gl_Position = mvp * vec4(a_position, 1);\n}\n\n\n",
+      "frag": "\n#define _IS_FRAG_SHADER 1\n\nprecision highp float;\n\nuniform sampler2D texture;\nvarying mediump vec2 v_uv0;\n\nuniform float time;\n\nvarying lowp vec4 v_color;\n\nvoid main () {\n  vec4 c = v_color * texture2D(texture, v_uv0);\n  gl_FragColor = c;\n  float temp = v_uv0.x - time;\n  \n  if (temp <= 0.0) {\n      float temp2 = abs(temp);\n      if (temp2 <= 0.2) {\n          gl_FragColor.a *= 1.0 - temp2/0.2;\n      } else {\n          gl_FragColor.a = 0.0;\n      }\n  }\n}\n\n\n"
     }
   ],
   "subMetas": {}
