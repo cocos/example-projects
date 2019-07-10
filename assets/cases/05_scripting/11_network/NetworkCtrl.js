@@ -48,6 +48,7 @@ cc.Class({
             wsiSendBinary.onmessage = null;
             wsiSendBinary.onerror = null;
             wsiSendBinary.onclose = null;
+            wsiSendBinary.close();
         }
         this.rmXhrEventListener(this._xhrXHR);
         this.rmXhrEventListener(this._xhrHRAB);
