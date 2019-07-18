@@ -11,6 +11,7 @@ var MAX_MOVE_SPEED_FRONT = NORMALIZE_MOVE_SPEED * 1.4;
 var MAX_MOVE_SPEED_BACK = NORMALIZE_MOVE_SPEED * 1.0;
 var WEAPON_R_LIST = ["weapon_1502b_r", "weapon_1005", "weapon_1005b", "weapon_1005c", "weapon_1005d", "weapon_1005e"];
 var WEAPON_L_LIST = ["weapon_1502b_l", "weapon_1005", "weapon_1005b", "weapon_1005c", "weapon_1005d"];
+var SKINS = ["mecha_1502b", "skin_a", "skin_b", "skin_c"];
 var GROUND = -200;
 var G = -0.6;
 
@@ -46,6 +47,16 @@ cc.Class({
             type: cc.Node
         },
 
+        weaponArmature: {
+            default: null,
+            type: dragonBones.ArmatureDisplay
+        },
+
+        skinArmature: {
+            default: null,
+            type: dragonBones.ArmatureDisplay
+        },
+
         _bullets : [],
         _left : false,
         _right : false,
@@ -56,6 +67,7 @@ cc.Class({
         _isAttackingB : false,
         _weaponRIndex : 0,
         _weaponLIndex : 0,
+        _skinIndex: 0,
         _faceDir : 1,
         _aimDir : 0,
         _moveDir : 0,
@@ -79,26 +91,35 @@ cc.Class({
 
         this._armatureDisplay.addEventListener(dragonBones.EventObject.FADE_IN_COMPLETE, this._animationEventHandler, this);
         this._armatureDisplay.addEventListener(dragonBones.EventObject.FADE_OUT_COMPLETE, this._animationEventHandler, this);
-
-        this._armature.getSlot('effects_1').displayController = NORMAL_ANIMATION_GROUP;
-        this._armature.getSlot('effects_2').displayController = NORMAL_ANIMATION_GROUP;
+        this._armatureDisplay.addEventListener(dragonBones.EventObject.COMPLETE, this._animationEventHandler, this);
 
         this._weaponR = this._armature.getSlot('weapon_r').childArmature;
         this._weaponL = this._armature.getSlot('weapon_l').childArmature;
         this._weaponR.addEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
         this._weaponL.addEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
 
+        // load all skin data
+        for (let i = 1; i < SKINS.length; i++) {
+            this.skinArmature.armatureName = SKINS[i];
+        }
+
+        for (let i = 1; i < WEAPON_R_LIST.length; i++) {
+            this.weaponArmature.armatureName = WEAPON_R_LIST[i];
+        }
+
         this._updateAnimation();
 
         if (this.touchHandler) {
             // touch events
             this.touchHandler.on(cc.Node.EventType.TOUCH_START, event => {
+                this._mouseDown_ = true;
                 var touches = event.getTouches();
                 var touchLoc = touches[0].getLocation();
                 this.aim(touchLoc.x, touchLoc.y);
                 this.attack(true);
             }, this);
             this.touchHandler.on(cc.Node.EventType.TOUCH_END, event => {
+                this._mouseDown_ = false;
                 this.attack(false);
             }, this);
             this.touchHandler.on(cc.Node.EventType.TOUCH_MOVE, event => {
@@ -259,10 +280,15 @@ cc.Class({
     switchWeaponL : function() {
         this._weaponL.removeEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
 
-        this._weaponLIndex = (this._weaponLIndex + 1) % WEAPON_L_LIST.length;
+        this._weaponLIndex++;
+        if (this._weaponLIndex >= WEAPON_L_LIST.length) {
+            this._weaponLIndex = 0;
+        }
+
         var newWeaponName = WEAPON_L_LIST[this._weaponLIndex];
-        this._weaponL = this._armatureDisplay.buildArmature(newWeaponName);
-        this._armature.getSlot('weapon_l').childArmature = this._weaponL.armature();
+        let factory = dragonBones.CCFactory.getInstance();
+        this._weaponL = factory.buildArmature(newWeaponName);
+        this._armature.getSlot('weapon_l').childArmature = this._weaponL;
 
         this._weaponL.addEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
     },
@@ -270,12 +296,29 @@ cc.Class({
     switchWeaponR : function() {
         this._weaponR.removeEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
 
-        this._weaponRIndex = (this._weaponRIndex + 1) % WEAPON_R_LIST.length;
+        this._weaponRIndex++;
+        if (this._weaponRIndex >= WEAPON_R_LIST.length) {
+            this._weaponRIndex = 0;
+        }
+
         var newWeaponName = WEAPON_R_LIST[this._weaponRIndex];
-        this._weaponR = this._armatureDisplay.buildArmature(newWeaponName);
-        this._armature.getSlot('weapon_r').childArmature = this._weaponR.armature();
+        let factory = dragonBones.CCFactory.getInstance();
+        this._weaponR = factory.buildArmature(newWeaponName);
+        this._armature.getSlot('weapon_r').childArmature = this._weaponR;
 
         this._weaponR.addEventListener(dragonBones.EventObject.FRAME_EVENT, this._frameEventHandler, this);
+    },
+
+    switchSkin : function () {
+        this._skinIndex++;
+        if (this._skinIndex >= SKINS.length)
+        {
+            this._skinIndex = 0;
+        }
+        let skinName = SKINS[this._skinIndex];
+        let factory = dragonBones.CCFactory.getInstance();
+        let skinData = factory.getArmatureData(skinName).defaultSkin;
+        factory.replaceSkin(this._armatureDisplay.armature(), skinData, false, ["weapon_l", "weapon_r"]);
     },
 
     aim : function(x, y) {
@@ -323,7 +366,20 @@ cc.Class({
             if (event.animationState.name === "jump_1") {
                 this._isJumpingB = true;
                 this._speedY = -JUMP_SPEED;
-                this._armature.animation.fadeIn("jump_2", -1, -1, 0, NORMAL_ANIMATION_GROUP);
+
+                if (this._moveDir != 0)
+                {
+                    if (this._moveDir * this._faceDir > 0) 
+                    {
+                        this._speedX = MAX_MOVE_SPEED_FRONT * this._faceDir;
+                    }
+                    else 
+                    {
+                        this._speedX = -MAX_MOVE_SPEED_BACK * this._faceDir;
+                    }
+                }
+
+                this._armature.animation.fadeIn("jump_2", -1, -1, 0, NORMAL_ANIMATION_GROUP).resetToPose = false;
             } else if (event.animationState.name === "jump_4") {
                 this._updateAnimation();
             }
@@ -334,12 +390,19 @@ cc.Class({
                 this._attackState = null;
             }
         }
+        else if (event.type === dragonBones.EventObject.COMPLETE) {
+            if (event.animationState.name === "jump_4") {
+                this._isJumpingA = false;
+                this._isJumpingB = false;
+                this._updateAnimation();
+            }
+        }
     },
 
     _frameEventHandler : function (event) {
-        if (event.name === "onFire") {
-            var firePointBone = event.armature.getBone("firePoint");
-            var localPoint = cc.v2(firePointBone.global.x, -firePointBone.global.y);
+        if (event.name === "fire") {
+            // var firePointBone = event.armature.getBone("firePoint");
+            var localPoint = cc.v2(event.bone.global.x, event.bone.global.y);
 
             var display = event.armature.display;
             var globalPoint = display.node.convertToWorldSpace(localPoint);
@@ -353,7 +416,7 @@ cc.Class({
         firePoint.y += Math.random() * 2 - 1;
 
         var armature = this._armatureDisplay.buildArmature("bullet_01");
-        var effect = this._armatureDisplay.buildArmature("fireEffect_01");
+        var effect = this._armatureDisplay.buildArmature("fire_effect_01");
         var radian = this._faceDir < 0 ? Math.PI - this._aimRadian : this._aimRadian;
         var bullet = new DragonBullet();
         bullet.init(this.node.parent, armature, effect, radian + Math.random() * 0.02 - 0.01, 40, firePoint);
@@ -367,18 +430,19 @@ cc.Class({
 
         if (this._isSquating) {
             this._speedX = 0;
-            this._armature.animation.fadeIn("squat", -1, -1, 0, NORMAL_ANIMATION_GROUP);
+            this._armature.animation.fadeIn("squat", -1, -1, 0, NORMAL_ANIMATION_GROUP).resetToPose = false;
             this._walkState = null;
             return;
         }
 
         if (this._moveDir === 0) {
             this._speedX = 0;
-            this._armature.animation.fadeIn("idle", -1, -1, 0, NORMAL_ANIMATION_GROUP);
+            this._armature.animation.fadeIn("idle", -1, -1, 0, NORMAL_ANIMATION_GROUP).resetToPose = false;
             this._walkState = null;
         } else {
             if (!this._walkState) {
                 this._walkState = this._armature.animation.fadeIn("walk", -1, -1, 0, NORMAL_ANIMATION_GROUP);
+                this._walkState.resetToPose = false;
             }
 
             if (this._moveDir * this._faceDir > 0) {
@@ -409,27 +473,22 @@ cc.Class({
 
         if (this._speedY != 0) {
             if (this._speedY > 5 && this._speedY + G <= 5) {
-                this._armature.animation.fadeIn("jump_3", -1, -1, 0, NORMAL_ANIMATION_GROUP);
+                this._armature.animation.fadeIn("jump_3", -1, -1, 0, NORMAL_ANIMATION_GROUP).resetToPose = false;
             }
 
             this._speedY += G;
-
             this.node.y += this._speedY;
             if (this.node.y < GROUND) {
                 this.node.y = GROUND;
-                this._isJumpingA = false;
-                this._isJumpingB = false;
                 this._speedY = 0;
-                this._speedX = 0;
-                this._armature.animation.fadeIn("jump_4", -1, -1, 0, NORMAL_ANIMATION_GROUP);
-                if (this._isSquating || this._moveDir) {
-                    this._updateAnimation();
-                }
+                this._armature.animation.fadeIn("jump_4", -1, -1, 0, NORMAL_ANIMATION_GROUP).resetToPose = false;
             }
         }
     },
 
     _updateAim : function () {
+        if (!this._mouseDown_) return;
+
         if (this._aimDir === 0) {
             return;
         }
@@ -445,9 +504,9 @@ cc.Class({
         var aimOffsetY = this._armature.getBone("chest").global.y * this.node.scaleY;
 
         if (this._faceDir > 0) {
-            this._aimRadian = Math.atan2(-(this._target.y - this.node.y + aimOffsetY), this._target.x - this.node.x);
+            this._aimRadian = Math.atan2(this._target.y - this.node.y - aimOffsetY, this._target.x - this.node.x);
         } else {
-            this._aimRadian = Math.PI - Math.atan2(-(this._target.y - this.node.y + aimOffsetY), this._target.x - this.node.x);
+            this._aimRadian = Math.PI - Math.atan2(this._target.y - this.node.y - aimOffsetY, this._target.x - this.node.x);
             if (this._aimRadian > Math.PI) {
                 this._aimRadian -= Math.PI * 2;
             }
@@ -455,9 +514,9 @@ cc.Class({
 
         let aimDir = 0;
         if (this._aimRadian > 0) {
-            aimDir = -1;
-        } else {
             aimDir = 1;
+        } else {
+            aimDir = -1;
         }
 
         if (this._aimDir != aimDir) {
@@ -466,18 +525,15 @@ cc.Class({
             // Animation mixing.
             if (this._aimDir >= 0) {
                 this._aimState = this._armature.animation.fadeIn(
-                    "aimUp", 0.01, 1,
-                    0, AIM_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
-                );
+                    "aim_up", -1.0, -1,
+                    0, AIM_ANIMATION_GROUP);
             } else {
                 this._aimState = this._armature.animation.fadeIn(
-                    "aimDown", 0.01, 1,
-                    0, AIM_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
-                );
+                    "aim_down", -1.0, -1,
+                    0, AIM_ANIMATION_GROUP);
             }
 
-            // Add bone mask.
-            //_aimState.addBoneMask("pelvis");
+            this._aimState.resetToPose = false;
         }
 
         this._aimState.weight = Math.abs(this._aimRadian / Math.PI * 2);
@@ -495,12 +551,12 @@ cc.Class({
 
         // Animation mixing.
         this._attackState = this._armature.animation.fadeIn(
-            "attack_01", -1, -1,
+            "attack_01", -1.0, -1,
             0, ATTACK_ANIMATION_GROUP, dragonBones.AnimationFadeOutMode.SameGroup
         );
 
+        this._attackState.resetToPose = false;
         this._attackState.autoFadeOutTime = this._attackState.fadeTotalTime;
-        this._attackState.addBoneMask("pelvis");
     }
 });
 
@@ -516,21 +572,21 @@ var DragonBullet = cc.Class({
 
     init : function (parentNode, armature, effect, radian, speed, position) {
         this._speedX = Math.cos(radian) * speed;
-        this._speedY = -Math.sin(radian) * speed;
+        this._speedY = Math.sin(radian) * speed;
         var thePos = parentNode.convertToNodeSpaceAR(position);
 
         armature.playAnimation("idle");
         
         let armatureNode = armature.node;
         armatureNode.setPosition(thePos);
-        armatureNode.angle = -radian * cc.macro.DEG;
+        armatureNode.angle = radian * cc.macro.DEG;
 
         this._armature = armature;
         
         if (effect) {
             this._effect = effect;
             var effectDisplay = this._effect.node;
-            effectDisplay.angle = -radian * cc.macro.DEG;
+            effectDisplay.angle = radian * cc.macro.DEG;
             effectDisplay.setPosition(thePos);
             effectDisplay.scaleX = 1 + Math.random() * 1;
             effectDisplay.scaleY = 1 + Math.random() * 0.5;
