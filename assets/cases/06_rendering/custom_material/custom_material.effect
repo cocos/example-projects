@@ -27,13 +27,13 @@ precision highp float;
 #include <cc-global>
 #include <cc-local>
 
-attribute vec3 a_position;
-attribute lowp vec4 a_color;
+in vec3 a_position;
+in lowp vec4 a_color;
 
-attribute mediump vec2 a_uv0;
-varying mediump vec2 v_uv0;
+in mediump vec2 a_uv0;
+out mediump vec2 v_uv0;
 
-varying lowp vec4 v_color;
+out lowp vec4 v_color;
 
 void main () {
   mat4 mvp;
@@ -53,13 +53,13 @@ CCProgram fs %{
 precision highp float;
 
 uniform sampler2D texture;
-varying mediump vec2 v_uv0;
+in mediump vec2 v_uv0;
 
 uniform Time {
   float time;
 }
 
-varying lowp vec4 v_color;
+in lowp vec4 v_color;
 
 void main () {
   vec4 c = v_color * texture2D(texture, v_uv0);
