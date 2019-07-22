@@ -65,15 +65,14 @@ void main () {
   vec4 c = v_color * texture2D(texture, v_uv0);
   gl_FragColor = c;
   float temp = v_uv0.x - time;
+  
   if (temp <= 0.0) {
       float temp2 = abs(temp);
       if (temp2 <= 0.2) {
-          gl_FragColor.w = 1.0 - temp2/0.2;
+          gl_FragColor.a *= 1.0 - temp2/0.2;
       } else {
-          gl_FragColor.w = 0.0;
+          gl_FragColor.a = 0.0;
       }
-  } else {
-      gl_FragColor.w = 1.0;
   }
 }
 
