@@ -58,6 +58,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        console.time('move-objects : onLoad')
 
         for (var i = 0; i < this.nodeCount; i++) {
             var node = cc.instantiate(this.tempPrefab);
@@ -69,6 +70,8 @@ cc.Class({
         this.movingNode = this._useCamera ? this.camera : this.root;
         
         this.setMacroCulling(this._enableCulling);
+
+        console.timeEnd('move-objects : onLoad')
     },
     
     setMacroCulling: function (enable) {
