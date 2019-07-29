@@ -20,6 +20,15 @@ cc.Class({
 
     // onLoad () {},
 
+    onEnable () {
+        this.originState = cc.dynamicAtlasManager.enabled;
+        cc.dynamicAtlasManager.enabled = false;
+    },
+
+    onDisable () {
+        cc.dynamicAtlasManager.enabled = this.originState;
+    },
+
     start () {
         this.time = 0;
     },
