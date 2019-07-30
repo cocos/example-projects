@@ -17,6 +17,7 @@ CCEffect %{
         cullMode: none
       properties:
         texture: { value: white }
+        texture2: { value: white }
         time: { value: 0 }
 }%
 
@@ -53,6 +54,7 @@ CCProgram fs %{
 precision highp float;
 
 uniform sampler2D texture;
+uniform sampler2D texture2;
 in mediump vec2 v_uv0;
 
 uniform Time {
@@ -62,7 +64,7 @@ uniform Time {
 in lowp vec4 v_color;
 
 void main () {
-  vec4 c = v_color * texture2D(texture, v_uv0);
+  vec4 c = v_color * texture2D(texture, v_uv0) * texture2D(texture2, v_uv0);
   gl_FragColor = c;
   float temp = v_uv0.x - time;
   
