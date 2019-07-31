@@ -31,7 +31,7 @@ CCProgram sprite-vs %{
   vec4 vert () {
     vec4 pos = vec4(a_position, 1);
 
-    #ifdef USE_MODEL
+    #if USE_MODEL
     pos = cc_matViewProj * cc_matWorld * pos;
     #else
     pos = cc_matViewProj * pos;
