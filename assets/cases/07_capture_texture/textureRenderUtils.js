@@ -16,7 +16,7 @@ cc.Class({
         this.texture = texture;
     },
     // create the img element
-    initImage () {
+    createImg () {
         // return the type and dataUrl
         var dataURL = this._canvas.toDataURL("image/png");
         var img = document.createElement("img");
@@ -24,7 +24,7 @@ cc.Class({
         return img;
     },
     // create the canvas and context, filpY the image Data
-    createSprite () {
+    createCanvas () {
         let width = this.texture.width;
         let height = this.texture.height;
         if (!this._canvas) {
@@ -55,7 +55,7 @@ cc.Class({
     },
     
     // show on the canvas
-    showSprite (img) {
+    showImage (img) {
         let texture = new cc.Texture2D();
         texture.initWithElement(img);
 

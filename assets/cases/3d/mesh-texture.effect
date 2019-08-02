@@ -1,95 +1,73 @@
 // Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.  
 
-// Note: Current format version is experiment, the format may be changed.
-// The future format may not be compatible, you may need to update the script manually.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      blendState:
+        targets:
+        - blend: true
+      rasterizerState:
+        cullMode: none
+      properties:
+        texture: { value: white }
+        alphaThreshold: { value: 0.5 }
+}%
 
-// 注意：当前版本的格式是实验性的，之后还会进行修改。
-// 后续版本的格式不保证兼容当前格式，可能需要手动升级到最新版本。，
-%{
-  techniques: [
-    {
-      passes: [
-        {
-          vert: vs
-          frag: fs
-          cullMode: none
-          blend: true
-        }
-      ]
-      layer: 0
-    }
-  ]
-  properties: {
-    texture: {
-      type: sampler2D
-      value: null
-    }
-    alphaThreshold: {
-      type: number
-      value: 0.5
-    }
-  }
-%}
 
-%% vs {
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <cc-global>
+  #include <cc-local>
 
-precision highp float;
-
-uniform mat4 cc_matViewProj;
-
-#if USE_MODEL
-  uniform mat4 cc_matWorld;
-#endif
-
-attribute vec3 a_position;
-
-#if USE_TEXTURE
-  attribute mediump vec2 a_uv0;
-  varying mediump vec2 v_uv0;
-#endif
-
-void main () {
-  mat4 mvp;
-  
-  #if USE_MODEL
-    mvp = cc_matViewProj * cc_matWorld;
-  #else
-    mvp = cc_matViewProj;
-  #endif
+  in vec3 a_position;
 
   #if USE_TEXTURE
-    v_uv0 = a_uv0;
+  in vec2 a_uv0;
+  out vec2 uv0;
   #endif
 
-  gl_Position = mvp * vec4(a_position, 1);
-}
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
 
-}
-
-%% fs {
-
-precision highp float;
-
-#if USE_TEXTURE
-  uniform sampler2D texture;
-  varying mediump vec2 v_uv0;
-#endif
-
-#include <alpha-test>
-
-void main () {
-  vec4 color = vec4(1.);
-
-  #if USE_TEXTURE
-    color *= texture2D(texture, v_uv0);
-    #if _USE_ETC1_TEXTURE
-      color.a *= texture2D(texture, v_uv0 + vec2(0, 0.5)).r;
+    #if USE_MODEL
+    pos = cc_matViewProj * cc_matWorld * pos;
+    #else
+    pos = cc_matViewProj * pos;
     #endif
+
+    #if USE_TEXTURE
+    uv0 = a_uv0;
+    #endif
+
+    return pos;
+  }
+}%
+
+
+CCProgram sprite-fs %{
+  precision highp float;
+  
+  #include <alpha-test>
+
+  #if USE_TEXTURE
+  in vec2 uv0;
+  uniform sampler2D texture;
   #endif
 
-  ALPHA_TEST(color);
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
 
-  gl_FragColor = color;
-}
+    #if USE_TEXTURE
+    o *= texture(texture, uv0);
+      #if _USE_ETC1_TEXTURE
+      o.a *= texture2D(texture, uv0 + vec2(0, 0.5)).r;
+      #endif
+    #endif
 
-}
+    ALPHA_TEST(o);
+
+    return o;
+  }
+}%

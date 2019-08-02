@@ -11,7 +11,7 @@ cc.Class({
         // create the capture
         this.schedule(() => {
             let picData = this.initImage();
-            this.showSprite(picData);
+            this.createCanvas(picData);
             this.label.string = 'Showing the capture'
             this.saveFile(picData);
         }, 1, 0);
@@ -27,7 +27,7 @@ cc.Class({
     },
 
     // override init with Data
-    showSprite (picData) {
+    createCanvas (picData) {
         let texture = new cc.Texture2D();
         texture.initWithData(picData, 32, this._width, this._height);
 
