@@ -5,8 +5,8 @@ cc.Class({
         this.init();
         // create the capture
         this.scheduleOnce(() => {
-            let canvas = this.createSprite();
-            this.initImage();
+            let canvas = this.createCanvas();
+            this.createImg();
             this.saveFile(canvas);
         }, 1);
     },
