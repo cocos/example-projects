@@ -19,6 +19,7 @@ cc.Class({
             type: cc.Asset,
             default: null
         },
+        _reconnectCount: 0,
     },
 
     // use this for initialization
@@ -190,6 +191,15 @@ cc.Class({
         this.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
     },
     
+    reconnecting: function () {
+        if (!this.socketIO) { return; }
+
+        this._reconnectCount++;
+        var msg = this.tag + " is reconnecting(" + this._reconnectCount + ")";
+        this.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
+        this.socketIOResp.string = "Reconnecting...";
+    },
+
     sendSocketIO: function () {
         var self = this;
         if (typeof io === 'undefined') {
@@ -229,6 +239,8 @@ cc.Class({
         sioclient.on("testevent", this.testevent.bind(this));
 
         sioclient.on("disconnect", this.disconnection.bind(this));
+
+        sioclient.on("reconnecting", this.reconnecting.bind(this));
     },
     
     streamXHREventsToLabel: function ( xhr, eventLabel, label, method, responseHandler ) {
