@@ -39,5 +39,10 @@ cc.Class({
                 }
             });
         }
+        else {
+            let self = this;
+            self.label.string = '该样例只支持微信小游戏平台';
+            cc.log('该样例只支持微信小游戏平台');
+        }
     }
 });
