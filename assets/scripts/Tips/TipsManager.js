@@ -27,7 +27,9 @@ module.exports = {
         console.log(name);
         switch (name) {
             case 'downloader-web':
-            case 'EditBoxTabIndex':     return !isNative;
+            case 'EditBoxTabIndex':     return !isNative && !isAlipay;
+            case 'EditBox':
+            case 'EditBoxEvent':        return !isAlipay;
             case 'OnMultiTouchInput':   return isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
             case 'DeviceMotion':        return isMobile && !isQQPlay && !isVivo;
