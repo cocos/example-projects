@@ -5,8 +5,8 @@ cc.Class({
         this.init();
         // create the capture
         this.scheduleOnce(() => {
-            let canvas = this.createSprite();
-            this.initImage();
+            let canvas = this.createCanvas();
+            this.createImg();
             this.saveFile(canvas);
         }, 1);
     },
@@ -38,6 +38,11 @@ cc.Class({
                     self.label.string = '';
                 }
             });
+        }
+        else {
+            let self = this;
+            self.label.string = '该样例只支持微信小游戏平台';
+            cc.log('该样例只支持微信小游戏平台');
         }
     }
 });

@@ -4,10 +4,10 @@ cc.Class({
     start () {
         this.init();
         // create capture
+        this.createCanvas();
+        var img = this.createImg();
         this.scheduleOnce(() => {
-            this.createSprite();
-            var img = this.initImage();
-            this.showSprite(img);
+            this.showImage(img);
             // download the pic as the file to your local
             this.label.string = 'Showing the capture'
         }, 1);
