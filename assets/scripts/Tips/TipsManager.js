@@ -26,7 +26,7 @@ module.exports = {
     SupportConfig: function (name) {
         console.log(name);
         switch (name) {
-            case 'downloader-web':
+            case 'downloader-web':      return !isNative;
             case 'EditBoxTabIndex':     return !isNative && !isAlipay;
             case 'EditBox':
             case 'EditBoxEvent':        return !isAlipay;
