@@ -39,7 +39,7 @@ cc.Class({
     start () {
         TipsManager.init();
         this.controlButtons.active = false;
-        this.keep_Ratio_Switch.active = !cc.sys.isBrowser;
+        this.keep_Ratio_Switch.active = !(cc.sys.isBrowser || cc.sys.platform === cc.sys.WECHAT_GAME);
         this.playVideoArea.on('touchend', () => {
             this.videoPlayer.play();
         });
