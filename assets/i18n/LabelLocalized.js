@@ -27,6 +27,7 @@ cc.Class({
     },
 
     onLoad () {
+        this._super();
         if (this.localizedString) {
             this.string = this.localizedString;
         }
