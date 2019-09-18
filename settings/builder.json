@@ -1,19 +1,29 @@
 {
-  "appKey": "",
-  "appSecret": "",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
   "encryptJs": true,
   "excludeScenes": [],
   "fb-instant-games": {
     "hide": false
   },
-  "includeAnySDK": false,
   "includeSDKBox": false,
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
   "md5Cache": false,
   "mergeStartScene": false,
-  "oauthLoginServer": "",
   "optimizeHotUpdate": false,
   "orientation": {
     "landscapeLeft": true,
@@ -22,19 +32,17 @@
     "upsideDown": false
   },
   "packageName": "org.cocos2d.examplecases",
-  "privateKey": "",
   "qqplay": {
     "orientation": "portrait"
   },
-  "renderMode": "0",
   "startScene": "d13475c7-b37e-45d6-b6c5-25929e8a0925",
   "title": "examplecases",
   "webOrientation": "landscape",
   "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
+    "REMOTE_SERVER_ROOT": "http://192.168.199.175:8080",
     "appid": "wx6ac3f5090a6b99c5",
     "isSubdomain": false,
-    "orientation": "landscape",
+    "orientation": "landscapeRight",
     "subContext": ""
   },
   "xxteaKey": "de565b49-7232-43",
