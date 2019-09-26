@@ -17,10 +17,7 @@ cc.Class({
         this._leftWeaponIndex = 0;
         this._rightDisplayIndex = 0;
         this._rightDisplayNames = ["weapon_1004_r", "weapon_1004d_r"];
-        this._rightDisplayOffset = [{x:0,y:0}, {x:-60,y:-100}];
-        // this._rightDisplayNames = ["weapon_1004_r", "weapon_1004b_r", "weapon_1004c_r", "weapon_1004d_r", "weapon_1004e_r"];
-        //this._rightDisplayOffset = [{x:0,y:0}, {x:28,y:50}, {x:28,y:50}, {x:-60,y:-100}, {x:30,y:90}];
-        //this._rightDisplayOffset = [{x:0,y:0}, {x:0,y:0}, {x:0,y:0}, {x:-60,y:-100}, {x:0,y:0}];
+        this._rightDisplayOffset = [{x:0,y:0}, {x:-60,y:100}];
     },
 
     left () {
