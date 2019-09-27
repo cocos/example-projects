@@ -1,4 +1,3 @@
-
 if (!cc.runtime) {
 // runtime not support dragonbones.
 

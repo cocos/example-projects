@@ -1,4 +1,3 @@
-
 let gfx = cc.gfx;
 
 cc.Class({
