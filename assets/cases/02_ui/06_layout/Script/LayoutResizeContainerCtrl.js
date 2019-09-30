@@ -1,4 +1,3 @@
-
 var info = cc.Class({
     name: 'info',
     properties: {

@@ -1,4 +1,3 @@
-
 const TipsManager = require('TipsManager');
 
 cc.Class({

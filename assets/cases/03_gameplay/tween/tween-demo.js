@@ -1,4 +1,3 @@
-
 const t = cc.tween;
 
 cc.Class({

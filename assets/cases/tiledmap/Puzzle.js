@@ -1,4 +1,3 @@
-
 var MoveDirection = cc.Enum({
     NONE: 0,
     UP: 1,
