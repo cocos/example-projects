@@ -107,6 +107,7 @@ cc.Class({
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
             websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
+            respLabel.string = "Opened!";
         };
 
         this._wsiSendBinary.onmessage = function(evt) {
@@ -133,6 +134,7 @@ cc.Class({
 
         this._wsiSendBinary.onerror = function(evt) {
             websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.7");
+            respLabel.string = "Error!";
         };
 
         this._wsiSendBinary.onclose = function(evt) {
@@ -140,6 +142,7 @@ cc.Class({
             // After close, it's no longer possible to use it again, 
             // if you want to send another request, you need to create a new websocket instance
             self._wsiSendBinary = null;
+            respLabel.string = "Close!";
         };
         
         this.scheduleOnce(this.sendWebSocketBinary, 1);
