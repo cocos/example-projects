@@ -1,6 +1,6 @@
 !function(e){
     var _global = typeof window === 'undefined' ? global : window;
-    if (_global.CC_WECHATGAME) {
+    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
         var f;
         "undefined" != typeof window ? f = window : "undefined" != typeof global ? f = global : "undefined" != typeof self && (f = self), f.io = e()
     }

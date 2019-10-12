@@ -1,0 +1,67 @@
+// Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.  
+
+// Note: Current format version is experiment, the format may be changed.
+// The future format may not be compatible, you may need to update the script manually.
+
+// 注意：当前版本的格式是实验性的，之后还会进行修改。
+// 后续版本的格式不保证兼容当前格式，可能需要手动升级到最新版本。，
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: vs
+      frag: fs
+      blendState:
+        targets:
+        - blend: true
+      rasterizerState:
+        cullMode: none
+      properties:
+        texture: { value: white }
+        time: { value: 0 }
+}%
+
+CCProgram vs %{
+
+precision highp float;
+
+#include <cc-global>
+#include <cc-local>
+
+in vec3 a_position;
+in lowp vec4 a_color;
+
+in mediump vec2 a_uv0;
+out mediump vec2 v_uv0;
+
+out lowp vec4 v_color;
+
+void main () {
+
+  v_uv0 = a_uv0;
+  v_color = a_color;
+
+  gl_Position = cc_matViewProj * vec4(a_position, 1);
+}
+
+}%
+
+CCProgram fs %{
+
+precision highp float;
+
+uniform sampler2D texture;
+varying mediump vec2 v_uv0;
+
+uniform Time {
+  float time;
+}
+
+void main () {
+  vec4 color = texture2D(texture, v_uv0);
+  #if CC_USE_ALPHA_ATLAS_TEXTURE
+      color.a *= texture2D(texture, v_uv0 + vec2(0, 0.5)).r;
+  #endif
+  float gray = 0.2126*color.r + 0.7152*color.g + 0.0722*color.b;
+  gl_FragColor = vec4(gray, gray, gray, color.a);
+}
+}%
