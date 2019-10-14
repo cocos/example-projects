@@ -5,7 +5,7 @@ cc.Class({
     onLoad: function () {
         var animation = this.getComponent(cc.Animation);
         
-        cc.loader.loadRes("test_assets/atlas", cc.SpriteAtlas, (err, atlas) => {
+        cc.assetManager.loadRes("test_assets/atlas", cc.SpriteAtlas, (err, atlas) => {
             var spriteFrames = atlas.getSpriteFrames();
             
             var clip = cc.AnimationClip.createWithSpriteFrames(spriteFrames, 10);

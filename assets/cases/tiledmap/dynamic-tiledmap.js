@@ -6,7 +6,7 @@ cc.Class({
     },
 
     onLoadTileMap (url) {
-        cc.loader.loadRes(url, cc.TiledMapAsset, (err, tmxAsset) => {
+        cc.assetManager.loadRes(url, cc.TiledMapAsset, (err, tmxAsset) => {
             if (err) {
                 cc.error(err);
                 return;

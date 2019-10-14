@@ -11,6 +11,6 @@ cc.Class({
     },
 
     goLoadSubpackage () {
-        cc.director.loadScene('Subpackages');
+        cc.director.loadScene('AssetBundles');
     }
 });
