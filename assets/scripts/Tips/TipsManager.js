@@ -30,7 +30,7 @@ module.exports = {
             case 'OnMultiTouchInput':   return isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
             case 'DeviceMotion':        return isMobile && !isQQPlay && !isVivo;
-            case 'Native_Call':         return isMobile && isAndroid && !CC_RUNTIME;
+            case 'Native_Call':         return isMobile && (isAndroid || isIphone) && !CC_RUNTIME;
             case 'TTFFontLabel':        return !isQQPlay;
             case 'Subpackages':
                 return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isVivo && !isJkw);
