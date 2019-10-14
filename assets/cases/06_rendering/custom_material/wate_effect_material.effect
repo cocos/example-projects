@@ -1,0 +1,101 @@
+// Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.  
+
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: vs
+      frag: fs
+      blendState:
+        targets:
+        - blend: true
+      rasterizerState:
+        cullMode: none
+      properties:
+        texture: { value: while }
+        time: { value: 0.5 }
+}%
+
+
+CCProgram vs %{
+  precision highp float;
+
+  #include <cc-global>
+  #include <cc-local>
+
+  in vec3 a_position;
+  in vec4 a_color;
+  out vec4 v_color;
+
+  in vec2 a_uv0;
+  out vec2 v_uv0;
+
+  void main () {
+    vec4 pos = vec4(a_position, 1);
+
+    pos = cc_matViewProj * pos;
+
+    v_uv0 = a_uv0;
+    v_color = a_color;
+
+    gl_Position = pos;
+  }
+}%
+
+
+CCProgram fs %{
+  precision highp float;
+
+  #define TAU 6.28318530718
+  #define TILING_FACTOR 1.0
+  #define MAX_ITER 8
+
+  in vec4 v_color;
+  in vec2 v_uv0;
+
+  uniform sampler2D texture;
+  uniform TIME {
+    float time;
+  }
+
+  float waterHighlight(vec2 p, float time, float foaminess)
+  {
+    vec2 i = vec2(p);
+    float c = 0.0;
+    float foaminess_factor = mix(1.0, 6.0, foaminess);
+    float inten = .005 * foaminess_factor;
+
+    for (int n = 0; n < MAX_ITER; n++) 
+    {
+      float t = time * (1.0 - (3.5 / float(n+1)));
+      i = p + vec2(cos(t - i.x) + sin(t + i.y), sin(t - i.y) + cos(t + i.x));
+      c += 1.0/length(vec2(p.x / (sin(i.x+t)),p.y / (cos(i.y+t))));
+    }
+    c = 0.2 + c / (inten * float(MAX_ITER));
+    c = 1.17-pow(c, 1.4);
+    c = pow(abs(c), 8.0);
+
+    return c / sqrt(foaminess_factor);
+  }
+
+  void main () {
+    float t = time * 0.1+23.0;
+    vec2 uv = v_uv0.xy;
+    vec2 uv_square = vec2(uv.x, uv.y);
+    float dist_center = pow(2.0*length(uv - 0.5), 2.0);
+    
+    float foaminess = smoothstep(0.4, 1.8, dist_center);
+    float clearness = 0.1 + 0.9*smoothstep(0.1, 0.5, dist_center);
+    
+	  vec2 p = mod(uv_square*TAU*TILING_FACTOR, TAU)-250.0;
+    
+    float c = waterHighlight(p, t, foaminess);
+    
+    vec3 water_color = vec3(0.0, 0.35, 0.5);
+	  vec3 color = vec3(c);
+    color = clamp(color + water_color, 0.0, 1.0);
+    
+    color = mix(water_color, color, clearness);
+
+	  gl_FragColor = vec4(color, 1.0);
+  }
+}%
