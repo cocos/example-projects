@@ -29,7 +29,15 @@ cc.Class({
         this.motionStreak.minSeg = minSeg;
         this.motionStreak.stroke = stroke;
         this.motionStreak.texture = texture;
+    },
+
+    lateUpdate () {
+        if (!this.motionStreak.node.getComponent(cc.Animation).getAnimationState("move_around").isPlaying) {
+            this.motionStreak.node.getComponent(cc.Animation).play();
+        }
+    },
+
+    onDisable () {
+        this.motionStreak.node.getComponent(cc.Animation).stop();
     }
-
-
 });
