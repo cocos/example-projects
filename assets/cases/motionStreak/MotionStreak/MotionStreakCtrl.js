@@ -12,6 +12,7 @@ cc.Class({
     onLoad: function () {
         this._changed = true;
         this.oldTexture = this.motionStreak.texture;
+        this.animationCom = this.motionStreak.node.getComponent(cc.Animation);
     },
 
     onClick: function () {
@@ -32,7 +33,7 @@ cc.Class({
     },
 
     lateUpdate () {
-        if (!this.motionStreak.node.getComponent(cc.Animation).getAnimationState("move_around").isPlaying) {
+        if (!this.animationCom.getAnimationState("move_around").isPlaying) {
             this.motionStreak.node.getComponent(cc.Animation).play();
         }
     },
