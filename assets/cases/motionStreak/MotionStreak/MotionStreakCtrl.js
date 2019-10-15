@@ -34,7 +34,7 @@ cc.Class({
 
     lateUpdate () {
         if (!this.animationCom.getAnimationState("move_around").isPlaying) {
-            this.motionStreak.node.getComponent(cc.Animation).play();
+            this.animationCom.play();
         }
     },
 
