@@ -71,6 +71,9 @@ module.exports = {
                 return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
             case 'mesh':
                 return !isVivo && !isOPPO;
+
+            case 'videoPlayer-stayOnBottom':
+                return (isMobile || isBrowser);
         }
     },
 
