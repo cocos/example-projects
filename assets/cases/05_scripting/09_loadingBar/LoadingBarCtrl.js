@@ -27,13 +27,13 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this._urls = [
-            cc.url.raw("resources/audio/ding.mp3"),
-            cc.url.raw("resources/audio/cheering.wav"),
-            cc.url.raw("resources/audio/music_logo.mp3"),
-            cc.url.raw("resources/test_assets/audio.mp3"),
-            cc.url.raw("resources/loadingBar/font.png"),
-            cc.url.raw("resources/loadingBar/mikado_outline_shadow.png"),
-            cc.url.raw("resources/loadingBar/enligsh-chinese.png")
+            'audio/ding',
+            'audio/cheering',
+            'audio/music_logo',
+            'test_assets/audio',
+            'loadingBar/font',
+            'loadingBar/mikado_outline_shadow',
+            'loadingBar/enligsh-chinese'
         ];
         this.resource = null;
         this.progressBar.progress = 0;
@@ -41,15 +41,14 @@ cc.Class({
         this.progressTips.textKey = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.3");
         this.node.on(cc.Node.EventType.TOUCH_START, function () {
             if (this.resource) { return; }
-            cc.loader.load(this._urls, this._progressCallback.bind(this), this._completeCallback.bind(this));
+            cc.assetManager.loadRes(this._urls, this._progressCallback.bind(this), this._completeCallback.bind(this));
         }, this);
     },
 
     _clearAll: function () {
         for (var i = 0; i < this._urls.length; ++i) {
             var url = this._urls[i];
-            var deps = cc.loader.getDependsRecursively(url);
-            cc.loader.release(deps);
+            cc.assetManager.releaseRes(url);
         }
     },
 

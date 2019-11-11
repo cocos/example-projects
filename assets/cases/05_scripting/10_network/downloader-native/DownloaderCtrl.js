@@ -43,7 +43,7 @@ cc.Class({
         }
         switch (task.requestURL) {
         case this.imgUrl:
-            cc.loader.load(task.storagePath, (err, tex) => {
+            cc.assetManager.loadRemoteTexture(task.storagePath, (err, tex) => {
                 this.sprite.spriteFrame = new cc.SpriteFrame(tex);
                 this.sprite.node.active = true;
                 this.label.node.active = false;
@@ -59,7 +59,7 @@ cc.Class({
             this.sprite.node.active = false;
             this.label.node.active = true;
             this.label.string = 'Audio Download Complete.';
-            cc.loader.load(task.storagePath, (err, clip) => {
+            cc.assetManager.loadRemoteAudio(task.storagePath, (err, clip) => {
                 this._audioID = cc.audioEngine.play(clip);
             });
         }
@@ -96,7 +96,7 @@ cc.Class({
 
         this._downloading = true;
         this.label.string = 'Downloading image (mem)';
-        cc.loader.load(this.tempImgUrl, (error, tex) => {
+        cc.assetManager.loadRemoteTexture(this.tempImgUrl, (error, tex) => {
             this._downloading = false;
             if (error) {
                 console.log("Load remote image failed: " + error);

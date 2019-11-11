@@ -24,11 +24,11 @@ cc.Class({
     },
 
     loadSubpackage1 () {
-        cc.loader.downloader.loadSubpackage('First', this.onLoadSubpackageCallback.bind(this, 1));
+        cc.assetManager.loadBundle('assets/First', this.onLoadSubpackageCallback.bind(this, 1));
     },
 
     loadSubpackage2 () {
-        cc.loader.downloader.loadSubpackage('Second', this.onLoadSubpackageCallback.bind(this, 2));
+        cc.assetManager.loadBundle('assets/Second', this.onLoadSubpackageCallback.bind(this, 2));
     },
 
     goSubpackage1 () {

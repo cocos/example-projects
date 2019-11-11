@@ -57,7 +57,7 @@ cc.Class({
     },
     
     sendXHR: function () {
-        var xhr = cc.loader.getXMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         this.streamXHREventsToLabel(xhr, this.xhr, this.xhrResp, 'GET');
 
         xhr.open("GET", "https://httpbin.org/get?show_env=1", true);
@@ -74,7 +74,7 @@ cc.Class({
     },
     
     sendXHRAB: function () {
-        var xhr = cc.loader.getXMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         this.streamXHREventsToLabel(xhr, this.xhrAB, this.xhrABResp, "POST");
 
         xhr.open("POST", "https://httpbin.org/post");
