@@ -15,11 +15,11 @@ cc.Class({
     },
 
     loadSubpackage1 () {
-        cc.loader.downloader.loadSubpackage('First', this.onLoadSubpackageCallback.bind(this));
+        cc.assetManager.loadBundle('assets/First', this.onLoadSubpackageCallback.bind(this));
     },
 
     loadSubpackage2 () {
-        cc.loader.downloader.loadSubpackage('Second', this.onLoadSubpackageCallback.bind(this));
+        cc.assetManager.loadBundle('assets/Second', this.onLoadSubpackageCallback.bind(this));
     },
 
     goSubpackage1 () {

@@ -12,7 +12,7 @@ cc.Class({
 
     start () {
         this.scheduleOnce(() => {
-            cc.loader.loadRes('materials/dynamic-load-material', cc.Material, (err, material) => {
+            cc.assetManager.loadRes('materials/dynamic-load-material', cc.Material, (err, material) => {
                 if (err) {
                     cc.error(err);
                     return;
