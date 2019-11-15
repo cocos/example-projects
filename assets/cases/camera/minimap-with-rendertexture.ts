@@ -102,10 +102,8 @@ export default class NewClass extends cc.Component {
     }
 
     update (dt) {
-        let { width: canvasWidth, height: canvasHeight } = cc.Canvas.instance.node;
-        
         let orthoHeight = this.cameraOrthoSize;
-        let orthoWidth = orthoHeight * (canvasWidth / canvasHeight);
+        let orthoWidth = orthoHeight * (this._renderTexture.width / this._renderTexture.height);
         
         this.cameraInfo.clear();
 
