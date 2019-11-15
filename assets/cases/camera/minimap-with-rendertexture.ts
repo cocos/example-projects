@@ -49,6 +49,7 @@ export default class NewClass extends cc.Component {
     }
 
     _delayInitRenderTexture () {
+        // should calculate size after canvas updated
         this.scheduleOnce(this._initRenderTexture.bind(this), 0.1);
     }
 
