@@ -34,15 +34,17 @@ export default class NewClass extends cc.Component {
     cameraPos = cc.v3(0, 0, MINI_CAMERA_Z);
     cameraOrthoSize = 1;
 
-    start () {
+    _tweens: cc.Tween[] = [];
 
+    start () {
         if (!CC_EDITOR) {
-            cc.tween(this.target)
-            .by(6, {angle: 360})
-            .repeatForever()
-            .start()
-        
-            cc.tween(this)
+            let t = cc.tween(this.target)
+                .by(6, {angle: 360})
+                .repeatForever()
+                .start()
+            this._tweens.push(t);
+
+            t = cc.tween(this)
                 .set({cameraPos: cc.v3(0, 0, MINI_CAMERA_Z), cameraOrthoSize: cc.Canvas.instance.node.height / 2})
                 .to(6, {cameraOrthoSize: this.target.width / 2})
                 .delay(1)
@@ -50,10 +52,17 @@ export default class NewClass extends cc.Component {
                 .union()
                 .repeatForever()
                 .start()
+            this._tweens.push(t);
         }
         else {
             this.cameraOrthoSize = cc.Canvas.instance.node.height / 2;
         }
+    }
+
+    onDestroy () {
+        this._tweens.forEach(t => {
+            t.stop();
+        })
     }
 
     update (dt) {
