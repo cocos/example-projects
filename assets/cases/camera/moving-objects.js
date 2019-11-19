@@ -34,26 +34,13 @@ cc.Class({
                     this.moveSpeed = -this.moveSpeed;
                 }
             }
-        },
-
-        _enableCulling: true,
-        enableCulling: {
-            get: function () {
-                return this._enableCulling;
-            },
-            set: function (v) {
-                this._enableCulling = v;
-                this.setMacroCulling(v);
-            }
         }
     },
 
     onEnable: function () {
-        this._originEnableCulling = cc.macro.ENABLE_CULLING;
     },
 
     onDisable: function () {
-        this.setMacroCulling(this._originEnableCulling);
     },
 
     // use this for initialization
@@ -69,18 +56,9 @@ cc.Class({
 
         this.movingNode = this._useCamera ? this.camera : this.root;
         
-        this.setMacroCulling(this._enableCulling);
-
         console.timeEnd('move-objects : onLoad')
     },
     
-    setMacroCulling: function (enable) {
-        if (cc.macro.ENABLE_CULLING === enable || CC_JSB) return;
-
-        cc.macro.ENABLE_CULLING = enable;
-        cc.renderer.childrenOrderDirty = true;
-    },
-
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
         this.movingNode.x += this.moveSpeed * dt;
@@ -94,8 +72,4 @@ cc.Class({
         this.useCamera = toggle.isChecked;
         this.root.group = this.useCamera ? 'Actor' : 'Default';
     },
-
-    enableCullingChanged: function (toggle) {
-        this.enableCulling = toggle.isChecked;
-    }
 });
