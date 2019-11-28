@@ -87,7 +87,7 @@ cc.Class({
     },
 
     switchOnlineVideo () {
-        this.videoPlayer.remoteURL = 'http://www.w3school.com.cn/i/movie.mp4';
+        this.videoPlayer.remoteURL = 'https://www.w3school.com.cn/i/movie.mp4';
         this.videoPlayer.resourceType = cc.VideoPlayer.ResourceType.REMOTE;
         this.playVideoArea.active = true;
     },
