@@ -10,8 +10,7 @@ cc.Class({
     init () {
         this.label.string = '';
         let texture = new cc.RenderTexture();
-        let gl = cc.game._renderContext;
-        texture.initWithSize(cc.visibleRect.width, cc.visibleRect.height, gl.STENCIL_INDEX8);
+        texture.initWithSize(cc.visibleRect.width, cc.visibleRect.height, cc.gfx.RB_FMT_S8);
         this.camera.targetTexture = texture;
         this.texture = texture;
     },

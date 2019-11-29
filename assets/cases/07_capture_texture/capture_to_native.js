@@ -9,16 +9,18 @@ cc.Class({
     start () {
         this.init();
         // create the capture
+        this.camera.enabled = true;
         this.schedule(() => {
             let picData = this.initImage();
             this.createCanvas(picData);
             this.label.string = 'Showing the capture'
             this.saveFile(picData);
+            this.camera.enabled = false;
         }, 1, 0);
     },
     
     // override
-    initImage () { 
+    initImage () {
         let data = this.texture.readPixels();
         this._width = this.texture.width;
         this._height = this.texture.height;
