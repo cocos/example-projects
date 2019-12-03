@@ -48,7 +48,7 @@ cc.Class({
 
         let url = this.storage.getCurrentScene();
         if (url) {
-            //this.loadScene(url);
+            this.loadScene(url);
         }
     },
 
