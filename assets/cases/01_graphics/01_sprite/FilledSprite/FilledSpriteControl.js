@@ -27,6 +27,7 @@ cc.Class({
     },
 
     update: function (dt) {
+        dt *= 0.5;
         // update fill start
         this._updataFillStart(this.horizontal, dt);
         this._updataFillStart(this.vertical, dt);
