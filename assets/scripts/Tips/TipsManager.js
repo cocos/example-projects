@@ -26,12 +26,14 @@ module.exports = {
     SupportConfig: function (name) {
         console.log(name);
         switch (name) {
-            case 'downloader-web':
-            case 'EditBoxTabIndex':     return !isNative;
+            case 'downloader-web':      return !isNative;
+            case 'EditBoxTabIndex':     return !isNative && !isAlipay;
+            case 'EditBox':
+            case 'EditBoxEvent':        return !isAlipay;
             case 'OnMultiTouchInput':   return isMobile;
             case 'webp-test':           return cc.sys.capabilities['webp'];
             case 'DeviceMotion':        return isMobile && !isQQPlay && !isVivo;
-            case 'Native_Call':         return isMobile && isAndroid && !CC_RUNTIME;
+            case 'Native_Call':         return isMobile && (isAndroid || isIphone) && !CC_RUNTIME;
             case 'TTFFontLabel':        return !isQQPlay;
             case 'Subpackages':
                 return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isJkw);

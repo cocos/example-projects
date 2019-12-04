@@ -128,6 +128,9 @@ cc.Class({
         this.sprite.node.active = false;
         this.label.node.active = true;
         this.label.string = 'Downloading Audio';
+        if (this._audioID !== -1) {
+            cc.audioEngine.stop(this._audioID);
+        }
         this._downloading = true;
         this._audioTask = this._downloader.createDownloadFileTask(this.audioUrl, this._storagePath + 'audioTest.mp3');
     },
