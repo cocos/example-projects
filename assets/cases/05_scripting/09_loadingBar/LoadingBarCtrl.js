@@ -27,7 +27,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this._urls = [
-            cc.url.raw("resources/audio/ding.wav"),
+            cc.url.raw("resources/audio/ding.mp3"),
             cc.url.raw("resources/audio/cheering.wav"),
             cc.url.raw("resources/audio/music_logo.mp3"),
             cc.url.raw("resources/test_assets/audio.mp3"),

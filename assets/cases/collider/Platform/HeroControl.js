@@ -7,7 +7,8 @@ cc.Class({
         gravity: -1000,
         drag: 1000,
         direction: 0,
-        jumpSpeed: 300
+        jumpSpeed: 300,
+        _lastSpeedY: 0
     },
 
     // use this for initialization
@@ -18,6 +19,7 @@ cc.Class({
 
         this.collisionX = 0;
         this.collisionY = 0;
+        this.jumping = true;
 
         this.prePosition = cc.v2();
         this.preStep = cc.v2();
@@ -50,7 +52,8 @@ cc.Class({
             case cc.macro.KEY.up:
                 if (!this.jumping) {
                     this.jumping = true;
-                    this.speed.y = this.jumpSpeed;    
+                    this.speed.y = this.jumpSpeed > this.maxSpeed.y ? this.maxSpeed.y : this.jumpSpeed;    
+                    this._lastSpeedY = this.jumpSpeed > this.maxSpeed.y ? this.maxSpeed.y : this.jumpSpeed;    
                 }
                 break;
         }
@@ -118,6 +121,7 @@ cc.Class({
             }
             
             this.speed.y = 0;
+            this._lastSpeedY = 0;
             other.touchingY = true;
         }    
         
@@ -160,9 +164,9 @@ cc.Class({
             this.jumping = true;
         }
     },
-    
+
     update: function (dt) {
-        if (this.collisionY === 0) {
+        if (this.jumping) {
             this.speed.y += this.gravity * dt;
             if (Math.abs(this.speed.y) > this.maxSpeed.y) {
                 this.speed.y = this.speed.y > 0 ? this.maxSpeed.y : -this.maxSpeed.y;
@@ -197,6 +201,13 @@ cc.Class({
         this.preStep.y = this.speed.y * dt;
         
         this.node.x += this.speed.x * dt;
-        this.node.y += this.speed.y * dt;
+        if (this._lastSpeedY === 0 || this.speed.y === 0 || this._lastSpeedY / Math.abs(this._lastSpeedY) === this.speed.y / Math.abs(this.speed.y)) {
+            this.node.y += (this._lastSpeedY + this.speed.y) * dt / 2;
+        }
+        else {
+            this.node.y +=  - this._lastSpeedY / this.gravity / 2 * this._lastSpeedY + this.speed.y / this.gravity / 2 * this.speed.y; 
+        } 
+
+        this._lastSpeedY = this.speed.y;
     },
 });

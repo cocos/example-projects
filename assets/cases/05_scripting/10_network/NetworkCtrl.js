@@ -103,10 +103,11 @@ cc.Class({
         var websocketLabel = this.websocket;
         var respLabel = this.websocketResp;
         // We should pass the cacert to libwebsockets used in native platform, otherwise the wss connection would be closed.
-        this._wsiSendBinary = new WebSocket("wss://echo.websocket.org", [], this.wssCacert.nativeUrl);
+        this._wsiSendBinary = new WebSocket("wss://echo.websocket.org", [], this.wssCacert.url);
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
             websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");
+            respLabel.string = "Opened!";
         };
 
         this._wsiSendBinary.onmessage = function(evt) {
@@ -133,6 +134,7 @@ cc.Class({
 
         this._wsiSendBinary.onerror = function(evt) {
             websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.7");
+            respLabel.string = "Error!";
         };
 
         this._wsiSendBinary.onclose = function(evt) {
@@ -140,6 +142,7 @@ cc.Class({
             // After close, it's no longer possible to use it again, 
             // if you want to send another request, you need to create a new websocket instance
             self._wsiSendBinary = null;
+            respLabel.string = "Close!";
         };
         
         this.scheduleOnce(this.sendWebSocketBinary, 1);
@@ -189,6 +192,7 @@ cc.Class({
 
         var msg = this.tag + " disconnected!";
         this.socketIO.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.12") + msg;
+        this.socketIOResp.string = msg;
     },
     
     reconnecting: function () {
@@ -254,7 +258,12 @@ cc.Class({
             xhr["on" + eventname] = function () {
                 eventLabel.string = eventLabelOrigin + "\nEvent : " + eventname;
                 if (eventname === 'timeout') {
-                    label.string = '(timeout)';
+                    label.string += '(timeout)';
+                }
+                else if (eventname === 'loadend') {
+                    if (eventname !== '(timeout)') {
+                        label.string += '...loadend!';
+                    }
                 }
             };
         });
@@ -263,6 +272,21 @@ cc.Class({
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status >= 200) {
                 label.string = handler(xhr.responseText);
+            }
+            else if (xhr.status === 404) {
+                label.string = "404 page not found!"
+            }
+            else if (xhr.readyState === 3) {
+                label.string = "Request dealing!";
+            }
+            else if (xhr.readyState === 2) {
+                label.string = "Request received!";
+            }
+            else if (xhr.readyState === 1) {
+                label.string = "Server connection established! Request hasn't been received";
+            }
+            else if (xhr.readyState === 0) {
+                label.string = "Request hasn't been initiated!";
             }
         };
     },
