@@ -36,9 +36,9 @@ export class triggertesting extends cc.Component {
             this._exitType = 'onTriggerExit';
         }
 
-        let trigger = this.getComponent(cc.ColliderComponent);
+        let trigger = this.getComponent(cc.Collider3D);
         if (!trigger) {
-            trigger = this.getComponent(cc.PhysicsColliderComponent);
+            trigger = this.getComponent(cc.PhysicsCollider3D);
         }
         if (trigger) {
             trigger.on(this._enterType, this.onTrigger, this);

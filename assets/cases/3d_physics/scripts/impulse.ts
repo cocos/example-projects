@@ -17,14 +17,14 @@ export default class Impulse extends cc.Component {
     }
 
     onWorldImpulse () {
-        let rigidbody = this.getComponent(cc.RigidBodyComponent);
+        let rigidbody = this.getComponent(cc.RigidBody3D);
         if (rigidbody) {
             rigidbody.applyImpulse(this.impulse, this.worldPoint);
         }
     }
 
     onLocalImpulse () {
-        let rigidbody = this.getComponent(cc.RigidBodyComponent);
+        let rigidbody = this.getComponent(cc.RigidBody3D);
         if (rigidbody) {
             rigidbody.applyLocalImpulse(this.impulse, this.localPoint);
         }

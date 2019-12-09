@@ -9,7 +9,7 @@ export default class Velocity extends cc.Component {
     }
 
     rotate () {
-        let rigidBody = this.node.getComponent(cc.RigidBodyComponent);
+        let rigidBody = this.node.getComponent(cc.RigidBody3D);
         if (rigidBody) {
             if (rigidBody.isSleeping) {
                 rigidBody.wakeUp();
@@ -22,7 +22,7 @@ export default class Velocity extends cc.Component {
     }
 
     jump () {
-        let rigidBody = this.node.getComponent(cc.RigidBodyComponent);
+        let rigidBody = this.node.getComponent(cc.RigidBody3D);
         if (rigidBody) {
             if (rigidBody.isSleeping) {
                 rigidBody.wakeUp();

@@ -40,7 +40,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -100,6 +100,9 @@
       },
       {
         "__id__": 46
+      },
+      {
+        "__id__": 47
       }
     ],
     "_prefab": null,
@@ -123,7 +126,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         480,
         320,
@@ -185,7 +188,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         12.034000396728516,
@@ -245,7 +248,8 @@
       "height": 1
     },
     "_renderStages": 1,
-    "_id": "a5c01ffvFJN4EZAPx9ecvx"
+    "_id": "a5c01ffvFJN4EZAPx9ecvx",
+    "_alignWithScreen": false
   },
   {
     "__type__": "cc.Node",
@@ -282,7 +286,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -382,7 +386,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         17.784000396728516,
         231.63699340820312,
@@ -501,7 +505,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -590,7 +594,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         275.3219909667969,
         703.885009765625,
@@ -682,7 +686,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -789,7 +793,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -857,7 +861,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -907,7 +911,7 @@
     "_id": "9dUMKJtYhKkppaiaTbdOtL"
   },
   {
-    "__type__": "cc.PhysicsBoxColliderComponent",
+    "__type__": "cc.PhysicsBoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -933,7 +937,7 @@
     "_id": "bdTdvuksNGVbsq6g78BFA9"
   },
   {
-    "__type__": "cc.RigidBodyComponent",
+    "__type__": "cc.RigidBody3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -998,7 +1002,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         -4.492000102996826,
         0,
@@ -1048,7 +1052,7 @@
     "_id": "a1efUNYedEFrQzMBYjs2BF"
   },
   {
-    "__type__": "cc.PhysicsBoxColliderComponent",
+    "__type__": "cc.PhysicsBoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1109,7 +1113,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         4.447999954223633,
         0,
@@ -1159,7 +1163,7 @@
     "_id": "e33tGgtMJMZZn4GjHKI+ne"
   },
   {
-    "__type__": "cc.PhysicsBoxColliderComponent",
+    "__type__": "cc.PhysicsBoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1220,7 +1224,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -1270,7 +1274,7 @@
     "_id": "71p2ZzdcxDTZMXN+aHEiH4"
   },
   {
-    "__type__": "cc.PhysicsBoxColliderComponent",
+    "__type__": "cc.PhysicsBoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1331,7 +1335,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         -0.0020000000949949026,
         0,
@@ -1381,7 +1385,7 @@
     "_id": "baeFXFtUxAkp7AL4gcnHI0"
   },
   {
-    "__type__": "cc.PhysicsBoxColliderComponent",
+    "__type__": "cc.PhysicsBoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1448,7 +1452,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         3.1519999504089355,
@@ -1498,7 +1502,7 @@
     "_id": "40cXMOGBxKoYv1wYTH81Km"
   },
   {
-    "__type__": "cc.PhysicsBoxColliderComponent",
+    "__type__": "cc.PhysicsBoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1541,7 +1545,7 @@
     "_id": "65xbAu8XVCU4wXguoBxxWX"
   },
   {
-    "__type__": "cc.RigidBodyComponent",
+    "__type__": "cc.RigidBody3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1607,7 +1611,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -1678,7 +1682,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         6.140999794006348,
@@ -1728,7 +1732,7 @@
     "_id": "baglvTc5dBgJ+3L03X7An3"
   },
   {
-    "__type__": "cc.RigidBodyComponent",
+    "__type__": "cc.RigidBody3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1756,7 +1760,7 @@
     "_id": "c6TJtXEA9GR4jRUdB7qRpm"
   },
   {
-    "__type__": "cc.PhysicsSphereColliderComponent",
+    "__type__": "cc.PhysicsSphereCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1838,5 +1842,31 @@
     },
     "_enabled": true,
     "_id": "05ka5oIPBJ9r7JiZse62LS"
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "alignMode": 1,
+    "_target": null,
+    "_alignFlags": 45,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0
   }
 ]
