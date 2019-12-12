@@ -91,18 +91,21 @@
       },
       {
         "__id__": 38
+      },
+      {
+        "__id__": 45
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 45
+        "__id__": 50
       },
       {
-        "__id__": 46
+        "__id__": 51
       },
       {
-        "__id__": 47
+        "__id__": 52
       }
     ],
     "_prefab": null,
@@ -193,10 +196,10 @@
         0,
         12.034000396728516,
         12.119000434875488,
-        -0.3810410797595978,
-        0.0010605257702991366,
-        0.002579673659056425,
-        0.9245538711547852,
+        -0.3810410933607388,
+        0.0010605257815467705,
+        0.0025796737578173525,
+        0.9245538955295263,
         1,
         1,
         1
@@ -248,8 +251,8 @@
       "height": 1
     },
     "_renderStages": 1,
-    "_id": "a5c01ffvFJN4EZAPx9ecvx",
-    "_alignWithScreen": false
+    "_alignWithScreen": false,
+    "_id": "a5c01ffvFJN4EZAPx9ecvx"
   },
   {
     "__type__": "cc.Node",
@@ -290,7 +293,7 @@
       "array": [
         0,
         0,
-        548.194091796875,
+        500.56268338740557,
         0,
         0,
         0,
@@ -346,6 +349,7 @@
       "height": 1
     },
     "_renderStages": 1,
+    "_alignWithScreen": true,
     "_id": "0d2M+kHqRNCrLOhI/Aufka"
   },
   {
@@ -599,10 +603,10 @@
         275.3219909667969,
         703.885009765625,
         866.10498046875,
-        -0.3151744306087494,
-        0.16050051152706146,
-        0.04325924068689346,
-        0.934362530708313,
+        -0.3151744235789017,
+        0.16050050689271073,
+        0.04325924012423686,
+        0.934362514312707,
         1,
         1,
         1
@@ -911,7 +915,7 @@
     "_id": "9dUMKJtYhKkppaiaTbdOtL"
   },
   {
-    "__type__": "cc.PhysicsBoxCollider3D",
+    "__type__": "cc.BoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1007,10 +1011,10 @@
         -4.492000102996826,
         0,
         0,
-        8.146033536604591e-8,
+        8.146033536604618e-8,
         0,
         0,
-        1,
+        0.9999999999999967,
         1,
         3.4700000286102295,
         9.880000114440918
@@ -1052,7 +1056,7 @@
     "_id": "a1efUNYedEFrQzMBYjs2BF"
   },
   {
-    "__type__": "cc.PhysicsBoxCollider3D",
+    "__type__": "cc.BoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1118,10 +1122,10 @@
         4.447999954223633,
         0,
         0,
-        8.146033536604591e-8,
+        8.146033536604618e-8,
         0,
         0,
-        1,
+        0.9999999999999967,
         1,
         3.4700000286102295,
         9.880000114440918
@@ -1163,7 +1167,7 @@
     "_id": "e33tGgtMJMZZn4GjHKI+ne"
   },
   {
-    "__type__": "cc.PhysicsBoxCollider3D",
+    "__type__": "cc.BoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1230,9 +1234,9 @@
         0,
         -4.508999824523926,
         0,
-        0.7071067690849304,
+        0.7071067811865475,
         0,
-        0.7071067690849304,
+        0.7071067811865476,
         1,
         3.4700000286102295,
         9.880000114440918
@@ -1274,7 +1278,7 @@
     "_id": "71p2ZzdcxDTZMXN+aHEiH4"
   },
   {
-    "__type__": "cc.PhysicsBoxCollider3D",
+    "__type__": "cc.BoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1341,9 +1345,9 @@
         0,
         4.514999866485596,
         0,
-        0.7069154381752014,
+        0.7069154645211404,
         0,
-        0.7072980403900146,
+        0.7072980461028154,
         1,
         3.4700000286102295,
         9.880000114440918
@@ -1385,7 +1389,7 @@
     "_id": "baeFXFtUxAkp7AL4gcnHI0"
   },
   {
-    "__type__": "cc.PhysicsBoxCollider3D",
+    "__type__": "cc.BoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1459,8 +1463,8 @@
         0,
         0,
         0,
-        -0.0536256842315197,
-        0.9985610842704773,
+        -0.0536256858647584,
+        0.9985611077022448,
         1,
         1,
         1
@@ -1502,7 +1506,7 @@
     "_id": "40cXMOGBxKoYv1wYTH81Km"
   },
   {
-    "__type__": "cc.PhysicsBoxCollider3D",
+    "__type__": "cc.BoxCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1687,10 +1691,10 @@
         0,
         6.140999794006348,
         0,
-        8.146033536604591e-8,
+        8.146033536604618e-8,
         0,
         0,
-        1,
+        0.9999999999999967,
         1,
         1,
         1
@@ -1760,7 +1764,7 @@
     "_id": "c6TJtXEA9GR4jRUdB7qRpm"
   },
   {
-    "__type__": "cc.PhysicsSphereCollider3D",
+    "__type__": "cc.SphereCollider3D",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1817,6 +1821,226 @@
     "_id": "57Pj1FHClNlLRAigNUIYt1"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "New Sprite(Splash)",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [
+      {
+        "__id__": 46
+      }
+    ],
+    "_active": false,
+    "_components": [
+      {
+        "__id__": 48
+      },
+      {
+        "__id__": 49
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "_groupIndex": 7,
+    "groupIndex": 7,
+    "_id": "7b6X6AkBxOArCSCkoeQF/g"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "New Label",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 45
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 47
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 0,
+      "b": 0,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 797.08,
+      "height": 158.2
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "_groupIndex": 7,
+    "groupIndex": 7,
+    "_id": "75FGtOOodOA7jRof7x64t5"
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 46
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_useOriginalSize": false,
+    "_string": "This scene need physics engine \nwhich is NOT builtin.",
+    "_N$string": "This scene need physics engine \nwhich is NOT builtin.",
+    "_fontSize": 60,
+    "_lineHeight": 70,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_batchAsBitmap": false,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0,
+    "_N$cacheMode": 0,
+    "_id": "afhrcrmOFBkq2DzGStM7Nx"
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 45
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_spriteFrame": {
+      "__uuid__": "a23235d1-15db-4b95-8439-a2e005bfff91"
+    },
+    "_type": 0,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_atlas": null,
+    "_id": "38h64IDYRFn45OCNwD910y"
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 45
+    },
+    "_enabled": true,
+    "alignMode": 1,
+    "_target": null,
+    "_alignFlags": 45,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 100,
+    "_originalHeight": 100,
+    "_id": "d2pUhyhFJIkadgC4dbOZ/5"
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -1841,6 +2065,10 @@
       "__id__": 2
     },
     "_enabled": true,
+    "needPhysics": true,
+    "needPhysicsWord": {
+      "__id__": 45
+    },
     "_id": "05ka5oIPBJ9r7JiZse62LS"
   },
   {
@@ -1867,6 +2095,7 @@
     "_isAbsHorizontalCenter": true,
     "_isAbsVerticalCenter": true,
     "_originalWidth": 0,
-    "_originalHeight": 0
+    "_originalHeight": 0,
+    "_id": "e9y3WwzhNDBKNLMZBuiaWB"
   }
 ]

@@ -29,17 +29,13 @@ export class triggertesting extends cc.Component {
     }
 
     start () {
-
-        if (this.isTrigger) {
+        if (this.isTrigger || CC_PHYSICS_BUILTIN) {
             this._enterType = 'onTriggerEnter';
             this._stayType = 'onTriggerStay';
             this._exitType = 'onTriggerExit';
         }
 
         let trigger = this.getComponent(cc.Collider3D);
-        if (!trigger) {
-            trigger = this.getComponent(cc.PhysicsCollider3D);
-        }
         if (trigger) {
             trigger.on(this._enterType, this.onTrigger, this);
             trigger.on(this._stayType, this.onTrigger, this);

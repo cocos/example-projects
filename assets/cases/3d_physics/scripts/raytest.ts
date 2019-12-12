@@ -14,9 +14,6 @@ export default class RayTest extends cc.Component {
     @property({ type: cc.Material })
     rayMaterial: cc.Material = null;
 
-    @property
-    useCollider: boolean = true;
-
     @property({type:cc.Label})
     rayState:cc.Label = null;
 
@@ -25,12 +22,7 @@ export default class RayTest extends cc.Component {
     private _rayTool: any = null;
 
     start () {
-        if (this.useCollider) {
-            this._rayTool = cc.director.getCollision3DManager();
-        } else {
-            this._rayTool = cc.director.getPhysics3DManager();
-        }
-
+        this._rayTool = cc.director.getPhysics3DManager();
         let canvas = cc.find('Canvas');
         canvas.on(cc.Node.EventType.TOUCH_START, this.onTouchStart, this);
     }
