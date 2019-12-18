@@ -80,18 +80,28 @@ static RootViewController* rootViewController = nullptr;
     [window makeKeyAndVisible];
 
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self
+        selector:@selector(statusBarOrientationChanged:)
+        name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
     //run the cocos2d-x game scene
     app->start();
 
     return YES;
 }
 
+- (void)statusBarOrientationChanged:(NSNotification *)notification {
+    CGRect bounds = [UIScreen mainScreen].bounds;
+    float scale = [[UIScreen mainScreen] scale];
+    float width = bounds.size.width * scale;
+    float height = bounds.size.height * scale;
+    Application::getInstance()->updateViewSize(width, height);
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
+    app->onPause();
     [[SDKWrapper getInstance] applicationWillResignActive:application];
 }
 
@@ -99,6 +109,7 @@ static RootViewController* rootViewController = nullptr;
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    app->onResume();
     [[SDKWrapper getInstance] applicationDidBecomeActive:application];
 }
 
@@ -108,7 +119,6 @@ static RootViewController* rootViewController = nullptr;
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
     [[SDKWrapper getInstance] applicationDidEnterBackground:application];
-    app->applicationDidEnterBackground();
 
 }
 
@@ -117,7 +127,6 @@ static RootViewController* rootViewController = nullptr;
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
     [[SDKWrapper getInstance] applicationWillEnterForeground:application];
-    app->applicationWillEnterForeground();
 
 }
 
