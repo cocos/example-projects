@@ -55,7 +55,7 @@ CCProgram fs %{
   uniform sampler2D texture;
   uniform TIME {
     float time;
-  }
+  };
 
   float waterHighlight(vec2 p, float time, float foaminess)
   {
