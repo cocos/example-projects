@@ -1,3 +1,4 @@
+var navigator = window.navigator; // HACK: fix bug on xiaomi
 !function(e){
   var _global = typeof window === 'undefined' ? global : window;
   _global.io = e();
