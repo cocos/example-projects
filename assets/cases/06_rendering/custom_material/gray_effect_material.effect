@@ -54,7 +54,7 @@ varying mediump vec2 v_uv0;
 
 uniform Time {
   float time;
-}
+};
 
 void main () {
   vec4 color = texture2D(texture, v_uv0);
