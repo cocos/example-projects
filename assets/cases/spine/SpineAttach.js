@@ -36,15 +36,15 @@ cc.Class({
             targetNode.color = cc.color(0, 0, 255);
             boneNode.addChild(targetNode);
         }
-        console.log(attachUtil._attachedNodeArray);
-        console.log(attachUtil._boneIndexToNode);
+        // console.log(attachUtil._attachedNodeArray);
+        // console.log(attachUtil._boneIndexToNode);
     },
 
     destroyAllNodes () {
         let attachUtil = this.skeleton.attachUtil;
         attachUtil.destroyAllAttachedNodes();
-        console.log(attachUtil._attachedNodeArray);
-        console.log(attachUtil._boneIndexToNode);
+        // console.log(attachUtil._attachedNodeArray);
+        // console.log(attachUtil._boneIndexToNode);
     },
 
     destroyUnusual () {
@@ -54,8 +54,8 @@ cc.Class({
         if (boneNode) {
             boneNode.destroy();
         }
-        console.log(attachUtil._attachedNodeArray);
-        console.log(attachUtil._boneIndexToNode);
+        // console.log(attachUtil._attachedNodeArray);
+        // console.log(attachUtil._boneIndexToNode);
     },
 
     generateSomeNodes () {
@@ -67,15 +67,15 @@ cc.Class({
             targetNode.color = cc.color(0, 255, 0);
             boneNode.addChild(targetNode);
         }
-        console.log(attachUtil._attachedNodeArray);
-        console.log(attachUtil._boneIndexToNode);
+        // console.log(attachUtil._attachedNodeArray);
+        // console.log(attachUtil._boneIndexToNode);
     },
 
     destroySomeNodes () {
         let attachUtil = this.skeleton.attachUtil;
         attachUtil.destroyAttachedNodes(this.greenBoneName);
-        console.log(attachUtil._attachedNodeArray);
-        console.log(attachUtil._boneIndexToNode);
+        // console.log(attachUtil._attachedNodeArray);
+        // console.log(attachUtil._boneIndexToNode);
     },
 
     changeMode () {
