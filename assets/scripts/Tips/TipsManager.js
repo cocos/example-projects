@@ -49,6 +49,7 @@ module.exports = {
                 return  isWechat;
             case 'capture_to_web':
             case 'ShadowLabel':
+            case 'videoPlayer-stayOnBottom':
                 return isBrowser;
 
             // Only support the RENDER_TYPE_WEBGL
@@ -71,9 +72,6 @@ module.exports = {
                 return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isWechat && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
             case 'mesh':
                 return !isVivo && !isOPPO;
-
-            case 'videoPlayer-stayOnBottom':
-                return (isMobile || isBrowser);
         }
     },
 
