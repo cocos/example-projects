@@ -10,7 +10,7 @@ export default class EnablePhysics3D extends cc.Component {
     needPhysicsWord:cc.Node = null;
 
     onLoad () {
-        cc.director.getPhysics3DManager().enable = true;
+        cc.director.getPhysics3DManager().enabled = true;
         let showWarn = this.needPhysics && CC_PHYSICS_BUILTIN;
         if (this.needPhysicsWord) {
             this.needPhysicsWord.active = showWarn;
