@@ -319,4 +319,14 @@ module.exports = {
     // LoadRes asset callback textkey
     "sprite_loadRes_asset_success": "资源加载成功",
     "sprite_loadRes_asset_failed": "资源加载失败",
+
+   // Particle3D
+   "cases/particle3d.color": "左一：一种单一颜色\n左二：一种渐变色\n左三：几种单一颜色变化\n左四：两种渐变色\n左五：随机颜色",
+   "cases/particle3d.force.transform": "平移",
+   "cases/particle3d.force.rotate": "旋转",
+   "cases/particle3d.main":"1.左一左二为对比，效果相同\n2.左三左五粒子放大两倍，粒子与粒子的中心间隔放大两倍\n3.左四左六粒子放大两倍，粒子与粒子的中心间隔没变\n4.左七每五秒产生两个粒子，两个粒子产生的时间间隔为0.5秒\n5.左八可在场景编辑器查看效果，每拖动一单位距离产生一个粒子",
+   "cases/particle3d.renderer":"左一：粒子始终面朝摄像机\n左二：粒子始终保持水平\n左三：粒子始终保持竖直并朝向摄像机方向\n左四：粒子始终保持竖直，朝向摄像机方向，但被拉伸\n左五：粒子为一个模型",
+   "cases/particle3d.rotation":"粒子按照设定曲线旋转",
+   "cases/particle3d.shape":"          粒子发射器形状    粒子产生位置\n左一          正方体                 内部\n左二          正方体                 边框\n左三          正方体                 表面\n左四              圆             沿圆内的一圈\n左五              圆             沿圆周循环产生粒子\n                                      循环方向相同\n左六              圆             沿圆周循环产生粒子\n                                      循环方向相反\n左七            圆锥                   内部\n左八            圆锥                锥底的圆\n左九            圆锥                    表面\n左十            圆锥               锥底的圆周\n左十一        圆锥       锥底圆周循环产生粒子\n                                 粒子斜向上移动\n左十二        球体                     内部\n左十三        球体                     表面\n左十四      半球体                    内部\n左十五      半球体                    表面",
+   "cases/particle3d.size":"粒子大小按照设定曲线变化",
 };

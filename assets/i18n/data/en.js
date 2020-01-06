@@ -320,4 +320,14 @@ module.exports = {
     // LoadRes asset callback textkey
     "sprite_loadRes_asset_success": "Load Success",
     "sprite_loadRes_asset_failed": "Load Failed",
+
+    // Particle3D
+    "cases/particle3d.color": "Left one: a single color \n Left two: a gradient color \n Left three: several single color variations \n Left four: two gradient colors \n Left five: random colors",
+    "cases/particle3d.force.transform": "Transform",
+    "cases/particle3d.force.rotate": "Rotate",
+    "cases/particle3d.main":"1. Left one, left two are contrasts, the effect is the same \n2. Left three, left five particles are doubled, and the center distance between particles is doubled.\n3.Left four left six particles are doubled, the center distance between the particles is not changed\n4. The left seventh generates two particles every five seconds, and the time interval between the two particles is 0.5 seconds \n5. The left eight can be viewed in the scene editor. Each particle is dragged to generate a particle.",
+    "cases/particle3d.renderer":"Left one: Particles always face the camera. \nLeft Two: Particles always remain horizontal. \nLeft three: Particles always remain vertical and face the camera.\nLeft four: Particles always remain vertical and face the camera, but are stretched.\nLeft five: Particle is a model",
+    "cases/particle3d.rotation":"Particles rotate according to the set curve",
+    "cases/particle3d.shape":"          Particle emitter shape    Particle generation position\nLeft one          Cube                 Internal\nLeft two          Cube                 Frame\nLeft three          Cube                 Surface\nLeft four              Circle             Along a circle\nLeft five              Circle             Generate particles in a circle\n                                      Cycle direction is the same\nLeft six              Circle             Generate particles in a circle\n                                      Cycles in opposite directions\nLeft seven            Cone                   Internal\nLeft eight            Cone                Cone bottom circle\nLeft nine            Cone                    Surface\nLeft ten            Cone               Cone bottom circumference\nLeft eleven       Cone       Cone-bottom circular circulation generates particles\n                                 Particles move obliquely upward\nLeft twelve        Sphere                     Internal\nLeft thirteen        Sphere                     Surface\nLeft fourteen      Hemisphere                    Internal\nLeft fifteen      Hemisphere                    Surface",
+    "cases/particle3d.size":"The particle size changes according to the set curve.",
 };
