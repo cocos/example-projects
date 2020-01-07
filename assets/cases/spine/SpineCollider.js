@@ -6,9 +6,17 @@ cc.Class({
     },
 
     start () {
-        cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = true;
+        this.collisionManager = cc.director.getCollisionManager();
+        this.collisionManager.enabled = true;
+        this.collisionManager.enabledDebugDraw = false;
+        cc.director.once(cc.Director.EVENT_AFTER_DRAW, function () {
+            this.collisionManager.enabledDebugDraw = true;
+        }.bind(this));
         this.stayCount = 0;
+    },
+
+    onDestroy () {
+        this.collisionManager.enabledDebugDraw = false;
     },
 
     onCollisionEnter (other, self) {
