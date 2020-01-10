@@ -34,7 +34,7 @@ cc.Class({
             Animation: "test_assets/sprite-anim",
             Scene: "test_assets/scene",
             Spine: "spineboy/spineboy",
-            CORS: "http://tools.itharbors.com/res/logo.png",
+            CORS: "https://download.cocos.com/test-case/logo.png",
         };
         // registered event
         this._onRegisteredEvent();
