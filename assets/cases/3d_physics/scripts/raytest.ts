@@ -18,7 +18,7 @@ export default class RayTest extends cc.Component {
     rayState:cc.Label = null;
 
     private _raycastType: ERaycastType = ERaycastType.ALL;
-    private _maxDistance: number = 1000;
+    private _maxDistance: number = 100000;
     private _rayTool: any = null;
 
     start () {

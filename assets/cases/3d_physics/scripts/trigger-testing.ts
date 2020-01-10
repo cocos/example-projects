@@ -16,9 +16,9 @@ export class triggertesting extends cc.Component {
 
     private _colliderCount:number = 0;
 
-    private _enterType = 'onCollisionEnter';
-    private _stayType = 'onCollisionStay';
-    private _exitType = 'onCollisionExit';
+    private _enterType = 'collision-enter';
+    private _stayType = 'collision-stay';
+    private _exitType = 'collision-exit';
 
     @property
     isTrigger:boolean = false;
@@ -30,9 +30,9 @@ export class triggertesting extends cc.Component {
 
     start () {
         if (this.isTrigger || CC_PHYSICS_BUILTIN) {
-            this._enterType = 'onTriggerEnter';
-            this._stayType = 'onTriggerStay';
-            this._exitType = 'onTriggerExit';
+            this._enterType = 'trigger-enter';
+            this._stayType = 'trigger-stay';
+            this._exitType = 'trigger-exit';
         }
 
         let trigger = this.getComponent(cc.Collider3D);
