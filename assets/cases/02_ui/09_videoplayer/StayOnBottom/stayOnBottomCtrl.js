@@ -30,7 +30,7 @@ cc.Class({
     },
 
     start () {
-        this._id = 0;
+        this.__id = 0;
         this._animList = [];
 
         let node = cc.find('Canvas/Play');
@@ -49,8 +49,8 @@ cc.Class({
     // 创建弹幕
     onCreateBarrage () {
         let node = cc.instantiate(this.tempBarrage);
-        ++this._id;
-        node.___id = this._id;
+        ++this.__id;
+        node.___id = this.__id;
         node.y = randomNum(300, -120);
         node.parent = this.node;
         let r = randomNum(0, 255);
@@ -65,7 +65,7 @@ cc.Class({
             delete this._animList[node.___id];
             node.destroy();
         });
-        this._animList[this._id] = animComp;
+        this._animList[this.__id] = animComp;
     },
 
     // 清空弹幕
