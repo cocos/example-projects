@@ -87,25 +87,25 @@
         "__id__": 626
       },
       {
-        "__id__": 787
+        "__id__": 780
       },
       {
-        "__id__": 943
+        "__id__": 936
       },
       {
-        "__id__": 1103
+        "__id__": 1096
       },
       {
-        "__id__": 1260
+        "__id__": 1253
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 1275
+        "__id__": 1268
       },
       {
-        "__id__": 1276
+        "__id__": 1269
       }
     ],
     "_prefab": null,
@@ -9745,7 +9745,7 @@
     "startColor": {
       "__id__": 639
     },
-    "scaleSpace": 1,
+    "scaleSpace": 0,
     "startSize": {
       "__id__": 643
     },
@@ -9764,37 +9764,33 @@
     "rateOverDistance": {
       "__id__": 663
     },
-    "bursts": [
-      {
-        "__id__": 667
-      }
-    ],
+    "bursts": [],
     "shapeModule": {
-      "__id__": 674
+      "__id__": 667
     },
     "colorOverLifetimeModule": {
-      "__id__": 679
+      "__id__": 672
     },
     "sizeOvertimeModule": {
-      "__id__": 684
+      "__id__": 677
     },
     "velocityOvertimeModule": {
-      "__id__": 701
+      "__id__": 694
     },
     "forceOvertimeModule": {
-      "__id__": 718
+      "__id__": 711
     },
     "limitVelocityOvertimeModule": {
-      "__id__": 731
+      "__id__": 724
     },
     "rotationOvertimeModule": {
-      "__id__": 748
+      "__id__": 741
     },
     "textureAnimationModule": {
-      "__id__": 761
+      "__id__": 754
     },
     "trailModule": {
-      "__id__": 770
+      "__id__": 763
     },
     "_renderMode": 0,
     "_velocityScale": 1,
@@ -10324,87 +10320,6 @@
     "postWrapMode": 2
   },
   {
-    "__type__": "cc.Burst",
-    "_time": 0,
-    "minCount": 30,
-    "maxCount": 30,
-    "_repeatCount": 1,
-    "repeatInterval": 1,
-    "count": {
-      "__id__": 668
-    }
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 669
-    },
-    "curveMin": {
-      "__id__": 672
-    },
-    "curveMax": {
-      "__id__": 673
-    },
-    "constant": 1,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 670
-      },
-      {
-        "__id__": 671
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.Keyframe",
-    "time": 0,
-    "value": 1,
-    "inTangent": 0,
-    "outTangent": 0
-  },
-  {
-    "__type__": "cc.Keyframe",
-    "time": 1,
-    "value": 1,
-    "inTangent": 0,
-    "outTangent": 0
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 670
-      },
-      {
-        "__id__": 671
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 670
-      },
-      {
-        "__id__": 671
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
     "__type__": "cc.ShapeModule",
     "enable": false,
     "_shapeType": 2,
@@ -10416,7 +10331,7 @@
     "arcMode": 0,
     "arcSpread": 0,
     "arcSpeed": {
-      "__id__": 675
+      "__id__": 668
     },
     "length": 5,
     "boxThickness": {
@@ -10452,13 +10367,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 676
+      "__id__": 669
     },
     "curveMin": {
-      "__id__": 677
+      "__id__": 670
     },
     "curveMax": {
-      "__id__": 678
+      "__id__": 671
     },
     "constant": 0,
     "constantMin": 0,
@@ -10508,7 +10423,7 @@
     "__type__": "cc.ColorOvertimeModule",
     "enable": false,
     "color": {
-      "__id__": 680
+      "__id__": 673
     }
   },
   {
@@ -10543,13 +10458,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 681
+      "__id__": 674
     },
     "gradientMin": {
-      "__id__": 682
+      "__id__": 675
     },
     "gradientMax": {
-      "__id__": 683
+      "__id__": 676
     }
   },
   {
@@ -10575,30 +10490,142 @@
     "enable": false,
     "separateAxes": false,
     "size": {
-      "__id__": 685
+      "__id__": 678
     },
     "x": {
-      "__id__": 689
+      "__id__": 682
     },
     "y": {
-      "__id__": 693
+      "__id__": 686
     },
     "z": {
-      "__id__": 697
+      "__id__": 690
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 686
+      "__id__": 679
     },
     "curveMin": {
+      "__id__": 680
+    },
+    "curveMax": {
+      "__id__": 681
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 683
+    },
+    "curveMin": {
+      "__id__": 684
+    },
+    "curveMax": {
+      "__id__": 685
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 687
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 688
     },
+    "curveMax": {
+      "__id__": 689
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -10647,125 +10674,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 690
-    },
-    "curveMin": {
       "__id__": 691
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 692
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 694
-    },
-    "curveMin": {
-      "__id__": 695
-    },
     "curveMax": {
-      "__id__": 696
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 698
-    },
-    "curveMin": {
-      "__id__": 699
-    },
-    "curveMax": {
-      "__id__": 700
+      "__id__": 693
     },
     "constant": 0,
     "constantMin": 0,
@@ -10816,30 +10731,142 @@
     "enable": false,
     "space": 1,
     "x": {
-      "__id__": 702
+      "__id__": 695
     },
     "y": {
-      "__id__": 706
+      "__id__": 699
     },
     "z": {
-      "__id__": 710
+      "__id__": 703
     },
     "speedModifier": {
-      "__id__": 714
+      "__id__": 707
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 703
+      "__id__": 696
     },
     "curveMin": {
+      "__id__": 697
+    },
+    "curveMax": {
+      "__id__": 698
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 700
+    },
+    "curveMin": {
+      "__id__": 701
+    },
+    "curveMax": {
+      "__id__": 702
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 704
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 705
     },
+    "curveMax": {
+      "__id__": 706
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -10888,125 +10915,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 707
-    },
-    "curveMin": {
       "__id__": 708
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 709
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 711
-    },
-    "curveMin": {
-      "__id__": 712
-    },
     "curveMax": {
-      "__id__": 713
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 715
-    },
-    "curveMin": {
-      "__id__": 716
-    },
-    "curveMax": {
-      "__id__": 717
+      "__id__": 710
     },
     "constant": 1,
     "constantMin": 0,
@@ -11057,138 +10972,138 @@
     "enable": false,
     "space": 1,
     "x": {
-      "__id__": 719
+      "__id__": 712
     },
     "y": {
-      "__id__": 723
+      "__id__": 716
     },
     "z": {
-      "__id__": 727
+      "__id__": 720
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 720
+      "__id__": 713
     },
     "curveMin": {
+      "__id__": 714
+    },
+    "curveMax": {
+      "__id__": 715
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 717
+    },
+    "curveMin": {
+      "__id__": 718
+    },
+    "curveMax": {
+      "__id__": 719
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 721
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 722
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 724
-    },
-    "curveMin": {
-      "__id__": 725
-    },
     "curveMax": {
-      "__id__": 726
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 728
-    },
-    "curveMin": {
-      "__id__": 729
-    },
-    "curveMax": {
-      "__id__": 730
+      "__id__": 723
     },
     "constant": 0,
     "constantMin": 0,
@@ -11240,16 +11155,16 @@
     "space": 1,
     "separateAxes": false,
     "limit": {
-      "__id__": 732
+      "__id__": 725
     },
     "limitX": {
-      "__id__": 736
+      "__id__": 729
     },
     "limitY": {
-      "__id__": 740
+      "__id__": 733
     },
     "limitZ": {
-      "__id__": 744
+      "__id__": 737
     },
     "dampen": 3
   },
@@ -11257,125 +11172,125 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 733
+      "__id__": 726
     },
     "curveMin": {
+      "__id__": 727
+    },
+    "curveMax": {
+      "__id__": 728
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 730
+    },
+    "curveMin": {
+      "__id__": 731
+    },
+    "curveMax": {
+      "__id__": 732
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 734
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 735
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 737
-    },
-    "curveMin": {
-      "__id__": 738
-    },
     "curveMax": {
-      "__id__": 739
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 741
-    },
-    "curveMin": {
-      "__id__": 742
-    },
-    "curveMax": {
-      "__id__": 743
+      "__id__": 736
     },
     "constant": 0,
     "constantMin": 0,
@@ -11425,13 +11340,13 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 745
+      "__id__": 738
     },
     "curveMin": {
-      "__id__": 746
+      "__id__": 739
     },
     "curveMax": {
-      "__id__": 747
+      "__id__": 740
     },
     "constant": 0,
     "constantMin": 0,
@@ -11482,138 +11397,138 @@
     "enable": false,
     "_separateAxes": false,
     "x": {
-      "__id__": 749
+      "__id__": 742
     },
     "y": {
-      "__id__": 753
+      "__id__": 746
     },
     "z": {
-      "__id__": 757
+      "__id__": 750
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 750
+      "__id__": 743
     },
     "curveMin": {
+      "__id__": 744
+    },
+    "curveMax": {
+      "__id__": 745
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 747
+    },
+    "curveMin": {
+      "__id__": 748
+    },
+    "curveMax": {
+      "__id__": 749
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 631
+      },
+      {
+        "__id__": 632
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 751
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 752
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 754
-    },
-    "curveMin": {
-      "__id__": 755
-    },
     "curveMax": {
-      "__id__": 756
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 631
-      },
-      {
-        "__id__": 632
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 758
-    },
-    "curveMin": {
-      "__id__": 759
-    },
-    "curveMax": {
-      "__id__": 760
+      "__id__": 753
     },
     "constant": 0,
     "constantMin": 0,
@@ -11669,10 +11584,10 @@
     "randomRow": false,
     "rowIndex": 0,
     "frameOverTime": {
-      "__id__": 762
+      "__id__": 755
     },
     "startFrame": {
-      "__id__": 766
+      "__id__": 759
     },
     "cycleCount": 0
   },
@@ -11680,13 +11595,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 763
+      "__id__": 756
     },
     "curveMin": {
-      "__id__": 764
+      "__id__": 757
     },
     "curveMax": {
-      "__id__": 765
+      "__id__": 758
     },
     "constant": 0,
     "constantMin": 0,
@@ -11736,13 +11651,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 767
+      "__id__": 760
     },
     "curveMin": {
-      "__id__": 768
+      "__id__": 761
     },
     "curveMax": {
-      "__id__": 769
+      "__id__": 762
     },
     "constant": 0,
     "constantMin": 0,
@@ -11793,7 +11708,7 @@
     "_enable": false,
     "mode": 0,
     "lifeTime": {
-      "__id__": 771
+      "__id__": 764
     },
     "_minParticleDistance": 0.1,
     "_space": 0,
@@ -11801,27 +11716,27 @@
     "textureMode": 0,
     "widthFromParticle": true,
     "widthRatio": {
-      "__id__": 775
+      "__id__": 768
     },
     "colorFromParticle": false,
     "colorOverTrail": {
-      "__id__": 779
+      "__id__": 772
     },
     "colorOvertime": {
-      "__id__": 783
+      "__id__": 776
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 772
+      "__id__": 765
     },
     "curveMin": {
-      "__id__": 773
+      "__id__": 766
     },
     "curveMax": {
-      "__id__": 774
+      "__id__": 767
     },
     "constant": 1,
     "constantMin": 0,
@@ -11871,13 +11786,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 776
+      "__id__": 769
     },
     "curveMin": {
-      "__id__": 777
+      "__id__": 770
     },
     "curveMax": {
-      "__id__": 778
+      "__id__": 771
     },
     "constant": 0,
     "constantMin": 0,
@@ -11955,13 +11870,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 780
+      "__id__": 773
     },
     "gradientMin": {
-      "__id__": 781
+      "__id__": 774
     },
     "gradientMax": {
-      "__id__": 782
+      "__id__": 775
     }
   },
   {
@@ -12014,13 +11929,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 784
+      "__id__": 777
     },
     "gradientMin": {
-      "__id__": 785
+      "__id__": 778
     },
     "gradientMax": {
-      "__id__": 786
+      "__id__": 779
     }
   },
   {
@@ -12050,7 +11965,7 @@
     },
     "_children": [
       {
-        "__id__": 788
+        "__id__": 781
       }
     ],
     "_active": true,
@@ -12108,13 +12023,13 @@
     "_name": "scale-space-world-simulation-world",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 787
+      "__id__": 780
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 789
+        "__id__": 782
       }
     ],
     "_prefab": null,
@@ -12170,7 +12085,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 788
+      "__id__": 781
     },
     "_enabled": true,
     "_materials": [
@@ -12186,60 +12101,60 @@
     "_simulationSpace": 0,
     "simulationSpeed": 1,
     "startDelay": {
-      "__id__": 790
+      "__id__": 783
     },
     "startLifetime": {
-      "__id__": 796
+      "__id__": 789
     },
     "startColor": {
-      "__id__": 800
+      "__id__": 793
     },
     "scaleSpace": 0,
     "startSize": {
-      "__id__": 804
+      "__id__": 797
     },
     "startSpeed": {
-      "__id__": 808
+      "__id__": 801
     },
     "startRotation": {
-      "__id__": 812
+      "__id__": 805
     },
     "gravityModifier": {
-      "__id__": 816
+      "__id__": 809
     },
     "rateOverTime": {
-      "__id__": 820
+      "__id__": 813
     },
     "rateOverDistance": {
-      "__id__": 824
+      "__id__": 817
     },
     "bursts": [],
     "shapeModule": {
-      "__id__": 828
+      "__id__": 821
     },
     "colorOverLifetimeModule": {
-      "__id__": 833
+      "__id__": 826
     },
     "sizeOvertimeModule": {
-      "__id__": 840
+      "__id__": 833
     },
     "velocityOvertimeModule": {
-      "__id__": 857
+      "__id__": 850
     },
     "forceOvertimeModule": {
-      "__id__": 874
+      "__id__": 867
     },
     "limitVelocityOvertimeModule": {
-      "__id__": 887
+      "__id__": 880
     },
     "rotationOvertimeModule": {
-      "__id__": 904
+      "__id__": 897
     },
     "textureAnimationModule": {
-      "__id__": 917
+      "__id__": 910
     },
     "trailModule": {
-      "__id__": 926
+      "__id__": 919
     },
     "_renderMode": 0,
     "_velocityScale": 1,
@@ -12251,13 +12166,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 791
+      "__id__": 784
     },
     "curveMin": {
-      "__id__": 794
+      "__id__": 787
     },
     "curveMax": {
-      "__id__": 795
+      "__id__": 788
     },
     "constant": 0,
     "constantMin": 0,
@@ -12268,10 +12183,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12295,10 +12210,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12308,10 +12223,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12321,13 +12236,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 797
+      "__id__": 790
     },
     "curveMin": {
-      "__id__": 798
+      "__id__": 791
     },
     "curveMax": {
-      "__id__": 799
+      "__id__": 792
     },
     "constant": 5,
     "constantMin": 0,
@@ -12338,10 +12253,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12351,10 +12266,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12364,10 +12279,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12405,13 +12320,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 801
+      "__id__": 794
     },
     "gradientMin": {
-      "__id__": 802
+      "__id__": 795
     },
     "gradientMax": {
-      "__id__": 803
+      "__id__": 796
     }
   },
   {
@@ -12436,15 +12351,127 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 805
+      "__id__": 798
     },
     "curveMin": {
+      "__id__": 799
+    },
+    "curveMax": {
+      "__id__": 800
+    },
+    "constant": 1,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 802
+    },
+    "curveMin": {
+      "__id__": 803
+    },
+    "curveMax": {
+      "__id__": 804
+    },
+    "constant": 1,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 806
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 807
     },
-    "constant": 1,
+    "curveMax": {
+      "__id__": 808
+    },
+    "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
     "multiplier": 1
@@ -12453,10 +12480,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12466,10 +12493,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12479,10 +12506,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12492,15 +12519,15 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 809
-    },
-    "curveMin": {
       "__id__": 810
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 811
     },
-    "constant": 1,
+    "curveMax": {
+      "__id__": 812
+    },
+    "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
     "multiplier": 1
@@ -12509,10 +12536,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12522,10 +12549,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12535,10 +12562,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12548,125 +12575,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 813
-    },
-    "curveMin": {
       "__id__": 814
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 815
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 817
-    },
-    "curveMin": {
-      "__id__": 818
-    },
     "curveMax": {
-      "__id__": 819
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 821
-    },
-    "curveMin": {
-      "__id__": 822
-    },
-    "curveMax": {
-      "__id__": 823
+      "__id__": 816
     },
     "constant": 1,
     "constantMin": 0,
@@ -12677,10 +12592,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12690,10 +12605,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12703,10 +12618,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12716,13 +12631,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 825
+      "__id__": 818
     },
     "curveMin": {
-      "__id__": 826
+      "__id__": 819
     },
     "curveMax": {
-      "__id__": 827
+      "__id__": 820
     },
     "constant": 0,
     "constantMin": 0,
@@ -12733,10 +12648,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12746,10 +12661,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12759,10 +12674,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12780,7 +12695,7 @@
     "arcMode": 0,
     "arcSpread": 0,
     "arcSpeed": {
-      "__id__": 829
+      "__id__": 822
     },
     "length": 5,
     "boxThickness": {
@@ -12816,13 +12731,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 830
+      "__id__": 823
     },
     "curveMin": {
-      "__id__": 831
+      "__id__": 824
     },
     "curveMax": {
-      "__id__": 832
+      "__id__": 825
     },
     "constant": 0,
     "constantMin": 0,
@@ -12833,10 +12748,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12846,10 +12761,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12859,10 +12774,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -12872,7 +12787,7 @@
     "__type__": "cc.ColorOvertimeModule",
     "enable": false,
     "color": {
-      "__id__": 834
+      "__id__": 827
     }
   },
   {
@@ -12907,23 +12822,23 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 835
+      "__id__": 828
     },
     "gradientMin": {
-      "__id__": 838
+      "__id__": 831
     },
     "gradientMax": {
-      "__id__": 839
+      "__id__": 832
     }
   },
   {
     "__type__": "cc.Gradient",
     "colorKeys": [
       {
-        "__id__": 836
+        "__id__": 829
       },
       {
-        "__id__": 837
+        "__id__": 830
       }
     ],
     "alphaKeys": [],
@@ -12968,30 +12883,142 @@
     "enable": false,
     "separateAxes": false,
     "size": {
-      "__id__": 841
+      "__id__": 834
     },
     "x": {
-      "__id__": 845
+      "__id__": 838
     },
     "y": {
-      "__id__": 849
+      "__id__": 842
     },
     "z": {
-      "__id__": 853
+      "__id__": 846
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 842
+      "__id__": 835
     },
     "curveMin": {
+      "__id__": 836
+    },
+    "curveMax": {
+      "__id__": 837
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 839
+    },
+    "curveMin": {
+      "__id__": 840
+    },
+    "curveMax": {
+      "__id__": 841
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 843
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 844
     },
+    "curveMax": {
+      "__id__": 845
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -13001,10 +13028,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13014,10 +13041,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13027,10 +13054,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13040,69 +13067,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 846
-    },
-    "curveMin": {
       "__id__": 847
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 848
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 850
-    },
-    "curveMin": {
-      "__id__": 851
-    },
     "curveMax": {
-      "__id__": 852
+      "__id__": 849
     },
     "constant": 0,
     "constantMin": 0,
@@ -13113,10 +13084,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13126,10 +13097,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13139,66 +13110,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 854
-    },
-    "curveMin": {
-      "__id__": 855
-    },
-    "curveMax": {
-      "__id__": 856
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13209,30 +13124,142 @@
     "enable": false,
     "space": 1,
     "x": {
-      "__id__": 858
+      "__id__": 851
     },
     "y": {
-      "__id__": 862
+      "__id__": 855
     },
     "z": {
-      "__id__": 866
+      "__id__": 859
     },
     "speedModifier": {
-      "__id__": 870
+      "__id__": 863
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 859
+      "__id__": 852
     },
     "curveMin": {
+      "__id__": 853
+    },
+    "curveMax": {
+      "__id__": 854
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 856
+    },
+    "curveMin": {
+      "__id__": 857
+    },
+    "curveMax": {
+      "__id__": 858
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 860
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 861
     },
+    "curveMax": {
+      "__id__": 862
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -13242,10 +13269,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13255,10 +13282,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13268,10 +13295,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13281,125 +13308,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 863
-    },
-    "curveMin": {
       "__id__": 864
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 865
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 867
-    },
-    "curveMin": {
-      "__id__": 868
-    },
     "curveMax": {
-      "__id__": 869
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 871
-    },
-    "curveMin": {
-      "__id__": 872
-    },
-    "curveMax": {
-      "__id__": 873
+      "__id__": 866
     },
     "constant": 1,
     "constantMin": 0,
@@ -13410,10 +13325,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13423,10 +13338,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13436,10 +13351,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13450,82 +13365,138 @@
     "enable": false,
     "space": 1,
     "x": {
-      "__id__": 875
+      "__id__": 868
     },
     "y": {
-      "__id__": 879
+      "__id__": 872
     },
     "z": {
-      "__id__": 883
+      "__id__": 876
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 876
+      "__id__": 869
     },
     "curveMin": {
+      "__id__": 870
+    },
+    "curveMax": {
+      "__id__": 871
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 873
+    },
+    "curveMin": {
+      "__id__": 874
+    },
+    "curveMax": {
+      "__id__": 875
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 877
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 878
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 880
-    },
-    "curveMin": {
-      "__id__": 881
-    },
     "curveMax": {
-      "__id__": 882
+      "__id__": 879
     },
     "constant": 0,
     "constantMin": 0,
@@ -13536,10 +13507,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13549,10 +13520,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13562,66 +13533,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 884
-    },
-    "curveMin": {
-      "__id__": 885
-    },
-    "curveMax": {
-      "__id__": 886
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13633,16 +13548,16 @@
     "space": 1,
     "separateAxes": false,
     "limit": {
-      "__id__": 888
+      "__id__": 881
     },
     "limitX": {
-      "__id__": 892
+      "__id__": 885
     },
     "limitY": {
-      "__id__": 896
+      "__id__": 889
     },
     "limitZ": {
-      "__id__": 900
+      "__id__": 893
     },
     "dampen": 1
   },
@@ -13650,69 +13565,125 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 889
+      "__id__": 882
     },
     "curveMin": {
+      "__id__": 883
+    },
+    "curveMax": {
+      "__id__": 884
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 886
+    },
+    "curveMin": {
+      "__id__": 887
+    },
+    "curveMax": {
+      "__id__": 888
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 890
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 891
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 893
-    },
-    "curveMin": {
-      "__id__": 894
-    },
     "curveMax": {
-      "__id__": 895
+      "__id__": 892
     },
     "constant": 0,
     "constantMin": 0,
@@ -13723,10 +13694,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13736,10 +13707,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13749,66 +13720,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 897
-    },
-    "curveMin": {
-      "__id__": 898
-    },
-    "curveMax": {
-      "__id__": 899
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13818,13 +13733,13 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 901
+      "__id__": 894
     },
     "curveMin": {
-      "__id__": 902
+      "__id__": 895
     },
     "curveMax": {
-      "__id__": 903
+      "__id__": 896
     },
     "constant": 0,
     "constantMin": 0,
@@ -13835,10 +13750,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13848,10 +13763,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13861,10 +13776,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13875,82 +13790,138 @@
     "enable": false,
     "_separateAxes": false,
     "x": {
-      "__id__": 905
+      "__id__": 898
     },
     "y": {
-      "__id__": 909
+      "__id__": 902
     },
     "z": {
-      "__id__": 913
+      "__id__": 906
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 906
+      "__id__": 899
     },
     "curveMin": {
+      "__id__": 900
+    },
+    "curveMax": {
+      "__id__": 901
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 903
+    },
+    "curveMin": {
+      "__id__": 904
+    },
+    "curveMax": {
+      "__id__": 905
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 785
+      },
+      {
+        "__id__": 786
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 907
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 908
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 910
-    },
-    "curveMin": {
-      "__id__": 911
-    },
     "curveMax": {
-      "__id__": 912
+      "__id__": 909
     },
     "constant": 0,
     "constantMin": 0,
@@ -13961,10 +13932,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13974,10 +13945,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -13987,66 +13958,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 914
-    },
-    "curveMin": {
-      "__id__": 915
-    },
-    "curveMax": {
-      "__id__": 916
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14062,10 +13977,10 @@
     "randomRow": false,
     "rowIndex": 0,
     "frameOverTime": {
-      "__id__": 918
+      "__id__": 911
     },
     "startFrame": {
-      "__id__": 922
+      "__id__": 915
     },
     "cycleCount": 0
   },
@@ -14073,13 +13988,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 919
+      "__id__": 912
     },
     "curveMin": {
-      "__id__": 920
+      "__id__": 913
     },
     "curveMax": {
-      "__id__": 921
+      "__id__": 914
     },
     "constant": 0,
     "constantMin": 0,
@@ -14090,10 +14005,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14103,10 +14018,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14116,10 +14031,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14129,13 +14044,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 923
+      "__id__": 916
     },
     "curveMin": {
-      "__id__": 924
+      "__id__": 917
     },
     "curveMax": {
-      "__id__": 925
+      "__id__": 918
     },
     "constant": 0,
     "constantMin": 0,
@@ -14146,10 +14061,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14159,10 +14074,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14172,10 +14087,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14186,7 +14101,7 @@
     "_enable": false,
     "mode": 0,
     "lifeTime": {
-      "__id__": 927
+      "__id__": 920
     },
     "_minParticleDistance": 0.1,
     "_space": 0,
@@ -14194,27 +14109,27 @@
     "textureMode": 0,
     "widthFromParticle": true,
     "widthRatio": {
-      "__id__": 931
+      "__id__": 924
     },
     "colorFromParticle": false,
     "colorOverTrail": {
-      "__id__": 935
+      "__id__": 928
     },
     "colorOvertime": {
-      "__id__": 939
+      "__id__": 932
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 928
+      "__id__": 921
     },
     "curveMin": {
-      "__id__": 929
+      "__id__": 922
     },
     "curveMax": {
-      "__id__": 930
+      "__id__": 923
     },
     "constant": 1,
     "constantMin": 0,
@@ -14225,10 +14140,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14238,10 +14153,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14251,10 +14166,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14264,13 +14179,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 932
+      "__id__": 925
     },
     "curveMin": {
-      "__id__": 933
+      "__id__": 926
     },
     "curveMax": {
-      "__id__": 934
+      "__id__": 927
     },
     "constant": 0,
     "constantMin": 0,
@@ -14281,10 +14196,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14294,10 +14209,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14307,10 +14222,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 792
+        "__id__": 785
       },
       {
-        "__id__": 793
+        "__id__": 786
       }
     ],
     "preWrapMode": 2,
@@ -14348,13 +14263,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 936
+      "__id__": 929
     },
     "gradientMin": {
-      "__id__": 937
+      "__id__": 930
     },
     "gradientMax": {
-      "__id__": 938
+      "__id__": 931
     }
   },
   {
@@ -14407,13 +14322,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 940
+      "__id__": 933
     },
     "gradientMin": {
-      "__id__": 941
+      "__id__": 934
     },
     "gradientMax": {
-      "__id__": 942
+      "__id__": 935
     }
   },
   {
@@ -14445,7 +14360,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 944
+        "__id__": 937
       }
     ],
     "_prefab": null,
@@ -14501,7 +14416,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 943
+      "__id__": 936
     },
     "_enabled": true,
     "_materials": [
@@ -14517,64 +14432,64 @@
     "_simulationSpace": 1,
     "simulationSpeed": 1,
     "startDelay": {
-      "__id__": 945
+      "__id__": 938
     },
     "startLifetime": {
-      "__id__": 951
+      "__id__": 944
     },
     "startColor": {
-      "__id__": 955
+      "__id__": 948
     },
     "scaleSpace": 1,
     "startSize": {
-      "__id__": 959
+      "__id__": 952
     },
     "startSpeed": {
-      "__id__": 963
+      "__id__": 956
     },
     "startRotation": {
-      "__id__": 967
+      "__id__": 960
     },
     "gravityModifier": {
-      "__id__": 971
+      "__id__": 964
     },
     "rateOverTime": {
-      "__id__": 975
+      "__id__": 968
     },
     "rateOverDistance": {
-      "__id__": 979
+      "__id__": 972
     },
     "bursts": [
       {
-        "__id__": 983
+        "__id__": 976
       }
     ],
     "shapeModule": {
-      "__id__": 990
+      "__id__": 983
     },
     "colorOverLifetimeModule": {
-      "__id__": 995
+      "__id__": 988
     },
     "sizeOvertimeModule": {
-      "__id__": 1000
+      "__id__": 993
     },
     "velocityOvertimeModule": {
-      "__id__": 1017
+      "__id__": 1010
     },
     "forceOvertimeModule": {
-      "__id__": 1034
+      "__id__": 1027
     },
     "limitVelocityOvertimeModule": {
-      "__id__": 1047
+      "__id__": 1040
     },
     "rotationOvertimeModule": {
-      "__id__": 1064
+      "__id__": 1057
     },
     "textureAnimationModule": {
-      "__id__": 1077
+      "__id__": 1070
     },
     "trailModule": {
-      "__id__": 1086
+      "__id__": 1079
     },
     "_renderMode": 0,
     "_velocityScale": 1,
@@ -14586,13 +14501,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 946
+      "__id__": 939
     },
     "curveMin": {
-      "__id__": 949
+      "__id__": 942
     },
     "curveMax": {
-      "__id__": 950
+      "__id__": 943
     },
     "constant": 0,
     "constantMin": 0,
@@ -14603,10 +14518,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14630,10 +14545,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14643,10 +14558,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14656,13 +14571,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 952
+      "__id__": 945
     },
     "curveMin": {
-      "__id__": 953
+      "__id__": 946
     },
     "curveMax": {
-      "__id__": 954
+      "__id__": 947
     },
     "constant": 5,
     "constantMin": 0,
@@ -14673,10 +14588,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14686,10 +14601,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14699,10 +14614,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14740,13 +14655,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 956
+      "__id__": 949
     },
     "gradientMin": {
-      "__id__": 957
+      "__id__": 950
     },
     "gradientMax": {
-      "__id__": 958
+      "__id__": 951
     }
   },
   {
@@ -14771,15 +14686,127 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 960
+      "__id__": 953
     },
     "curveMin": {
+      "__id__": 954
+    },
+    "curveMax": {
+      "__id__": 955
+    },
+    "constant": 1,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 957
+    },
+    "curveMin": {
+      "__id__": 958
+    },
+    "curveMax": {
+      "__id__": 959
+    },
+    "constant": 1,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 961
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 962
     },
-    "constant": 1,
+    "curveMax": {
+      "__id__": 963
+    },
+    "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
     "multiplier": 1
@@ -14788,10 +14815,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14801,10 +14828,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14814,10 +14841,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14827,15 +14854,15 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 964
-    },
-    "curveMin": {
       "__id__": 965
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 966
     },
-    "constant": 1,
+    "curveMax": {
+      "__id__": 967
+    },
+    "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
     "multiplier": 1
@@ -14844,10 +14871,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14857,10 +14884,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14870,10 +14897,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14883,14 +14910,14 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 968
-    },
-    "curveMin": {
       "__id__": 969
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 970
     },
+    "curveMax": {
+      "__id__": 971
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -14900,10 +14927,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14913,10 +14940,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14926,10 +14953,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -14939,125 +14966,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 972
-    },
-    "curveMin": {
       "__id__": 973
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 974
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 976
-    },
-    "curveMin": {
-      "__id__": 977
-    },
     "curveMax": {
-      "__id__": 978
-    },
-    "constant": 1,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 980
-    },
-    "curveMin": {
-      "__id__": 981
-    },
-    "curveMax": {
-      "__id__": 982
+      "__id__": 975
     },
     "constant": 0,
     "constantMin": 0,
@@ -15068,10 +14983,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15081,10 +14996,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15094,10 +15009,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15111,20 +15026,20 @@
     "_repeatCount": 2,
     "repeatInterval": 0.5,
     "count": {
-      "__id__": 984
+      "__id__": 977
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 985
+      "__id__": 978
     },
     "curveMin": {
-      "__id__": 988
+      "__id__": 981
     },
     "curveMax": {
-      "__id__": 989
+      "__id__": 982
     },
     "constant": 1,
     "constantMin": 0,
@@ -15135,10 +15050,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 986
+        "__id__": 979
       },
       {
-        "__id__": 987
+        "__id__": 980
       }
     ],
     "preWrapMode": 2,
@@ -15162,10 +15077,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 986
+        "__id__": 979
       },
       {
-        "__id__": 987
+        "__id__": 980
       }
     ],
     "preWrapMode": 2,
@@ -15175,10 +15090,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 986
+        "__id__": 979
       },
       {
-        "__id__": 987
+        "__id__": 980
       }
     ],
     "preWrapMode": 2,
@@ -15196,7 +15111,7 @@
     "arcMode": 0,
     "arcSpread": 0,
     "arcSpeed": {
-      "__id__": 991
+      "__id__": 984
     },
     "length": 5,
     "boxThickness": {
@@ -15232,13 +15147,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 992
+      "__id__": 985
     },
     "curveMin": {
-      "__id__": 993
+      "__id__": 986
     },
     "curveMax": {
-      "__id__": 994
+      "__id__": 987
     },
     "constant": 0,
     "constantMin": 0,
@@ -15249,10 +15164,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15262,10 +15177,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15275,10 +15190,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15288,7 +15203,7 @@
     "__type__": "cc.ColorOvertimeModule",
     "enable": false,
     "color": {
-      "__id__": 996
+      "__id__": 989
     }
   },
   {
@@ -15323,13 +15238,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 997
+      "__id__": 990
     },
     "gradientMin": {
-      "__id__": 998
+      "__id__": 991
     },
     "gradientMax": {
-      "__id__": 999
+      "__id__": 992
     }
   },
   {
@@ -15355,30 +15270,142 @@
     "enable": false,
     "separateAxes": false,
     "size": {
-      "__id__": 1001
+      "__id__": 994
     },
     "x": {
-      "__id__": 1005
+      "__id__": 998
     },
     "y": {
-      "__id__": 1009
+      "__id__": 1002
     },
     "z": {
-      "__id__": 1013
+      "__id__": 1006
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1002
+      "__id__": 995
     },
     "curveMin": {
+      "__id__": 996
+    },
+    "curveMax": {
+      "__id__": 997
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 999
+    },
+    "curveMin": {
+      "__id__": 1000
+    },
+    "curveMax": {
+      "__id__": 1001
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1003
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1004
     },
+    "curveMax": {
+      "__id__": 1005
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -15388,10 +15415,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15401,10 +15428,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15414,10 +15441,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15427,69 +15454,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1006
-    },
-    "curveMin": {
       "__id__": 1007
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1008
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1010
-    },
-    "curveMin": {
-      "__id__": 1011
-    },
     "curveMax": {
-      "__id__": 1012
+      "__id__": 1009
     },
     "constant": 0,
     "constantMin": 0,
@@ -15500,10 +15471,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15513,10 +15484,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15526,66 +15497,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1014
-    },
-    "curveMin": {
-      "__id__": 1015
-    },
-    "curveMax": {
-      "__id__": 1016
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15596,30 +15511,142 @@
     "enable": false,
     "space": 1,
     "x": {
-      "__id__": 1018
+      "__id__": 1011
     },
     "y": {
-      "__id__": 1022
+      "__id__": 1015
     },
     "z": {
-      "__id__": 1026
+      "__id__": 1019
     },
     "speedModifier": {
-      "__id__": 1030
+      "__id__": 1023
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1019
+      "__id__": 1012
     },
     "curveMin": {
+      "__id__": 1013
+    },
+    "curveMax": {
+      "__id__": 1014
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1016
+    },
+    "curveMin": {
+      "__id__": 1017
+    },
+    "curveMax": {
+      "__id__": 1018
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1020
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1021
     },
+    "curveMax": {
+      "__id__": 1022
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -15629,10 +15656,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15642,10 +15669,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15655,10 +15682,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15668,125 +15695,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1023
-    },
-    "curveMin": {
       "__id__": 1024
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1025
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1027
-    },
-    "curveMin": {
-      "__id__": 1028
-    },
     "curveMax": {
-      "__id__": 1029
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1031
-    },
-    "curveMin": {
-      "__id__": 1032
-    },
-    "curveMax": {
-      "__id__": 1033
+      "__id__": 1026
     },
     "constant": 1,
     "constantMin": 0,
@@ -15797,10 +15712,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15810,10 +15725,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15823,10 +15738,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15837,82 +15752,138 @@
     "enable": false,
     "space": 0,
     "x": {
-      "__id__": 1035
+      "__id__": 1028
     },
     "y": {
-      "__id__": 1039
+      "__id__": 1032
     },
     "z": {
-      "__id__": 1043
+      "__id__": 1036
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 1036
+      "__id__": 1029
     },
     "curveMin": {
+      "__id__": 1030
+    },
+    "curveMax": {
+      "__id__": 1031
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1033
+    },
+    "curveMin": {
+      "__id__": 1034
+    },
+    "curveMax": {
+      "__id__": 1035
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1037
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1038
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1040
-    },
-    "curveMin": {
-      "__id__": 1041
-    },
     "curveMax": {
-      "__id__": 1042
+      "__id__": 1039
     },
     "constant": 0,
     "constantMin": 0,
@@ -15923,10 +15894,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15936,10 +15907,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -15949,66 +15920,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1044
-    },
-    "curveMin": {
-      "__id__": 1045
-    },
-    "curveMax": {
-      "__id__": 1046
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16020,16 +15935,16 @@
     "space": 0,
     "separateAxes": true,
     "limit": {
-      "__id__": 1048
+      "__id__": 1041
     },
     "limitX": {
-      "__id__": 1052
+      "__id__": 1045
     },
     "limitY": {
-      "__id__": 1056
+      "__id__": 1049
     },
     "limitZ": {
-      "__id__": 1060
+      "__id__": 1053
     },
     "dampen": 1
   },
@@ -16037,69 +15952,125 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 1049
+      "__id__": 1042
     },
     "curveMin": {
+      "__id__": 1043
+    },
+    "curveMax": {
+      "__id__": 1044
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1046
+    },
+    "curveMin": {
+      "__id__": 1047
+    },
+    "curveMax": {
+      "__id__": 1048
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1050
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1051
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1053
-    },
-    "curveMin": {
-      "__id__": 1054
-    },
     "curveMax": {
-      "__id__": 1055
+      "__id__": 1052
     },
     "constant": 0,
     "constantMin": 0,
@@ -16110,10 +16081,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16123,10 +16094,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16136,66 +16107,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1057
-    },
-    "curveMin": {
-      "__id__": 1058
-    },
-    "curveMax": {
-      "__id__": 1059
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16205,13 +16120,13 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 1061
+      "__id__": 1054
     },
     "curveMin": {
-      "__id__": 1062
+      "__id__": 1055
     },
     "curveMax": {
-      "__id__": 1063
+      "__id__": 1056
     },
     "constant": 0,
     "constantMin": 0,
@@ -16222,10 +16137,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16235,10 +16150,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16248,10 +16163,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16262,82 +16177,138 @@
     "enable": false,
     "_separateAxes": false,
     "x": {
-      "__id__": 1065
+      "__id__": 1058
     },
     "y": {
-      "__id__": 1069
+      "__id__": 1062
     },
     "z": {
-      "__id__": 1073
+      "__id__": 1066
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1066
+      "__id__": 1059
     },
     "curveMin": {
+      "__id__": 1060
+    },
+    "curveMax": {
+      "__id__": 1061
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1063
+    },
+    "curveMin": {
+      "__id__": 1064
+    },
+    "curveMax": {
+      "__id__": 1065
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 940
+      },
+      {
+        "__id__": 941
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1067
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1068
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1070
-    },
-    "curveMin": {
-      "__id__": 1071
-    },
     "curveMax": {
-      "__id__": 1072
+      "__id__": 1069
     },
     "constant": 0,
     "constantMin": 0,
@@ -16348,10 +16319,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16361,10 +16332,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16374,66 +16345,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1074
-    },
-    "curveMin": {
-      "__id__": 1075
-    },
-    "curveMax": {
-      "__id__": 1076
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 947
-      },
-      {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16449,10 +16364,10 @@
     "randomRow": false,
     "rowIndex": 0,
     "frameOverTime": {
-      "__id__": 1078
+      "__id__": 1071
     },
     "startFrame": {
-      "__id__": 1082
+      "__id__": 1075
     },
     "cycleCount": 0
   },
@@ -16460,13 +16375,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1079
+      "__id__": 1072
     },
     "curveMin": {
-      "__id__": 1080
+      "__id__": 1073
     },
     "curveMax": {
-      "__id__": 1081
+      "__id__": 1074
     },
     "constant": 0,
     "constantMin": 0,
@@ -16477,10 +16392,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16490,10 +16405,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16503,10 +16418,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16516,13 +16431,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1083
+      "__id__": 1076
     },
     "curveMin": {
-      "__id__": 1084
+      "__id__": 1077
     },
     "curveMax": {
-      "__id__": 1085
+      "__id__": 1078
     },
     "constant": 0,
     "constantMin": 0,
@@ -16533,10 +16448,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16546,10 +16461,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16559,10 +16474,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16573,7 +16488,7 @@
     "_enable": false,
     "mode": 0,
     "lifeTime": {
-      "__id__": 1087
+      "__id__": 1080
     },
     "_minParticleDistance": 0.1,
     "_space": 0,
@@ -16581,27 +16496,27 @@
     "textureMode": 0,
     "widthFromParticle": true,
     "widthRatio": {
-      "__id__": 1091
+      "__id__": 1084
     },
     "colorFromParticle": false,
     "colorOverTrail": {
-      "__id__": 1095
+      "__id__": 1088
     },
     "colorOvertime": {
-      "__id__": 1099
+      "__id__": 1092
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1088
+      "__id__": 1081
     },
     "curveMin": {
-      "__id__": 1089
+      "__id__": 1082
     },
     "curveMax": {
-      "__id__": 1090
+      "__id__": 1083
     },
     "constant": 1,
     "constantMin": 0,
@@ -16612,10 +16527,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16625,10 +16540,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16638,10 +16553,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16651,13 +16566,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1092
+      "__id__": 1085
     },
     "curveMin": {
-      "__id__": 1093
+      "__id__": 1086
     },
     "curveMax": {
-      "__id__": 1094
+      "__id__": 1087
     },
     "constant": 0,
     "constantMin": 0,
@@ -16668,10 +16583,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16681,10 +16596,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16694,10 +16609,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 947
+        "__id__": 940
       },
       {
-        "__id__": 948
+        "__id__": 941
       }
     ],
     "preWrapMode": 2,
@@ -16735,13 +16650,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 1096
+      "__id__": 1089
     },
     "gradientMin": {
-      "__id__": 1097
+      "__id__": 1090
     },
     "gradientMax": {
-      "__id__": 1098
+      "__id__": 1091
     }
   },
   {
@@ -16794,13 +16709,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 1100
+      "__id__": 1093
     },
     "gradientMin": {
-      "__id__": 1101
+      "__id__": 1094
     },
     "gradientMax": {
-      "__id__": 1102
+      "__id__": 1095
     }
   },
   {
@@ -16832,7 +16747,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 1104
+        "__id__": 1097
       }
     ],
     "_prefab": null,
@@ -16888,7 +16803,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1103
+      "__id__": 1096
     },
     "_enabled": true,
     "_materials": [
@@ -16904,60 +16819,60 @@
     "_simulationSpace": 0,
     "simulationSpeed": 1,
     "startDelay": {
-      "__id__": 1105
+      "__id__": 1098
     },
     "startLifetime": {
-      "__id__": 1111
+      "__id__": 1104
     },
     "startColor": {
-      "__id__": 1115
+      "__id__": 1108
     },
     "scaleSpace": 1,
     "startSize": {
-      "__id__": 1119
+      "__id__": 1112
     },
     "startSpeed": {
-      "__id__": 1123
+      "__id__": 1116
     },
     "startRotation": {
-      "__id__": 1127
+      "__id__": 1120
     },
     "gravityModifier": {
-      "__id__": 1131
+      "__id__": 1124
     },
     "rateOverTime": {
-      "__id__": 1135
+      "__id__": 1128
     },
     "rateOverDistance": {
-      "__id__": 1139
+      "__id__": 1132
     },
     "bursts": [],
     "shapeModule": {
-      "__id__": 1143
+      "__id__": 1136
     },
     "colorOverLifetimeModule": {
-      "__id__": 1148
+      "__id__": 1141
     },
     "sizeOvertimeModule": {
-      "__id__": 1157
+      "__id__": 1150
     },
     "velocityOvertimeModule": {
-      "__id__": 1174
+      "__id__": 1167
     },
     "forceOvertimeModule": {
-      "__id__": 1191
+      "__id__": 1184
     },
     "limitVelocityOvertimeModule": {
-      "__id__": 1204
+      "__id__": 1197
     },
     "rotationOvertimeModule": {
-      "__id__": 1221
+      "__id__": 1214
     },
     "textureAnimationModule": {
-      "__id__": 1234
+      "__id__": 1227
     },
     "trailModule": {
-      "__id__": 1243
+      "__id__": 1236
     },
     "_renderMode": 0,
     "_velocityScale": 1,
@@ -16969,13 +16884,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1106
+      "__id__": 1099
     },
     "curveMin": {
-      "__id__": 1109
+      "__id__": 1102
     },
     "curveMax": {
-      "__id__": 1110
+      "__id__": 1103
     },
     "constant": 0,
     "constantMin": 0,
@@ -16986,10 +16901,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17013,10 +16928,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17026,10 +16941,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17039,13 +16954,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1112
+      "__id__": 1105
     },
     "curveMin": {
-      "__id__": 1113
+      "__id__": 1106
     },
     "curveMax": {
-      "__id__": 1114
+      "__id__": 1107
     },
     "constant": 5,
     "constantMin": 0,
@@ -17056,10 +16971,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17069,10 +16984,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17082,10 +16997,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17123,13 +17038,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 1116
+      "__id__": 1109
     },
     "gradientMin": {
-      "__id__": 1117
+      "__id__": 1110
     },
     "gradientMax": {
-      "__id__": 1118
+      "__id__": 1111
     }
   },
   {
@@ -17154,15 +17069,127 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1120
+      "__id__": 1113
     },
     "curveMin": {
+      "__id__": 1114
+    },
+    "curveMax": {
+      "__id__": 1115
+    },
+    "constant": 1,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1117
+    },
+    "curveMin": {
+      "__id__": 1118
+    },
+    "curveMax": {
+      "__id__": 1119
+    },
+    "constant": 1,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1121
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1122
     },
-    "constant": 1,
+    "curveMax": {
+      "__id__": 1123
+    },
+    "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
     "multiplier": 1
@@ -17171,10 +17198,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17184,10 +17211,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17197,10 +17224,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17210,15 +17237,15 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1124
-    },
-    "curveMin": {
       "__id__": 1125
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1126
     },
-    "constant": 1,
+    "curveMax": {
+      "__id__": 1127
+    },
+    "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
     "multiplier": 1
@@ -17227,10 +17254,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17240,10 +17267,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17253,10 +17280,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17266,14 +17293,14 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1128
-    },
-    "curveMin": {
       "__id__": 1129
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1130
     },
+    "curveMax": {
+      "__id__": 1131
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -17283,10 +17310,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17296,10 +17323,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17309,10 +17336,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17322,69 +17349,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1132
-    },
-    "curveMin": {
       "__id__": 1133
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1134
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1136
-    },
-    "curveMin": {
-      "__id__": 1137
-    },
     "curveMax": {
-      "__id__": 1138
+      "__id__": 1135
     },
     "constant": 1,
     "constantMin": 0,
@@ -17395,10 +17366,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17408,10 +17379,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17421,66 +17392,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1140
-    },
-    "curveMin": {
-      "__id__": 1141
-    },
-    "curveMax": {
-      "__id__": 1142
-    },
-    "constant": 1,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17498,7 +17413,7 @@
     "arcMode": 0,
     "arcSpread": 0,
     "arcSpeed": {
-      "__id__": 1144
+      "__id__": 1137
     },
     "length": 5,
     "boxThickness": {
@@ -17534,13 +17449,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1145
+      "__id__": 1138
     },
     "curveMin": {
-      "__id__": 1146
+      "__id__": 1139
     },
     "curveMax": {
-      "__id__": 1147
+      "__id__": 1140
     },
     "constant": 0,
     "constantMin": 0,
@@ -17551,10 +17466,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17564,10 +17479,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17577,10 +17492,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17590,7 +17505,7 @@
     "__type__": "cc.ColorOvertimeModule",
     "enable": false,
     "color": {
-      "__id__": 1149
+      "__id__": 1142
     }
   },
   {
@@ -17625,13 +17540,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 1150
+      "__id__": 1143
     },
     "gradientMin": {
-      "__id__": 1151
+      "__id__": 1144
     },
     "gradientMax": {
-      "__id__": 1154
+      "__id__": 1147
     }
   },
   {
@@ -17644,10 +17559,10 @@
     "__type__": "cc.Gradient",
     "colorKeys": [
       {
-        "__id__": 1152
+        "__id__": 1145
       },
       {
-        "__id__": 1153
+        "__id__": 1146
       }
     ],
     "alphaKeys": [],
@@ -17679,10 +17594,10 @@
     "__type__": "cc.Gradient",
     "colorKeys": [
       {
-        "__id__": 1155
+        "__id__": 1148
       },
       {
-        "__id__": 1156
+        "__id__": 1149
       }
     ],
     "alphaKeys": [],
@@ -17715,30 +17630,142 @@
     "enable": false,
     "separateAxes": false,
     "size": {
-      "__id__": 1158
+      "__id__": 1151
     },
     "x": {
-      "__id__": 1162
+      "__id__": 1155
     },
     "y": {
-      "__id__": 1166
+      "__id__": 1159
     },
     "z": {
-      "__id__": 1170
+      "__id__": 1163
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1159
+      "__id__": 1152
     },
     "curveMin": {
+      "__id__": 1153
+    },
+    "curveMax": {
+      "__id__": 1154
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1156
+    },
+    "curveMin": {
+      "__id__": 1157
+    },
+    "curveMax": {
+      "__id__": 1158
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1160
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1161
     },
+    "curveMax": {
+      "__id__": 1162
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -17748,10 +17775,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17761,10 +17788,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17774,10 +17801,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17787,69 +17814,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1163
-    },
-    "curveMin": {
       "__id__": 1164
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1165
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1167
-    },
-    "curveMin": {
-      "__id__": 1168
-    },
     "curveMax": {
-      "__id__": 1169
+      "__id__": 1166
     },
     "constant": 0,
     "constantMin": 0,
@@ -17860,10 +17831,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17873,10 +17844,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17886,66 +17857,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1171
-    },
-    "curveMin": {
-      "__id__": 1172
-    },
-    "curveMax": {
-      "__id__": 1173
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -17956,30 +17871,142 @@
     "enable": false,
     "space": 1,
     "x": {
-      "__id__": 1175
+      "__id__": 1168
     },
     "y": {
-      "__id__": 1179
+      "__id__": 1172
     },
     "z": {
-      "__id__": 1183
+      "__id__": 1176
     },
     "speedModifier": {
-      "__id__": 1187
+      "__id__": 1180
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1176
+      "__id__": 1169
     },
     "curveMin": {
+      "__id__": 1170
+    },
+    "curveMax": {
+      "__id__": 1171
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1173
+    },
+    "curveMin": {
+      "__id__": 1174
+    },
+    "curveMax": {
+      "__id__": 1175
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1177
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1178
     },
+    "curveMax": {
+      "__id__": 1179
+    },
     "constant": 0,
     "constantMin": 0,
     "constantMax": 0,
@@ -17989,10 +18016,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18002,10 +18029,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18015,10 +18042,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18028,125 +18055,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1180
-    },
-    "curveMin": {
       "__id__": 1181
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1182
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1184
-    },
-    "curveMin": {
-      "__id__": 1185
-    },
     "curveMax": {
-      "__id__": 1186
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1188
-    },
-    "curveMin": {
-      "__id__": 1189
-    },
-    "curveMax": {
-      "__id__": 1190
+      "__id__": 1183
     },
     "constant": 1,
     "constantMin": 0,
@@ -18157,10 +18072,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18170,10 +18085,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18183,10 +18098,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18197,82 +18112,138 @@
     "enable": false,
     "space": 0,
     "x": {
-      "__id__": 1192
+      "__id__": 1185
     },
     "y": {
-      "__id__": 1196
+      "__id__": 1189
     },
     "z": {
-      "__id__": 1200
+      "__id__": 1193
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 1193
+      "__id__": 1186
     },
     "curveMin": {
+      "__id__": 1187
+    },
+    "curveMax": {
+      "__id__": 1188
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1190
+    },
+    "curveMin": {
+      "__id__": 1191
+    },
+    "curveMax": {
+      "__id__": 1192
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1194
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1195
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1197
-    },
-    "curveMin": {
-      "__id__": 1198
-    },
     "curveMax": {
-      "__id__": 1199
+      "__id__": 1196
     },
     "constant": 0,
     "constantMin": 0,
@@ -18283,10 +18254,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18296,10 +18267,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18309,66 +18280,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1201
-    },
-    "curveMin": {
-      "__id__": 1202
-    },
-    "curveMax": {
-      "__id__": 1203
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18380,16 +18295,16 @@
     "space": 0,
     "separateAxes": true,
     "limit": {
-      "__id__": 1205
+      "__id__": 1198
     },
     "limitX": {
-      "__id__": 1209
+      "__id__": 1202
     },
     "limitY": {
-      "__id__": 1213
+      "__id__": 1206
     },
     "limitZ": {
-      "__id__": 1217
+      "__id__": 1210
     },
     "dampen": 3
   },
@@ -18397,69 +18312,125 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 1206
+      "__id__": 1199
     },
     "curveMin": {
+      "__id__": 1200
+    },
+    "curveMax": {
+      "__id__": 1201
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1203
+    },
+    "curveMin": {
+      "__id__": 1204
+    },
+    "curveMax": {
+      "__id__": 1205
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1207
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1208
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1210
-    },
-    "curveMin": {
-      "__id__": 1211
-    },
     "curveMax": {
-      "__id__": 1212
+      "__id__": 1209
     },
     "constant": 0,
     "constantMin": 0,
@@ -18470,10 +18441,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18483,10 +18454,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18496,66 +18467,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1214
-    },
-    "curveMin": {
-      "__id__": 1215
-    },
-    "curveMax": {
-      "__id__": 1216
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18565,13 +18480,13 @@
     "__type__": "cc.CurveRange",
     "mode": 1,
     "curve": {
-      "__id__": 1218
+      "__id__": 1211
     },
     "curveMin": {
-      "__id__": 1219
+      "__id__": 1212
     },
     "curveMax": {
-      "__id__": 1220
+      "__id__": 1213
     },
     "constant": 0,
     "constantMin": 0,
@@ -18582,10 +18497,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18595,10 +18510,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18608,10 +18523,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18622,82 +18537,138 @@
     "enable": false,
     "_separateAxes": false,
     "x": {
-      "__id__": 1222
+      "__id__": 1215
     },
     "y": {
-      "__id__": 1226
+      "__id__": 1219
     },
     "z": {
-      "__id__": 1230
+      "__id__": 1223
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1223
+      "__id__": 1216
     },
     "curveMin": {
+      "__id__": 1217
+    },
+    "curveMax": {
+      "__id__": 1218
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
+      "__id__": 1220
+    },
+    "curveMin": {
+      "__id__": 1221
+    },
+    "curveMax": {
+      "__id__": 1222
+    },
+    "constant": 0,
+    "constantMin": 0,
+    "constantMax": 0,
+    "multiplier": 1
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.AnimationCurve",
+    "keyFrames": [
+      {
+        "__id__": 1100
+      },
+      {
+        "__id__": 1101
+      }
+    ],
+    "preWrapMode": 2,
+    "postWrapMode": 2
+  },
+  {
+    "__type__": "cc.CurveRange",
+    "mode": 0,
+    "curve": {
       "__id__": 1224
     },
-    "curveMax": {
+    "curveMin": {
       "__id__": 1225
     },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1227
-    },
-    "curveMin": {
-      "__id__": 1228
-    },
     "curveMax": {
-      "__id__": 1229
+      "__id__": 1226
     },
     "constant": 0,
     "constantMin": 0,
@@ -18708,10 +18679,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18721,10 +18692,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18734,66 +18705,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.CurveRange",
-    "mode": 0,
-    "curve": {
-      "__id__": 1231
-    },
-    "curveMin": {
-      "__id__": 1232
-    },
-    "curveMax": {
-      "__id__": 1233
-    },
-    "constant": 0,
-    "constantMin": 0,
-    "constantMax": 0,
-    "multiplier": 1
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
-      }
-    ],
-    "preWrapMode": 2,
-    "postWrapMode": 2
-  },
-  {
-    "__type__": "cc.AnimationCurve",
-    "keyFrames": [
-      {
-        "__id__": 1107
-      },
-      {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18809,10 +18724,10 @@
     "randomRow": false,
     "rowIndex": 0,
     "frameOverTime": {
-      "__id__": 1235
+      "__id__": 1228
     },
     "startFrame": {
-      "__id__": 1239
+      "__id__": 1232
     },
     "cycleCount": 0
   },
@@ -18820,13 +18735,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1236
+      "__id__": 1229
     },
     "curveMin": {
-      "__id__": 1237
+      "__id__": 1230
     },
     "curveMax": {
-      "__id__": 1238
+      "__id__": 1231
     },
     "constant": 0,
     "constantMin": 0,
@@ -18837,10 +18752,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18850,10 +18765,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18863,10 +18778,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18876,13 +18791,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1240
+      "__id__": 1233
     },
     "curveMin": {
-      "__id__": 1241
+      "__id__": 1234
     },
     "curveMax": {
-      "__id__": 1242
+      "__id__": 1235
     },
     "constant": 0,
     "constantMin": 0,
@@ -18893,10 +18808,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18906,10 +18821,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18919,10 +18834,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18933,7 +18848,7 @@
     "_enable": false,
     "mode": 0,
     "lifeTime": {
-      "__id__": 1244
+      "__id__": 1237
     },
     "_minParticleDistance": 0.1,
     "_space": 0,
@@ -18941,27 +18856,27 @@
     "textureMode": 0,
     "widthFromParticle": true,
     "widthRatio": {
-      "__id__": 1248
+      "__id__": 1241
     },
     "colorFromParticle": false,
     "colorOverTrail": {
-      "__id__": 1252
+      "__id__": 1245
     },
     "colorOvertime": {
-      "__id__": 1256
+      "__id__": 1249
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1245
+      "__id__": 1238
     },
     "curveMin": {
-      "__id__": 1246
+      "__id__": 1239
     },
     "curveMax": {
-      "__id__": 1247
+      "__id__": 1240
     },
     "constant": 1,
     "constantMin": 0,
@@ -18972,10 +18887,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18985,10 +18900,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -18998,10 +18913,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -19011,13 +18926,13 @@
     "__type__": "cc.CurveRange",
     "mode": 0,
     "curve": {
-      "__id__": 1249
+      "__id__": 1242
     },
     "curveMin": {
-      "__id__": 1250
+      "__id__": 1243
     },
     "curveMax": {
-      "__id__": 1251
+      "__id__": 1244
     },
     "constant": 0,
     "constantMin": 0,
@@ -19028,10 +18943,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -19041,10 +18956,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -19054,10 +18969,10 @@
     "__type__": "cc.AnimationCurve",
     "keyFrames": [
       {
-        "__id__": 1107
+        "__id__": 1100
       },
       {
-        "__id__": 1108
+        "__id__": 1101
       }
     ],
     "preWrapMode": 2,
@@ -19095,13 +19010,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 1253
+      "__id__": 1246
     },
     "gradientMin": {
-      "__id__": 1254
+      "__id__": 1247
     },
     "gradientMax": {
-      "__id__": 1255
+      "__id__": 1248
     }
   },
   {
@@ -19154,13 +19069,13 @@
       "a": 255
     },
     "gradient": {
-      "__id__": 1257
+      "__id__": 1250
     },
     "gradientMin": {
-      "__id__": 1258
+      "__id__": 1251
     },
     "gradientMax": {
-      "__id__": 1259
+      "__id__": 1252
     }
   },
   {
@@ -19190,10 +19105,10 @@
     },
     "_children": [
       {
-        "__id__": 1261
+        "__id__": 1254
       },
       {
-        "__id__": 1263
+        "__id__": 1256
       }
     ],
     "_active": true,
@@ -19251,13 +19166,13 @@
     "_name": "UICamera",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1260
+      "__id__": 1253
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 1262
+        "__id__": 1255
       }
     ],
     "_prefab": null,
@@ -19313,7 +19228,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1261
+      "__id__": 1254
     },
     "_enabled": true,
     "_cullingMask": 128,
@@ -19349,20 +19264,20 @@
     "_name": "Panel",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1260
+      "__id__": 1253
     },
     "_children": [
       {
-        "__id__": 1264
+        "__id__": 1257
       },
       {
-        "__id__": 1266
+        "__id__": 1259
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 1274
+        "__id__": 1267
       }
     ],
     "_prefab": null,
@@ -19418,13 +19333,13 @@
     "_name": "tips",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1263
+      "__id__": 1256
     },
     "_children": [],
     "_active": false,
     "_components": [
       {
-        "__id__": 1265
+        "__id__": 1258
       }
     ],
     "_prefab": null,
@@ -19480,7 +19395,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1264
+      "__id__": 1257
     },
     "_enabled": true,
     "_materials": [
@@ -19513,17 +19428,17 @@
     "_name": "Button",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1263
+      "__id__": 1256
     },
     "_children": [
       {
-        "__id__": 1267
+        "__id__": 1260
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 1272
+        "__id__": 1265
       }
     ],
     "_prefab": null,
@@ -19579,20 +19494,20 @@
     "_name": "Background",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1266
+      "__id__": 1259
     },
     "_children": [
       {
-        "__id__": 1268
+        "__id__": 1261
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 1270
+        "__id__": 1263
       },
       {
-        "__id__": 1271
+        "__id__": 1264
       }
     ],
     "_prefab": null,
@@ -19648,13 +19563,13 @@
     "_name": "Label",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1267
+      "__id__": 1260
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 1269
+        "__id__": 1262
       }
     ],
     "_prefab": null,
@@ -19710,7 +19625,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1268
+      "__id__": 1261
     },
     "_enabled": true,
     "_materials": [
@@ -19742,7 +19657,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1267
+      "__id__": 1260
     },
     "_enabled": true,
     "_materials": [
@@ -19774,7 +19689,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1267
+      "__id__": 1260
     },
     "_enabled": true,
     "alignMode": 0,
@@ -19801,7 +19716,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1266
+      "__id__": 1259
     },
     "_enabled": true,
     "_normalMaterial": {
@@ -19812,7 +19727,7 @@
     "zoomScale": 1.2,
     "clickEvents": [
       {
-        "__id__": 1273
+        "__id__": 1266
       }
     ],
     "_N$interactable": true,
@@ -19880,14 +19795,14 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 1267
+      "__id__": 1260
     },
     "_id": "4e4YJr+UlCiZVvX8vojhXS"
   },
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 1263
+      "__id__": 1256
     },
     "component": "",
     "_componentId": "b71d3yctLlH0bVfbZXKVJIY",
@@ -19899,7 +19814,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 1263
+      "__id__": 1256
     },
     "_enabled": true,
     "_id": "34Zf27qwNJ2aqRe8StCj9O"
