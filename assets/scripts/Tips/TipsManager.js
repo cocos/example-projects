@@ -61,7 +61,7 @@ module.exports = {
             // Not support isMobile
             case 'KeyboardInput':
             case 'platform':
-                return !isMobile && !isWechat && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
+                return !isMobile && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
 
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
