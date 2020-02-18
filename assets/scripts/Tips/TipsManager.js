@@ -5,6 +5,8 @@
 // init platform info
 const isAndroid = cc.sys.platform === cc.sys.ANDROID;
 const isNative = cc.sys.isNative;
+const isNativeWindows = isNative && cc.sys.os === cc.sys.OS_WINDOWS;
+const isNativeMacOS = isNative && cc.sys.os === cc.sys.OS_OSX;
 const isBrowser = cc.sys.isBrowser;
 const isMobile = cc.sys.isMobile;
 const isIphone = cc.sys.platform === cc.sys.IPHONE;
@@ -61,11 +63,11 @@ module.exports = {
             // Not support isMobile
             case 'KeyboardInput':
             case 'platform':
-                return !isMobile && !isWechat && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
+                return !isMobile && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
 
             // Not support the Simulator, QQ_PLAY, WECHAT_GAME
             case 'videoPlayer':
-                return (isMobile || isBrowser) && !CC_RUNTIME && !isQQPlay && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
+                return !isNativeWindows && !isNativeMacOS && !CC_RUNTIME && !isQQPlay && !isBaidu && !isXiaomi && !isHuawei && !isAlipay;
 
             // Not support the VIVO_GAME, OPPO_GAME, WECHAT_GAME, QQ_PLAY, CC_RUNTIME
             case 'webview':
