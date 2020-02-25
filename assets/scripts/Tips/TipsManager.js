@@ -45,8 +45,8 @@ module.exports = {
             // Not support the VIVO_GAME and OPPO_GAME
             case 'capture_to_native':
                 return isNative && !isVivo && !isOPPO;
-            case 'iOS_getSafeArea':
-                return (isIphone && isNative);
+            case 'SafeArea':
+                return (isIphone || isAndroid) && isNative;
             case 'capture_to_wechat':
                 return  isWechat;
             case 'capture_to_web':
