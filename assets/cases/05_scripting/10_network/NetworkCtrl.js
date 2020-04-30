@@ -57,7 +57,7 @@ cc.Class({
     },
     
     sendXHR: function () {
-        var xhr = cc.loader.getXMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         this.streamXHREventsToLabel(xhr, this.xhr, this.xhrResp, 'GET');
 
         xhr.open("GET", "https://httpbin.org/get?show_env=1", true);
@@ -74,7 +74,7 @@ cc.Class({
     },
     
     sendXHRAB: function () {
-        var xhr = cc.loader.getXMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         this.streamXHREventsToLabel(xhr, this.xhrAB, this.xhrABResp, "POST");
 
         xhr.open("POST", "https://httpbin.org/post");
@@ -103,7 +103,7 @@ cc.Class({
         var websocketLabel = this.websocket;
         var respLabel = this.websocketResp;
         // We should pass the cacert to libwebsockets used in native platform, otherwise the wss connection would be closed.
-        this._wsiSendBinary = new WebSocket("wss://echo.websocket.org", [], this.wssCacert.url);
+        this._wsiSendBinary = new WebSocket("wss://echo.websocket.org", [], this.wssCacert.nativeUrl);
         this._wsiSendBinary.binaryType = "arraybuffer";
         this._wsiSendBinary.onopen = function(evt) {
             websocketLabel.textKey = i18n.t("cases/05_scripting/11_network/NetworkCtrl.js.5");

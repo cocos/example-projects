@@ -26,7 +26,7 @@ cc.Class({
         this._audioUrl = this.inputUrlBox.string;
         // download audio
         if (this._audioUrl) {
-            cc.loader.load({url: this._audioUrl, type: 'mp3'}, this.onProgress.bind(this), this.audioLoadComplete.bind(this));
+            cc.assetManager.loadRemote(this._audioUrl, this.audioLoadComplete.bind(this));
             this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.2');
         }
         else {
@@ -43,10 +43,6 @@ cc.Class({
         this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.4.1');
         // return back a AudioClip
         this._audioPlayer.setAudioTask(res);
-    },
-
-    onProgress (completedCount, totalCount) {
-        this.remindLabel.textKey = `${i18n.t('cases/05_scripting/11_network/download-web.fire.3')} ${(completedCount/totalCount) * 100}`;
     },
 
     update () {

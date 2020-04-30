@@ -28,7 +28,7 @@ cc.Class({
         this._picUrl = this.inputUrlBox.string;
         // download pic
         if (this._picUrl) {
-            cc.loader.load({url: this._picUrl, type: 'png'}, this.onProgress.bind(this), this.picLoadComplete.bind(this));
+            cc.assetManager.loadRemote(this._picUrl, this.picLoadComplete.bind(this));
             this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.2');
         }
         else {
@@ -48,10 +48,6 @@ cc.Class({
         let spriteFrame = new cc.SpriteFrame(res);
         this.picNode.spriteFrame = spriteFrame;
         this.picNode.node.active = true;
-    },
-
-    onProgress (completedCount, totalCount) {
-        this.remindLabel.textKey = `${i18n.t('cases/05_scripting/11_network/download-web.fire.3')} ${(completedCount/totalCount) * 100}`;
-    },
+    }
 
 });

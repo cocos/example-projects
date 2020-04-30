@@ -10,7 +10,8 @@ cc.Class({
         loadList: {
             default: [],
             type: cc.Node
-        }
+        },
+        assets: [],
     },
 
     // use this for initialization
@@ -28,7 +29,7 @@ cc.Class({
             Txt: "test_assets/text",
             Texture: "test_assets/PurpleMonster",
             Font: "test_assets/font",
-            Plist: "test_assets/atom.plist",
+            Plist: "test_assets/atom",
             SpriteFrame: "test_assets/image",
             Prefab: "test_assets/prefab",
             Animation: "test_assets/sprite-anim",
@@ -41,9 +42,7 @@ cc.Class({
     },
 
     onDestroy () {
-        if (this._curRes) {
-            cc.loader.releaseAsset(this._curRes);
-        }
+
     },
 
     _onRegisteredEvent: function () {
@@ -85,32 +84,34 @@ cc.Class({
         switch (this._curType) {
             case 'SpriteFrame':
                 // specify the type to load sub asset from texture's url
-                cc.loader.loadRes(url, cc.SpriteFrame, loadCallBack);
+                cc.resources.load(url, cc.SpriteFrame, loadCallBack);
                 break;
             case 'Spine':
                 // specify the type to avoid the duplicated name from spine atlas
-                cc.loader.loadRes(url, sp.SkeletonData, loadCallBack);
+                cc.resources.load(url, sp.SkeletonData, loadCallBack);
                 break;
             case 'Font':
-                cc.loader.loadRes(url, cc.Font, loadCallBack);
+                cc.resources.load(url, cc.Font, loadCallBack);
                 break;
             case 'Plist':
-                cc.loader.loadRes(url, cc.ParticleAsset, loadCallBack);
+                cc.resources.load(url, cc.ParticleAsset, loadCallBack);
                 break;
             case 'Animation':
             case 'Prefab':
-            case 'Scene':
             case 'Texture':
             case 'Txt':
             case 'Audio':
-                cc.loader.loadRes(url, loadCallBack);
+                cc.resources.load(url, loadCallBack);
+                break;
+            case 'Scene':
+                cc.resources.loadScene(url, loadCallBack);
                 break;
             case 'CORS':
-                cc.loader.load(url, loadCallBack);
-                this.loadTips.textKey = "CORS image should report texImage2D error under WebGL and works ok under Canvas"
+                cc.assetManager.loadRemote(url, loadCallBack);
+                this.loadTips.textKey = "CORS image should report texImage2D error under WebGL and works ok under Canvas";
                 break;
             default:
-                cc.loader.load(url, loadCallBack);
+                cc.assetManager.loadRemote(url, loadCallBack);
                 break;
         }
     },
@@ -120,6 +121,9 @@ cc.Class({
         if (err) {
             cc.log('Error url [' + err + ']');
             return;
+        }
+        if (!(res instanceof cc.SceneAsset)) {
+            this.assets.push(res.addRef());
         }
         this._curRes = res;
         if (this._curType === "Audio") {
@@ -141,7 +145,7 @@ cc.Class({
 
     _onShowResClick: function (event) {
         if (this._curType === "Scene") {
-            cc.director.runScene(this._curRes.scene);
+            cc.director.runScene(this._curRes);
 
             return;
         }
@@ -207,5 +211,10 @@ cc.Class({
                 break;
         }
         this.showWindow.addChild(node);
+    },
+
+    onDestroy () {
+        this.assets.forEach(x => x.decRef());
+        this.assets = null;
     }
 });
