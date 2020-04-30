@@ -6,11 +6,11 @@ cc.Class({
     },
 
     start () {
-        this.tips.textKey = 'cases/subpackage1.loaded';
+        this.tips.textKey = 'cases/AssetBundle.8';
     },
 
     goLoadSubpackage () {
-        cc.director.loadScene('AssetBundles');
+        cc.director.loadScene('AssetBundle');
     },
 
 });

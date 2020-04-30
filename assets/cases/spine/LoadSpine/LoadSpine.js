@@ -14,7 +14,7 @@ cc.Class({
     },
 
     start () {
-        cc.assetManager.loadRes('loadSpine/alien-ess', sp.SkeletonData, this.onProcess.bind(this), this.onComplete.bind(this));
+        cc.resources.load('loadSpine/alien-ess', sp.SkeletonData, this.onProcess.bind(this), this.onComplete.bind(this));
     },
 
     onProcess (completeCount, totalCount, item) {},

@@ -41,14 +41,14 @@ cc.Class({
         this.progressTips.textKey = i18n.t("cases/05_scripting/10_loadingBar/LoadingBarCtrl.js.3");
         this.node.on(cc.Node.EventType.TOUCH_START, function () {
             if (this.resource) { return; }
-            cc.assetManager.loadRes(this._urls, this._progressCallback.bind(this), this._completeCallback.bind(this));
+            cc.resources.load(this._urls, this._progressCallback.bind(this), this._completeCallback.bind(this));
         }, this);
     },
 
     _clearAll: function () {
         for (var i = 0; i < this._urls.length; ++i) {
             var url = this._urls[i];
-            cc.assetManager.releaseRes(url);
+            cc.resources.release(url);
         }
     },
 

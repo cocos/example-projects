@@ -36,14 +36,17 @@ cc.Class({
         this.defense.string = info.defense;
 
         var image = this.image;
-        cc.assetManager.loadRes(info.imageUrl, cc.SpriteFrame, function (error, spriteFrame) {
+        cc.resources.load(info.imageUrl, cc.SpriteFrame, function (error, spriteFrame) {
             if (!error) {
-                image.spriteFrame = spriteFrame;
+                image.spriteFrame = spriteFrame.addRef();
             }
         });
+    },
 
+    onDestroy () {
+        this.image.spriteFrame.decRef();
+        this.image.spriteFrame = null;
     }
-
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

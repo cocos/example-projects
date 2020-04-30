@@ -3,7 +3,8 @@ cc.Class({
 
     properties: {
         content: cc.Node,
-        _url:[]
+        _url:[],
+        _assets: [],
     },
 
     onLoad: function () {
@@ -12,8 +13,9 @@ cc.Class({
 
     loadSpriteFrame: function () {
         var url = this._url[0];
-        this._releaseResource(url, cc.SpriteAtlas);
-        cc.assetManager.loadRes(url, cc.SpriteAtlas, (err, atlas) => {
+        this._removeAllChildren();
+        cc.resources.load(url, cc.SpriteAtlas, (err, atlas) => {
+            this._assets.push(atlas.addRef());
             this._removeAllChildren();
             var node = new cc.Node();
             this.content.addChild(node);
@@ -25,8 +27,9 @@ cc.Class({
 
     loadPrefab: function () {
         var url = this._url[1];
-        this._releaseResource(url, cc.Prefab);
-        cc.assetManager.loadRes(url, cc.Prefab, (err, prefab) => {
+        this._removeAllChildren();
+        cc.resources.load(url, cc.Prefab, (err, prefab) => {
+            this._assets.push(prefab.addRef());
             this._removeAllChildren();
             var node = cc.instantiate(prefab);
             this.content.addChild(node);
@@ -35,16 +38,11 @@ cc.Class({
     },
 
     onDisable () {
-        this._releaseResource(this._url[0], cc.SpriteAtlas);
-        this._releaseResource(this._url[1], cc.Prefab);
+        this._assets.forEach(x => x.decRef());
+        this._assets = null;
     },
 
     _removeAllChildren: function () {
         this.content.removeAllChildren(true);
-    },
-
-    _releaseResource: function (url, type) {
-        this._removeAllChildren();
-        cc.assetManager.releaseRes(url, type);
     }
 });

@@ -26,7 +26,7 @@ cc.Class({
         this._audioUrl = this.inputUrlBox.string;
         // download audio
         if (this._audioUrl) {
-            cc.assetManager.loadRemoteAudio(this._audioUrl, this.audioLoadComplete.bind(this));
+            cc.assetManager.loadRemote(this._audioUrl, this.audioLoadComplete.bind(this));
             this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.2');
         }
         else {

@@ -1,11 +1,16 @@
 cc.Class({
     extends: cc.Component,
 
+    properties: {
+        atlas: null,
+    },
+
     // use this for initialization
     onLoad: function () {
         var animation = this.getComponent(cc.Animation);
         
-        cc.assetManager.loadRes("test_assets/atlas", cc.SpriteAtlas, (err, atlas) => {
+        cc.resources.load("test_assets/atlas", cc.SpriteAtlas, (err, atlas) => {
+            this.atlas = atlas.addRef();
             var spriteFrames = atlas.getSpriteFrames();
             
             var clip = cc.AnimationClip.createWithSpriteFrames(spriteFrames, 10);
@@ -21,4 +26,9 @@ cc.Class({
     // update: function (dt) {
 
     // },
+
+    onDestroy: function () {
+        this.atlas.decRef();
+        this.atlas = null;
+    }
 });

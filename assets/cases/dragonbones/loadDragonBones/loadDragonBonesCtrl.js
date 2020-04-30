@@ -12,10 +12,10 @@ cc.Class({
         if (this.dragonBone.dragonAtlasAsset) {
             return;
         }
-        cc.assetManager.loadRes('dragonBones/NewDragonTest', dragonBones.DragonBonesAsset, (err, res) => {
+        cc.resources.load('dragonBones/NewDragonTest', dragonBones.DragonBonesAsset, (err, res) => {
             if (err) cc.error(err);
             this.dragonBone.dragonAsset = res;
-            cc.assetManager.loadRes('dragonBones/texture', dragonBones.DragonBonesAtlasAsset, this.onComplete.bind(this));
+            cc.resources.load('dragonBones/texture', dragonBones.DragonBonesAtlasAsset, this.onComplete.bind(this));
         });
     },
 

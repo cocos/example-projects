@@ -28,7 +28,7 @@ cc.Class({
         this._picUrl = this.inputUrlBox.string;
         // download pic
         if (this._picUrl) {
-            cc.assetManager.loadRemoteTexture(this._picUrl, this.picLoadComplete.bind(this));
+            cc.assetManager.loadRemote(this._picUrl, this.picLoadComplete.bind(this));
             this.remindLabel.textKey = i18n.t('cases/05_scripting/11_network/download-web.fire.2');
         }
         else {

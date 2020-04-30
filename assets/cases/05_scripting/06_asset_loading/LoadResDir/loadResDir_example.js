@@ -29,7 +29,7 @@ cc.Class({
         this.scrollView.content.removeAllChildren(true);
         for (var i = 0; i < this._assets.length; ++i) {
             var asset = this._assets[i];
-            cc.assetManager.release(asset);
+            cc.assetManager.releaseAsset(asset);
         }
     },
 
@@ -48,7 +48,7 @@ cc.Class({
         this.scrollView.scrollToTop();
         this.btnClearAll.active = false;  // 防止加载的过程中清除资源
 
-        cc.assetManager.loadResDir("test_assets", (err, assets) => {
+        cc.resources.loadDir("test_assets", (err, assets) => {
             if (!this.isValid) {
                 return;
             }
@@ -81,7 +81,7 @@ cc.Class({
         this.scrollView.scrollToTop();
         this.btnClearAll.active = false;  // 防止加载的过程中清除资源
 
-        cc.assetManager.loadResDir("test_assets", cc.SpriteFrame, (err, assets) => {
+        cc.resources.loadDir("test_assets", cc.SpriteFrame, (err, assets) => {
             if (!this.isValid) {
                 return;
             }

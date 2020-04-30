@@ -9,7 +9,7 @@ cc.Class({
     },
 
     onLoad () {
-        cc.loader.loadRes("tilemap/shieldNode", function (err, prefab) {
+        cc.resources.load("tilemap/shieldNode", function (err, prefab) {
             if (err) {
                 cc.error("tilemap/shieldNode resources load failed");
                 return;

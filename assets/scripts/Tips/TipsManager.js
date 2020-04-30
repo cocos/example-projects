@@ -80,7 +80,7 @@ module.exports = {
     init () {
         if (this.tipsPrefab) return;
 
-        cc.loader.loadRes('tips/Tips', (err, prefab) => {
+        cc.resources.load('tips/Tips', (err, prefab) => {
             this.tipsPrefab = prefab;
         });
     },
