@@ -117,7 +117,7 @@ export default class PreloadAssets extends cc.Component {
                 cc.resources.preload(url, loadCallBack);
                 break;
             case 'Scene':
-                cc.assetManager.main.preloadScene(url, loadCallBack);
+                cc.resources.preloadScene(url, loadCallBack);
                 break;
             case 'Dir': 
                 cc.resources.preloadDir(url, loadCallBack);
