@@ -1,6 +1,9 @@
 const {ccclass, property} = cc._decorator;
 import * as i18n from '../../i18n/i18n';
 
+declare let fsUtils: {
+    subpackages: any
+}
 @ccclass
 export default class AssetBundle extends cc.Component {
 
@@ -135,7 +138,7 @@ export default class AssetBundle extends cc.Component {
                     this._isLoading = false;
                     return;
                 }
-                cc.assetManager.loadBundle(window['fsUtils'] && window['fsUtils'].subpackages['TestBundle'] ? 'subpackages/TestBundle' : 'assets/TestBundle', loadCallBack);
+                cc.assetManager.loadBundle(typeof fsUtils !== 'undefined' && fsUtils.subpackages['TestBundle'] ? fsUtils.subpackages['TestBundle'] : 'assets/TestBundle', loadCallBack);
                 break;
             default:
                 break;
