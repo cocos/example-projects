@@ -37,8 +37,8 @@ module.exports = {
             case 'DeviceMotion':        return isMobile && !isQQPlay && !isVivo;
             case 'Native_Call':         return isMobile && (isAndroid || isIphone) && !CC_RUNTIME;
             case 'TTFFontLabel':        return !isQQPlay;
-            case 'Subpackages':
-                return (!CC_PREVIEW && !CC_JSB && !isBrowser && !isQQPlay && !isJkw);
+            case 'AssetBundle':
+                return !CC_PREVIEW;
             case 'MousePropagation':    return ((isNative && !isMobile && !isWechat && !isQQPlay && !isXiaomi && !isHuawei && !isAlipay) || isDesktopBrowser);
             case 'downloader-native':
                 return isNative && !CC_RUNTIME;
