@@ -19,7 +19,7 @@ export default class NewClass extends cc.Component {
     }
 	
 	onclick () {
-		cc.director.loadScene('PreloadAssets.fire');
+	    cc.director.loadScene('PreloadAssets.fire');
 	}
 
     // update (dt) {}
