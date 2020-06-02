@@ -310,6 +310,7 @@ module.exports = {
     "res/prefabs/loadItem.prefab.1": "Label",
     "resources/test_assets/prefab.prefab.2": "This is Prefab",
     "resources/test_assets/scene.fire.3": "Return Asset Loading Scene",
+	"resources/test_assets/preloadscene.fire.3": "Return Preloading Scene",
     "resources/test_assets/scene.fire.6": "Return",
     "scripts/Global/Menu.js.1": "Temporary lack of introduction",
 

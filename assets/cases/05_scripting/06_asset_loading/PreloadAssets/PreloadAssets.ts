@@ -50,7 +50,7 @@ export default class PreloadAssets extends cc.Component {
             SpriteFrame: "test_assets/image",
             Prefab: "test_assets/prefab",
             Animation: "test_assets/sprite-anim",
-            Scene: "test_assets/scene",
+            Scene: "test_assets/preloadscene",
             Spine: "spineboy/spineboy",
             Dir: "audio",
         };
