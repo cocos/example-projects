@@ -1,6 +1,48 @@
 {
-  "ver": "1.0.1",
+  "ver": "1.1.2",
   "uuid": "4ee1c760-a8b0-49bc-92b2-e5e87ec697a3",
-  "isGroup": false,
+  "isBundle": true,
+  "bundleName": "resources",
+  "priority": 8,
+  "compressionType": {
+    "wechatgame": "default",
+    "baidugame": "default",
+    "qgame": "default",
+    "quickgame": "default",
+    "huawei": "default",
+    "jkw-game": "default",
+    "qtt-game": "default",
+    "alipay": "default"
+  },
+  "optimizeHotUpdate": {
+    "wechatgame": false,
+    "baidugame": false,
+    "qgame": false,
+    "quickgame": false,
+    "huawei": false,
+    "jkw-game": false,
+    "qtt-game": false,
+    "alipay": false
+  },
+  "inlineSpriteFrames": {
+    "wechatgame": false,
+    "baidugame": false,
+    "qgame": false,
+    "quickgame": false,
+    "huawei": false,
+    "jkw-game": false,
+    "qtt-game": false,
+    "alipay": false
+  },
+  "isRemoteBundle": {
+    "wechatgame": true,
+    "baidugame": true,
+    "qgame": true,
+    "quickgame": true,
+    "huawei": true,
+    "jkw-game": true,
+    "qtt-game": true,
+    "alipay": true
+  },
   "subMetas": {}
 }

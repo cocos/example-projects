@@ -1,5 +1,5 @@
 {
-  "ver": "1.1.1",
+  "ver": "1.1.2",
   "uuid": "dcc9dd64-022d-4261-b02e-9725ff142f8a",
   "isBundle": true,
   "bundleName": "TestBundle",
@@ -7,9 +7,51 @@
   "compressionType": {
     "web-mobile": "default",
     "web-desktop": "default",
-    "wechatgame": "subpackage"
+    "wechatgame": "subpackage",
+    "alipay": "zip",
+    "qtt-game": "zip",
+    "jkw-game": "zip",
+    "huawei": "subpackage",
+    "quickgame": "subpackage",
+    "qgame": "subpackage",
+    "xiaomi": "subpackage",
+    "baidugame": "subpackage"
   },
-  "optimizeHotUpdate": false,
-  "inlineSpriteFrames": false,
+  "optimizeHotUpdate": {
+    "web-mobile": false,
+    "web-desktop": false,
+    "wechatgame": false,
+    "alipay": false,
+    "qtt-game": false,
+    "jkw-game": false,
+    "huawei": false,
+    "quickgame": false,
+    "qgame": false,
+    "xiaomi": false,
+    "baidugame": false
+  },
+  "inlineSpriteFrames": {
+    "web-mobile": false,
+    "web-desktop": false,
+    "wechatgame": false,
+    "alipay": false,
+    "qtt-game": false,
+    "jkw-game": false,
+    "huawei": false,
+    "quickgame": false,
+    "qgame": false,
+    "xiaomi": false,
+    "baidugame": false
+  },
+  "isRemoteBundle": {
+    "alipay": true,
+    "qtt-game": true,
+    "jkw-game": true,
+    "huawei": false,
+    "quickgame": false,
+    "qgame": false,
+    "xiaomi": false,
+    "baidugame": false
+  },
   "subMetas": {}
 }
