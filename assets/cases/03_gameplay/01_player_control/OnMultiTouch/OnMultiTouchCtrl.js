@@ -1,3 +1,5 @@
+const TipManager = require("../../../../scripts/Tips/TipsManager");
+
 cc.Class({
     extends: cc.Component,
 
@@ -7,7 +9,7 @@ cc.Class({
     },
 
     onLoad: function () {
-        if (cc.screen.fullScreen()) this.showTips();
+        TipManager.init();
         var self = this, parent = this.node.parent;
         self.canvas.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
             var touches = event.getTouches();
@@ -31,10 +33,9 @@ cc.Class({
         }, self.node);
     },
 
-    showTips: function () {
-        // UC mobile browser element call requestFullScreen will lead to the game can't support mutiTouch
-        if (cc.sys.browserType === cc.sys.BROWSER_TYPE_UC) {
-            cc.find("Canvas/Tips").getComponent(cc.Label).string = "Can't support UC mobile browser, please touch screen go back";
+    onEnable () {
+        if (cc.sys.browserType === cc.sys.BROWSER_TYPE_UC && cc.screen.fullScreen()) {
+            TipManager.createTips("Can't support UC mobile browser, please touch screen go back");
         }
-    },
+    }
 });
