@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.14",
+  "ver": "1.1.0",
   "uuid": "5c76f955-1f6c-4642-9d3c-fbe71920e957",
   "scaleFactor": 1,
   "boneCount": 52,
@@ -9,6 +9,7 @@
     "buffer.bin": {
       "ver": "1.0.0",
       "uuid": "0b2796b3-bf3b-4845-987c-eb8d6f52b869",
+      "name": "buffer.bin",
       "subMetas": {}
     },
     "Beta_Joints.mesh": {
@@ -17,6 +18,15 @@
       "verts": 12473,
       "tris": 20840,
       "submeshes": 1,
+      "attributes": [
+        [
+          "a_joints",
+          "a_normal",
+          "a_position",
+          "a_uv0",
+          "a_weights"
+        ]
+      ],
       "minPos": {
         "x": -0.883466839790344,
         "y": -0.00323115638457239,
@@ -27,6 +37,7 @@
         "y": 1.59360826015472,
         "z": 0.130236849188805
       },
+      "name": "Beta_Joints.mesh",
       "subMetas": {}
     },
     "Beta_Surface.mesh": {
@@ -35,6 +46,15 @@
       "verts": 15901,
       "tris": 28272,
       "submeshes": 1,
+      "attributes": [
+        [
+          "a_joints",
+          "a_normal",
+          "a_position",
+          "a_uv0",
+          "a_weights"
+        ]
+      ],
       "minPos": {
         "x": -0.902565956115723,
         "y": -0.00320193218067288,
@@ -45,16 +65,19 @@
         "y": 1.80604910850525,
         "z": 0.176958158612251
       },
+      "name": "Beta_Surface.mesh",
       "subMetas": {}
     },
     "model@Capoeira-0.skeleton": {
       "ver": "1.0.1",
       "uuid": "9bb3037d-d32d-4e9e-98da-1742e7c73d4c",
+      "name": "model@Capoeira-0.skeleton",
       "subMetas": {}
     },
     "model@Capoeira-1.skeleton": {
       "ver": "1.0.1",
       "uuid": "4d443608-c208-4a77-a2fb-1821564110b2",
+      "name": "model@Capoeira-1.skeleton",
       "subMetas": {}
     },
     "Capoeira.sac": {
@@ -62,7 +85,7 @@
       "uuid": "4e65bb3e-8c57-41bb-a0da-9f6d821ef19e",
       "modelUuid": "5c76f955-1f6c-4642-9d3c-fbe71920e957",
       "animationID": 0,
-      "name": "Capoeira",
+      "name": "Capoeira.sac",
       "maxFrameCount": 83,
       "totalFrameCount": 4249,
       "duration": 3.4166667461395264,
@@ -70,7 +93,7 @@
       "subMetas": {}
     },
     "model@Capoeira.prefab": {
-      "ver": "1.2.6",
+      "ver": "1.2.7",
       "uuid": "9d2fb03b-633a-4bfc-95d1-bfff1f931662",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
@@ -184,17 +207,18 @@
           "fileId": "d7118yAG5lKybkFOAh8koPL"
         }
       ],
+      "name": "model@Capoeira.prefab",
       "subMetas": {}
     },
     "Beta_Joints_MAT.mtl": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "02ba4b4e-2b47-453e-80db-eec9681af781",
       "dataAsSubAsset": null,
       "name": "Beta_Joints_MAT.mtl",
       "subMetas": {}
     },
     "asdf1:Beta_HighLimbsGeoSG2.mtl": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "5caac2d1-1eb6-4069-ab15-d92ad83e027c",
       "dataAsSubAsset": null,
       "name": "asdf1:Beta_HighLimbsGeoSG2.mtl",
