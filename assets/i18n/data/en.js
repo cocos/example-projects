@@ -156,6 +156,7 @@ module.exports = {
     "cases/03_gameplay/03_animation/MoveAnimation.fire.29": "Case Out In Expo",
     "cases/03_gameplay/03_animation/MoveAnimation.fire.35": "Back Forward",
     "cases/03_gameplay/03_animation/MoveAnimation.fire.41": "This is Move Animation.",
+    "cases/03_gameplay/03_animation/CurveAnimation.fire.42": "This is Curve Animation.",
     "cases/03_gameplay/03_animation/SpriteAnimation.fire.9": "This is SprieFrame Animation.",
     "cases/03_gameplay/03_animation/CreateClip.fire.1": "Dynamic Creating AnimationClip",
     "cases/04_audio/SimpleAudio.fire.6": "Enjoy the music!",
