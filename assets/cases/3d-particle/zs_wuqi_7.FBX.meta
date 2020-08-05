@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.14",
+  "ver": "1.1.0",
   "uuid": "d92a3c97-5f08-456c-8cfb-b24107fca34f",
   "scaleFactor": 1,
   "boneCount": 0,
@@ -9,6 +9,7 @@
     "buffer.bin": {
       "ver": "1.0.0",
       "uuid": "7a9a108d-2c4e-43c5-ab93-aaf269dcfec1",
+      "name": "buffer.bin",
       "subMetas": {}
     },
     "zs_weapon_017.mesh": {
@@ -17,6 +18,13 @@
       "verts": 355,
       "tris": 498,
       "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
       "minPos": {
         "x": -1.08073043823242,
         "y": -0.402946680784225,
@@ -27,10 +35,11 @@
         "y": 0.402946680784225,
         "z": 0.104114443063736
       },
+      "name": "zs_weapon_017.mesh",
       "subMetas": {}
     },
     "zs_wuqi_7.prefab": {
-      "ver": "1.2.6",
+      "ver": "1.2.7",
       "uuid": "95c53e4c-47df-4172-b079-76c6935ae74e",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
@@ -144,6 +153,7 @@
           "fileId": "d7118yAG5lKybkFOAh8koPL"
         }
       ],
+      "name": "zs_wuqi_7.prefab",
       "subMetas": {}
     },
     "zs_weapon_017.mtl": {

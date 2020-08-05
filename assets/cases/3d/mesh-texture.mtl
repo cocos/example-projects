@@ -1,18 +1,22 @@
 {
   "__type__": "cc.Material",
-  "_name": "",
+  "_name": "mesh-texture",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
     "__uuid__": "2cae2c68-0853-4258-a25e-b2b169e07700"
   },
-  "_defines": {
-    "USE_TEXTURE": true,
-    "USE_MODEL": true
-  },
-  "_props": {
-    "texture": {
-      "__uuid__": "6b4faed5-abc3-4a77-af9d-35ed67a5a48b"
+  "_techniqueData": {
+    "0": {
+      "props": {
+        "texture": {
+          "__uuid__": "6b4faed5-abc3-4a77-af9d-35ed67a5a48b"
+        }
+      },
+      "defines": {
+        "USE_TEXTURE": true,
+        "USE_MODEL": true
+      }
     }
   }
 }
