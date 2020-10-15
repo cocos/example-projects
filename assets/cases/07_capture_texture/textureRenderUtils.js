@@ -10,7 +10,10 @@ cc.Class({
     init () {
         this.label.string = '';
         let texture = new cc.RenderTexture();
-        texture.initWithSize(cc.visibleRect.width, cc.visibleRect.height, cc.gfx.RB_FMT_S8);
+        let {width, height} = cc.visibleRect;
+        width = parseInt(width.toFixed(0));
+        height = parseInt(height.toFixed(0));
+        texture.initWithSize(width, height, cc.gfx.RB_FMT_S8);
         this.camera.targetTexture = texture;
         this.texture = texture;
     },
