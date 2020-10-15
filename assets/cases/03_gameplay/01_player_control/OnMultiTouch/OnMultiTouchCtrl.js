@@ -1,3 +1,5 @@
+const TipManager = require("../../../../scripts/Tips/TipsManager");
+
 cc.Class({
     extends: cc.Component,
 
@@ -7,6 +9,7 @@ cc.Class({
     },
 
     onLoad: function () {
+        TipManager.init();
         var self = this, parent = this.node.parent;
         self.canvas.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
             var touches = event.getTouches();
@@ -28,5 +31,11 @@ cc.Class({
                 self.target.scale = scale < 0.1 ? 0.1 : scale;
             }
         }, self.node);
+    },
+
+    onEnable () {
+        if (cc.sys.browserType === cc.sys.BROWSER_TYPE_UC && cc.screen.fullScreen()) {
+            TipManager.createTips("Can't support UC mobile browser, please touch screen go back");
+        }
     }
 });

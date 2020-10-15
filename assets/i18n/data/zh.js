@@ -156,6 +156,7 @@ module.exports = {
     "cases/03_gameplay/03_animation/MoveAnimation.fire.29": "Case Out In Expo",
     "cases/03_gameplay/03_animation/MoveAnimation.fire.35": "Back Forward",
     "cases/03_gameplay/03_animation/MoveAnimation.fire.41": "这是一个移动动画。",
+    "cases/03_gameplay/03_animation/CurveAnimation.fire.42": "这是一个曲线动画。",
     "cases/03_gameplay/03_animation/SpriteAnimation.fire.9": "这是精灵帧动画",
     "cases/03_gameplay/03_animation/CreateClip.fire.1": "动态创建动画剪辑",
     "cases/04_audio/SimpleAudio.fire.6": "享受音乐!",

@@ -1,19 +1,23 @@
 {
   "__type__": "cc.Material",
-  "_name": "",
+  "_name": "dynamic-batch-mesh-renderer",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
     "__uuid__": "abc2cb62-7852-4525-a90d-d474487b88f2"
   },
-  "_defines": {
-    "USE_DIFFUSE_TEXTURE": true,
-    "USE_SPECULAR": true
-  },
-  "_props": {
-    "diffuseTexture": {
-      "__uuid__": "6b4faed5-abc3-4a77-af9d-35ed67a5a48b"
-    },
-    "glossiness": 0.5
+  "_techniqueData": {
+    "0": {
+      "props": {
+        "diffuseTexture": {
+          "__uuid__": "6b4faed5-abc3-4a77-af9d-35ed67a5a48b"
+        },
+        "glossiness": 0.5
+      },
+      "defines": {
+        "USE_DIFFUSE_TEXTURE": true,
+        "USE_SPECULAR": true
+      }
+    }
   }
 }
