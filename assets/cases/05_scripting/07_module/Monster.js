@@ -25,7 +25,8 @@ cc.Class({
         image: {
             default: null,
             type: cc.Sprite
-        }
+        },
+        loadSpriteFrame:null
     },
 
     initInfo: function (info) {
@@ -36,15 +37,20 @@ cc.Class({
         this.defense.string = info.defense;
 
         var image = this.image;
+        let self = this;
         cc.resources.load(info.imageUrl, cc.SpriteFrame, function (error, spriteFrame) {
             if (!error) {
-                image.spriteFrame = spriteFrame.addRef();
+                self.loadSpriteFrame = spriteFrame.addRef();
+                image.spriteFrame = spriteFrame;
             }
         });
     },
 
     onDestroy () {
-        this.image.spriteFrame.decRef();
+        if(this.loadSpriteFrame){
+            this.loadSpriteFrame.decRef();
+
+        }
         this.image.spriteFrame = null;
     }
     // called every frame, uncomment this function to activate update callback
