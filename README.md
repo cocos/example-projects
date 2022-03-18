@@ -1,4 +1,4 @@
-# Cocos Creator 开发范例
+# Cocos Creator 2.x 开发范例
 
 本项目同时面向 Cocos Creator 引擎开发人员和最终用户，目的是建立一套贯穿开发、测试、学习使用的完整的功能范例。
 
